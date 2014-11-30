@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionBar.Plain.Home.NoTitle" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
+        <item name="android:progressBarStyle">@style/ProgressBar.Sunrise</item>
+        <item name="android:background">@color/sunrise_background</item>
+        <item name="android:displayOptions">showHome</item>
+        <item name="android:backgroundStacked">@color/sunrise_background</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_sunrise</item>
+    </style>
+    <style name="ActionBar.Textured.NoIcon.Sunrise" parent="@style/ActionBar.Textured.Sunrise">
+        <item name="android:displayOptions">showTitle</item>
+    </style>
+    <style name="ActionBar.Textured.NoTitle.Sunrise" parent="@style/ActionBar.Textured.Sunrise">
+        <item name="android:displayOptions">showHome</item>
+    </style>
+    <style name="ActionBar.Textured.Sunrise" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
+        <item name="android:progressBarStyle">@style/ProgressBar.Sunrise</item>
+        <item name="android:background">@drawable/ab_background</item>
+        <item name="android:titleTextStyle">@style/ActionBar.Textured.Sunrise.Title</item>
+        <item name="android:subtitleTextStyle">@style/ActionBar.Textured.Sunrise.Subtitle</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_background</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_sunrise</item>
+    </style>
+    <style name="ActionBar.Textured.Sunrise.Subtitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle">
+        <item name="android:textSize">@dimen/sunrise_actionbar_subtitle_font_size</item>
+        <item name="android:textColor">@color/sunrise_actionbar_subtitle</item>
+    </style>
+    <style name="ActionBar.Textured.Sunrise.Title" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/sunrise_actionbar_title_font_size</item>
+        <item name="android:textColor">@color/sunrise_actionbar_title</item>
+    </style>
+    <style name="ActionBar.Transparent.Sunrise" parent="@style/Widget.Sherlock.Light.ActionBar">
+        <item name="android:progressBarStyle">@style/ProgressBar.Sunrise</item>
+        <item name="android:background">@drawable/ab_transparent_sunrise</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+    <style name="Sherlock.__Theme" parent="@android:style/Theme.Holo" />
+    <style name="Sherlock.__Theme.DarkActionBar" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarWidgetTheme">@style/Theme.Sherlock</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="dropDownListViewStyle">?android:dropDownListViewStyle</item>
+        <item name="dropdownListPreferredItemHeight">48.0dip</item>
+    </style>
+    <style name="Sherlock.__Theme.Light" parent="@android:style/Theme.Holo.Light" />
+    <style name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Large" />
+    <style name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Small" />
+    <style name="TextAppearance.Sherlock.Widget.ActionBar.Menu" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Menu" />
+    <style name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+    <style name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle.Inverse" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle.Inverse" />
+    <style name="TextAppearance.Sherlock.Widget.ActionBar.Title" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+    <style name="TextAppearance.Sherlock.Widget.ActionBar.Title.Inverse" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse" />
+    <style name="TextAppearance.Sherlock.Widget.ActionMode.Subtitle" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Subtitle" />
+    <style name="TextAppearance.Sherlock.Widget.ActionMode.Subtitle.Inverse" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Subtitle.Inverse" />
+    <style name="TextAppearance.Sherlock.Widget.ActionMode.Title" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Title" />
+    <style name="TextAppearance.Sherlock.Widget.ActionMode.Title.Inverse" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Title.Inverse" />
+    <style name="TextAppearance.Sherlock.Widget.PopupMenu" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu" />
+    <style name="TextAppearance.Sherlock.Widget.PopupMenu.Large" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Large" />
+    <style name="TextAppearance.Sherlock.Widget.PopupMenu.Small" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Small" />
+    <style name="Theme.Sherlock.Light.NoActionBar" parent="@style/Theme.Sherlock.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Sherlock.NoActionBar" parent="@style/Theme.Sherlock">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Sunrise" parent="@style/Theme.Sherlock.Light">
+        <item name="android:icon">@drawable/ab_sunrise</item>
+        <item name="android:colorBackground">@color/sunrise_window_background</item>
+        <item name="android:windowBackground">@color/sunrise_window_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkboxStyle">@style/CheckBoxSunrise_Components</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Sunrise</item>
+        <item name="android:radioButtonStyle">@style/RadioSunrise_Components</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/radio_selector</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/checkbox_selector</item>
+        <item name="android:colorBackgroundCacheHint">@color/sunrise_window_background</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Textured.Sunrise</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Sunrise</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_sunrise</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Sunrise</item>
+        <item name="android:actionBarTabTextStyle">@style/ActionBarTabTextAppearance</item>
+        <item name="android:actionOverflowButtonStyle">@style/Theme.Sunrise.Overflow</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Sunrise</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Sunrise</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_up_indicator</item>
+        <item name="android:actionMenuTextAppearance">@style/ActionBar.Textured.MenuTextStyle</item>
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_sunrise</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_sunrise</item>
+    </style>
+    <style name="Theme.Sunrise.Home" parent="@style/Theme.Sunrise">
+        <item name="android:actionBarStyle">@style/ActionBar.Plain.Home.NoTitle</item>
+    </style>
+    <style name="Theme.Sunrise.Maps" parent="@style/Theme.Sherlock.Light.NoActionBar">
+        <item name="android:checkboxStyle">@style/CheckBoxSunrise_Components</item>
+        <item name="android:radioButtonStyle">@style/RadioSunrise_Components</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/radio_selector</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/checkbox_selector</item>
+    </style>
+    <style name="Theme.Sunrise.NoActionBar" parent="@style/Theme.Sherlock.Light.NoActionBar">
+        <item name="android:checkboxStyle">@style/CheckBoxSunrise_Components</item>
+        <item name="android:radioButtonStyle">@style/RadioSunrise_Components</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/radio_selector</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/checkbox_selector</item>
+    </style>
+    <style name="Theme.Sunrise.NoIcon" parent="@style/Theme.Sunrise">
+        <item name="android:actionBarStyle">@style/ActionBar.Textured.NoIcon.Sunrise</item>
+    </style>
+    <style name="Theme.Sunrise.NoTitle" parent="@style/Theme.Sunrise">
+        <item name="android:actionBarStyle">@style/ActionBar.Textured.NoTitle.Sunrise</item>
+    </style>
+    <style name="Theme.Sunrise.Onboarding" parent="@style/Theme.Sunrise.NoActionBar" />
+    <style name="Theme.Sunrise.Overflow" parent="@style/Widget.Sherlock.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_overflow</item>
+    </style>
+    <style name="Theme.Sunrise.Settings" parent="@style/Theme.Sunrise.NoIcon">
+        <item name="android:icon">@null</item>
+    </style>
+    <style name="Theme.Sunrise.Widget" parent="@style/Theme.Sherlock">
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Sunrise</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Sunrise</item>
+    </style>
+    <style name="Widget.Sherlock.ActionBar" parent="@android:style/Widget.Holo.ActionBar" />
+    <style name="Widget.Sherlock.ActionBar.Solid" parent="@android:style/Widget.Holo.ActionBar.Solid" />
+    <style name="Widget.Sherlock.ActionBar.TabBar" parent="@android:style/Widget.Holo.ActionBar.TabBar" />
+    <style name="Widget.Sherlock.ActionBar.TabText" parent="@android:style/Widget.Holo.ActionBar.TabText" />
+    <style name="Widget.Sherlock.ActionBar.TabView" parent="@android:style/Widget.Holo.ActionBar.TabView" />
+    <style name="Widget.Sherlock.ActionButton" parent="@android:style/Widget.Holo.ActionButton" />
+    <style name="Widget.Sherlock.ActionButton.CloseMode" parent="@android:style/Widget.Holo.ActionButton.CloseMode" />
+    <style name="Widget.Sherlock.ActionButton.Overflow" parent="@android:style/Widget.Holo.ActionButton.Overflow" />
+    <style name="Widget.Sherlock.ActionMode" parent="@android:style/Widget.Holo.ActionMode" />
+    <style name="Widget.Sherlock.Light.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar" />
+    <style name="Widget.Sherlock.Light.ActionBar.Solid" parent="@android:style/Widget.Holo.Light.ActionBar.Solid" />
+    <style name="Widget.Sherlock.Light.ActionBar.Solid.Inverse" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" />
+    <style name="Widget.Sherlock.Light.ActionBar.TabBar" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar" />
+    <style name="Widget.Sherlock.Light.ActionBar.TabBar.Inverse" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar.Inverse" />
+    <style name="Widget.Sherlock.Light.ActionBar.TabText" parent="@android:style/Widget.Holo.Light.ActionBar.TabText" />
+    <style name="Widget.Sherlock.Light.ActionBar.TabText.Inverse" parent="@android:style/Widget.Holo.Light.ActionBar.TabText.Inverse" />
+    <style name="Widget.Sherlock.Light.ActionBar.TabView" parent="@android:style/Widget.Holo.Light.ActionBar.TabView" />
+    <style name="Widget.Sherlock.Light.ActionBar.TabView.Inverse" parent="@android:style/Widget.Holo.Light.ActionBar.TabView.Inverse" />
+    <style name="Widget.Sherlock.Light.ActionButton" parent="@android:style/Widget.Holo.Light.ActionButton" />
+    <style name="Widget.Sherlock.Light.ActionButton.CloseMode" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode" />
+    <style name="Widget.Sherlock.Light.ActionButton.Overflow" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow" />
+    <style name="Widget.Sherlock.Light.ActionMode" parent="@android:style/Widget.Holo.Light.ActionMode" />
+    <style name="Widget.Sherlock.Light.ActionMode.Inverse" parent="@android:style/Widget.Holo.Light.ActionMode.Inverse" />
+    <style name="Widget.Sherlock.Light.ListView.DropDown" parent="@android:style/Widget.Holo.Light.ListView.DropDown" />
+    <style name="Widget.Sherlock.Light.PopupMenu" parent="@android:style/Widget.Holo.Light.PopupMenu" />
+    <style name="Widget.Sherlock.Light.PopupWindow.ActionMode" parent="@android:style/Widget.Holo.Light.PopupWindow" />
+    <style name="Widget.Sherlock.Light.ProgressBar" parent="@android:style/Widget.Holo.Light.ProgressBar" />
+    <style name="Widget.Sherlock.Light.ProgressBar.Horizontal" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal" />
+    <style name="Widget.Sherlock.Light.SearchAutoCompleteTextView" parent="@android:style/Widget.Holo.Light.AutoCompleteTextView" />
+    <style name="Widget.Sherlock.Light.Spinner.DropDown.ActionBar" parent="@android:style/Widget.Holo.Light.Spinner" />
+    <style name="Widget.Sherlock.ListView.DropDown" parent="@android:style/Widget.Holo.ListView.DropDown" />
+    <style name="Widget.Sherlock.PopupMenu" parent="@android:style/Widget.Holo.PopupMenu" />
+    <style name="Widget.Sherlock.PopupWindow.ActionMode" parent="@android:style/Widget.Holo.PopupWindow" />
+    <style name="Widget.Sherlock.ProgressBar" parent="@android:style/Widget.Holo.ProgressBar" />
+    <style name="Widget.Sherlock.ProgressBar.Horizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal" />
+    <style name="Widget.Sherlock.SearchAutoCompleteTextView" parent="@android:style/Widget.Holo.AutoCompleteTextView" />
+    <style name="Widget.Sherlock.Spinner.DropDown.ActionBar" parent="@android:style/Widget.Holo.Spinner" />
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Options</item>
+        <item>Description Add-on</item>
+        <item>Désactiver Add-on</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Choisir à partir de la bibliothèque</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinois (GBK)</item>
+        <item>Chinois (Big5)</item>
+        <item>Japonais (ISO-2022-JP)</item>
+        <item>Japonais (SHIFT_JIS)</item>
+        <item>Japonais (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Plus loin)</item>
+        <item>"100% (Ajuster à l'écran)"</item>
+        <item>200% (De près)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Bureau</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Personnalisé</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Masquer</item>
+        <item>Gauche (en bas)</item>
+        <item>Droite (en bas)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Masquer</item>
+        <item>Gauche</item>
+        <item>Droite</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Désactivé</item>
+        <item>Meilleure qualité</item>
+        <item>Équilibré</item>
+        <item>Plus petite taille</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Toujours activé</item>
+        <item>Toujours désactivé</item>
+        <item>Montrez dans WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Ouvrir une nouvelle page</item>
+        <item>Ouvrir la page précédente</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Par défaut</item>
+        <item>"Ouvrir dans l'onglet en arrière-plan"</item>
+        <item>Ouvrir dans un nouvel onglet</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Désactivé</item>
+        <item>Auto</item>
+        <item>Paysage</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Toujours activé</item>
+        <item>À la demande</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Désactivé</item>
+        <item>Seulement en Wifi</item>
+        <item>Toujours</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Activer la barre gauche</item>
+        <item>Activer la barre droite</item>
+        <item>Activer tous</item>
+        <item>Désactiver</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Minuscule</item>
+        <item>Petit</item>
+        <item>Normal</item>
+        <item>Large</item>
+        <item>Grand</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Portrait</item>
+        <item>Action Android par défaut</item>
+        <item>Faire défiler page vers le haut/bas</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Je réfléchis</item>
+        <item>J’y travaille.</item>
+        <item>Bien reçu.</item>
+        <item>Comme vous voulez.</item>
+        <item>Votre souhait est ma commande.</item>
+        <item>Patentez une minute.</item>
+        <item>Donnez-moi une seconde.</item>
+        <item>Réflexion en cours.</item>
+        <item>Traitement en cours.</item>
+        <item>Juste un moment.</item>
+        <item>Veuillez patienter.</item>
+        <item>Je l’ai</item>
+        <item>Je vais basculer celui-ci.</item>
+        <item>Basculement en cours</item>
+        <item>"C'est dopant."</item>
+        <item>WOOT !</item>
+        <item>"Ça a l'air délicieux ..."</item>
+        <item>"Ça a l'air génial !"</item>
+        <item>Je vous entends!</item>
+    </string-array>
+</resources>

@@ -1,0 +1,10 @@
+<TextureAtlas imagePath="NextToHighScore.png">
+	<SubTexture name="level_complete_star_filled_0" x="0" y="72" width="58" height="56"/>
+	<SubTexture name="level_complete_star_filled_1" x="0" y="72" width="58" height="56"/>
+	<SubTexture name="level_complete_star_filled_2" x="0" y="72" width="58" height="56"/>
+	<SubTexture name="level_complete_stars_bg" x="0" y="0" width="229" height="70"/>
+	<SubTexture name="play_level_progress_star_0" x="0" y="72" width="58" height="56"/>
+	<SubTexture name="play_level_progress_star_1" x="0" y="72" width="58" height="56"/>
+	<SubTexture name="play_level_progress_star_2" x="0" y="72" width="58" height="56"/>
+	<SubTexture name="play_level_progress_stars_bg" x="0" y="0" width="229" height="70"/>
+</TextureAtlas>

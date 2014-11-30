@@ -1,0 +1,10 @@
+<TextureAtlas imagePath="BoostSlot.png">
+	<SubTexture name="boostslot_bg_disabled" x="0" y="324" width="134" height="106"/>
+	<SubTexture name="boostslot_bg_disabled_landscape" x="136" y="136" width="106" height="134"/>
+	<SubTexture name="boostslot_bg_selected" x="0" y="216" width="134" height="106"/>
+	<SubTexture name="boostslot_bg_selected_landscape" x="136" y="272" width="106" height="134"/>
+	<SubTexture name="boostslot_bg_unowned" x="0" y="108" width="134" height="106"/>
+	<SubTexture name="boostslot_bg_unowned_landscape" x="244" y="0" width="106" height="134"/>
+	<SubTexture name="boostslot_bg_unselected" x="0" y="0" width="134" height="106"/>
+	<SubTexture name="boostslot_bg_unselected_landscape" x="136" y="0" width="106" height="134"/>
+</TextureAtlas>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:orca="http://schemas.android.com/apk/res/com.facebook.orca">
+    <com.facebook.orca.common.ui.titlebar.TitleBar android:id="@id/message_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.orca.photos.tiles.UserTileView android:id="@id/message_user_img" android:layout_width="75.0dip" android:layout_height="75.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" orca:tileSize="75.0dip" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/details_name_text" android:id="@id/message_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/message_user_img" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/grey50" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/message_user_img" android:layout_below="@id/message_user_name" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/grey50" android:id="@id/message_via" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:drawablePadding="4.0dip" android:layout_toRightOf="@id/message_user_img" android:layout_below="@id/message_date" />
+            </RelativeLayout>
+            <com.facebook.orca.maps.MapClickableImageView android:layout_gravity="center" android:id="@id/message_map_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="10.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:gravity="top" android:id="@id/message_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:singleLine="false" />
+            <com.facebook.orca.share.ShareView android:id="@id/message_share" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            <com.facebook.orca.messageview.MessageViewImageAttachementsView android:id="@id/message_image_attachments" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            <com.facebook.orca.messageview.MessageViewOtherAttachmentsView android:id="@id/message_other_attachments" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

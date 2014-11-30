@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/row_agenda_more" android:background="@drawable/widget_ab_item_selector" android:layout_width="fill_parent" android:layout_height="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="left|center" android:layout_width="@dimen/widget_lockscreen_collapsed_icon_size" android:layout_height="@dimen/widget_lockscreen_collapsed_icon_size" android:src="@drawable/widget_more" android:scaleType="centerInside" />
+</FrameLayout>

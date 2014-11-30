@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_e996920094dd5f7e4ceed0e49d53118daebaee4d0cfe9f6b16bde55b3ce5d91f_flash_display_Sprite" mod="1391466799486" signatureChecksum="2704047545" >
+        <def id="_e996920094dd5f7e4ceed0e49d53118daebaee4d0cfe9f6b16bde55b3ce5d91f_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/fuse/ane/AirFuseAPIEvent" mod="1379601007000" signatureChecksum="1108453445" >
+        <def id="com.fuse.ane:AirFuseAPIEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/fuse/ane/AirFuseAPI" mod="1386113544000" signatureChecksum="495401248" >
+        <def id="com.fuse.ane:AirFuseAPI" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="com.fuse.ane:AirFuseAPIEvent" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="com.fuse.ane:AirFuseAPIEvent" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="87717191372a017fd2fb9d459525f33d895134371981bfb1d062e1f305cc0946"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

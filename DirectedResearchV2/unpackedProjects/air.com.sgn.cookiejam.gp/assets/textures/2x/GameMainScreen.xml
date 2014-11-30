@@ -1,0 +1,24 @@
+<TextureAtlas imagePath="GameMainScreen.png">
+	<SubTexture name="meter_element_bg" x="0" y="1617" width="364" height="190"/>
+	<SubTexture name="meter_element_bg_landscape" x="0" y="1617" width="364" height="190"/>
+	<SubTexture name="meter_element_fill" x="358" y="1809" width="356" height="178"/>
+	<SubTexture name="meter_element_fill_landscape" x="358" y="1809" width="356" height="178"/>
+	<SubTexture name="meter_element_line_0" x="0" y="1989" width="17" height="39"/>
+	<SubTexture name="meter_element_line_0_landscape" x="0" y="1989" width="17" height="39"/>
+	<SubTexture name="meter_element_line_1" x="0" y="1989" width="17" height="39"/>
+	<SubTexture name="meter_element_line_1_landscape" x="0" y="1989" width="17" height="39"/>
+	<SubTexture name="meter_element_line_2" x="0" y="1989" width="17" height="39"/>
+	<SubTexture name="meter_element_line_2_landscape" x="0" y="1989" width="17" height="39"/>
+	<SubTexture name="meter_element_mask" x="0" y="1809" width="356" height="178"/>
+	<SubTexture name="meter_element_mask_landscape" x="0" y="1809" width="356" height="178"/>
+	<SubTexture name="meter_element_star_0" x="442" y="456" width="98" height="94"/>
+	<SubTexture name="meter_element_star_0_landscape" x="442" y="456" width="98" height="94"/>
+	<SubTexture name="meter_element_star_1" x="442" y="456" width="98" height="94"/>
+	<SubTexture name="meter_element_star_1_landscape" x="442" y="456" width="98" height="94"/>
+	<SubTexture name="meter_element_star_2" x="442" y="456" width="98" height="94"/>
+	<SubTexture name="meter_element_star_2_landscape" x="442" y="456" width="98" height="94"/>
+	<SubTexture name="score_element_background" x="0" y="0" width="1190" height="454"/>
+	<SubTexture name="score_element_background_landscape" x="0" y="456" width="440" height="1159"/>
+	<SubTexture name="settings" x="366" y="1617" width="155" height="156"/>
+	<SubTexture name="settings_landscape" x="366" y="1617" width="155" height="156"/>
+</TextureAtlas>

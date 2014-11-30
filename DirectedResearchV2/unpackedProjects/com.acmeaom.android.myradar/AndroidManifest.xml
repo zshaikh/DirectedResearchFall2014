@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.acmeaom.android.myradar">
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <application android:allowBackup="true" android:icon="@drawable/launcher_icon" android:label="@string/app_name" android:name="com.acmeaom.android.myradar.app.MyRadarApplication" android:theme="@style/HoloIfAvailable.NoTitleBar">
+        <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.acmeaom.android.myradar.app.activity.MyRadarActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.acmeaom.android.myradar.app.activity.LicenseView" android:theme="@style/HoloIfAvailable"/>
+        <activity android:label="Preferences" android:name="com.acmeaom.android.myradar.app.activity.MyRadarPreferencesActivity" android:theme="@style/HoloIfAvailable"/>
+        <activity android:label="Flood Warning" android:name="com.acmeaom.android.myradar.app.activity.WarningDetailActivity" android:theme="@style/HoloIfAvailable.NoActionBarBorder"/>
+        <activity android:label="Hurricane Warning" android:name="com.acmeaom.android.myradar.app.activity.HurricaneDetailActivity" android:theme="@style/HoloIfAvailable.NoActionBarBorder"/>
+        <activity android:label="Alert Info" android:name="com.acmeaom.android.myradar.app.activity.AirmetDetailActivity" android:theme="@style/HoloIfAvailable.NoActionBarBorder"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.acmeaom.android.myradar.app.activity.WeatherLayersActivity" android:theme="@style/HoloIfAvailable" android:windowSoftInputMode="adjustResize"/>
+        <service android:name="com.android.vending.billing.BillingService"/>
+        <receiver android:name="com.android.vending.billing.BillingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY"/>
+                <action android:name="com.android.vending.billing.RESPONSE_CODE"/>
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+            <intent-filter>
+                <action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.google.ads.AdActivity"/>
+        <receiver android:name="com.acmeaom.android.myradar.app.notifications.MyRadarGCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.acmeaom.android.myradar"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="vending_public_key" android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtyYUsywVFnr0OHVv1eSjlT3fvy4qjHM5Rze7szO1F1tiyFXKWDumuQEQpdsY6GRUcL0YH25j6Nu4jUsvLsBYk/+8yHg9tPOOTw0pEx9ifErDzsZRc9jjttfWui5MoMVpA9EHn1DYs8AJPKNZp9zHL23eXnzA4Yo+hf0cCbtHzmDJGaLxvqFLBBeYDNFGaZHrsru2DwLH9LDwSua3eqm8w2s+hr5LtqHCpwVY44CCkbm8W5/6Tj6f4RRCXKp6MA1mu6xiJo6bznK4TxXggZq89xC1Itw9hEjAE2TRM+t1zeMzzgpwxqaCWrgG6vpJllIZl66cmA021Sr3/dvs03BMsQIDAQAB"/>
+    </application>
+    <permission android:name="com.acmeaom.android.myradar.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.acmeaom.android.myradar.permission.C2D_MESSAGE"/>
+</manifest>

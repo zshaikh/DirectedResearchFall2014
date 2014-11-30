@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/btn_and_path_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dl_path_height">
+        <ImageView android:id="@id/btn_change_path" android:layout_width="@dimen/dl_back_icon_size" android:layout_height="@dimen/dl_back_icon_size" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:contentDescription="@null" />
+        <ImageView android:id="@id/btn_path_vertical_divider" android:layout_width="@dimen/dl_thin_divider_size" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:contentDescription="@null" />
+        <TextView android:textSize="16.0sp" android:ellipsize="start" android:gravity="center_vertical" android:id="@id/tv_show_path" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/btn_path_divider" android:layout_width="fill_parent" android:layout_height="@dimen/dl_thick_divider_size" android:contentDescription="@null" />
+    <android.view.CustomMenuListView android:id="@id/list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:cacheColorHint="@color/transparent" />
+    <RelativeLayout android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="24.0sp" android:id="@id/empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdcard_missing_message" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/empty_icon" android:layout_width="@dimen/dl_no_download_icon_size" android:layout_height="@dimen/dl_no_download_icon_size" android:layout_marginBottom="20.0dip" android:layout_above="@id/empty_text" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+    </RelativeLayout>
+</LinearLayout>

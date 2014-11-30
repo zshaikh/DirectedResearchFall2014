@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.orca.common.ui.overlay.OverlayLayout android:id="@id/thread_list_overlay_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:orca="http://schemas.android.com/apk/res/com.facebook.orca">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.orca.common.ui.titlebar.TitleBar android:id="@id/thread_list_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:title="@string/thread_list_title" orca:hasProgressBar="false" orca:hasHomeButton="false" orca:centerTitle="false" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewContainer android:id="@id/threadlist_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListView android:id="@id/thread_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/white" android:divider="@drawable/default_separator_color" android:dividerHeight="1.0px" />
+            </com.facebook.orca.common.ui.widgets.refreshablelistview.RefreshableListViewContainer>
+            <com.facebook.orca.common.ui.widgets.EmptyListViewItem android:layout_gravity="center_vertical" android:id="@id/thread_list_loading_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <com.facebook.orca.threadlist.ThreadListEmptyView android:layout_gravity="center_vertical" android:id="@id/thread_list_empty_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <FrameLayout android:layout_gravity="bottom" android:id="@id/thread_list_animation_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.facebook.orca.common.ui.widgets.MuteWarningView android:id="@id/thread_list_mute_warning" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:dividerOnTop="true" orca:dividerOnBottom="false" orca:animateOutDirection="down" />
+        <com.facebook.orca.threadlist.SyncDisabledWarningView android:id="@id/thread_list_sync_disabled_warning" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.orca.threadlist.VersionUpgradePromoView android:id="@id/thread_list_version_upgrade_promo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.facebook.orca.threadlist.NewMessageNuxView android:id="@id/new_message_nux" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" orca:layout_anchorPosition="belowAnchor|alignWithRightOfAnchor" orca:layout_isOverlay="true" orca:layout_anchoredTo="@id/title_button_1" />
+</com.facebook.orca.common.ui.overlay.OverlayLayout>

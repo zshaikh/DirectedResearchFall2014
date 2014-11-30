@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RobotoFontAppearence" parent="@style/RobotoFontAppearenceBase">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="SettingsTitleAppearence" parent="@style/SettingsTitleAppearenceBase">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>

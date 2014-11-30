@@ -1,0 +1,6 @@
+<TextureAtlas imagePath="RecipeResultsSundae1.png">
+	<SubTexture name="sundae_1_0" x="0" y="182" width="180" height="180"/>
+	<SubTexture name="sundae_1_1" x="182" y="0" width="180" height="180"/>
+	<SubTexture name="sundae_1_2" x="182" y="182" width="180" height="180"/>
+	<SubTexture name="sundae_1_3" x="0" y="0" width="180" height="180"/>
+</TextureAtlas>

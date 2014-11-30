@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="fill_horizontal|center" android:orientation="vertical" android:id="@id/addon_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="300.0dip" android:minHeight="260.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/addon_title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/btn_cancel" android:layout_width="75.0dip" android:layout_height="wrap_content" android:text="@string/cancel" />
+        <TextView android:textSize="20.0dip" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/addon_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <Button android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/btn_post" android:layout_width="75.0dip" android:layout_height="wrap_content" android:text="@string/post" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ScrollView android:id="@id/addon_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_weight="1.0" />
+        <TextView android:id="@id/addon_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/change_service" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/addon_list" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<TextureAtlas imagePath="MapHUD.png">
+	<SubTexture name="awning" x="0" y="1061" width="179" height="79"/>
+	<SubTexture name="awning_landscape" x="0" y="1061" width="179" height="79"/>
+	<SubTexture name="maphud_clouds" x="0" y="269" width="1277" height="417"/>
+	<SubTexture name="maphud_clouds_landscape" x="0" y="0" width="1721" height="267"/>
+	<SubTexture name="maphud_cookiejam_button" x="0" y="1142" width="170" height="167"/>
+	<SubTexture name="maphud_cookiejam_button_landscape" x="0" y="1142" width="170" height="167"/>
+	<SubTexture name="maphud_left" x="110" y="1638" width="108" height="298"/>
+	<SubTexture name="maphud_left_landscape" x="110" y="1638" width="108" height="298"/>
+	<SubTexture name="maphud_pandajam_button" x="0" y="1311" width="170" height="167"/>
+	<SubTexture name="maphud_pandajam_button_landscape" x="0" y="1311" width="170" height="167"/>
+	<SubTexture name="maphud_promo_button" x="0" y="1142" width="170" height="167"/>
+	<SubTexture name="maphud_promo_button_landscape" x="0" y="1142" width="170" height="167"/>
+	<SubTexture name="maphud_right" x="0" y="1638" width="108" height="298"/>
+	<SubTexture name="maphud_right_landscape" x="0" y="1638" width="108" height="298"/>
+	<SubTexture name="maphud_settings" x="0" y="1480" width="155" height="156"/>
+	<SubTexture name="maphud_settings_landscape" x="0" y="1480" width="155" height="156"/>
+	<SubTexture name="maphud_worldname_bg" x="0" y="688" width="1042" height="269"/>
+	<SubTexture name="maphud_worldname_bg_landscape" x="0" y="688" width="1042" height="269"/>
+	<SubTexture name="mappaginator_arrow_left" x="157" y="1480" width="59" height="76"/>
+	<SubTexture name="mappaginator_arrow_left_landscape" x="157" y="1480" width="59" height="76"/>
+	<SubTexture name="mappaginator_arrow_right" x="157" y="1558" width="59" height="76"/>
+	<SubTexture name="mappaginator_arrow_right_landscape" x="157" y="1558" width="59" height="76"/>
+	<SubTexture name="mappaginator_bg" x="0" y="959" width="336" height="100"/>
+	<SubTexture name="mappaginator_bg_landscape" x="0" y="959" width="336" height="100"/>
+	<SubTexture name="mappaginator_dot_selected" x="86" y="1938" width="84" height="84"/>
+	<SubTexture name="mappaginator_dot_selected_landscape" x="86" y="1938" width="84" height="84"/>
+	<SubTexture name="mappaginator_dot_unselected" x="0" y="1938" width="84" height="84"/>
+	<SubTexture name="mappaginator_dot_unselected_landscape" x="0" y="1938" width="84" height="84"/>
+</TextureAtlas>

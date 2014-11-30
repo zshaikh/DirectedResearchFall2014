@@ -1,0 +1,919 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: assets/strings_IT.xml
+SHA1-Digest: V/t6EWFNmphEZuxxe4xKcM5EgkM=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.trialpay.AneTrialPay
+ /META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: e00GTfzDs2IED+3L9Qlw05n/tfQ=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: fOFYT1e2WRn8qF3X7YA4fYO79ko=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/docs/packages.dita
+SHA1-Digest: 8jkOG7cO6ZHlqEmBYWKdtffLTCU=
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+
+Name: assets/video_player_controls_pause.png
+SHA1-Digest: 4P8g4PQJSlnlr7F2sXCboKQ+8hQ=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/docs/com.playhaven.events.xml
+SHA1-Digest: kWLdhUIK0EzyYvUDli0iP47ykDQ=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: 2IIv2Iu0VSylGw5g9aLJhV0S6kM=
+
+Name: assets/icon36.png
+SHA1-Digest: IyS/ubS4VG81n9eV0Wbtq/ihxik=
+
+Name: assets/icon114.png
+SHA1-Digest: 6FrFnOxDjwlnA/c4sp3mTDZGA8M=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.chartboost.AneChartb
+ oost/catalog.xml
+SHA1-Digest: Ikcw6hh/ivWEpqLZgeo5SFEL07w=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/META-INF/ANE/extension.xml
+SHA1-Digest: 5+3/J0428zNYAXV+xlA1aS0C+j4=
+
+Name: res/drawable-hdpi/com_facebook_logo.png
+SHA1-Digest: +F9i6TennSQx3Unl/q4mPr3itE8=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.w3i.AneW3i/META-INF/
+ ANE/Android-ARM/library.swf
+SHA1-Digest: 0DCfvmEKfBOqVoWk1AU4q43rCKc=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/library.swf
+SHA1-Digest: i6yY9WWOarWVdbgq77FnkPGERWA=
+
+Name: res/raw/icon.jpg
+SHA1-Digest: 7g9A72BHtvf1hEWBNZiKzoe56gw=
+
+Name: res/drawable/com_facebook_loginbutton_blue.xml
+SHA1-Digest: c0lSq6jbHrF7aPSFHtY8IsbJoM0=
+
+Name: assets/progress_bar_progress.9.png
+SHA1-Digest: C5T7JqSo+rSn8YxDtOtkHdQ2bO4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.apsalar.AneApsalar/M
+ ETA-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: oSabYkcJW88RRUQ8eGkAsVMeFk0=
+
+Name: assets/META-INF/AIR/extensions/com.hasoffers.MobileAppTracker/ME
+ TA-INF/ANE/extension.xml
+SHA1-Digest: mzqaUkLEOh9I6Hc4GBqWxIpijhk=
+
+Name: res/drawable-ldpi/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: lib/armeabi-v7a/libstlport_shared.so
+SHA1-Digest: Hn8JAWcqVq0cTbkvFmVt2JLFmlw=
+
+Name: res/drawable-notlong-port-hdpi/loading.png
+SHA1-Digest: ldmLklssHQPdsHtq3/NmlbL9t3I=
+
+Name: res/drawable-xhdpi-v11/icon_status.png
+SHA1-Digest: RirxGRNupyPKR6qNxirPs38mh3I=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.aarki.AneAarki/catal
+ og.xml
+SHA1-Digest: avatMTgUAyEI0lb5VehN8FXPnZM=
+
+Name: assets/icon57.png
+SHA1-Digest: 5v6S/3+qcrkpLk4uwTNyvi9npCI=
+
+Name: assets/icon72.png
+SHA1-Digest: S3xxVHKL3JDmjSdoOjEM4MkJM9I=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.aarki.AneAarki/META-
+ INF/ANE/Android-ARM/library.swf
+SHA1-Digest: OVRoe6wNTBwA6c63XAANfTfhynU=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: lSztBHFVRlPMsGcFT26oMQipfTQ=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.w3i.AneW3i/library.s
+ wf
+SHA1-Digest: 1oK92DZsd3cd1OSMwTo96NaPY+c=
+
+Name: assets/META-INF/AIR/extensions/com.appsponsor.nativeExtensions.a
+ ppsponsorsdk/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: N2uRMR4zQgThrd0B/TXFBwjwhSI=
+
+Name: assets/Themes/DarkTheme/featured_offer_button_pressed_small.9.pn
+ g
+SHA1-Digest: 6z20Bc/HbcdIWOlcEYvTTowTp2g=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: COOFdQDqXjvNdi+5TMPa3bPhaEQ=
+
+Name: res/drawable-land/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: assets/strings_FR.xml
+SHA1-Digest: 4azUhPD5l2nU2mBYI/u4yqJTPag=
+
+Name: assets/META-INF/AIR/extensions/com.appsponsor.nativeExtensions.a
+ ppsponsorsdk/catalog.xml
+SHA1-Digest: AA0zu0SBlVhmx1kODHHj465sN78=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.chartboost.AneChartb
+ oost/META-INF/ANE/extension.xml
+SHA1-Digest: 7F5uSVc1nFzrxYvCE+gtJ2cr0yA=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.gamecircle.AneGameCi
+ rcle/META-INF/ANE/extension.xml
+SHA1-Digest: yNaxBErCAV4hwsuIGRxei+zMjow=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/catalog.xml
+SHA1-Digest: pr1wJ/qcroGrZ0i0W8oslmJySjU=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/docs/com.playhaven.xml
+SHA1-Digest: Jub5w7+hOBAChnZk5Zzbz0Qb7YI=
+
+Name: res/drawable-long-land-hdpi/loading.png
+SHA1-Digest: F1zb8PkQs2BG1f9BZi8lvGpraGU=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: OiaQnHr5wZxRhFatu0mlWa5J714=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: yTqqAIJPkGccET5S4wJCztP/Eag=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: Tj1G/IZet4GdspzZXF8K9KUfzN8=
+
+Name: res/drawable-xhdpi-v9/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pushnotif.AnePushNot
+ if/META-INF/ANE/extension.xml
+SHA1-Digest: VBbzspDSL1nNLQn1/WnVk8SGPTQ=
+
+Name: assets/cta_dialog_button_down.9.png
+SHA1-Digest: APy30qqKmcLakS6D8i5lZ2F3wqM=
+
+Name: assets/META-INF/AIR/application.xml
+SHA1-Digest: A65Xxd5nHf7jt7ilfsYqdLhIcEY=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.aarki.AneAarki/libra
+ ry.swf
+SHA1-Digest: 4dHJLmSvh4Kr6GYqR7OyKieQ5eY=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: WHcZbFa4gP8FUocvg0Gz5kIcivM=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/docs/com.milkmangames.nativeextensions.android.events.xml
+SHA1-Digest: 6T2XF4N+Txshh6pZ9ZzCETPnQV4=
+
+Name: assets/Main.swf
+SHA1-Digest: ogsbAWYc9AyT+0ugVZUf4d0k6aA=
+
+Name: res/raw/rgba8888
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.flurry.AneFlurry/cat
+ alog.xml
+SHA1-Digest: lehStJbmy26u6BTfd0A5f25yF4Q=
+
+Name: assets/nativeXSizeScript
+SHA1-Digest: cgqZIojJZKmnSluM1nkjoGXAffk=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pocketchange.AnePock
+ etChange/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: tkfPz8h7kmXyL2YsFZnYQO2raWQ=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: Svsn6ItPKWUjf4rNymeMe5f8bDk=
+
+Name: res/drawable-long-port-mdpi/loading.png
+SHA1-Digest: mKlpdq+s5QOnRL9EfF2R9kHsn7A=
+
+Name: assets/Themes/DarkTheme/featured_offer_offer_layout_small.9.png
+SHA1-Digest: 3nI6LzHtt/K+hUj1QVPYfiJ9zA4=
+
+Name: assets/mraid_test/mraid_test_video_page.html
+SHA1-Digest: PJDjwfc5pGiz2IKuTn65/IG36j4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.facebook.AneFacebook
+ /META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: 76ChHYISTOFcnpYdh0+P/n4R7bw=
+
+Name: res/layout/expandable_multiple_chooser_row.xml
+SHA1-Digest: nenT5wYafunvrX+ZMztMcaepQUQ=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/docs/packages.dita
+SHA1-Digest: /wqh8Wx6jeWf99NSiCKHrev8SmE=
+
+Name: res/drawable-mdpi-v11/icon_status.png
+SHA1-Digest: O5jjFdFqRjRMXaJfc3li4svmrkg=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: Gma7yh4oCG3rkJ7n7Wblpcn+Tgg=
+
+Name: assets/strings_ZH.xml
+SHA1-Digest: aHigWlbTOmpbv9q0Ap6BhAD/Daw=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: V27iDxNqPIzkdIgA+0DIi/AfQYY=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+
+Name: assets/adobeair.vch
+SHA1-Digest: 0tLcfiT6PsIdmdMJ1cgkkSxGERk=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pocketchange.AnePock
+ etChange/catalog.xml
+SHA1-Digest: 1m25eV7UX0hqfK4KvaI7l7lpMwU=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: i6yY9WWOarWVdbgq77FnkPGERWA=
+
+Name: res/drawable-hdpi-v11/icon_status.png
+SHA1-Digest: j6RQTnGKExe5Jv1fRkDbtXR7i9c=
+
+Name: assets/icon1024.png
+SHA1-Digest: KlZyqkP/roZJtcn2PwDWibnFPAY=
+
+Name: res/drawable-hdpi-v9/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: NDLFyRfWjBjm9xCkOlx9fqTCMug=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pushnotif.AnePushNot
+ if/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: NS43Dv152jXZrcnkhiwsGwgbdyk=
+
+Name: res/drawable-xhdpi/com_facebook_close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: assets/icon29.png
+SHA1-Digest: cKE2yW0epcQsUYhSSZIj7+NcSwQ=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: kcbGAkMFXg8r5Q+QAjl/E9ccsTk=
+
+Name: res/drawable-mdpi-v9/icon_status.png
+SHA1-Digest: ialLzge9OwZWgd3kJRbXHh4fvCI=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.trialpay.AneTrialPay
+ /META-INF/ANE/extension.xml
+SHA1-Digest: 4y5q41Tj2OB+rCWDXjzBdEDRl2c=
+
+Name: res/layout/row.xml
+SHA1-Digest: JH5WO7WARqz12tPZTuYhSFwjEN8=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: 5dLOm+0eL1Yk7ssxnmgTANfFTcc=
+
+Name: res/drawable-xhdpi/ouya_icon.png
+SHA1-Digest: ifQpxyylb1bMOtLjBPANAtVc/n4=
+
+Name: assets/cta_dialog_button.9.png
+SHA1-Digest: dx+Jqhx15pe/9Ns94eush10WqQU=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.flurry.AneFlurry/lib
+ rary.swf
+SHA1-Digest: L/PDHfdhQPe1CmfrGatI5/h9BLw=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.facebook.AneFacebook
+ /catalog.xml
+SHA1-Digest: co4KuYUyACgSSdUtXyoEeuApT20=
+
+Name: assets/logo.png
+SHA1-Digest: u0sCJiESrXbscnRUf2iX9vSqwCE=
+
+Name: res/drawable-ldpi-v9/icon_status.png
+SHA1-Digest: bXLsEnToI5gSG2ApcB7ofK7XfKo=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.apsalar.AneApsalar/c
+ atalog.xml
+SHA1-Digest: e389PJkVhkL9I9krefBHAHIuBFQ=
+
+Name: res/drawable/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: 9DMBnNlBd5D/PaH8PYbmjMmlNmI=
+
+Name: res/drawable-mdpi/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: res/drawable/icon_status.png
+SHA1-Digest: qM75GnmEeV5c8eBE2fC96wr4drQ=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: xGQtABb1AitSeN8uVNWHd/+8MQ0=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+
+Name: assets/strings_TW.xml
+SHA1-Digest: hWiQDLQLoXPDGAcA2gUB/t6cBl4=
+
+Name: res/drawable-xhdpi-v11/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.referrer.AneReferrer
+ /library.swf
+SHA1-Digest: YmLPDFAuq9jMb6vbcM3wiGXMZMI=
+
+Name: assets/progress_bar_buffer.9.png
+SHA1-Digest: C3z/kc2npvM3KVHds8MZxQG7x0g=
+
+Name: res/drawable-xhdpi/icon_status.png
+SHA1-Digest: Mz6VVJTfxhxm+Rr0FxtY3JmP/Mg=
+
+Name: assets/close_button.png
+SHA1-Digest: tb9PHEbQxFYTr4uCh9BFoZSuziM=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/docs/packages.dita
+SHA1-Digest: jIxCcBjTpBYYC3FNVYHrltwoZl8=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.facebook.AneFacebook
+ /META-INF/ANE/extension.xml
+SHA1-Digest: C0twEb0Qa94D1s4NySZFY10V6jE=
+
+Name: assets/Themes/DarkTheme/featured_offer_button_normal_small.9.png
+SHA1-Digest: KcV/ieSHE7akurJ8CtjDatJSQyg=
+
+Name: res/drawable/air_72px_mobile_eula.png
+SHA1-Digest: 6eX1WzhcZDSgS30DdiYKnHz0h1w=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.trialpay.AneTrialPay
+ /catalog.xml
+SHA1-Digest: Vd5t4pIGzIxrem9XZPMiIPFF0kc=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+
+Name: res/drawable/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/cta_dot-inactive@2x.png
+SHA1-Digest: AARDa6hHMlyGhOW+7abFWIn9G4o=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: UlppTzQMf0S8p04nUqt4qCBKRF0=
+
+Name: lib/armeabi-v7a/libstagefright_froyo.so
+SHA1-Digest: EUXLvjWSqWdOtEeNogZ6B3XXEO0=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.referrer.AneReferrer
+ /catalog.xml
+SHA1-Digest: 23wmAmSf/B8AaI5JBl41jbDRtEk=
+
+Name: res/drawable-xhdpi-v9/icon_status.png
+SHA1-Digest: Te/dBvSkfMbpmBTu1V7HPI594L4=
+
+Name: res/drawable/mp_warning_32x32_n.png
+SHA1-Digest: eCFwTk+zmvIeM+w4WQEnsknkfNI=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.info.AneInfo/catalog
+ .xml
+SHA1-Digest: Ug4794XapqUYHS5yAVSWaxT1OY4=
+
+Name: res/drawable-ldpi/com_facebook_icon.png
+SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: S3xxVHKL3JDmjSdoOjEM4MkJM9I=
+
+Name: res/drawable-mdpi/badge.9.png
+SHA1-Digest: UjItqEi7N+6+6VNKlGr+fxcP6Sc=
+
+Name: assets/icon58.png
+SHA1-Digest: QhEDFo3DkaDQ1ehUei7QvqSHsWI=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: HvA+CFhz5qEtNUPoHvJKD+Z3EwY=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: u+wt9C2z2bvPbW8URuqdNigOUSo=
+
+Name: res/drawable-mdpi/icon_status.png
+SHA1-Digest: OXHVgKKFlOlXQCCktGJFCnE5fqM=
+
+Name: lib/armeabi-v7a/libstagefright_honeycomb.so
+SHA1-Digest: qPns6HP60VRhSzOQHoV2FXg2q/A=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: LJJVdb3v9wYneUoTawiAmL4EI0U=
+
+Name: assets/Themes/DarkTheme/dialog_background_small.9.png
+SHA1-Digest: Ojrecacl33cgofffM4CU01yM+l4=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/docs/com.playhaven.ui.xml
+SHA1-Digest: 0I3K/FJNrE5VDL43ncuPzO4AjXk=
+
+Name: lib/armeabi-v7a/libCore.so
+SHA1-Digest: o+ELUkbzltRBilAol0jGQUDcGMQ=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applovin.AneAppLovin
+ /library.swf
+SHA1-Digest: cm0+EjbNBV0cn5uxyYqHcHimlp8=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.info.AneInfo/library
+ .swf
+SHA1-Digest: etmOFh2kJUsLgMafQ3SQTEUV50g=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/docs/com.amazon.nativeextensions.android.xml
+SHA1-Digest: dYeARKjoOL6643QG6x4lEv/ycK0=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.apsalar.AneApsalar/l
+ ibrary.swf
+SHA1-Digest: ypi45/z8mkLJizuvsrfEXFk2Fvk=
+
+Name: res/drawable-hdpi-v9/icon_status.png
+SHA1-Digest: pM7Im9j9PuvHnju5PvnuM7o204E=
+
+Name: assets/META-INF/AIR/extensions/com.appsponsor.nativeExtensions.a
+ ppsponsorsdk/library.swf
+SHA1-Digest: htgUZCtoT7NHAzAoIJQsVuMayAU=
+
+Name: assets/mraid_test/mraid_test_custom_scheme_response_time_page.ht
+ ml
+SHA1-Digest: 82AuyRzs2jEml1vzoUqi8zCuIJA=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.mdotm.AneMdotM/META-
+ INF/ANE/Android-ARM/library.swf
+SHA1-Digest: xAQqE6DGwvzUcG2upn3nsRCgz6o=
+
+Name: assets/icon512.png
+SHA1-Digest: ifQpxyylb1bMOtLjBPANAtVc/n4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applovin.AneAppLovin
+ /catalog.xml
+SHA1-Digest: 15F6WrThKaekxxQaYCYSnuk0ROE=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/catalog.xml
+SHA1-Digest: BVEIwyolMtDwm0gEn6kUdAtcrgA=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: 2MzIOhUErO1MXNe+Rybro7s7x9Q=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+
+Name: assets/cta_dialog_bg.9.png
+SHA1-Digest: c30mJRnA1qOwTavHmqCvN3Szubo=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: JHTN2WeSJY8mbCbU+yqbAUWb+HA=
+
+Name: res/drawable-mdpi-v9/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.mdotm.AneMdotM/META-
+ INF/ANE/extension.xml
+SHA1-Digest: JvgSwnN1rnPANVinJMPXQmn84GA=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: dknPQ5QLCMh/7yajodSeKQm8plk=
+
+Name: lib/armeabi-v7a/libysshared.so
+SHA1-Digest: TB891nh0tUUz+nsrHzpoSik8nMA=
+
+Name: res/raw/startga.html
+SHA1-Digest: 0Gq1U1c1hFbPzb+UHZ8RaIpUnts=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: res/drawable-notlong-land-mdpi/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: assets/progress_bar_empty.9.png
+SHA1-Digest: uSBmZxkpHTLqT9Z7XOtMmMmWyAE=
+
+Name: assets/cta_offer_bg_x2.png
+SHA1-Digest: /bYHrzbU/0RsvJIMvu0lw1++ry4=
+
+Name: resources.arsc
+SHA1-Digest: 1OmfBOk2ZwMM7KqwqIrzmL13qyY=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.referrer.AneReferrer
+ /META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: YmLPDFAuq9jMb6vbcM3wiGXMZMI=
+
+Name: assets/META-INF/AIR/extensions/com.appsponsor.nativeExtensions.a
+ ppsponsorsdk/META-INF/ANE/extension.xml
+SHA1-Digest: r5eHqF7aGqPRC2qiru/BGuRGCTw=
+
+Name: AndroidManifest.xml
+SHA1-Digest: ppmw3vhwKo5/T1l6D9CZcgFZoQw=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+
+Name: assets/icon144.png
+SHA1-Digest: 9I+QRrj35WS2ssb+htP4h9J7Nqs=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: 9I+QRrj35WS2ssb+htP4h9J7Nqs=
+
+Name: res/drawable-port-xhdpi/loading.png
+SHA1-Digest: Njy8ZKa7G5Sg7AMHMS+rBGLa7zM=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: YgNzOxZeRf1wrlJqxcQVDmEePjs=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/catalog.xml
+SHA1-Digest: GseuCBKEXj6vnWh4rLuAsGwgEa4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.facebook.AneFacebook
+ /library.swf
+SHA1-Digest: lv5coxVrY6S+haSWi8DDHOmKdR8=
+
+Name: res/drawable/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: 5eqq9jxVF9PeVyf0iNJD0gmKE3g=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pocketchange.AnePock
+ etChange/META-INF/ANE/extension.xml
+SHA1-Digest: 52U+qhCNfkS4BeBCnfwDoTyQ0co=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.gamecircle.AneGameCi
+ rcle/library.swf
+SHA1-Digest: gW5b7dcj+2PpQGUO2q7Wp+TRASU=
+
+Name: res/raw/adobelogo.gif
+SHA1-Digest: cp6EzjLDVdzLOD69uttcA3OnzH8=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/META-INF/ANE/extension.xml
+SHA1-Digest: 68mOVka9GfCAqjFWGnclELj9L68=
+
+Name: res/drawable-ldpi/com_facebook_close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: V27iDxNqPIzkdIgA+0DIi/AfQYY=
+
+Name: classes.dex
+SHA1-Digest: RKDqA2+jhSHTqH/MSyV8beLpk+c=
+
+Name: res/drawable-long-port-hdpi/loading.png
+SHA1-Digest: aZ3JlrQUIFi3BX2OW3Sl/94hc9I=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: A8UwRsK8A6ympS4CbhAQHBfcvyE=
+
+Name: res/drawable-ldpi-v11/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: res/drawable-land-xhdpi/loading.png
+SHA1-Digest: BTVV2J+2RIRO8XZM89e3SmhVUnE=
+
+Name: assets/META-INF/AIR/extensions/com.hasoffers.MobileAppTracker/ME
+ TA-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: 5E3rRhRc2ZODz9NE5AKAyGqSCBA=
+
+Name: assets/cta_dot-active@2x.png
+SHA1-Digest: 2uTLqN/LG4s1NjgpNEsQ+9bLxyg=
+
+Name: res/drawable-xhdpi/com_facebook_logo.png
+SHA1-Digest: 94ZTspodsrcPndjRFwq4Cqz6Wc4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applovin.AneAppLovin
+ /META-INF/ANE/extension.xml
+SHA1-Digest: AoDonjaDFMGJw/6sOzE1s9+qffs=
+
+Name: assets/mraid_CloseButton.png
+SHA1-Digest: hGrtlyXz/rvVm0FH72mAFtv4fz4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.mdotm.AneMdotM/libra
+ ry.swf
+SHA1-Digest: +Ta3aSCbrmCjIeOpd4o7aJXEV/4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.flurry.AneFlurry/MET
+ A-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: Fj3xoS2hdOvjFFUQf8xzIFcMsGE=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.trialpay.AneTrialPay
+ /library.swf
+SHA1-Digest: e00GTfzDs2IED+3L9Qlw05n/tfQ=
+
+Name: assets/strings_JA.xml
+SHA1-Digest: hIJK5VLihejqFtiez111B8vp3Fc=
+
+Name: res/layout/expandable_chooser_row.xml
+SHA1-Digest: s/Pr782hWTpCxFQYJ/OEO5X2W9Q=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applovin.AneAppLovin
+ /META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: QNFRTfOui0yzYjrgqHm+nTip2Gw=
+
+Name: res/drawable-hdpi-v11/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: res/drawable-notlong-port-mdpi/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+
+Name: assets/META-INF/AIR/extensions/com.playhaven.extensions.PlayHave
+ n/META-INF/ANE/extension.xml
+SHA1-Digest: 3frHuLv3u10K0f41unlPPnJVfYY=
+
+Name: res/layout/ssl_certificate_warning.xml
+SHA1-Digest: g5ouf0l45ysAY1YxNK0LwEdsQxg=
+
+Name: res/drawable/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: /l9r0DHSIj4WdudFxA18dCfnfec=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: res/drawable-hdpi/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.chartboost.AneChartb
+ oost/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: gX2O6oFONRYBaOFpszw4w5NQNRA=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pocketchange.AnePock
+ etChange/library.swf
+SHA1-Digest: tkfPz8h7kmXyL2YsFZnYQO2raWQ=
+
+Name: assets/locale/fr_FR/basic.xlf
+SHA1-Digest: mrEjaBHA0JAFU7r3pzvUfeqzsUE=
+
+Name: assets/icon48.png
+SHA1-Digest: Svsn6ItPKWUjf4rNymeMe5f8bDk=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.flurry.AneFlurry/MET
+ A-INF/ANE/extension.xml
+SHA1-Digest: 17JWOcNAilvjrALAk7rgS9YGRFg=
+
+Name: assets/cta_close_x2.png
+SHA1-Digest: GD2vw4HSIHHhEsbqIRUARPfVDsw=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+
+Name: res/drawable-port/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/raw/debuginfo
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: IyS/ubS4VG81n9eV0Wbtq/ihxik=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.referrer.AneReferrer
+ /META-INF/ANE/extension.xml
+SHA1-Digest: /xka/N2gzknL1iAwDii2fBEav/s=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: 4katch+Z/3cWOfcOKA0/Rj5Js+s=
+
+Name: assets/META-INF/AIR/extensions/com.hasoffers.MobileAppTracker/ca
+ talog.xml
+SHA1-Digest: PiQf1tJxIaXC6mQX/zW4MK+5Mk0=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applifier.AneApplifi
+ er/META-INF/ANE/extension.xml
+SHA1-Digest: PusRfYOK6b/qwX9gx/GmHkq3xF4=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/library.swf
+SHA1-Digest: 2MzIOhUErO1MXNe+Rybro7s7x9Q=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/docs/com.milkmangames.nativeextensions.android.xml
+SHA1-Digest: cfGH6cEoEjeGLGxXbsKWE65c0O8=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.info.AneInfo/META-IN
+ F/ANE/extension.xml
+SHA1-Digest: aYAoGROt/g1TeoUvNr3EwOX4d8M=
+
+Name: res/layout/main.xml
+SHA1-Digest: 6xClFoBxGzREh2B0PzjGeIjAI4I=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.gamecircle.AneGameCi
+ rcle/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: AHjjNT9hl1D2OuEavDECiyohA5A=
+
+Name: res/drawable-long-land-mdpi/loading.png
+SHA1-Digest: 6AxTryBQ1q0tLZP38dpIEmMIgCY=
+
+Name: assets/icon100.png
+SHA1-Digest: RHGuXvHOq794KOrkmAQT0SChmWk=
+
+Name: res/drawable-hdpi/com_facebook_icon.png
+SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+
+Name: res/drawable-xhdpi/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pushnotif.AnePushNot
+ if/library.swf
+SHA1-Digest: NS43Dv152jXZrcnkhiwsGwgbdyk=
+
+Name: assets/strings_BG.xml
+SHA1-Digest: VzHtS3srRD5MFhr7cncVMYPbsYM=
+
+Name: assets/video_player_controls_play.png
+SHA1-Digest: ofev/A/xKlZskfJRtVwOuFtta0M=
+
+Name: res/drawable-ldpi/icon_status.png
+SHA1-Digest: qexI69yuoMrdWbfsGiRX/NLrIlo=
+
+Name: res/drawable-hdpi/icon_status.png
+SHA1-Digest: qM75GnmEeV5c8eBE2fC96wr4drQ=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/library.swf
+SHA1-Digest: LJJVdb3v9wYneUoTawiAmL4EI0U=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.w3i.AneW3i/META-INF/
+ ANE/extension.xml
+SHA1-Digest: KfYVSVedMpkdWlxdYth5gd0rhbI=
+
+Name: res/drawable/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: /l9r0DHSIj4WdudFxA18dCfnfec=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applifier.AneApplifi
+ er/library.swf
+SHA1-Digest: p2Dfl8VVZw+tY1v9A2xXjYxdIGA=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.apsalar.AneApsalar/M
+ ETA-INF/ANE/extension.xml
+SHA1-Digest: t8WbhvFaQpb2gYKDrKplIqq+6M8=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.gamecircle.AneGameCi
+ rcle/catalog.xml
+SHA1-Digest: XXqr3ixEdBH9vmkXhGhoieHxIhk=
+
+Name: res/drawable-hdpi/badge_high.9.png
+SHA1-Digest: Vg8kdnu4aLMir7bi3ssXN04mZsc=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.w3i.AneW3i/catalog.x
+ ml
+SHA1-Digest: zQtqO5XKQ7X1b1j4Ai4mcGVCYH4=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: 9UPVUpNc9K8HSzYKhDHvlgqQ34g=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+
+Name: assets/META-INF/AIR/extensions/com.amazon.extensions.AmazonPurch
+ ase/docs/com.amazon.nativeextensions.android.events.xml
+SHA1-Digest: 8RC23bCJYkmH8uUzrXXfPJCOxCo=
+
+Name: res/drawable-notlong-land-hdpi/loading.png
+SHA1-Digest: QADlm2r35eSLTucBx6yJ4im0K/Q=
+
+Name: assets/strings_DE.xml
+SHA1-Digest: szNJNYjurVyufmNMBn9D4iaeNgg=
+
+Name: assets/nativeXMraidController
+SHA1-Digest: 5PLVj5ytxsM7C6zO/iId6MTFe0I=
+
+Name: res/drawable-ldpi-v11/icon_status.png
+SHA1-Digest: w5xostdy81SDtWapSbt5j1hdkAA=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applifier.AneApplifi
+ er/catalog.xml
+SHA1-Digest: nw/JPFCzrlIyw1CNsyCk8yx1Bkc=
+
+Name: res/layout/multiple_file_selection_panel.xml
+SHA1-Digest: KhwWvCMdoCJpXiS3vNN9sWfIAiY=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.applifier.AneApplifi
+ er/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: fX7kYRJSe2fLbZOiRmKq6lzePsE=
+
+Name: lib/armeabi-v7a/libvxlnative.so
+SHA1-Digest: ypkGvrCcAfTWOrkN0AGIo/SbQeQ=
+
+Name: assets/cta_offer_bg.png
+SHA1-Digest: xacrpsnxznGw6wIUOz3pYWy2oWQ=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.aarki.AneAarki/META-
+ INF/ANE/extension.xml
+SHA1-Digest: y+05ljHlzlkgn4/mBwhNSXp6QYU=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.mdotm.AneMdotM/catal
+ og.xml
+SHA1-Digest: /vFyhqdczGkh3BmdJ4mbBihd/hI=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: RHGuXvHOq794KOrkmAQT0SChmWk=
+
+Name: assets/strings_KR.xml
+SHA1-Digest: Bbh5hWp1bopD4k+Mzdxtd0nIZNA=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.info.AneInfo/META-IN
+ F/ANE/Android-ARM/library.swf
+SHA1-Digest: BvuVCHd5XUro/ZM+WUaFI8bx38I=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.chartboost.AneChartb
+ oost/library.swf
+SHA1-Digest: epBQikbqelH2yaqHwS/5/3hNHy4=
+
+Name: assets/icon50.png
+SHA1-Digest: UiWx8Xqz8mMsTEuVI/1LWewxGYs=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: assets/META-INF/AIR/extensions/com.stuv.ane.pushnotif.AnePushNot
+ if/catalog.xml
+SHA1-Digest: QuFlQPfLS6LYrDh4jr8Gg5KZ83E=
+
+Name: res/layout/notification.xml
+SHA1-Digest: WQj8Z6MoYbDldJR8up7pI5fCi4U=
+
+Name: res/drawable-mdpi-v11/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: assets/locale/en_US/basic.xlf
+SHA1-Digest: rfI7lb1ECslQphVBEBvUKW+ZISg=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: tIHGt3MNBfRVXJJRbsyyziAlAd0=
+
+Name: assets/META-INF/AIR/extensions/com.hasoffers.MobileAppTracker/li
+ brary.swf
+SHA1-Digest: 5E3rRhRc2ZODz9NE5AKAyGqSCBA=
+
+Name: res/drawable/com_facebook_icon.png
+SHA1-Digest: 9jTbeG4b8nJZlZss16UPfagqlUs=
+
+Name: assets/strings_UK.xml
+SHA1-Digest: j3U3UhqdVkOg4VkRUe7p2oEzJvI=
+
+Name: res/drawable-ldpi-v9/app_icon.png
+SHA1-Digest: iTmarxWEPlwwyc9JOJcksUo7pR4=
+
+Name: res/drawable-hdpi/com_facebook_close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: 45BAgKtOkC0fHYqIunSXrQ8YubM=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+
+Name: assets/strings_US.xml
+SHA1-Digest: L5BnHZDv+44wdIV6HWtAv71jEf4=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+

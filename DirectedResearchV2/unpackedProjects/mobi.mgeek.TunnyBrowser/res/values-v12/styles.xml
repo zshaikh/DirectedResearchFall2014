@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="search_dialog" parent="@style/SearchDialogBase">
+        <item name="android:textCursorDrawable">@drawable/search_input_cursor_color</item>
+    </style>
+</resources>

@@ -1,0 +1,2979 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     >
+     <ListView
+         android:id="@android:id/list"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         />
+ </LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <LinearLayout
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"/>
+
+    </LinearLayout>
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="6dip"
+    android:orientation="vertical"
+        android:layout_gravity="center_horizontal|center_vertical"
+      >
+      <TextView
+          android:text="@string/account_setup_account_type_instructions"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:paddingBottom="10dip"
+        android:focusable="true"
+          />
+    <Button
+        android:id="@+id/imap"
+        android:text="@string/account_setup_account_type_imap_action"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:minWidth="@dimen/button_minWidth"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dip"
+        />
+    <Button
+        android:id="@+id/pop"
+        android:text="@string/account_setup_account_type_pop_action"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:minWidth="@dimen/button_minWidth"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dip"
+        />
+    <Button
+        android:id="@+id/webdav"
+        android:text="@string/account_setup_account_type_webdav_action"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:minWidth="@dimen/button_minWidth"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dip"
+        />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="6dip"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideInset" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/account_email"
+                android:hint="@string/account_setup_basics_email_hint"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent" />
+
+            <EditText
+                android:id="@+id/account_password"
+                android:inputType="textPassword"
+                android:hint="@string/account_setup_basics_password_hint"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:nextFocusDown="@+id/next" />
+
+            <CheckBox
+                android:id="@+id/show_password"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:text="@string/account_setup_basics_show_password" />
+
+            <com.fsck.k9.view.ClientCertificateSpinner
+                android:id="@+id/account_client_certificate_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <com.fsck.k9.view.FoldableLinearLayout
+                android:id="@+id/foldable_advanced_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                custom:foldedLabel="@string/client_certificate_advanced_options"
+                custom:unFoldedLabel="@string/client_certificate_advanced_options" >
+
+                <CheckBox
+                    android:id="@+id/account_client_certificate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_setup_basics_client_certificate" />
+            </com.fsck.k9.view.FoldableLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/wizard_setup" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:padding="6dip"
+    android:fadingEdge="none"
+    android:scrollbarStyle="outsideInset">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_height="fill_parent"
+    android:padding="6dip"
+    android:layout_width="fill_parent">
+    <TextView
+        android:id="@+id/message"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:paddingBottom="6dip"
+        android:focusable="true"
+       />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:focusable="true" />
+    </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/wizard_cancel" />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:fadingEdge="none"
+    android:scrollbarStyle="outsideInset">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TextView
+            android:text="@string/account_settings_name_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/account_name"
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" 
+            android:contentDescription="@string/account_settings_name_label"
+            />
+        <TextView
+            android:text="@string/account_settings_email_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" 
+            />
+        <EditText
+            android:id="@+id/account_email"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_settings_email_label" 
+            />
+        <TextView
+            android:text="@string/account_settings_always_bcc_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/account_always_bcc"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_settings_always_bcc_label" />
+        <CheckBox
+            android:id="@+id/account_signature_use"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account_settings_signature_use_label" />
+
+        <LinearLayout
+            android:id="@+id/account_signature_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/account_settings_signature_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/account_signature"
+                android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_settings_signature_label" />
+            <TextView
+                android:text="@string/account_settings_signature__location_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+            <RadioGroup
+                android:id="@+id/account_signature_location"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical" >
+                <RadioButton
+                    android:id="@+id/account_signature_location_before_quoted_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_settings_signature__location_before_quoted_text"
+                    android:contentDescription="@string/account_settings_signature__location_label" />
+                <RadioButton
+                    android:id="@+id/account_signature_location_after_quoted_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_settings_signature__location_after_quoted_text"
+                    android:contentDescription="@string/account_settings_signature__location_label" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:padding="6dip"
+    android:fadingEdge="none"
+    android:scrollbarStyle="outsideInset">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <!-- This text may be changed in code if the server is IMAP, etc. -->
+        <TextView
+            android:id="@+id/account_server_label"
+            android:text="@string/account_setup_incoming_pop_server_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary"
+            android:contentDescription="@string/account_setup_incoming_password_label" />
+        <EditText
+            android:id="@+id/account_server"
+            android:singleLine="true"
+            android:inputType="textUri"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+        <TextView
+            android:text="@string/account_setup_incoming_security_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <Spinner
+            android:id="@+id/account_security_type"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_setup_incoming_security_label" />
+        <TextView
+            android:text="@string/account_setup_incoming_port_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/account_port"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_setup_incoming_port_label" />
+        <TextView
+            android:text="@string/account_setup_incoming_username_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/account_username"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_setup_incoming_username_label" />
+        <TextView
+            android:id="@+id/account_auth_type_label"
+            android:text="@string/account_setup_incoming_auth_type_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <Spinner
+            android:id="@+id/account_auth_type"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_setup_incoming_auth_type_label" />
+        <TextView
+            android:id="@+id/account_password_label"
+            android:text="@string/account_setup_incoming_password_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/account_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+        <TextView
+            android:id="@+id/account_client_certificate_label"
+            android:text="@string/account_setup_incoming_client_certificate_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary"
+            android:visibility="gone" />
+        <com.fsck.k9.view.ClientCertificateSpinner
+            android:id="@+id/account_client_certificate_spinner"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/imap_path_prefix_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/imap_autodetect_namespace"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/account_setup_incoming_autodetect_namespace_label" />
+            <TextView
+                android:text="@string/account_setup_incoming_imap_path_prefix_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/imap_path_prefix"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_incoming_imap_path_prefix_label" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:id="@+id/imap_folder_setup_section"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/subscribed_folders_only"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/account_setup_incoming_subscribed_folders_only_label"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/webdav_advanced_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/advanced"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/webdav_mailbox_alias_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/account_setup_incoming_webdav_mailbox_path_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/webdav_mailbox_path"
+                android:hint="@string/account_setup_incoming_webdav_mailbox_path_hint"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_incoming_webdav_mailbox_path_label" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/webdav_owa_path_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/account_setup_incoming_webdav_path_prefix_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/webdav_path_prefix"
+                android:hint="@string/account_setup_incoming_webdav_path_prefix_hint"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_incoming_webdav_path_prefix_label" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/webdav_auth_path_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/account_setup_incoming_webdav_auth_path_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/webdav_auth_path"
+                android:hint="@string/account_setup_incoming_webdav_auth_path_hint"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_incoming_webdav_auth_path_label" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/compression_label"
+            android:text="@string/account_setup_incoming_compression_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <LinearLayout
+            android:id="@+id/compression_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/compression_mobile"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/account_setup_incoming_mobile_label"
+            />
+            <CheckBox
+                android:id="@+id/compression_wifi"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/account_setup_incoming_wifi_label"
+                android:contentDescription="@string/account_setup_incoming_compression_label"
+            />
+             <CheckBox
+                android:id="@+id/compression_other"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/account_setup_incoming_other_label"
+                android:contentDescription="@string/account_setup_incoming_compression_label"
+            />
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+</ScrollView>
+    <include layout="@layout/wizard_next" />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:padding="6dip"
+    android:fadingEdge="none"
+    android:scrollbarStyle="outsideInset">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/account_description"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="@string/account_setup_names_account_name_label"
+        android:contentDescription="@string/account_setup_names_account_name_label" />
+    <EditText
+        android:id="@+id/account_name"
+        android:singleLine="true"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="@string/account_setup_names_user_name_label"
+        android:contentDescription="@string/account_setup_names_user_name_label" />
+    <View
+        android:layout_height="0dip"
+        android:layout_width="fill_parent"
+        android:layout_weight="1" />
+</LinearLayout>
+</ScrollView>
+    <include layout="@layout/wizard_done" />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_marginBottom="54dip"
+    android:fadingEdge="none"
+    android:padding="6dip"
+    android:scrollbarStyle="outsideInset">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TextView
+            android:text="@string/account_setup_options_mail_check_frequency_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary"
+            />
+        <Spinner
+            android:id="@+id/account_check_frequency"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_setup_options_mail_check_frequency_label" />
+        <CheckBox
+            android:id="@+id/account_enable_push"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="?android:attr/textColorPrimary"
+            android:text="@string/account_setup_options_enable_push_label"
+            android:summary="@string/account_setup_options_enable_push_summary"
+           />
+        <TextView
+            android:text="@string/account_setup_options_mail_display_count_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <Spinner
+            android:id="@+id/account_display_count"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:contentDescription="@string/account_setup_options_mail_display_count_label" />
+        <CheckBox
+            android:id="@+id/account_notify"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="?android:attr/textColorPrimary"
+            android:text="@string/account_setup_options_notify_label" />
+        <CheckBox
+            android:id="@+id/account_notify_sync"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="?android:attr/textColorPrimary"
+
+            android:text="@string/account_setup_options_notify_sync_label" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</ScrollView>
+    <include layout="@layout/wizard_next" />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="6dip"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideInset">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/account_setup_outgoing_smtp_server_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <EditText
+                android:id="@+id/account_server"
+                android:singleLine="true"
+                android:inputType="textUri"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_outgoing_smtp_server_label" />
+
+            <TextView
+                android:text="@string/account_setup_outgoing_security_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <Spinner
+                android:id="@+id/account_security_type"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_outgoing_security_label" />
+
+            <TextView
+                android:text="@string/account_setup_outgoing_port_label"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <EditText
+                android:id="@+id/account_port"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:contentDescription="@string/account_setup_outgoing_port_label" />
+
+            <CheckBox
+                android:id="@+id/account_require_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_setup_outgoing_require_login_label" />
+
+            <LinearLayout
+                android:id="@+id/account_require_login_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:text="@string/account_setup_outgoing_username_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/account_username"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:contentDescription="@string/account_setup_outgoing_username_label" />
+
+                <TextView
+                    android:text="@string/account_setup_outgoing_authentication_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <Spinner
+                    android:id="@+id/account_auth_type"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:contentDescription="@string/account_setup_outgoing_authentication_label" />
+
+                <TextView
+                    android:id="@+id/account_password_label"
+                    android:text="@string/account_setup_outgoing_password_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/account_password"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:contentDescription="@string/account_setup_outgoing_password_label" />
+
+                <TextView
+                    android:id="@+id/account_client_certificate_label"
+                    android:text="@string/account_setup_incoming_client_certificate_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:visibility="gone" />
+
+                <com.fsck.k9.view.ClientCertificateSpinner
+                    android:id="@+id/account_client_certificate_spinner"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/wizard_next" />
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/active_icons"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="2dip"
+    android:paddingRight="2dip"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/flagged_message_count_wrapper"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip">
+
+        <View
+            android:id="@+id/flagged_message_count_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:id="@+id/flagged_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/new_message_count_wrapper"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/flagged_message_count_wrapper"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip">
+
+        <View
+            android:id="@+id/new_message_count_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+        <TextView
+            android:id="@+id/new_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/accounts_item_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:orientation="horizontal"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical">
+
+    <View
+            android:id="@+id/chip"
+            android:layout_height="match_parent"
+            android:layout_width="8dip"
+            android:background="#ff336699"
+            android:layout_marginRight="8dip"
+            />
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="1dip">
+
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/accounts_folders_icons"/>
+
+    <LinearLayout
+            android:id="@+id/folder_button_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="4dip"
+                android:background="?attr/compatDividerVertical" />
+
+        <ImageButton
+                android:id="@+id/folders"
+                android:gravity="center_vertical"
+                android:focusable="false"
+                android:layout_marginRight="3dip"
+                android:src="?attr/iconFolder"
+                android:background="?attr/compatSelectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:padding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                />
+
+    </LinearLayout>
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="5dip">
+
+    <!-- Intro text -->
+    <TextView
+      android:id="@+id/password_prompt_intro"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="15dip"/>
+
+    <!-- Password prompt for the incoming server. Won't be shown for accounts without
+         user names or accounts with AuthType EXTERNAL! -->
+    <LinearLayout
+      android:id="@+id/incoming_server_prompt"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+	    <TextView
+	      android:id="@+id/password_prompt_incoming_server"
+	      android:textAppearance="?android:attr/textAppearanceSmall"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"/>
+	    <EditText
+	      android:id="@+id/incoming_server_password"
+	      android:inputType="textPassword"
+	      android:layout_height="wrap_content"
+	      android:layout_width="match_parent"
+	      android:layout_marginBottom="10dip"/>
+    </LinearLayout>
+
+    <!-- Password prompt for the outgoing server. Won't be shown for WebDAV accounts, 
+         accounts without user names, or accounts with AuthType EXTERNAL! -->
+    <LinearLayout
+      android:id="@+id/outgoing_server_prompt"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TextView
+        android:id="@+id/password_prompt_outgoing_server"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+      <CheckBox
+        android:id="@+id/use_incoming_server_password"
+        android:checked="true"
+        android:text="@string/settings_import_use_incoming_server_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+      <EditText
+        android:id="@+id/outgoing_server_password"
+        android:enabled="false"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dip"/>
+    </LinearLayout>
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/actionbar_message_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/actionbar_title_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="start"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/actionbar_title_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorSecondary" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/actionbar_progress"
+            style="?android:attr/indeterminateProgressStyle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/actionbar_unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip"
+            android:textColor="?android:attr/textColorTertiary"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actionbar_message_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <com.fsck.k9.view.MessageTitleView
+            android:id="@+id/message_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout><!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingRight="12dp"
+    android:paddingLeft="12dp">
+	<!--  FrameLayout ignores margins on android 2.x so we use this padding
+    to make sure the total is the same width as the icon we
+    replace and no visual shifting occurs  -->
+    <ProgressBar android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        style="?android:attr/indeterminateProgressStyle" />
+</FrameLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/backgroundColorChooseAccountHeader"
+    android:gravity="left|center_vertical">
+    <View
+        android:id="@+id/chip"
+        android:layout_height="fill_parent"
+        android:layout_width="6dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingTop="8dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="8dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="4dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Button
+        android:id="@+id/client_certificate_spinner_button"
+        style="?android:attr/spinnerStyle"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/client_certificate_spinner_empty"
+        android:freezesText="true" />
+
+    <ImageButton
+        android:id="@+id/client_certificate_spinner_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/client_certificate_spinner_delete"
+        android:padding="8dp"
+        android:src="?attr/iconActionCancel" />
+
+</merge><?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.larswerkman.colorpicker.ColorPicker
+        android:id="@+id/color_picker"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="8dp"
+        app:pointer_size="48"
+        app:wheel_size="16" />
+
+</FrameLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:scrollbarStyle="outsideInset">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TextView
+            android:text="@string/edit_identity_description_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/description"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" 
+            android:hint="@string/edit_identity_description_hint"
+            />
+        <TextView
+            android:text="@string/edit_identity_name_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/name"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" 
+            android:hint="@string/edit_identity_name_hint"
+            />
+        <TextView
+            android:text="@string/edit_identity_email_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" 
+            />
+        <EditText
+            android:id="@+id/email"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" 
+            android:hint="@string/edit_identity_email_hint"
+            android:inputType="textEmailAddress"/>
+        <TextView
+            android:text="@string/edit_identity_reply_to_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary"
+            />
+        <EditText
+            android:id="@+id/reply_to"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" 
+            android:hint="@string/edit_identity_reply_to_hint"
+            android:inputType="textEmailAddress"
+            />
+            <!-- 
+        <TextView
+            android:text="@string/edit_identity_always_bcc_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+        <EditText
+            android:id="@+id/account_always_bcc"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+            -->
+        <CheckBox
+            android:id="@+id/signature_use"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account_settings_signature_use_label" />
+        <LinearLayout
+            android:id="@+id/signature_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+	        <TextView
+	            android:text="@string/edit_identity_signature_label"
+	            android:layout_height="wrap_content"
+	            android:layout_width="fill_parent"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" />
+	        <EditText
+	            android:id="@+id/signature"
+	            android:singleLine="false"
+	            android:layout_height="wrap_content"
+	            android:layout_width="fill_parent" 
+	            android:hint="@string/edit_identity_signature_hint"/>
+    	</LinearLayout>
+    </LinearLayout>
+</ScrollView>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@android:id/text1"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:textAppearance="?android:attr/textAppearanceMedium"
+android:gravity="center_vertical"
+android:paddingLeft="6dip"
+android:minHeight="?android:attr/listPreferredItemHeight"
+/>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/message_view_empty"
+        android:textColor="?android:attr/textColorSecondary" />
+
+</RelativeLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/foldableControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/foldableIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="?attr/iconActionExpand" />
+
+        <TextView
+            android:id="@+id/foldableText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:textColor="?android:attr/textColorTertiary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foldableContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/folder_list_item_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:paddingRight="4dip"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+    <View
+            android:id="@+id/chip"
+            android:layout_height="match_parent"
+            android:layout_width="8dip"
+            android:background="#ff336699"
+            android:layout_marginRight="8dip"
+            />
+
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingBottom="2dip"
+
+            android:paddingLeft="6dip">
+
+        <TextView
+                android:id="@+id/folder_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+                android:id="@+id/folder_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="?android:attr/textColorTertiary"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/accounts_folders_icons"/>
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:drawSelectorOnTop="false" />
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="54dip"
+    android:paddingRight="6dip"
+    android:paddingTop="6dip"
+    android:paddingBottom="6dip">
+
+    <ImageButton
+        android:id="@+id/attachment_delete"
+        android:src="@drawable/ic_delete"
+        android:layout_alignParentRight="true"
+        android:layout_height="42dip"
+        android:layout_width="42dip" />
+
+    <LinearLayout
+        android:layout_width="1dip"
+        android:layout_height="42dip"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/attachment_delete"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="4dip"
+        android:paddingLeft="36dip"
+        android:gravity="center_vertical"
+        android:background="?attr/messageViewAttachmentBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/attachment_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="?android:attr/textColorSecondary"
+            android:singleLine="true"
+            android:ellipsize="start"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="32dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_email_attachment"
+        android:layout_marginLeft="1dip"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:scrollbarStyle="insideOverlay"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:paddingTop="6dp"
+                android:orientation="vertical"
+                android:background="#45bcbcbc">
+
+                <Button
+                    android:id="@+id/identity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="6dip"/>
+
+                <LinearLayout
+                    android:id="@+id/to_wrapper"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="true"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="6dip"
+                    android:layout_width="fill_parent">
+
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/to"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress|textMultiLine"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/message_compose_to_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="6dip"
+                        android:layout_weight="1"/>
+
+                    <ImageButton
+                        android:id="@+id/add_to"
+                        android:contentDescription="@string/message_compose_description_add_to"
+                        android:src="?attr/messageComposeAddContactImage"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:padding="8dip"
+                        android:layout_marginTop="1dip"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cc_wrapper"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="true"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="6dip"
+                    android:layout_width="fill_parent">
+
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/cc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="6dip"
+                        android:inputType="textEmailAddress|textMultiLine"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/message_compose_cc_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <ImageButton
+                        android:id="@+id/add_cc"
+                        android:contentDescription="@string/message_compose_description_add_cc"
+                        android:src="?attr/messageComposeAddContactImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dip"
+                        android:layout_marginTop="1dip"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bcc_wrapper"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="true"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="6dip"
+                    android:layout_width="fill_parent">
+
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/bcc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dip"
+                        android:layout_weight="1"
+                        android:inputType="textEmailAddress|textMultiLine"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/message_compose_bcc_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <ImageButton
+                        android:id="@+id/add_bcc"
+                        android:contentDescription="@string/message_compose_description_add_bcc"
+                        android:layout_marginTop="1dip"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:padding="8dip"
+                        android:src="?attr/messageComposeAddContactImage"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_encrypt"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:paddingLeft="6dip"
+                    android:paddingRight="6dip">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:text="@string/btn_crypto_sign"
+                            android:id="@+id/cb_crypto_signature"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingRight="2dip">
+
+                            <TextView
+                                android:id="@+id/userId"
+                                android:ellipsize="end"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/userIdRest"
+                                android:textSize="10sp"
+                                android:ellipsize="end"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:text="@string/btn_encrypt"
+                        android:id="@+id/cb_encrypt"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/subject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="6dip"
+                    android:hint="@string/message_compose_subject_hint"
+                    android:inputType="textEmailSubject|textAutoCorrect|textCapSentences|textImeMultiLine"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <!--
+                    Empty container for storing attachments. We'll stick
+                    instances of message_compose_attachment.xml in here.
+                -->
+                <LinearLayout
+                    android:id="@+id/attachments"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/divider_horizontal_email" />
+
+            </LinearLayout>
+
+            <!-- We have to use "wrap_content" (not "0dip") for "layout_height", otherwise the
+                 EditText won't properly grow in height while the user is typing the message -->
+            <view
+                class="com.fsck.k9.activity.MessageCompose$EolConvertingEditText"
+                android:id="@+id/message_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:hint="@string/message_compose_content_hint"
+                android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                android:imeOptions="actionDone|flagNoEnterAction"
+                android:minLines="3"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <view
+                class="com.fsck.k9.activity.MessageCompose$EolConvertingEditText"
+                android:id="@+id/upper_signature"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:minLines="0"
+                android:hint="@string/message_compose_signature_hint"
+                android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/quoted_text_show"
+                android:text="@string/message_compose_show_quoted_text_action"
+                android:textSize="16sp"
+                android:padding="0dip"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <!-- Quoted text bar -->
+            <RelativeLayout
+                android:id="@+id/quoted_text_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <view
+                    class="com.fsck.k9.activity.MessageCompose$EolConvertingEditText"
+                    android:id="@+id/quoted_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:minLines="3"
+                    android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <com.fsck.k9.view.MessageWebView
+                    android:id="@+id/quoted_html"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent" />
+
+                <LinearLayout
+                    android:id="@+id/quoted_text_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <ImageButton
+                        android:id="@+id/quoted_text_edit"
+                        android:contentDescription="@string/message_compose_description_edit_quoted_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dip"
+                        android:background="@drawable/btn_edit" />
+
+                    <ImageButton
+                        android:id="@+id/quoted_text_delete"
+                        android:contentDescription="@string/message_compose_description_delete_quoted_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_dialog" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <view
+                class="com.fsck.k9.activity.MessageCompose$EolConvertingEditText"
+                android:id="@+id/lower_signature"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:minLines="0"
+                android:hint="@string/message_compose_signature_hint"
+                android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.K9PullToRefreshListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="5" /><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@drawable/message_list_item_footer_background"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/main_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_gravity="center_vertical"
+        >
+
+    <View
+            android:id="@+id/chip"
+            android:adjustViewBounds="false"
+            android:layout_height="match_parent"
+            android:layout_width="8dip"
+            android:layout_marginRight="4dp"
+            />
+
+    <LinearLayout
+            android:id="@+id/selected_checkbox_wrapper"
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:textColor="?android:attr/textColorPrimary"
+            android:baselineAligned="false">
+
+        <CheckBox
+                android:id="@+id/selected_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:focusable="false"
+                android:clickable="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="0dp"
+                android:visibility="visible"
+                />
+
+    </LinearLayout>
+
+    <QuickContactBadge
+            android:id="@+id/contact_badge"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="4dip"
+            android:layout_marginBottom="3dip"
+            android:layout_height="40dip"
+            android:layout_width="40dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/ic_contact_picture"
+            style="?android:attr/quickContactBadgeStyleWindowLarge"
+            android:background="@android:color/transparent"/>
+
+
+    <RelativeLayout
+            android:id="@+id/list_item_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="6dp">
+
+        <TextView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/flagged_bottom_right"
+                android:layout_marginLeft="1dip"
+                android:layout_marginRight="3dip"
+                android:bufferType="spannable"
+                android:layout_below="@+id/subject_wrapper"
+                android:singleLine="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorPrimary"
+                android:longClickable="false"
+                android:layout_alignWithParentIfMissing="false"
+                android:gravity="top"
+                android:layout_alignParentBottom="false"/>
+
+        <LinearLayout
+                android:id="@+id/subject_wrapper"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="false"
+                android:layout_toLeftOf="@+id/date">
+
+            <TextView
+                    android:id="@+id/sender_compact"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_marginBottom="1dip"
+                    android:layout_marginLeft="1dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorPrimary"
+                    />
+
+            <TextView
+                    android:id="@+id/subject"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dip"
+                    android:layout_marginLeft="1dip"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="?android:attr/textColorPrimary"
+                    />
+
+            <TextView
+                    android:id="@+id/thread_count"
+                    android:textColor="?attr/messageListThreadCountForegroundColor"
+                    android:background="?attr/messageListThreadCountBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="4dip"
+                    android:paddingRight="4dip"
+                    android:paddingBottom="1dip"
+                    android:paddingLeft="4dip"
+                    android:focusable="false"
+                    />
+        </LinearLayout>
+
+        <CheckBox
+                android:id="@+id/flagged_center_right"
+                style="?android:attr/starStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="3dip"
+                android:paddingLeft="2dip"
+                android:paddingRight="4dip"
+                android:focusable="false"
+                android:visibility="gone"
+                />
+
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/subject_wrapper"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/flagged_center_right"
+                android:paddingLeft="3dip"
+                android:paddingRight="8dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorSecondary"/>
+
+        <CheckBox
+                android:id="@+id/flagged_bottom_right"
+                style="?android:attr/starStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/date"
+                android:layout_alignParentRight="true"
+                android:paddingTop="5dip"
+                android:paddingLeft="2dip"
+                android:paddingRight="4dip"
+                android:focusable="false"
+                android:visibility="visible"
+                android:gravity="center_vertical"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_list_loading" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:id="@+id/message_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@+id/message_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</com.fsck.k9.view.ViewSwitcher><?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.AttachmentView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dip">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dip">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/messageViewAttachmentBackground"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/attachment_icon"
+                android:layout_width="62dip"
+                android:layout_height="62dip"
+                android:src="@drawable/attached_image_placeholder"
+                android:layout_marginLeft="4dip"
+                android:layout_marginRight="4dip"
+                android:layout_marginBottom="4dip"
+                android:layout_marginTop="4dip" />
+            <TextView
+                android:id="@+id/attachment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/attachment_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true" />
+            <TextView
+                android:id="@+id/attachment_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="?android:attr/textColorTertiary"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:layout_alignLeft="@id/attachment_name"
+                android:layout_below="@id/attachment_name"
+                android:layout_alignWithParentIfMissing="true" />
+            <Button
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonStyleSmall"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="@string/message_view_attachment_download_action"
+                android:singleLine="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/attachment_name"
+                android:layout_marginTop="6dip" />
+            <Button
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonStyleSmall"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="@string/message_view_attachment_view_action"
+                android:singleLine="true"
+                android:layout_toLeftOf="@id/download"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@id/attachment_name"
+                android:layout_marginTop="6dip" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_email_attachment" />
+    </LinearLayout>
+</com.fsck.k9.view.AttachmentView>
+<?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.MessageCryptoView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_decrypt"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/crypto_signature"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="0dip"
+        android:layout_weight="2"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <ImageView
+                android:id="@+id/ic_crypto_signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/signed_large"/>
+            <ImageView
+                android:id="@+id/ic_crypto_signature_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/overlay_error"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingLeft="5dip">
+            <TextView
+                android:id="@+id/userId"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"/>
+            <TextView
+                android:id="@+id/userIdRest"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:text="@string/btn_decrypt"
+        android:id="@+id/btn_decrypt"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+</com.fsck.k9.view.MessageCryptoView>
+<?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.MessageHeader
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- Color chip -->
+        <View
+            android:id="@+id/chip"
+            android:layout_width="8dip"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/general_no_subject"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <QuickContactBadge
+                        android:id="@+id/contact_badge"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp" />
+
+                    <!-- State icons -->
+                    <LinearLayout
+                        android:id="@+id/icon_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginBottom="2dip"
+                        android:layout_below="@+id/contact_badge"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical" >
+
+                        <View
+                            android:id="@+id/answered"
+                            android:layout_width="32sp"
+                            android:layout_height="32sp"
+                            android:paddingRight="2dip"
+                            android:background="@drawable/ic_email_answered_small" />
+
+                        <View
+                            android:id="@+id/forwarded"
+                            android:layout_width="22sp"
+                            android:layout_height="22sp"
+                            android:paddingRight="4dip"
+                            android:background="@drawable/ic_email_forwarded_small" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dip"
+                    android:layout_marginLeft="2dp" >
+
+                    <!-- From -->
+                    <TextView
+                        android:id="@+id/from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/flagged"
+                        android:paddingTop="0dp"
+                        android:paddingRight="6dip"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:text="@string/general_no_sender" />
+                    
+                    <!-- To -->
+                    <TextView
+                        android:id="@+id/to_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/from"
+                        android:layout_alignBaseline="@+id/to"
+                        android:paddingTop="2dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/message_to_label"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/to_label"
+                        android:layout_below="@+id/from"
+                        android:layout_toLeftOf="@+id/flagged"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:paddingTop="2dp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textAppearance="@android:style/TextAppearance.Medium" />
+                    
+                    <!-- CC -->
+                    <TextView
+                        android:id="@+id/cc_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/to_label"
+                        android:layout_alignLeft="@+id/to_label"
+                        android:layout_alignBaseline="@+id/cc"
+                        android:paddingTop="2dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/message_view_cc_label"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textStyle="bold"
+                        android:textAppearance="@android:style/TextAppearance.Medium" />
+                    
+                    <TextView
+                        android:id="@+id/cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cc_label"
+                        android:layout_below="@+id/to"
+                        android:layout_toLeftOf="@+id/flagged"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:paddingTop="2dp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textAppearance="@android:style/TextAppearance.Medium" />
+                    
+                    <!-- Date -->
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cc"
+                        android:layout_alignParentRight="true"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:ellipsize="none"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                    <CheckBox
+                        android:id="@+id/flagged"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/from"
+                        android:focusable="false"
+                        style="?android:attr/starStyle"
+                        android:checked="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/additional_headers_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginRight="6dip"
+                android:singleLine="false"
+                android:ellipsize="none"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="1dip"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/divider_horizontal_email" />
+
+    <!-- Button area -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:paddingTop="4dip"
+        android:baselineAligned="false" >
+        
+        <Button
+            android:id="@+id/show_pictures"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="6dip"
+            android:layout_marginBottom="4dip"
+            android:layout_height="wrap_content"
+            android:text="@string/message_view_show_pictures_action"
+            style="?android:attr/buttonStyleSmall" />
+        
+        <Button
+            android:id="@+id/show_attachments"
+            android:visibility="gone"
+            android:layout_marginLeft="6dip"
+            android:layout_marginBottom="4dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_view_show_attachments_action"
+            style="?android:attr/buttonStyleSmall" />
+
+        <Button
+            android:id="@+id/show_message"
+            android:visibility="gone"
+            android:layout_marginLeft="6dip"
+            android:layout_marginBottom="4dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_view_show_message_action"
+            style="?android:attr/buttonStyleSmall" />
+
+    </LinearLayout>
+
+    <include layout="@layout/message_view_crypto_layout" />
+    
+    <include layout="@layout/message_view_openpgp_layout"/>
+
+</com.fsck.k9.view.MessageHeader>
+<?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.MessageOpenPgpView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_decrypt_openpgp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.00"
+        android:orientation="vertical"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/openpgp_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:textColorPrimaryInverse"
+            android:textIsSelectable="false" />
+
+        <RelativeLayout
+            android:id="@+id/openpgp_signature_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/openpgp_signature_layout_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/openpgp_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/signed_large" />
+
+                <ImageView
+                    android:id="@+id/openpgp_signature_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/overlay_error" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/openpgp_user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/openpgp_signature_layout_image"
+                android:ellipsize="end"
+                android:paddingLeft="5dip"
+                android:text="@string/openpgp_user_id"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:textColorPrimaryInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/openpgp_get_key"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/openpgp_signature_layout_image"
+        android:layout_gravity="center_vertical"
+        android:text="@string/openpgp_get_key"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/openpgp_progress"
+        style="?android:attr/progressBarStyleSmallInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="4dp"
+        android:visibility="gone" />
+
+</com.fsck.k9.view.MessageOpenPgpView>
+<?xml version="1.0" encoding="utf-8"?>
+<com.fsck.k9.view.SingleMessageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_view"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1">
+
+    <com.fsck.k9.view.NonLockingScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+	        android:layout_height="fill_parent">
+
+	        <!-- Header area -->
+	        <include layout="@layout/message_view_header"/>
+	
+	        <!-- Content area -->
+	        <com.fsck.k9.view.MessageWebView
+	            android:id="@+id/message_content"
+	            android:layout_height="wrap_content"
+	            android:layout_width="fill_parent"/>
+	
+	        <!-- Attachments area -->
+	
+	        <LinearLayout
+	            android:id="@+id/attachments_container"
+	            android:orientation="vertical"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content">
+	
+	            <LinearLayout
+	                android:id="@+id/attachments"
+	                android:orientation="vertical"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:padding="4dip" />
+	
+	            <Button
+	                android:id="@+id/show_hidden_attachments"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:text="@string/message_view_show_more_attachments_action"/>
+	
+	            <LinearLayout
+	                android:id="@+id/hidden_attachments"
+	                android:orientation="vertical"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:padding="4dip"/>
+	
+	        </LinearLayout>
+	        
+	    </LinearLayout>
+	
+    </com.fsck.k9.view.NonLockingScrollView>
+
+    <Button android:id="@+id/download_remainder"
+        android:text="@string/message_view_download_remainder"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_width="fill_parent"/>
+
+</com.fsck.k9.view.SingleMessageView>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dip"
+    android:layout_centerVertical="true"
+    android:orientation="vertical">
+    <TextView android:id="@+id/text1"
+        android:textColor="?attr/textColorPrimaryRecipientDropdown"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+    <TextView android:id="@+id/text2"
+        android:textColor="?attr/textColorSecondaryRecipientDropdown"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+</LinearLayout>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2012 Jay Weisskopf
+
+Licensed under the MIT License (see LICENSE.txt)
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slider_preference_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dip"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingTop="8dip" >
+
+    <TextView
+        android:id="@+android:id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:id="@+id/slider_preference_seekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dip"
+        android:paddingTop="12dip" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/message_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="5" />
+
+    <View
+        android:id="@+id/message_list_divider"
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:background="?attr/messageListDividerColor"
+        tools:ignore="PxUsage" />
+
+    <FrameLayout
+        android:id="@+id/message_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/UnreadWidgetContainer"
+    android:id="@+id/unread_widget_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/unread_widget_icon" />
+
+        <TextView
+            android:id="@+id/unread_count"
+            android:visibility="gone"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:paddingTop="0.5dp"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/unread_count_background"
+            android:textColor="#ffffff"
+            tools:ignore="SpUsage"/>
+
+    </FrameLayout>
+
+    <TextView
+        style="@style/UnreadWidgetTextView"
+        android:id="@+id/account_name"
+        android:text="@string/app_name"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="3dp" />
+
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/databaseUpgradeProgress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/databaseUpgradeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upgrade_databases_unspecified" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/welcome_message"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="8dip"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/wizard_welcome" />
+
+</LinearLayout><?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerHorizontal" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/cancel_action" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</merge><?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerHorizontal" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/done"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/done_action" />
+    </LinearLayout>
+
+</merge><?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerHorizontal" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/next"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/next_action" />
+    </LinearLayout>
+
+</merge><?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerHorizontal" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/manual_setup"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/account_setup_basics_manual_setup_action" />
+
+        <Button
+            android:id="@+id/next"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/next_action" />
+    </LinearLayout>
+
+</merge><?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerHorizontal" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/import_settings"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/settings_import" />
+
+        <Button
+            android:id="@+id/next"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="@string/next_action" />
+    </LinearLayout>
+
+</merge>

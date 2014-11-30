@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mgeek.android.ui.CheckableLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/settings_page_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_page_text_margin_left" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip">
+        <CheckBox android:id="@id/title_check" android:paddingRight="10.0dip" android:focusable="false" android:fadingEdge="horizontal" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/btn_check" />
+        <TextView android:textAppearance="@style/SettingsItemTitleAppearence" android:textSize="17.0sp" android:ellipsize="end" android:id="@id/title" android:focusable="false" android:clickable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="200.0dip" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/input_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_container" />
+</com.mgeek.android.ui.CheckableLayout>

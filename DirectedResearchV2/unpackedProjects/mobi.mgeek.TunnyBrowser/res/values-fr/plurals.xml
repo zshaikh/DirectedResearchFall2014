@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Déplacer%d éléments ici</item>
+        <item quantity="one">Déplacer 1 élément ici</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d correspondances</item>
+        <item quantity="zero">Aucune correspondance</item>
+        <item quantity="one">1 correspondance</item>
+        <item quantity="few">%d correspondances</item>
+    </plurals>
+</resources>

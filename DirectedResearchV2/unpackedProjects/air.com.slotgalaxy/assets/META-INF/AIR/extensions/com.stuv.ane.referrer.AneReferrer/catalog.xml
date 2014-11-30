@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353448"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/stuv/ane/referrer/AneReferrer" mod="1366603208200">
+                <def id="com.stuv.ane.referrer:AneReferrer"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="158bde11eb387665abf06494f02796641ed259fb862cfa10b0b15c28184ec4fc"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

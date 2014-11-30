@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="352231"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/stuv/ane/pushnotif/AnePushNotif" mod="1368175952225">
+                <def id="com.stuv.ane.pushnotif:AnePushNotif"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="com.stuv.ane.pushnotif:AnePushNotifEvent" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="e"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/stuv/ane/pushnotif/AnePushNotifEvent" mod="1368172141839">
+                <def id="com.stuv.ane.pushnotif:AnePushNotifEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="6f3a93429bbfebfbf48132496e7231af1b4edc3fafb19c404656115d3c281749"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

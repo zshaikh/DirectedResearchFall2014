@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab">false</string>
+    <string name="enable_pressed_color_filter_for_download_menu">false</string>
+</resources>

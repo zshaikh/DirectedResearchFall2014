@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:id="@id/story_user" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:cardStyle="single"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListRow">
+        <include android:id="@id/story_header" layout="@layout/story_onebox_header" />
+        <RelativeLayout android:id="@id/story_user_inner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/story_header">
+            <include layout="@layout/user_badge" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

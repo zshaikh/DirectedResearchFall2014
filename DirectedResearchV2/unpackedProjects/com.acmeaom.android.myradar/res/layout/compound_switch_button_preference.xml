@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <include android:id="@id/compound_pref_switch" layout="@layout/compat_switch" />
+        <Button android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@id/compound_purchase_button" android:background="@drawable/selectable_green_rect" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/upgrade" style="?android:attr/buttonStyleSmall" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/compound_pref_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/nav_divider" />
+    <ImageView android:layout_gravity="center" android:id="@id/compound_pref_button" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bt_config" style="@style/PrefsToolbarButton" />
+</LinearLayout>

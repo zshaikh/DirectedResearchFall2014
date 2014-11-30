@@ -1,0 +1,3571 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: assets/collections/780.swf
+SHA1-Digest: ofdkcELvpBuB3O270kydmuz1N0w=
+
+Name: assets/collections/182.swf
+SHA1-Digest: Thevc61G7RD+q2XdF0t87k9fESc=
+
+Name: assets/collections/526.swf
+SHA1-Digest: XFdR4Qbi9B5tS2clHvk4levr8PY=
+
+Name: res/drawable/facebook_icon.png
+SHA1-Digest: 9jTbeG4b8nJZlZss16UPfagqlUs=
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+
+Name: assets/collections/770.swf
+SHA1-Digest: +8TSA6tj81ekUanMzXoJeO4y/ZI=
+
+Name: assets/collections/445.swf
+SHA1-Digest: UYL9U7b2CNYGGuVJilMBgRakzeE=
+
+Name: assets/daubers/61.swf
+SHA1-Digest: p9DB5m0Ksww5BAaLPI3VxOblhc0=
+
+Name: assets/collections/638.swf
+SHA1-Digest: sCmHsSDdRaBPbTjpx2+EkJVDg0k=
+
+Name: assets/collections/648.swf
+SHA1-Digest: Yc1oEl32KKpS4qnr+/Bpi1zkEX0=
+
+Name: assets/avatarFrames/38.swf
+SHA1-Digest: memTa29DgywNLbvnCw0iIU8vHZ4=
+
+Name: assets/achievements/40.swf
+SHA1-Digest: M1k1DitDY/HuTCB+R/JRU0LlKgg=
+
+Name: assets/META-INF/AIR/extensions/com.adx.Tracker/META-INF/ANE/exte
+ nsion.xml
+SHA1-Digest: rkHdG6vFaxl2DB7PMcW0yTKP0Jo=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/docs/packages.dita
+SHA1-Digest: N+XK+GZbaDfQkX2PTisem08NDQ0=
+
+Name: assets/collections/626.swf
+SHA1-Digest: ktMpGTNJe3/Sm5Y4bW1nGhw8KSk=
+
+Name: assets/collections/524.swf
+SHA1-Digest: Zq5x+CMYK7BKCdi81rZk6+fOAWo=
+
+Name: assets/collections/775.swf
+SHA1-Digest: h2DKLs/RXCmgGFhDlc8zWH0fn6w=
+
+Name: assets/daubers/15.swf
+SHA1-Digest: I8I4rjhQvN14vOlOZSvzjkwfPgw=
+
+Name: assets/collections/672.swf
+SHA1-Digest: 9amqCLuB5AZp5ya8Le/dTq/PC/w=
+
+Name: assets/collections/377.swf
+SHA1-Digest: 8O+933FilYbRYvAPUPu4CBoT9dc=
+
+Name: assets/daubers/71.swf
+SHA1-Digest: 3Z1N0SXaE1VHi72QrxAPuomvpsM=
+
+Name: assets/collections/801.swf
+SHA1-Digest: fJN4p549pgk7TR9q5ifTTaUNYR8=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/catalog.xml
+SHA1-Digest: U8mQpj1TR8eDeAcOTm3fHRhgpnc=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/docs/com.milkmangames.nativeextensions.ios.events.xml
+SHA1-Digest: MuytbRbSpOpE/LAfBHHfE8maoLA=
+
+Name: assets/collections/223.swf
+SHA1-Digest: By+PPUp97vq4YV7cqaXDVy1JmC4=
+
+Name: res/drawable/com_facebook_loginbutton_blue.xml
+SHA1-Digest: Pb1/y53ET7vVGU52zbyNrLATmFI=
+
+Name: assets/collections/180.swf
+SHA1-Digest: ob0Sb6/lSsxSqBOVdmGhwSHZSQg=
+
+Name: assets/collections/151.swf
+SHA1-Digest: bnNYSQykbAlNnJ3pd7O8NoafQew=
+
+Name: assets/collections/623.swf
+SHA1-Digest: /M7giAF3i+7tfFKD9+VMbG1dwA4=
+
+Name: assets/collections/620.swf
+SHA1-Digest: hLS+QjCXmqvf/TsJ7v6A8nI26V4=
+
+Name: assets/daubers/19.swf
+SHA1-Digest: JWp3yTb6Jb/UPvb8K40dkNJBGOs=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: 7KM8siOc4bzrEE7jAnncidTtEoY=
+
+Name: assets/collections/334.swf
+SHA1-Digest: 8f0HRpk39iLmh2tafM1WYZppBmo=
+
+Name: assets/collections/570.swf
+SHA1-Digest: U8qySm8trhHUFh4Oh4qZ1O6y2mI=
+
+Name: assets/collections/736.swf
+SHA1-Digest: rXgFRlNJo3/zeodixtPYi/S6Ntc=
+
+Name: assets/achievements/23.swf
+SHA1-Digest: Zgm+zSTEefbos4SEDxg5iQHDLJ4=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: s11gcQnxG2CBh+07EhR73hIWugc=
+
+Name: assets/avatarFrames/22.swf
+SHA1-Digest: /7/K4xAj0Q4J9F56qyXe3k4hH3U=
+
+Name: assets/achievements/109.swf
+SHA1-Digest: o/ZYkRSMvKBLJftiprVCDa5RMNY=
+
+Name: assets/cityBackgrounds/highstakes.swf
+SHA1-Digest: 0NEHOrGOZiH2kA6KzXJKsbpAt30=
+
+Name: assets/daubers/35.swf
+SHA1-Digest: HOm6AHgFdqmbX9BfwvcY1SE+0J4=
+
+Name: assets/collections/43.swf
+SHA1-Digest: CWykYYikXmAG8FoCPXqLfD3Ntbo=
+
+Name: assets/collections/592.swf
+SHA1-Digest: zrksql+MO+GiCS92UQhhzYuDJhM=
+
+Name: assets/achievements/66.swf
+SHA1-Digest: +Cw8dAh1OTE3qcyFefk0BcDbIps=
+
+Name: assets/cityBackgrounds/sydney.swf
+SHA1-Digest: TfcGuhw0W6V1o/2H5VE4e9rIxyY=
+
+Name: res/drawable-notlong-port-hdpi/loading.png
+SHA1-Digest: ldmLklssHQPdsHtq3/NmlbL9t3I=
+
+Name: assets/achievements/48.swf
+SHA1-Digest: hBDe9ulz2Ssv2rSXJ3wkGR7Cnx8=
+
+Name: assets/daubers/79.swf
+SHA1-Digest: 32bnTIp1UUkMYEex84GSnG6QVvo=
+
+Name: assets/collections/731.swf
+SHA1-Digest: PVl31XNZhbue26MmD0VNyuFG604=
+
+Name: assets/collections/618.swf
+SHA1-Digest: AxIA7fis8ZMmLf+Qm795zDZIBQw=
+
+Name: assets/collections/510.swf
+SHA1-Digest: 9fvjWkwGSbxntPmtxRzXqB/gRNc=
+
+Name: assets/collections/246.swf
+SHA1-Digest: Tzgekk+jIeV/b9ssXYu9gOm/NzE=
+
+Name: assets/collections/727.swf
+SHA1-Digest: M/a7u1+0vOJg2n1/rDnwptDWuNI=
+
+Name: assets/collections/256.swf
+SHA1-Digest: OJgS2jQvATAEavTIaDWgRe1Ovs0=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+
+Name: assets/collections/16.swf
+SHA1-Digest: PcPdHW2LNcB+sylly9FBq89JwCc=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: assets/achievements/19.swf
+SHA1-Digest: 8C6AwbswQ2ns6E1IHjtuC18wAz4=
+
+Name: assets/achievements/320.swf
+SHA1-Digest: oJC7qoCMfNmFfSPW7eFnhrb74l4=
+
+Name: assets/daubers/91.swf
+SHA1-Digest: lECZy4qAuOEA5V+c1rB2hYhRCTc=
+
+Name: assets/collections/529.swf
+SHA1-Digest: y8YRfRvIBmPSuAsPt2aWdQR9N9k=
+
+Name: assets/achievements/72.swf
+SHA1-Digest: qqkzL1LGhfi1b8wDrG49Ivxt4rc=
+
+Name: assets/slotsDaily/threeReel_day3.swf
+SHA1-Digest: rYgFEEEMyuc6hIt/5aQSeDgAJlg=
+
+Name: assets/daubers/54.swf
+SHA1-Digest: NUYdxqWkpfsSrncDnG0N4gJePh0=
+
+Name: assets/daubers/38.swf
+SHA1-Digest: wtnl8fpq0bX3UNF0fG4R+Md3Pb4=
+
+Name: assets/collections/225.swf
+SHA1-Digest: ZGkO7evVvFK66O83rfmJ1GmRDMg=
+
+Name: assets/collections/810.swf
+SHA1-Digest: d4Q3T9GyVjz2qqhPTIeXMX3BonY=
+
+Name: assets/collections/658.swf
+SHA1-Digest: iRNyogvy3yC0dhbxl5wIw51lCd4=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: KyrtGTidfbVqaozGa7J59PDuk90=
+
+Name: assets/META-INF/AIR/application.xml
+SHA1-Digest: 04TMogUJT6r6Zvg3yXBCQP2I0OE=
+
+Name: assets/collections/47.swf
+SHA1-Digest: fIGADJq90BvmyDyyRhazTI0TQZ4=
+
+Name: assets/daubers/9.swf
+SHA1-Digest: 4igYH9FygjjO6WJYqNvqkgyk5wk=
+
+Name: assets/daubers/17.swf
+SHA1-Digest: Wjv3vQDAco4ITv+Vx1q0v2B/m1M=
+
+Name: assets/collections/657.swf
+SHA1-Digest: z0+vZodVLkNBVdMeb74pWE/ECVY=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+
+Name: assets/collections/56.swf
+SHA1-Digest: t6Dgc0brCpX7XTL1Lv2IIm6RNls=
+
+Name: assets/collections/508.swf
+SHA1-Digest: qkVx5C9Ad+rso6d85CqHKkGYtXM=
+
+Name: assets/cityPostcards/cairo.swf
+SHA1-Digest: gXfX3rrtbBuuSI+jHHKHZrSVChk=
+
+Name: assets/collections/425.swf
+SHA1-Digest: QP9DZErQCDujgC03wLCGX/g41tk=
+
+Name: res/layout/expandable_multiple_chooser_row.xml
+SHA1-Digest: ULq+S65mfdAZy1VVlGcJbDnNNIk=
+
+Name: assets/collections/763.swf
+SHA1-Digest: L1x9W+TWi6Gju90LNpPxvaIyIMg=
+
+Name: assets/achievements/54.swf
+SHA1-Digest: HH5T/PeUpKU+cnQBCIh8BRXcxj8=
+
+Name: assets/collections/114.swf
+SHA1-Digest: dEyC89XiaCLlgyaJIXJiqRkXTy0=
+
+Name: assets/collections/70.swf
+SHA1-Digest: mkzy5bXzNLgc6aJ+x4ZI19IK7QU=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: 3ZVp6/dtvGwY6vwfD1+kV5vcuJY=
+
+Name: assets/collections/410.swf
+SHA1-Digest: H6YpCNUq+A8y8cnieaVxDXTe7VI=
+
+Name: assets/collections/632.swf
+SHA1-Digest: b265w8Oh+WxlhgrqBrLQX70RLqQ=
+
+Name: assets/collections/572.swf
+SHA1-Digest: Tt37fEO9G7gRw5T7tNSwwSXU9LY=
+
+Name: assets/daubers/51.swf
+SHA1-Digest: yNs+gQcOKduY6kl/KRbyv5YPJFk=
+
+Name: assets/collections/645.swf
+SHA1-Digest: B4DaBRFAAqyNYhMwQwebwfMLpP4=
+
+Name: assets/daubers/52.swf
+SHA1-Digest: 1DrTC744e8GiFqTIGI5WyDf2B+4=
+
+Name: assets/collections/772.swf
+SHA1-Digest: UDZobRPT7t/RAVS0roukr9SYR5g=
+
+Name: assets/daubers/85.swf
+SHA1-Digest: /qF2wGxCIaozLQi4j4SrxO1Ve4E=
+
+Name: assets/cityPostcards/petsblitzslots.swf
+SHA1-Digest: iwBJaV5txW9jjydo8MXY2Ua1l2s=
+
+Name: assets/daubers/39.swf
+SHA1-Digest: 00Iea/9LVOk5UX3My3gcQzSapRo=
+
+Name: assets/collections/126.swf
+SHA1-Digest: jVvO5nEbzd8pbHecQSbQIiO65Vs=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: dIOg0Oj/DqhXYTh2QoNLL9rFkG4=
+
+Name: assets/collections/627.swf
+SHA1-Digest: rTEa8n+xEl6vaVq3875F9ZQgZNQ=
+
+Name: res/drawable-xhdpi/ouya_icon.png
+SHA1-Digest: N8QAfUvz245P9QrtKkosL+E1svs=
+
+Name: assets/collections/654.swf
+SHA1-Digest: jhPv9ujJVLBX1b6O2ZAHtKJUqN4=
+
+Name: assets/collections/818.swf
+SHA1-Digest: dmG/A8aTBYu3dVa652lWKackc8Q=
+
+Name: res/drawable/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: assets/collections/72.swf
+SHA1-Digest: 8BnyzkJzuaa8f3Twgb+jG6oYNAE=
+
+Name: assets/collections/3.swf
+SHA1-Digest: a1122Du8ItZDrSqWRj7SLdiBXEw=
+
+Name: assets/avatarFrames/74.swf
+SHA1-Digest: UOiH1cm2GwMdCphV+9M+pfkVfAo=
+
+Name: assets/collections/52.swf
+SHA1-Digest: BOnGKMDggvsHum8dEAHkW8S7ez4=
+
+Name: assets/collections/456.swf
+SHA1-Digest: q6JjvXvcOaAE+Ud4TXrut3lFr9c=
+
+Name: assets/achievements/14.swf
+SHA1-Digest: z8QaYgEb+nGb3pwbTzLQfxfX5LQ=
+
+Name: assets/daubers/97.swf
+SHA1-Digest: cBjQ2xmzr5skugH8Nw/dOjvQpQ8=
+
+Name: assets/achievements/7.swf
+SHA1-Digest: GTO9t2SMEbcb9AMdWqqAVxY8Nhk=
+
+Name: assets/daubers/40.swf
+SHA1-Digest: gGG+90utHE9h3bMfWM4LEGAO15g=
+
+Name: assets/icons/icon_152.png
+SHA1-Digest: 6rIDPdxBBpcU55cE3OXQAVFDzIQ=
+
+Name: assets/collections/78.swf
+SHA1-Digest: 3Yr32ogmU9Eri/Mbu6APmrsyUI0=
+
+Name: assets/collections/421.swf
+SHA1-Digest: 4MlXXWW5dThvik2rXLWa/aF+hrg=
+
+Name: assets/daubers/41.swf
+SHA1-Digest: aqqurrZ1XacQ4WxliQqSxoZtBhs=
+
+Name: assets/collections/683.swf
+SHA1-Digest: qT+vxeEXwJLcUK8cU+FxemIKW5Q=
+
+Name: assets/collections/252.swf
+SHA1-Digest: dMsThw0WuBglgyCyW9Vw5g1J+bw=
+
+Name: assets/achievements/46.swf
+SHA1-Digest: An0M83AVPFmfuLOVUmTwe14yXy4=
+
+Name: assets/cityTitles/tutorial.swf
+SHA1-Digest: f0tKe+PehTEb93OyaOVpJaSuzx4=
+
+Name: assets/collections/248.swf
+SHA1-Digest: 3KhCx0z8Rr4qJQ6ymUTCxUlCag8=
+
+Name: assets/collections/442.swf
+SHA1-Digest: Pj+IEj7eEp6duKaeaI2Yhz80cEY=
+
+Name: assets/icons/icon_1024.png
+SHA1-Digest: SdmoD7UmQSsjZ2/jKOdEzb0mpuE=
+
+Name: assets/collections/807.swf
+SHA1-Digest: +EU0R8NQo41rOuFpiYBwY0NoYtk=
+
+Name: assets/collections/13.swf
+SHA1-Digest: EQM7huZjAe9xc9OM05rkVEyDFvo=
+
+Name: assets/collections/50.swf
+SHA1-Digest: vOqlv/P0Cs2x8qvxeuZzrdz1pH0=
+
+Name: assets/collections/186.swf
+SHA1-Digest: 2vtcFUatEYpZBFYy2djS4NvJIhs=
+
+Name: assets/collections/112.swf
+SHA1-Digest: ZjCvUZl4JjRt3nm9HihV4E5f3ak=
+
+Name: assets/avatarFrames/34.swf
+SHA1-Digest: +b/69Q3rGOtH0+W2p1F8AUqMuUE=
+
+Name: res/drawable/air_72px_mobile_eula.png
+SHA1-Digest: 6eX1WzhcZDSgS30DdiYKnHz0h1w=
+
+Name: assets/collections/117.swf
+SHA1-Digest: K2iGbrEx1TURAGef2lh8zj84gQI=
+
+Name: assets/daubers/75.swf
+SHA1-Digest: P+6r+chtlsxg/dVfCaBGhSGgvWk=
+
+Name: assets/collections/557.swf
+SHA1-Digest: /YlUCkMerx5m6hf4N1cBmK/It7s=
+
+Name: assets/avatarFrames/24.swf
+SHA1-Digest: loQqHkWvegpUocjyyDdor9Z/dCM=
+
+Name: lib/armeabi-v7a/libstagefright_froyo.so
+SHA1-Digest: EUXLvjWSqWdOtEeNogZ6B3XXEO0=
+
+Name: assets/collections/156.swf
+SHA1-Digest: FstmdNBFB2a7xwumD9Ydfb/ISCM=
+
+Name: res/drawable-xhdpi/close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: assets/daubers/94.swf
+SHA1-Digest: EwooR52zUDvwrft4ct80W5ABbN8=
+
+Name: assets/collections/31.swf
+SHA1-Digest: tCJ2ixhOO4x3Z1KYeIVhLwY4a5I=
+
+Name: assets/slotsSymbols/luckslots.swf
+SHA1-Digest: 0btUyh8nzhD5H86xvL2bVEGXUms=
+
+Name: assets/collections/174.swf
+SHA1-Digest: mSxCyrNI8yaOppFq0OVQESU/vwI=
+
+Name: assets/achievements/27.swf
+SHA1-Digest: 4qM5kU3S4GtEGR9ciKlzHqGR0bc=
+
+Name: lib/armeabi-v7a/libstagefright_honeycomb.so
+SHA1-Digest: qPns6HP60VRhSzOQHoV2FXg2q/A=
+
+Name: assets/cityBackgrounds/jamaica.swf
+SHA1-Digest: qjom76bNESlTGbQ4/gPJ18dOh/E=
+
+Name: assets/collections/633.swf
+SHA1-Digest: hVlb5PMqMjaWPo1mwh9ijHHlKFI=
+
+Name: assets/cityBackgrounds/berlin.swf
+SHA1-Digest: YLDj1ykY9SOL9YAyU7dgxX0+350=
+
+Name: assets/cityTitles/athens.swf
+SHA1-Digest: JnoUT9Q7QYZv6LVAYIOkj8dlTuo=
+
+Name: assets/collections/193.swf
+SHA1-Digest: 8L13blbPt0JRbnvHTlBgl/xT81U=
+
+Name: lib/armeabi-v7a/libBitmapUtil.so
+SHA1-Digest: Sv997NNQeLo1Dnee0h50l31NEtI=
+
+Name: assets/collections/172.swf
+SHA1-Digest: UfPTYe/kJmrz0TRMTSG9+IXN3mo=
+
+Name: assets/collections/489.swf
+SHA1-Digest: chhhjJUq09Je2B7MLFN/DfYIKgQ=
+
+Name: assets/collections/171.swf
+SHA1-Digest: IAzc6vr2nDMYyYfZAeeKWKCLXbc=
+
+Name: assets/collections/427.swf
+SHA1-Digest: YSdAMqu3a96hTIsT4uHhkccEFEc=
+
+Name: assets/cityBackgrounds/tutorial.swf
+SHA1-Digest: bBbIOxJQtrug3+YLhHNtVHKiZ+c=
+
+Name: assets/collections/32.swf
+SHA1-Digest: o25xCr2gabJCl2w+CICTnPvisLQ=
+
+Name: assets/collections/424.swf
+SHA1-Digest: nNnRa+w07cnAOM/M/KbuC1M4eA8=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: at4b1is32NtvcaED5JisDubfa0o=
+
+Name: assets/cityTitles/cairo.swf
+SHA1-Digest: 5oilZrqTQtBHH1qd03/PCLJTYnc=
+
+Name: res/drawable-xhdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: VqEt89wuwGEqEtvuU36zIvHS4VY=
+
+Name: assets/collections/634.swf
+SHA1-Digest: nE2S2crN4i8NFAWpORQKaePqkb0=
+
+Name: assets/slotsSymbols/loveslots.swf
+SHA1-Digest: v9/fz1hzIwTse4KnvhBYRTTlwwQ=
+
+Name: assets/collections/64.swf
+SHA1-Digest: vEX31kB7yKkD594+YyN/0oJ9EEc=
+
+Name: assets/collections/199.swf
+SHA1-Digest: JhuMZDoNFXU4eVNAMvisxfLx7q0=
+
+Name: assets/collections/1.swf
+SHA1-Digest: gqUQ9LNyMGyKE3vUvCNnitqYMgE=
+
+Name: assets/slotsSymbols/winterslots.swf
+SHA1-Digest: wINByzwW8MxJ4f/pJc1F0ZLO5H0=
+
+Name: assets/collections/516.swf
+SHA1-Digest: BR0l2CNEZQ5F7D5FWTpNLLDpLVk=
+
+Name: assets/collections/453.swf
+SHA1-Digest: KY/Eokh5tkRBytqTjHOmOzmLNiY=
+
+Name: assets/collections/652.swf
+SHA1-Digest: iEVLp/JDU1KCDKZjwQdHDZZn9OA=
+
+Name: assets/collections/4.swf
+SHA1-Digest: /dzw14I2pM3FXmpkrzcRBHZ/X+o=
+
+Name: assets/collections/414.swf
+SHA1-Digest: 0nGTQxCiBClJooxEbX37dCrG36c=
+
+Name: assets/collections/490.swf
+SHA1-Digest: SWyzUZbtB0D7VYkUvA0R1ewhj/c=
+
+Name: assets/collections/601.swf
+SHA1-Digest: HzQvoXIu1gp0c+KJyJlnAlYJNTs=
+
+Name: assets/achievements/324.swf
+SHA1-Digest: jasiqx/WJhfnBe2XPBVzVn9ezR8=
+
+Name: assets/collections/191.swf
+SHA1-Digest: a/W++RUmmUcuJ1cVBnE1AyVDv9o=
+
+Name: assets/collections/165.swf
+SHA1-Digest: eyUUApbG5L7sP5WAIl0YsKoiZRA=
+
+Name: assets/avatarFrames/8.swf
+SHA1-Digest: Ys1jRlWSR/iXHWnP9Y2Xr/o/Hjo=
+
+Name: assets/achievements/35.swf
+SHA1-Digest: enZIUeXl9Y65eqKNgk0mo8yls5c=
+
+Name: assets/avatarFrames/32.swf
+SHA1-Digest: jio+jUmiErxC7TyebcT/vznMAoI=
+
+Name: assets/collections/492.swf
+SHA1-Digest: axx+PSYFyQfO4nbY6db8nw2GzBE=
+
+Name: assets/achievements/59.swf
+SHA1-Digest: hASItV6gL7lhax1Pb5CoUTgG+mM=
+
+Name: assets/collections/676.swf
+SHA1-Digest: WSo4p6LoTzhVgb6lTNseDO4IB2Y=
+
+Name: assets/daubers/20.swf
+SHA1-Digest: UoUXCwQm7a/MO1bnCq5NFvLz/t4=
+
+Name: assets/achievements/83.swf
+SHA1-Digest: JrphFOgT9WkP76Tlkg6r31PXbc8=
+
+Name: assets/daubers/26.swf
+SHA1-Digest: ghaHU8A94pxZLu7PYIXB/XYWtUE=
+
+Name: assets/collections/205.swf
+SHA1-Digest: wLsMtzb9taNlPZ0JZjG2T/lfaSY=
+
+Name: res/raw/adobelogo.gif
+SHA1-Digest: cp6EzjLDVdzLOD69uttcA3OnzH8=
+
+Name: assets/daubers/80.swf
+SHA1-Digest: cOaEK7nVrGialhYsslJeDl3TAj0=
+
+Name: assets/achievements/315.swf
+SHA1-Digest: wjm3C9e4vvAAOF84fHPVHaiOa6U=
+
+Name: assets/daubers/65.swf
+SHA1-Digest: FUgL09r0btymqb4Ha/AxXyU2oRU=
+
+Name: res/drawable-ldpi/com_facebook_close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: assets/cityBackgrounds/moscow.swf
+SHA1-Digest: TS+h11Uv1+bM54vKsu+ArVebT3k=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: V27iDxNqPIzkdIgA+0DIi/AfQYY=
+
+Name: assets/collections/327.swf
+SHA1-Digest: iZjAGmKCApXdpi7ukdBX2e7jSqk=
+
+Name: assets/daubers/109.swf
+SHA1-Digest: nbL9ITyaqXSIAYxcaWOZ5YR7KYg=
+
+Name: assets/achievements/44.swf
+SHA1-Digest: vpCdcr9AT3PuH5s5l35RhpBVJFg=
+
+Name: assets/avatarFrames/65.swf
+SHA1-Digest: nzkVZMmbs79ojRKNGZbM0Xqzvgk=
+
+Name: assets/collections/591.swf
+SHA1-Digest: oH4gNVk/apjcb6wPGDgEmf6ts/o=
+
+Name: assets/cityTitles/macau.swf
+SHA1-Digest: K+LWJLGslEPwx5+XFSyofRlWnUc=
+
+Name: assets/daubers/88.swf
+SHA1-Digest: G5vCnTWVJyZ7m4H24b/6ZEKmbZQ=
+
+Name: assets/collections/178.swf
+SHA1-Digest: 8x/3lbJcoJGt2hXBEIK05VK7lok=
+
+Name: assets/collections/535.swf
+SHA1-Digest: hHwNRchUgRJKHBn+hUgmWD59NLw=
+
+Name: assets/collections/582.swf
+SHA1-Digest: Xb1FlovlVme3cxTPBtzjfvso6j0=
+
+Name: assets/collections/74.swf
+SHA1-Digest: 4OAqxuNn41oTZW1I0aeruez5TSM=
+
+Name: assets/avatarFrames/54.swf
+SHA1-Digest: 3CVjvXZuGtGIE21lPwRrIOn6jeQ=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: assets/collections/255.swf
+SHA1-Digest: PCMhr8ZvDuBMor/cvdRAMUYBcMc=
+
+Name: assets/collections/605.swf
+SHA1-Digest: eztb7INNMD9PT6chzMGfJlHJT5U=
+
+Name: assets/cityBackgrounds/greatoutdoors.swf
+SHA1-Digest: u92fG7MujPUCjSU74YLKhIfQIjg=
+
+Name: assets/collections/651.swf
+SHA1-Digest: fJLn+zKDGZ2nBtGGz4hLaiSDNis=
+
+Name: assets/daubers/78.swf
+SHA1-Digest: 2SFmmZeJKiGAJtCyWt4LyxIHfUQ=
+
+Name: assets/cityTitles/tournament.swf
+SHA1-Digest: fz01kV/HsgsmsFXVwe8sf/N3ukM=
+
+Name: assets/collections/612.swf
+SHA1-Digest: SANre/e1Sdf+9EKc0N+doD5qOt0=
+
+Name: assets/collections/220.swf
+SHA1-Digest: rxZ5D+RUZcKH2DOsEcjkBRrQygE=
+
+Name: assets/collections/659.swf
+SHA1-Digest: 61sdRLqW5ZCcVcttAiNSHDidurM=
+
+Name: assets/daubers/50.swf
+SHA1-Digest: PZ0lraX6sm9844RdqKtusNC1uTw=
+
+Name: assets/avatarFrames/45.swf
+SHA1-Digest: aoL9VCla1S02CmKj9OxOr/BBtYQ=
+
+Name: assets/collections/123.swf
+SHA1-Digest: Wc8gOD9xsIDT5MSKZupe2S+LvgQ=
+
+Name: assets/collections/42.swf
+SHA1-Digest: 8C3cRVojpkDA2peHdDshbtSYH9w=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/docs/com.milkmangames.nativeextensions.events.xml
+SHA1-Digest: 0gna0jbImQasPCIGPgHnWYrf0bg=
+
+Name: assets/collections/14.swf
+SHA1-Digest: 4rSZlskvy7whkNiMMkGyCBW+IkE=
+
+Name: assets/collections/607.swf
+SHA1-Digest: LxMEMV4FuLRVqfQg1Ft6IXMVJ4Y=
+
+Name: assets/cityTitles/venice.swf
+SHA1-Digest: wLL2Xp0jCLVwLffuCl04SmaUVZs=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: M3dEoW7KMovPShTFZSMQLwNyz6I=
+
+Name: assets/collections/148.swf
+SHA1-Digest: Z1LZRMS2F/p2oKoNsQo4gw+bCeM=
+
+Name: assets/collections/760.swf
+SHA1-Digest: MZEhKzARfqhbr7elwd+JwwnTtac=
+
+Name: assets/collections/531.swf
+SHA1-Digest: wKrhkONXr0afxMsXFqEAH1B0P6I=
+
+Name: assets/cityBackgrounds/petsblitzslots.swf
+SHA1-Digest: d2FGN/Y3KgSiL7pyTGYw47KcqSg=
+
+Name: assets/cityTitles/highstakes.swf
+SHA1-Digest: TWGwCFhOJtySmwkkGTIDSMZ7CvQ=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/library.swf
+SHA1-Digest: at4b1is32NtvcaED5JisDubfa0o=
+
+Name: assets/avatarFrames/19.swf
+SHA1-Digest: 3D0Zuv/zwfnSQfrJMd9VTSzrXJI=
+
+Name: assets/MOBILE.swf
+SHA1-Digest: WjpjWLWYgPG3Qc1jpkxpjJMJ1vo=
+
+Name: assets/collections/80.swf
+SHA1-Digest: CM809QySyNcT6zIi79GtTjnyZE0=
+
+Name: assets/collections/568.swf
+SHA1-Digest: VHxQGJTS32rvQn8cketAR2xLMO4=
+
+Name: assets/achievements/85.swf
+SHA1-Digest: HsFv19hbWIkd9297mA0Egmk+MeE=
+
+Name: assets/achievements/96.swf
+SHA1-Digest: yv7gz4CXY3ty6+lUUC3FXZeZmB0=
+
+Name: assets/collections/515.swf
+SHA1-Digest: r0LLo1x/mtlMG2qiHiU4IWf/H3c=
+
+Name: assets/achievements/2.swf
+SHA1-Digest: xIYacObXmO/KtyP4JFCiexwIZEE=
+
+Name: assets/collections/28.swf
+SHA1-Digest: 0oKaUBxWL/N8Ortcq7YALPK/UX8=
+
+Name: res/drawable-hdpi/com_facebook_icon.png
+SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+
+Name: assets/daubers/107.swf
+SHA1-Digest: eARLLVOYte01GaRTMlMV7aZzL9w=
+
+Name: assets/achievements/43.swf
+SHA1-Digest: /tAch5EZ1kiwGyTJR+wcoGfJYuw=
+
+Name: assets/collections/435.swf
+SHA1-Digest: M4KzV18ZoZgplMfZZHg3+defTiI=
+
+Name: assets/cityBackgrounds/rome.swf
+SHA1-Digest: OjqRi6s/xVwfz8B77ABVdZ9xRu4=
+
+Name: assets/collections/7.swf
+SHA1-Digest: p0N+gxjsS3ILA4Wdc3YXNGHd58Y=
+
+Name: assets/slotsSymbols/atlantis.swf
+SHA1-Digest: 2A9LAwanwaL84n2zNfZTZMIsXKk=
+
+Name: assets/cityBackgrounds/nyslots.swf
+SHA1-Digest: QGrMBnJQ4oaYjUsFsUTF9NVYZ1Q=
+
+Name: assets/collections/121.swf
+SHA1-Digest: JIutQI9pYmibPZkWVb+rH2cZoIs=
+
+Name: assets/collections/227.swf
+SHA1-Digest: /MziadCFNsaMGjmo2HB9PvL7Ob8=
+
+Name: assets/collections/721.swf
+SHA1-Digest: gN5BS295iCllb+CtccNyszn8GBQ=
+
+Name: assets/daubers/23.swf
+SHA1-Digest: JLs18hhk2BATkS5OH367z6/JKJU=
+
+Name: assets/collections/519.swf
+SHA1-Digest: k3Hm1zsSO+h8hlJYrYeoC2qBjR0=
+
+Name: assets/collections/578.swf
+SHA1-Digest: QZvh6SQWTmIjwvSj9WgJTvuA3OQ=
+
+Name: assets/avatarFrames/30.swf
+SHA1-Digest: ZN0kEAubQqr5k7FnnlqVHEMHU24=
+
+Name: assets/daubers/14.swf
+SHA1-Digest: gxDZqj9NVjMcK33jY92yKD4jCvM=
+
+Name: assets/achievements/51.swf
+SHA1-Digest: jypCN9uc3Ghcg/C71ZA5mS1LBPc=
+
+Name: assets/collections/335.swf
+SHA1-Digest: YaS4deWahRLPDme9P2em3XrlMyE=
+
+Name: assets/collections/418.swf
+SHA1-Digest: SswIadj/ntye3TBp0DJwIgUQ9As=
+
+Name: assets/cityTitles/atlanticcity.swf
+SHA1-Digest: 6+DqCp++U1eQPUvJbAk0OVRhWbc=
+
+Name: assets/collections/392.swf
+SHA1-Digest: 66Cu7fNGF6olgTgJgk3e+MRsU2k=
+
+Name: assets/collections/795.swf
+SHA1-Digest: 78S7J5j1s2JWTQJtFHVkGg3Lp00=
+
+Name: assets/collections/66.swf
+SHA1-Digest: v+utmwucKLUKCyV9/1V7Qqa7qgM=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: CiEvhGOyKSwnjLV8QCqdGO9Cnzw=
+
+Name: assets/collections/668.swf
+SHA1-Digest: SYI+9Qaqda3EnStYpr3gTFagTIs=
+
+Name: assets/avatarFrames/53.swf
+SHA1-Digest: rNiclRq/jmsm6gX+KdqMfSRafz0=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/META-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: YgBpU0QPHgXW9LulFFkD2ONbPN0=
+
+Name: assets/cityTitles/dublin.swf
+SHA1-Digest: jmeQ3vSyPs3cpL6iL5v+djnllw8=
+
+Name: assets/collections/455.swf
+SHA1-Digest: vNZqio/1Vf3mQOFjgF5USraHd08=
+
+Name: assets/collections/725.swf
+SHA1-Digest: Wg7kKJYPXbPYOoQBw/brkR0SYQY=
+
+Name: assets/daubers/47.swf
+SHA1-Digest: IpvDRN9vW7JLx7GNiRAZZG1MVCA=
+
+Name: assets/cityPostcards/tutorial.swf
+SHA1-Digest: z5FsfiVeRnLhaV/yv0H6OMkI0fA=
+
+Name: assets/collections/776.swf
+SHA1-Digest: wZLNH3hrV/hhmoZapaew+IXbKPg=
+
+Name: assets/collections/59.swf
+SHA1-Digest: dnui16scBz+95el/5mDatdZIKnk=
+
+Name: assets/achievements/30.swf
+SHA1-Digest: gezgyt9ArP9MgMub63UPgUhQuRU=
+
+Name: assets/daubers/86.swf
+SHA1-Digest: /9mLzi/rRxy3GMMCABp28EikjQ4=
+
+Name: assets/collections/118.swf
+SHA1-Digest: VF4Eh10TewqPN1DTaBiW321CDHM=
+
+Name: assets/collections/802.swf
+SHA1-Digest: zqL+uZLbvsMbK6Eqt/KUPtm/Cyo=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/docs/com.milkmangames.nativeextensions.ios.xml
+SHA1-Digest: d4cvoI+wxNIzDT9sSOT2aOBbNHY=
+
+Name: assets/cityBackgrounds/venice.swf
+SHA1-Digest: 6Avu0zkx/RChgIln0X5MaU+nnqk=
+
+Name: assets/collections/561.swf
+SHA1-Digest: kvUIulxNRIhRhk8fT4lzFlamzq0=
+
+Name: assets/collections/231.swf
+SHA1-Digest: Z5x7OwS6tNZlPHoWGJA3MKmxUJM=
+
+Name: assets/collections/485.swf
+SHA1-Digest: Si4cq0kQHKhDNocG8ZWR7gB62Js=
+
+Name: assets/collections/333.swf
+SHA1-Digest: m+WoRfuzaUybfMtjCEEvTwpdF1o=
+
+Name: assets/daubers/59.swf
+SHA1-Digest: yE9+EWWroBcckgQNThaf6WLXnKU=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/META-INF/ANE/Android-ARM/platform.xml
+SHA1-Digest: 5jR0vx1VgrqV7BSWiytvjlAAkD0=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/docs/com.milkmangames.customextensions.events.xml
+SHA1-Digest: gzYqaZ4y/uVnGN53gwCNE77BQ44=
+
+Name: assets/avatarFrames/81.swf
+SHA1-Digest: mTl8HaKezYH6Lbe9xXqhhQTkvXI=
+
+Name: assets/collections/752.swf
+SHA1-Digest: heLBKDgZ3foMpKtwODrD1DClMeo=
+
+Name: assets/collections/567.swf
+SHA1-Digest: bwF1J3rMOaX7l1+kco8W/eiiSu4=
+
+Name: assets/collections/244.swf
+SHA1-Digest: IAfjz7Pi+630PFSo2qTBDx4P2f0=
+
+Name: assets/collections/560.swf
+SHA1-Digest: cuvmRyq9oCj/ZucAsXT480i+JEw=
+
+Name: assets/avatarFrames/10.swf
+SHA1-Digest: rJD38iJIFVxDRSwDjqtqBXHg2VY=
+
+Name: assets/META-INF/AIR/extensions/com.adx.Tracker/catalog.xml
+SHA1-Digest: 2GF3M0ot1LhVA7DdALdZBuvoMsg=
+
+Name: assets/achievements/104.swf
+SHA1-Digest: AdPzfqidVNYe8L80fEhvT79K2pU=
+
+Name: assets/collections/797.swf
+SHA1-Digest: Wx924iipj8Lth2GVbel1EgFz6Pc=
+
+Name: assets/collections/37.swf
+SHA1-Digest: MBD1y2jYrtfdXI9bbCns2Kt7EVI=
+
+Name: assets/daubers/116.swf
+SHA1-Digest: p4pfEXpbaIye2J8XNG1LX29On3U=
+
+Name: assets/icons/icon_32.png
+SHA1-Digest: fxJ/9f8TIQrBsjFE27/TrInIQwA=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+
+Name: assets/collections/753.swf
+SHA1-Digest: Wvwzk5RHOEuvgarR4xJJ2AQB7ac=
+
+Name: assets/avatarFrames/15.swf
+SHA1-Digest: Sb/fHt1j9wmavCu2epIgmv7Y+CE=
+
+Name: assets/collections/375.swf
+SHA1-Digest: kTyKiovs1hyXpndnKd4ES47n868=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: 89QKqCJiCPLfMsgwtJ4iVTila24=
+
+Name: assets/collections/761.swf
+SHA1-Digest: qNyP0edTMzEyVPdJc3dxwauuqtI=
+
+Name: assets/avatarFrames/2.swf
+SHA1-Digest: j5DgMfLR1c6XPC9dDFjqzyvxoNM=
+
+Name: assets/collections/150.swf
+SHA1-Digest: O5Y6TXC5nLiNAuY/J029Y0VdCtw=
+
+Name: assets/collections/587.swf
+SHA1-Digest: zBUQP5Nf9aSIAAAmvlbPiIGewLs=
+
+Name: assets/cityBackgrounds/athens.swf
+SHA1-Digest: EPA9zLukIoP7K9Pzudv74jJt2Ek=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: assets/icons/icon_36.png
+SHA1-Digest: M3dEoW7KMovPShTFZSMQLwNyz6I=
+
+Name: assets/collections/749.swf
+SHA1-Digest: mWru34P473XkGoKf586OT+bLk1s=
+
+Name: assets/achievements/108.swf
+SHA1-Digest: KTIDqq8Yr2VPJFhUNooEjFCDIqA=
+
+Name: assets/avatarFrames/14.swf
+SHA1-Digest: V1F/uJ6C53wkVbdzxMLmZSbcTHw=
+
+Name: assets/collections/228.swf
+SHA1-Digest: eR+hjKCdURlDKxQX+YErRxaQdZQ=
+
+Name: assets/daubers/72.swf
+SHA1-Digest: mdGAbk+bEjCsOvNRIFnIll+zfRE=
+
+Name: assets/collections/554.swf
+SHA1-Digest: KOyhRhPcrVzE2/HNScCNHQsof/w=
+
+Name: assets/achievements/76.swf
+SHA1-Digest: H/aXn9nmF+M8MHeAsj7E77bgeA4=
+
+Name: assets/daubers/98.swf
+SHA1-Digest: u57klTHw/bZQ+5rDrQ7owT6G7/4=
+
+Name: assets/cityTitles/hollywood.swf
+SHA1-Digest: JDurWKSpr3WIz/NbwgFiigqXS8A=
+
+Name: res/drawable/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/cityBackgrounds/chicago.swf
+SHA1-Digest: XR3hsw8aqZ3ir4zXN6eSmuQckeA=
+
+Name: assets/avatarFrames/50.swf
+SHA1-Digest: fXOSjURE4vJqoLb1hZMV8GcW54o=
+
+Name: assets/avatarFrames/6.swf
+SHA1-Digest: G5YGkU+q73wW3oRz4JbdOTP0mdw=
+
+Name: assets/cityTitles/tahiti.swf
+SHA1-Digest: lrfsWJVy0yUlw5Y/hskljDJxvuU=
+
+Name: assets/daubers/101.swf
+SHA1-Digest: EVaKK3MJy+gLTbMzMtoKUOS5RaI=
+
+Name: assets/collections/422.swf
+SHA1-Digest: UqtfWlsvGhL8lFF5dU/msrC5Kgo=
+
+Name: assets/collections/451.swf
+SHA1-Digest: L3OcAsuyRBnso1+Y+reFD/oUXzo=
+
+Name: assets/daubers/18.swf
+SHA1-Digest: kWYP7oKyKISgQ1yajd1yd/V4O0E=
+
+Name: assets/daubers/37.swf
+SHA1-Digest: 0os9Gm/yR5eVMiVxit6wGSc83kA=
+
+Name: assets/collections/569.swf
+SHA1-Digest: Dc92TbZbjbRSLY6eHwdvvyFGohg=
+
+Name: assets/collections/539.swf
+SHA1-Digest: Z2wFGYt2Dy3MsHjBlsHnvIYqmdI=
+
+Name: assets/daubers/92.swf
+SHA1-Digest: ZGJQe3cQ5gNabISnCFhmcNqFYWc=
+
+Name: assets/collections/393.swf
+SHA1-Digest: QbQ21nUsZuQ+qUT1QrhlZtqEOlU=
+
+Name: assets/achievements/24.swf
+SHA1-Digest: yt3vHVs8HCjq49XBwfpdljhbl7c=
+
+Name: assets/cityBackgrounds/threeReel.swf
+SHA1-Digest: ASiFSdNuR7ZIi7uMQrpvzP+gE+A=
+
+Name: assets/achievements/39.swf
+SHA1-Digest: PpuMf5vGSm2urQZxN09DB3FEVsg=
+
+Name: assets/daubers/145.swf
+SHA1-Digest: 1oot1zxkeUgfKEFWLz2WdGn4zOA=
+
+Name: assets/collections/157.swf
+SHA1-Digest: yNgKEg6mqgUxz4EFDXHWBzuvaaQ=
+
+Name: assets/daubers/57.swf
+SHA1-Digest: Hh8UKdGNSWqPOkmWZ7Yo0g1GwJ8=
+
+Name: assets/daubers/142.swf
+SHA1-Digest: hLU5WJTgyAlhBQpEx4GwL4qBh7E=
+
+Name: assets/collections/379.swf
+SHA1-Digest: i2mdSSyvXF5T7wH16RoUCXaItRM=
+
+Name: assets/collections/6.swf
+SHA1-Digest: r+EQU2ybYiYq1Rdh8BcPH9A3cqY=
+
+Name: assets/collections/383.swf
+SHA1-Digest: e+JKnH0YOAh4iMdO7jgNRUhFdf4=
+
+Name: assets/cityPostcards/honolulu.swf
+SHA1-Digest: UVKiUAfK5UBLnAeQW0oKwcrH/4o=
+
+Name: assets/collections/630.swf
+SHA1-Digest: IVX0OoPXWGBM/mgN3hsXtdJiPGc=
+
+Name: assets/collections/811.swf
+SHA1-Digest: OB8WFEts11D5kHdI+4q1eQ/VeXY=
+
+Name: assets/daubers/24.swf
+SHA1-Digest: nJi9WIB3lcGyzuqeiOMx97wukbk=
+
+Name: assets/achievements/38.swf
+SHA1-Digest: XPzZ10CQkt4P8qZwn2sImQ9Ns28=
+
+Name: assets/collections/41.swf
+SHA1-Digest: /8Pse83y+ErLUNiMFUOKcp4R6dU=
+
+Name: assets/collections/595.swf
+SHA1-Digest: qPrvP39eMdiMCKpImSCBnMBMa9U=
+
+Name: assets/avatarFrames/43.swf
+SHA1-Digest: xlL3uHSaY7snFbFQXfSP5mImomg=
+
+Name: assets/collections/230.swf
+SHA1-Digest: 1HPrDYvUbqzhgwKXT5oP9alMQhA=
+
+Name: assets/cityBackgrounds/tokyo.swf
+SHA1-Digest: AGFh2P54+vwDpHM48ltA41cFKEI=
+
+Name: assets/avatarFrames/9.swf
+SHA1-Digest: KiCdTzfbZv77/SGzEpS4q4k9i6o=
+
+Name: assets/cityTitles/hongkong.swf
+SHA1-Digest: YYTAD0SNucnHXhrDugvHeBp5yX4=
+
+Name: assets/achievements/17.swf
+SHA1-Digest: iilPKGfJC7PBYg/3SEyZl9RXYf0=
+
+Name: assets/collections/532.swf
+SHA1-Digest: fsLs9kO690NpmyIn1UfpiSqnBhg=
+
+Name: assets/collections/593.swf
+SHA1-Digest: 7J3AuUgy+XbGxqg5e8MOjzCpE6I=
+
+Name: assets/daubers/43.swf
+SHA1-Digest: efF4KSalohBGfe7g6L/ofQjCORE=
+
+Name: assets/collections/653.swf
+SHA1-Digest: 18ZWHbQlyrT6JsGzHktfnT+d4Og=
+
+Name: res/drawable-ldpi/close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: assets/daubers/12.swf
+SHA1-Digest: z+vZPZerBCDjLU8uCFYDIP8cc40=
+
+Name: assets/collections/608.swf
+SHA1-Digest: y87OgpfZDOZwo9stzxjRCvXtaZQ=
+
+Name: assets/cityBackgrounds/barcelona.swf
+SHA1-Digest: egrtZ5DOiCoFhW6Jcl5Q7/nzP6c=
+
+Name: assets/achievements/12.swf
+SHA1-Digest: YEePNqRPUvDYJSm0vh8+6uTxIAQ=
+
+Name: assets/daubers/96.swf
+SHA1-Digest: 0Dodw3KXusAr9d3UQrV6oAz2xhA=
+
+Name: assets/collections/750.swf
+SHA1-Digest: fHdW3Q74bmNCqt5RcDnKm6+M7hA=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/META-INF/ANE/extension.xml
+SHA1-Digest: akZljuXctcKbZkmrkcjaJB59rOM=
+
+Name: assets/collections/109.swf
+SHA1-Digest: R1S9IFG4QauKtbC1S6MoJrGqoLU=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: lX0xAFE2LNPjUrcyNqWuxTJqmMs=
+
+Name: assets/cityBackgrounds/nashville.swf
+SHA1-Digest: pGDgeqtq17d8A93QUcrljm0AhME=
+
+Name: assets/daubers/108.swf
+SHA1-Digest: CXB+r4lA/Ze0deazTv23KvWemNI=
+
+Name: assets/collections/513.swf
+SHA1-Digest: ZQQNbVfPc6CvrqxH7IaPrN56wAw=
+
+Name: assets/cityTitles/rio.swf
+SHA1-Digest: b3781Sg0z1LArbPSAgV0xAFd470=
+
+Name: assets/slotsSymbols/summer.swf
+SHA1-Digest: mu0/7mc6WRi8uwGqlrLRUF2NzMc=
+
+Name: assets/META-INF/AIR/extensions/com.buffalostudios.ANEUtils/META-
+ INF/ANE/extension.xml
+SHA1-Digest: X8EdGWgxrJSNWvZYJwyxMLEfGRA=
+
+Name: assets/collections/615.swf
+SHA1-Digest: QD4BxBKtHkXE/KN3mTDv4mwWMTs=
+
+Name: assets/daubers/53.swf
+SHA1-Digest: 7o8wI6vONlFr9ptd7JK645cTkFk=
+
+Name: assets/avatarFrames/48.swf
+SHA1-Digest: RBlbnbe4/Vszk3ataX+HcYkqu7Q=
+
+Name: assets/cityBackgrounds/atlanticcity.swf
+SHA1-Digest: avdouy6znWTPsF34KWTEvRjENRg=
+
+Name: assets/META-INF/AIR/extensions/com.adx.Tracker/META-INF/ANE/Andr
+ oid-ARM/library.swf
+SHA1-Digest: A6Bx4hSdyQsOHFEBYTnyVkZS5ds=
+
+Name: assets/collections/597.swf
+SHA1-Digest: N0pYXkG2+3tU1xvC+SLTgIE5GzA=
+
+Name: assets/collections/511.swf
+SHA1-Digest: mtLWXi8OHpzwhS+FRFE8Blh/Cds=
+
+Name: assets/collections/565.swf
+SHA1-Digest: 3OT4O/bzm5sG9UGpb5Rz7pIbolk=
+
+Name: assets/daubers/89.swf
+SHA1-Digest: wfdn2qx/H02nZAnuwBFRbmPBWbg=
+
+Name: assets/avatarFrames/4.swf
+SHA1-Digest: tZhk+PZsrigeBNfm3+URhJq2yQ8=
+
+Name: assets/collections/665.swf
+SHA1-Digest: MFih6BczmmNdMWQppzT/VSlakp4=
+
+Name: assets/achievements/325.swf
+SHA1-Digest: /zBZaegRCjXiolHblr++Rze6jio=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+
+Name: assets/collections/440.swf
+SHA1-Digest: 8dE2tzIyTLhcLEadRn7mqIgYP2Y=
+
+Name: assets/daubers/27.swf
+SHA1-Digest: WRzdhPdEzywM3PgZSPl3FEervds=
+
+Name: assets/collections/19.swf
+SHA1-Digest: VJurhDTFNgHWwAbaTM89BufObqM=
+
+Name: assets/collections/34.swf
+SHA1-Digest: G+dbeOr6NYKJjscUHvGexnaZWog=
+
+Name: assets/slotsDaily/threeReel_day4.swf
+SHA1-Digest: sQwCiR0wcqx14303ItDyJh9W2qw=
+
+Name: assets/collections/446.swf
+SHA1-Digest: F38FCY+3lGD8zxnpk8fOoWr1l5I=
+
+Name: assets/achievements/33.swf
+SHA1-Digest: NWi5UgKOyPl+OCRKhssaJjnw5Q8=
+
+Name: assets/cityPostcards/venice.swf
+SHA1-Digest: o8m1F6fYTVne1qJ+x3OYt+zrChM=
+
+Name: assets/collections/520.swf
+SHA1-Digest: DQh/rpm1yke+3iCU85isXA3JxmI=
+
+Name: assets/achievements/88.swf
+SHA1-Digest: WcQSZwAkA5eF0j8UJKDw7P4/2vs=
+
+Name: assets/cityPostcards/plano.swf
+SHA1-Digest: B0LXJPdaW7Pe5dWgVCly3YjC4IE=
+
+Name: assets/collections/507.swf
+SHA1-Digest: t1iiZ5ZbnCLBipHdNDCrPcM2k5w=
+
+Name: assets/cityPostcards/miami.swf
+SHA1-Digest: sIi44C8nb/2PM11ta/7TqEhLf1k=
+
+Name: assets/collections/46.swf
+SHA1-Digest: yAwUk9MhrK8sbdn49rz071aJacI=
+
+Name: assets/daubers/104.swf
+SHA1-Digest: 3AaFoTaZzqCI+cTFoVIeOEr7Ktg=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/catalog.xml
+SHA1-Digest: tV9+90obYTpLflQDd9ykn6g8ljY=
+
+Name: assets/collections/25.swf
+SHA1-Digest: +YgY7f/14G5nZkrgcs2dkkawt0M=
+
+Name: assets/collections/655.swf
+SHA1-Digest: cqKZB6YEA4HhYVoGrn/2+WBHMqE=
+
+Name: assets/daubers/29.swf
+SHA1-Digest: bcos3jKtQbTcL3JTbIPDuF3nCew=
+
+Name: assets/achievements/73.swf
+SHA1-Digest: ag0chu66GiRj7Vhj1hlbnapNweU=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: 7IKMHi/l8zxViIZ9hbwK94+V/1s=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/docs/com.milkmangames.customextensions.xml
+SHA1-Digest: i0C8hwi7nXsp9KgniZmxy8P9ygA=
+
+Name: assets/daubers/67.swf
+SHA1-Digest: u+BDftgdbR1Of6DGu1tFof0IHH0=
+
+Name: assets/avatarFrames/79.swf
+SHA1-Digest: N4jbrhVe9BW/it2S9LD+ZR1iyc4=
+
+Name: assets/achievements/49.swf
+SHA1-Digest: jTLxGhHuegwBUGfFd6b0ga+FB5I=
+
+Name: assets/cityPostcards/tokyo.swf
+SHA1-Digest: qOJA8c1ykwdOt82oQnya5Cev5Ak=
+
+Name: assets/cityPostcards/threeReel.swf
+SHA1-Digest: aPGtgIPweQ14rnWVBZQqRSPUWF8=
+
+Name: assets/avatarFrames/80.swf
+SHA1-Digest: UFFp3a3tX/nTuZ73ZVfnuWCl3tI=
+
+Name: assets/collections/240.swf
+SHA1-Digest: kw6Hb5/yuOhqXUCli1QMdxVDqmE=
+
+Name: res/drawable-hdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: IRytpOlTJ0L0tqrpIfR65gTRRSo=
+
+Name: assets/icons/icon_57.png
+SHA1-Digest: D2cVh76jtgeFKGIqbCXNy7zwv0E=
+
+Name: assets/controllers.json
+SHA1-Digest: pYxI+G+cIqL+Vu0wz9hxhOU5sVk=
+
+Name: assets/daubers/82.swf
+SHA1-Digest: l7u58/xOQhgH2L8nCQJlLe5HI0A=
+
+Name: assets/avatarFrames/40.swf
+SHA1-Digest: 3gbs9VagGfjWmN0oHwOTZhXsFMU=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: DzwRcBt/7BRWcN18oqdGJ5KCldk=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: nqGHiPOhSaIXmMVgJ9Ux7JqUxEk=
+
+Name: assets/cityPostcards/atlanticcity.swf
+SHA1-Digest: /fR2gLh6xQHPD92UttNvwQZtU48=
+
+Name: assets/collections/803.swf
+SHA1-Digest: WogLLoheWOVSBa7yx2ApbOPHJx4=
+
+Name: assets/collections/187.swf
+SHA1-Digest: CU3NsWuQxkBZTHarubruy0uTIKc=
+
+Name: assets/collections/537.swf
+SHA1-Digest: FlzZr0HhGPlyuJ1tZkLOMlknq4w=
+
+Name: assets/collections/681.swf
+SHA1-Digest: gf/9kdI8ZNQmQxfWhPsfLoYIges=
+
+Name: assets/cityBackgrounds/tournament.swf
+SHA1-Digest: mv+KM+vQuUEyGgDp6VGvMRP1fOo=
+
+Name: assets/collections/729.swf
+SHA1-Digest: sYfYibJQrgytboIp9eDzUnqVHS4=
+
+Name: assets/avatarFrames/33.swf
+SHA1-Digest: xKavnhoxBg4s8ZF3eQ47eX4DAkg=
+
+Name: assets/achievements/80.swf
+SHA1-Digest: ZGg3FhZfbPq4wVS3EdBQsn4lAQM=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: xGQtABb1AitSeN8uVNWHd/+8MQ0=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+
+Name: assets/icons/icon_144.png
+SHA1-Digest: vwSuKsgQPWfsDN6XNX4ueT/QYtg=
+
+Name: assets/collections/809.swf
+SHA1-Digest: mUZsI7KvEuX/Y7uHY+awut1vn4c=
+
+Name: assets/collections/181.swf
+SHA1-Digest: FKWK1QOXHm/Gdn5Aq89hEWvmXPY=
+
+Name: assets/collections/673.swf
+SHA1-Digest: /tP5kE/VlM4M153UUvkhcpYZvfM=
+
+Name: assets/cityBackgrounds/toronto.swf
+SHA1-Digest: Nc07LePrc2cHldwCHVC2FAuKiRI=
+
+Name: assets/achievements/74.swf
+SHA1-Digest: 13onjpCm+2keOvyVU810w3XdG8g=
+
+Name: assets/daubers/6.swf
+SHA1-Digest: qz90eDEJKlbK7hhGhsQFpvVS1GA=
+
+Name: assets/daubers/33.swf
+SHA1-Digest: X21ZocV2jGtMQjHQtGkBpKH5Xsg=
+
+Name: assets/collections/71.swf
+SHA1-Digest: GNsdRicPhLv7jQn2yRQeP5G5ZkQ=
+
+Name: assets/achievements/93.swf
+SHA1-Digest: 1I1fwu4/8ByU+d2s1NaoLg0sVtI=
+
+Name: assets/collections/629.swf
+SHA1-Digest: 6mYY+fTcZmVNx6JKxT+4EJ529mI=
+
+Name: assets/collections/166.swf
+SHA1-Digest: 5aPgbKtTzVNc5jY7ji3q8hJQACQ=
+
+Name: res/drawable/mp_warning_32x32_n.png
+SHA1-Digest: eCFwTk+zmvIeM+w4WQEnsknkfNI=
+
+Name: res/drawable-ldpi/com_facebook_icon.png
+SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+
+Name: assets/collections/675.swf
+SHA1-Digest: GWSfN1FazcWZMCZksQPae2OppeU=
+
+Name: assets/collections/579.swf
+SHA1-Digest: srO+bqAyRua7fSwcriJf7N2kuYc=
+
+Name: assets/collections/69.swf
+SHA1-Digest: DKQoPXlMsbjoZto2+1fKliqnrnY=
+
+Name: assets/collections/636.swf
+SHA1-Digest: CtgeFzWaq/MaeCBqbvdtTywMfiM=
+
+Name: res/drawable-ldpi/facebook_icon.png
+SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+
+Name: assets/daubers/83.swf
+SHA1-Digest: JPNX9b6BWQKalrGOvmh+oOUAjIQ=
+
+Name: assets/achievements/62.swf
+SHA1-Digest: fTzqY8yLE+QgYPTM6P9eHCjcgMU=
+
+Name: assets/collections/22.swf
+SHA1-Digest: 5GoQy/odiFt+1FNb1YaQnaxYJ2k=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: XUtig4J5mcId+Zz60XL0I6T18nY=
+
+Name: assets/collections/767.swf
+SHA1-Digest: 0YC3NfZnzXEin3v/tQ5CPDkhdSU=
+
+Name: assets/collections/631.swf
+SHA1-Digest: Fi4FFS096byIFKPWiqtNoJZw7Wk=
+
+Name: assets/icons/icon_58.png
+SHA1-Digest: wmkfBj+8GzFFL6wUaos480HM1Lc=
+
+Name: assets/collections/816.swf
+SHA1-Digest: 7Nv+G+HyzN6IHRLtDbhZylQVdXM=
+
+Name: assets/daubers/1.swf
+SHA1-Digest: +XiuKH49pnj6Y3cKctQ4rgx4OaY=
+
+Name: assets/cityBackgrounds/plano.swf
+SHA1-Digest: K5Hgw3AaSFpp4qgYBatMiL54vtU=
+
+Name: assets/cityBackgrounds/madrid.swf
+SHA1-Digest: l+VQ52v+itJbhPpYRhkSKDaawVc=
+
+Name: assets/collections/391.swf
+SHA1-Digest: aiyrOIHmrgDumSLCrygl1RX0SB0=
+
+Name: assets/collections/521.swf
+SHA1-Digest: 59Z0OZaeIeetUT3fDljOHJWtEbs=
+
+Name: assets/collections/124.swf
+SHA1-Digest: JC3t7BQd0zVxSsdiK8BO01IqY8I=
+
+Name: assets/collections/769.swf
+SHA1-Digest: HEUdvYqxfqvRYdo1sysZ3tQ7lHs=
+
+Name: assets/cityPostcards/rio.swf
+SHA1-Digest: yB3VgG7KO8pP75nK9t394o52SnA=
+
+Name: assets/achievements/4.swf
+SHA1-Digest: X7JPInYHIacZJTpPYJbN33PUk6M=
+
+Name: assets/collections/162.swf
+SHA1-Digest: 5Nv+TmBuzPvhsPRFX62/GU8mAcM=
+
+Name: assets/collections/566.swf
+SHA1-Digest: h6yPExSBWob43zb0JwwS1R/cKhE=
+
+Name: assets/daubers/5.swf
+SHA1-Digest: gLpU3h+z6HJ4p9tScvz5xAPHypg=
+
+Name: assets/collections/432.swf
+SHA1-Digest: 4x9wa2Uw31+D0hyES97ZY6y5wQQ=
+
+Name: assets/avatarFrames/49.swf
+SHA1-Digest: oMNhDDFouJ8WW+9l7oA4YdZVCoU=
+
+Name: assets/collections/577.swf
+SHA1-Digest: 6cDtkExYFw9OX/zLNgbK47zndow=
+
+Name: assets/achievements/94.swf
+SHA1-Digest: IgDJT1s9lFZU5MEZ+j2YaMWfiRc=
+
+Name: assets/collections/60.swf
+SHA1-Digest: CG+/gxTwYSZGNIhWoGIgzK9TQ7U=
+
+Name: assets/collections/164.swf
+SHA1-Digest: gGfrxRTIyIZKENlrJKEeF/en330=
+
+Name: assets/collections/170.swf
+SHA1-Digest: r7++c5TWfU6fd7YvT4FegPwwsy4=
+
+Name: assets/cityTitles/rome.swf
+SHA1-Digest: mcaOKy8oCb/mTYTn0xIw+sbvS2w=
+
+Name: assets/icons/icon_96.png
+SHA1-Digest: PvpI+oabESnUpp7p049jmFHxIP8=
+
+Name: assets/daubers/32.swf
+SHA1-Digest: Nvmv+HUzDybqdrhpEmg6cv/uQ4Q=
+
+Name: assets/collections/764.swf
+SHA1-Digest: 7X2065oz2b7VKk8OQEcdnbKtKWI=
+
+Name: assets/cityTitles/moscow.swf
+SHA1-Digest: k7vePTglPvbZFHOKEw/MwTMsTEk=
+
+Name: assets/daubers/121.swf
+SHA1-Digest: WmnNQr40184ECgabn316aanQ3dE=
+
+Name: assets/icons/icon_114.png
+SHA1-Digest: bOTLI1M518TNIPlT7j72zcof9AI=
+
+Name: assets/achievements/6.swf
+SHA1-Digest: q6klmjH3YP0SThI18tWZpR0+SlI=
+
+Name: assets/collections/808.swf
+SHA1-Digest: 66U3i0nqF8foFbL0eXbMfw63ynQ=
+
+Name: assets/collections/443.swf
+SHA1-Digest: g8NMG6+TeRRXUuE9z93o8ybQ/Ew=
+
+Name: assets/collections/62.swf
+SHA1-Digest: tKaY1bM8i6IV0Y+Wo+umE35FlMQ=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: +ongFuYso/mUSvjDEWwvPi6fPbs=
+
+Name: assets/collections/536.swf
+SHA1-Digest: CHC/HZRfIw6MCYNwPZBY0TM0s7s=
+
+Name: lib/armeabi-v7a/libysshared.so
+SHA1-Digest: TB891nh0tUUz+nsrHzpoSik8nMA=
+
+Name: assets/cityTitles/mumbai.swf
+SHA1-Digest: K9SntZY7V8C47DTisKuAeyv9axY=
+
+Name: assets/collections/389.swf
+SHA1-Digest: eO8pRoRuHKnX2q/lOjMPh/nQ/Ak=
+
+Name: assets/achievements/68.swf
+SHA1-Digest: qvKjwQmlgLqBGfrj2jSAGyhmXMI=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: f6ffxUARnD4OE2WatPT59yDgeJ8=
+
+Name: res/drawable-notlong-land-mdpi/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: assets/achievements/89.swf
+SHA1-Digest: lngKLeXpc/32HIBCOHEvzHArdO0=
+
+Name: assets/collections/805.swf
+SHA1-Digest: 85fuLeqTA0D21sbL6n5ZWAgR7So=
+
+Name: assets/collections/380.swf
+SHA1-Digest: 167Hns2+j5n5mFe7i9TJHcvnois=
+
+Name: assets/achievements/95.swf
+SHA1-Digest: wXMUN+SaoJnxfnTvL+jAINs9+Kk=
+
+Name: assets/cityTitles/treasurecove.swf
+SHA1-Digest: fRwEw/7kmNIw1adjDO3PblERsdo=
+
+Name: assets/collections/84.swf
+SHA1-Digest: flA5uvt3H3NP+tBMUHfnszuehuA=
+
+Name: assets/collections/576.swf
+SHA1-Digest: r3s6fv7fzRY47bGWdBslFkk8uGs=
+
+Name: assets/collections/132.swf
+SHA1-Digest: xQiU88Rrf7yssUUiGrXNsC8c0HQ=
+
+Name: assets/slotsDaily/threeReel_day2.swf
+SHA1-Digest: YIy/tJOt3XII2Ew5q5cQnDBfupE=
+
+Name: res/drawable-port-xhdpi/loading.png
+SHA1-Digest: Njy8ZKa7G5Sg7AMHMS+rBGLa7zM=
+
+Name: assets/collections/224.swf
+SHA1-Digest: 0qEZCMqnDO30DUsgmh1fWpnoyyE=
+
+Name: assets/avatarFrames/29.swf
+SHA1-Digest: NzjJ+YqruZfkoS/TgV51e+rzv0U=
+
+Name: assets/slotsDaily/threeReelSounds.swf
+SHA1-Digest: 6R/Y6+pM7ijD3sv4sDpaUxaaU/w=
+
+Name: assets/collections/558.swf
+SHA1-Digest: kJsDO5JgzbeqszjQ+yeUNjZxm1E=
+
+Name: assets/achievements/63.swf
+SHA1-Digest: D3+507DNrMTGtmg3CSZ6LuBtYo0=
+
+Name: assets/daubers/25.swf
+SHA1-Digest: 3LFms2kAIJSWOUCIz8p2m1coufc=
+
+Name: assets/collections/799.swf
+SHA1-Digest: gSjVvVWVb3Z/iv94M1G/WhpIEUU=
+
+Name: assets/collections/241.swf
+SHA1-Digest: 2jtDUxG8VDiUqWX8BXDEAWFjZws=
+
+Name: assets/collections/328.swf
+SHA1-Digest: qiEeMRwFuF6JTZTBaeA9hsdVHkA=
+
+Name: assets/collections/127.swf
+SHA1-Digest: LXUR/XjsCiGksO3U0wIWHgl3rVA=
+
+Name: assets/collections/226.swf
+SHA1-Digest: tNx54xMUAbXyq8iWpk8qHEdwblo=
+
+Name: assets/daubers/95.swf
+SHA1-Digest: CBASIPlImTZQ1b11rCVwCP7XvgI=
+
+Name: assets/achievements/20.swf
+SHA1-Digest: owzZniyo/3QNCLBX9j8c91j2ALM=
+
+Name: assets/collections/154.swf
+SHA1-Digest: 8bElTxF1qJi8Fg0IamKg+cS5zUU=
+
+Name: assets/daubers/63.swf
+SHA1-Digest: q7o8ePoCL6irAXabGP0pvoowRxk=
+
+Name: res/drawable-land-xhdpi/loading.png
+SHA1-Digest: BTVV2J+2RIRO8XZM89e3SmhVUnE=
+
+Name: assets/collections/540.swf
+SHA1-Digest: /fa1zuPjz942zaeVUmUwZPooDZA=
+
+Name: assets/collections/129.swf
+SHA1-Digest: CG3URA8fogOLyWANAe+fx//RQUU=
+
+Name: assets/collections/115.swf
+SHA1-Digest: cDK0i17fy+VlrBl2HlS6tR6Oq1M=
+
+Name: assets/collections/238.swf
+SHA1-Digest: L9kxM36n16MBLBcJjhfijRxUuLA=
+
+Name: assets/slotsDaily/threeReel.swf
+SHA1-Digest: sI74rj2z1FJJ6P4fZ3wn5syByDI=
+
+Name: assets/daubers/31.swf
+SHA1-Digest: OT7vz3Eg2BTfoXvJA5i5ywV7ukI=
+
+Name: assets/collections/20.swf
+SHA1-Digest: cY1YkfLVUtba/ik75HINAlzxQKU=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+
+Name: assets/daubers/21.swf
+SHA1-Digest: Pc0BnVjeU4eXvhJyuQoDWDWelA4=
+
+Name: assets/collections/679.swf
+SHA1-Digest: 2KGQE+8i1bbeaf+7/Bts9RQtWN0=
+
+Name: assets/collections/556.swf
+SHA1-Digest: OhjMhdEiXiqXvP11rIcYRBZnQDM=
+
+Name: assets/collections/581.swf
+SHA1-Digest: VtMUj8yVaGxyJgOHi3CS15gCYQw=
+
+Name: assets/achievements/116.swf
+SHA1-Digest: w6Qe5o5SuenYtyjCUf/VxnhnZuM=
+
+Name: assets/cityPostcards/macau.swf
+SHA1-Digest: gLrcHb69BkiNZGHS6AX6y3lFA3I=
+
+Name: assets/collections/602.swf
+SHA1-Digest: usQMiHgyPREZGrTcVt+9V4DgtM4=
+
+Name: assets/collections/610.swf
+SHA1-Digest: Yj5r9ix9X/vCi46s0yuCp+KfGjU=
+
+Name: assets/achievements/18.swf
+SHA1-Digest: ySKkPRrTB54w+G6JlaXmPEl8Km8=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+
+Name: assets/collections/75.swf
+SHA1-Digest: KkJJb3tUxaw9NtmTHnaOMlwvR9w=
+
+Name: assets/collections/747.swf
+SHA1-Digest: E1RS+b2AF+qKrR74ttsFT3iyq7M=
+
+Name: res/raw/debuginfo
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: assets/collections/382.swf
+SHA1-Digest: Mpm0vVSneowIWgG8I9Y2PETgUG4=
+
+Name: assets/collections/604.swf
+SHA1-Digest: 0pNTKZGeddLH7f3r1M+crq3aJeM=
+
+Name: assets/cityTitles/jamaica.swf
+SHA1-Digest: 1+BikXv6AwFpH+K/1Z3Arhg8XFI=
+
+Name: assets/collections/49.swf
+SHA1-Digest: arehHXy/4ktCreOTe4IzQlPxi4g=
+
+Name: assets/daubers/110.swf
+SHA1-Digest: SthhzrFXaC0jFViYnlFmoYqj54U=
+
+Name: assets/collections/649.swf
+SHA1-Digest: nW99efhq+QTMbk71NjGtwGS5ieI=
+
+Name: assets/collections/586.swf
+SHA1-Digest: krsx2q8oysofnR/qMDQBujNFPe8=
+
+Name: assets/collections/766.swf
+SHA1-Digest: LgNU8qTzhbUmCgHf0CFaU6JAObU=
+
+Name: assets/collections/428.swf
+SHA1-Digest: YRCle7rtpo2AmaRTE1KeHHkihgo=
+
+Name: res/layout/main.xml
+SHA1-Digest: pfER2NTqA3UIH71wh/TRJRLuGFk=
+
+Name: assets/icons/icon_29.png
+SHA1-Digest: BsKiXfXOqXQfEfSTsczNnBGvbMY=
+
+Name: assets/daubers/11.swf
+SHA1-Digest: sEB3kPxtsKvMIWALXcGUWaskksU=
+
+Name: assets/achievements/55.swf
+SHA1-Digest: n+drFwjzD/yfuDawzk+VzczyM1Q=
+
+Name: assets/collections/384.swf
+SHA1-Digest: 9Q5votowByAxxKgjZ/vXb0Li0g0=
+
+Name: assets/collections/732.swf
+SHA1-Digest: AwwFQVmCvPoS8kUrAWwyBkVJoTQ=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: assets/achievements/8.swf
+SHA1-Digest: zQZdNm/Ssa5YC/B/KpKPwFoxdB8=
+
+Name: assets/collections/796.swf
+SHA1-Digest: fHmmLQuhtTikyRwD3NktRne/cQo=
+
+Name: assets/daubers/102.swf
+SHA1-Digest: UY/tq34ZTpznK8fnNEUuO69/gUs=
+
+Name: assets/collections/662.swf
+SHA1-Digest: AJg0tljilI7f1LRqUV9fQaj/H/0=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: N6jBIpRL0QybZ7aywogrVObXOAQ=
+
+Name: assets/daubers/42.swf
+SHA1-Digest: 1Q/uS0Yi99FCS06mLEzuMAsBvRU=
+
+Name: assets/cityTitles/chicago.swf
+SHA1-Digest: uCRZtGZyJpAa+uQ3LyD37bPYz0k=
+
+Name: assets/daubers/64.swf
+SHA1-Digest: hSxWwE6gwKwKK6d9/bRoWzhGUmQ=
+
+Name: assets/collections/54.swf
+SHA1-Digest: MSWUFE9FU3S2AxiVFwPGHFdTTWI=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: t/q1ll8cIcWlFuKff/cUYYaKKw0=
+
+Name: assets/achievements/5.swf
+SHA1-Digest: SibcOtnsPJ1bGqEHr3aCUkA1xuk=
+
+Name: assets/collections/330.swf
+SHA1-Digest: r9JzXcVq7T+oIPoQScKS2nZ+j74=
+
+Name: assets/achievements/70.swf
+SHA1-Digest: Ty8fUsSPwkyumr964UWltQBibk4=
+
+Name: assets/collections/196.swf
+SHA1-Digest: Nh3LfF0l/Q7oq4YLRig25Jb3Z+4=
+
+Name: assets/collections/169.swf
+SHA1-Digest: mQfLuxvs9AG4WEVQ9g1UjVUY5d8=
+
+Name: assets/collections/184.swf
+SHA1-Digest: o6siltKyZvoxj8sGkQ/kROEfZdI=
+
+Name: assets/collections/647.swf
+SHA1-Digest: c+YGX39AEpzeWHx1Jma10IxYNS0=
+
+Name: assets/collections/639.swf
+SHA1-Digest: tIYWHbsRJYUOkETlnvxyMsMTUVM=
+
+Name: assets/avatarFrames/37.swf
+SHA1-Digest: 6hITcKsokGZ17AMJmQTKo5LfdyI=
+
+Name: assets/daubers/120.swf
+SHA1-Digest: snmn3PE86MhS2SlxfHhe/9CPcGA=
+
+Name: assets/collections/457.swf
+SHA1-Digest: p11GO8YMVESsoGZAKIY2b7VRSxg=
+
+Name: assets/achievements/110.swf
+SHA1-Digest: 9rQiimz4WdTjI2bdQS4FmX8OsVo=
+
+Name: assets/icons/icon_72.png
+SHA1-Digest: DGV3drcp6upSQFnfo/juuanZP/A=
+
+Name: assets/collections/163.swf
+SHA1-Digest: PoYljJwE7XlLsspHqMu2TjXHLjs=
+
+Name: assets/icons/icon_120.png
+SHA1-Digest: XJFMIA0W7uIg23BzfN7Vxf5OYnA=
+
+Name: assets/collections/388.swf
+SHA1-Digest: GrkyVDfcMY7JI+93B9g+5ncO6lU=
+
+Name: assets/daubers/58.swf
+SHA1-Digest: ErlKdbz0WDY8r2zpwLxSCvMtx/c=
+
+Name: res/drawable-hdpi/com_facebook_close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: assets/daubers/45.swf
+SHA1-Digest: p0Ddbj289gmxDkBhaOnQG8mSBds=
+
+Name: assets/achievements/22.swf
+SHA1-Digest: jcBV7hlXjAgDVQNlcI3LqAOMGS4=
+
+Name: assets/cityPostcards/greatoutdoors.swf
+SHA1-Digest: Wo+iaFjUIS8MSLqitAlCrwKdyRE=
+
+Name: assets/collections/804.swf
+SHA1-Digest: DHAvkx1Leow8DqyVCAYO4t6ZGrQ=
+
+Name: assets/collections/619.swf
+SHA1-Digest: 9PWmgittGAifrZeT0etWQ/TEaJ0=
+
+Name: assets/collections/798.swf
+SHA1-Digest: PD/piJpz3QNGXWLh+Sg493o/Twc=
+
+Name: assets/collections/559.swf
+SHA1-Digest: XmHiJ7MtyAdVCVBbS5RWkroIqFk=
+
+Name: assets/collections/158.swf
+SHA1-Digest: 1xXmySPfGjU/z7boqV7doUlp9J8=
+
+Name: assets/cityBackgrounds/macau.swf
+SHA1-Digest: Dhua8A+dSQ6gQQ4p9K3doVCr4Jw=
+
+Name: assets/cityTitles/london.swf
+SHA1-Digest: pnQj74SVp/2un6Eucwp5z9Z9c8U=
+
+Name: assets/collections/183.swf
+SHA1-Digest: flDGn3Xj/gqQ0dB5id0QDwEPGCg=
+
+Name: assets/collections/486.swf
+SHA1-Digest: dl0nhMS3+RYgNsQFHJGOQeXccZY=
+
+Name: assets/daubers/36.swf
+SHA1-Digest: UOgaBlZ1ZNiOs0LwvxEuVYjfFLU=
+
+Name: assets/collections/765.swf
+SHA1-Digest: DBCCbSvV5XYHcLvRVD5aajuQawc=
+
+Name: assets/collections/221.swf
+SHA1-Digest: v6BtDEiJbfLC3pBoQq63Ew9/ilY=
+
+Name: assets/collections/525.swf
+SHA1-Digest: YOHuSx+DfKwyliCRB/AkEc81+j0=
+
+Name: assets/slotsDaily/threeReel_day1.swf
+SHA1-Digest: +gADDoAgi7ru8ClJFRqPlJmwwXk=
+
+Name: assets/collections/251.swf
+SHA1-Digest: DuuzSz9VRRBebpwaBpbtQIB4ocA=
+
+Name: assets/avatarFrames/5.swf
+SHA1-Digest: MJimoo5VRc8S9jcAi9mh/bnw47c=
+
+Name: assets/cityTitles/berlin.swf
+SHA1-Digest: Tqw0pWvcWjP8OzPY03/c7+iay44=
+
+Name: assets/cityBackgrounds/locks.swf
+SHA1-Digest: voIAulrqm71AfcX0Hw4ATUGVPHo=
+
+Name: assets/avatarFrames/18.swf
+SHA1-Digest: jDhglmMVNecexVkveP+3r64Ce4o=
+
+Name: assets/cityBackgrounds/hightStakes.swf
+SHA1-Digest: tUiFVLijiFaa/jumXrXXtBuu0fc=
+
+Name: assets/achievements/47.swf
+SHA1-Digest: IDYWfCHLN7rK25a2nsHdFNS8W6A=
+
+Name: assets/achievements/92.swf
+SHA1-Digest: 6Za3b7LG01PDk2+OpUoAi4Ostx8=
+
+Name: assets/collections/781.swf
+SHA1-Digest: mvB0ggYPm62kTpjiSOkdtN4YqOM=
+
+Name: res/drawable-hdpi/com_facebook_logo.png
+SHA1-Digest: +F9i6TennSQx3Unl/q4mPr3itE8=
+
+Name: assets/cityPostcards/4thofjulycookout.swf
+SHA1-Digest: XlnT/4iCepw4p1k5CRMOyD67KhU=
+
+Name: assets/daubers/16.swf
+SHA1-Digest: RobxQ7EkjhBoZybLD1fbEtsVb34=
+
+Name: assets/collections/555.swf
+SHA1-Digest: fdOsy5oNdIMgVBOKr6m0DiLPsfM=
+
+Name: assets/collections/332.swf
+SHA1-Digest: 4wSgQsgrXrejkfNyWoe1jrUWVRE=
+
+Name: assets/collections/454.swf
+SHA1-Digest: fyx/d6XurLBd1A9nG7H8FuvZjHw=
+
+Name: assets/avatarFrames/51.swf
+SHA1-Digest: yM0zSz7CyJQP0YnAsya3peQVxXE=
+
+Name: assets/collections/76.swf
+SHA1-Digest: +LoLrN4F598k3Sdp0vMnhuIvxYk=
+
+Name: assets/cityPostcards/dublin.swf
+SHA1-Digest: Tt7zB/1H0Q6lXRL3VzyR7mmrGPc=
+
+Name: assets/cityPostcards/madrid.swf
+SHA1-Digest: 4ADmrLA8wSpOEEFPdCkzLBa6n7M=
+
+Name: assets/collections/450.swf
+SHA1-Digest: 0G/8OMLx07nZ7UO5CvU/2OLLG5o=
+
+Name: assets/collections/635.swf
+SHA1-Digest: mcVz9nsSZ1cuwicmehZN0HMVRjI=
+
+Name: assets/collections/751.swf
+SHA1-Digest: lObU1VmgU8Qv0vZrynrEn+bZCjE=
+
+Name: assets/avatarFrames/1.swf
+SHA1-Digest: DHdWR3szjck3/XPBPzjGMGnvWsA=
+
+Name: assets/cityPostcards/treasurecove.swf
+SHA1-Digest: 6y3S0oxEGRcoIKfHKAfSeNIKZ/4=
+
+Name: assets/cityBackgrounds/mumbai.swf
+SHA1-Digest: 6LGrNEWhJve+gGiOXW98DIqReCI=
+
+Name: assets/cityPostcards/berlin.swf
+SHA1-Digest: HKYqb03OMX3NXnGXI+lv4DgWIs4=
+
+Name: assets/collections/190.swf
+SHA1-Digest: VMDWtiAru8UpDfrO5hr1fwigBmo=
+
+Name: assets/daubers/34.swf
+SHA1-Digest: FaAoNckM3nxoKHRHVXom3ZZk7MA=
+
+Name: assets/collections/433.swf
+SHA1-Digest: PaloL+vyv9i9VztXeHbBjCKIi70=
+
+Name: assets/cityPostcards/toronto.swf
+SHA1-Digest: NSOEO2R+9u6dmkqc0j5S66zmsmk=
+
+Name: assets/collections/646.swf
+SHA1-Digest: +oCEg5vaMbuVA5+8637CGa9Fqys=
+
+Name: assets/collections/131.swf
+SHA1-Digest: +iDoLJ/FeYBJRIPj6jTrSZXinrk=
+
+Name: assets/collections/613.swf
+SHA1-Digest: KA8iLNVg9Sux36eYGcdZwWWFpYo=
+
+Name: res/layout/com_facebook_search_bar_layout.xml
+SHA1-Digest: VVKuSZTHhyQYa3U7ZRZpu3OHn0Y=
+
+Name: res/drawable-mdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: yotnhVn7HzOwvsA1iVxnQdW+R6Y=
+
+Name: assets/icons/icon_16.png
+SHA1-Digest: ROW38NReY9FMoIVNtUtenvAkKTU=
+
+Name: assets/collections/192.swf
+SHA1-Digest: qisY5Srt2Fu+pxvxRDjjk7tMq4E=
+
+Name: assets/collections/491.swf
+SHA1-Digest: UYa29NJwSJQ6ZdCg4EYNgUNUcE4=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: COOFdQDqXjvNdi+5TMPa3bPhaEQ=
+
+Name: assets/achievements/42.swf
+SHA1-Digest: RAL8F47vOXSCK7mrNzGQduEGbzs=
+
+Name: assets/cityTitles/sydney.swf
+SHA1-Digest: v/n01+CjZ6i5fwMvka6O23boI2o=
+
+Name: assets/collections/815.swf
+SHA1-Digest: D4FXO25+/NYgC6IGx4m4moM/ztw=
+
+Name: assets/achievements/31.swf
+SHA1-Digest: unx/wSPlumbaObZAQKjALcTJsrw=
+
+Name: assets/collections/194.swf
+SHA1-Digest: Ng1cnwe4EyJiNvHX6EuAczrVD9w=
+
+Name: assets/collections/23.swf
+SHA1-Digest: nRwWZntPL5/wA+ryrRoaJ89B6eU=
+
+Name: assets/collections/768.swf
+SHA1-Digest: a3PfxH07o2U0iSAccTVG2PRL8SQ=
+
+Name: assets/achievements/1.swf
+SHA1-Digest: NPNQY0tCRTi7oEys3g7F3y6LpuQ=
+
+Name: res/drawable/com_facebook_button_blue.xml
+SHA1-Digest: 9R8ZJJY6LfvskP3mfL0kqv8kKkY=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/META-INF/ANE/extension.xml
+SHA1-Digest: 4GW98Gna4Ch/dAykLQbzqUrcTPk=
+
+Name: assets/cityPostcards/athens.swf
+SHA1-Digest: eZPHd9xdzdFN9eZ25XuocTpwakk=
+
+Name: assets/collections/11.swf
+SHA1-Digest: vjx65gdWy+LhyuTdvZ5LSsZy3xI=
+
+Name: assets/achievements/97.swf
+SHA1-Digest: LuAUx9RBy7wfPQaTmouzdPW9oUg=
+
+Name: assets/achievements/69.swf
+SHA1-Digest: ax1Ek5uNjZ+j7MSLO0YUoRGzkhM=
+
+Name: assets/collections/185.swf
+SHA1-Digest: T40jr78OFk0tNWya1aNkoI4996s=
+
+Name: assets/bingoCards/6.swf
+SHA1-Digest: RE6/+52qT6R/2ngkY1kKY8yggoQ=
+
+Name: res/drawable-long-land-hdpi/loading.png
+SHA1-Digest: F1zb8PkQs2BG1f9BZi8lvGpraGU=
+
+Name: assets/collections/682.swf
+SHA1-Digest: ljzkHSVLcB1K3qTNuu9hM9SAh+Q=
+
+Name: assets/achievements/120.swf
+SHA1-Digest: t8WaLZb35yJvsj2FsvR9ZpYemjc=
+
+Name: assets/collections/452.swf
+SHA1-Digest: X4YUnWijlVboBFAPGbGe9YB73WE=
+
+Name: assets/achievements/111.swf
+SHA1-Digest: 7rS6+3asCd9tR1AvOOi2u8WE2UI=
+
+Name: assets/collections/614.swf
+SHA1-Digest: +6UCgxTavrsG8qAHqQw1orh6yvI=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: pn/rLPdnMgZp8SX0+c6cJfn3cLE=
+
+Name: assets/collections/122.swf
+SHA1-Digest: 5KahebruECZc5vyCEjoxgKt/eBc=
+
+Name: assets/achievements/84.swf
+SHA1-Digest: qpxKo50x/mfErmvIEPt4SjOePAs=
+
+Name: assets/daubers/22.swf
+SHA1-Digest: gUoQzkGMBMK1ZquhYn6ay1sG4J8=
+
+Name: assets/cityBackgrounds/hollywood.swf
+SHA1-Digest: yHtZS8ZvI09/nEA8oU7RML0LLNM=
+
+Name: res/raw/rgba8888
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: assets/collections/130.swf
+SHA1-Digest: aad0fP/VFIDyHWaGLRL/HbJazmk=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/collections/527.swf
+SHA1-Digest: 066HEo34TYrSc8vXbmnlNiVCUZw=
+
+Name: assets/collections/664.swf
+SHA1-Digest: 0x1OBsBrcnSuwgweQzu5Z3KEqUc=
+
+Name: assets/collections/245.swf
+SHA1-Digest: j959RjF2at+Ul1rJaol2Xi7hI6I=
+
+Name: assets/collections/229.swf
+SHA1-Digest: FjtZoMnNEVL3ERYzaO3a8kTdLVU=
+
+Name: assets/collections/534.swf
+SHA1-Digest: 3FwsQSpSFg1SiFbuGJ4HqFwfHE4=
+
+Name: assets/achievements/81.swf
+SHA1-Digest: Jk3OZnWTxw04Ibt4RolDrEuQjLE=
+
+Name: assets/collections/73.swf
+SHA1-Digest: z1O9GOW3ZfVU67i5W+lDXWoI2oE=
+
+Name: assets/collections/680.swf
+SHA1-Digest: lMPa4xlu88Biu/okyhBaiNiHgKA=
+
+Name: assets/collections/387.swf
+SHA1-Digest: qWqEaDMYYRrTOAuiF4R1Idrn00A=
+
+Name: assets/avatarFrames/41.swf
+SHA1-Digest: IYcS57wMfeDNTB4R0ufNMY+XbI0=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/library.swf
+SHA1-Digest: YgBpU0QPHgXW9LulFFkD2ONbPN0=
+
+Name: assets/collections/745.swf
+SHA1-Digest: kZKWk9W1WgfhBTzjXQ1Z72CFXN4=
+
+Name: res/drawable-xhdpi/com_facebook_close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: assets/collections/188.swf
+SHA1-Digest: fLqdVyHmJMCJ5fQ+E43jqnx5LOs=
+
+Name: assets/slotsSymbols/petsblitzslots.swf
+SHA1-Digest: eh1qMmuinyJqOGU0BFJKSwAXMXM=
+
+Name: assets/cityTitles/tokyo.swf
+SHA1-Digest: 2u0zS+Cbe5tB/4F0bGTu2+9cPJU=
+
+Name: assets/collections/257.swf
+SHA1-Digest: 0ZqNlU+hQmEcNDFif4xiSxaGovM=
+
+Name: assets/avatarFrames/77.swf
+SHA1-Digest: bivNx8NUESaNzEq+Lkj3YYvIAzk=
+
+Name: assets/collections/155.swf
+SHA1-Digest: A0eqkgdJmBGVGjVNHDjAsgZ0Btg=
+
+Name: assets/cityPostcards/atlantis.swf
+SHA1-Digest: K043Dl+O0ywPpX4EcP3jvPrfnoM=
+
+Name: assets/collections/600.swf
+SHA1-Digest: muAJcevXKc+5af2vcgxiv79hWkM=
+
+Name: assets/collections/415.swf
+SHA1-Digest: Ry17mWqCTsoTuCAUimKEiIk14v4=
+
+Name: assets/collections/58.swf
+SHA1-Digest: lyvmhLerrRrs1wNFR6tmqVbVKAY=
+
+Name: assets/achievements/13.swf
+SHA1-Digest: MNsx7CktGT9iGAyoU4kxATxXSrU=
+
+Name: assets/collections/585.swf
+SHA1-Digest: WmCXKwDO2R3rvVeQ/zatqTjjuQY=
+
+Name: assets/daubers/100.swf
+SHA1-Digest: AYWe2eUHHHjlPG/XlwzLXI6EQhA=
+
+Name: assets/cityBackgrounds/honolulu.swf
+SHA1-Digest: X6eIbHG9VcMxaxRaehHPU3d3hIw=
+
+Name: assets/META-INF/AIR/extensions/com.buffalostudios.ANEUtils/libra
+ ry.swf
+SHA1-Digest: xLSch9gQac30Deviz9/kEX5UUsc=
+
+Name: assets/cityPostcards/paris.swf
+SHA1-Digest: h+GV2ryxW2aDSKwpbFYmdia0W2w=
+
+Name: assets/collections/237.swf
+SHA1-Digest: +adeLr2HsLHyMUkMSiaWWMRpaKE=
+
+Name: assets/collections/564.swf
+SHA1-Digest: n0UIv1ko+BHFeeKrnEynhmHddPU=
+
+Name: assets/collections/79.swf
+SHA1-Digest: GXHn/x0Bk2lijJSz+LyqFu3Y03w=
+
+Name: assets/collections/628.swf
+SHA1-Digest: tuf1BrY9ScRpLP6iten9QD+a+18=
+
+Name: assets/collections/176.swf
+SHA1-Digest: VW+RSQq0FYpdl/sSAy9hLOkisEs=
+
+Name: res/drawable-hdpi/close.png
+SHA1-Digest: P3HE/cN1DH97qEFhaWUqiBLjuUY=
+
+Name: assets/collections/625.swf
+SHA1-Digest: uGVDXd3sGlvVcqH97ucOe1XcVfw=
+
+Name: assets/collections/120.swf
+SHA1-Digest: n7rU8k9tkcLmbVG0V9Mhmc8morQ=
+
+Name: assets/daubers/114.swf
+SHA1-Digest: f2oErZFYsKKI8iX+rpqBfqKqsfw=
+
+Name: assets/daubers/133.swf
+SHA1-Digest: sEuE5BINdEFTsGS9vIgc8hlZMwI=
+
+Name: assets/collections/390.swf
+SHA1-Digest: 70TQLkfkf2PL5L8xwJKDW0EXby0=
+
+Name: assets/slotsSymbols/barcelona.swf
+SHA1-Digest: op2+rF61uEeW/60scqoXejOMc1E=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/docs/packages.dita
+SHA1-Digest: jIxCcBjTpBYYC3FNVYHrltwoZl8=
+
+Name: assets/collections/643.swf
+SHA1-Digest: K9dKeCjEoFC/EyyYuXlWi1Wkyes=
+
+Name: assets/collections/448.swf
+SHA1-Digest: XDGC7/gNVFlkFw5uiEThUJ5QalA=
+
+Name: assets/collections/782.swf
+SHA1-Digest: 9uK8+3CuW25802up73l91Popv+s=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+
+Name: assets/collections/429.swf
+SHA1-Digest: geL0RcDnz6MAYpBt7g9sA0I6Erw=
+
+Name: assets/achievements/53.swf
+SHA1-Digest: LMrz9do/tQ+cPe4Cl7AUGQA75i4=
+
+Name: assets/daubers/111.swf
+SHA1-Digest: ZZI4p2Lc7Vj/C4GHtXZyzsDnSo0=
+
+Name: assets/collections/518.swf
+SHA1-Digest: hMF4tA8/KYjui5I2928Vz0Pu/cY=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: DGV3drcp6upSQFnfo/juuanZP/A=
+
+Name: assets/collections/622.swf
+SHA1-Digest: j5ZKAkq24Wf/2ci8fH8xDGOwK+I=
+
+Name: assets/achievements/79.swf
+SHA1-Digest: 5VXaJapsJsz18UA9/9mXUbIC6OQ=
+
+Name: assets/collections/15.swf
+SHA1-Digest: xP16u5LdYA7d6R1EOHaN0yAdZPc=
+
+Name: assets/achievements/82.swf
+SHA1-Digest: S4qCgoRlLCfmP1Niv/IdeMQIiB8=
+
+Name: assets/cityPostcards/nyslots.swf
+SHA1-Digest: RyA9z/+QDEESMuZvrBnivOwqbsI=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: hp2teZljwz2K0ngaFFO81/mzDcE=
+
+Name: assets/achievements/29.swf
+SHA1-Digest: tLBdFjHR8yVrp0Y1ToBx6ZX+JZ0=
+
+Name: assets/citySounds/plano.zip
+SHA1-Digest: uyk89B0NiI/4PY52aVCIPTRN88U=
+
+Name: assets/avatarFrames/31.swf
+SHA1-Digest: gjAGIWCT/IFNUgYwneuHuSaTADE=
+
+Name: res/drawable-hdpi/facebook_icon.png
+SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+
+Name: assets/collections/416.swf
+SHA1-Digest: YqiR3hwZv3E36MC2IoCkWgG/his=
+
+Name: assets/collections/488.swf
+SHA1-Digest: z3lulf2SCcYaNrnqiqgWGUfCDx4=
+
+Name: assets/collections/201.swf
+SHA1-Digest: PbewzbRpZohI1A4xi1hfGWK+vsw=
+
+Name: assets/cityBackgrounds/dublin.swf
+SHA1-Digest: XiN142uaedFqO+obT1Xr2yuyqPk=
+
+Name: assets/daubers/113.swf
+SHA1-Digest: DKTsRXNgkM5Hk9D70irQYYT5AWs=
+
+Name: lib/armeabi-v7a/libCore.so
+SHA1-Digest: o+ELUkbzltRBilAol0jGQUDcGMQ=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+
+Name: assets/collections/331.swf
+SHA1-Digest: 13qjUXBARB7kpp65tqibzsEoWZ4=
+
+Name: assets/achievements/112.swf
+SHA1-Digest: PjrlvDjCGfKQCnKZkKeRrTOIK1Y=
+
+Name: assets/collections/329.swf
+SHA1-Digest: dMHQ4XbBpPSVjBiyG+fRsu4TtiU=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/docs/com.milkmangames.nativeextensions.xml
+SHA1-Digest: ICnI4OJU/Teue9tsyPkytr/+tT0=
+
+Name: assets/collections/161.swf
+SHA1-Digest: PLAUgIdgthvioXT8Cxlje1Q2Opw=
+
+Name: assets/collections/724.swf
+SHA1-Digest: gqACj2fI7WOWnBLLrlhYgmMXZOw=
+
+Name: assets/collections/179.swf
+SHA1-Digest: BI4wyvuHMOGPDbRDtEhWHaAe4S4=
+
+Name: assets/collections/206.swf
+SHA1-Digest: 3BorZx/BucKu2N6y6V79neIuO5Q=
+
+Name: assets/collections/617.swf
+SHA1-Digest: AJQrVVS2H3gDRllKgtH/RLjf3V0=
+
+Name: assets/collections/723.swf
+SHA1-Digest: 0JNVnZgtn+0gL1UGRNKYQPKE5Mk=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: gX49sObMiTQw8yGbDt0F7ExRh+Q=
+
+Name: assets/cityPostcards/blackout.swf
+SHA1-Digest: h0jlM0OgW+3NaR0QV51LiyiyyqQ=
+
+Name: assets/icons/icon_512.png
+SHA1-Digest: N8QAfUvz245P9QrtKkosL+E1svs=
+
+Name: assets/daubers/117.swf
+SHA1-Digest: yCdV83G1qbWmaSTv4nTtu5rGODM=
+
+Name: assets/collections/517.swf
+SHA1-Digest: 3dxHIYI59hcpews8LKxxg3GWemQ=
+
+Name: assets/avatarFrames/35.swf
+SHA1-Digest: vTmB9ZVRBrcfaxxF2POzJUqGxLo=
+
+Name: assets/achievements/103.swf
+SHA1-Digest: L2S0ED9jPKZyqtDyoWztpeDhCBw=
+
+Name: assets/collections/336.swf
+SHA1-Digest: KuE//FGZw+cCuXUOyc096V0qHhQ=
+
+Name: assets/collections/204.swf
+SHA1-Digest: clpGTYOxq0ifOkq+hESrEAmT3GU=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/library.swf
+SHA1-Digest: 7KM8siOc4bzrEE7jAnncidTtEoY=
+
+Name: assets/achievements/11.swf
+SHA1-Digest: zdxmShwT+HsgcPU/E5jUXPh7kiU=
+
+Name: assets/achievements/77.swf
+SHA1-Digest: mjeFUjcI/PK/oXQPlew59GjB5GQ=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: assets/collections/773.swf
+SHA1-Digest: 7SU3UuCCabYB/gBRFEPXpWRTw9I=
+
+Name: assets/cityPostcards/sydney.swf
+SHA1-Digest: 7dtLP8a2D0xoTF1Iwoer46dflx8=
+
+Name: assets/collections/482.swf
+SHA1-Digest: xHyymgna02VttPTB05btF75svfg=
+
+Name: assets/collections/594.swf
+SHA1-Digest: T0wsYmuSElUn14stG+q+bdjSKEg=
+
+Name: assets/collections/530.swf
+SHA1-Digest: bmcrNYMSd9fBoZ466nUtOchbrHM=
+
+Name: assets/collections/61.swf
+SHA1-Digest: bfaiXGs5y9JchMO/t0ciiqS51Zo=
+
+Name: AndroidManifest.xml
+SHA1-Digest: Fl7pDBqhZKPmKgiTYpaOuXgjkV8=
+
+Name: assets/collections/583.swf
+SHA1-Digest: 27Gr9fT4nIdH9s2N3o/DBCmiu84=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/docs/com.milkmangames.nativeextensions.events.xml
+SHA1-Digest: /d9bN+vcDVmaP3gziCW8bQBlOGY=
+
+Name: assets/collections/197.swf
+SHA1-Digest: J4TGMxW7nTvrg/Mdy84AaHSCqjM=
+
+Name: assets/cityTitles/paris.swf
+SHA1-Digest: itv/o+49+GMw1sG+gIalCFhAX+s=
+
+Name: assets/avatarFrames/11.swf
+SHA1-Digest: 6f5OltPgGoinuTaEIREALSuvhgc=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: lTcoZGozpTjCXuQZUetIyIgSfYY=
+
+Name: res/drawable/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: 5eqq9jxVF9PeVyf0iNJD0gmKE3g=
+
+Name: assets/achievements/118.swf
+SHA1-Digest: sbWPkJxiulVoMGLgx5DYrwSDSIU=
+
+Name: assets/daubers/3.swf
+SHA1-Digest: RDm59g8P9hrFsKPhDf386CPy2Kk=
+
+Name: assets/collections/598.swf
+SHA1-Digest: QZFA82GdjCFUqyIUUizF4HkLSLg=
+
+Name: assets/achievements/26.swf
+SHA1-Digest: WuYpdfUn+cpLwBHRi0JOgUYkoB8=
+
+Name: res/drawable/close.png
+SHA1-Digest: Nwlm5aDJGXbo6eG5hVvbrq4/cVk=
+
+Name: assets/daubers/7.swf
+SHA1-Digest: I0ZQVsjEEVf0vI8O5fMamdGE+O8=
+
+Name: assets/collections/326.swf
+SHA1-Digest: pvN6QyKYE9fIyWNGGP2pOCAqVjI=
+
+Name: assets/collections/483.swf
+SHA1-Digest: S7plHJJBMkvt0GXyZd3kawSvbUs=
+
+Name: assets/achievements/115.swf
+SHA1-Digest: 857mcyiiQcpYrHjKRlUl66V4YW8=
+
+Name: assets/collections/189.swf
+SHA1-Digest: s3pQYAIKp3ZhaLjbDO4uVoOhGh4=
+
+Name: classes.dex
+SHA1-Digest: RwRHe8xnlNhds8yj9vp3AgRunKY=
+
+Name: res/drawable-long-port-hdpi/loading.png
+SHA1-Digest: aZ3JlrQUIFi3BX2OW3Sl/94hc9I=
+
+Name: assets/collections/588.swf
+SHA1-Digest: zbmTOTANtHzae26s6K4x68QtZYw=
+
+Name: assets/collections/684.swf
+SHA1-Digest: I95AZZ4gbo+0DDpcpvPOlflUp8E=
+
+Name: res/drawable-xhdpi/com_facebook_logo.png
+SHA1-Digest: 94ZTspodsrcPndjRFwq4Cqz6Wc4=
+
+Name: res/layout/expandable_chooser_row.xml
+SHA1-Digest: QGAQP6Z8jAzeb3KigPaqYC0rq9E=
+
+Name: assets/collections/493.swf
+SHA1-Digest: TTvF1hNj6eRhnB+Tg7KVMze4KiQ=
+
+Name: res/drawable-notlong-port-mdpi/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: assets/collections/83.swf
+SHA1-Digest: tucUhnLLeaiE/h+dd3MEisjUYwo=
+
+Name: assets/collections/575.swf
+SHA1-Digest: MRS4dDL9CGLivtyA4tILht4ny8U=
+
+Name: assets/slotsDaily/threeReel_day5.swf
+SHA1-Digest: q7FDHRtDLRtwIAjWb4HYKMqMGnE=
+
+Name: assets/collections/36.swf
+SHA1-Digest: 5qQjvoLVl2SNvrRKECSi5cu3HDs=
+
+Name: assets/collections/51.swf
+SHA1-Digest: C8+vTuqGBb1uV324sLRX0Y++o4o=
+
+Name: assets/bingoBalls/6.swf
+SHA1-Digest: ApNyuPM/mMcOiMVqcz6FbWSySso=
+
+Name: assets/collections/236.swf
+SHA1-Digest: x0OLPWt+lZr/myyYH6lhI6RTvmM=
+
+Name: assets/collections/385.swf
+SHA1-Digest: uH71Oq/qC2cCS1bmD4fjlfECyGo=
+
+Name: assets/collections/667.swf
+SHA1-Digest: cKOk0CvTuik1R12IoFPg5YQ3P8Y=
+
+Name: assets/collections/57.swf
+SHA1-Digest: yTCr0fLPf6DuJk/9DrXALJ22Et0=
+
+Name: assets/avatarFrames/13.swf
+SHA1-Digest: lpUApSQmofpUWqbU8WC+4ixio0Y=
+
+Name: assets/collections/444.swf
+SHA1-Digest: BrN8a5TnK0OVmYppS6spYt8S0c8=
+
+Name: assets/collections/48.swf
+SHA1-Digest: UrV4IAE9mmLHsMMXuatBmiVwtes=
+
+Name: assets/cityBackgrounds/rio.swf
+SHA1-Digest: VWfVvAv1aGZeeYuyXnfdRwHGK6o=
+
+Name: assets/collections/175.swf
+SHA1-Digest: 3M5X8efDnz+4avEh2OS4OzZ4yuw=
+
+Name: assets/collections/8.swf
+SHA1-Digest: XKkzW1IwQBMYlscvVinkW40RTT4=
+
+Name: assets/collections/441.swf
+SHA1-Digest: 5Hy6KFDnEl2ap9CbPC0tS6OZZJQ=
+
+Name: assets/collections/27.swf
+SHA1-Digest: Vd6LkfsYqRe5+3fLnvt8sA2YX40=
+
+Name: assets/collections/813.swf
+SHA1-Digest: dskXmD+xctOCQMU4fUw7q96IEBw=
+
+Name: assets/collections/671.swf
+SHA1-Digest: zILHvvyCykOya4Pk+yusgOPiJuo=
+
+Name: assets/collections/53.swf
+SHA1-Digest: f6O09JqmbkV0nD81y7wJ2D8a3sA=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: gt4pFG/QAM+/3qDpsGDlyajNhfY=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: 0mL9bvBnguGGZdnft4TaGoEw08Q=
+
+Name: assets/collections/395.swf
+SHA1-Digest: r/MNYHKKfH5Sbh2SsdFrZkIAJ6I=
+
+Name: assets/collections/449.swf
+SHA1-Digest: LniO60Um9moE6osJSoKYqn6/ZP0=
+
+Name: assets/META-INF/AIR/extensions/com.adx.Tracker/library.swf
+SHA1-Digest: A6Bx4hSdyQsOHFEBYTnyVkZS5ds=
+
+Name: assets/collections/685.swf
+SHA1-Digest: 5JEmFgL1it+SmdbhQ5UA8mImTaU=
+
+Name: assets/collections/437.swf
+SHA1-Digest: x8ASe6HFt6eLAAFHZKQVsC1fkmw=
+
+Name: assets/collections/147.swf
+SHA1-Digest: VJQGuEgLbTFvWed+NPHgnNCm160=
+
+Name: assets/collections/65.swf
+SHA1-Digest: t6xtFTBoUO06/C523VFRDf6lax8=
+
+Name: assets/daubers/46.swf
+SHA1-Digest: weaTwxTBX+JmtRy4P5Yh5c1uTh4=
+
+Name: assets/achievements/60.swf
+SHA1-Digest: 7HgdJlHuwUhZX7Qr9PZGp2/lH90=
+
+Name: assets/daubers/93.swf
+SHA1-Digest: evTNXs6PzKZqkQMqVff/HzcrL1w=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.customextensions
+ .BuffaloUtils/docs/packages.dita
+SHA1-Digest: E3h11VX507FrX093Z51SsqUqGXo=
+
+Name: assets/collections/29.swf
+SHA1-Digest: 9Hyu06B5YHP7zqAonUZdNRX68CA=
+
+Name: assets/collections/590.swf
+SHA1-Digest: iorE57k26m+5KaDBCa7zQKd2NME=
+
+Name: assets/avatarFrames/78.swf
+SHA1-Digest: O+Z/AEYP5EDyEWp+K5C91m9ekv8=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+
+Name: assets/achievements/10.swf
+SHA1-Digest: 5HavhOJuLucm3jj27KiiB3Af8pg=
+
+Name: assets/cityBackgrounds/hongkong.swf
+SHA1-Digest: SBislZEIY03eMeGOrxcgUv10J6w=
+
+Name: assets/achievements/41.swf
+SHA1-Digest: zwVhzHkiu9Esg5WxJ4/XrVgiRhc=
+
+Name: assets/cityPostcards/hongkong.swf
+SHA1-Digest: UPHsxxGnaTDcF0tnFv9P6tDlGCY=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+
+Name: assets/achievements/58.swf
+SHA1-Digest: pyC33/ydTXI9Lw4ACm2ecrbdVMw=
+
+Name: assets/achievements/312.swf
+SHA1-Digest: 2shBlnuyFjdI/MFjOJg6k8IMiiI=
+
+Name: assets/cityPostcards/jamaica.swf
+SHA1-Digest: MCqU0vsO/CyfMcvV6lwjnSAIJMU=
+
+Name: assets/collections/656.swf
+SHA1-Digest: aUu8ypcWWuNcHbJlJIXxFWkROr8=
+
+Name: res/drawable-notlong-land-hdpi/loading.png
+SHA1-Digest: QADlm2r35eSLTucBx6yJ4im0K/Q=
+
+Name: assets/collections/24.swf
+SHA1-Digest: brgkF58pDX1cduToLNtijph7OHg=
+
+Name: assets/collections/417.swf
+SHA1-Digest: qfKhuFriVtS4S92JxfN+4nY7qqs=
+
+Name: assets/cityPostcards/rome.swf
+SHA1-Digest: Wv5yWz81NB7DkoVhrnGw6O/EMN4=
+
+Name: assets/collections/412.swf
+SHA1-Digest: D3E2Tnw30AC8X9s6Mh5epnp3ujk=
+
+Name: assets/collections/611.swf
+SHA1-Digest: aAc+PawSL2ja560+xCOZOO254V4=
+
+Name: assets/collections/378.swf
+SHA1-Digest: acUXuXRCTu7b6N6zO+Q6V3IEuuI=
+
+Name: res/layout/multiple_file_selection_panel.xml
+SHA1-Digest: 6tUkXRVDSDnmpS/bRNVeH1ut/4w=
+
+Name: assets/cityTitles/miami.swf
+SHA1-Digest: KoAzdabQUUcYyZzpSltN7Ioujeg=
+
+Name: assets/collections/487.swf
+SHA1-Digest: Pkqr9H0SLnIqjhYjtScuCnHsZfo=
+
+Name: assets/collections/21.swf
+SHA1-Digest: f6+1V2gtzKN2hTH94JGFAkYYfjc=
+
+Name: assets/daubers/48.swf
+SHA1-Digest: jAWAjYnIIReFtPeTiSpunU5SdJ0=
+
+Name: assets/collections/420.swf
+SHA1-Digest: YLNBKD0xjdq8SKZHE55ddXwDAZs=
+
+Name: assets/collections/17.swf
+SHA1-Digest: Gy1j0pT24ZroZOeBgYd7zgBirGk=
+
+Name: assets/collections/119.swf
+SHA1-Digest: N0HeE2estYQYCPcWytKcoViC9jo=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: q04LLz2eNuM6e8D8RaRhm1e3WbQ=
+
+Name: assets/collections/30.swf
+SHA1-Digest: LlAUANbKXg6s+ksNpnSwtbbWbMs=
+
+Name: assets/collections/45.swf
+SHA1-Digest: 2HfnG8hkPTHatdmE4CnbA9FlxKg=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: assets/collections/562.swf
+SHA1-Digest: oAdvOM23wGaH/gKWgMC4QwZ4G3Q=
+
+Name: assets/cityPostcards/hollywood.swf
+SHA1-Digest: 92bJ0qWrS7MHn0gyxJTyG93ybRw=
+
+Name: assets/daubers/74.swf
+SHA1-Digest: DO/RTyyy1fOUpitkOkPKpf8iEQs=
+
+Name: assets/avatarFrames/52.swf
+SHA1-Digest: iKeOGVOXbXWiR78JgYHOUci0vgY=
+
+Name: assets/achievements/71.swf
+SHA1-Digest: yd07n90xOj3fwCiM2en6hkmBOxs=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: 3lLoqS5bVP8cHhBWsphZAT/erVM=
+
+Name: assets/achievements/67.swf
+SHA1-Digest: Ufl/xc2YSADHs37QSFj0hQ3FfzI=
+
+Name: assets/collections/411.swf
+SHA1-Digest: VlaRnCVivBZBT9AN6mvCQ4wCj3Q=
+
+Name: assets/collections/596.swf
+SHA1-Digest: q+LEnNzStldxapKviH0wYCnOUM4=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: 45BAgKtOkC0fHYqIunSXrQ8YubM=
+
+Name: assets/collections/10.swf
+SHA1-Digest: ACl96j9/nErBt/eLyjN12tihcwM=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+
+Name: assets/avatarFrames/3.swf
+SHA1-Digest: aDIeSotFS41IK3UfrxjGjxk/QDs=
+
+Name: assets/collections/38.swf
+SHA1-Digest: QceY93vqccIjWgXwEYiLts+rit4=
+
+Name: assets/daubers/56.swf
+SHA1-Digest: uTBPV+wloY8U04tidaxdHUKz+fo=
+
+Name: assets/collections/125.swf
+SHA1-Digest: rT3/q1iYseDoI1Z+yIG1loQiMAU=
+
+Name: assets/collections/152.swf
+SHA1-Digest: iFh0LhnZ75jj0m/GqcM7EsBxd4g=
+
+Name: assets/slotsSymbols/neworleans.swf
+SHA1-Digest: ol57FKi9iB3yIN70NVo7YmjdfTk=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: 3kFtf9DnyUzURF/b2S/oWRZg99Y=
+
+Name: assets/collections/669.swf
+SHA1-Digest: 3sKpIEt802R2ahV+D4hX7zQKVsA=
+
+Name: assets/cityTitles/newyork.swf
+SHA1-Digest: ns8VfJpZK6tPmxE3K2j0HzNCkPI=
+
+Name: assets/daubers/118.swf
+SHA1-Digest: MfDw+Jo2X/NP8N9Sk11ahTnXg3Y=
+
+Name: assets/achievements/57.swf
+SHA1-Digest: 3B/erSshSPE5hXw4OtsMtEGDbH0=
+
+Name: assets/collections/419.swf
+SHA1-Digest: 6jXl3/2Xz55cO10TzA6EwvO1V40=
+
+Name: assets/collections/198.swf
+SHA1-Digest: FWW+1i7qtBDMp78UfVIYhUUJqhI=
+
+Name: assets/collections/430.swf
+SHA1-Digest: 6vWiHPpATXpU3qfh/1c3gf4LQgI=
+
+Name: assets/cityPostcards/neworleans.swf
+SHA1-Digest: 7P0wNdr+xNpCe9HCCn+AHYgfeFs=
+
+Name: assets/avatarFrames/16.swf
+SHA1-Digest: cnERJiP7TLPtiXsJEC7+fbxgPGM=
+
+Name: assets/collections/523.swf
+SHA1-Digest: SeMvvlsan8AOLZTOZrOMU4HOksI=
+
+Name: assets/achievements/90.swf
+SHA1-Digest: Nx6wTOMbLYwjvN3nW3WKel/snqI=
+
+Name: assets/collections/5.swf
+SHA1-Digest: VKj6UlHC9CF9pybIAG7IP+/jTcc=
+
+Name: assets/avatarFrames/26.swf
+SHA1-Digest: p3o32yIBNnbUIx3b1Jj7YME86Mo=
+
+Name: assets/collections/113.swf
+SHA1-Digest: 3jLpFd+ltgkjakuMWQZnJtLrKmo=
+
+Name: assets/daubers/62.swf
+SHA1-Digest: QTiaJTnwkWuoMm+sWKbWaVkuCvA=
+
+Name: res/raw/icon.jpg
+SHA1-Digest: 7g9A72BHtvf1hEWBNZiKzoe56gw=
+
+Name: assets/daubers/49.swf
+SHA1-Digest: QngsLZIMrlOFNzKOkCTo+XdWbQE=
+
+Name: assets/collections/650.swf
+SHA1-Digest: aBZhwNobdOzrkQEgwRsJOTjCOMw=
+
+Name: assets/META-INF/AIR/extensions/com.buffalostudios.ANEUtils/META-
+ INF/ANE/Android-ARM/library.swf
+SHA1-Digest: xLSch9gQac30Deviz9/kEX5UUsc=
+
+Name: assets/collections/800.swf
+SHA1-Digest: k0AZPdUFv0fXlogYF6v1dJRRO/0=
+
+Name: assets/collections/235.swf
+SHA1-Digest: 7jeejFHp1Q++BR8JCI2LYuN4B3M=
+
+Name: assets/collections/376.swf
+SHA1-Digest: pF2N60g2ZeRxA3z9C2f0gnGpw50=
+
+Name: assets/daubers/60.swf
+SHA1-Digest: SIhpLCnAXo90lfEDxs/Q44AWFEw=
+
+Name: assets/collections/110.swf
+SHA1-Digest: PRJpg287P8nu9f/vh/+bmw1T1YY=
+
+Name: assets/collections/397.swf
+SHA1-Digest: x2w/nyGn44D4ATooIABRHvIU61M=
+
+Name: assets/daubers/44.swf
+SHA1-Digest: 5tkR6nyFJU8IrxQjMSB2u5wFlok=
+
+Name: lib/armeabi-v7a/libstlport_shared.so
+SHA1-Digest: Hn8JAWcqVq0cTbkvFmVt2JLFmlw=
+
+Name: assets/avatarFrames/42.swf
+SHA1-Digest: nanuvM//BiQE17WUJ85lwqwgsd4=
+
+Name: assets/cityBackgrounds/blackout.swf
+SHA1-Digest: eojYPm5Mrt/GSHPJ4ymP36zIwzE=
+
+Name: assets/achievements/50.swf
+SHA1-Digest: z1uSGQ/wKbR8ZLGMPYfn0Zjm1LI=
+
+Name: assets/achievements/25.swf
+SHA1-Digest: vF78gXrJHdw8VJhqiP4mw0OyFb4=
+
+Name: assets/collections/571.swf
+SHA1-Digest: bxZDO2UKqIivC54wTYVDpe45arc=
+
+Name: assets/collections/423.swf
+SHA1-Digest: obkvO7tBZ1dD2nkSoBUr0x2yY5I=
+
+Name: assets/collections/436.swf
+SHA1-Digest: 9fMdTNI4Fk774bKqtcBpoe79/Is=
+
+Name: assets/collections/81.swf
+SHA1-Digest: tCU3CFzs3XwS9aCU9NBG/r+bVLw=
+
+Name: assets/collections/26.swf
+SHA1-Digest: e1g5DKHZFolS72gmA4xQLo4DnD4=
+
+Name: assets/collections/806.swf
+SHA1-Digest: BIiJSZRrtXnKCnBjVfhrHQxJq+4=
+
+Name: assets/collections/153.swf
+SHA1-Digest: IcIVDLR4yEFrpfPThv9R1hg8C2Y=
+
+Name: assets/collections/580.swf
+SHA1-Digest: 9O+G3v0X9HQBYHiuIv7xcS9bSfA=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: lSztBHFVRlPMsGcFT26oMQipfTQ=
+
+Name: assets/collections/812.swf
+SHA1-Digest: 2uHQrOyp8aC5zwCbV8Caoq3MJIA=
+
+Name: assets/collections/528.swf
+SHA1-Digest: u3KAhDL1Rmahbb4+fCekwr/6KS0=
+
+Name: assets/collections/726.swf
+SHA1-Digest: G3GlFBX4By9fdQjNaIXaiz7L+J4=
+
+Name: assets/collections/533.swf
+SHA1-Digest: DfPIJDsUWKzqveh8HMrsCrcLhqc=
+
+Name: assets/cityBackgrounds/london.swf
+SHA1-Digest: fxp26z23Wetc4y3zB99zw55VtXY=
+
+Name: assets/collections/55.swf
+SHA1-Digest: i4HeHp5fz7IkMa0hLPNwMqfOyZM=
+
+Name: assets/cityTitles/blackout.swf
+SHA1-Digest: jslD3qgX28RqijoAHcvcGG4MghY=
+
+Name: assets/icons/icon_50.png
+SHA1-Digest: QEPWPZ55BSgyr/CeBNBkbEA8jSs=
+
+Name: assets/cityPostcards/tahiti.swf
+SHA1-Digest: mOXEFYCBS3lARMlETT5qWygl/rU=
+
+Name: assets/achievements/87.swf
+SHA1-Digest: 3RQsrFaJsIZgidUr01YHIP3qlvw=
+
+Name: assets/icons/icon_100.png
+SHA1-Digest: CiEvhGOyKSwnjLV8QCqdGO9Cnzw=
+
+Name: res/drawable-land/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: assets/cityTitles/plano.swf
+SHA1-Digest: dLQ40Nbef0DTyrkiPTNhr7le8PE=
+
+Name: assets/daubers/112.swf
+SHA1-Digest: RVgEEC/g/ACtMM6+u0pIqWLeEps=
+
+Name: assets/collections/35.swf
+SHA1-Digest: 6KEE77QVpFd5QUDoKbA9uod3I2M=
+
+Name: assets/collections/814.swf
+SHA1-Digest: Q8YVkRryuifOlISlJ8URuTIPXcY=
+
+Name: assets/achievements/34.swf
+SHA1-Digest: 00jjoymEiqTJ7qryBXFKsSGqEO8=
+
+Name: assets/cityPostcards/barcelona.swf
+SHA1-Digest: mKPSe9DGAB0yhOkmbQr9ewUb8tw=
+
+Name: assets/collections/730.swf
+SHA1-Digest: S06WUNeWSavJpScI0fHqGNxS4fo=
+
+Name: assets/citySounds/newyork.zip
+SHA1-Digest: S1zvGCj7nJNRBIrWcKnAJKLR6U8=
+
+Name: assets/cityTitles/madrid.swf
+SHA1-Digest: 1qSH56SVvdVl6HENI888TY4eZ44=
+
+Name: assets/collections/735.swf
+SHA1-Digest: 0EuOjL98c7C+iAKF6AJqp2gJJDc=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: 90ZhafB41hqu2JDv9wHNZUcr2AM=
+
+Name: assets/collections/538.swf
+SHA1-Digest: mSQg8On4TZ+0m2tRd/doz/PGjzE=
+
+Name: assets/daubers/8.swf
+SHA1-Digest: d35F5PApQkYcmU+pYHGqbMNUkeM=
+
+Name: assets/collections/254.swf
+SHA1-Digest: S30T/EJ73pRyjmIwaPO7bBAYCxo=
+
+Name: assets/collections/746.swf
+SHA1-Digest: 7ShyJX/uHk6Od7uxwB/I+eFMfH8=
+
+Name: assets/daubers/87.swf
+SHA1-Digest: FhRIoCnPmDY5XJHGprRem+VUols=
+
+Name: assets/collections/68.swf
+SHA1-Digest: jQgCFetD0jzRaPe46eybxchHGkM=
+
+Name: assets/collections/242.swf
+SHA1-Digest: o/wM70Sm3Ra1J4ptV5aG/sPFlhk=
+
+Name: assets/avatarFrames/23.swf
+SHA1-Digest: YQOrjXOz3qTEQA/Gq7kMP5Gtiig=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/docs/com.milkmangames.nativeextensions.android.events.xml
+SHA1-Digest: 6T2XF4N+Txshh6pZ9ZzCETPnQV4=
+
+Name: assets/cityPostcards/mumbai.swf
+SHA1-Digest: OTLRUogdg+2eTJP3FWgDF9E9vas=
+
+Name: assets/collections/512.swf
+SHA1-Digest: 8eDJUSoUtwg98WJKUp6+Y74H8aI=
+
+Name: assets/daubers/10.swf
+SHA1-Digest: 4yuOBG4HbTpKQNkNbiU1/p6TebI=
+
+Name: assets/collections/599.swf
+SHA1-Digest: MoF9pPUygOYqHO6mKm4zMsE5iyI=
+
+Name: assets/cityBackgrounds/treasurecove.swf
+SHA1-Digest: uz4J08YznK9QXs+EdIsZFDdmMYw=
+
+Name: assets/collections/584.swf
+SHA1-Digest: SXuTsj29B28kVnKiUsuMdc2bmHY=
+
+Name: assets/daubers/119.swf
+SHA1-Digest: W5y0bIt6S8paCK610BpV/zCDn8k=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: SovRNuTMQ8h091wsO2qAZnIlzWI=
+
+Name: res/drawable-long-port-mdpi/loading.png
+SHA1-Digest: mKlpdq+s5QOnRL9EfF2R9kHsn7A=
+
+Name: assets/cityBackgrounds/miami.swf
+SHA1-Digest: 3VDRVreXoxfAqWwmgjbgMbUHygQ=
+
+Name: assets/collections/748.swf
+SHA1-Digest: mptTzVpwyksO+Exfgdbr+XthVLQ=
+
+Name: assets/icons/icon_48.png
+SHA1-Digest: SovRNuTMQ8h091wsO2qAZnIlzWI=
+
+Name: assets/achievements/101.swf
+SHA1-Digest: Q765Hf3Xc0hJ6h8kzzBZvfJ8UUs=
+
+Name: assets/achievements/3.swf
+SHA1-Digest: 72IQoYVvlbwLei/nI6ZYIv0N590=
+
+Name: assets/daubers/136.swf
+SHA1-Digest: JRMogXb0tl/GDbouIPhMg+vDrQI=
+
+Name: assets/collections/774.swf
+SHA1-Digest: uwQeql7H/JYRWQk1GI0RnF29c30=
+
+Name: assets/collections/63.swf
+SHA1-Digest: RG7yssTw78qvK3S/J+HMqQF1N1M=
+
+Name: assets/achievements/16.swf
+SHA1-Digest: NeF7wnT7o9SZ5Y0ehrmcmB6tYjM=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: V27iDxNqPIzkdIgA+0DIi/AfQYY=
+
+Name: assets/avatarFrames/44.swf
+SHA1-Digest: LlxK1eu+AZ899lS98coU//1GJPs=
+
+Name: assets/collections/666.swf
+SHA1-Digest: XBpH8axdKr4cgOrMUleS5tbMd3Q=
+
+Name: assets/adobeair.vch
+SHA1-Digest: 0tLcfiT6PsIdmdMJ1cgkkSxGERk=
+
+Name: assets/daubers/77.swf
+SHA1-Digest: dgV5Ys9P62iDA+q0h6r3agWCz+A=
+
+Name: assets/achievements/64.swf
+SHA1-Digest: /cEvIxEFGRc9aRc7dJq0xS+w7tc=
+
+Name: assets/collections/374.swf
+SHA1-Digest: R691P3Pb7WgCjDIWRUVgG+r9xPs=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: NDLFyRfWjBjm9xCkOlx9fqTCMug=
+
+Name: assets/collections/234.swf
+SHA1-Digest: jAwxGSE1P3KsOZHODppR5qWLie0=
+
+Name: assets/daubers/28.swf
+SHA1-Digest: V8V9EogWFgtG38bF4sGbDYjU67A=
+
+Name: assets/collections/637.swf
+SHA1-Digest: xIpTCpn4i4z9tRHXrcC3zPQlGsg=
+
+Name: assets/collections/116.swf
+SHA1-Digest: q0r9hVoPw2isY93yrQ3j8o1hGoo=
+
+Name: assets/daubers/13.swf
+SHA1-Digest: UAp1EAKmz/LQWQxGQagahEv8Srs=
+
+Name: assets/collections/522.swf
+SHA1-Digest: 3LK+LJivKPpD8mAPF4AhyEXykYY=
+
+Name: assets/achievements/117.swf
+SHA1-Digest: QLeN/L9z+SEgPDSf9q6bjR/rUoE=
+
+Name: assets/collections/777.swf
+SHA1-Digest: PczilhstJ5vxJ3r3/tDzGG+uu9g=
+
+Name: res/drawable/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/drawable-xhdpi/com_facebook_inverse_icon.png
+SHA1-Digest: JlToIy/BS1SwLA3JoedKEQBE76E=
+
+Name: assets/collections/12.swf
+SHA1-Digest: o/u1NTptswKXSvQrDmFmX4MJwK8=
+
+Name: assets/achievements/28.swf
+SHA1-Digest: ciEFLoWOilvM9LfZWz450kaJSaI=
+
+Name: assets/cityPostcards/newyork.swf
+SHA1-Digest: GXGM69jOT9JNRc7RklsVhkDJ+MA=
+
+Name: assets/cityPostcards/chicago.swf
+SHA1-Digest: SN2tbaijiY/t3KlmwmUcI22xow8=
+
+Name: assets/cityBackgrounds/neworleans.swf
+SHA1-Digest: 3EZPYnAWdmb+kG5B1elsOiLnYUY=
+
+Name: assets/avatarFrames/17.swf
+SHA1-Digest: FymUPpqnCi5x8ckhKmTVRp45Zeg=
+
+Name: assets/collections/434.swf
+SHA1-Digest: gLlS9wDZtpbdR3xI490WY+rp8Gs=
+
+Name: assets/collections/609.swf
+SHA1-Digest: dGpG7Hg7PdFgrsUp5I2FQxuQxnU=
+
+Name: assets/daubers/106.swf
+SHA1-Digest: A3V2DI2qEz3r10SSjfp2THzAYps=
+
+Name: assets/collections/77.swf
+SHA1-Digest: LPqBBtEBFZWcfTHMn+YmA641HQ8=
+
+Name: assets/collections/606.swf
+SHA1-Digest: ioV70EGjHC1N0N+RtWcA66VLQyo=
+
+Name: assets/collections/160.swf
+SHA1-Digest: VqYyU8LOO6XRzTlJ54/Yypmnd2Y=
+
+Name: assets/collections/771.swf
+SHA1-Digest: nuEKt8LTqxHGy+rMkMNhCAg4aa0=
+
+Name: assets/collections/509.swf
+SHA1-Digest: Pkh2iKxyinLOEAzOzap+p4aNw8U=
+
+Name: assets/achievements/78.swf
+SHA1-Digest: iAzsZKsnE6BZmlIRON0UBmmW7N4=
+
+Name: assets/achievements/32.swf
+SHA1-Digest: QfQtenzl5MY6rFcFjApyzannQR4=
+
+Name: assets/collections/167.swf
+SHA1-Digest: z579++tcCflWyhJDUx4wa1aF/2o=
+
+Name: assets/collections/18.swf
+SHA1-Digest: WxoDePvoBh2YNyVYcc89UKjzXbQ=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: UlppTzQMf0S8p04nUqt4qCBKRF0=
+
+Name: assets/collections/674.swf
+SHA1-Digest: glwVOTYqW9VO4N5khtqUNkqlH9Q=
+
+Name: res/drawable-hdpi/com_facebook_inverse_icon.png
+SHA1-Digest: 2IKuzG1QMycYYLdEWoHnQDoZ07E=
+
+Name: assets/achievements/113.swf
+SHA1-Digest: US6NIXj1f1EfN5R6Zfp0IGsWwl4=
+
+Name: assets/avatarFrames/12.swf
+SHA1-Digest: fUwWkT0BK3jNHfzTPDtOKOeWWyU=
+
+Name: assets/collections/195.swf
+SHA1-Digest: xHRD0ZSUg86P7o9DkzbggcCSYfo=
+
+Name: assets/cityPostcards/nashville.swf
+SHA1-Digest: lkvfY69sR2DSceMifLxu4oq90aI=
+
+Name: assets/achievements/75.swf
+SHA1-Digest: 80vXdYRT7Pg+3oEc02eUl/BKBg8=
+
+Name: assets/daubers/115.swf
+SHA1-Digest: 6sNZpDW69Zp6vSUvv1M43rzLN+A=
+
+Name: assets/collections/616.swf
+SHA1-Digest: NHw7UcIt2R6Kg0Wtt76UDBFue3I=
+
+Name: assets/cityBackgrounds/cairo.swf
+SHA1-Digest: vKrrCuDCnSmmW05GEGTRcBYRa/k=
+
+Name: assets/avatarFrames/27.swf
+SHA1-Digest: sM0Gsi0XFqRJ4o6wr4P3i11EuSA=
+
+Name: assets/cityPostcards/moscow.swf
+SHA1-Digest: n0o183pMT+of+e3axCTSkGN+Ri4=
+
+Name: assets/collections/728.swf
+SHA1-Digest: HYO4ETTE6k5IiRIxoz6FJz8oq4s=
+
+Name: assets/achievements/61.swf
+SHA1-Digest: ruCbCPgNX+jQn/2T33zBBbrr+Bo=
+
+Name: assets/collections/222.swf
+SHA1-Digest: X0LbjQllhOV+8AxQPYAtfNZtRVc=
+
+Name: assets/collections/778.swf
+SHA1-Digest: GElFN878MGh6+hoKJ3M7iWinWjo=
+
+Name: assets/avatarFrames/21.swf
+SHA1-Digest: 1hmnXCCyHFaF5XyMBwZcSAZr9W0=
+
+Name: assets/collections/394.swf
+SHA1-Digest: nC8dQFKQfDWW8EHnbOKn6mAGcVs=
+
+Name: assets/collections/337.swf
+SHA1-Digest: F+uq99Eb1ZAfgdnfD5BQu6X/dD4=
+
+Name: assets/icons/icon_76.png
+SHA1-Digest: x3zWIT/NZ0ZG/FZzD1ZdLmGkVL4=
+
+Name: assets/cityTitles/honolulu.swf
+SHA1-Digest: XxGogLSDduHWjHibJEcX14dR6kI=
+
+Name: assets/avatarFrames/28.swf
+SHA1-Digest: FgS9yO3WIOybbpU5PU+Ghzo5lb4=
+
+Name: assets/collections/677.swf
+SHA1-Digest: KVeBotpBF0F8KQaA73wycM1pY/c=
+
+Name: assets/collections/642.swf
+SHA1-Digest: 7E6lZbZWLKD0wWMJ2e/uTfrFgpg=
+
+Name: assets/collections/177.swf
+SHA1-Digest: bZbOIqAZERY9AE5/Vfn2OJY3OAo=
+
+Name: assets/daubers/70.swf
+SHA1-Digest: CGwGVkp1MYeSlQ6IZzYcCXeimO8=
+
+Name: assets/daubers/69.swf
+SHA1-Digest: Ss477q1lt/tBvHwF8kuSDxiphgc=
+
+Name: assets/collections/203.swf
+SHA1-Digest: yHrnTzBnb5JFt3M40DN2+0hP+bw=
+
+Name: assets/avatarFrames/39.swf
+SHA1-Digest: 2VYv+zheutCiDGkzBkqhWv+6vyA=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+
+Name: assets/collections/128.swf
+SHA1-Digest: Vx2Dc8aghUcMuj+w1PqzJHBiHVQ=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+
+Name: assets/collections/506.swf
+SHA1-Digest: k5dvFs3wPrKv7IKmv0AYR0BUSD4=
+
+Name: assets/collections/779.swf
+SHA1-Digest: 0PGyuyN2mLMngXInbmIZsHsBS0I=
+
+Name: assets/collections/202.swf
+SHA1-Digest: ochrtouHqkCzmGMsZphxrnPAzL8=
+
+Name: assets/collections/247.swf
+SHA1-Digest: +jaGJIUMQ1IHX9gUva/ROMcwLh0=
+
+Name: assets/collections/661.swf
+SHA1-Digest: rDlWV25qairzpwE5sYgioA7Z5pk=
+
+Name: assets/cityTitles/greatoutdoors.swf
+SHA1-Digest: JBa1cu/DYPTIuS51FKBy9jSGqVs=
+
+Name: assets/daubers/68.swf
+SHA1-Digest: f8m1LkgcFwMTkrKu7GUiMitxNwg=
+
+Name: assets/cityPostcards/loteria.swf
+SHA1-Digest: 5sSKdrcEDTiafZfVHu/feDAGhfw=
+
+Name: assets/collections/640.swf
+SHA1-Digest: kpjR79342NLK0PixE+3ZFw+/0l0=
+
+Name: assets/collections/624.swf
+SHA1-Digest: 64FRKbxWFnQsZolI2YV3VrRT+68=
+
+Name: assets/cityBackgrounds/paris.swf
+SHA1-Digest: hz53Q8TJBsQI490EuqNeHyfgu6U=
+
+Name: assets/achievements/105.swf
+SHA1-Digest: mOL26Td3y9JmJMlNaJ/wzvcLn8U=
+
+Name: assets/achievements/322.swf
+SHA1-Digest: JjCHHYa16FIPoo/DbsD3H8twZgk=
+
+Name: assets/daubers/90.swf
+SHA1-Digest: bO7i/IuuKKb+5dyoxfKGkKV/yT8=
+
+Name: assets/cityPostcards/summer.swf
+SHA1-Digest: ShynufZvCydrlWYa0l3HEG3GFuY=
+
+Name: assets/daubers/135.swf
+SHA1-Digest: 01eI5BIOxPpO8fo4UQaxHm4rrZ0=
+
+Name: assets/collections/573.swf
+SHA1-Digest: ld+4BVCPhAw3kEikSx4YPXqmY+8=
+
+Name: assets/collections/243.swf
+SHA1-Digest: 00FMp/37FsjYzfn6QL+NQylUUe4=
+
+Name: assets/collections/396.swf
+SHA1-Digest: jMohTu/TY1r8exUsJapgYnlIAqA=
+
+Name: res/raw/startga.html
+SHA1-Digest: 0Gq1U1c1hFbPzb+UHZ8RaIpUnts=
+
+Name: assets/daubers/66.swf
+SHA1-Digest: 8Anpdb4GNIqp6hb4kMZPCRbTz38=
+
+Name: assets/cityPostcards/tournament.swf
+SHA1-Digest: MZMPfYGA2DFKOQANzpsDG80vvd0=
+
+Name: assets/achievements/99.swf
+SHA1-Digest: JYM9VOadeJW2/gfszIx3J18V7SM=
+
+Name: assets/collections/737.swf
+SHA1-Digest: 4rzY1rXgjYDdg7tWkmjhdgz8HRI=
+
+Name: assets/cityTitles/summer.swf
+SHA1-Digest: uA8V0rp1Wa/URS4VcmbG4Z4fR7I=
+
+Name: resources.arsc
+SHA1-Digest: nzcxjNYT/me4zrwEAdpXmjvC7ug=
+
+Name: assets/collections/589.swf
+SHA1-Digest: 7QJSy7hzEoAVbzSGE+W//KV5E4U=
+
+Name: assets/daubers/2.swf
+SHA1-Digest: sL/vILvYOiiqDuQ5kKvbKp1qrmw=
+
+Name: assets/collections/438.swf
+SHA1-Digest: Uyshlqw6XVjoiyqlf66sbkfEM6M=
+
+Name: assets/daubers/73.swf
+SHA1-Digest: Xl0suF3N+JJXEZQBXy9rpVgCC9g=
+
+Name: assets/collections/755.swf
+SHA1-Digest: SJl0wtDk5Zc23e3RhmwXmwQUt3w=
+
+Name: assets/cityBackgrounds/summer.swf
+SHA1-Digest: 6hy118eeXameiPLjP3lEb1LE/gY=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+
+Name: assets/cityBackgrounds/newyork.swf
+SHA1-Digest: AwetekBsmvUVRivS5pz105hm4Fo=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: vwSuKsgQPWfsDN6XNX4ueT/QYtg=
+
+Name: assets/daubers/76.swf
+SHA1-Digest: vGng4Ne6lAJPY4NoBhS2rbX9fxM=
+
+Name: assets/collections/40.swf
+SHA1-Digest: msMkf+PklDXK6cAV/8l7CjQvB0I=
+
+Name: assets/achievements/52.swf
+SHA1-Digest: L0Qmlf1tNFAlS7PtvGIeYGhZlbM=
+
+Name: assets/collections/663.swf
+SHA1-Digest: bYP3xr7QfPBbIbx2I8v6tRzcgDw=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/catalog.xml
+SHA1-Digest: t//3iREYm6pxXEc6klbvdr0yBug=
+
+Name: assets/avatarFrames/47.swf
+SHA1-Digest: 7+EFewLRE2PXdSrHUZREJqUSm8c=
+
+Name: assets/achievements/36.swf
+SHA1-Digest: d3eVOSQdRTx2UHQmFTKPn9TMBXk=
+
+Name: assets/META-INF/AIR/extensions/com.buffalostudios.ANEUtils/catal
+ og.xml
+SHA1-Digest: QM53qPIpBHnIPa1b4lcIwLHG86Q=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: assets/achievements/45.swf
+SHA1-Digest: tCpHKyY1sRBpDxEHBKc9jfaGO5g=
+
+Name: assets/collections/39.swf
+SHA1-Digest: kjUpcUL1WhpWjIFZ6d3YKXe7yr8=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/META-INF/ANE/extension.xml
+SHA1-Digest: 68mOVka9GfCAqjFWGnclELj9L68=
+
+Name: assets/collections/413.swf
+SHA1-Digest: VFLSiYuXjhZdT/g74iyh7GZdxL0=
+
+Name: assets/collections/9.swf
+SHA1-Digest: x3Gl8eoyLPl4utTeGzVGSPCBRNk=
+
+Name: assets/achievements/21.swf
+SHA1-Digest: Yo/GYgp/sOqdabPcjsQr26kkto4=
+
+Name: assets/daubers/4.swf
+SHA1-Digest: A5FzJiSSGyxDBnfWESobD+tVCwE=
+
+Name: assets/achievements/65.swf
+SHA1-Digest: y7xj023V33D1nZ1YsGT3YzS71+g=
+
+Name: assets/collections/173.swf
+SHA1-Digest: RHqMzU/UwjSWMEyIbQfWZM/1ITo=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: kFcxFK1wl6RDqmct/ADMtmCtbJ4=
+
+Name: assets/daubers/30.swf
+SHA1-Digest: 1YduKoH8JnpQ4RUoWRcuvGbmGdI=
+
+Name: res/drawable/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/collections/386.swf
+SHA1-Digest: rNK2l47rKoTAQWrHOEhBb3IYLFM=
+
+Name: assets/collections/44.swf
+SHA1-Digest: pn9SqfuLthRF21b+MipWbGE64Kg=
+
+Name: assets/seasonalIcons/greatoutdoors.swf
+SHA1-Digest: u9YmoPFX7DXGr1icZ6PwZwE3P5M=
+
+Name: res/layout/ssl_certificate_warning.xml
+SHA1-Digest: LqDG1FFuTgptO7YpBWg4DX0RkI0=
+
+Name: res/drawable/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: /l9r0DHSIj4WdudFxA18dCfnfec=
+
+Name: assets/cityPostcards/london.swf
+SHA1-Digest: KPkG9QoR0Fl21rtm6t5BRUp4Mec=
+
+Name: assets/avatarFrames/46.swf
+SHA1-Digest: hXD584vmeVt2FwXczzfbt86rbwE=
+
+Name: assets/achievements/37.swf
+SHA1-Digest: mV7eWfRrqcDAVfOle3OKGEIwKhc=
+
+Name: assets/collections/253.swf
+SHA1-Digest: Ms+04QW0pP57IlTbRSY8o79SYwk=
+
+Name: assets/collections/621.swf
+SHA1-Digest: T+fJKhWLgqsiY4ZiceoMMPZ/l4E=
+
+Name: assets/avatarFrames/20.swf
+SHA1-Digest: s3sSYYqvh19gSKcsKofn5XphvXw=
+
+Name: assets/collections/678.swf
+SHA1-Digest: hqn/wpac37sxtrxpuf0Ee/MfaWQ=
+
+Name: assets/achievements/114.swf
+SHA1-Digest: eSfTSfIDZCWR99mit52FX5NmGZI=
+
+Name: res/drawable-port/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: assets/collections/249.swf
+SHA1-Digest: Wtpx7NmMilcRR0vTiaRwnI9UWDs=
+
+Name: assets/chatEmoticons/emoticons.swf
+SHA1-Digest: gq+Bkn2kBzoXjrks56vZDsdpX/Q=
+
+Name: assets/slotsSymbols/macau.swf
+SHA1-Digest: ML9284VAO671c5EOzi3kw283x8c=
+
+Name: assets/collections/603.swf
+SHA1-Digest: yTmXa8y5oAP0MubYZwJQrxWUvgI=
+
+Name: assets/achievements/119.swf
+SHA1-Digest: y51vZ0pthOPYWMaUVA6vAuAQ+qM=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.GoVir
+ al/docs/com.milkmangames.nativeextensions.xml
+SHA1-Digest: R4i7KhrEZOIRgOc3lNHQC6yUL9M=
+
+Name: assets/collections/149.swf
+SHA1-Digest: PzsNOHxVlM59AETynBzXqfDax0Q=
+
+Name: assets/collections/67.swf
+SHA1-Digest: D5Z9/osGMVLbMTLfK97m6Chtjl0=
+
+Name: assets/achievements/9.swf
+SHA1-Digest: iKOuHWZvmDysLYNxNFLzTTlox2U=
+
+Name: assets/collections/381.swf
+SHA1-Digest: 7c/5nvRL+VS6anpsZqjSn8tEZSg=
+
+Name: res/drawable/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: assets/cityTitles/neworleans.swf
+SHA1-Digest: 8GH5k2izz+Fqm9aa7v1vv3+/68U=
+
+Name: assets/collections/744.swf
+SHA1-Digest: 1lXNr4IOXm4oG2XO44LeODwCIc4=
+
+Name: assets/collections/754.swf
+SHA1-Digest: cTntW6RzDIIPQbWSHADRUWG8Psk=
+
+Name: assets/achievements/86.swf
+SHA1-Digest: xwhTEB9x4DKZFPSpAymxLv5Zam0=
+
+Name: assets/collections/159.swf
+SHA1-Digest: xq9NhNmge+WlofS+Vgqj/bPXP+Y=
+
+Name: assets/collections/439.swf
+SHA1-Digest: 8kUuBlnNOI2UHgJFJddFxgzqrgg=
+
+Name: assets/META-INF/AIR/extensions/com.milkmangames.extensions.Andro
+ idIAB/docs/com.milkmangames.nativeextensions.android.xml
+SHA1-Digest: 2fyg1NLep+op9C8NAEA2qSL/T0w=
+
+Name: res/drawable-mdpi/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: res/drawable-long-land-mdpi/loading.png
+SHA1-Digest: 6AxTryBQ1q0tLZP38dpIEmMIgCY=
+
+Name: assets/achievements/56.swf
+SHA1-Digest: mPgyuc7EcJBlNBozZnJnmYA2oas=
+
+Name: assets/collections/722.swf
+SHA1-Digest: YyIaYS9iBh308Rrc3vUZIokFbNc=
+
+Name: res/drawable/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: /l9r0DHSIj4WdudFxA18dCfnfec=
+
+Name: assets/collections/759.swf
+SHA1-Digest: G2lSG9exP3JIXo2ldvlavZyD/+4=
+
+Name: assets/collections/644.swf
+SHA1-Digest: caBCf/1ItBVaG32IcripIpm/qWE=
+
+Name: assets/daubers/84.swf
+SHA1-Digest: a872llwsLT0oJBuPUVBO2NowEOg=
+
+Name: assets/collections/82.swf
+SHA1-Digest: bW0VRsQ1njV3QlVW3XwHiCZqPzo=
+
+Name: assets/collections/574.swf
+SHA1-Digest: SyMWdApO5uY0XKe1fGMymctyQME=
+
+Name: assets/cityTitles/nashville.swf
+SHA1-Digest: 0IM2WYjUNhgtsHXCwlx8sICxD2w=
+
+Name: assets/avatarFrames/36.swf
+SHA1-Digest: wl0CodOAzT5i7tMANTkmIX9jIU8=
+
+Name: assets/icons/icon_128.png
+SHA1-Digest: sC4E5LEAFgGQRqTiM8qngBOpvlo=
+
+Name: assets/collections/239.swf
+SHA1-Digest: y7/uAKd+lzIdrftfwMybqVxizhk=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+
+Name: assets/collections/541.swf
+SHA1-Digest: fsFDgdna7dF06QH0cKDA3kBcODE=
+
+Name: assets/collections/762.swf
+SHA1-Digest: uPSEIzvU7Vhgah7dFuI1pNP8RVc=
+
+Name: assets/collections/447.swf
+SHA1-Digest: EtkEWrqkeCxokad5uEEterJ5L+0=
+
+Name: assets/cityTitles/toronto.swf
+SHA1-Digest: PsfFkXS0STVDtaYpPVRIIWxwvgw=
+
+Name: assets/avatarFrames/25.swf
+SHA1-Digest: 1j5DWFtZz6W9n77C9s+NmN9fbm8=
+
+Name: assets/collections/484.swf
+SHA1-Digest: 2AKe8RYMDstl+66t20sLOYe0R9s=
+
+Name: assets/collections/33.swf
+SHA1-Digest: Eyy7gMPD3KMF10oZVOYYj3BSsTc=
+
+Name: assets/daubers/55.swf
+SHA1-Digest: +LoFB/9h8MGD92kFaOox/qTftBY=
+
+Name: assets/collections/431.swf
+SHA1-Digest: Ks9nY1KEMMYFi89eYgOy9Tn0weA=
+
+Name: assets/daubers/141.swf
+SHA1-Digest: DSuOMOxEeHRG7QoY4AfC7P7YLo8=
+
+Name: assets/daubers/103.swf
+SHA1-Digest: p8FqcWkJAsNKelkjZlhA/P0QWJc=
+
+Name: assets/cityBackgrounds/tahiti.swf
+SHA1-Digest: 23oT7zEZW067UAYr9qvhI9RR1Xo=
+
+Name: assets/collections/514.swf
+SHA1-Digest: VZ1ehxEHn3m4ERzSqFL+h/RfauE=
+
+Name: assets/avatarFrames/7.swf
+SHA1-Digest: /YYGpBuC6iPwWz5P5xrcCkdEcJ4=
+
+Name: assets/collections/168.swf
+SHA1-Digest: owQuzfwHrAmIg1VOVBeDiMLgkxo=
+
+Name: assets/collections/200.swf
+SHA1-Digest: 11zI8y13CCJ98x7lEKSJjse3s0I=
+
+Name: assets/avatarFrames/70.swf
+SHA1-Digest: X1IOROVY1FBbMG5xNE4Xu6DvWIs=
+
+Name: assets/collections/111.swf
+SHA1-Digest: lJtTh4TuqMvNg2jK+5rc0dnt9L4=
+
+Name: assets/collections/817.swf
+SHA1-Digest: +Boq9+yoWWRsKJenlYIzIw0bAzE=
+
+Name: assets/collections/563.swf
+SHA1-Digest: dttgpczz+yajS1xN8Ze/ZIsF4jo=
+
+Name: assets/daubers/81.swf
+SHA1-Digest: OKdc7VPOD6IEzH+U437bU1KaE4k=
+
+Name: assets/collections/250.swf
+SHA1-Digest: S+TrSFhqOxBd6sHJLTX3UKd1QBY=
+
+Name: assets/collections/641.swf
+SHA1-Digest: 0LZU7Pid+xpveKu2KuhjppxPIzw=
+
+Name: res/drawable/com_facebook_icon.png
+SHA1-Digest: 9jTbeG4b8nJZlZss16UPfagqlUs=
+
+Name: assets/daubers/105.swf
+SHA1-Digest: s7CFJel2KWokUarL+AtmJTtHgW8=
+
+Name: assets/collections/2.swf
+SHA1-Digest: FeT36BKjWBOaFnSZ810lpCV+z5w=
+
+Name: assets/achievements/98.swf
+SHA1-Digest: eQMdL62VmJX6MRFYhHepDSs65Hk=
+
+Name: assets/achievements/15.swf
+SHA1-Digest: HMuUBrB+HAcpN4qT5knVcfadCzw=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+
+Name: assets/collections/426.swf
+SHA1-Digest: F9bO6v2nrsBI9xfxYWSgLRm6THU=
+
+Name: assets/collections/670.swf
+SHA1-Digest: Haq3NRMlkp9VNjkRu84KkdfoLy8=
+

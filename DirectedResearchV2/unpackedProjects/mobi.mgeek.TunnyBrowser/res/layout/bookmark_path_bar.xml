@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_listitem_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/back" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/back_icon" android:duplicateParentState="true" android:layout_width="@dimen/ctrl_pl_listitem_arrow_size" android:layout_height="@dimen/ctrl_pl_listitem_arrow_size" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/SideBarTitleAppearence" android:ellipsize="marquee" android:gravity="left|center" android:id="@id/title" android:paddingLeft="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/more" android:paddingLeft="@dimen/ctrl_pl_listitem_padding_outer" android:paddingRight="@dimen/ctrl_pl_listitem_padding_outer" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/more_icon" android:duplicateParentState="true" android:layout_width="@dimen/ctrl_pl_listitem_arrow_size" android:layout_height="@dimen/ctrl_pl_listitem_arrow_size" />
+    </LinearLayout>
+</LinearLayout>

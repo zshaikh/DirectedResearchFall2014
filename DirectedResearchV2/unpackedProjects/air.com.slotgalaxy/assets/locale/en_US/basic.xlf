@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<string id="Loading...">Loading...</string>
+	<string id="Connecting to Facebook...">Connecting to Facebook...</string>
+	<string id="Merging account...">Merging account...</string>	
+	<string id="Contacting server...">Contacting server...</string>
+	<string id="Loading Data...">Loading Data...</string>
+	
+	<string id="Would you like to connect to Facebook?">Would you like to connect to Facebook?</string>
+	<string id="You will need to log into Facebook to continue playing.">You will need to log into Facebook to continue playing.</string>
+	<string id="Connect">Connect</string>
+	<string id="Later">Later</string>
+	<string id="Error logging into Facebook: ">Error logging into Facebook: </string>
+	<string id="There was a problem logging into Facebook, please try again later.">There was a problem logging into Facebook, please try again later.</string>
+	<string id="Your Facebook password has changed.">Your Facebook password has changed.</string>
+	<string id="Your Facebook password has changed. Please login again to continue playing.">Your Facebook password has changed. Please login again to continue playing.</string>
+	<string id="Please update it by opening Settings > Facebook and tapping on your name">Please update it by opening Settings > Facebook and tapping on your name</string>
+	<string id="Facebook session has expired, please try again.">Facebook session has expired, please try again.</string>
+	<string id="Ok">Ok</string>
+	<string id="We will synchronize your Facebook {Slot Galaxy} account with this device">We will synchronize your Facebook {Slot Galaxy} account with this device</string>
+	<string id="This facebook account is not authorized to use this application.">This facebook account is not authorized to use this application.</string>
+	<string id="Your Facebook session has expired. Please open the Facebook application and login again.">Your Facebook session has expired. Please open the Facebook application and login again.</string>
+	<string id="Please allow access to Facebook by opening Settings>Facebook and making sure {Slot Galaxy} is turned on.">Please allow access to Facebook by opening Settings>Facebook and making sure {Slot Galaxy} is turned on.</string>
+
+</list>

@@ -1,0 +1,33 @@
+
+			<extension xmlns="http://ns.adobe.com/air/extension/3.6">
+				<id>com.stuv.ane.aarki.AneAarki</id>
+				<versionNumber>1</versionNumber>
+
+				<platforms>
+		
+					
+		<platform name="Android-ARM">
+				<applicationDeployment>
+					<nativeLibrary>android.jar</nativeLibrary>
+					<initializer>com.stuv.ane.aarki.extensions.AarkiExtension</initializer>
+				</applicationDeployment>
+			</platform>
+		
+					
+		<platform name="iPhone-ARM">
+				<applicationDeployment>
+					<nativeLibrary>libAarki.a</nativeLibrary>
+					<initializer>aarkiExtensionInitializer</initializer>
+					<finalizer>aarkiExtensionFinalizer</finalizer>
+				</applicationDeployment>
+			</platform>
+		
+					
+		<platform name="default">
+				<applicationDeployment />
+			</platform>
+		
+		
+				</platforms>
+			</extension>
+		

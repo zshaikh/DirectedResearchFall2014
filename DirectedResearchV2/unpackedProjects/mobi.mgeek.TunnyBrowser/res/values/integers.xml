@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="browser_version">4</integer>
+    <integer name="config_countX">3</integer>
+    <integer name="config_dropAnimMaxDist">800</integer>
+    <integer name="config_dropAnimMaxDuration">500</integer>
+    <integer name="config_dropAnimMinDuration">100</integer>
+    <integer name="config_folderAnimDuration">120</integer>
+    <integer name="config_folder_countX">3</integer>
+    <integer name="config_folder_countY">8</integer>
+    <integer name="config_folder_grid_size">3</integer>
+    <integer name="config_folder_maxCount">24</integer>
+    <integer name="config_folder_preview_grid_size">2</integer>
+    <integer name="config_max_count">100</integer>
+    <integer name="config_maximized_countY">3</integer>
+    <integer name="config_minimized_countY">1</integer>
+    <integer name="config_normal_countY">3</integer>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="default_title_indicator_footer_indicator_style">2</integer>
+    <integer name="default_title_indicator_line_position">0</integer>
+    <integer name="default_underline_indicator_fade_delay">300</integer>
+    <integer name="default_underline_indicator_fade_length">400</integer>
+    <item type="integer" name="fake_titlebar_menu_animation_time">@android:integer/config_mediumAnimTime</item>
+    <integer name="hotseat_cell_count">0</integer>
+    <integer name="library_version">19</integer>
+    <integer name="max_browser_version">6</integer>
+    <integer name="max_library_version">4</integer>
+    <integer name="min_browser_version">4</integer>
+    <integer name="min_library_version">4</integer>
+    <integer name="pref_animation_time">200</integer>
+    <integer name="workspace_icon_alpha">0x80</integer>
+</resources>

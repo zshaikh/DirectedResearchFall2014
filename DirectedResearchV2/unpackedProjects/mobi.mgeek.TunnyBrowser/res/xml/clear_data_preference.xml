@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/clear_data"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <mobi.mgeek.TunnyBrowser.ClearDataGroupPreference />
+</dolphin.preference.ExpandablePreferenceScreen>

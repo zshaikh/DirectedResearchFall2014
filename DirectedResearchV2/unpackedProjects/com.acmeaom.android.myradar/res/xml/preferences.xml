@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Map Preferences">
+        <CheckBoxPreference android:title="Set my location" android:key="map_set_my_location" android:summary="Center the map on my location when started" android:defaultValue="true" />
+        <CheckBoxPreference android:title="Follow my location" android:key="map_follow_my_location" android:summary="Keep map centered on my location" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="MyRadar Upgrades" android:key="upgrades">
+        <CheckBoxPreference android:title="@string/billing_purchase_ad_removal_title" android:key="feature_remove_ads_cb" android:summary="@string/billing_purchase_ad_removal_brief_desc" android:defaultValue="false" />
+        <PreferenceScreen android:title="@string/billing_purchase_ad_removal_title" android:key="feature_remove_ads">
+            <PreferenceScreen android:layout="@layout/remove_ads_dialog" android:title="@string/billing_purchase_ad_removal_title" android:key="feature_remove_ads" android:summary="@string/billing_purchase_ad_removal_summary" />
+        </PreferenceScreen>
+        <CheckBoxPreference android:title="@string/billing_purchase_warnings_title" android:key="feature_add_warnings_cb" android:summary="@string/billing_purchase_warnings_brief_desc" android:defaultValue="false" />
+        <PreferenceScreen android:title="Add Warnings and Watches" android:key="feature_add_warnings">
+            <PreferenceScreen android:layout="@layout/add_warnings_dialog" android:title="@string/billing_purchase_warnings_title" android:key="feature_add_warnings" android:summary="@string/billing_purchase_warnings_summary" />
+        </PreferenceScreen>
+        <CheckBoxPreference android:title="@string/billing_purchase_hurricanes_title" android:key="feature_add_hurricanes_cb" android:summary="@string/billing_purchase_hurricanes_brief_desc" android:defaultValue="false" />
+        <PreferenceScreen android:title="Add Hurricane Warnings" android:key="feature_add_hurricanes">
+            <PreferenceScreen android:layout="@layout/add_hurricanes_dialog" android:title="@string/billing_purchase_hurricanes_title" android:key="feature_add_hurricanes" android:summary="@string/billing_purchase_hurricanes_summary" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/billing_restore_purchases" android:key="feature_restore_purchases">
+            <PreferenceScreen android:title="@string/billing_purchased_features" android:selectable="false" android:key="features_restore_purchases_progress" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notifications" android:key="notifications">
+        <CheckBoxPreference android:title="Enable push notifications" android:key="@string/notifications_enabled_setting" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Legal">
+        <PreferenceScreen android:title="Copyrights and Licenses">
+            <PreferenceCategory android:title="Legal Notices" android:summary="Legal Notices">
+                <Preference android:title="Apache commons NOTICE.txt">
+                    <intent android:targetPackage="@string/app_package" android:data="NOTICE.txt" android:targetClass="com.acmeaom.android.myradar.app.activity.LicenseView" />
+                </Preference>
+                <Preference android:title="Apache commons LICENSE.txt">
+                    <intent android:targetPackage="@string/app_package" android:data="LICENSE.txt" android:targetClass="com.acmeaom.android.myradar.app.activity.LicenseView" />
+                </Preference>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

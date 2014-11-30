@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/splash_end_screen_tab1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="24.0sp" android:textColor="@color/splash_screen_text_color" android:id="@id/splash_end_screen_line1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/splash_end_screen_text1" android:fontFamily="sans-serif-thin" />
+        <TextView android:textSize="30.0sp" android:textColor="@color/splash_screen_text_highlight_color" android:id="@id/splash_end_screen_line2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="78.0dip" android:text="@string/splash_end_screen_text2" android:fontFamily="sans-serif-thin" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/splash_end_screen_tab2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="26.0sp" android:textColor="@color/splash_screen_text_highlight_color" android:id="@id/splash_end_screen_tab2_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/splash_end_screen_text3" android:fontFamily="sans-serif-thin" />
+        <TextView android:textSize="30.0sp" android:textColor="@color/white" android:id="@id/splash_end_screen_tab2_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/term_of_service_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16.0sp" android:id="@id/term_of_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="30.0dip" android:text="@string/terms_of_service" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/row_agenda_event_birthday" android:background="@color/widget_row_background" android:paddingLeft="@dimen/widget_horizontal_padding" android:paddingTop="@dimen/widget_vertical_padding" android:paddingRight="@dimen/widget_horizontal_padding" android:paddingBottom="@dimen/widget_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/row_agenda_event_birthday_icon" android:layout_width="@dimen/widget_icon_size" android:layout_height="@dimen/widget_icon_size" android:layout_marginRight="@dimen/agendaview_icon_padding_right" android:src="@drawable/default_dot_icon" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/row_agenda_event_birthdays" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/widget_transparent_horizontal_divider" android:layout_weight="1.0" android:showDividers="middle" />
+</LinearLayout>

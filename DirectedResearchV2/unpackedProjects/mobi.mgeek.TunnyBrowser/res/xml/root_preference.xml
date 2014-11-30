@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_root_title"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.CheckBoxPreference dolphin:key="use_dolphin_webkit_display" dolphin:title="@string/use_dolphin_webkit" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_head_bk" />
+    <com.dolphin.browser.language.LanguageListPreference dolphin:entries="@array/pref_language_choices" dolphin:entryValues="@array/pref_language_values" dolphin:key="language" dolphin:title="@string/pref_language_string" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="is_default_browser" dolphin:title="@string/pref_content_set_as_default_browser" dolphin:summary="@string/set_as_default_browser_toast" dolphin:enabled="true" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_personal_data" dolphin:title="@string/pref_privacy_settings" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="privacy_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_personal_data" dolphin:title="@string/pref_personal_data_settings" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="personal_data_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_account_dolphin" dolphin:title="@string/dolphin_sync" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_web_content" dolphin:title="@string/pref_content_title" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="webcontent_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_customize_settings" dolphin:title="@string/pref_customize_settings" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="customize_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_vg_settings" dolphin:title="@string/pref_category_gesture_voice_settings" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="com.dolphin.browser.vg.VoiceGestureSettingsActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.PreferenceScreen dolphin:key="sendfeedback" dolphin:title="@string/pref_send_feedback" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="feedback_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.NotifyPreference dolphin:key="pref_help" dolphin:title="@string/pref_category_help" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="help_preference" />
+        </intent>
+    </dolphin.preference.NotifyPreference>
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

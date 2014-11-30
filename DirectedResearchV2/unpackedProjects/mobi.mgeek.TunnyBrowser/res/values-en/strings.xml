@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dpl_player_loading">Loading</string>
+    <string name="dpl_player_loading_error">Unable to play this video. Please try again later.</string>
+    <string name="dpl_player_network_error">Network connection is not available.</string>
+    <string name="dpl_player_network_error_retry">Refresh</string>
+</resources>

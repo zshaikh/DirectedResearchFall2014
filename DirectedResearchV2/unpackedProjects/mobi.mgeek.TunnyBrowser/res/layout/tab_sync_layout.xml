@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/other_device_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/path_bar" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bookmark_button_horizontal_padding" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/back_btn" android:padding="@dimen/bookmark_path_icon_padding" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/SettingsTitleAppearence" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/bookmark_path" android:paddingLeft="@dimen/bm_path_textview_horizontal_padding" android:paddingRight="@dimen/bm_path_textview_horizontal_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/right_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/bookmark_button_horizontal_padding" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/sync_btn" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/body" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/path_bar">
+        <LinearLayout android:orientation="horizontal" android:id="@id/bookmark_sync_status_container" android:layout_width="fill_parent" android:layout_height="@dimen/bookmark_sync_status_bar_height">
+            <TextView android:textSize="@dimen/bookmark_sync_status_bar_text_size" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/bookmark_sync_status" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bm_list_item_horizontal_margin_outer" android:maxLines="1" android:layout_weight="1.0" />
+            <ImageView android:id="@id/bookmark_sync_progress" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bm_list_item_horizontal_margin_inner" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/bm_list_item_horizontal_margin_inner" android:layout_marginBottom="4.0dip" android:contentDescription="@null" />
+        </LinearLayout>
+        <ListView android:scrollbarThumbVertical="@drawable/vertical_scroll_bar" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:layout_below="@id/bookmark_sync_status_container" android:overScrollFooter="@null" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_linear" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/empty_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="15.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/empty_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/no_other_devices" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

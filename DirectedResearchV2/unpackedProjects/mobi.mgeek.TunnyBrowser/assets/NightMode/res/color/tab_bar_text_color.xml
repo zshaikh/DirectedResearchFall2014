@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tab bar中Tab的文字颜色 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/tab_bar_selected_color"/>
+    <item android:color="@color/tab_bar_normal_color"/> <!-- not selected -->
+</selector>

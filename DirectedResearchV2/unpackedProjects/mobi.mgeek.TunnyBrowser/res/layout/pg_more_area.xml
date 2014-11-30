@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/more_area" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/pg_more_divider1" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:background="@color/pg_more_divider2" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:gravity="center" android:id="@id/more_click_area" android:background="@drawable/pagedrop_more_bg_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="22.0px" android:textStyle="bold" android:textColor="#ff4b4b4b" android:gravity="center" android:id="@id/pg_more" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="More" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@id/progressBar" android:visibility="invisible" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="10.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

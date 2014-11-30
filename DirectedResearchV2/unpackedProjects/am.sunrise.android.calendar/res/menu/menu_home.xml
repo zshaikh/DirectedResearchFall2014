@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_notification_read" android:id="@id/menu_inbox_count" android:title="@string/menu_inbox_count" android:showAsAction="always" android:actionLayout="@layout/actionbar_action_notifications" />
+    <item android:icon="@drawable/ic_action_view" android:id="@id/menu_agendaview_scheduleview_switcher" android:showAsAction="always" android:actionLayout="@layout/actionbar_action_switcher" />
+    <item android:icon="@drawable/ic_action_add" android:id="@id/menu_add_event" android:title="@string/menu_add_event" android:showAsAction="always" />
+    <item android:icon="@drawable/ic_action_settings" android:id="@id/menu_settings" android:orderInCategory="10000" android:title="@string/menu_settings" android:showAsAction="always" />
+</menu>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/btn_done" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="56.599976dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/setting_page_title_color" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pagedrop_title" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/namesetting" android:background="@drawable/settings_bg_head_bk" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/header">
+        <TextView android:textSize="16.0sp" android:id="@id/name_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/pagedrop_username_selctor" android:ellipsize="end" android:gravity="right" android:id="@id/user_name" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:text="@string/pg_default_username" android:singleLine="true" android:layout_toRightOf="@id/name_title" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <EditText android:textSize="16.0sp" android:gravity="center_vertical" android:id="@id/edit_user_name" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="15.0dip" android:text="@string/pg_default_username" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="30" android:layout_toRightOf="@id/name_title" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/imagesetting" android:background="@drawable/settings_bg_foot_bk" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/namesetting">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/header_around" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/user_pic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pagedrop_default_header" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:id="@id/pic_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:singleLine="true" android:layout_toLeftOf="@id/header_around" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

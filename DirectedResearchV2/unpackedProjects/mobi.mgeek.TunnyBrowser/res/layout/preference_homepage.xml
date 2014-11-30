@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/show_most_visited_folder" android:paddingLeft="@dimen/settings_page_text_margin_left" android:paddingTop="2.0dip" android:paddingRight="@dimen/settings_page_text_margin_left" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height">
+        <TextView android:textAppearance="@style/SettingsItemTitleAppearence" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/show_most_visited_folder_title" android:paddingRight="6.0dip" android:focusable="false" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/pref_show_mostvisitedfolder" android:singleLine="true" android:layout_weight="1.0" />
+        <com.mgeek.android.ui.TextCheckBox android:textSize="16.0sp" android:layout_gravity="center_vertical" android:id="@id/show_most_visited_folder_checkbox" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="25.0dip" android:button="@null" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/option_new_tab_page" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height">
+        <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/option_new_tab_page_title" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_page_list_item_height" android:text="@string/option_speed_dial_homepage_tilte" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/option_specified_page" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/specified_page_option_title" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height" android:text="@string/option_url_homepage_tilte" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <EditText android:id="@id/option_specified_page_url" android:nextFocusLeft="@id/option_specified_page_url" android:nextFocusUp="@id/option_specified_page_url" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="28.0dip" android:layout_marginBottom="20.0dip" android:hint="@string/http" android:inputType="textUri" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

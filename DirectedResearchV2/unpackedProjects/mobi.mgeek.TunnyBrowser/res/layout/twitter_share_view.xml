@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/twitter_share_content" android:paddingLeft="25.0dip" android:paddingTop="20.0dip" android:paddingRight="25.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/profile_info_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip">
+        <ImageView android:id="@id/profile_image" android:layout_width="41.0dip" android:layout_height="41.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/share_default_profile" android:layout_alignParentLeft="true" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/share_username_font_size" android:typeface="sans" android:textStyle="bold" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_toRightOf="@id/profile_image" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/share_sub_username_font_size" android:id="@id/screen_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/name" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/middle_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.dolphin.browser.share.VerticalFreeScrollView android:scrollbarStyle="insideOverlay" android:id="@id/twitter_share_editor_container" android:paddingRight="3.0dip" android:layout_width="fill_parent" android:layout_height="137.25dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="12.0dip">
+                <EditText android:textSize="@dimen/share_content_text_font_size" android:typeface="sans" android:gravity="top|left|center" android:id="@id/editor" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/share_twitter_text_left_margin" android:hint="@string/share_edittext_hint" />
+                <com.dolphin.browser.share.Spacer android:id="@id/spacer" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.dolphin.browser.share.VerticalFreeScrollView>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="25.0dip" android:layout_marginLeft="@dimen/share_twitter_text_left_margin" android:layout_marginBottom="5.0dip">
+            <ImageView android:id="@id/twitter_share_at" android:paddingLeft="5.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/share_at_description" />
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/share_limit_text_color" android:id="@id/length" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:paddingLeft="@dimen/share_twitter_text_left_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip">
+        <RelativeLayout android:id="@id/image_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.5dip" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/url_image" android:layout_width="75.0dip" android:layout_height="75.0dip" android:layout_alignParentLeft="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:enabled="false" android:textColor="@color/share_twitter_url_color" android:ellipsize="end" android:id="@id/twitter_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" android:layout_toRightOf="@id/image_container" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

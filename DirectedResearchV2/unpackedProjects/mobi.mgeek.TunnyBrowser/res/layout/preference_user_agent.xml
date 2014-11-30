@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/agent_android_layout" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height">
+                <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/agent_android_check" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_page_list_item_height" />
+            </LinearLayout>
+            <View android:id="@id/divider1" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/agent_desktop_layout" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height">
+                <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/agent_desktop_check" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_page_list_item_height" />
+            </LinearLayout>
+            <View android:id="@id/divider2" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/agent_iphone_layout" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height">
+                <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/agent_iphone_check" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_page_list_item_height" />
+            </LinearLayout>
+            <View android:id="@id/divider3" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/agent_ipad_layout" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height">
+                <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/agent_ipad_check" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_page_list_item_height" />
+            </LinearLayout>
+            <View android:id="@id/divider4" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/agent_custom_layout" android:paddingRight="@dimen/settings_page_text_margin_left" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:gravity="center_vertical" android:id="@id/agent_custom_check" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <EditText android:id="@id/agent_custom_text" android:visibility="gone" android:nextFocusLeft="@id/option_specified_page_url" android:nextFocusUp="@id/option_specified_page_url" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="28.0dip" android:layout_marginBottom="20.0dip" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

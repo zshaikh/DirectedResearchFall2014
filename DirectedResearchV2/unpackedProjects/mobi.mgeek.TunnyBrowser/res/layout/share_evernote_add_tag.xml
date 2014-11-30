@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/share_evernote_tag_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/share_evernote_tag_title_container" android:layout_width="fill_parent" android:layout_height="@dimen/share_title_item_height" android:layout_alignParentTop="true">
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/share_evernote_add_tag_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/share_evernote_add_tag_title" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/share_evernote_tag_finished" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/share_evernote_add_tag_container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/share_evernote_common_text_size" android:textColor="@color/menu_table_list_text_color" android:gravity="center" android:layout_gravity="center" android:id="@id/share_evernote_add_tag" android:layout_width="wrap_content" android:layout_height="58.329987dip" android:minHeight="@dimen/share_evernote_add_tag_height" android:text="@string/share_evernote_create_new_tag" android:drawablePadding="@dimen/share_evernote_add_tag_compound_drawable_padding" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/share_evernote_add_tag_container" android:layout_below="@id/share_evernote_tag_title_container">
+        <LinearLayout android:orientation="vertical" android:id="@id/share_evernote_create_tag_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/share_evernote_add_tag_height" android:layout_marginBottom="5.0dip">
+                <EditText android:textSize="@dimen/share_evernote_common_text_size" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/share_evernote_input_new_tag" android:paddingLeft="5.0dip" android:layout_width="0.0dip" android:layout_height="39.659973dip" android:layout_marginLeft="@dimen/share_evernote_add_tag_horizontal_margin" android:layout_marginRight="16.0dip" android:hint="@null" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/share_evernote_common_text_size" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/share_evernote_create_btn" android:layout_width="wrap_content" android:layout_height="38.329987dip" android:layout_marginRight="@dimen/share_evernote_add_tag_horizontal_margin" android:text="@string/share_evernote_create_tag_btn" android:drawablePadding="2.0dip" />
+            </LinearLayout>
+            <View android:id="@id/share_evernote_top_divider" android:layout_width="fill_parent" android:layout_height="@dimen/share_evernote_border_thick" />
+        </LinearLayout>
+        <ListView android:id="@id/share_evernote_tag_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/share_evernote_footer_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</RelativeLayout>

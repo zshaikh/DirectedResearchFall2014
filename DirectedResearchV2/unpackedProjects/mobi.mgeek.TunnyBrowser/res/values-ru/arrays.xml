@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Опции</item>
+        <item>Описание дополнения</item>
+        <item>Отключить дополнение</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Выбрать из библиотеки</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Латинская-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Китайская (GBK)</item>
+        <item>Китайская (Big5)</item>
+        <item>Японская (ISO-2022-JP)</item>
+        <item>Японская (SHIFT_JIS)</item>
+        <item>Японский (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (далее назад)</item>
+        <item>100% (подогнать под размер экрана)</item>
+        <item>200% (в увеличенном масштабе)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Рабочий стол</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Пользовательские</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Спрятать</item>
+        <item>Слева (снизу)</item>
+        <item>Справа (снизу)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Спрятать</item>
+        <item>Слева</item>
+        <item>Справа</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Отключено</item>
+        <item>Лучшее качество</item>
+        <item>Сбалансировано</item>
+        <item>Меньший размер</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Всегда вкл.</item>
+        <item>Всегда откл.</item>
+        <item>Показывать в сети WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Открыть новую страницу</item>
+        <item>Открыть предыдущую страницу</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>По умолчанию</item>
+        <item>Открыть в фоновой вкладке</item>
+        <item>Открыть в новой вкладке</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Автоматически</item>
+        <item>Альбомный</item>
+        <item>Портретный</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Всегда вкл.</item>
+        <item>По запросу</item>
+        <item>Отключить</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Отключено</item>
+        <item>Только при подключении к Wi-Fi</item>
+        <item>Всегда</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Включить левую панель</item>
+        <item>Включить правую панель</item>
+        <item>Включить все</item>
+        <item>Отключить</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Крохотный</item>
+        <item>Маленький</item>
+        <item>Нормальный</item>
+        <item>Крупный</item>
+        <item>Огромный</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Действие в Android по умолчанию</item>
+        <item>Прокрутить страницу вверх/вниз</item>
+        <item>Переключить вкладки</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Я думаю</item>
+        <item>Я как раз этим и занят.</item>
+        <item>Принято.</item>
+        <item>Как пожелаете.</item>
+        <item>Ваше желание для меня закон</item>
+        <item>Подождите минутку.</item>
+        <item>Дайте мне секунду.</item>
+        <item>Думаю.</item>
+        <item>Обрабатываю.</item>
+        <item>Одну минуту.</item>
+        <item>Подождите.</item>
+        <item>Ясно.</item>
+        <item>Я сделаю это отлично.</item>
+        <item>Побеждаю.</item>
+        <item>Это классно.</item>
+        <item>УРА!</item>
+        <item>Звучит вкусно…</item>
+        <item>Звучит здорово!</item>
+        <item>Я вас слышу!</item>
+    </string-array>
+</resources>

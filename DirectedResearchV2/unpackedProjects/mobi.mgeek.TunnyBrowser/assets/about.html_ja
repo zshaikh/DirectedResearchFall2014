@@ -1,0 +1,149 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>Dolphin About</title>
+<style>
+body{margin:0;padding:0;border:none;list-style:none;font-family:Arial,Helvetica,sans-serif;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);background:#FFF;color:#000;font-size:16px;-ms-touch-action:none;-webkit-font-smoothing:antialiased;}
+#top{text-align:center;margin-top:40px;}
+#companypic img{width:118px; height:110px; border:none;}
+#softname{font-size:26px; color:#379c00; font-weight:bold;padding:5px 0;}
+#namenext{font-size:14px; color: #808080;}
+#namenext b{font-weight:bold;}
+#version{font-size:18px; color:#808080;font-weight:bold;padding:5px 0;}
+#jetpack {display:none;font-size: 14px; color:#379c00; font-weight:bold;}
+#contact {font-size:18px;color:#808080;}
+#menu {font-size:16px;padding:10px 0;color:#808080;}
+#menu a{color:#379c00;padding:0 6px;display:inline-block;}
+#copyright{font-size:14px;color:#808080;line-height:18px;}
+#footer{text-align:center;margin-top:70px;}
+
+@media screen and (max-width:300px){
+    #companypic img{width:81px; height:75px; padding-top:3px;}
+    #softname{padding:0;font-size:20px;}
+    #namenext{font-size:13px;}
+    #version{font-size:20px;padding:0;}
+    #jetpack{font-size:14px;}
+    #footer{margin-top:30px;}
+    #menu{font-size:14px;}
+    #contact{font-size:16px;}
+    #copyright{font-size:12px;}
+    #top{margin-top:20px;}
+    #footer{margin-top:30px;}
+}
+@media screen and (min-height:800px){
+    #top{margin-top:80px;}
+    #footer{margin-top:100px;}
+}
+</style>
+</head>
+<body>
+    <div id="top">
+        <div id="companypic"><img id="logo" style="visibility:hidden;"/></div>
+        <div id="softname">ドルフィンブラウザ</div>
+        <div id="namenext">(<b>旧</b>: ドルフィンブラウザ HD)</div>
+        <div id="version">&nbsp;</div>
+        <div id="jetpack">&nbsp;</div>
+    </div>
+    <div id="footer">
+        <div id="contact">お問い合わせ</div>
+        <div id="menu">
+            <a href="http://www.dolphin-browser.jp/archives">ブログ</a>|<a id="email" href="">メール</a>|<a href="http://www.facebook.com/DolphinFansJp">Facebook</a>|<a href="https://twitter.com/JP_Dolphin">Twitter</a>|<a href="http://www.dolphin-browser.jp/credit/">クレジット</a>		</div>
+        <div id="copyright">Copyright © 2009-2014 Dolphin Browser.<br>All rights reserved.</div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+var dolphinAPI = {
+    getDolphinLogoBase64 : function(){
+        var context = {
+            action : "getDolphinLogoBase64",
+        };
+
+        var paras = [
+            "ctx=" + encodeURIComponent(JSON.stringify(context)),
+            "callback=dolphinAPI.callback"
+        ];
+
+        window.location = "dolphin://jsreq/dolphin/getDolphinLogoBase64?" + paras.join('&');
+    },
+    getDeviceInfo : function(){
+        var context = {
+            action : "getDeviceInfo",
+        };
+
+        var paras = [
+            "ctx=" + encodeURIComponent(JSON.stringify(context)),
+            "callback=dolphinAPI.callback"
+        ];
+        window.location = "dolphin://jsreq/dolphin/getDeviceInfo?" + paras.join('&');
+    },
+
+    callback : function(ctx, data){
+        var tempThis = this;
+
+        switch(ctx.action){
+            case "getDolphinLogoBase64": (function(base64){
+                    var logo = document.getElementById("logo");
+                    logo.src = base64;
+                    logo.style.visibility = "visible";
+                })(data);
+            break;
+
+            case "getDeviceInfo": (function(deviceInfo){
+                    var version = document.getElementById("version");
+                    version.innerHTML = "バージョン " + (deviceInfo.shell_version_text || "unknown");
+
+                    var jetpack_version_text = deviceInfo.jetpack_version_text;
+                    if(jetpack_version_text){
+                        var jetpack = document.getElementById("jetpack");
+                        jetpack.innerHTML = "ドルフィン Jetpack " + jetpack_version_text;
+                        jetpack.style.display = "block";
+                    }
+
+                    //email
+                    var appVersion = deviceInfo.shell_version_text || "";
+                    var model = deviceInfo.model || "";
+                    var androidSys = deviceInfo.android_version_text || "";
+                    var kernelVersion = deviceInfo.kernel_version || "";
+
+                    var emailAddress = "support@dolphin-browser.com";
+                    var subject = "Dolphin Browser "+appVersion+" フィードバックを送信";
+                    var body = "下の欄にコメントをお書きください:\n\n\n\n";
+                    body += appVersion ? "アプリのバージョン: "+appVersion+"\n" : "";
+                    body += model ? "モデル番号: "+model+"\n" : "";
+                    body += androidSys ? "Androidバージョン: "+androidSys+"\n" : "";
+                    body += kernelVersion ? "カーネルバージョン: "+kernelVersion+"\n" : "";
+
+                    var email = document.getElementById("email");
+                    email.href = 'mailto:' + encodeURIComponent(emailAddress) +
+                                 '?subject=' + encodeURIComponent(subject)+
+                                 '&body=' + encodeURIComponent(body);
+                })(data);
+            break;
+        }
+    }
+};
+
+function renderPage(){
+    //logo
+    if(window.dolphinmeta){
+        dolphinAPI.getDolphinLogoBase64();
+        //延时调用,否则前面请求会被cancel掉
+        setTimeout(function(){
+            dolphinAPI.getDeviceInfo();
+        }, 0);
+    }
+}
+
+renderPage();
+
+</script>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_ba140249f6f15b834edcd2fae94d30ce74c6d689acd5e4029fbf859cb7deb820_flash_display_Sprite" mod="1360222807690" signatureChecksum="3816520841" >
+        <def id="_ba140249f6f15b834edcd2fae94d30ce74c6d689acd5e4029fbf859cb7deb820_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/stuv/ane/trialpay/AneTrialPay" mod="1359521524000" signatureChecksum="1457416138" >
+        <def id="com.stuv.ane.trialpay:AneTrialPay" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="7d09d1c85bf735898c15b710025a1f2492fa72b492e02d5991ed8ba62620a361"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

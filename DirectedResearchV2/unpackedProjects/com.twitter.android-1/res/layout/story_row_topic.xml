@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:id="@id/story_topic" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:cardStyle="single"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.twitter.android.widget.OverlayImageView android:id="@id/story_image" android:background="@color/solid_white" android:layout_width="fill_parent" android:layout_height="170.0dip" android:scaleType="matrix" twitter:overlayDrawable="@drawable/image_overlay" />
+        <RelativeLayout android:id="@id/story_header" android:background="@drawable/bg_translucent" android:padding="@dimen/list_row_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_row_padding" android:src="@drawable/ic_chevron_white" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:textColor="@color/solid_white" android:ellipsize="end" android:id="@id/story_header_query" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/chevron" android:layout_alignParentTop="true" android:lineSpacingMultiplier="1.0" />
+            <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/solid_white" android:id="@id/story_header_tweets" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/story_subtitle" android:singleLine="true" android:layout_toLeftOf="@id/chevron" android:layout_below="@id/story_header_query" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

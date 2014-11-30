@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_c30a35114f6e6f092893084c73a4e516c919bf0a7b16bb5d3e3a5bf6ad0eb9fd_flash_display_Sprite" mod="1399411051005" signatureChecksum="3298851647" >
+        <def id="_c30a35114f6e6f092893084c73a4e516c919bf0a7b16bb5d3e3a5bf6ad0eb9fd_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/sgn/mobile/SGNMobile" mod="1398203080000" signatureChecksum="4191100613" >
+        <def id="com.sgn.mobile:SGNMobile" /> 
+        <dep id="flash.utils:setTimeout" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.utils:getQualifiedClassName" type="e" /> 
+        <dep id="ArgumentError" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="Math" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.events:DataEvent" type="e" /> 
+        <dep id="com.sgn.mobile:NotificationEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.desktop:NativeApplication" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="ArgumentError" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.display:Stage" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="flash.desktop:NativeApplication" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/sgn/mobile/NotificationEvent" mod="1397234818000" signatureChecksum="2778486504" >
+        <def id="com.sgn.mobile:NotificationEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="73b778a9a87fabf85397373a9dbd6a8a0b8ba7fa1b03373cc16ec064e06ae1bf"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

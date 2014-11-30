@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_privacy_settings"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_clear_data" dolphin:title="@string/clear_data" dolphin:background="@drawable/settings_bg_head_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="clear_data_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_exit_settings" dolphin:title="@string/pref_category_exit" dolphin:background="@drawable/settings_bg_head_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="exit_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.CheckBoxPreference dolphin:key="remember_passwords" dolphin:title="@string/pref_security_remember_passwords" dolphin:summary="@string/pref_security_remember_passwords_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="use_master_key" dolphin:title="@string/pref_security_use_master_key" dolphin:summary="@string/pref_security_use_master_key_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="save_formdata" dolphin:title="@string/pref_security_save_form_data" dolphin:summary="@string/pref_security_save_form_data_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="enable_geolocation" dolphin:title="@string/pref_privacy_enable_geolocation" dolphin:summary="@string/pref_privacy_enable_geolocation_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="website_settings" dolphin:title="@string/pref_extras_website_settings" dolphin:summary="@string/pref_extras_website_settings_summary" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.WebsiteSettingsActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

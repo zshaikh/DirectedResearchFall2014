@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/new_window_context_menu_id" android:title="@string/open_in_new_window" />
+    <item android:id="@id/open_in_background_context_menu_id" android:title="@string/contextmenu_openlink_in_background" />
+    <item android:id="@id/delete_history_item_id" android:title="@string/remove_history_item" />
+    <item android:id="@id/clear_history_menu_id" android:title="@string/clear_history" />
+</menu>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 长按弹出框文字的颜色 -->
+    <color name="alert_list_text1_color">#ffffffff</color>
+    <color name="alert_list_text2_color">#ffd9d9d9</color>
+    <!-- 菜单中标题的文字颜色 -->
+    <color name="menu_title_textcolor">#ff4d4d4d</color>
+    <!-- 菜单中快捷键的文字颜色 -->
+    <color name="menu_shortcut_textcolor">#ff4d4d4d</color>
+    <!-- 对话框标题文字的颜色 -->
+    <color name="dialog_title_text_color">#4cb3b3b3</color>
+    <!-- 对话框消息文字的颜色 -->
+    <color name="dialog_message_text_color">#404040</color>
+    <!-- 对话框选项文字的颜色 -->
+    <color name="dialog_item_text_color">#404040</color>
+    <!-- 标题禁用的颜色 -->
+    <color name="title_disable_color">#e0b8b8b8</color>
+    <!-- rc4 -->
+    <color name="settings_page_bg">@color/night_mode_bg_color</color>
+    <color name="settings_title_color">@color/night_mode_title_text_color</color>
+    <color name="settings_third_text_color">#ff404244</color>
+    <color name="sync_status_text_color">#616161</color>
+    <color name="sync_failed_text_color">#540c0c</color>
+
+    <color name="settings_tab_title_color">#4cffffff</color>
+    <color name="settings_tab_title_selected_color">#66ffffff</color>
+
+    <!-- rc4 settings -->
+    <color name="setupwizard_title_color">#214606</color>
+    <color name="setupwizard_summary_color">#616161</color>
+    <color name="setupwizard_text_color">#616161</color>
+    <!-- voice gesture colors -->
+    <!-- gestures -->
+    <color name="gesture_color">#ff214606</color>
+    <color name="gesture_trace_color">#19214606</color>
+    <color name="gesture_grid_line_color">#ff343434</color>
+    <color name="recommend_gesture_title_color">#404040</color>
+    <color name="recommend_gesture_item_color">#616161</color>
+    <color name="recommend_gesture_divider_color">#214705</color>
+    <color name="recommend_gesture_grid_divider_color">#27292b</color>
+    <color name="gesture_pad_tips_text_color">#ff616161</color>
+    <color name="gesture_tip_text_color">#4e1413</color>
+    <!-- voice -->
+    <color name="voice_anim_text_color">#ff616161</color>
+    <color name="vg_pannel_title_color">#6b6b6b</color>
+    <color name="vg_pannel_bg_color">#ed1a1d21</color>
+    <color name="vg_error_msg_color">#616161</color>
+    <color name="vg_recognizing_text_color">#214705</color>
+    <color name="vg_pannel_error_msg_color">#616161</color>
+    <!-- about -->
+    <color name="about_title_color">#3eb300</color>
+    <color name="about_regular_text_color">#999999</color>
+    <color name="about_link_text_color">#3eb300</color>
+    <!-- popup -->
+    <color name="popup_grid_line_color">#4d4d4d</color>
+
+    <!-- add speeddial -->
+    <color name="speed_dial_chooser_background_color">#389d00</color>
+    <color name="speed_dial_button_text_color">#616161</color>
+    <color name="speed_dial_title_color">#737373</color>
+    <color name="speed_dial_chooser_url_color">#4d4d4d</color>
+    <color name="speed_dial_chooser_text_color">#4d4d4d</color>
+    <color name="speed_dial_chooser_selected_text_color">#707070</color>
+
+    <!-- homepage -->
+    <color name="speed_dial_divider_color">#27292b</color>
+    <color name="homepage_text_color">#737373</color>
+    <color name="search_view_hint_text_color">#ff494b4c</color>
+    <color name="search_view_text_color">#ff616161</color>
+    <color name="search_view_list_divider_color">#ff242628</color>
+    <color name="search_view_button_text_color">#ff737373</color>
+    <color name="search_view_keyword_text_color">#ff494b4c</color>
+    <color name="content_page_list_header_group_title_color">#214606</color>
+    <color name="content_page_list_header_title_color">#214606</color>
+    <color name="content_page_list_header_summary_color">#a1a1a1</color>
+    <color name="news_header_title_selected_color">#214606</color>
+    <color name="news_header_title_color">#737272</color>
+    <color name="content_page_list_vertical_divider_color">#242628</color>
+    <color name="content_page_list_horizontal_divider_color">#1d1f23</color>
+    <color name="content_page_list_more_button_text_color">#737373</color>
+    <color name="content_page_list_content_text_color_1">#4e4f50</color>
+    <color name="content_page_list_content_text_color_2">#616161</color>
+    <color name="content_page_list_content_text_color_3">#808080</color>
+    <color name="content_page_list_content_group_text_color">#214606</color>
+    <color name="content_page_list_content_section_bg">#1a1d21</color>
+
+    <color name="find_on_page_matches_text_color">#4d4f52</color>
+
+    <!-- settings -->
+    <color name="settings_infomation_text_color">#ff404040</color>
+
+    <!-- download -->
+    <color name="dl_title_text_color">#ff4d4f52</color>
+    <color name="dl_empty_notify_text_color">#fff2f2f2</color>
+    <color name="dl_window_background_color">#ff333333</color>
+    <color name="dl_group_background_color">#ff1a1d21</color>
+    <color name="dl_item_background_color">#ff1e2226</color>
+    <color name="dl_item_background_color_pressed">#ff193107</color>
+    <drawable name="dl_back_btn_bg_normal">#1a1d21</drawable>
+    <drawable name="dl_back_btn_bg_pressed">#1a1d21</drawable>
+
+    <!-- dolphin connect -->
+    <color name="ds_page_bg">#1a1d21</color>
+    <color name="dolphin_connect_login_bg_color">#cc1e3e07</color>
+    <color name="dolphin_connect_login_hint_color">#66ffffff</color>
+    <color name="share_login_button_text_color">#4dffffff</color>
+    <color name="share_login_summary_color">#616161</color>
+    <color name="account_page_bg">#1a1d21</color>
+    <color name="account_name_color">#4d4d4d</color>
+
+    <color name="account_summary_color">#616161</color>
+    <color name="ds_button_color">#ff4c4c4c</color>
+    <color name="set_as_default_info_text_color">#616161</color>
+    <color name="set_default_browser_btn_bg">#193107</color>
+
+    <!-- tool bar -->
+    <color name="toolbar_text_color">#ff616161</color>
+    <color name="toolbar_text_dark_color">#737373</color>
+    <color name="toolbar_text_light_color">#214606</color>
+    <color name="empty_addon_notify_color">#616161</color>
+
+    <!-- gesture & add bookmark -->
+    <color name="gesture_image_addbookmark">#737373</color>
+
+    <!-- download -->
+    <color name="dl_category_count_color">#ff404040</color>
+    <color name="dl_category_title_color">#ff616161</color>
+    <color name="download_empty_text_color">#404040</color>
+    <color name="downloaded_bottom_button_text_color">#ff616161</color>
+    <color name="dl_category_divider_first_line_color">#ff1a1a1a</color>
+    <color name="dl_category_divider_second_line_color">#ff272a2a</color>
+    <color name="dl_progress_bar_start_color">#2d5d0b</color>
+    <color name="dl_progress_bar_end_color">#39760e</color>
+    <color name="dl_category_text_title_color">#ff4d4f52</color>
+    <color name="file_manager_path_text_color">#1d3a09</color>
+    <color name="search_dialog_list_divider_color">#26ffffff</color>
+    <color name="downloaded_path_text_color">#616161</color>
+    <color name="textview_background_color">#1f3d07</color>
+    <color name="dl_progress_bar_bg_color">#404040</color>
+    <color name="dl_progress_bar_headpoint_color">#404040</color>
+
+    <color name="progress_bar_gradient_start_color">#2d5d0b</color>
+    <color name="progress_bar_gradient_end_color">#39760e</color>
+    <color name="progress_bar_gradient_end_point_color">#404040</color>
+    <color name="tl_text_color_green">#1d3a09</color>
+
+    <!-- network diagnose -->
+    <color name="nd_hint_text_color">#ff530202</color>
+    <color name="nd_progress_count_color">#ff4d4d4d</color>
+    <color name="nd_progress_current_color">#ff1b3b05</color>
+    <color name="nd_progress_text_color">#ff616161</color>
+
+    <color name="history_title_textcolor">#404040</color>
+    <color name="history_url_textcolor">#404040</color>
+
+    <!-- speed dial -->
+    <color name="navigation_view_bg_color">#ff1a1d22</color>
+    <color name="hot_apps_text_color">#ff1e3e07</color>
+    <color name="speeddail_item_bg_normal">#00000000</color>
+    <color name="speeddail_item_bg_pressed">#00000000</color>
+    <color name="speeddial_title_color">#616161</color>
+    <color name="speeddial_title_bg">#242424</color>
+    <color name="speeddial_add_bg_pressed_color">#ff1d2520</color>
+    <color name="speeddial_add_line_color">#ff27292b</color>
+    <color name="dl_empty_view_bk_color">#ff1e2226</color>
+    <color name="account_hint_focus_color">#585858</color>
+    <color name="email_hint_divider_color">#27292b</color>
+    <color name="transparent">#00000000</color>
+    <color name="search_box_hint_text_color">#ff27292b</color>
+    <color name="set_as_default_browser_text_color">#616161</color>
+    <color name="search_box_highlight_text_color">#1d3a09</color>
+    <color name="find_on_page_text_color">#616161</color>
+    <color name="find_on_page_hint_color">#27292b</color>
+    <color name="add_speeddial_empty_text_color">#4e4e4e</color>
+    <color name="speeddial_bottom_divider_color">#5a333333</color>
+
+    <color name="share_content_bg_color">#16191c</color>
+    <color name="share_title_btn_bg_selected">#12161a</color>
+    <color name="share_title_btn_bg_normal">#191f25</color>
+    <color name="share_title_bar_two_divider_color">#27292b</color>
+
+    <color name="share_title_more_item_background_normal">#191f25</color>
+
+    <color name="highlight_text_color_green">#1d3a09</color>
+    <color name="address_hint_text_color">#333333</color>
+
+    <color name="addon_title_color">#4e4e4e</color>
+    <color name="addon_message_color">#404040</color>
+
+    <color name="facebook_share_view_content_bg_color">#191f25</color>
+    <color name="facebook_share_editor_hint_color">#616161</color>
+    <color name="facebook_share_editor_color">#333333</color>
+    <color name="facebook_website_url_color">#4d4d4d</color>
+    <color name="facebook_website_desc_color">#616161</color>
+
+    <color name="facebook_website_title_color">#616161</color>
+
+    <color name="twitter_share_view_content_bg_color">#191f25</color>
+    <color name="twitter_share_editor_hint_color">#616161</color>
+    <color name="twitter_share_editor_color">#333333</color>
+    <color name="twitter_website_url_color">#4d4d4d</color>
+
+    <color name="share_page_main_bg_color">#191f25</color>
+
+    <color name="box_share_view_content_bg_color">#191f25</color>
+
+    <color name="share_box_content_container_bg">#111111</color>
+    <color name="share_box_content_bg">#1a1d21</color>
+    <color name="share_box_text">#616161</color>
+
+    <color name="evernote_share_view_content_bg_color">#191f25</color>
+
+    <color name="share_evernote_text_color">#616161</color>
+    <color name="share_evernote_text_hint_color">#4d616161</color>
+    <color name="share_evernote_border_color">#27292b</color>
+    <color name="share_box_divider_color">#27292b</color>
+
+    <color name="menu_menu_bottom_background">#181f13</color>
+    <drawable name="sonar_gesture_background_drawable">#181f13</drawable>
+    <color name="sonar_option_button_bg">#181f13</color>
+    <color name="vg_help_text_color">#1d3a09</color>
+    <color name="share_login_dolphin_bg_color">#181f13</color>
+    <color name="share_login_dolphin_bg_color_pressed">#33ffffff</color>
+    <color name="share_title_bar_background_color">#181f13</color>
+    <drawable name="translucent_background">#00000000</drawable>
+    <color name="facebook_at_friend_color">#181f13</color>
+    <color name="drop_target_bg_color">#181f13</color>
+    <drawable name="sonar_gesture_tab_divider">#33ffffff</drawable>
+    <color name="progress_gradient_bg_start_color">#244e0d</color>
+    <color name="progress_gradient_bg_end_color">#55853c</color>
+    <color name="progress_gradient_top_start_color">#244e0d</color>
+    <color name="progress_gradient_top_end_color">#6e8362</color>
+    <color name="tablist_bar_text_color_nomal">#707070</color>
+    <color name="tablist_bar_text_color_pressed">#4d707070</color>
+    <drawable name="bookmark_list_bg">#181f13</drawable>
+    <drawable name="menu_menu_page_background_nomal">#16191c</drawable>
+    <drawable name="menu_button_pressed">#25292e</drawable>
+    <color name="menu_divider_color">#1affffff</color>
+    <drawable name="sonar_gesture_title_divider">#27292b</drawable>
+    <color name="gesture_list_item_bg_pressed">#1e2226</color>
+    <color name="gesture_box_">#16191c</color>
+    <drawable name="left_bar_bookmark_item_normal_bg_color">#1c1f23</drawable>
+    <color name="gesture_create_dialog_title_divider">#27292b</color>
+    <color name="gesture_title_text_color">#6c1c0a</color>
+    <drawable name="commom_list_item_normal_bg_color">#16191c</drawable>
+    <drawable name="commom_list_item_pressed_bg_color">#25292e</drawable>
+    <drawable name="dl_back_btn_bg_normal">#16191c</drawable>
+    <color name="dl_back_btn_vertical_divider">#1affffff</color>
+    <drawable name="tb_address_bar_bg_w">#16191c</drawable>
+    <drawable name="tb_address_bar_vertical_line">#26ffffff</drawable>
+    <color name="workspace_background_color">#16191C</color>
+    <drawable name="commom_layout_bg">#16191c</drawable>
+    <drawable name="commom_layout_bg_pressed">#25292e</drawable>
+    <color name="popup_line_color">#1Affffff</color>
+    <drawable name="popup_line_color">#1Affffff</drawable>
+    <drawable name="dd_pop_line">#26ffffff</drawable>
+    <color name="settings_send_to_device_label">#333333</color>
+
+    <drawable name="commom_background_pressed_color">#25292e</drawable>
+    <drawable name="commom_background_normal_color">#16191c</drawable>
+    <color name="commom_background_pressed_color">#25292e</color>
+    <color name="share_grid_dolphin_background_normal_color">#181f13</color>
+    <color name="share_login_dolphin_group_text_color">#4d4d4d</color>
+    <color name="share_grid_android_background_normal_color">#16191c</color>
+    <color name="share_login_android_group_text_color">#4d4d4d</color>
+    <color name="setting_page_title_color">@color/night_mode_title_text_color</color>
+    <color name="setting_page_bg">@color/night_mode_bg_color</color>
+    <drawable name="listview_layout_bg">#16191c</drawable>
+    <drawable name="alert_dialog_custome_layout_bg">#16191c</drawable>
+    <color name="settings_title_hilight_color">#1d3a09</color>
+    <color name="sync_status_text_bg_color">#25292e</color>
+    <color name="bookmark_empty_bg_color">#16191c</color>
+    <drawable name="lm_bookmark_title_bar_bg">#16191c</drawable>
+    <color name="engine_deepsearch_text_color">#707070</color>
+    <color name="list_divider_light_line">#1Affffff</color>
+
+    <color name="share_sub_username_text_color">#707070</color>
+    <color name="share_username_text_color">#1d3a09</color>
+    <drawable name="pagedrop_chat_divider">#1affffff</drawable>
+    <color name="pagedrop_chat_user_name_color">#4d4d4d</color>
+    <color name="pagedrop_chat_time_color">#333333</color>
+    <color name="pagedrop_chat_title_color">#4d4d4d</color>
+    <color name="pagedrop_title_text_color">@color/night_mode_title_text_color</color>
+
+    <color name="share_friend_bg_color">#16191c</color>
+    <color name="share_title_more_item_background_selected">#25292e</color>
+    <color name="facebook_website_loading_text_color">#333333</color>
+    <color name="white">#707070</color>
+    <drawable name="lm_bookmark_list_bg">#16191c</drawable>
+    <color name="left_bar_empty_text_color">#404040</color>
+    <color name="url_options_dialog_divider_color">#1affffff</color>
+    <color name="lm_addon_title_text_color">@color/night_mode_title_text_color</color>
+    <color name="bookmark_list_title_bg">#0e1114</color>
+    <color name="setting_page_title_bg">#181f13</color>
+    <color name="plugin_group_text_color">#404040</color>
+    <drawable name="plugin_disable_background_normal_color">#16191c</drawable>
+    <color name="edittext_selected_bg_color">#1d3a09</color>
+    <color name="desktop_bookmarks_explain_text_color">#333333</color>
+    <drawable name="deep_search_item_divider">#262829</drawable>
+    <drawable name="deep_search_top_divider">#262829</drawable>
+    <drawable name="search_floating_view_bg">#262829</drawable>
+    <drawable name="search_engine_item_background_normal">#16191c</drawable>
+    <drawable name="search_engine_item_background_pressed">#25292e</drawable>
+    <color name="engine_google_text">#20365a</color>
+    <color name="engine_yahoo_text">#4b124e</color>
+    <color name="engine_bing_text">#5c441c</color>
+    <color name="engine_duckduckgo_text">#672c1a</color>
+    <color name="engine_yandex_text">#474747</color>
+    <color name="bubble_textview_color">#707070</color>
+    <color name="addon_list_background">#1a1d21</color>
+    <color name="vg_switch_text_color">#707070</color>
+    <color name="bookmark_addon_disable_title_color">#4d4d4d</color>
+    <color name="speed_dial_chooser_tab_background_color">#101417</color>
+    <color name="speeddial_title_text_color">#7f7f7f</color>
+    <color name="holo_blue_light">#24490b</color>
+    <color name="share_evernote_thick_border_color">#26ffffff</color>
+    <color name="push_text_color">#4d4d4d</color>
+    <drawable name="feedback_divide_line_color">#1affffff</drawable>
+    <drawable name="feedback_bottom_divide_line_color">#26ffffff</drawable>
+    <color name="theme_management_bg_color">#1a1d21</color>
+    <color name="theme_title_color">@color/night_mode_title_text_color</color>
+    <color name="theme_category_underline_color">#808080</color>
+    <color name="theme_title_bg_color_light">#474747</color>
+    <color name="theme_title_color_light">#55000000</color>
+    <drawable name="screen_background_light">#16191c</drawable>
+    <color name="dl_bottom_bar_divider_color">#1affffff</color>
+    <color name="dl_storage_status_good_color">#344528</color>
+    <color name="dl_storage_status_ok_color">#43422c</color>
+    <color name="dl_storage_status_warning_color">#422828</color>
+    <color name="dl_category_title_color">#666666</color>
+    <color name="dl_storage_text_color">#ff808080</color>
+    <color name="dl_storage_warning_text_color">#cc404040</color>
+
+    <!-- 使用了墙纸时的menubar -->
+    <color name="menubar_bg_color">#4d000000</color>
+    <color name="menubar_item_icon_normal">#80ffffff</color>
+    <color name="menubar_item_icon_disable">#33ffffff</color>
+
+    <!-- panel menu 和 未使用墙纸时的menubar-->
+    <color name="panel_menu_tabbar_dark_bg_color">#151719</color>
+    <color name="panel_menu_item_icon_normal">#4e4e4e</color>
+    <color name="panel_menu_item_icon_disable">#994e4e4e</color>
+
+    <color name="panel_menu_pager_bg_color">#1a1d21</color>
+    <color name="panel_menu_item_bg_pressed">#101417</color>
+
+    <!-- titlebar -->
+    <color name="address_item_pressed_color">#4c4e4e4e</color>
+    <color name="address_item_disabled_color">#994e4e4e</color>
+    <color name="address_item_normal_color">#66ffffff</color>
+    <color name="tab_bar_selected_color">#66ffffff</color>
+    <color name="tab_bar_normal_color">#4cffffff</color>
+    <color name="title_bar_design_color">#66ffffff</color>
+    <color name="title_bar_url_color">#66ffffff</color>
+    <color name="title_bar_url_color_grey">#66ffffff</color>
+
+    <!-- tablist -->
+    <color name="tablist_bg">#f21a1d21</color>
+    <color name="tablist_img_bg">#1a1d21</color>
+    <color name="tablist_item_divider_color">#1affffff</color>
+    <color name="tablist_close_all_pressed">#4e1413</color>
+    <color name="tablist_close_all_normal">#4e4e4e</color>
+
+    <!-- promotion -->
+    <color name="promotion_bg_color">#031024</color>
+    <color name="promotion_divider">#7f808080</color>
+    <color name="promotion_cancel_normal">#4e4e4e</color>
+    <color name="promotion_cancel_pressed">#4c4e4e4e</color>
+    <color name="promotion_accept_pressed">#4c1e3e07</color>
+
+    <!-- search -->
+    <color name="search_tab_bg_color">#1a1d21</color>
+    <color name="search_top_suggest_text_color">#404040</color>
+    <color name="search_top_suggest_text_selected_color">#4e4e4e</color>
+    <color name="search_suggestion_input_text_color">#66ffffff</color>
+    <color name="search_input_highlightr_bg_color">#1a1d21</color>
+    <color name="search_input_highlightr_text_color">#66ffffff</color>
+    <color name="search_empty_text_color1">#404040</color>
+    <color name="search_empty_text_color2">#b2404040</color>
+    <color name="search_item_title_color">#404040</color>
+    <color name="search_item_url_color">#404040</color>
+    <color name="search_item_folder_color">#404040</color>
+    <color name="search_bookmark_path_dividercolor">#4e4e4e</color>
+    <color name="search_bottom_line_color">#27292b</color>
+    <color name="search_suggest_viewpager_title_bg">#202429</color>
+    <color name="search_suggest_viewpager_title_text_color">#404040</color>
+
+    <color name="search_title_icon_pressed">#4c4e4e4e</color>
+    <color name="search_title_icon_normal">#4e4e4e</color>
+    <color name="search_content_icon_pressed">#4c4e4e4e</color>
+    <color name="search_content_icon_normal">#4e4e4e</color>
+    <color name="search_input_engine_extend_pressed">#33ffffff</color>
+    <color name="search_input_engine_extend_normal">#4cffffff</color>
+    <color name="search_engine_choose_item_textcolor">#66ffffff</color>
+
+    <!-- control panel -->
+    <color name="bm_list_item_icon_color">#4e4e4e</color>
+    <color name="bm_list_item_icon_disabled_color">#4c4e4e4e</color>
+    <color name="bm_popup_divider_color">#27292b</color>
+    <color name="bm_confirm_delete_icon_color">#4e1413</color>
+
+    <color name="ctrl_pl_bg_color">@color/night_mode_bg_color</color>
+    <color name="ctrl_pl_title_text_color">@color/night_mode_title_text_color</color>
+    <color name="ctrl_pl_listitem_text_color">@color/night_mode_text_normal_color</color>
+    <color name="ctrl_pl_listitem_icon_color">@color/night_mode_icon_normal_color</color>
+
+    <color name="plugin_options_bg">#101417</color>
+    <color name="plugin_app_name_title_textcolor">#404040</color>
+    <color name="extension_item_vertical_divider">#1affffff</color>
+    <color name="extension_item_bg_color">#1a1d21</color>
+    <color name="wallpaper_background_color">@color/night_mode_bg_color</color>
+    <color name="theme_tips_color">@color/night_mode_text_normal_color</color>
+    <color name="add_wallpaper_bg_color">#313438</color>
+
+    <color name="night_mode_bg_color">#1a1d21</color>
+    <color name="night_mode_title_text_color">#4cffffff</color>
+    <color name="night_mode_text_normal_color">#404040</color>
+    <color name="night_mode_icon_normal_color">#4e4e4e</color>
+
+    <color name="lm_bookmark_list_normal">#16191c</color>
+
+    <color name="dl_icon_pressed_color">#4c4e4e4e</color>
+    <color name="dl_icon_normal_color">#ff4e4e4e</color>
+    <color name="dl_back_pressed_color">#4c4e4e4e</color>
+    <color name="dl_back_normal_color">#ff4e4e4e</color>
+    <color name="dl_back_disabled_color">#4c404040</color>
+    <color name="dl_divider_color">#ff27292b</color>
+    <color name="alert_dialog_listview_layout_bg">#16191c</color>
+    <color name="workspace_icon_text_color">#66ffffff</color>
+    <color name="workspace_folder_icon_color">#4c000000</color>
+    <color name="drop_target_bg_active_color">#4e1413</color>
+    <color name="send_to_home_disable_text_color">#66b3b3b3</color>
+    <color name="send_to_home_enable_text_color">#33b3b3b3</color>
+
+    <color name="restore_item_bg_pressed">#1e2226</color>
+    <color name="restore_item_bg_normal">#1a1d21</color>
+    <color name="restore_item_text_color">#404040</color>
+    <color name="restore_list_divider">#27292b</color>
+    <color name="restore_tips_text_color">#4cffffff</color>
+
+    <color name="webapp_preview_title_color">#4e4e4e</color>
+    <color name="webapp_preview_text_color">#404040</color>
+
+      <!-- Dolphin connect -->
+    <color name="ds_text_color">#ff404040</color>
+    <color name="ds_name_text_color">#ff1e3e07</color>
+    <color name="ds_email_text_color">#404040</color>
+    <color name="ds_data_divider">#4d4d4d</color>
+    <color name="ds_logout_text_color">#7ff21009</color>
+
+    <color name="bm_header_bg_color">#ff16181c</color>
+    <color name="bm_header_text_color">#ff404040</color>
+    <color name="bm_bottom_btn_normal_color">#ff4e4e4e</color>
+    <color name="bm_bottom_btn_pressed_color">#ff333333</color>
+    <color name="bm_bottom_btn_disabled_color">#7f4e4e4e</color>
+    <color name="bm_bottom_bar_divider_color">#ff242629</color>
+
+    <color name="left_bar_title_icon_pressed_color">#7f4e4e4e</color>
+
+</resources>

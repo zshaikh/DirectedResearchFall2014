@@ -1,0 +1,24 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.5">
+  <id>com.jesusla.facebook</id>
+  <versionNumber>1.0.70</versionNumber>
+  <name>Facebook</name>
+  <description>Facebook r70 (eab9275)</description>
+  <platforms>
+    <platform name="iPhone-ARM">
+      <applicationDeployment>
+        <nativeLibrary>libIOS.a</nativeLibrary>
+        <initializer>ExtInitializer</initializer>
+        <finalizer>ExtFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>android.jar</nativeLibrary>
+        <initializer>com.jesusla.ane.Extension</initializer>
+      </applicationDeployment>
+    </platform>
+    <platform name="default">
+      <applicationDeployment/>
+    </platform>
+  </platforms>
+</extension>

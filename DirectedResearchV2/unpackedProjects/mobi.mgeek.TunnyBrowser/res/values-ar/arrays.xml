@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>الخيارات</item>
+        <item>وصف الوظيفة الاضافية</item>
+        <item>تعطيل الوظيفة الاضافية</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>لاتيني- 1 (ISO-8859-1))</item>
+        <item>يونيكود ((UTF-8)</item>
+        <item>صيني (GBK)</item>
+        <item>صيني (Big5)</item>
+        <item>ياباني (ISO-2022-JP)</item>
+        <item>ياباني (SHIFT_JIS)</item>
+        <item>ياباني (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (إلى أقصى الخلف)</item>
+        <item>100% (ملائمة للشاشة)</item>
+        <item>200% (مغلق)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>اندرويد</item>
+        <item>سطح المكتب</item>
+        <item>أي فون</item>
+        <item>أي باد</item>
+        <item>مخصص</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>اخفاء</item>
+        <item>اليسار (أسفل)</item>
+        <item>اليمين (أسفل)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>اخفاء</item>
+        <item>اليسار</item>
+        <item>اليمين</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>معطل</item>
+        <item>جودة أفضل</item>
+        <item>متوازن</item>
+        <item>حجم أصغر</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>مفتوح دائمًا</item>
+        <item>مغلق دائمًأ</item>
+        <item>عرض في شبكة الواي فاي</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>فتح صفحة جديدة</item>
+        <item>فتح الصفحة السابقة</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>بشكل افتراضي</item>
+        <item>فتح في تبويب خلفية</item>
+        <item>فتح في علامة تبويب جديدة</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>تلقائي</item>
+        <item>عرضي</item>
+        <item>طولي</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>مفتوح دائمًا</item>
+        <item>عند الطلب</item>
+        <item>مغلق</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>معطل</item>
+        <item>فقط على الواي فاي (الانترنت اللاسلكي)</item>
+        <item>دائمًا</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>تمكين الشريط الأيسر</item>
+        <item>تمكين الشريط الأيمن</item>
+        <item>تمكين الكل</item>
+        <item>تعطيل</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>ضئيل</item>
+        <item>صغير</item>
+        <item>اعتيادي</item>
+        <item>كبير</item>
+        <item>هائل</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>اجراءأندرويد افتراضي</item>
+        <item>انتقل إلى أعلى الصفحة/ انتقل إلى أسفل الصفحة</item>
+        <item>تبديل التبويبات</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>أنا أفكر</item>
+        <item>أنا لها</item>
+        <item>فهمت ما تقصده</item>
+        <item>كما ترغب</item>
+        <item>رغباتك أوامر</item>
+        <item>انتظر دقيقة</item>
+        <item>امنحني بضع ثوان</item>
+        <item>أفكر</item>
+        <item>قيد المعالجة</item>
+        <item>دقيقة واحدة</item>
+        <item>يرجى الانتظار</item>
+        <item>فهمت</item>
+        <item>سأقوم بهز هذا</item>
+        <item>اهتزاز</item>
+        <item>هذه معلومات</item>
+        <item>ووت!</item>
+        <item>يبدو لذيذًا....</item>
+        <item>يبدو رائعًا!</item>
+        <item>أستمع اليك!</item>
+    </string-array>
+</resources>

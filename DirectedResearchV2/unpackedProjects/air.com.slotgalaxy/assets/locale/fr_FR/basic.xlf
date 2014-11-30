@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<string id="Loading...">Chargement en cours...</string>
+	<string id="Connecting to Facebook...">Connexion à Facebook...</string>
+	<string id="Merging account...">Fusion des comptes...</string>
+	<string id="Contacting server...">Connexion au serveur...</string>
+	<string id="Loading Data...">Chargement des données...</string>
+	
+	<string id="Would you like to connect to Facebook?">Voulez-vous vous connecter à Facebook ?</string>
+	<string id="You will need to log into Facebook to continue playing.">Vous devrez vous connecter à Facebook pour continuer à jouer.</string>
+	<string id="Connect">Connexion</string>
+	<string id="Later">Plus tard</string>
+	<string id="Error logging into Facebook: ">Erreur de connexion à Facebook</string>
+	<string id="There was a problem logging into Facebook, please try again later.">Problème de connexion à Facebook, veuillez réessayer plus tard.</string>
+	<string id="Your Facebook password has changed.">Votre mot de passe Facebook a changé.</string>
+	<string id="Your Facebook password has changed. Please login again to continue playing.">Votre mot de passe Facebook a changé. Veuillez vous reconnecter pour continuer à jouer.</string>
+	<string id="Please update it by opening Settings > Facebook and tapping on your name">Mettez le à jour en allant dans Paramètres > Facebook et tappez votre nom</string>
+	<string id="Facebook session has expired, please try again.">La session Facebook a expiré, réessayez s'il vous plaît.</string>
+	<string id="Ok">Ok</string>
+	<string id="We will synchronize your Facebook {Slot Galaxy} account with this device">Votre compte Facebook {Slot Galaxy} va être synchronisé avec cet appareil.</string>
+	<string id="This facebook account is not authorized to use this application.">Ce compte Facebook n'est pas autorisé à utiliser cette application.</string>
+	<string id="Your Facebook session has expired. Please open the Facebook application and login again.">Votre session Facebook a expiré. Vous devez ouvrir l'application Facebook et vous reconnecter à nouveau.</string>
+	<string id="Please allow access to Facebook by opening Settings>Facebook and making sure {Slot Galaxy} is turned on.">Vous devez autoriser l'accès à Facebook en ouvrant Paramètres > Facebook et vous assurer que {Slot Galaxy} est bien autorisé.</string>
+
+</list>

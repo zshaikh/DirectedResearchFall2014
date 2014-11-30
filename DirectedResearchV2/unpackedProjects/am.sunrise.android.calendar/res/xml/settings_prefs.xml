@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/settings_background_refresh_entries" android:title="@string/settings_background_refresh" android:key="refresh_rate" android:dialogTitle="@string/settings_background_refresh_title" android:entryValues="@array/settings_background_refresh_values" />
+    <am.sunrise.android.calendar.ui.settings.internals.SwitchPreference android:title="@string/settings_weather" android:key="weather_enabled" />
+    <PreferenceScreen android:title="@string/settings_default_calendar" android:key="default_calendar">
+        <intent android:targetPackage="@string/config_authority" android:action="am.sunrise.android.calendar.ui.settings.action.DEFAULT_CALENDAR" android:targetClass="am.sunrise.android.calendar.ui.settings.SubSettingsActivity" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings_alerts" android:key="settings_alerts" />
+    <ListPreference android:entries="@array/settings_week_start_entries" android:title="@string/settings_week_start" android:key="week_start" android:entryValues="@array/settings_week_start_values" />
+</PreferenceScreen>

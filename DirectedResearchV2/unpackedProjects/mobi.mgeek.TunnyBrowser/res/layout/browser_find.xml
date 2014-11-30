@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/findControls" android:background="@drawable/find_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/previous" android:background="@drawable/find_left_bk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="12.0dip" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/next" android:background="@drawable/find_right_bk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/find_edit_controls" android:background="@drawable/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" android:layout_weight="1.0">
+        <EditText android:textSize="15.0sp" android:id="@id/edit" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="35.0dip" android:hint="@string/find_dot" android:scrollHorizontally="true" android:layout_weight="1.0" android:inputType="text" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/find_dialog_match_text_color" android:layout_gravity="right|center" android:id="@id/matches" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/done" android:paddingLeft="12.0dip" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/find_exit_bk" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_countX">5</integer>
+    <integer name="config_maximized_countY">3</integer>
+    <integer name="config_normal_countY">3</integer>
+</resources>

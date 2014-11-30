@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/movieSearchLayout" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_below="@id/headerLayout" android:layout_alignParentLeft="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:id="@id/movieFilterSpinner" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="5.0dip" android:drawSelectorOnTop="true" android:layout_weight="1.0" />
+    <ImageButton android:id="@id/searchButton" android:background="@null" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/button_search" android:layout_centerVertical="true" />
+</LinearLayout>

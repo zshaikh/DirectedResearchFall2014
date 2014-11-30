@@ -1,0 +1,834 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_65 (Apple Inc.)
+
+Name: assets/META-INF/AIR/extensions/com.playtika.PlatilibExtension/ME
+ TA-INF/ANE/extension.xml
+SHA1-Digest: /WbPiCdeZ6FfezYNhuQDdd6mB2Q=
+
+Name: res/drawable/facebook_icon.png
+SHA1-Digest: 9jTbeG4b8nJZlZss16UPfagqlUs=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: 1T+XnCKjoBoGjp8HAKgudkhy/nM=
+
+Name: res/drawable-xhdpi/btn_bottom_left.png
+SHA1-Digest: TMO7In4CrTGqO/cS9FPiW3raPg8=
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+
+Name: res/drawable-mdpi/header_close_seprator_up.png
+SHA1-Digest: wuT1d7YURNuZWJXwOu1ttrQ35dA=
+
+Name: res/drawable-mdpi/more_apps.png
+SHA1-Digest: zbJq3Jhd0mVQHuTU/TLeLVeC3jY=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+
+Name: res/drawable-ldpi/btn_bottom_right.png
+SHA1-Digest: dgc/zNzmRPcStFuj9vJok6EsRLY=
+
+Name: res/drawable-mdpi/header_close_seprator_down.png
+SHA1-Digest: F4nY6wt8TQya8r9B0WjbuzSs8d4=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: mXeRPfOgW3M1ogPxPkN/LPywfIg=
+
+Name: assets/res/assets/hd/icon48.png
+SHA1-Digest: KmI9Nhq14ZOa9l7Rt8IPaiGgsyc=
+
+Name: res/drawable-ldpi/icn_feedback.png
+SHA1-Digest: 3ZvxWpIGrx7QxAVGNETCTJ0Rp3o=
+
+Name: res/drawable-xhdpi/icn_inbox.png
+SHA1-Digest: LT3fh6Z+5wf7BNb6UpnHpcCMGn4=
+
+Name: res/drawable-hdpi/com_facebook_logo.png
+SHA1-Digest: +F9i6TennSQx3Unl/q4mPr3itE8=
+
+Name: res/drawable-xhdpi/header_close_seprator_up.png
+SHA1-Digest: 8XRzy06fGmSFa0bn/5wjkXonVWw=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: res/drawable-mdpi/ic_pulltorefresh_arrow.png
+SHA1-Digest: HhU+a2A8TYaFFsmUpKpjeeP/aMc=
+
+Name: res/raw/icon.jpg
+SHA1-Digest: 7g9A72BHtvf1hEWBNZiKzoe56gw=
+
+Name: res/drawable/com_facebook_loginbutton_blue.xml
+SHA1-Digest: cGFoMaCwWyIVyXkV5+w6AWMVFyQ=
+
+Name: res/drawable-mdpi/icn_feedback.png
+SHA1-Digest: 1hcRiJ2oUuSx+YJNUeyMeF/R17k=
+
+Name: res/drawable-ldpi/footer.png
+SHA1-Digest: /xbUhZU9sSsomCU+Q9JkFZ72hRw=
+
+Name: assets/res/assets/hd/icon96.png
+SHA1-Digest: BcFTsiboYKxRUz+gLCe5g6jhD7Y=
+
+Name: res/drawable-ldpi/btn_mid_left.png
+SHA1-Digest: JbNRbQ6oqKOTouK8sZTF1eVxihA=
+
+Name: assets/res/assets/hd/icon114.png
+SHA1-Digest: h8WOd0euk+fGEj1AjbW/NkcRFwI=
+
+Name: res/drawable-hdpi/footer.png
+SHA1-Digest: f5c9UD/J4qsqAVd3109YcrAWaUk=
+
+Name: res/drawable-ldpi/appoxee_default_icon.png
+SHA1-Digest: WlFLGBZDDU9uNTzBSpQtNRcNksA=
+
+Name: res/drawable-xhdpi/btn_mid_center.png
+SHA1-Digest: 7TiN5huHSCHzzBioXguSuM3n+Bc=
+
+Name: res/drawable-mdpi/buttons_seperator_down.png
+SHA1-Digest: SNvQ5p2Vjh8zHWZvxJDwAvUsXkI=
+
+Name: res/drawable-xhdpi/header_close_seprator_down.png
+SHA1-Digest: 6f9/xF9UYIAvtZAByd7bfdWQouY=
+
+Name: res/drawable-mdpi/appoxee_default_icon.png
+SHA1-Digest: YOFVdEXj44J1NorXskZMRF37Tps=
+
+Name: res/drawable-notlong-port-hdpi/loading.png
+SHA1-Digest: ldmLklssHQPdsHtq3/NmlbL9t3I=
+
+Name: res/drawable-xhdpi/btn_bottom_right.png
+SHA1-Digest: 7iAddeTwh85cCuaqkzFwTP66eTM=
+
+Name: res/layout/appoxee_default_feedback_layout.xml
+SHA1-Digest: j4TKOcbCrB/jJibbtG8YzlEk+VY=
+
+Name: res/drawable-xhdpi/btn_mid_right.png
+SHA1-Digest: UXLpz9UD+BS0Y35FeUDC4hEDyYg=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: lSztBHFVRlPMsGcFT26oMQipfTQ=
+
+Name: res/drawable-hdpi/thank_you.png
+SHA1-Digest: 5JHjZw04pZGQBwstK0RDD4mXdBQ=
+
+Name: res/drawable-ldpi/buttons_seperator_down.png
+SHA1-Digest: SNvQ5p2Vjh8zHWZvxJDwAvUsXkI=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+
+Name: res/drawable-hdpi/btn_mid_center.png
+SHA1-Digest: 8e7ZOUlZE07OIo0Tjwthmmq+HBs=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: res/drawable-xhdpi/header_close_seprator_middle.png
+SHA1-Digest: hpNNlaEZsLDpEY+dv/y12DoEXVg=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: COOFdQDqXjvNdi+5TMPa3bPhaEQ=
+
+Name: assets/res/assets/sd/icon114.png
+SHA1-Digest: PXeiRc66NNpj7qV8d4bmgZ97lnk=
+
+Name: res/raw/mail.mp3
+SHA1-Digest: e+YvYWato0uxXNbmh+WbKIkwKXc=
+
+Name: res/drawable-hdpi/icn_moreapps.png
+SHA1-Digest: aOBnMDNCcq4hHxhg9ssqtvuaxtM=
+
+Name: res/drawable-land/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: res/drawable-ldpi/btn_mid_center.png
+SHA1-Digest: IrGd+q8GkspoG74y/KIul4Gmxi0=
+
+Name: res/drawable-hdpi/inbox_icon.png
+SHA1-Digest: dUSXetS+4XnWRc4Dhu9qKFk5kpA=
+
+Name: res/drawable-ldpi/btn_mid_right.png
+SHA1-Digest: IIrNxqLEbxVb678vAE9ArzRgxjk=
+
+Name: res/drawable-xhdpi/buttons_seperator_down.png
+SHA1-Digest: qdIhucG04IFxZSGYy4+WON1il04=
+
+Name: assets/res/assets/hd/icon72.png
+SHA1-Digest: zim2A8cryVk2qhGNnO8iO0u48nM=
+
+Name: res/drawable-ldpi/close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: res/drawable-long-land-hdpi/loading.png
+SHA1-Digest: F1zb8PkQs2BG1f9BZi8lvGpraGU=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: RhzE4xPOSVkGIOeNlr//ggDDzrs=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: Q6+ZAuiI79ad0sUgpHdz3hWV2cY=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: gOYE6PLZWtvngsUMbu4BP2d3l6U=
+
+Name: assets/META-INF/AIR/application.xml
+SHA1-Digest: SmHUzhETxXcdMzWZzISPc58bXjk=
+
+Name: res/drawable-mdpi/header_close_seprator_middle.png
+SHA1-Digest: UxJ/KnrL7c+gVk+khnJRxUPD1T0=
+
+Name: assets/res/lobby/hd/bonus_config.fla.csv
+SHA1-Digest: Mlu2pV2WJScrzRwZ7BN2xSEiwJA=
+
+Name: res/drawable-hdpi/buttons_seperator_down.png
+SHA1-Digest: SNvQ5p2Vjh8zHWZvxJDwAvUsXkI=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: SqU2ZifWNsimkQtDpkydhaKMKTA=
+
+Name: res/drawable/logo.png
+SHA1-Digest: AFa1LOEwXd9K/TJCeLff+rlMG8A=
+
+Name: res/drawable-xhdpi/buttons_seperator_middle.png
+SHA1-Digest: M7yDQzXmzWX7nUKWfJIrBNVZVt8=
+
+Name: res/raw/rgba8888
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: res/layout/appoxee_default_inbox_list_item_view.xml
+SHA1-Digest: wgmtNjRBMB9InDuUgF+bcbNM0dw=
+
+Name: res/drawable-ldpi/buttons_seperator_up.png
+SHA1-Digest: SNvQ5p2Vjh8zHWZvxJDwAvUsXkI=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+
+Name: res/drawable-long-port-mdpi/loading.png
+SHA1-Digest: mKlpdq+s5QOnRL9EfF2R9kHsn7A=
+
+Name: res/drawable-mdpi/buttons_seperator_up.png
+SHA1-Digest: SNvQ5p2Vjh8zHWZvxJDwAvUsXkI=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: YOFVdEXj44J1NorXskZMRF37Tps=
+
+Name: res/layout/expandable_multiple_chooser_row.xml
+SHA1-Digest: 6Ppr2lOeHuLH2yYYQhIT63Z+brk=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: 9Cu7MNk4J/Gn7T6V6RRR/dzVbog=
+
+Name: assets/res/assets/sd/icon96.png
+SHA1-Digest: 1UzNMsh7Z6KFn1QoWx1IBrHRG2A=
+
+Name: res/drawable-xhdpi/appoxee_default_icon.png
+SHA1-Digest: 6SWteNt5/dfgWojZT9DV5XH1fo4=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: V27iDxNqPIzkdIgA+0DIi/AfQYY=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+
+Name: res/drawable-ldpi/btn_upper_center.png
+SHA1-Digest: Jfglev8lH6Uen8Bqs8lQvSBNrqE=
+
+Name: assets/adobeair.vch
+SHA1-Digest: cpg2VvcrZ+P/ZGI5x3I/y4dIYsM=
+
+Name: res/drawable-hdpi/btn_upper_center.png
+SHA1-Digest: /kgsnK7A90ILAcWShcc66lNDoNU=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: NDLFyRfWjBjm9xCkOlx9fqTCMug=
+
+Name: res/raw/pp_android_utils_data_locale.bin
+SHA1-Digest: ZI5eEGZTVmTgRV0fmhSug0iZEXI=
+
+Name: res/raw/alpha.mp3
+SHA1-Digest: SO9vgZ7gYrbLd1HCLBoZu2ppwZA=
+
+Name: res/drawable-xhdpi/com_facebook_close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: res/drawable-ldpi/inbox_icon.png
+SHA1-Digest: w6zl1AMLI5cnhwzfem6lemCVCrk=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: ZlugMZOUIDL0UOH1sd8pSJ4gjG8=
+
+Name: assets/META-INF/AIR/extensions/com.playtika.PlatilibExtension/ca
+ talog.xml
+SHA1-Digest: zJATbyddxsQ5LeWz/73cNUb31fw=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: DzRGfF8AGmUBcVUJ43p57Ps5HQw=
+
+Name: res/drawable-xhdpi/ouya_icon.png
+SHA1-Digest: CKyR3daLFycC73g9Xn9rcDqSxts=
+
+Name: res/drawable-hdpi/icn_close.png
+SHA1-Digest: KpHd34qPrG+eWyEe0glkBjdoVQw=
+
+Name: res/drawable/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/drawable-hdpi/buttons_seperator_middle.png
+SHA1-Digest: PQc8Ai+FHCKs7eC3fmRwawpIKYo=
+
+Name: res/drawable-mdpi/ptr_pulltorefresh_arrow.png
+SHA1-Digest: HhU+a2A8TYaFFsmUpKpjeeP/aMc=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: Z+Y8tOxbrMVzYkn/gDRc2e6OoEg=
+
+Name: res/drawable-ldpi/ic_launcher.png
+SHA1-Digest: 82PboTF1fZK5bRhGj31DkluqJz8=
+
+Name: assets/res/assets/hd/icon36.png
+SHA1-Digest: U6aMnWmSBBvE9JNyW8OTPPLaFjU=
+
+Name: res/drawable-xhdpi/icn_moreapps.png
+SHA1-Digest: E62X9e6+g/WF78iRM0EZxw9DYlE=
+
+Name: res/drawable-hdpi/logo.png
+SHA1-Digest: LGxcLS1DZfLWkbmN2heGMGdeKAA=
+
+Name: res/drawable-hdpi/close.png
+SHA1-Digest: P3HE/cN1DH97qEFhaWUqiBLjuUY=
+
+Name: res/drawable-ldpi/btn_upper_left.png
+SHA1-Digest: 5PncHjhvzMr5Bp/OJk/flmSmBnU=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: xGQtABb1AitSeN8uVNWHd/+8MQ0=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+
+Name: res/drawable-hdpi/btn_mid_left.png
+SHA1-Digest: Xs7uzCNzeAuVVAcP/OcXWicrebk=
+
+Name: res/drawable-xhdpi/inbox_icon.png
+SHA1-Digest: +vMqOoPPj1xtDt7loCdL8SRyi0U=
+
+Name: res/layout/appoxee_default_inbox_layout.xml
+SHA1-Digest: XimoYSu2z9mzm/rZpYO5+6O9HUs=
+
+Name: res/drawable-hdpi/oops.png
+SHA1-Digest: 1QL12RkvGJddBikLa4XHlRR3x7Y=
+
+Name: res/drawable-ldpi/more_apps.png
+SHA1-Digest: 74l0TdMa+lXpyaC1t00m04SBEtg=
+
+Name: res/drawable-mdpi/btn_mid_right.png
+SHA1-Digest: VAPQf9v7NW2I0j8nw6mDUOhyyDQ=
+
+Name: res/drawable-ldpi/btn_bottom_left.png
+SHA1-Digest: iX/kuVSZrq8dgZkElArLUX/L9io=
+
+Name: res/drawable/air_72px_mobile_eula.png
+SHA1-Digest: 6eX1WzhcZDSgS30DdiYKnHz0h1w=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+
+Name: res/drawable-ldpi/no_connection.png
+SHA1-Digest: w9kPrg/Zisw+CDhON2BmANP30IA=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: UlppTzQMf0S8p04nUqt4qCBKRF0=
+
+Name: res/drawable-mdpi/buttons_seperator_middle.png
+SHA1-Digest: PQc8Ai+FHCKs7eC3fmRwawpIKYo=
+
+Name: lib/armeabi-v7a/libstagefright_froyo.so
+SHA1-Digest: EUXLvjWSqWdOtEeNogZ6B3XXEO0=
+
+Name: res/drawable-xhdpi/close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: res/layout/appoxee_default_tag_item.xml
+SHA1-Digest: 8a2VHsOsGXj2vi94Zt/8qdR7sn4=
+
+Name: res/drawable-hdpi/btn_bottom_left.png
+SHA1-Digest: uPxflWAL1uvP7jkZPhdnzy3Mmcs=
+
+Name: res/drawable/mp_warning_32x32_n.png
+SHA1-Digest: eCFwTk+zmvIeM+w4WQEnsknkfNI=
+
+Name: assets/res/lobby/SplashScreenBoot.png
+SHA1-Digest: pHzmfmUWXRb/eAbtqRZqQTq9g0E=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: Xc3vkhoHRr4ugIXSLgjP6jjG71Q=
+
+Name: res/drawable-ldpi/com_facebook_icon.png
+SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+
+Name: res/drawable-xhdpi/icn_feedback.png
+SHA1-Digest: hbijA5ft6TfIrXHYpVeCWQ9jOac=
+
+Name: res/drawable-ldpi/facebook_icon.png
+SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+
+Name: res/drawable-ldpi/header.png
+SHA1-Digest: z3sSZRZrLULysT0aNxRt93N0K3A=
+
+Name: res/drawable-xhdpi/btn_mid_left.png
+SHA1-Digest: UhacvCokAnjaR1K6SrpzEh2YGYw=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: UeXnTvLMYjpqZLYOE2hOkj99JNk=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: XbiMuSkYQfrA/MQDbg7DVnvXn2w=
+
+Name: lib/armeabi-v7a/libstagefright_honeycomb.so
+SHA1-Digest: qPns6HP60VRhSzOQHoV2FXg2q/A=
+
+Name: assets/VideoSlots.swf
+SHA1-Digest: hHydy9DIPLrxaijvmjO+LF0LWfM=
+
+Name: res/drawable-xhdpi/icn_close.png
+SHA1-Digest: meV2ABJn6xbgJHqXzA1vPrRHv3k=
+
+Name: res/drawable-xhdpi/buttons_seperator_up.png
+SHA1-Digest: qdIhucG04IFxZSGYy4+WON1il04=
+
+Name: res/drawable-hdpi/facebook_icon.png
+SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+
+Name: res/drawable-mdpi/btn_upper_left.png
+SHA1-Digest: pcw56xcHbTLq8/1uvYaI6bOymso=
+
+Name: res/drawable-mdpi/btn_mid_center.png
+SHA1-Digest: 8e7ZOUlZE07OIo0Tjwthmmq+HBs=
+
+Name: res/layout/appoxee_default_ptr_header.xml
+SHA1-Digest: riqzqYgGYliaGMsdb4lsa1vvpAw=
+
+Name: res/drawable-hdpi/no_connection.png
+SHA1-Digest: v/B5oO7dB3l21d2PkBJpLYHA9Ko=
+
+Name: res/drawable-xhdpi/header.png
+SHA1-Digest: KrzInERo6G/JPs81f6pmKU2EvG0=
+
+Name: lib/armeabi-v7a/libCore.so
+SHA1-Digest: GauuZIh1/NAMsINfWmvQKz5zmLc=
+
+Name: res/drawable-ldpi/icn_inbox.png
+SHA1-Digest: axXTueNl8w9CSH+sphwt4w1TpDo=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+
+Name: res/drawable-ldpi/logo.png
+SHA1-Digest: yxxEgOLyJuUR7S9XiQG7QI5zbwA=
+
+Name: assets/META-INF/AIR/extensions/com.playtika.PlatilibExtension/li
+ brary.swf
+SHA1-Digest: 5BOzx7ODXysbABDsi8eJxFZqnRo=
+
+Name: assets/res/lobby/hd/SplashScreenLoading.png
+SHA1-Digest: TTalBJwwChn/P4LKtPWjUFGNeP4=
+
+Name: res/drawable-mdpi/btn_bottom_center.png
+SHA1-Digest: /kgsnK7A90ILAcWShcc66lNDoNU=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+
+Name: res/drawable-ldpi/header_close_seprator_middle.png
+SHA1-Digest: +aYgsYfSLK7gw+cvYAVBM7u0WOI=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: 4mIyMbCIDrP0CS0cmF/zMAWfXis=
+
+Name: res/layout/anesample.xml
+SHA1-Digest: ZCAd4lWy58pMgNNeZQNIOh7IoQc=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: zCNstrtUdlCIBkNvuJNOAo3NYMA=
+
+Name: assets/res/assets/sd/icon48.png
+SHA1-Digest: GAHcLvTL/n+3BKJzBmH3+EgIiNQ=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: Llv7M0iRPm1oBIu0CbWl0pDjmyA=
+
+Name: res/drawable-ldpi/oops.png
+SHA1-Digest: hM6VWP2QEpRbmL4z4Ray57ArBbM=
+
+Name: res/drawable-hdpi/appoxee_default_icon.png
+SHA1-Digest: Xc3vkhoHRr4ugIXSLgjP6jjG71Q=
+
+Name: res/drawable-ldpi/btn_bottom_center.png
+SHA1-Digest: Jfglev8lH6Uen8Bqs8lQvSBNrqE=
+
+Name: res/drawable-hdpi/header_close_seprator_down.png
+SHA1-Digest: F4nY6wt8TQya8r9B0WjbuzSs8d4=
+
+Name: lib/armeabi-v7a/libysshared.so
+SHA1-Digest: TB891nh0tUUz+nsrHzpoSik8nMA=
+
+Name: res/drawable-mdpi/icn_moreapps.png
+SHA1-Digest: aOBnMDNCcq4hHxhg9ssqtvuaxtM=
+
+Name: res/drawable-mdpi/no_connection.png
+SHA1-Digest: v/B5oO7dB3l21d2PkBJpLYHA9Ko=
+
+Name: res/raw/startga.html
+SHA1-Digest: C9K086/ZOxGN7QeNDBhRVKerLN4=
+
+Name: res/drawable-hdpi/ic_launcher.png
+SHA1-Digest: 82PboTF1fZK5bRhGj31DkluqJz8=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: res/layout/appoxee_default_tags_layout.xml
+SHA1-Digest: V5Nu0pv3Y7XUxS6QGB/M1DGtSNU=
+
+Name: res/drawable-notlong-land-mdpi/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: res/drawable-mdpi/header.png
+SHA1-Digest: xj4p2dkPrN/CgEEhDXbejn5mCaQ=
+
+Name: res/drawable-mdpi/icn_close.png
+SHA1-Digest: KpHd34qPrG+eWyEe0glkBjdoVQw=
+
+Name: resources.arsc
+SHA1-Digest: Cld8yqwlIA9lKLUJjbkWS+/vYig=
+
+Name: res/drawable-xhdpi/thank_you.png
+SHA1-Digest: 99uroFvFG94rofsQ68w3GQc2jIE=
+
+Name: res/drawable-xhdpi/logo.png
+SHA1-Digest: AFa1LOEwXd9K/TJCeLff+rlMG8A=
+
+Name: res/layout/appoxee_default_moreapps_layout.xml
+SHA1-Digest: mXQ3Bz2WFz0jW1jg7ZqjfHuzz8w=
+
+Name: AndroidManifest.xml
+SHA1-Digest: YRsM+PKAtrlWXXoTSitskfGFx2Q=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+
+Name: res/drawable-hdpi/ptr_pulltorefresh_arrow.png
+SHA1-Digest: XjAcnnQPWovquTqetEwXVlRNZQE=
+
+Name: res/drawable-port-xhdpi/loading.png
+SHA1-Digest: Njy8ZKa7G5Sg7AMHMS+rBGLa7zM=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: qjVJfnUw+xpAdv/WmQa1Xvv95X8=
+
+Name: res/drawable-hdpi/header.png
+SHA1-Digest: xj4p2dkPrN/CgEEhDXbejn5mCaQ=
+
+Name: res/drawable/com_facebook_loginbutton_blue_normal.png
+SHA1-Digest: 5eqq9jxVF9PeVyf0iNJD0gmKE3g=
+
+Name: res/layout/notification_extended.xml
+SHA1-Digest: 6OZWkFGN80KuQTC4hatyNRfs9Bw=
+
+Name: res/drawable-ldpi/header_close_seprator_down.png
+SHA1-Digest: F4nY6wt8TQya8r9B0WjbuzSs8d4=
+
+Name: res/drawable/close.png
+SHA1-Digest: Nwlm5aDJGXbo6eG5hVvbrq4/cVk=
+
+Name: assets/res/lobby/strings_ru.xml
+SHA1-Digest: /l1WTVQQrbYsGDuL8ch4Ii2NJ78=
+
+Name: res/layout/delete_button.xml
+SHA1-Digest: cAVSRib4q/dZq+vKjNTuTRZ724c=
+
+Name: res/raw/adobelogo.gif
+SHA1-Digest: cp6EzjLDVdzLOD69uttcA3OnzH8=
+
+Name: res/drawable-mdpi/btn_bottom_left.png
+SHA1-Digest: uPxflWAL1uvP7jkZPhdnzy3Mmcs=
+
+Name: res/drawable-xhdpi/btn_upper_center.png
+SHA1-Digest: tE7t4vp1cbYcmHY36jVYt6uYDUo=
+
+Name: res/drawable-ldpi/com_facebook_close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: res/drawable-mdpi/inbox_icon.png
+SHA1-Digest: dUSXetS+4XnWRc4Dhu9qKFk5kpA=
+
+Name: res/drawable-hdpi/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: V27iDxNqPIzkdIgA+0DIi/AfQYY=
+
+Name: classes.dex
+SHA1-Digest: 7eh4tfgYT6ITJH2BNvd7A3nAbDk=
+
+Name: res/drawable/appoxeesound.wav
+SHA1-Digest: YKZV1zsv+BFBwlBC1Nfmm+Gb8F0=
+
+Name: res/drawable-long-port-hdpi/loading.png
+SHA1-Digest: aZ3JlrQUIFi3BX2OW3Sl/94hc9I=
+
+Name: res/drawable-hdpi/buttons_seperator_up.png
+SHA1-Digest: SNvQ5p2Vjh8zHWZvxJDwAvUsXkI=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: 2K6Ubm8sa2LxV6OFhpfuRZBl70g=
+
+Name: res/drawable-land-xhdpi/loading.png
+SHA1-Digest: BTVV2J+2RIRO8XZM89e3SmhVUnE=
+
+Name: res/layout/appoxee_default_inbox_message.xml
+SHA1-Digest: HunrBqW4F6AEwWf35xvHZtLkmyo=
+
+Name: res/drawable-xhdpi/btn_upper_left.png
+SHA1-Digest: GQrdlItFmpT7rYQYlUxLx4gDPIM=
+
+Name: res/drawable-xhdpi/com_facebook_logo.png
+SHA1-Digest: 94ZTspodsrcPndjRFwq4Cqz6Wc4=
+
+Name: res/layout/expandable_chooser_row.xml
+SHA1-Digest: HDHEMMYvpLbHYf3VF20Dzjjy98Q=
+
+Name: res/drawable-ldpi/icn_close.png
+SHA1-Digest: qw/P0g/vZMYtcdd1tQ4AFPB8PEM=
+
+Name: res/drawable-mdpi/icn_inbox.png
+SHA1-Digest: bsR9oHCKn+gbPevmr2rDx6Nuj/c=
+
+Name: res/drawable-hdpi/btn_bottom_right.png
+SHA1-Digest: eUBRynreFZbMIw6Tk/806QyYFDc=
+
+Name: res/drawable-notlong-port-mdpi/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+
+Name: res/layout/ssl_certificate_warning.xml
+SHA1-Digest: nvTCcBPnKy6wROUJOpDOMX6tshE=
+
+Name: res/drawable-xhdpi/ic_launcher.png
+SHA1-Digest: 82PboTF1fZK5bRhGj31DkluqJz8=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: res/drawable/com_facebook_loginbutton_blue_focused.png
+SHA1-Digest: /l9r0DHSIj4WdudFxA18dCfnfec=
+
+Name: assets/res/lobby/strings_jp.xml
+SHA1-Digest: pOSsMtxaSfR//WJkN7WlhotuTeQ=
+
+Name: res/layout/appoxee_default_pull_to_refresh_header.xml
+SHA1-Digest: yELt2mrZzvd2PhgnKOzhM6f32jo=
+
+Name: assets/res/config/app_config_ja.xml
+SHA1-Digest: 8r785XR+85O8v1peI3mqDr1aR+k=
+
+Name: res/drawable-hdpi/header_close_seprator_middle.png
+SHA1-Digest: UxJ/KnrL7c+gVk+khnJRxUPD1T0=
+
+Name: res/drawable-mdpi/thank_you.png
+SHA1-Digest: 5JHjZw04pZGQBwstK0RDD4mXdBQ=
+
+Name: res/drawable-xhdpi/no_connection.png
+SHA1-Digest: 13CS56Oa7QyNEkzsWrs0Fk/yY3s=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+
+Name: res/drawable-port/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: res/raw/debuginfo
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: WlFLGBZDDU9uNTzBSpQtNRcNksA=
+
+Name: res/raw/pp_android_utils_data_data.bin
+SHA1-Digest: K9oz4AbbDvivxw/Evbtrncsy9Ho=
+
+Name: res/drawable-xhdpi/more_apps.png
+SHA1-Digest: BdoN4hNa46RlwJO6enrMJnRiM/w=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: Ar8mpkvXIcx4Xyqbv34xTj7EJUY=
+
+Name: assets/res/assets/sd/icon72.png
+SHA1-Digest: ueA/Z5lOIhmVSlWJZyOkVwsJdYA=
+
+Name: res/drawable-hdpi/header_close_seprator_up.png
+SHA1-Digest: wuT1d7YURNuZWJXwOu1ttrQ35dA=
+
+Name: res/drawable-xhdpi/footer.png
+SHA1-Digest: E9jU1cntIFkEo1y0we9SBvgqz4I=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+
+Name: res/drawable-xhdpi/btn_bottom_center.png
+SHA1-Digest: tE7t4vp1cbYcmHY36jVYt6uYDUo=
+
+Name: assets/res/lobby/hd/SplashScreenBoot.png
+SHA1-Digest: hAE7DWoeec0qD3kf2ULQtFM5HSc=
+
+Name: res/drawable-xhdpi/oops.png
+SHA1-Digest: WqL7pOhgZDjynmx+s7aY5qbSr6w=
+
+Name: res/drawable-mdpi/logo.png
+SHA1-Digest: PE8hpYsLGDOtf/sLQVHgh4gIhoA=
+
+Name: res/layout/main.xml
+SHA1-Digest: ZDt64mYVUtKFIcQR0pTVtrR3Xuw=
+
+Name: res/drawable-hdpi/btn_upper_right.png
+SHA1-Digest: VIdouOp2mJzyna5+fBSQ8cNlCMM=
+
+Name: res/drawable-long-land-mdpi/loading.png
+SHA1-Digest: 6AxTryBQ1q0tLZP38dpIEmMIgCY=
+
+Name: res/drawable-hdpi/com_facebook_icon.png
+SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+
+Name: res/drawable-ldpi/header_close_seprator_up.png
+SHA1-Digest: wuT1d7YURNuZWJXwOu1ttrQ35dA=
+
+Name: res/drawable-ldpi/thank_you.png
+SHA1-Digest: a14KB2U6wTgT+n8EwVxIKNgp9oE=
+
+Name: res/raw/appoxeesound.wav
+SHA1-Digest: YKZV1zsv+BFBwlBC1Nfmm+Gb8F0=
+
+Name: res/drawable-hdpi/icn_feedback.png
+SHA1-Digest: 1hcRiJ2oUuSx+YJNUeyMeF/R17k=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: rZ+51bTjhTihz+q1suJOzXbkqDA=
+
+Name: res/drawable/com_facebook_loginbutton_blue_pressed.png
+SHA1-Digest: /l9r0DHSIj4WdudFxA18dCfnfec=
+
+Name: assets/res/assets/sd/icon36.png
+SHA1-Digest: 5S2ky2uo2GPoJ9IycB+N0fgItpQ=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: sLm08yeBnYkFiIQWTuRpAfhKuFE=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: YgJTSod4Qtle5UZxyxhu47HbTp8=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+
+Name: res/drawable-xhdpi/red_badge.png
+SHA1-Digest: maCmEhFHxJNaTs5GeOLTzqYIwm8=
+
+Name: res/drawable-ldpi/buttons_seperator_middle.png
+SHA1-Digest: vLoVM/mNFQsuRNBkXWi3FXcvAsM=
+
+Name: res/drawable-hdpi/more_apps.png
+SHA1-Digest: zbJq3Jhd0mVQHuTU/TLeLVeC3jY=
+
+Name: res/drawable-mdpi/btn_upper_center.png
+SHA1-Digest: /kgsnK7A90ILAcWShcc66lNDoNU=
+
+Name: res/drawable-notlong-land-hdpi/loading.png
+SHA1-Digest: QADlm2r35eSLTucBx6yJ4im0K/Q=
+
+Name: res/drawable-ldpi/icn_moreapps.png
+SHA1-Digest: 8qILOyQ+EKXBOymtFKCtA6ToWAk=
+
+Name: assets/META-INF/AIR/extensions/com.playtika.PlatilibExtension/ME
+ TA-INF/ANE/Android-ARM/library.swf
+SHA1-Digest: 5BOzx7ODXysbABDsi8eJxFZqnRo=
+
+Name: res/layout/multiple_file_selection_panel.xml
+SHA1-Digest: pDsnMdgfIe6YpeRJ654Jeloluzs=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: CKyR3daLFycC73g9Xn9rcDqSxts=
+
+Name: assets/res/config/app_config_ru.xml
+SHA1-Digest: h/0tgOd7aoGxvBvxaRCmwU9eDL4=
+
+Name: res/drawable-mdpi/footer.png
+SHA1-Digest: f5c9UD/J4qsqAVd3109YcrAWaUk=
+
+Name: res/layout/popup.xml
+SHA1-Digest: uhjSAd099uky94WRp+Gl064+2Ug=
+
+Name: res/raw/logo.png
+SHA1-Digest: inuFBPsHhRotppLZDguyQlZOUUg=
+
+Name: res/drawable-mdpi/btn_upper_right.png
+SHA1-Digest: VIdouOp2mJzyna5+fBSQ8cNlCMM=
+
+Name: res/drawable-xhdpi/btn_upper_right.png
+SHA1-Digest: 1vd67yFwMPeEokIODgEXhW5RTQw=
+
+Name: res/drawable-mdpi/btn_mid_left.png
+SHA1-Digest: Xs7uzCNzeAuVVAcP/OcXWicrebk=
+
+Name: res/drawable-hdpi/btn_upper_left.png
+SHA1-Digest: pcw56xcHbTLq8/1uvYaI6bOymso=
+
+Name: res/drawable-hdpi/btn_bottom_center.png
+SHA1-Digest: /kgsnK7A90ILAcWShcc66lNDoNU=
+
+Name: res/drawable-hdpi/icn_inbox.png
+SHA1-Digest: bsR9oHCKn+gbPevmr2rDx6Nuj/c=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: res/drawable-mdpi/btn_bottom_right.png
+SHA1-Digest: eUBRynreFZbMIw6Tk/806QyYFDc=
+
+Name: res/drawable-ldpi/ptr_pulltorefresh_arrow.png
+SHA1-Digest: m+X4qKbYJ5J1sLXz57KzdwzDMW0=
+
+Name: res/drawable-mdpi/oops.png
+SHA1-Digest: 1QL12RkvGJddBikLa4XHlRR3x7Y=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: /bUsfOdAkNC7fD+aJg4VrhvAtbk=
+
+Name: res/drawable/appoxee_default_icon.png
+SHA1-Digest: CKyR3daLFycC73g9Xn9rcDqSxts=
+
+Name: res/drawable-mdpi/ic_launcher.png
+SHA1-Digest: 82PboTF1fZK5bRhGj31DkluqJz8=
+
+Name: res/drawable/com_facebook_icon.png
+SHA1-Digest: 9jTbeG4b8nJZlZss16UPfagqlUs=
+
+Name: res/drawable-ldpi/btn_upper_right.png
+SHA1-Digest: QFqvcYryKdG3QLBYZrCWERNj0bQ=
+
+Name: res/drawable-hdpi/com_facebook_close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: res/drawable-hdpi/btn_mid_right.png
+SHA1-Digest: VAPQf9v7NW2I0j8nw6mDUOhyyDQ=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: 45BAgKtOkC0fHYqIunSXrQ8YubM=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+

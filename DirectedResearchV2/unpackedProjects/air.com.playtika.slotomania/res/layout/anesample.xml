@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:layout_gravity="left" android:id="@id/CNNButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cnn" />
+    <Button android:layout_gravity="left" android:id="@id/YahooButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yahoo" />
+    <ImageView android:id="@id/imageLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logo" />
+</LinearLayout>

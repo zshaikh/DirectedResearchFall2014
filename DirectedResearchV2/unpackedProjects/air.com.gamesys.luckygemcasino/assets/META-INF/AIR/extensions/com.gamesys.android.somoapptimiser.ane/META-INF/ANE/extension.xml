@@ -1,0 +1,25 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.9">
+  <id>com.gamesys.android.somoapptimiser.ane</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>somoapptimisernative.jar</nativeLibrary>
+        <initializer>com.gamesys.android.somoapptimiser.ane.SomoApptimiserExtension</initializer>
+        <finalizer>com.gamesys.android.somoapptimiser.ane.SomoApptimiserExtension</finalizer>
+      </applicationDeployment>
+    </platform>
+    
+	<platform name="iPhone-ARM">
+       <applicationDeployment>
+         <nativeLibrary>libSomoApptimiserIOSNative.a</nativeLibrary>
+         <initializer>IOSNativeSomoExtensionInitializer</initializer>
+       </applicationDeployment>
+    </platform>
+            
+    <platform name="default"> 
+    	<applicationDeployment /> 
+    </platform>
+        
+  </platforms>
+</extension>

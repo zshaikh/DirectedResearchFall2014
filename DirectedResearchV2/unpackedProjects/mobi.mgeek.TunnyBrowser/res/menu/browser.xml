@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/MAIN_MENU">
+        <item android:id="@id/stop_reload_menu_id" android:alphabeticShortcut="r" />
+        <item android:id="@id/add_bookmark_menu_id" android:title="@string/save_to_bookmarks" android:alphabeticShortcut="a" />
+        <item android:id="@id/find_menu_id" android:title="@string/find_dot" android:alphabeticShortcut="f" />
+        <item android:id="@id/select_text_id" android:title="@string/select_dot" android:alphabeticShortcut="e" />
+        <item android:id="@id/share_page_menu_id" android:title="@string/share_page" android:alphabeticShortcut="s" />
+        <item android:id="@id/save_page_menu_id" android:title="@string/save_page" />
+        <item android:id="@id/compact_or_restore_page_menu_id" android:title="@string/compact_or_restore_page" android:alphabeticShortcut="m" />
+        <item android:id="@id/view_downloads_menu_id" android:title="@string/menu_view_download" android:alphabeticShortcut="d" />
+        <item android:id="@id/preferences_menu_id" android:title="@string/menu_preferences" android:alphabeticShortcut="p" />
+    </group>
+</menu>

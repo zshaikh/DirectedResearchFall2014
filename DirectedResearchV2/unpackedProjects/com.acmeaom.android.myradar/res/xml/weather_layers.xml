@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Weather Layers"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:acme="http://schemas.android.com/apk/res-auto">
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatCompoundSwitchPreference android:title="Radar" android:key="@string/radar_enabled_setting" android:defaultValue="true" acme:subsettings="@xml/radar_settings" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatCompoundSwitchPreference android:title="Temperatures" android:key="@string/temperatures_enabled_setting" android:defaultValue="false" acme:subsettings="@xml/temperature_settings" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatSwitchPreference android:title="Warnings" android:key="@string/warnings_enabled_setting" android:defaultValue="false" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatSwitchPreference android:title="Hurricanes" android:key="@string/hurricanes_enabled_setting" android:defaultValue="false" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatCompoundSwitchPreference android:title="Clouds" android:key="@string/clouds_enabled_setting" android:defaultValue="false" acme:subsettings="@xml/cloud_settings" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatCompoundSwitchPreference android:title="Aviation layers" android:key="@string/aviation_enabled_setting" android:defaultValue="false" acme:subsettings="@xml/aviation_settings" />
+</PreferenceScreen>

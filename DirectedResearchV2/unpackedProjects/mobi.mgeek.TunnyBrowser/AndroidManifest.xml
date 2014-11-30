@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:sharedUserId="mgeek.dolphin.browser" package="mobi.mgeek.TunnyBrowser">
+    <permission-group android:description="@string/permgroupdesc_dolphin" android:label="@string/permgrouplab_dolphin" android:name="android.permission-group.DOLPHIN_BROWSER"/>
+    <permission android:description="@string/permdesc_access_webpage" android:label="@string/permlab_access_webpage" android:name="com.dolphin.browser.permission.ACCESS_WEB_PAGES" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_read_bookmarks" android:label="@string/permlab_read_bookmarks" android:name="com.dolphin.browser.permission.READ_BOOKMARKS" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_write_bookmarks" android:label="@string/permlab_write_bookmarks" android:name="com.dolphin.browser.permission.WRITE_BOOKMARKS" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_read_history" android:label="@string/permlab_read_history" android:name="com.dolphin.browser.permission.READ_HISTORY" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_write_history" android:label="@string/permlab_write_history" android:name="com.dolphin.browser.permission.WRITE_HISTORY" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_manage_downloads" android:label="@string/permlab_manage_downloads" android:name="com.dolphin.browser.permission.MANAGE_DOWNLOADS" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_manage_tabs" android:label="@string/permlab_manage_tabs" android:name="com.dolphin.browser.permission.MANAGE_TABS" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_modify_web_settings" android:label="@string/permlab_modify_web_settings" android:name="com.dolphin.browser.permission.MODIFY_WEB_SETTINGS" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_run_javascript" android:label="@string/permlab_run_javascript" android:name="com.dolphin.browser.permission.RUN_JAVASCRIPT" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_handle_http_auth_request" android:label="@string/permlab_handle_http_auth_request" android:name="com.dolphin.browser.permission.HANDLE_HTTP_AUTH_REQUEST" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_title_bar_action" android:label="@string/permlab_title_bar_action" android:name="com.dolphin.browser.permission.TITLE_BAR_ACTION" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_addon_bar_badge" android:label="@string/permlab_addon_bar_badge" android:name="com.dolphin.browser.permission.ADDON_BAR_BADGE" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_read_most_visited" android:label="@string/permlab_read_most_visited" android:name="com.dolphin.browser.permission.READ_MOST_VISITED" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/permdesc_recognize_visited" android:label="@string/permlab_recognize_guesture" android:name="com.dolphin.browser.permission.RECOGNIZE_GUESTURE" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="mobi.mgeek.TunnyBrowser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="mobi.mgeek.TunnyBrowser.permission.WRITE_HISTORY_BOOKMARK"/>
+    <uses-permission android:name="com.dolphin.browser.permission.ACCESS_PROVIDER"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <permission android:name="tunnybrowser.permission.Extension" android:protectionLevel="signature"/>
+    <permission android:name="tunnybrowser.permission.Theme" android:protectionLevel="signature"/>
+    <permission android:name="tunnybrowser.permission.Addon" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <application android:configChanges="locale" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher_browser" android:label="@string/application_name" android:manageSpaceActivity="mobi.mgeek.TunnyBrowser.ManageSpaceActivity" android:name="mobi.mgeek.TunnyBrowser.Browser" android:taskAffinity="mobi.mgeek.task.tunnybrowser">
+        <provider android:authorities="tunnybrowser" android:exported="false" android:multiprocess="true" android:name="mobi.mgeek.TunnyBrowser.BrowserProvider">
+            <path-permission android:path="/bookmarks/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
+        </provider>
+        <provider android:authorities="tunnydata" android:exported="true" android:multiprocess="true" android:name="com.dolphin.browser.provider.DolphinDataProvider">
+            <path-permission android:path="/most_visited" android:readPermission="com.dolphin.browser.permission.READ_MOST_VISITED"/>
+            <path-permission android:path="/gestures" android:readPermission="com.dolphin.browser.permission.RECOGNIZE_GUESTURE"/>
+        </provider>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <activity android:alwaysRetainTaskState="true" android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/application_name" android:launchMode="singleTask" android:name="mobi.mgeek.TunnyBrowser.BrowserActivity" android:theme="@style/BrowserTheme">
+            <intent-filter>
+                <action android:name="android.speech.action.VOICE_SEARCH_RESULTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="about"/>
+                <data android:scheme="javascript"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="inline"/>
+                <data android:mimeType="text/html"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="application/xhtml+xml"/>
+                <data android:mimeType="application/vnd.wap.xhtml+xml"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme=""/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.WEB_SEARCH"/>
+                <action android:name="android.intent.action.MEDIA_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH_LONG_PRESS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="text/html"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="application/xhtml+xml"/>
+                <data android:mimeType="application/vnd.wap.xhtml+xml"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.dolphin.browser.action.CHILD_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.dolphin.browser.action.EDIT_BOOKMARK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="640dp"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="400dp"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="200dp"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="200dp"/>
+        <activity-alias android:icon="@drawable/dolphin_solar" android:label="@string/dolphin_solar_name" android:name="mobi.mgeek.TunnyBrowser.SonarLaunchActivity" android:targetActivity="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:icon="@drawable/dolphin_solar" android:label="@string/dolphin_solar_name" android:name="mobi.mgeek.TunnyBrowser.SonarLaunchActivity" android:targetActivity="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:icon="@drawable/ic_launcher_browser" android:label="@string/application_shortcut_name" android:name="mobi.mgeek.TunnyBrowser.BrowserLaunchActivity" android:targetActivity="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:icon="@drawable/ic_launcher_browser" android:label="@string/application_shortcut_name" android:name="mobi.mgeek.TunnyBrowser.BrowserLaunchActivity" android:targetActivity="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/menu_preferences" android:name="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage" android:theme="@style/PreferenceTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="" android:name="mobi.mgeek.TunnyBrowser.WebsiteSettingsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:label="@string/bookmarks_search" android:name="mobi.mgeek.TunnyBrowser.BookmarkSearch" android:stateNotNeeded="true" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/bookmarks_searchable"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="Save bookmark" android:name="com.dolphin.browser.bookmark.AddBookmarkPage" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/dolphin-bookmark"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/bookmark"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/dolphin-bookmark"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.AddSpeedDail" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <meta-data android:name="android.app.default_searchable" android:value="mobi.mgeek.TunnyBrowser.BrowserActivity"/>
+        <provider android:authorities="tunnydownloads" android:exported="false" android:name="com.dolphin.browser.downloads.DownloadProvider"/>
+        <provider android:authorities="mobi.mgeek.TunnyBrowser.htmlfileprovider" android:exported="false" android:multiprocess="false" android:name="com.dolphin.browser.provider.FileContentProvider" android:syncable="false"/>
+        <service android:name="com.dolphin.browser.downloads.DownloadService"/>
+        <receiver android:exported="false" android:name="com.dolphin.browser.downloads.DownloadReceiver"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.BrowserPluginList" android:theme="@style/BookmarkTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.ChooseThemeActivity" android:theme="@style/BookmarkTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="mobi.mgeek.TunnyBrowser.TermsOfUseActivity" android:screenOrientation="portrait" android:theme="@style/FirstLaunchTheme"/>
+        <receiver android:name="mobi.mgeek.TunnyBrowser.OpenDownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TUNNY_DOWNLOAD_NOTIFICATION_CLICKED"/>
+                <action android:name="android.intent.action.TUNNY_DOWNLOAD_COMPLETED"/>
+                <action android:name="android.intent.action.DELETE"/>
+                <data android:mimeType="vnd.android.cursor.item/tunnydownload" android:scheme="content"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="mobi.mgeek.TunnyBrowser.SetupWizardActivity" android:theme="@style/FirstLaunchTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.AboutActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="singleInstance" android:name="mobi.mgeek.util.CrashReporter.CrashReportDialog" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.ManageSpaceActivity" android:theme="@style/PreferenceTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.RestartActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="android.webkit.PluginActivity">
+            <intent-filter>
+                <action android:name="android.intent.webkit.PLUGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.mobosquare.sdk.subscription.SUBSCRIPTION_APIKEY" android:value="F02250A92D924518"/>
+        <meta-data android:name="com.mobosquare.sdk.subscription.SUBSCRIPTION_APISECRET" android:value="BF4A83627464C824"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.gesture.ui.GestureListActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.gesture.ui.GestureCreateActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:name="com.dolphin.browser.gesture.ui.ActionChooser" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.dolphin.update.promote.UpdateActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.update.promote.PromoteActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="dolphinbrowserhd" android:exported="false" android:name="com.dolphin.browser.provider.BrowserProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleInstance" android:name="mobi.mgeek.TunnyBrowser.ShareActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.LoginActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.DolphinConnectActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.DolphinSignUpActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.DeviceManageActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.CloudDataManageActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.DolphinAccountActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.ChangePasswordActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.PasswordResetActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.AccountServiceManageActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.OAuthActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="mobi.mgeek.TunnyBrowser.UserExperienceReportActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.TitleWebHostActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.DolphinService.ui.PasswordManage" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.extension.ui.AddonAboutActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="mobi.mgeek.TunnyBrowser.FirstLauncherActivity" android:screenOrientation="portrait" android:theme="@style/FirstLaunchTheme"/>
+        <receiver android:name="com.dolphin.browser.sync.BookmarkSyncReceiver">
+            <intent-filter>
+                <action android:name="com.dolphin.browser.BookmarkSync.SYNC_ACTION"/>
+                <action android:name="com.dolphin.browser.BookmarkSync.UPLOAD_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.dolphin.browser.sync.BookmarkSyncService"/>
+        <receiver android:name="com.dolphin.browser.sync.TabSyncReceiver">
+            <intent-filter>
+                <action android:name="com.dolphin.browser.TabSync.SYNC_ACTION"/>
+                <action android:name="com.dolphin.browser.TabSync.UPLOAD_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.dolphin.browser.sync.TabSyncService"/>
+        <receiver android:name="com.dolphin.browser.sync.HistorySyncReceiver">
+            <intent-filter>
+                <action android:name="com.dolphin.browser.HistorySync.SYNC_ACTION"/>
+                <action android:name="com.dolphin.browser.HistorySync.UPLOAD_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.dolphin.browser.sync.HistorySyncService"/>
+        <receiver android:name="com.dolphin.browser.sync.PasswordSyncReceiver">
+            <intent-filter>
+                <action android:name="com.dolphin.browser.PasswordSync.SYNC_ACTION"/>
+                <action android:name="com.dolphin.browser.PasswordSync.UPLOAD_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.dolphin.browser.sync.PasswordSyncService"/>
+        <service android:name="com.dolphin.browser.sync.MixedSyncService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.activities.DolphinIntentActivity" android:theme="@style/Theme_NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="speeddial" android:scheme="dolphin"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="bookmark" android:scheme="dolphin"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="shortcut" android:scheme="dolphin"/>
+            </intent-filter>
+        </activity>
+        <service android:label="@string/dolphin_notification_service" android:name="com.dolphin.browser.message.C2DMService" android:process=":DolphinNotification"/>
+        <receiver android:name="com.dolphin.browser.message.MyBroadcastReceiver" android:process=":DolphinNotification">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.message.DialogActivity" android:theme="@style/Theme_NoDisplay"/>
+        <receiver android:exported="true" android:name="com.dolphin.browser.analytics.AnalyticsReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="dolphin_voice_en" android:exported="false" android:name="com.dolphin.browser.voice.command.VoiceCommandProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.vg.VoiceGestureActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.dolphin.brwoser.action.ACTION_VOICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="mobi.mgeek.TunnyBrowser.PrivateModeSettingsActivity" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.vg.VoiceGestureSettingsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.vg.VoiceSettingsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <receiver android:name="com.dolphin.browser.extensions.DownloadCompleteReceiver">
+            <intent-filter>
+                <action android:name="com.dolphin.browser.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/menu_preferences" android:name="dolphin.preference.HomePageGroupPreference" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/menu_preferences" android:name="mobi.mgeek.TunnyBrowser.SubscriptionActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:name="com.dolphin.browser.activities.UnsupportedDeviceDialog" android:noHistory="true" android:stateNotNeeded="true" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.download.ui.BrowserDownloadPage" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.download.ui.DownloadingActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.download.ui.DownloadActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.download.ui.FileManageActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.feedback.FeedbackActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.feedback.SendCriticalBugsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.mgeek.android.ui.DragableButtonGuide" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.dolphin.browser.push.PushService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.dolphin.browser.push.ActionPushDialogActivity" android:stateNotNeeded="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.dolphin.browser.push.http.NetworkStateObserver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>"
+</intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.vg.ui.WifiConnectionActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.pagedrop.activity.PagedropNameSettingActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.pagedrop.activity.PagedropSettingActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.pagedrop.activity.PageDropChatActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.share.ShareActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.share.tabpush.TabPushShareContentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.account.ui.AccountManageActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.account.ui.LoginActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.account.ui.ServiceActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.search.ui.SearchSettingsActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.share.ShareLoginActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.theme.ThemeActivity2" android:theme="@style/BrowserTheme"/>
+        <activity android:name="com.dolphin.browser.theme.ThemeInstaller" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="*" android:mimeType="application/octet-stream" android:pathPattern=".*\\.dtp" android:scheme="file"/>
+                <data android:host="*" android:pathPattern=".*\\.dtp" android:scheme="file"/>
+                <data android:host="*" android:mimeType="application/octet-stream" android:pathPattern=".*\\.dwp" android:scheme="file"/>
+                <data android:host="*" android:pathPattern=".*\\.dwp" android:scheme="file"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.language.LanguageSettingsActivity" android:theme="@style/BrowserTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.DolphinService.ui.MasterPasswordCreateDialog" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.DolphinService.ui.MasterPasswordRemoveDialog" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.DolphinService.ui.MasterPasswordClearPasswordDialog" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.DolphinService.ui.MasterPasswordEncryptPasswordDialog" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.DolphinService.ui.MasterPasswordDecryptPasswordDialog" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.dolphin.browser.bookmark.BookmarkEntranceActivity" android:theme="@style/BrowserTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.bookmark.ImportBookmarksActivity" android:theme="@style/BrowserTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dolphin.browser.bookmark.TabSyncActivity" android:theme="@style/BrowserTheme"/>
+        <provider android:authorities="mobi.mgeek.TunnyBrowser.mostvisited" android:exported="false" android:name="com.dolphin.browser.mostvisit.MostVisitedUrlProvider"/>
+        <service android:label="@string/application_name" android:name="mobi.mgeek.TunnyBrowser.ForegroundService"/>
+    </application>
+    <permission android:description="@string/permdesc_javascript_cross_origin_access" android:label="@string/permlab_javascript_cross_origin_access" android:name="com.dolphin.browser.permission.JAVASCRIPT_CROSS_ORIGIN_ACCESS" android:permissionGroup="android.permission-group.DOLPHIN_BROWSER" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+</manifest>

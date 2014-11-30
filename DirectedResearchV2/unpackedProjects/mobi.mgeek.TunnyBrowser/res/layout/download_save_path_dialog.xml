@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <TextView android:textSize="16.0sp" android:id="@id/tv_file_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/download_file_name" android:layout_centerVertical="true" />
+            <EditText android:textSize="14.669983sp" android:id="@id/input" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="83.0dip" android:layout_marginRight="10.0dip" android:hint="@string/download_file_name" android:singleLine="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <TextView android:textSize="16.0sp" android:id="@id/tv_save_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/download_save_path" android:layout_centerVertical="true" />
+            <RelativeLayout android:id="@id/path_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="83.0dip" android:layout_marginRight="10.0dip">
+                <Button android:textSize="14.669983sp" android:ellipsize="start" android:gravity="left|center" android:id="@id/btn_save_path" android:clickable="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:singleLine="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip">
+            <CheckBox android:id="@id/set_default_path_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+            <TextView android:textSize="15.0sp" android:id="@id/set_default_path_checkbox_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.5dip" android:text="@string/set_default_download_path" android:layout_toRightOf="@id/set_default_path_checkbox" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bookmark_button_horizontal_padding" android:layout_alignParentLeft="true">
+        <ImageView android:id="@id/back_btn" android:padding="@dimen/bookmark_path_icon_padding" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/SettingsTitleAppearence" android:gravity="center" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/theme_activity_title" android:layout_centerInParent="true" />
+</RelativeLayout>

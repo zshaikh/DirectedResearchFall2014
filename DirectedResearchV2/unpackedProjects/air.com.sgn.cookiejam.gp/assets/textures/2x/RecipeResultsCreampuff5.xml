@@ -1,0 +1,6 @@
+<TextureAtlas imagePath="RecipeResultsCreampuff5.png">
+	<SubTexture name="creampuff_5_0" x="0" y="362" width="360" height="360"/>
+	<SubTexture name="creampuff_5_1" x="362" y="0" width="360" height="360"/>
+	<SubTexture name="creampuff_5_2" x="362" y="362" width="360" height="360"/>
+	<SubTexture name="creampuff_5_3" x="0" y="0" width="360" height="360"/>
+</TextureAtlas>

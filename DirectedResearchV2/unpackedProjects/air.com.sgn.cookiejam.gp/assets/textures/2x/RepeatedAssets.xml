@@ -1,0 +1,35 @@
+<TextureAtlas imagePath="RepeatedAssets.png">
+	<SubTexture name="generic_app_icon" x="168" y="1731" width="152" height="152"/>
+	<SubTexture name="generic_box_darkbrown" x="184" y="1106" width="118" height="118"/>
+	<SubTexture name="generic_box_lightbrown" x="184" y="1226" width="118" height="118"/>
+	<SubTexture name="generic_box_white" x="187" y="590" width="108" height="114"/>
+	<SubTexture name="generic_button_blue" x="0" y="919" width="185" height="185"/>
+	<SubTexture name="generic_button_gray" x="0" y="545" width="185" height="185"/>
+	<SubTexture name="generic_button_green" x="0" y="732" width="185" height="185"/>
+	<SubTexture name="generic_button_red" x="0" y="358" width="185" height="185"/>
+	<SubTexture name="generic_check_bg" x="187" y="889" width="90" height="92"/>
+	<SubTexture name="generic_check_green" x="304" y="1103" width="80" height="68"/>
+	<SubTexture name="generic_circle_brown" x="187" y="983" width="84" height="83"/>
+	<SubTexture name="generic_coin" x="0" y="1731" width="166" height="169"/>
+	<SubTexture name="generic_exit" x="0" y="1558" width="171" height="171"/>
+	<SubTexture name="generic_facebook_logo" x="0" y="297" width="296" height="59"/>
+	<SubTexture name="generic_heart" x="0" y="1106" width="182" height="163"/>
+	<SubTexture name="generic_mail_icon" x="0" y="1902" width="159" height="138"/>
+	<SubTexture name="generic_mugshot" x="168" y="1885" width="150" height="150"/>
+	<SubTexture name="generic_mugshot_bg" x="0" y="1376" width="180" height="180"/>
+	<SubTexture name="generic_mugshot_bg_rotated" x="182" y="1376" width="135" height="136"/>
+	<SubTexture name="generic_panel_darkwood" x="187" y="706" width="103" height="181"/>
+	<SubTexture name="generic_panel_darkwood_landscape" x="0" y="1271" width="181" height="103"/>
+	<SubTexture name="generic_panel_highscore" x="303" y="297" width="88" height="676"/>
+	<SubTexture name="generic_panel_highscore_landscape" x="0" y="207" width="676" height="88"/>
+	<SubTexture name="generic_plus" x="173" y="1558" width="139" height="138"/>
+	<SubTexture name="generic_popup_bg" x="0" y="0" width="1276" height="205"/>
+	<SubTexture name="generic_square_button_blue" x="187" y="474" width="114" height="114"/>
+	<SubTexture name="generic_square_button_green" x="187" y="358" width="114" height="114"/>
+	<SubTexture name="generic_text_bg_brown" x="304" y="1173" width="43" height="43"/>
+	<SubTexture name="generic_text_bg_whitewood" x="279" y="975" width="87" height="126"/>
+	<SubTexture name="scroll_arrow_down" x="187" y="1068" width="33" height="34"/>
+	<SubTexture name="scroll_arrow_up" x="182" y="1514" width="33" height="34"/>
+	<SubTexture name="scroll_thumb" x="304" y="1218" width="16" height="104"/>
+	<SubTexture name="scroll_track" x="322" y="1218" width="10" height="475"/>
+</TextureAtlas>

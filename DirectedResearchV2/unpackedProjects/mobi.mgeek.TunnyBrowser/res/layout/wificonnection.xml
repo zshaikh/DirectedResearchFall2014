@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:isScrollContainer="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height">
+        <ImageView android:id="@id/btn_done" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="56.599976dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pagedrop_title" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/setting" android:background="@drawable/pagedrop_setting_button_bg" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/wificonnection_middle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/wificonnection_imageView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/no_wifi" />
+                <TextView android:textSize="17.0sp" android:textColor="@color/pagedrop_empty_list_text_color" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/wificonnection_textView" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_marginTop="42.0dip" android:text="@string/wifi_conn_text" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/wificonnection_linear" android:background="@color/dolphin_green_color" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="17.0sp" android:textColor="@color/pagedrop_send_text_color" android:gravity="center_horizontal" android:id="@id/wificonnection_turnon" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/turnon_wifi" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@id/progressBar1" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/wificonnection_turnon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

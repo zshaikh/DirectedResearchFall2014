@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mgeek.android.ui.MainScreen android:id="@id/center_screen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fixed_titlebar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <FrameLayout android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/main_menubar_holder" android:layout_below="@id/fixed_titlebar_holder" />
+    <FrameLayout android:id="@id/main_menubar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</com.mgeek.android.ui.MainScreen>

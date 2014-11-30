@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/close_tab" android:title="@string/close_tab" />
+    <item android:id="@id/close_other_tab" android:title="@string/close_other_tab" />
+    <item android:id="@id/close_all_tab" android:title="@string/close_all_tab" />
+    <item android:id="@id/undo_tab" android:title="@string/undo_tab" />
+</menu>

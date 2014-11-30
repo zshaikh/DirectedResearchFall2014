@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/dialog_actionbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <FrameLayout android:background="@drawable/ab_background" android:layout_width="wrap_content" android:layout_height="48.0dip">
+            <LinearLayout android:orientation="horizontal" android:id="@id/dialog_button_home" android:background="?android:actionBarItemBackground" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="start|center" android:id="@id/dialog_actionbar_up_indicator" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_up_indicator" />
+                <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/dialog_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:animateLayoutChanges="true">
+                    <TextView android:textSize="@dimen/dialog_title_font_size" android:textColor="@color/dialog_title" android:ellipsize="end" android:gravity="start" android:layout_gravity="start|center" android:id="@id/dialog_actionbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif" />
+                    <TextView android:textSize="@dimen/dialog_subtitle_font_size" android:textColor="@color/dialog_subtitle" android:ellipsize="end" android:gravity="start" android:layout_gravity="start|center" android:id="@id/dialog_actionbar_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/dialog_actionbar_actions" android:background="@drawable/ab_background" android:padding="0.0dip" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/dialog_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/dialog_buttons_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/dialog_horizontal_divider" android:showDividers="beginning">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/dialog_vertical_divider" android:showDividers="middle">
+            <TextView android:textSize="@dimen/dialog_button_font_size" android:textColor="@color/dialog_button_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/dialog_button_negative" android:background="@drawable/dialog_button_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dialog_button_height" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dialog_button_font_size" android:textColor="@color/dialog_button_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/dialog_button_neutral" android:background="@drawable/dialog_button_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dialog_button_height" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dialog_button_font_size" android:textColor="@color/dialog_button_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/dialog_button_positive" android:background="@drawable/dialog_button_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dialog_button_height" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

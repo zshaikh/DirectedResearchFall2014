@@ -1,0 +1,116 @@
+.class public Lcom/fusepowered/a1/A1InterstitialActivity;
+.super Landroid/app/Activity;
+.source "ApplifierImpactFullscreenActivity.java"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 10
+    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 1
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
+
+    .prologue
+    .line 13
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 14
+    const-string v0, "ApplifierImpactFullscreenActivity->onCreate()"
+
+    invoke-static {v0, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 16
+    sget-object v0, Lcom/fusepowered/a1/ApplifierImpact;->instance:Lcom/fusepowered/a1/ApplifierImpact;
+
+    if-eqz v0, :cond_0
+
+    .line 17
+    sget-object v0, Lcom/fusepowered/a1/ApplifierImpact;->instance:Lcom/fusepowered/a1/ApplifierImpact;
+
+    invoke-virtual {v0, p0}, Lcom/fusepowered/a1/ApplifierImpact;->changeActivity(Landroid/app/Activity;)V
+
+    .line 20
+    :goto_0
+    return-void
+
+    .line 19
+    :cond_0
+    const-string v0, "onCreate() Impact instance is NULL!"
+
+    invoke-static {v0, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method protected onDestroy()V
+    .locals 1
+
+    .prologue
+    .line 35
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    .line 36
+    const-string v0, "ApplifierImpactFullscreenActivity->onDestroy()"
+
+    invoke-static {v0, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 37
+    return-void
+.end method
+
+.method public onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 1
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
+
+    .prologue
+    .line 41
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onResume()V
+    .locals 1
+
+    .prologue
+    .line 24
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
+
+    .line 25
+    const-string v0, "ApplifierImpactFullscreenActivity->onResume()"
+
+    invoke-static {v0, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 27
+    sget-object v0, Lcom/fusepowered/a1/ApplifierImpact;->instance:Lcom/fusepowered/a1/ApplifierImpact;
+
+    if-eqz v0, :cond_0
+
+    .line 28
+    sget-object v0, Lcom/fusepowered/a1/ApplifierImpact;->instance:Lcom/fusepowered/a1/ApplifierImpact;
+
+    invoke-virtual {v0, p0}, Lcom/fusepowered/a1/ApplifierImpact;->changeActivity(Landroid/app/Activity;)V
+
+    .line 31
+    :goto_0
+    return-void
+
+    .line 30
+    :cond_0
+    const-string v0, "onResume() Impact instance is NULL!"
+
+    invoke-static {v0, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method

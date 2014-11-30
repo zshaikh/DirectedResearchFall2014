@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/row_agenda_event" android:background="@drawable/widget_ab_item_selector" android:paddingRight="@dimen/widget_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="32.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/row_agenda_event_icon" android:layout_width="@dimen/widget_lockscreen_expanded_icon_size" android:layout_height="@dimen/widget_lockscreen_expanded_icon_size" android:layout_marginRight="@dimen/widget_icon_padding_right" android:src="@drawable/widget_dot_lockscreen_expand" />
+        <TextView android:textSize="@dimen/widget_lockscreen_event_title_font_size" android:textColor="#ffffffff" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/row_agenda_event_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif-light" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/widget_lockscreen_event_start_font_size" android:textColor="#7fffffff" android:id="@id/row_agenda_event_start" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/widget_lockscreen_icon_space_used" android:fontFamily="sans-serif" />
+    <TextView android:textSize="@dimen/widget_lockscreen_event_location_font_size" android:textColor="#7fffffff" android:ellipsize="end" android:id="@id/row_agenda_event_location" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/widget_lockscreen_icon_space_used" android:layout_marginTop="@dimen/widget_text_vertical_spacing" android:maxLines="1" android:drawableLeft="@drawable/widget_location" android:drawablePadding="@dimen/agendaview_event_location_padding_left" android:fontFamily="sans-serif" />
+    <FrameLayout android:id="@id/row_agenda_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/widget_vertical_padding" />
+    <FrameLayout android:id="@id/row_agenda_spacing_before_section_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/widget_spacing_before_section_header" />
+</LinearLayout>

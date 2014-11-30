@@ -1,0 +1,33 @@
+
+			<extension xmlns="http://ns.adobe.com/air/extension/3.6">
+				<id>com.stuv.ane.mdotm.AneMdotM</id>
+				<versionNumber>1</versionNumber>
+
+				<platforms>
+		
+					
+		<platform name="Android-ARM">
+				<applicationDeployment>
+					<nativeLibrary>android.jar</nativeLibrary>
+					<initializer>com.stuv.ane.mdotm.extensions.MdotMExtension</initializer>
+				</applicationDeployment>
+			</platform>
+		
+					
+		<platform name="iPhone-ARM">
+				<applicationDeployment>
+					<nativeLibrary>libMdotM.a</nativeLibrary>
+					<initializer>mdotmExtensionInitializer</initializer>
+					<finalizer>mdotmExtensionFinalizer</finalizer>
+				</applicationDeployment>
+			</platform>
+		
+					
+		<platform name="default">
+				<applicationDeployment />
+			</platform>
+		
+		
+				</platforms>
+			</extension>
+		

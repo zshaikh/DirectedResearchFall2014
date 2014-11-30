@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_id_theme_skin_download" android:title="@string/theme_menu_download" />
+    <item android:id="@id/menu_id_theme_skin_delete" android:title="@string/delete" />
+    <item android:id="@id/menu_id_theme_skin_download_cancel" android:title="@string/download_menu_cancel" />
+</menu>

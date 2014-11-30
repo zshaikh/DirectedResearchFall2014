@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="101.32999dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="16.0dip" android:id="@id/et_input_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="13.329987dip" android:layout_marginTop="31.329987dip" android:layout_marginRight="13.329987dip" android:singleLine="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0dip" android:id="@id/tv_alert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="72.0dip" android:layout_centerHorizontal="true" />
+</RelativeLayout>

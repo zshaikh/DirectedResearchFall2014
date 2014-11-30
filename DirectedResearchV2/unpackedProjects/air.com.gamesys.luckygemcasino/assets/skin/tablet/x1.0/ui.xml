@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:fc8830960ed251d1304cef788082516e:cc3096c30c51bc763593b57e136ee8e7:0dbeed7acf6c3264861a2e70e992bcae$ -->
+<TextureAtlas imagePath="ui.png">
+    <SubTexture name="abadi-leaderboard-black" x="1983" y="752" width="60" height="20" frameX="-1" frameY="0" frameWidth="64" frameHeight="64"/>
+    <SubTexture name="abadi-leaderboard-white" x="1693" y="1215" width="122" height="44" frameX="0" frameY="0" frameWidth="128" frameHeight="64"/>
+    <SubTexture name="abadi-profile-bar" x="1565" y="1214" width="124" height="94" frameX="-1" frameY="-1" frameWidth="128" frameHeight="128"/>
+    <SubTexture name="achievements/empty_achievement" x="1817" y="1400" width="109" height="109"/>
+    <SubTexture name="animations/3dcoin/3dcoin01" x="1274" y="1131" width="52" height="52" frameX="-1" frameY="-2" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin02" x="689" y="1060" width="52" height="52" frameX="-1" frameY="-2" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin03" x="1274" y="1235" width="52" height="44" frameX="-1" frameY="-6" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin04" x="1272" y="1411" width="52" height="38" frameX="-1" frameY="-9" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin05" x="1509" y="1186" width="52" height="26" frameX="-1" frameY="-15" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin06" x="1797" y="1016" width="56" height="6" frameX="0" frameY="-25" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin07" x="1509" y="1156" width="52" height="26" frameX="-1" frameY="-15" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin08" x="1274" y="1369" width="52" height="38" frameX="-1" frameY="-9" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin09" x="1274" y="1187" width="52" height="44" frameX="-1" frameY="-6" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin10" x="1274" y="1075" width="52" height="52" frameX="-1" frameY="-2" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin11" x="1274" y="1019" width="52" height="52" frameX="-1" frameY="-2" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin12" x="1275" y="963" width="52" height="52" frameX="-1" frameY="-2" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin13" x="1274" y="1327" width="52" height="38" frameX="-1" frameY="-9" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin14" x="1509" y="1126" width="52" height="26" frameX="-1" frameY="-15" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin15" x="1740" y="1122" width="52" height="12" frameX="-1" frameY="-22" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin16" x="1991" y="185" width="54" height="14" frameX="0" frameY="-21" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin17" x="1509" y="1094" width="52" height="28" frameX="-1" frameY="-14" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin18" x="1274" y="1283" width="52" height="40" frameX="-1" frameY="-8" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/3dcoin/3dcoin19" x="689" y="1004" width="52" height="52" frameX="-1" frameY="-2" frameWidth="56" frameHeight="56"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_00" x="779" y="629" width="6" height="6" frameX="-174" frameY="-11" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_01" x="1555" y="498" width="14" height="14" frameX="-170" frameY="-7" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_02" x="2026" y="70" width="18" height="18" frameX="-168" frameY="-5" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_03" x="1869" y="928" width="24" height="24" frameX="-165" frameY="-2" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_04" x="1930" y="1400" width="26" height="26" frameX="-164" frameY="-1" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_05" x="1065" y="850" width="28" height="28" frameX="-163" frameY="0" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_06" x="1065" y="818" width="28" height="28" frameX="-163" frameY="0" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_07" x="1065" y="882" width="26" height="26" frameX="-164" frameY="-1" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_08" x="1983" y="776" width="22" height="22" frameX="-166" frameY="-3" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_09" x="1095" y="963" width="176" height="44" frameX="-10" frameY="-5" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_10" x="758" y="999" width="176" height="44" frameX="-8" frameY="-7" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_11" x="758" y="951" width="176" height="44" frameX="-6" frameY="-9" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_12" x="1869" y="957" width="176" height="44" frameX="-3" frameY="-11" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_13" x="1548" y="924" width="20" height="20" frameX="-3" frameY="-36" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_14" x="1548" y="900" width="20" height="20" frameX="-3" frameY="-36" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_15" x="1548" y="876" width="20" height="20" frameX="-3" frameY="-36" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_16" x="1873" y="906" width="20" height="18" frameX="-2" frameY="-37" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_17" x="689" y="830" width="84" height="46" frameX="-4" frameY="-8" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_18" x="689" y="763" width="86" height="46" frameX="-5" frameY="-6" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_19" x="689" y="711" width="86" height="48" frameX="-6" frameY="-3" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_20" x="689" y="659" width="86" height="48" frameX="-8" frameY="-2" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_21" x="689" y="607" width="86" height="48" frameX="-9" frameY="-1" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_22" x="1548" y="852" width="20" height="20" frameX="-75" frameY="-1" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_23" x="2009" y="776" width="20" height="22" frameX="-75" frameY="0" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_24" x="1548" y="828" width="20" height="20" frameX="-75" frameY="0" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_25" x="1074" y="1388" width="16" height="18" frameX="-77" frameY="-1" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_26" x="1025" y="752" width="36" height="56" frameX="-79" frameY="-3" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_27" x="1509" y="1325" width="38" height="56" frameX="-79" frameY="-5" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_28" x="1509" y="1385" width="38" height="54" frameX="-80" frameY="-7" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_29" x="1023" y="852" width="38" height="56" frameX="-81" frameY="-7" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_30" x="1952" y="426" width="14" height="14" frameX="-106" frameY="-49" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_31" x="1952" y="408" width="14" height="14" frameX="-106" frameY="-49" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_32" x="1991" y="110" width="14" height="14" frameX="-106" frameY="-50" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_33" x="2033" y="776" width="12" height="12" frameX="-107" frameY="-51" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_34" x="1343" y="646" width="10" height="12" frameX="-108" frameY="-50" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_35" x="1343" y="724" width="8" height="8" frameX="-109" frameY="-53" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_36" x="779" y="607" width="6" height="8" frameX="-110" frameY="-52" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_37" x="779" y="619" width="6" height="6" frameX="-110" frameY="-54" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_38" x="779" y="683" width="4" height="4" frameX="-111" frameY="-55" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_button_sparkle/collect-animation_39" x="779" y="629" width="6" height="6" frameX="-174" frameY="-11" frameWidth="192" frameHeight="68"/>
+    <SubTexture name="animations/collect_coins/collect_coin_01" x="1917" y="1574" width="32" height="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_02" x="1917" y="1574" width="32" height="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_03" x="1881" y="1547" width="32" height="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_04" x="1881" y="1547" width="32" height="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_05" x="1066" y="718" width="26" height="32" frameX="-3" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_06" x="1066" y="718" width="26" height="32" frameX="-3" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_07" x="1789" y="1389" width="24" height="32" frameX="-4" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_08" x="1789" y="1389" width="24" height="32" frameX="-4" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_09" x="1074" y="1352" width="16" height="32" frameX="-8" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_10" x="1074" y="1352" width="16" height="32" frameX="-8" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_11" x="779" y="639" width="4" height="32" frameX="-14" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_12" x="779" y="639" width="4" height="32" frameX="-14" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_13" x="2026" y="92" width="16" height="32" frameX="-8" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_14" x="2026" y="92" width="16" height="32" frameX="-8" frameY="0" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="animations/collect_coins/collect_coin_15" x="1917" y="1574" width="32" height="32"/>
+    <SubTexture name="animations/collect_coins/getcoins_icon_blue" x="1961" y="1240" width="34" height="34"/>
+    <SubTexture name="animations/gem-loader/backing" x="1551" y="1433" width="110" height="87" frameX="0" frameY="-2" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0001" x="1789" y="1425" width="24" height="15" frameX="-8" frameY="-43" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0002" x="1228" y="1453" width="98" height="33" frameX="-5" frameY="-51" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0003" x="1797" y="995" width="56" height="17" frameX="-42" frameY="-38" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0004" x="689" y="482" width="96" height="39" frameX="-8" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0005" x="689" y="813" width="86" height="13" frameX="-11" frameY="-39" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0006" x="1948" y="715" width="96" height="33" frameX="-7" frameY="-51" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0007" x="1952" y="444" width="92" height="41" frameX="-8" frameY="-39" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0008" x="1948" y="678" width="96" height="33" frameX="-8" frameY="-51" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0009" x="1805" y="881" width="64" height="41" frameX="-8" frameY="-39" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0010" x="1952" y="489" width="92" height="39" frameX="-9" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0011" x="689" y="566" width="90" height="37" frameX="-8" frameY="-43" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0012" x="689" y="439" width="96" height="39" frameX="-8" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0013" x="1952" y="532" width="92" height="37" frameX="-8" frameY="-43" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0014" x="689" y="525" width="96" height="37" frameX="-8" frameY="-44" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0015" x="1951" y="573" width="94" height="35" frameX="-9" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0016" x="1951" y="573" width="94" height="35" frameX="-9" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0017" x="1951" y="573" width="94" height="35" frameX="-9" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0018" x="1951" y="573" width="94" height="35" frameX="-9" frameY="-45" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0019" x="1789" y="1425" width="24" height="15" frameX="-8" frameY="-43" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/gem-loader/gem_loader0020" x="1228" y="1453" width="98" height="33" frameX="-5" frameY="-51" frameWidth="110" frameHeight="89"/>
+    <SubTexture name="animations/generic-loader/generic-loader-01" x="1980" y="1673" width="29" height="27" frameX="-4" frameY="-5" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-02" x="1980" y="1640" width="29" height="29" frameX="-4" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-03" x="1881" y="1649" width="29" height="29" frameX="-4" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-04" x="1914" y="1643" width="29" height="29" frameX="-3" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-05" x="1947" y="1640" width="29" height="29" frameX="-4" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-06" x="1881" y="1616" width="29" height="29" frameX="-4" frameY="-2" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-07" x="1914" y="1610" width="29" height="29" frameX="-5" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-08" x="1986" y="1607" width="29" height="29" frameX="-5" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-09" x="1914" y="1676" width="29" height="27" frameX="-5" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-10" x="1947" y="1673" width="29" height="27" frameX="-5" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-11" x="1953" y="1607" width="29" height="29" frameX="-5" frameY="-3" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-12" x="1986" y="1574" width="29" height="29" frameX="-5" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-13" x="1953" y="1574" width="29" height="29" frameX="-5" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-14" x="1066" y="685" width="27" height="29" frameX="-6" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-15" x="1066" y="652" width="27" height="29" frameX="-6" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-16" x="1881" y="1583" width="29" height="29" frameX="-4" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-17" x="1060" y="1442" width="29" height="29" frameX="-4" frameY="-4" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-18" x="2013" y="1671" width="29" height="27" frameX="-4" frameY="-5" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-19" x="2013" y="1640" width="29" height="27" frameX="-4" frameY="-5" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/generic-loader/generic-loader-20" x="1980" y="1673" width="29" height="27" frameX="-4" frameY="-5" frameWidth="35" frameHeight="35"/>
+    <SubTexture name="animations/xp_star/xp_star_01" x="1900" y="584" width="1" height="1" frameX="0" frameY="0" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_02" x="2033" y="792" width="7" height="7" frameX="-29" frameY="-29" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_03" x="1343" y="662" width="9" height="9" frameX="-28" frameY="-28" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_04" x="1343" y="631" width="11" height="11" frameX="-27" frameY="-27" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_05" x="1343" y="616" width="13" height="11" frameX="-25" frameY="-27" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_06" x="2009" y="110" width="13" height="13" frameX="-26" frameY="-26" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_07" x="1343" y="597" width="15" height="15" frameX="-25" frameY="-25" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_08" x="2026" y="3" width="19" height="19" frameX="-22" frameY="-22" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_09" x="1873" y="881" width="21" height="21" frameX="-22" frameY="-22" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_10" x="2019" y="1574" width="25" height="43" frameX="-19" frameY="-12" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_11" x="1948" y="752" width="31" height="47" frameX="-17" frameY="-10" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_12" x="1509" y="1270" width="39" height="51" frameX="-13" frameY="-9" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_13" x="1900" y="592" width="47" height="57" frameX="-8" frameY="-6" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_14" x="1797" y="1026" width="53" height="61" frameX="-6" frameY="-5" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_15" x="1804" y="926" width="61" height="65" frameX="-2" frameY="-2" frameWidth="67" frameHeight="67"/>
+    <SubTexture name="animations/xp_star/xp_star_16" x="1900" y="584" width="1" height="1" frameX="0" frameY="0" frameWidth="4" frameHeight="4"/>
+    <SubTexture name="bonus/amount-bg" x="924" y="1352" width="146" height="52"/>
+    <SubTexture name="bonus/bg_left" x="1509" y="1443" width="32" height="143"/>
+    <SubTexture name="bonus/bg_right" x="1997" y="1278" width="32" height="143"/>
+    <SubTexture name="bonus/bg_tile" x="1961" y="1278" width="32" height="143"/>
+    <SubTexture name="bonus/chest_closed" x="1693" y="1263" width="120" height="122" frameX="-1" frameY="-1" frameWidth="124" frameHeight="124"/>
+    <SubTexture name="bonus/chest_open" x="1900" y="803" width="140" height="150" frameX="0" frameY="-2" frameWidth="140" frameHeight="152"/>
+    <SubTexture name="bonus/collect-btn-normal_big_large" x="789" y="530" width="304" height="80" frameX="-2" frameY="-2" frameWidth="308" frameHeight="82"/>
+    <SubTexture name="bonus/parrot" x="1673" y="1389" width="112" height="111" frameX="-3" frameY="-1" frameWidth="120" frameHeight="113"/>
+    <SubTexture name="bonus/title_available" x="1572" y="544" width="331" height="36"/>
+    <SubTexture name="bonus/title_next" x="787" y="652" width="275" height="34"/>
+    <SubTexture name="growl/bg" x="1573" y="408" width="375" height="132"/>
+    <SubTexture name="growl/close_btn" x="1961" y="1167" width="36" height="30" frameX="0" frameY="-3" frameWidth="36" frameHeight="36"/>
+    <SubTexture name="growl/share_btn" x="924" y="1300" width="148" height="48" frameX="-8" frameY="-7" frameWidth="164" frameHeight="64"/>
+    <SubTexture name="growl/star_off" x="2026" y="48" width="18" height="18" frameX="-1" frameY="0" frameWidth="20" frameHeight="18"/>
+    <SubTexture name="growl/star_on" x="2026" y="26" width="18" height="18" frameX="-1" frameY="0" frameWidth="20" frameHeight="18"/>
+    <SubTexture name="leaderboard/empty_image" x="1509" y="1216" width="50" height="50"/>
+    <SubTexture name="leaderboard/friend_ranking_slash" x="1907" y="544" width="40" height="44" frameX="-8" frameY="0" frameWidth="48" frameHeight="48"/>
+    <SubTexture name="leaderboard/leaderboard_bg" x="1555" y="672" width="13" height="152"/>
+    <SubTexture name="leaderboard/leaderboard_item" x="689" y="880" width="65" height="120"/>
+    <SubTexture name="leaderboard/leaderboard_item_invite" x="1980" y="203" width="65" height="120"/>
+    <SubTexture name="leaderboard/leaderboard_left_arrow_btn" x="1845" y="1547" width="32" height="126"/>
+    <SubTexture name="leaderboard/leaderboard_left_arrow_inactive" x="1758" y="1634" width="32" height="126"/>
+    <SubTexture name="leaderboard/leaderboard_right_arrow_btn" x="1809" y="1547" width="32" height="126"/>
+    <SubTexture name="leaderboard/leaderboard_right_arrow_inactive" x="1773" y="1504" width="32" height="126"/>
+    <SubTexture name="leaderboard/reconnect_arrow" x="1572" y="906" width="228" height="80" frameX="-2" frameY="0" frameWidth="232" frameHeight="80"/>
+    <SubTexture name="leaderboard/reconnect_to_fb_btn" x="1573" y="327" width="393" height="77" frameX="0" frameY="0" frameWidth="393" frameHeight="79"/>
+    <SubTexture name="leaderboard/unconnected_footer_overlay" x="1555" y="516" width="13" height="152"/>
+    <SubTexture name="leaderboard/unconnected_slash" x="1930" y="1465" width="105" height="105"/>
+    <SubTexture name="lobby/bg_divider" x="1900" y="584" width="1" height="1" frameX="0" frameY="0" frameWidth="10" frameHeight="3"/>
+    <SubTexture name="lobby/collect_btn_normal" x="924" y="1215" width="167" height="37" frameX="-3" frameY="-3" frameWidth="173" frameHeight="41"/>
+    <SubTexture name="lobby/icon_border" x="1355" y="720" width="189" height="217"/>
+    <SubTexture name="lobby/lobby_btn_0" x="1097" y="681" width="242" height="80" frameX="-9" frameY="0" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_0_down" x="1097" y="597" width="242" height="80" frameX="-9" frameY="0" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_1" x="1095" y="897" width="242" height="62" frameX="-9" frameY="-18" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_1_down" x="1097" y="831" width="242" height="62" frameX="-9" frameY="-18" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_2" x="777" y="846" width="242" height="62" frameX="-9" frameY="-18" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_2_down" x="1097" y="765" width="242" height="62" frameX="-9" frameY="-18" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_3" x="779" y="780" width="242" height="62" frameX="-9" frameY="-19" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/lobby_btn_3_down" x="779" y="714" width="242" height="62" frameX="-9" frameY="-19" frameWidth="262" frameHeight="84"/>
+    <SubTexture name="lobby/pag_left_btn" x="1900" y="728" width="44" height="71" frameX="-9" frameY="-2" frameWidth="64" frameHeight="73"/>
+    <SubTexture name="lobby/pag_right_btn" x="1900" y="653" width="44" height="71" frameX="-11" frameY="-2" frameWidth="64" frameHeight="73"/>
+    <SubTexture name="login/login_facebook_btn" x="1573" y="200" width="403" height="123"/>
+    <SubTexture name="login/login_guest_btn" x="1097" y="530" width="254" height="63" frameX="-31" frameY="-7" frameWidth="316" frameHeight="73"/>
+    <SubTexture name="overlay/comps_bg" x="3" y="439" width="682" height="619"/>
+    <SubTexture name="overlay/comps_close_btn" x="1961" y="1201" width="34" height="35"/>
+    <SubTexture name="overlay/comps_coins_deck" x="1999" y="1245" width="34" height="29"/>
+    <SubTexture name="overlay/comps_row" x="789" y="498" width="569" height="28"/>
+    <SubTexture name="overlay/glass_fill" x="1673" y="1312" width="16" height="16"/>
+    <SubTexture name="overlay/icon_shadow" x="1572" y="881" width="229" height="21"/>
+    <SubTexture name="overlay/level_star" x="938" y="1024" width="150" height="142" frameX="-6" frameY="-9" frameWidth="162" frameHeight="156"/>
+    <SubTexture name="overlay/nocoins_bonus" x="1569" y="990" width="224" height="128" frameX="-17" frameY="-16" frameWidth="258" frameHeight="164"/>
+    <SubTexture name="overlay/nocoins_collect_btn" x="924" y="1170" width="167" height="41" frameX="-3" frameY="0" frameWidth="173" frameHeight="41"/>
+    <SubTexture name="overlay/nocoins_get_coins_btn" x="1341" y="948" width="224" height="142" frameX="-16" frameY="-17" frameWidth="258" frameHeight="164"/>
+    <SubTexture name="overlay/nocoins_monkey" x="1900" y="584" width="1" height="1" frameX="0" frameY="0" frameWidth="162" frameHeight="157"/>
+    <SubTexture name="overlay/popup_action_btn" x="1857" y="1005" width="183" height="54"/>
+    <SubTexture name="overlay/popup_bg" x="3" y="3" width="783" height="432" frameX="0" frameY="-4" frameWidth="783" frameHeight="440"/>
+    <SubTexture name="overlay/popup_x" x="1797" y="1091" width="52" height="52"/>
+    <SubTexture name="overlay/premium_slot" x="790" y="3" width="779" height="491"/>
+    <SubTexture name="overlay/slot_unlock_btn" x="924" y="1256" width="161" height="40" frameX="-5" frameY="-6" frameWidth="171" frameHeight="48"/>
+    <SubTexture name="overlay/slot_unlock_title" x="1573" y="110" width="414" height="86" frameX="0" frameY="-5" frameWidth="414" frameHeight="96"/>
+    <SubTexture name="overlay/trophy_coins_bg" x="1573" y="3" width="449" height="103"/>
+    <SubTexture name="payments/badge_bg" x="1652" y="1561" width="102" height="102"/>
+    <SubTexture name="payments/coins_0" x="1665" y="1504" width="104" height="53"/>
+    <SubTexture name="payments/coins_1" x="1700" y="1147" width="131" height="64"/>
+    <SubTexture name="payments/coins_2" x="1565" y="1122" width="131" height="88"/>
+    <SubTexture name="payments/coins_3" x="1093" y="1451" width="131" height="103"/>
+    <SubTexture name="payments/coins_4" x="944" y="912" width="147" height="108"/>
+    <SubTexture name="payments/coins_5" x="1835" y="1167" width="122" height="108" frameX="-8" frameY="0" frameWidth="130" frameHeight="114"/>
+    <SubTexture name="payments/coins_close_btn" x="1991" y="128" width="54" height="53" frameX="-2" frameY="-2" frameWidth="58" frameHeight="57"/>
+    <SubTexture name="payments/get_coins_btn" x="1094" y="1392" width="174" height="55" frameX="-6" frameY="-7" frameWidth="186" frameHeight="65"/>
+    <SubTexture name="payments/purchase_bg_round" x="1720" y="1122" width="16" height="16"/>
+    <SubTexture name="payments/purchase_bg_tile" x="1700" y="1122" width="16" height="16"/>
+    <SubTexture name="payments/purchase_btn" x="1330" y="1094" width="175" height="377"/>
+    <SubTexture name="payments/purchase_btn_down" x="745" y="1047" width="175" height="377"/>
+    <SubTexture name="payments/purchase_btn_pink" x="1095" y="1011" width="175" height="377"/>
+    <SubTexture name="payments/strike_through" x="779" y="675" width="4" height="4"/>
+    <SubTexture name="profilebar/cup_btn" x="1809" y="1513" width="99" height="30"/>
+    <SubTexture name="profilebar/getcoins_btn" x="924" y="1408" width="132" height="35"/>
+    <SubTexture name="profilebar/getcoinsbar_bg" x="758" y="912" width="182" height="35"/>
+    <SubTexture name="profilebar/lobby_btn" x="1545" y="1524" width="103" height="38" frameX="0" frameY="0" frameWidth="105" frameHeight="38"/>
+    <SubTexture name="profilebar/navbar_bg" x="1343" y="675" width="8" height="45"/>
+    <SubTexture name="profilebar/settings_btn" x="2001" y="1167" width="35" height="36" frameX="-7" frameY="0" frameWidth="49" frameHeight="36"/>
+    <SubTexture name="profilebar/trophy_btn" x="1951" y="646" width="92" height="28"/>
+    <SubTexture name="profilebar/xp_bar_bg" x="789" y="614" width="297" height="34"/>
+    <SubTexture name="profilebar/xp_prog_bar" x="787" y="690" width="270" height="20"/>
+    <SubTexture name="profilebar/xp_star_icon" x="1999" y="1207" width="34" height="34" frameX="-1" frameY="0" frameWidth="36" frameHeight="34"/>
+    <SubTexture name="settings/achievement_1" x="1951" y="612" width="94" height="30" frameX="0" frameY="-1" frameWidth="94" frameHeight="34"/>
+    <SubTexture name="settings/achievement_2" x="1545" y="1566" width="100" height="30" frameX="0" frameY="-2" frameWidth="100" frameHeight="34"/>
+    <SubTexture name="settings/customer_support" x="1060" y="1410" width="30" height="28" frameX="0" frameY="-1" frameWidth="30" frameHeight="30"/>
+    <SubTexture name="settings/id_image" x="1065" y="786" width="28" height="28"/>
+    <SubTexture name="settings/send_to_fb_friend" x="1025" y="714" width="37" height="34" frameX="-5" frameY="-7" frameWidth="45" frameHeight="44"/>
+    <SubTexture name="settings/settings_bg" x="1572" y="584" width="324" height="293" frameX="-7" frameY="-5" frameWidth="340" frameHeight="309"/>
+    <SubTexture name="settings/share_btn_bg" x="1930" y="1430" width="107" height="31"/>
+    <SubTexture name="settings/share_fb" x="1065" y="754" width="28" height="28"/>
+    <SubTexture name="settings/toggle" x="1025" y="812" width="36" height="36"/>
+    <SubTexture name="settings/toggle_bg" x="1970" y="405" width="71" height="35" frameX="-3" frameY="0" frameWidth="77" frameHeight="35"/>
+    <SubTexture name="sloticons/coming_soon" x="1362" y="498" width="189" height="218"/>
+    <SubTexture name="sloticons/coming_soon_banner" x="1854" y="1063" width="189" height="100"/>
+    <SubTexture name="sloticons/general_banner" x="1817" y="1279" width="117" height="117"/>
+    <SubTexture name="sloticons/new_game_slash" x="1970" y="327" width="75" height="74"/>
+    <SubTexture name="sloticons/vip_banner" x="1552" y="1312" width="117" height="117"/>
+</TextureAtlas>

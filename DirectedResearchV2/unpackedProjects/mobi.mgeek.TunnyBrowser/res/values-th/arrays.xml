@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>ตัวเลือก</item>
+        <item>คำอธิบาย Add-on</item>
+        <item>ปิดการใช้งาน Add-on</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>เลือกจากไลบรารี่</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinese (GBK)</item>
+        <item>Chinese (Big5)</item>
+        <item>Japanese (ISO-2022-JP)</item>
+        <item>Japanese (SHIFT_JIS)</item>
+        <item>Japanese (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (ห่างออกมา)</item>
+        <item>100% (เต็มพอดีจอ)</item>
+        <item>200% (เข้าใกล้)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>แอนดรอยด์</item>
+        <item>เดสก์ท็อป</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>ประเพณี</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>ซ่อน</item>
+        <item>ซ้าย (ล่าง)</item>
+        <item>ขวา (ล่าง)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>ซ่อน</item>
+        <item>ซ้าย</item>
+        <item>ขวา</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>ปิดการใช้งาน</item>
+        <item>คุณภาพดีกว่า</item>
+        <item>สมดุล</item>
+        <item>ขนาดเล็กลง</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>เปิดตลอด</item>
+        <item>ปิดตลอด</item>
+        <item>แสดงใน WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>เปิดหน้าใหม่</item>
+        <item>เปิดหน้าที่แล้ว</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>โดยค่าเริ่มต้น</item>
+        <item>เปิดแท็บในพื้นหลัง</item>
+        <item>เปิดในแท็บใหม่</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>อัตโนมัติ</item>
+        <item>แนวนอน</item>
+        <item>แนวตั้ง</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>เปิดตลอด</item>
+        <item>เมื่อเรียกใช้</item>
+        <item>ปิด</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>ปิดการใช้งาน</item>
+        <item>เฉพาะบน Wi-Fi เท่านั้น</item>
+        <item>ตลอด</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>เปิดใช้งานแถบด้านซ้าย</item>
+        <item>เปิดใช้งานแถบด้านขวา</item>
+        <item>เปิดใช้งานทั้งหมด</item>
+        <item>ปิดการใช้งาน</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>เล็กมาก</item>
+        <item>เล็ก</item>
+        <item>ปกติ</item>
+        <item>ใหญ่</item>
+        <item>ใหญ่มาก</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>การดำเนินการ Android ปกติ</item>
+        <item>เลื่อนหน้าขึ้น/ลง</item>
+        <item>สลับแท็บ</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>ฉันกำลังคิดอยู่</item>
+        <item>ตกลง</item>
+        <item>รับทราบ</item>
+        <item>ได้ตามที่คุณต้องการ</item>
+        <item>ฉันจะทำตามคำขอของคุณ</item>
+        <item>รอสักครู่</item>
+        <item>รอเดี๋ยว</item>
+        <item>กำลังคิด</item>
+        <item>กำลังประมวลผล</item>
+        <item>รอประเดี๋ยว</item>
+        <item>โปรดรอ</item>
+        <item>เข้าใจแล้ว</item>
+        <item>ฉันจัดการเอง</item>
+        <item>กำลังจัดการอยู่</item>
+        <item>เจ๋งชะมัด</item>
+        <item>วู้ว</item>
+        <item>ฟังดูน่าอร่อย...</item>
+        <item>ฟังดูดีนี่!</item>
+        <item>ฉันได้ยินแล้ว</item>
+    </string-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:state_pressed="false" android:state_activated="true">
+        <layer-list>
+            <item android:left="@dimen/calendarview_week_day_circle_padding" android:top="@dimen/calendarview_week_day_circle_padding" android:right="@dimen/calendarview_week_day_circle_padding" android:bottom="@dimen/calendarview_week_day_circle_padding">
+                <shape android:shape="oval">
+                    <solid android:color="@color/calendarview_week_day_circle_selected" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true" android:state_pressed="true" android:state_activated="true">
+        <layer-list>
+            <item android:drawable="@color/calendarview_item_pressed" />
+            <item android:left="@dimen/calendarview_week_day_circle_padding" android:top="@dimen/calendarview_week_day_circle_padding" android:right="@dimen/calendarview_week_day_circle_padding" android:bottom="@dimen/calendarview_week_day_circle_padding">
+                <shape android:shape="oval">
+                    <solid android:color="@color/calendarview_week_day_circle_selected" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_pressed="false" android:state_activated="true">
+        <layer-list>
+            <item android:left="@dimen/calendarview_week_day_circle_padding" android:top="@dimen/calendarview_week_day_circle_padding" android:right="@dimen/calendarview_week_day_circle_padding" android:bottom="@dimen/calendarview_week_day_circle_padding">
+                <shape android:shape="oval">
+                    <solid android:color="@color/calendarview_week_day_circle_selected" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_pressed="true" android:state_activated="true">
+        <layer-list>
+            <item android:drawable="@color/calendarview_item_pressed" />
+            <item android:left="@dimen/calendarview_week_day_circle_padding" android:top="@dimen/calendarview_week_day_circle_padding" android:right="@dimen/calendarview_week_day_circle_padding" android:bottom="@dimen/calendarview_week_day_circle_padding">
+                <shape android:shape="oval">
+                    <solid android:color="@color/calendarview_week_day_circle_selected" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true" android:drawable="@color/calendarview_item_pressed" />
+</selector>

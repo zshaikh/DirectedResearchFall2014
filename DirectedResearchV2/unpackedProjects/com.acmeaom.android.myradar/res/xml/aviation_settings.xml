@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Aviation Settings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:robobunny="http://robobunny.com" xmlns:acme="http://schemas.android.com/apk/res-auto">
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatSwitchPreference android:title="Sigmets" android:key="@string/sigmets_enabled_setting" android:defaultValue="false" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatSwitchPreference android:title="Airmets" android:key="@string/airmets_enabled_setting" android:defaultValue="false" />
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatCompoundSwitchPreference android:title="Flight plan" android:key="@string/flight_plan_enabled_setting" android:defaultValue="false" acme:flight_edit="true" />
+</PreferenceScreen>

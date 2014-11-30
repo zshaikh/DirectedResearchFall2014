@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mgeek.android.ui.SelfInvalidateRelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/settings_page_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_page_text_margin_left" android:minWidth="187.0dip" android:layout_weight="2.0">
+            <TextView android:textAppearance="@style/SettingsItemTitleAppearence" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <ImageView android:id="@id/notice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:id="@id/widget_frame" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="87.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</com.mgeek.android.ui.SelfInvalidateRelativeLayout>

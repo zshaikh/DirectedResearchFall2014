@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/warningsView" android:background="#ff121212" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/warning_background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bg_warning_generic" android:scaleType="fitStart" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bg_orange_warning_stripes" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/warningsNotice" android:paddingLeft="24.0dip" android:paddingTop="24.0dip" android:paddingRight="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="left|center" android:id="@id/warningSeverity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Statement" />
+                <View android:layout_width="22.0dip" android:layout_height="fill_parent" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_dialog_alert" />
+            </LinearLayout>
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="40.0sp" android:textColor="@color/warning_orange" android:gravity="left" android:id="@id/warningType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Severe Thunderstorm" />
+            <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/warningStartTimeLabel" style="@style/dialogSectionLabel" />
+                    <TextView android:id="@id/warningStartTime" android:text="1/27/2012 8:32am" style="@style/dialogSectionText" />
+                </LinearLayout>
+                <ImageView style="@style/hrule" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:text="@string/warningTimeLeftLabel" style="@style/dialogSectionLabel" />
+                    <TextView android:id="@id/warningEndTime" android:text="1/31/2012 3:45pm" style="@style/dialogSectionText" />
+                </LinearLayout>
+                <ImageView style="@style/hrule" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="normal" android:textColor="@color/gray_light" android:layout_gravity="center_horizontal" android:id="@id/warning_time_remaining" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 hr 2 min remaining" />
+            </LinearLayout>
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Discussion" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/gray_light" android:gravity="fill" android:id="@id/warningDiscussion" android:paddingLeft="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/warning_headline" />
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

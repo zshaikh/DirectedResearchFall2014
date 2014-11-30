@@ -1,0 +1,4 @@
+<TextureAtlas imagePath="UpdateGame.png">
+	<SubTexture name="updategame_bg_effect" x="0" y="0" width="939" height="471"/>
+	<SubTexture name="updategame_bg_image" x="0" y="473" width="800" height="432"/>
+</TextureAtlas>

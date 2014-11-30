@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:color="@color/calendarview_week_day_selected" android:state_activated="true" />
+    <item android:state_checked="true" android:color="@color/calendarview_week_day_selected" android:state_activated="true" />
+    <item android:state_checked="true" android:color="@color/calendarview_week_day_today" android:state_activated="false" />
+    <item android:color="@color/calendarview_week_day_first_day_of_month" />
+</selector>

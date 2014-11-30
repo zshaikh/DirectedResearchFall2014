@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/bitrhymes/applovinExt/AppLovinContextEvent" mod="1385460884274" signatureChecksum="2037813203" >
+        <def id="com.bitrhymes.applovinExt:AppLovinContextEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_83e5a43e267a79c0e584bf65f8d482a959739ca2458f3ae0cdfb26bda0030faa_flash_display_Sprite" mod="1385531096377" signatureChecksum="4169694043" >
+        <def id="_83e5a43e267a79c0e584bf65f8d482a959739ca2458f3ae0cdfb26bda0030faa_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/applovinExt/AppLovinContext" mod="1385461052882" signatureChecksum="4055267384" >
+        <def id="com.bitrhymes.applovinExt:AppLovinContext" /> 
+        <dep id="com.bitrhymes.applovinExt:AppLovinContextEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="0b3030c02526ffdd3ebec35a84bf619bcdf51e4b98b55cd14164895e6a42c994"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

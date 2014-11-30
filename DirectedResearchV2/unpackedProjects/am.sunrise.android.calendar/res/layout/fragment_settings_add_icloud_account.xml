@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="80.0dip" android:layout_height="wrap_content" android:text="@string/email" />
+        <EditText android:id="@id/icloud_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_icloud_userame" android:inputType="textEmailAddress" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="80.0dip" android:layout_height="wrap_content" android:text="@string/password" />
+        <EditText android:id="@id/icloud_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_icloud_password" android:password="true" android:imeOptions="normal|actionUnspecified" android:imeActionLabel="@string/button_signin" android:imeActionId="@id/ime_action_signin" />
+    </LinearLayout>
+    <TextView android:enabled="false" android:textAppearance="?android:textAppearanceMedium" android:textColor="#ffffffff" android:gravity="center" android:id="@id/icloud_sign_in_button" android:background="@drawable/reconnect_button_selector" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeightSmall" android:layout_marginTop="16.0dip" android:text="@string/button_signin" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/dark_gray" android:gravity="left|center" android:id="@id/commitment_to_security_button" android:background="@drawable/commitment_to_security_selector" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeightSmall" android:layout_marginTop="16.0dip" android:text="@string/our_commitment_to_security" android:drawableLeft="@drawable/link_button_icon_lock" android:drawablePadding="8.0dip" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/dark_gray" android:gravity="center" android:id="@id/forgot_apple_id_or_password_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeightSmall" android:layout_marginTop="16.0dip" android:text="@string/forgot_apple_id_or_password" style="@android:style/Widget.Holo.Button.Borderless" />
+</LinearLayout>

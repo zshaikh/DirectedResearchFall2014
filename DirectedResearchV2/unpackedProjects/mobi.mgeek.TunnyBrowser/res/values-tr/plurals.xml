@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">%d öğeyi buraya taşı</item>
+        <item quantity="one">1 öğeyi buraya taşı</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Geçen %d gün</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d Saat</item>
+        <item quantity="one">1 Saat</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d eşleşme</item>
+        <item quantity="zero">Eşleşme yok</item>
+        <item quantity="one">1 eşleşme</item>
+        <item quantity="few">%d tanesi eşleşti</item>
+    </plurals>
+</resources>

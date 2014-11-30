@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#ff111111" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/appIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="20.0dip">
+        <TextView android:textColor="#ffffffff" android:ellipsize="middle" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true" style="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+        <ProgressBar android:id="@id/progress_bar" android:background="@drawable/download_notification_progress_bg" android:layout_width="fill_parent" android:layout_height="3.3299866dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/download_notification_indeterminate" android:progressDrawable="@drawable/download_notification" android:layout_below="@id/title" />
+        <TextView android:textColor="#ffbfbfbf" android:id="@id/progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/progress_bar" android:layout_alignParentLeft="true" style="@android:style/TextAppearance.StatusBar.EventContent" />
+        <TextView android:textColor="#ffbfbfbf" android:id="@id/status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/progress_bar" android:layout_alignParentRight="true" style="@android:style/TextAppearance.StatusBar.EventContent" />
+    </RelativeLayout>
+</LinearLayout>

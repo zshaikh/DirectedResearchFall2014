@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/widget_title_vertical_divider" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/widget_ab_background" android:layout_width="fill_parent" android:layout_height="@dimen/widget_ab_height">
+        <FrameLayout android:id="@id/widget_today_header" android:background="@drawable/widget_ab_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/widget_today_horizontal_padding" android:paddingRight="@dimen/widget_today_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/widget_today_day_font_size" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/widget_today_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="sans-serif" />
+                <TextView android:textSize="@dimen/widget_today_month_font_size" android:textColor="#ffffffff" android:id="@id/widget_today_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-6.0dip" android:includeFontPadding="false" android:fontFamily="sans-serif" />
+            </LinearLayout>
+        </FrameLayout>
+        <ImageView android:id="@id/quick_add_event" android:background="@drawable/widget_ab_item_selector" android:layout_width="@dimen/widget_ab_action_min_width" android:layout_height="@dimen/widget_ab_action_height" android:src="@drawable/widget_add" android:scaleType="centerInside" android:adjustViewBounds="false" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:background="@color/widget_row_background" android:fadingEdgeLength="@dimen/widget_fadingedge_length" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" android:requiresFadingEdge="vertical" />
+</LinearLayout>

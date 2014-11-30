@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dialog_content_message_font_size" android:textColor="@color/dialog_content_message_text_color" android:id="@id/dialog_content_text" android:paddingLeft="@dimen/dialog_content_message_horizontal_margin" android:paddingTop="@dimen/dialog_content_message_vertical_margin" android:paddingRight="@dimen/dialog_content_message_horizontal_margin" android:paddingBottom="@dimen/dialog_content_message_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" android:fontFamily="sans-serif" />
+</ScrollView>

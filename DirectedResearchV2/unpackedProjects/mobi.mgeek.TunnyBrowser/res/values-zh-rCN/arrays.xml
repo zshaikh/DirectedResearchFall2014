@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>设置</item>
+        <item>详情</item>
+        <item>禁用</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>从相册中选择</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>远</item>
+        <item>中</item>
+        <item>近</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>桌面模式</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>隐藏</item>
+        <item>左下角</item>
+        <item>右下角</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>隐藏</item>
+        <item>左下角</item>
+        <item>右下角</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>禁用</item>
+        <item>质量优先</item>
+        <item>平衡</item>
+        <item>节约流量优先</item>
+    </string-array>
+    <string-array name="pref_image_compression_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>总是显示</item>
+        <item>总是关闭</item>
+        <item>仅WIFI下显示</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>打开新标签页</item>
+        <item>还原退出时标签页</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>默认</item>
+        <item>在后台标签打开</item>
+        <item>在新标签打开</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>自动</item>
+        <item>横向</item>
+        <item>纵向</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>总是开启</item>
+        <item>手动开启</item>
+        <item>总是关闭</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>禁用</item>
+        <item>仅限 Wi-Fi</item>
+        <item>始终开启</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>开启左侧滑动</item>
+        <item>开启右侧滑动</item>
+        <item>开启左右滑动</item>
+        <item>禁用滑动功能</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>超小</item>
+        <item>小</item>
+        <item>正常</item>
+        <item>大</item>
+        <item>超大</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>默认</item>
+        <item>上下滚动页面</item>
+        <item>切换标签</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>容我想想</item>
+        <item>识别中</item>
+        <item>收到</item>
+        <item>如您所愿.</item>
+        <item>听从您的吩咐</item>
+        <item>稍等一下下</item>
+        <item>再给我一点时间</item>
+        <item>努力思考中…</item>
+        <item>处理中</item>
+        <item>稍等</item>
+        <item>等一下</item>
+        <item>知道了</item>
+        <item>我来搞定这个</item>
+        <item>搞定了</item>
+        <item>太酷了</item>
+        <item>耶！</item>
+        <item>您的声音真好听</item>
+        <item>听起来不错</item>
+        <item>我听到了</item>
+    </string-array>
+</resources>

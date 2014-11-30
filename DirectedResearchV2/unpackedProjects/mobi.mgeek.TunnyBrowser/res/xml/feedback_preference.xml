@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_send_feedback"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_dolphin_feedback_some_else" dolphin:title="@string/send_feedback_some_else_report_title" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_dolphin_feedback_crash" dolphin:title="@string/send_feedback_crash_report_title" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_dolphin_feedback_anr" dolphin:title="@string/send_feedback_anr_report_title" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_dolphin_feedback_other" dolphin:title="@string/send_feedback_other_bug_report_title" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

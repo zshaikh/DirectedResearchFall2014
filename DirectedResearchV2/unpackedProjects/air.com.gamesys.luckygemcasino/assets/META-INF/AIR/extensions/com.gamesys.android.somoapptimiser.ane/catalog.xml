@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="354071"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/gamesys/android/somoapptimiser/aslib/SomoApptimiserInterface" mod="1385504369000">
+                <def id="com.gamesys.android.somoapptimiser.aslib:SomoApptimiserInterface"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="d7e6d983c8ac9c919c973dd51722a6fb027f40e69b2482cff86e832f2005c379"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

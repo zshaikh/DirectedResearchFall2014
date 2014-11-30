@@ -1,0 +1,6 @@
+<TextureAtlas imagePath="RecipeResultsDanish1.png">
+	<SubTexture name="danish_1_0" x="0" y="362" width="360" height="360"/>
+	<SubTexture name="danish_1_1" x="362" y="0" width="360" height="360"/>
+	<SubTexture name="danish_1_2" x="362" y="362" width="360" height="360"/>
+	<SubTexture name="danish_1_3" x="0" y="0" width="360" height="360"/>
+</TextureAtlas>

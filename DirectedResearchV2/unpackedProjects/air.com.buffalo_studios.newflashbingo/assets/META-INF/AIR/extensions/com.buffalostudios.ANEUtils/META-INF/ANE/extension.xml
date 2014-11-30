@@ -1,0 +1,20 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.8">
+	<id>com.buffalostudios.ANEUtils</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>ANEUtils.jar</nativeLibrary>
+				<initializer>com.buffalostudios.aneutils.ANEExtension</initializer>
+				<finalizer>com.buffalostudios.aneutils.ANEExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>ANEUtils.a</nativeLibrary>
+				<initializer>ANEUtilsExtensionInitializer</initializer>
+				<finalizer>ANEUtilsExtensionFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+	</platforms>
+</extension>

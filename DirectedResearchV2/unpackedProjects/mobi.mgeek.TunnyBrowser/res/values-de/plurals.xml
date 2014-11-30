@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">%d Einträge hierher verschieben</item>
+        <item quantity="one">1 Eintrag hierher verschieben</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Letzte %d Tage</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d Stunden</item>
+        <item quantity="one">1 Stunde</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d Treffer</item>
+        <item quantity="zero">Keine Treffer</item>
+        <item quantity="one">1 Treffer</item>
+        <item quantity="few">%d Treffer</item>
+    </plurals>
+</resources>

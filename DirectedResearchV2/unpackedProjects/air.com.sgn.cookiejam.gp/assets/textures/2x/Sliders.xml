@@ -1,0 +1,11 @@
+<TextureAtlas imagePath="Sliders.png">
+	<SubTexture name="levelstartslider_bg_tile" x="518" y="13" width="160" height="682"/>
+	<SubTexture name="levelstartslider_line" x="0" y="0" width="799" height="11"/>
+	<SubTexture name="levelstartslider_panda" x="0" y="756" width="495" height="656"/>
+	<SubTexture name="levelstartslider_shelf" x="0" y="13" width="516" height="88"/>
+	<SubTexture name="levelstartslider_top_image" x="0" y="1414" width="396" height="217"/>
+	<SubTexture name="prefailslider_bg_tile" x="497" y="756" width="160" height="842"/>
+	<SubTexture name="prefailslider_line" x="0" y="0" width="799" height="11"/>
+	<SubTexture name="prefailslider_panda" x="0" y="103" width="507" height="651"/>
+	<SubTexture name="prefailslider_top_image" x="0" y="1414" width="396" height="217"/>
+</TextureAtlas>

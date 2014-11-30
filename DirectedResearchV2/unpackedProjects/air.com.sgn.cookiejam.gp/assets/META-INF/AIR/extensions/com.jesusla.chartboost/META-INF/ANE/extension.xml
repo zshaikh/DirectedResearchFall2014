@@ -1,0 +1,24 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+  <id>com.jesusla.chartboost</id>
+  <versionNumber>2.9.1</versionNumber>
+  <name>Chartboost</name>
+  <description>Chartboost r17 (d3e6d5a)</description>
+  <platforms>
+    <platform name="iPhone-ARM">
+      <applicationDeployment>
+        <nativeLibrary>libIOS.a</nativeLibrary>
+        <initializer>ExtInitializer</initializer>
+        <finalizer>ExtFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>android.jar</nativeLibrary>
+        <initializer>com.jesusla.ane.Extension</initializer>
+      </applicationDeployment>
+    </platform>
+    <platform name="default">
+      <applicationDeployment/>
+    </platform>
+  </platforms>
+</extension>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:map="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@id/map_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/button_go_to_my_location" android:background="@drawable/map_button_selector" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/map_location_icon" android:scaleType="center" />
+        <FrameLayout android:layout_gravity="bottom|center" android:id="@id/button_directions" android:background="@drawable/map_button_selector" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="84.0dip" android:layout_marginRight="84.0dip" android:layout_marginBottom="22.0dip">
+            <TextView android:textSize="@dimen/event_details_map_font_size" android:textColor="@color/event_details_map_text" android:gravity="center" android:layout_gravity="center" android:id="@id/button_directions_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/directions" android:drawableLeft="@drawable/ed_bottom_directions_icon" android:drawablePadding="@dimen/event_details_text_horizontal_margin" />
+        </FrameLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings" android:key="settings">
+        <PreferenceScreen android:title="@string/settings_visible_calendars">
+            <intent android:targetPackage="@string/config_authority" android:action="am.sunrise.android.calendar.ui.settings.action.VISIBLE_CALENDARS" android:targetClass="am.sunrise.android.calendar.ui.settings.SubSettingsActivity" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/settings_notifications">
+            <intent android:targetPackage="@string/config_authority" android:action="am.sunrise.android.calendar.ui.settings.action.NOTIFICATIONS" android:targetClass="am.sunrise.android.calendar.ui.settings.SubSettingsActivity" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/settings_preferences" android:key="settings_preferences" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_accounts" android:key="settings_accounts" />
+    <PreferenceScreen android:icon="@drawable/ic_action_add_account" android:title="@string/settings_add_account">
+        <intent android:targetPackage="@string/config_authority" android:action="am.sunrise.android.calendar.ui.settings.action.ADD_ACCOUNT" android:targetClass="am.sunrise.android.calendar.ui.settings.SubSettingsActivity" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="@string/settings_more" android:key="settings_more">
+        <PreferenceScreen android:title="@string/settings_about">
+            <intent android:targetPackage="@string/config_authority" android:action="am.sunrise.android.calendar.ui.settings.action.ABOUT" android:targetClass="am.sunrise.android.calendar.ui.settings.SubSettingsActivity" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/settings_signout" android:key="settings_signout" />
+    </PreferenceCategory>
+</PreferenceScreen>

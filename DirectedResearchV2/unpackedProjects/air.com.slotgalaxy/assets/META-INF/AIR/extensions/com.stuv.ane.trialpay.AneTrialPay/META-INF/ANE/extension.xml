@@ -1,0 +1,25 @@
+
+			<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+				<id>com.stuv.ane.trialpay.AneTrialPay</id>
+				<versionNumber>1</versionNumber>
+
+				<platforms>
+		
+					
+		<platform name="Android-ARM">
+				<applicationDeployment>
+					<nativeLibrary>android.jar</nativeLibrary>
+					<initializer>com.stuv.ane.trialpay.extensions.Extension</initializer>
+				</applicationDeployment>
+			</platform>
+		
+					
+					
+		<platform name="default">
+				<applicationDeployment />
+			</platform>
+		
+		
+				</platforms>
+			</extension>
+		

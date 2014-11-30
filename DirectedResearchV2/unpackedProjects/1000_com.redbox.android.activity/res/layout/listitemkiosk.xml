@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/labeles" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:id="@id/favlableheader" android:background="@drawable/movielist_titlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/favKioskLabel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="Favorites" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/fivelableheader" android:background="@drawable/movielist_titlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/nearbyKioskLabel5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="Within 5 Miles" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/tenlableheader" android:background="@drawable/movielist_titlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/nearbyKioskLabel10" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="Within 10 Miles" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/labeles">
+        <com.redbox.android.view.SelectKioskImageButton android:layout_gravity="center" android:id="@id/select_kiosk" android:background="@null" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/button_select" android:layout_weight="1.0" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/redbox_location_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_weight="3.0" android:layout_centerVertical="true">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/KioskName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="2.0sp" android:singleLine="true"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/machine_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/KioskAddress" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/KioskStateZip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <ImageButton android:id="@id/remFav" android:background="@null" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:src="@drawable/button_remove_favourite" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/addFav" android:background="@null" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:src="@drawable/button_favourite" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/mapKiosk" android:background="@null" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/map_icon" android:layout_weight="1.0" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+</RelativeLayout>

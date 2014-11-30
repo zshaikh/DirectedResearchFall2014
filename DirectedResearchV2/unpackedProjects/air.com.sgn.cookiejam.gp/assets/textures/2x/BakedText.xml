@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:905d3c05246868b8ce90f69b0c3ca598:1/1$ -->
+<TextureAtlas imagePath="BakedText.png">
+    <SubTexture name="text_bonus" x="2" y="1162" width="1280" height="230"/>
+    <SubTexture name="text_no_matches" x="2" y="930" width="1280" height="230"/>
+    <SubTexture name="text_tier_1" x="2" y="698" width="1280" height="230"/>
+    <SubTexture name="text_tier_1a" x="2" y="466" width="1280" height="230"/>
+    <SubTexture name="text_tier_2" x="2" y="234" width="1280" height="230"/>
+    <SubTexture name="text_tier_3" x="2" y="2" width="1280" height="230"/>
+</TextureAtlas>

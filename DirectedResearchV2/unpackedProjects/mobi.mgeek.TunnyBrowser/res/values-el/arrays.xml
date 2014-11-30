@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Επιλογές</item>
+        <item>Περιγραφή Πρόσθετου</item>
+        <item>Απενεργοποίηση Πρόσθετου</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Επιλέξτε από τη βιβλιοθήκη</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Κινέζικα (GBK)</item>
+        <item>Κινέζικα (Big5)</item>
+        <item>Ιαπωνικά (ISO-2022-JP)</item>
+        <item>Ιαπωνικά (SHIFT_JIS)</item>
+        <item>Ιαπωνικά (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Πιο μακριά)</item>
+        <item>100% (Προσαρμογή στην Οθόνη)</item>
+        <item>200% (Πιο κοντά)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Προσαρμογή</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Απόκρυψη</item>
+        <item>Αριστερά (κάτω)</item>
+        <item>Δεξιά (κάτω)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Απόκρυψη</item>
+        <item>Αριστερά</item>
+        <item>Δεξιά</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Απενεργοποιημένο</item>
+        <item>Καλύτερη Ποιότητα</item>
+        <item>Εξισορροπημένο</item>
+        <item>Μικρότερο Μέγεθος</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Πάντα Ενεργοποιημένο</item>
+        <item>Πάντα Απενεργοποιημένο</item>
+        <item>Εμφάνιση στο WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Άνοιγμα Νέας Σελίδας</item>
+        <item>Άνοιγμα Προηγούμενης Σελίδας</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>από προεπιλογή</item>
+        <item>ανοίξει σε καρτέλα φόντο</item>
+        <item>ανοίγουν σε νέα καρτέλα</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Αυτόματο</item>
+        <item>Τοπίο</item>
+        <item>Πορτραίτο</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Πάντα Ενεργοποιημένο</item>
+        <item>Κατ’ απαίτηση</item>
+        <item>Απενεργοποιημένο</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Απενεργοποιημένο</item>
+        <item>Μόνο σε Wi-Fi</item>
+        <item>Πάντα</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Ενεργοποίηση Αριστερής Μπάρας</item>
+        <item>Ενεργοποίηση Δεξιάς Μπάρας</item>
+        <item>Ενεργοποίηση Όλων</item>
+        <item>Απενεργοποίηση</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Μικροσκοπικό</item>
+        <item>Μικρό</item>
+        <item>Κανονικό</item>
+        <item>Μεγάλο</item>
+        <item>Τεράστιο</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Προεπιλεγμένη Επιλογή Android</item>
+        <item>Ανεβείτε/Κατεβείτε στη Σελίδα</item>
+        <item>Αλλάξτε Καρτέλες</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Σκέφτομαι</item>
+        <item>Το ‘χω.</item>
+        <item>Κατάλαβα.</item>
+        <item>Όπως επιθυμείτε.</item>
+        <item>Η επιθυμία σας διαταγή μου.</item>
+        <item>Περιμένετε.</item>
+        <item>Δώστε μου ένα λεπτό.</item>
+        <item>Σκέφτομαι.</item>
+        <item>Γίνεται επεξεργασία.</item>
+        <item>Ένα λεπτό.</item>
+        <item>Παρακαλώ περιμένετε.</item>
+        <item>Το ‘πιασα.</item>
+        <item>Θα σκίσω.</item>
+        <item>Έσκισα.</item>
+        <item>Τέλειο.</item>
+        <item>ΟΥΑΟΥ!</item>
+        <item>Ακούγεται νόστιμο…</item>
+        <item>Ακούγεται τέλειο!</item>
+        <item>Σας ακούω!</item>
+    </string-array>
+</resources>

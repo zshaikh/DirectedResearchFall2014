@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Переместите %d элемент(ов) сюда</item>
+        <item quantity="one">Переместите 1 элемент сюда</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Последние %d дней</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d часа(ов)</item>
+        <item quantity="one">1 час</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d совпадения(й)</item>
+        <item quantity="zero">Нет совпадений</item>
+        <item quantity="one">1 совпадение</item>
+        <item quantity="few">%d совпадения(й)</item>
+    </plurals>
+</resources>

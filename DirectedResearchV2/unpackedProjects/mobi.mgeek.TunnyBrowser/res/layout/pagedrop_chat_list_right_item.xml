@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="105.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chat_item_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/divider" android:layout_alignParentLeft="true">
+            <LinearLayout android:id="@id/shared_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.5dip" android:layout_above="@id/chat_times" android:layout_alignParentTop="true">
+                <ImageView android:id="@id/chat_favo_icon" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/bg_notification_icon" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/pagedrop_chat_title_color" android:ellipsize="end" android:id="@id/chat_title" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="test" android:lines="2" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textColor="@color/pagedrop_chat_time_color" android:ellipsize="end" android:gravity="right" android:id="@id/chat_times" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="time" android:singleLine="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/divider" android:background="@drawable/pagedrop_chat_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="12.5dip" android:layout_marginBottom="12.5dip" android:layout_toLeftOf="@id/header_area" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/header_area" android:layout_width="109.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/chat_header_img" android:layout_width="41.0dip" android:layout_height="41.0dip" android:layout_marginTop="11.0dip" />
+            <TextView android:textSize="15.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/chat_user_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="5.0dip" android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

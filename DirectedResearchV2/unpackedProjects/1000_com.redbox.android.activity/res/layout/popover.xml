@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/mapBubbleWrap" android:layout_width="wrap_content" android:layout_height="75.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/bubble_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_leftside" />
+        <FrameLayout android:background="@drawable/map_middlebg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/black" android:layout_gravity="left" android:id="@id/mapBubbleTextName" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="12.0dip" android:textColor="@color/black" android:gravity="left" android:layout_gravity="left" android:id="@id/mapBubbleTextAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:layout_gravity="left" android:id="@id/getdirection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/map_direction" />
+            </LinearLayout>
+        </FrameLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_rightside" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_midarrow" />
+</FrameLayout>

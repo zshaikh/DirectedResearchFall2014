@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:id="@id/story_news" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:cardStyle="single"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/story_header" android:background="@drawable/badge_bg" android:padding="@dimen/list_row_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_row_padding" android:src="@drawable/ic_chevron_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font_size_default" android:textStyle="bold" android:ellipsize="end" android:id="@id/story_header_query" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/chevron" android:layout_alignParentTop="true" android:lineSpacingMultiplier="1.0" style="@style/InsetText" />
+            <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/secondary_text" android:id="@id/story_header_tweets" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/story_subtitle" android:singleLine="true" android:layout_toLeftOf="@id/chevron" android:layout_below="@id/story_header_query" style="@style/InsetText" />
+        </RelativeLayout>
+        <View android:background="@drawable/list_rule" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignBottom="@id/story_header" />
+        <RelativeLayout android:layout_below="@id/story_header" style="@style/ListRow">
+            <include layout="@layout/story_news" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

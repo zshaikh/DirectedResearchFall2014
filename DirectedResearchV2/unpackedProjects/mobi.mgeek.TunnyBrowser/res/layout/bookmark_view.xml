@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:id="@id/bookmark_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bookmark_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.dolphin.browser.DolphinService.ui.SignInButton android:id="@id/sign_in_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sync_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/bookmark_button_horizontal_padding">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btn_sync" android:layout_width="@dimen/bm_sync_btn_size" android:layout_height="@dimen/bm_sync_btn_size" android:layout_marginTop="15.0dip">
+                <ImageView android:id="@id/sync_circle_progress" android:paddingLeft="@dimen/bm_sync_circle_left_padding" android:paddingTop="@dimen/bm_sync_circle_top_padding" android:duplicateParentState="true" android:layout_width="@dimen/bm_sync_img_size" android:layout_height="@dimen/bm_sync_img_size" android:contentDescription="@null" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:id="@id/bookmark_sync_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.5999756dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/body" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.dolphin.browser.sidebar.PathBar android:orientation="vertical" android:id="@id/path_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bookmark_sync_status_container" />
+        <com.dolphin.browser.ui.view.CustomMenuListView android:scrollbarThumbVertical="@drawable/vertical_scroll_bar" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:layout_below="@id/path_bar" android:overScrollFooter="@null" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_linear" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/path_bar">
+            <TextView android:gravity="center" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

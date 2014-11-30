@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Beállítások</item>
+        <item>Bővítmény leírása</item>
+        <item>Bővítmény letiltása</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Válasszon a könyvtárból</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Kínai (GBK)</item>
+        <item>Kínai (Big5)</item>
+        <item>Japán (ISO-2022-JP)</item>
+        <item>Japán (SHIFT_JIS)</item>
+        <item>Japán (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (hátrébb)</item>
+        <item>100% (képernyőre illesztés)</item>
+        <item>200% (ráközelítés)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Asztali</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Egyéni</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Elrejt</item>
+        <item>Bal (alsó)</item>
+        <item>Jobb (alsó)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Elrejt</item>
+        <item>Bal</item>
+        <item>Jobb</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Letiltva</item>
+        <item>Jobb minőség</item>
+        <item>Kiegyensúlyozott</item>
+        <item>Kisebb méret</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Mindig bekapcsolva</item>
+        <item>Minding kikapcsolva</item>
+        <item>Megjelenítése WIFI módban</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Új oldal nyitása</item>
+        <item>Korábbi oldal megnyitása</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Alapértelmezés</item>
+        <item>Lap megnyitása a háttérben</item>
+        <item>Megnyitás új lapon</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Automatikus</item>
+        <item>Tájkép</item>
+        <item>Portré</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Mindig bekapcsolva</item>
+        <item>Kérésre</item>
+        <item>kikapcsolva</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Letiltva</item>
+        <item>Csak Wi-Fi-vel</item>
+        <item>Mindig</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Bal sáv engedélyezése</item>
+        <item>Jobb sáv engedélyezése</item>
+        <item>Összes engedélyezése</item>
+        <item>Letiltás</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Apró</item>
+        <item>Kicsi</item>
+        <item>Normál</item>
+        <item>Nagy</item>
+        <item>Óriási</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Alapértelmezett Android művelet</item>
+        <item>Görgetés fel/le az oldalon</item>
+        <item>Váltás a fülek között</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Gondolkodom</item>
+        <item>Dolgozom rajta.</item>
+        <item>Értettem.</item>
+        <item>Ahogy kívánja.</item>
+        <item>Óhaja számomra parancs.</item>
+        <item>Várjon egy percet.</item>
+        <item>Adjon egy másodpercet.</item>
+        <item>Gondolkodom.</item>
+        <item>Feldolgozás.</item>
+        <item>Csak egy pillanat.</item>
+        <item>Kérem, várjon.</item>
+        <item>Megvan!</item>
+        <item>Ez menni fog!</item>
+        <item>Igyekszem megoldani.</item>
+        <item>Ez izgalmas.</item>
+        <item>NAHÁT!</item>
+        <item>Jól hangzik…</item>
+        <item>Remekül hangzik!</item>
+        <item>Hallak Téged!</item>
+    </string-array>
+</resources>

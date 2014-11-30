@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#ff222222" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="18.699982sp" android:textColor="#ffe6e6e6" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="top" android:id="@id/text_progress_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:layout_marginTop="23.0dip" android:layout_marginRight="60.0dip" android:text="加勒比海盗-杰克船长带你体验深海的奥秘" android:maxLines="1" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="16.0sp" android:textColor="#ffe6e6e6" android:layout_gravity="center" android:id="@id/progress_info_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:text="@string/dpl_player_loading" />
+        <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:id="@id/gestrue_sample_bright" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageView_gestrue_sample_bright" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dpl_gestrue_bright_sample" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="right|center" android:orientation="vertical" android:id="@id/gestrue_sample_voice" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageView_gestrue_sample_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dpl_gesture_voice_sample" />
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="bottom|center" android:id="@id/gestrue_sample_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/imageView_gestrue_sample_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dpl_gestrue_progress_sample" android:layout_alignLeft="@drawable/dpl_gestrue_progress_sample" android:layout_alignTop="@drawable/dpl_gestrue_progress_sample" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center" android:id="@id/layout_load_failed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0dip">
+            <TextView android:textSize="16.0sp" android:id="@id/textView_load_failed" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:textSize="16.0sp" android:textColor="@color/btn_color" android:id="@id/button_reload" android:background="#ff222222" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dpl_player_network_error_retry" />
+        </LinearLayout>
+        <TextView android:textSize="18.699982sp" android:textColor="#ffe6e6e6" android:layout_gravity="top|center" android:id="@id/textView_check_network_type" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:text="@string/dpl_network_warning" />
+        <Button android:textSize="18.0sp" android:textColor="#ffe6e6e6" android:layout_gravity="bottom|center" android:id="@id/button_continue_play" android:background="@drawable/dpl_btn_common" android:visibility="gone" android:layout_width="93.0dip" android:layout_height="33.0dip" android:layout_marginRight="83.0dip" android:layout_marginBottom="86.0dip" android:onClick="onClick" />
+        <Button android:textSize="18.0sp" android:textColor="#ffe6e6e6" android:layout_gravity="bottom|center" android:id="@id/button_continue_cancel" android:background="@drawable/dpl_btn_common" android:visibility="gone" android:layout_width="93.0dip" android:layout_height="33.0dip" android:layout_marginLeft="83.0dip" android:layout_marginBottom="86.0dip" android:text="取消" android:onClick="onClick" />
+        <ImageView android:layout_gravity="center" android:id="@id/imageView_line" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="22.0dip" android:src="@drawable/dpl_load_tail_6" />
+        <ImageView android:layout_gravity="center" android:id="@id/imageView_ani_line" android:background="@anim/frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="22.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/imageView_anim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dpl_anim_progress" />
+    </FrameLayout>
+</LinearLayout>

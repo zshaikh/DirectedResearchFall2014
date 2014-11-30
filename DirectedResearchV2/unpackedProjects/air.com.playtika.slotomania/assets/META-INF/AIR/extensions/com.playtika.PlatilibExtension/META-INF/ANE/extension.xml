@@ -1,0 +1,14 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.8">
+	<id>com.playtika.PlatilibExtension</id>
+	<versionNumber>1</versionNumber>
+	
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>			
+				<nativeLibrary>PlaytiAne.jar</nativeLibrary>
+				<initializer>com.playtika.extensions.PlatilibExtension</initializer>
+			</applicationDeployment>		
+		</platform>
+	</platforms>
+
+</extension>

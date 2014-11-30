@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/agendaview_item_selector" android:paddingLeft="@dimen/event_details_card_horizontal_padding" android:paddingTop="@dimen/event_details_card_vertical_padding" android:paddingRight="@dimen/event_details_card_horizontal_padding" android:paddingBottom="@dimen/event_details_card_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/event_details_attendee_avatar" android:layout_width="@dimen/event_details_avatar_size" android:layout_height="@dimen/event_details_avatar_size" android:src="@drawable/av_default_avatar" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/event_details_text_horizontal_margin">
+        <TextView android:textSize="@dimen/event_details_attendee_name_font_size" android:textColor="@color/event_details_attendee_name" android:ellipsize="end" android:id="@id/event_details_attendee_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="@dimen/event_details_text_horizontal_margin" android:fontFamily="sans-serif" />
+        <TextView android:ellipsize="end" android:id="@id/event_details_attendee_description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

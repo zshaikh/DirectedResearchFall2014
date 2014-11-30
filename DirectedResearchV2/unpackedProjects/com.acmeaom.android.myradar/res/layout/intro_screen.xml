@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/intro_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/splash_portrait" android:scaleType="centerCrop" />
+    <com.acmeaom.android.myradar.app.ui.IntroScreenLayout android:id="@id/intro_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/map_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" layout="@layout/map_toolbar" />
+        <TextView android:id="@id/txt_my_location" android:text="@string/locate_me" android:drawableLeft="@drawable/ic_action_location_found" android:layout_above="@id/txt_map_types" android:layout_alignLeft="@id/map_toolbar" style="@style/introLabel" />
+        <TextView android:id="@id/txt_map_types" android:text="@string/change_map_style" android:drawableLeft="@drawable/tile_2x" android:layout_above="@id/txt_map_layers" android:layout_alignLeft="@id/map_toolbar" style="@style/introLabel" />
+        <TextView android:id="@id/txt_map_layers" android:text="@string/map_overlays" android:drawableLeft="@drawable/layers_2x" android:layout_above="@id/map_layers_arrow" android:layout_alignLeft="@id/map_toolbar" style="@style/introLabel" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/white" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="12.0dip" android:text="@string/tap_to_begin" android:layout_alignBottom="@id/map_toolbar" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/my_location_arrow" android:layout_height="122.0dip" android:layout_above="@id/map_toolbar" style="@style/introArrow" />
+        <ImageView android:id="@id/map_types_arrow" android:layout_height="98.0dip" android:layout_above="@id/map_toolbar" style="@style/introArrow" />
+        <ImageView android:id="@id/map_layers_arrow" android:layout_height="68.0dip" android:layout_above="@id/map_toolbar" style="@style/introArrow" />
+    </com.acmeaom.android.myradar.app.ui.IntroScreenLayout>
+</FrameLayout>

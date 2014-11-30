@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/settings_card_list_section_header_font_size" android:textColor="@color/settings_card_list_section_header_text" android:gravity="start|bottom|center" android:id="@id/calendar_selection_section_header" android:background="@color/settings_card_list_section_header" android:paddingTop="@dimen/settings_card_list_section_header_padding_top" android:paddingBottom="@dimen/settings_card_list_section_header_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

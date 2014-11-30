@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_secs">
+        <item quantity="other">%dseg</item>
+        <item quantity="one">1seg</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dmin</item>
+        <item quantity="one">1min</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dhr</item>
+        <item quantity="one">1hr</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dd</item>
+        <item quantity="one">1 dia</item>
+    </plurals>
+</resources>

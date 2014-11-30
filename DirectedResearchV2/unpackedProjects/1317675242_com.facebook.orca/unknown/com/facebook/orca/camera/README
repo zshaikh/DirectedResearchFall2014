@@ -1,0 +1,3 @@
+Code copied from android eclair codebase for cropping an image.
+The APIs cannot be relied on b/c they are not part of the official
+platform and don't work correctly on some phones.

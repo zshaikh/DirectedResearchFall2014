@@ -1,0 +1,9 @@
+<!-- 
+  This is a descriptor file so that a portion of this library can
+  be used from GWT clients.
+-->
+<module>
+  
+  <source path="org/apache/thrift"/>
+
+</module>

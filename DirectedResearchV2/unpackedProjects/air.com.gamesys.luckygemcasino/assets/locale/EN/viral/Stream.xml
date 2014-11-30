@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<streams>
+	<stream id="askForCoins">
+		<name><![CDATA[{*actor*} needs your help]]></name>
+		<caption><![CDATA[Hey! I’m playing Lucky Gem Casino and need your help! Please send me some coins! I’ll send you some back!]]></caption>
+		<description><![CDATA[Join {*actor*} and send some free coins.]]></description>
+		<action_link><![CDATA[Send Coins]]></action_link>
+	</stream>
+
+	<stream id="levelUp">
+		<name><![CDATA[{coins} coins for the first {numRecpients} clickers!]]></name>
+		<caption><![CDATA[{*actor*} has just cleared level {level} in Lucky Gem Casino! Click the link above for {coins} free coins to help catch 'em up!]]></caption>
+		<description><![CDATA[ ]]></description>
+		<action_link>Jackpotjoy Slot Machines</action_link>
+	</stream>		
+   
+	<stream id="achievement">
+		<name><![CDATA[{coins} coins for the first {numRecpients} clickers!]]></name>
+		<caption><![CDATA[{*actor*} just unlocked the {achievementName} award in Lucky Gem Casino! Click the link above for {coins} free coins to help catch 'em up!]]></caption>
+		<description><![CDATA[ ]]></description>
+		<action_link><![CDATA[Jackpotjoy Slot Machines]]></action_link>
+	</stream>		
+</streams>

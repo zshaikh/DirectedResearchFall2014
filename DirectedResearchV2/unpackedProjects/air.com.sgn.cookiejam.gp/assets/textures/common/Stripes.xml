@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:48606d10e69d4c2a93fae3362fae316e:1/1$ -->
+<TextureAtlas imagePath="Stripes.png">
+    <SubTexture name="blue_stripe" x="232" y="2" width="44" height="505"/>
+    <SubTexture name="green_stripe" x="186" y="2" width="44" height="505"/>
+    <SubTexture name="orange_stripe" x="140" y="2" width="44" height="505"/>
+    <SubTexture name="purple_stripe" x="94" y="2" width="44" height="505"/>
+    <SubTexture name="red_stripe" x="48" y="2" width="44" height="505"/>
+    <SubTexture name="yellow_stripe" x="2" y="2" width="44" height="505"/>
+</TextureAtlas>

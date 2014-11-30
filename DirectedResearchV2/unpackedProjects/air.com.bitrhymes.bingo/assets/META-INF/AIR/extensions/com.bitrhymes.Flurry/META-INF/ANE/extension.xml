@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+	<id>com.bitrhymes.Flurry</id>
+	<versionNumber>1.0.1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>flurryandroid.jar</nativeLibrary>
+				<initializer>com.bitrhymes.flurry.FlurryExtension</initializer>
+				<finalizer>com.bitrhymes.flurry.FlurryExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>

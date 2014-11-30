@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Opzioni</item>
+        <item>Descrizione Add-on</item>
+        <item>Disabilita Add-on</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Selezionare dalla Biblioteca</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Cinese (GBK)</item>
+        <item>Cinese (Big5)</item>
+        <item>Giapponese (ISO-2022-JP)</item>
+        <item>Giapponese (SHIFT_JIS)</item>
+        <item>Giapponese (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Più Indietro)</item>
+        <item>100% (Adattare allo Schermo)</item>
+        <item>200% (Più vicino)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Persnale</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Nascondi</item>
+        <item>Sinistra (in fondo)</item>
+        <item>Destra (in fondo)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Nascondi</item>
+        <item>Sinistra</item>
+        <item>Destra</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Disabilitato</item>
+        <item>Qualità Migliore</item>
+        <item>Bilanciato</item>
+        <item>Dimensione Inferiore</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Sempre Attivo</item>
+        <item>Sempre Disattivato</item>
+        <item>Mostra in WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Apri Nuova Pagina</item>
+        <item>Apri Pagina Precedente</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Come predefinito</item>
+        <item>Apri in secondo piano</item>
+        <item>Apri in una nuova scheda</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Automatico</item>
+        <item>Orizzontale</item>
+        <item>Verticale</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Sempre Attivo</item>
+        <item>Su richiesta</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Disabilitato</item>
+        <item>Soltanto su Wi-Fi</item>
+        <item>Sempre</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Abilita Barra a Sinistra</item>
+        <item>Abilita Barra a Destra</item>
+        <item>Abilita Tutto</item>
+        <item>Disabilita</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Minuscolo</item>
+        <item>Piccolo</item>
+        <item>Normale</item>
+        <item>Grande</item>
+        <item>Enorme</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Azione predefinita di Android</item>
+        <item>Scorri in Su / Giù la Pagina</item>
+        <item>Inverti Schede</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Sto pensando</item>
+        <item>Ci sto lavorando.</item>
+        <item>Roger che.</item>
+        <item>Come desideri.</item>
+        <item>Il tuo desiderio è un ordine.</item>
+        <item>Aspetta un minuto.</item>
+        <item>Dammi un secondo.</item>
+        <item>In fase di pensiero.</item>
+        <item>In Fase di elaborazione.</item>
+        <item>Soltanto un momento.</item>
+        <item>Si prega di attendere.</item>
+        <item>Ricevuto.</item>
+        <item>Lo farò ruotare..</item>
+        <item>Rotazione in corso.</item>
+        <item>Questo è stimolante.</item>
+        <item>WOOT!</item>
+        <item>Sembra delizioso…</item>
+        <item>Sembra fantastico!</item>
+        <item>Ti sento!</item>
+    </string-array>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="@dimen/share_title_item_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/btn_confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/share_title_text_size" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/box_share_choose_folder" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/btn_change_path" android:paddingLeft="15.0dip" android:paddingRight="5.0dip" android:layout_width="65.0dip" android:layout_height="fill_parent" android:scaleType="center" />
+        <ImageView android:id="@id/btn_path_vertical_divider" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:id="@id/layout_show_path" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0dip" android:ellipsize="start" android:gravity="center_vertical" android:id="@id/tv_show_path" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/btn_path_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <android.view.CustomMenuListView android:id="@id/list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" />
+    <RelativeLayout android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="24.0sp" android:id="@id/empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_sub_box_folders" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/map_detail_chooser_row_icon" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/si_convective_red" android:scaleType="center" />
+    <TextView android:textAppearance="@android:style/TextAppearance.Large" android:gravity="center_vertical" android:id="@id/map_detail_chooser_row_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:text="Map Object Detail" />
+</LinearLayout>

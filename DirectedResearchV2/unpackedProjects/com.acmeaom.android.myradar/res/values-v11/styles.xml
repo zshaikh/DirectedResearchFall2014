@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HoloIfAvailable" parent="@android:style/Theme.Holo" />
+    <style name="HoloIfAvailable.NoActionBarBorder" parent="@style/HoloIfAvailable">
+        <item name="android:actionBarStyle">@style/NoActionBarBorder</item>
+    </style>
+    <style name="HoloIfAvailable.NoTitleBar" parent="@android:style/Theme.Holo.NoActionBar" />
+    <style name="PrefsToolbarButton">
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+    <style name="Toolbar_Button" parent="@style/Toolbar_Button_Base">
+        <item name="android:gravity">center</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+    <style name="NoActionBarBorder" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/transparent</item>
+    </style>
+</resources>

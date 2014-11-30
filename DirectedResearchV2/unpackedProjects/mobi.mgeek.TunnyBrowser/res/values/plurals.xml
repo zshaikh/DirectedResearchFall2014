@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Move %d items here</item>
+        <item quantity="one">Move 1 item here</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Last %d days</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d Hours</item>
+        <item quantity="one">1 Hour</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d matches</item>
+        <item quantity="zero">No matches</item>
+        <item quantity="one">1 match</item>
+        <item quantity="few">%d matches</item>
+    </plurals>
+    <plurals name="webview_matches_found">
+        <item quantity="other">%1$d of %2$d</item>
+        <item quantity="one">1 match</item>
+    </plurals>
+</resources>

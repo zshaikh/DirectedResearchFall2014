@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/bottom_divider" android:layout_width="fill_parent" android:layout_height="@dimen/dl_thick_divider_size" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/btn_menu_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_below="@id/bottom_divider" android:layout_alignParentRight="true">
+        <View android:id="@id/bottom_bar_divider" android:layout_width="@dimen/dl_thick_divider_size" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/btn_menu" android:layout_width="@dimen/download_bottom_bar_height" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@null" />
+    </LinearLayout>
+    <com.mgeek.android.ui.StorageBeam android:id="@id/storage_beam" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/btn_menu_container" android:layout_below="@id/bottom_divider" android:layout_alignParentLeft="true" />
+</RelativeLayout>

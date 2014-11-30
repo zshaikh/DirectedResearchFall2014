@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:id="@id/story_tweet" android:layout_width="fill_parent" android:layout_height="wrap_content" twitter:cardStyle="single"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:twitter="http://schemas.android.com/apk/res/com.twitter.android">
+    <RelativeLayout android:padding="0.0dip" style="@style/ListRow">
+        <include android:id="@id/story_tweet_holder" android:layout_alignParentBottom="true" layout="@layout/tweet_row_view" />
+        <TextView android:id="@id/bottom_bar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/story_tweet_holder" style="@style/CardFooter" />
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/parentPanel" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <CheckBox android:id="@id/chkClearHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="40.0dip" android:text="@string/clear_history_option" />
+        <CheckBox android:id="@id/chkClearCache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/clear_cache_option" />
+        <CheckBox android:id="@id/chkClearCookies" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:minHeight="40.0dip" android:text="@string/clear_cookies_option" />
+        <CheckBox android:id="@id/chkConfirmExit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/chk_exit_confirm" />
+    </LinearLayout>
+</ScrollView>

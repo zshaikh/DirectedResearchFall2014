@@ -1,0 +1,68 @@
+.class Lcom/google/inject/internal/BytecodeGen$1$1;
+.super Ljava/lang/Object;
+.source "BytecodeGen.java"
+
+# interfaces
+.implements Ljava/security/PrivilegedAction;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/security/PrivilegedAction",
+        "<",
+        "Ljava/lang/ClassLoader;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/google/inject/internal/BytecodeGen$1;
+
+.field final synthetic val$typeClassLoader:Ljava/lang/ClassLoader;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/inject/internal/BytecodeGen$1;Ljava/lang/ClassLoader;)V
+    .locals 0
+
+    .prologue
+    .line 97
+    iput-object p1, p0, Lcom/google/inject/internal/BytecodeGen$1$1;->this$0:Lcom/google/inject/internal/BytecodeGen$1;
+
+    iput-object p2, p0, Lcom/google/inject/internal/BytecodeGen$1$1;->val$typeClassLoader:Ljava/lang/ClassLoader;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()Ljava/lang/ClassLoader;
+    .locals 2
+
+    .prologue
+    .line 99
+    new-instance v0, Lcom/google/inject/internal/BytecodeGen$BridgeClassLoader;
+
+    iget-object v1, p0, Lcom/google/inject/internal/BytecodeGen$1$1;->val$typeClassLoader:Ljava/lang/ClassLoader;
+
+    invoke-direct {v0, v1}, Lcom/google/inject/internal/BytecodeGen$BridgeClassLoader;-><init>(Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public bridge synthetic run()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 97
+    invoke-virtual {p0}, Lcom/google/inject/internal/BytecodeGen$1$1;->run()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    return-object v0
+.end method

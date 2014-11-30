@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/onboarding_background" android:scaleType="centerCrop" />
+    <RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/onboarding_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/onboarding_logo_padding_top" android:src="@drawable/onboarding_logo" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <FrameLayout android:id="@id/onboarding_actions_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ProgressBar android:layout_gravity="center" android:id="@id/onboarding_connecting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle" />
+            <LinearLayout android:orientation="vertical" android:id="@id/onboarding_connect_buttons" android:paddingBottom="@dimen/onboarding_disclamer_margin_bottom" android:layout_width="260.0dip" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <fragment android:id="@id/googleplus_connect" android:layout_width="fill_parent" android:layout_height="@dimen/onboarding_button_height" class="am.sunrise.android.calendar.authenticator.ui.googleplus.ConnectGooglePlusFragment" />
+                    <fragment android:id="@id/google_connect" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/onboarding_button_height" class="am.sunrise.android.calendar.authenticator.ui.ConnectGoogleFragment" />
+                </FrameLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/onboarding_buttons_margin">
+                    <fragment android:id="@id/facebook_connect" android:layout_width="0.0dip" android:layout_height="@dimen/onboarding_button_height" android:layout_weight="1.0" class="am.sunrise.android.calendar.authenticator.ui.facebook.ConnectFacebookFragment" />
+                    <fragment android:id="@id/email_connect" android:layout_width="0.0dip" android:layout_height="@dimen/onboarding_button_height" android:layout_marginLeft="@dimen/onboarding_buttons_margin" android:layout_weight="1.0" class="am.sunrise.android.calendar.authenticator.ui.email.ConnectEmailFragment" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/onboarding_disclamer_margin_bottom" android:textColor="@color/onboarding_disclamer" android:gravity="center" android:layout_gravity="center" android:id="@id/onboarding_disclamer" android:layout_width="188.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/onboarding_disclamer_margin_top" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/onboarding_error_crouton" android:background="@drawable/onboarding_crouton_error_background" android:padding="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/onboarding_buttons_margin" android:layout_above="@id/onboarding_actions_container" android:layout_alignLeft="@id/onboarding_actions_container" android:layout_alignRight="@id/onboarding_actions_container" android:fontFamily="sans-serif" />
+    </RelativeLayout>
+</FrameLayout>

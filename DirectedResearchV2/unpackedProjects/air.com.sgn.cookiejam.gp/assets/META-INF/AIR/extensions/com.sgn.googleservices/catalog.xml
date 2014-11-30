@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_fead96bd2e56a0bab4c70171c4802e750c1b5a8029fd2dc35c2485f54c75f41a_flash_display_Sprite" mod="1394735356428" signatureChecksum="506034987" >
+        <def id="_fead96bd2e56a0bab4c70171c4802e750c1b5a8029fd2dc35c2485f54c75f41a_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/sgn/googleservices/GoogleServices" mod="1394723628000" signatureChecksum="810821962" >
+        <def id="com.sgn.googleservices:GoogleServices" /> 
+        <dep id="flash.utils:getQualifiedClassName" type="e" /> 
+        <dep id="ArgumentError" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="ArgumentError" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="2abea1a9358aa7cf8e6caecdbecc5d378dd10a85592f33437a1069f5e4607f3f"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

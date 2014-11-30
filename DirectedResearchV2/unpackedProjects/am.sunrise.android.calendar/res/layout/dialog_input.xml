@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/dialog_input_background" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_input_max_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="@dimen/dialog_input_max_height" android:fillViewport="true">
+        <LinearLayout android:gravity="top" android:orientation="vertical" android:padding="@dimen/dialog_input_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/dialog_input_font_size" android:textColor="@color/dialog_input_text_color" android:textColorHint="@color/dialog_input_hint_color" android:gravity="start|top|center" android:id="@id/dialog_input" android:background="@color/dialog_input_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

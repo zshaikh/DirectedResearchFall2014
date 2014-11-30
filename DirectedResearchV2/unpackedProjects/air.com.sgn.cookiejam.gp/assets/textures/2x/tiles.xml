@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:b5cf042e247c833df28de2772f750e72:1/1$ -->
+<TextureAtlas imagePath="tiles.png">
+    <SubTexture name="bottom_bottom_bottom" x="180" y="178" width="176" height="20"/>
+    <SubTexture name="bottom_bottom_right_bevel" x="2" y="156" width="176" height="20"/>
+    <SubTexture name="bottom_bottom_right_corner" x="180" y="156" width="176" height="20"/>
+    <SubTexture name="bottom_left_bevel_bottom" x="2" y="456" width="176" height="20"/>
+    <SubTexture name="bottom_left_bevel_right_bevel" x="180" y="134" width="176" height="20"/>
+    <SubTexture name="bottom_left_bevel_right_corner" x="2" y="134" width="176" height="20"/>
+    <SubTexture name="bottom_left_corner_bottom" x="180" y="112" width="176" height="20"/>
+    <SubTexture name="bottom_left_corner_right_bevel" x="2" y="112" width="176" height="20"/>
+    <SubTexture name="bottom_left_corner_right_corner" x="180" y="90" width="176" height="20"/>
+    <SubTexture name="dark_tile" x="358" y="140" width="136" height="136"/>
+    <SubTexture name="left_left_bottom_bevel" x="376" y="278" width="20" height="176"/>
+    <SubTexture name="left_left_bottom_corner" x="354" y="278" width="20" height="176"/>
+    <SubTexture name="left_left_left" x="332" y="200" width="20" height="176"/>
+    <SubTexture name="left_top_bevel_bottom_bevel" x="310" y="200" width="20" height="176"/>
+    <SubTexture name="left_top_bevel_bottom_corner" x="288" y="200" width="20" height="176"/>
+    <SubTexture name="left_top_bevel_left" x="266" y="278" width="20" height="176"/>
+    <SubTexture name="left_top_corner_bottom_bevel" x="244" y="278" width="20" height="176"/>
+    <SubTexture name="left_top_corner_bottom_corner" x="222" y="278" width="20" height="176"/>
+    <SubTexture name="left_top_corner_left" x="200" y="278" width="20" height="176"/>
+    <SubTexture name="light_tile" x="358" y="2" width="136" height="136"/>
+    <SubTexture name="right_right_bottom_bevel" x="178" y="278" width="20" height="176"/>
+    <SubTexture name="right_right_bottom_corner" x="156" y="278" width="20" height="176"/>
+    <SubTexture name="right_right_right" x="134" y="278" width="20" height="176"/>
+    <SubTexture name="right_top_bevel_bottom_bevel" x="112" y="278" width="20" height="176"/>
+    <SubTexture name="right_top_bevel_bottom_corner" x="90" y="278" width="20" height="176"/>
+    <SubTexture name="right_top_bevel_right" x="68" y="278" width="20" height="176"/>
+    <SubTexture name="right_top_corner_bottom_bevel" x="46" y="278" width="20" height="176"/>
+    <SubTexture name="right_top_corner_bottom_corner" x="24" y="278" width="20" height="176"/>
+    <SubTexture name="right_top_corner_right" x="2" y="278" width="20" height="176"/>
+    <SubTexture name="top_left_bevel_right_bevel" x="2" y="90" width="176" height="20"/>
+    <SubTexture name="top_left_bevel_right_corner" x="180" y="68" width="176" height="20"/>
+    <SubTexture name="top_left_bevel_top" x="2" y="68" width="176" height="20"/>
+    <SubTexture name="top_left_corner_right_bevel" x="180" y="46" width="176" height="20"/>
+    <SubTexture name="top_left_corner_right_corner" x="2" y="46" width="176" height="20"/>
+    <SubTexture name="top_left_corner_top" x="180" y="24" width="176" height="20"/>
+    <SubTexture name="top_top_right_bevel" x="2" y="24" width="176" height="20"/>
+    <SubTexture name="top_top_right_corner" x="180" y="2" width="176" height="20"/>
+    <SubTexture name="top_top_top" x="2" y="2" width="176" height="20"/>
+</TextureAtlas>

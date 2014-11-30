@@ -1,0 +1,9 @@
+<TextureAtlas imagePath="HighScore.png">
+	<SubTexture name="high_score_button_landscape" x="0" y="109" width="1" height="1"/>
+	<SubTexture name="player_info_gift" x="0" y="0" width="62" height="60"/>
+	<SubTexture name="player_info_gift_landscape" x="0" y="0" width="62" height="60"/>
+	<SubTexture name="player_info_level_bg" x="47" y="62" width="33" height="34"/>
+	<SubTexture name="player_info_level_bg_highlighted" x="0" y="62" width="45" height="45"/>
+	<SubTexture name="player_info_level_bg_highlighted_landscape" x="0" y="62" width="45" height="45"/>
+	<SubTexture name="player_info_level_bg_landscape" x="47" y="62" width="33" height="34"/>
+</TextureAtlas>

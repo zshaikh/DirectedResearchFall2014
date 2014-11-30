@@ -1,0 +1,495 @@
+{
+more_theme_link: "http://www.dolphin-browser.com/theme/",
+data_test: false,
+check_update_link: "market://details?id=com.dolphin.browser.android.jp",
+speeddials: [
+{
+url: "http://www.amazon.co.jp/",
+favicon: "favicon_amazon",
+order: 7,
+title: "Amazon"
+},
+{
+url: "http://www.youtube.com/",
+favicon: "favicon_youtube",
+order: 6,
+title: "YouTube"
+},
+{
+url: "http://sp.mbga.jp/AFdol7x00001/_lp",
+favicon: "favicon_mbga",
+order: 5,
+title: "mobage"
+},
+{
+url: "http://www.google.co.jp/",
+favicon: "favicon_google",
+order: 4,
+title: "Google"
+},
+{
+url: "http://m.yahoo.co.jp/?fr=top_dol_and",
+favicon: "favicon_yahoo",
+order: 3,
+title: "Yahoo! JAPAN"
+},
+{
+url: "http://twitter.com/",
+favicon: "favicon_twitter",
+order: 2,
+title: "Twitter"
+},
+{
+url: "http://www.facebook.com/",
+favicon: "favicon_facebook",
+order: 1,
+title: "Facebook"
+},
+],
+bookmarks: [
+{
+name: "mobage",
+bookmarks: [
+{
+url: "http://sp.mbga.jp/AFdob5t00000/_game_intro?game_id=12010355",
+name: "大戦乱!!三国志バトル",
+favicon: "games_mobagefolder",
+order: 1
+},
+{
+url: "http://sp.mbga.jp/AFdob8b00000/game/cpn/hunterhunter/top.html",
+name: "HUNTERxHUNTERバトルコレクション",
+favicon: "games_mobagefolder",
+order: 2
+},
+{
+url: "http://sp.mbga.jp/AFdob1900000/_lp",
+name: "ガンダムロワイヤル",
+favicon: "games_mobagefolder",
+order: 3
+},
+{
+url: "http://sp.mbga.jp/AFdob0000003/_t",
+name: "Mobage",
+favicon: "mobage_favicon1",
+order: 4
+},
+{
+url: "http://sp.mbga.jp/AFdobgf00001/_aff_app?app_id=12012945",
+name: "Blood Brothers",
+favicon: "mobage_favicon2",
+order: 5
+},
+{
+url: "http://sp.mbga.jp/AFdob0300001/_lp",
+name: "農園ﾎｯｺﾘｰﾅ",
+favicon: "mobage_favicon3",
+order: 6
+},
+{
+url: "http://sp.mbga.jp/AFdob8j00001/_lp",
+name: "ｱｲﾄﾞﾙﾏｽﾀｰｼﾝﾃﾞﾚﾗｶﾞｰﾙｽﾞ",
+favicon: "mobage_favicon4",
+order: 7
+},
+{
+url: "http://sp.mbga.jp/AFdob4f00001/_lp",
+name: "FF BRIGADE",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_mobage_1.png",
+order: 8
+},
+{
+url: "http://sp.mbga.jp/AFdob2j00000/_lp",
+name: "神撃のバハムート",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_mobage_2.png",
+order: 9
+}
+],
+order: 9
+},
+
+
+{
+name: "旅行",
+bookmarks: [
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080164",
+name: "じゃらんnet",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_travel_1.png",
+order: 1
+},
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080167",
+name: "じゃらん海外",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_travel_1.png",
+order: 2
+},
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080171",
+name: "AB-ROAD",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_travel_2.png",
+order: 3
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=271459.5&type=3&subid=0",
+name: "yoyaQ.com",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_travel_3.png",
+order: 4
+}
+],
+order: 10
+},
+
+
+
+
+{
+name: "グルメ",
+bookmarks: [
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882115039",
+name: "ホットペッパーグルメ",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_gourmet_1.png",
+order: 1
+},
+{
+url: "http://tabelog.com/",
+name: "食べログ",
+favicon: "favicon_unknow",
+order: 2
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=185549.10000746&type=3&subid=0",
+name: "Ｏｉｓｉｘ（おいしっくす",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_gourmet_2.png",
+order: 3
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=54470.10000411&type=3&subid=0",
+name: "JALショッピング",
+favicon: "favicon_unknow",
+order: 4
+}
+],
+order: 11
+},
+
+
+
+
+{
+name: "美容",
+bookmarks: [
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080183",
+name: "ホットペッパービューティ",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_cosmetic_1.png",
+order: 1
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=245629.10000028&type=3&subid=0",
+name: "DHCオンラインショップ",
+favicon: "favicon_unknow",
+order: 2
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=266633.10000005&type=3&subid=0",
+name: "ドクターシーラボ",
+favicon: "favicon_unknow",
+order: 3
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=135688.10000001&type=3&subid=0",
+name: "オルビス",
+favicon: "favicon_unknow",
+order: 4
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=130136.10000303&type=3&subid=0",
+name: "ファンケルオンライン",
+favicon: "favicon_unknow",
+order: 5
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=130215.10000003&type=3&subid=0",
+name: "HABAオンラインショップ",
+favicon: "favicon_unknow",
+order: 6
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=237914.10000172&type=3&subid=0",
+name: "コスメ・コム",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_cosmetic_2.png",
+order: 7
+}
+],
+order: 12
+},
+
+{
+name: "学び",
+bookmarks: [
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080263",
+name: "ケイコとマナブ.net",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_study_1.png",
+order: 1
+},
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080268",
+name: "資格と仕事.net",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_study_2.png",
+order: 2
+},
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080264",
+name: "ケイコとマナブ.net通信講座",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_study_3.png",
+order: 3
+},
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080271",
+name: "大学＆大学院net",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_study_4.png",
+order: 4
+}
+],
+order: 13
+},
+
+{
+name: "ショッピング",
+bookmarks: [
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882080203",
+name: "ポンパレモール",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_shopping_1.png",
+order: 1
+},
+{
+url: "http://mobile.7netshopping.jp/relay/affiliate/entranceProcess.do?url=http%3A%2F%2Fmobile.7netshopping.jp%2Fall&affid=1663077777783985&site=1&link=6&uid=NULLGWDOCOMO",
+name: "セブンネットショッピング",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_shopping_2.png",
+order: 2
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=130577.10000223&type=3&subid=0",
+name: "ニッセン",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_shopping_3.png",
+order: 3
+},
+{
+url: "http://linksynergy.jrs5.com/fs-bin/click?id=YmGTucvs1zU&offerid=252693.4&type=3&subid=0",
+name: "ビックカメラ.com",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_shopping_4.png",
+order: 4
+},
+{
+url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&offerid=115047.10000001&type=3&subid=0",
+name: "ジャパネットたかた　",
+favicon: "http://opsen.dolphin-browser.com/resources/icon/jp_bm_shopping_5.png",
+order: 5
+}
+],
+order: 14
+},
+        {
+            "bookmarks": [
+                {
+                    "url": "http://www.dolphin-browser.jp/features?nav=1",
+                    "name": "機能",
+                    "order": 1
+                },
+                {
+                    "url": "http://www.dolphin-browser.jp/archives",
+                    "name": "ブログ ",
+                    "order": 2
+                },
+                {
+                    "url": "http://support.dolphin-browser.jp/knowledgebase",
+                    "name": "FAQ ",
+                    "order": 3
+                }
+            ],
+            "name": "ドルフィン",
+            "order": 15
+        },
+{
+url: "http://hotapps.dolphin-browser.jp/index/top?guid=ON",
+name: "ぽけちょ",
+order: 8
+},
+
+{
+url: "http://hb.afl.rakuten.co.jp/hsc/11917dc4.8263e216.11917d95.ef762de7/",
+name: "楽天",
+order: 7
+},
+
+{
+url: "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882105798",
+name: "アマゾン",
+order: 6
+},
+{
+url: "http://sp.mbga.jp/AFdob0000001/_t",
+name: "mobage",
+order: 5
+},
+{
+url: "http://m.yahoo.co.jp/?fr=top_dol_and",
+name: "Yahoo! JAPAN",
+order: 4
+},
+{
+url: "http://www.google.co.jp/",
+name: "Google",
+order: 3
+},
+{
+url: "http://twitter.com/",
+name: "Twitter",
+order: 2
+},
+{
+url: "http://www.facebook.com/",
+name: "Facebook",
+order: 1
+},
+],
+id: 17,
+tutorial: "http://www.dolphin-browser.com/jp/features",
+more_addon_link: "http://www.dolphin-browser.com/jp/addonjp.php",
+about: "NULL",
+home_page: "dolphin://home",
+rate_me_link: "market://details?id=com.dolphin.browser.android.jp",
+hotapps: "http://www.dolphin-browser.com/apps/aphone.htm",
+search_engines: [
+  {
+    searches: [
+      {
+        unique_name: "yahoo_japan",
+        title: "Yahoo!",
+        url: "http://search.yahoo.co.jp/search?ei={inputEncoding}&fr=dol_and&p={searchTerms}",
+        suggest: "http://www.google.com/complete/search?hl={language}&client=android&q={searchTerms}",
+        id: 202,
+        default: true,
+        order: 1,
+        color: "#8b2b90",
+        icon: "http://content.admin.dolphin.com/resources/icon/engine_yahoo_japan.png"
+      },
+      {
+        unique_name: "google",
+        title: "Google",
+        url: "http://www.google.com/search?hl={language}&ie={inputEncoding}&source=android-browser&q={searchTerms}",
+        suggest: "http://www.google.com/complete/search?hl={language}&client=android&q={searchTerms}",
+        id: 204,
+        default: false,
+        order: 2,
+        color: "#4283f0",
+        icon: "http://content.admin.dolphin.com/resources/icon/engine_google.png"
+      },
+      {
+        unique_name: "bing",
+        title: "Bing",
+        url: "http://www.bing.com/search?a=results&q={searchTerms}",
+        suggest: "http://api.bing.com/osjson.aspx?query={searchTerms}&language={language-country}",
+        id: 191,
+        default: false,
+        order: 3,
+        color: "#ffa511",
+        icon: "http://content.admin.dolphin.com/resources/icon/engine_bing.png"
+      },
+      {
+        unique_name: "amazon",
+        title: "Amazon",
+        url: "http://www.amazon.co.jp/gp/aw/s.html?ie=UTF8&at=dlphnbrwsr-22&k={searchTerms}&lc=mqs&m=aps&uid=NULLGWDOCOMO",
+        suggest: "http://www.google.com/complete/search?hl={language}&client=android&q={searchTerms}",
+        id: 216,
+        default: false,
+        order: 4,
+        color: "#050505",
+        icon: "http://content.admin.dolphin.com/resources/icon/amazon_universal9070.png"
+      },
+      {
+        unique_name: "rakuton",
+        title: "楽天",
+        url: "http://hb.afl.rakuten.co.jp/hgc/11917e7e.1e778116.11917e7f.912f451e/?pc={searchTerms}%3fscid%3daf_pc_etc&m=http%3a%2f%2fm.rakuten.co.jp%2f",
+        suggest: "http://www.google.com/complete/search?hl={language}&client=android&q={searchTerms}",
+        id: 217,
+        default: false,
+        order: 5,
+        color: "#BF0000",
+        icon: "http://content.admin.dolphin.com/resources/icon/rakuton_universal9070.png"
+      }
+    ],
+    last_modified: 1379817173,
+    layout: 101,
+    order: 1,
+    title: "General Search INT JP"
+  },
+  {
+    searches: [
+      {
+        title: "YouTube",
+        url: "http://www.youtube.com/results?search_query={searchTerms}",
+        suggest: "http://www.youtube.com/results?search_query={searchTerms}",
+        id: 196,
+        default: true,
+        pressed_icon: "http://opsen.dolphin-browser.com/resources/icon/search_with_youtube_pressed.png",
+        order: 1,
+        icon: "http://content.admin.dolphin.com/resources/icon/search_with_youtube_normal.png"
+      },
+      {
+        title: "Wikipedia",
+        url: "http://ja.m.wikipedia.org/w/index.php?title=Special:Search&search={searchTerms}",
+        suggest: "http://ja.m.wikipedia.org/w/index.php?title=Special:Search&search={searchTerms}",
+        id: 197,
+        default: false,
+        pressed_icon: "http://opsen.dolphin-browser.com/resources/icon/search_with_wikipedia_pressed.png",
+        order: 2,
+        icon: "http://content.admin.dolphin.com/resources/icon/search_with_wikipedia_normal.png"
+      },
+      {
+        title: "Twitter",
+        url: "https://mobile.twitter.com/search/?q={searchTerms}",
+        suggest: "https://mobile.twitter.com/search/?q={searchTerms}",
+        id: 199,
+        default: false,
+        pressed_icon: "http://opsen.dolphin-browser.com/resources/icon/search_with_twitter_pressed.png",
+        order: 3,
+        icon: "http://content.admin.dolphin.com/resources/icon/search_with_twitter_normal.png"
+      },
+      {
+        title: "Facebook",
+        url: "http://www.facebook.com/#!/search/?q={searchTerms}",
+        suggest: "http://www.facebook.com/#!/search/?q={searchTerms}",
+        id: 200,
+        default: false,
+        pressed_icon: "http://opsen.dolphin-browser.com/resources/icon/search_with_facebook_pressed.png",
+        order: 4,
+        icon: "http://content.admin.dolphin.com/resources/icon/search_with_facebook_normal.png"
+      },
+      {
+        title: "Bellemaison",
+        url: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&subid=0&offerid=302645.1&type=10&tmpid=1237&RD_PARM1={searchTerms}",
+        suggest: "http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&subid=0&offerid=302645.1&type=10&tmpid=1237&RD_PARM1={searchTerms}",
+        id: 220,
+        default: false,
+        pressed_icon: "http://opsen.dolphin-browser.com/resources/icon/bellemaison_vertical29090.png",
+        order: 5,
+        icon: "http://content.admin.dolphin.com/resources/icon/bellemaison_vertical9090.png"
+      }
+    ],
+    last_modified: 1379817174,
+    layout: 102,
+    order: 1,
+    title: "Vertical Search INT JP"
+   }
+ ],
+show_download_translate: true,
+gesture: {
+marked_file: "http://opsen.dolphin-browser.com/resources/files/preset/gesture_marked",
+user_gesture_file: "http://opsen.dolphin-browser.com/resources/files/preset/tunnybrowser_gestures_ja"
+}
+}

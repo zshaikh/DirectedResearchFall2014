@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:ellipsize="end" android:gravity="left|center" android:id="@id/item" android:paddingLeft="@dimen/bm_list_item_horizontal_margin_outer" android:paddingRight="@dimen/bm_list_item_horizontal_margin_outer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/bm_import_bookmarks_list_item_height" android:maxLines="1" android:singleLine="true" />
+</LinearLayout>

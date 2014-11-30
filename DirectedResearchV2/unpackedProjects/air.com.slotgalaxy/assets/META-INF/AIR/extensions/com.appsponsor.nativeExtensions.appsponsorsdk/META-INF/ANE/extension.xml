@@ -1,0 +1,23 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.8">
+	<id>com.appsponsor.nativeExtensions.appsponsorsdk</id>
+	<versionNumber>0.0.1</versionNumber>
+	<platforms>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>libAppSponsorExtension.a</nativeLibrary>
+				<initializer>AppSponsorExtensionInitializer</initializer>
+				<finalizer>AppSponsorExtensionFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>AppSponsor.jar</nativeLibrary>
+				<initializer>com.appsponsor.nativeExtensions.appsponsorsdk.AppSponsor</initializer>
+				<finalizer>com.appsponsor.nativeExtensions.appsponsorsdk.AppSponsor</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment/>
+		</platform>
+	</platforms>
+</extension>

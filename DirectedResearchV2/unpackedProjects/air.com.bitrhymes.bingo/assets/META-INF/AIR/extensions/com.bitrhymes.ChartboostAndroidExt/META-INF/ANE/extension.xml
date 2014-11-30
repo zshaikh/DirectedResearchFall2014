@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/2.5">
+	<id>com.bitrhymes.ChartboostAndroidExt</id>
+	<versionNumber>1.0.1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>chartboostandroidext.jar</nativeLibrary>
+				<initializer>com.bitrhymes.chartboost.AndroidExtension</initializer>
+				<finalizer>com.bitrhymes.chartboost.AndroidExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment/>
+		</platform>		
+	</platforms>
+</extension>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/ds_login" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/ds_login_head" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/ds_login_head_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.699982dip" android:contentDescription="@null" />
+            <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="28.0dip" android:text="@string/introduction" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/btn_login_google" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/google_icon" android:layout_width="134.0dip" android:layout_height="27.0dip" android:contentDescription="@null" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/btn_login_facebook" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/facebook_icon" android:layout_width="134.0dip" android:layout_height="27.0dip" android:contentDescription="@null" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/btn_login_dolphin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/dolphin_icon" android:layout_width="134.0dip" android:layout_height="27.0dip" android:contentDescription="@null" />
+        </FrameLayout>
+        <TextView android:textSize="16.0sp" android:layout_gravity="bottom|center" android:id="@id/btn_extension_dolphin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="69.0dip" android:layout_marginBottom="26.0dip" android:text="@string/dolphin_extension_text" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ctrl_pl_header_container" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height">
+        <TextView android:textAppearance="@style/SettingsTitleAppearence" android:gravity="center" android:id="@id/ctrl_pl_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/ctrl_pl_header_title" android:layout_weight="1.0" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:scrollbarThumbVertical="@drawable/vertical_scroll_bar" android:id="@id/ctrl_pl_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:overScrollFooter="@null" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_linear" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

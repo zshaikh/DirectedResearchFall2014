@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353448"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/jesusla/storekit/StoreKit" mod="1387323222000">
+                <def id="com.jesusla.storekit:StoreKit"/>
+                <dep id="ArgumentError" type="e"/>
+                <dep id="Array" type="s"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.jesusla.storekit:TransactionEvent" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="flash.utils:getQualifiedClassName" type="e"/>
+                <dep id="flash.utils:setTimeout" type="e"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/jesusla/storekit/TransactionEvent" mod="1369856592000">
+                <def id="com.jesusla.storekit:TransactionEvent"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="5e0c22bc7b4b9adec0bc41d378d67f743a0434e083b69a9c99bcc19a3bc560eb"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

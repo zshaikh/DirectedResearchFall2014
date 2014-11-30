@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_button_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <CheckedTextView android:gravity="center" android:id="@id/checkbox" android:clickable="false" android:duplicateParentState="true" android:layout_width="@dimen/bookmark_checkbox_icon_size" android:layout_height="@dimen/bookmark_checkbox_icon_size" />
+        <View android:id="@id/divider" android:layout_width="@dimen/bookmark_top_popup_item_divider_size" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bm_list_item_divider_image_horizontal_margin" android:layout_marginTop="@dimen/bm_list_item_divider_image_vertical_margin" android:layout_marginBottom="@dimen/bm_list_item_divider_image_vertical_margin" />
+    </LinearLayout>
+    <ImageView android:id="@id/icon" android:duplicateParentState="true" android:layout_width="@dimen/search_suggestion_icon_width" android:layout_height="@dimen/search_suggestion_icon_width" android:layout_marginLeft="@dimen/bm_list_favicon_margin_left" android:layout_marginRight="@dimen/bm_list_favicon_margin_right" android:contentDescription="@null" />
+    <TextView android:textAppearance="@style/SideBarItemAppearence" android:ellipsize="end" android:id="@id/title" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:contentDescription="@null" />
+    <ImageView android:id="@id/indicator" android:visibility="gone" android:duplicateParentState="true" android:layout_width="@dimen/bm_list_item_indicator_width" android:layout_height="@dimen/bm_list_item_indicator_height" android:layout_marginLeft="@dimen/bm_list_item_horizontal_margin_inner" android:layout_marginRight="@dimen/bm_list_item_horizontal_margin_outer" android:contentDescription="@null" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/right_button_container" android:paddingLeft="@dimen/bm_list_item_horizontal_margin_inner" android:paddingRight="@dimen/bm_list_item_horizontal_margin_outer" android:visibility="gone" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/right_button" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+    </LinearLayout>
+</merge>

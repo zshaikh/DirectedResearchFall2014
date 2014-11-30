@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dolphin.browser.ui.fake.InclickableTextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/private_mode_header_summary" android:clickable="false" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/private_mode_message" android:lineSpacingExtra="3.0dip" />
+    <com.dolphin.browser.ui.fake.InclickableTextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/private_mode_header_operation" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/private_mode_operation" />
+</LinearLayout>

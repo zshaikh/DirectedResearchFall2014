@@ -1,0 +1,9 @@
+<TextureAtlas imagePath="Settings.png">
+	<SubTexture name="settingsmenu_exit" x="0" y="660" width="218" height="218"/>
+	<SubTexture name="settingsmenu_help" x="220" y="220" width="218" height="218"/>
+	<SubTexture name="settingsmenu_music_off" x="220" y="0" width="218" height="218"/>
+	<SubTexture name="settingsmenu_music_on" x="220" y="440" width="218" height="218"/>
+	<SubTexture name="settingsmenu_settings" x="0" y="440" width="218" height="218"/>
+	<SubTexture name="settingsmenu_sounds_off" x="0" y="220" width="218" height="218"/>
+	<SubTexture name="settingsmenu_sounds_on" x="0" y="0" width="218" height="218"/>
+</TextureAtlas>

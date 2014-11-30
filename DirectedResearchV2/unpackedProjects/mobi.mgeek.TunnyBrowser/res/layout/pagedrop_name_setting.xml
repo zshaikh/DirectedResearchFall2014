@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="20.0px" android:paddingRight="20.0px" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentTop="true">
+        <TextView android:textSize="24.0px" android:textColor="#ff808080" android:paddingLeft="10.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pagedrop_title" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <Button android:textSize="26.0px" android:textColor="#ff2f2f2f" android:id="@id/save" android:background="@drawable/button_background" android:layout_width="70.0dip" android:layout_height="wrap_content" android:text="@string/pg_username_setting_button_text" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/gap" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="10.0px" android:layout_height="2.0px" android:layout_toLeftOf="@id/save" />
+        <EditText android:textSize="24.0px" android:textColor="#ff4c4c4c" android:gravity="center_vertical" android:id="@id/nameedit" android:background="@drawable/edit_text_bk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="User Name" android:layout_toLeftOf="@id/gap" android:layout_alignTop="@id/save" android:layout_alignBottom="@id/save" />
+    </RelativeLayout>
+</RelativeLayout>

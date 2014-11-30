@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/bitrhymes/admob/AdMobEvent" mod="1386059721883" signatureChecksum="2498654094" >
+        <def id="com.bitrhymes.admob:AdMobEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_5d8a04045c092a32e2c50e191a1af9097194b87b486bcadf48be5e53de5b7a9b_flash_display_Sprite" mod="1386071933772" signatureChecksum="2569042665" >
+        <def id="_5d8a04045c092a32e2c50e191a1af9097194b87b486bcadf48be5e53de5b7a9b_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/admob/AdMobExt" mod="1381477039688" signatureChecksum="2470666991" >
+        <def id="com.bitrhymes.admob:AdMobExt" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="com.bitrhymes.admob:AdMobEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="51b622644fb4b0643e49658f3371cc56cae44415a9e1d632f87f2f17f4998a5e"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

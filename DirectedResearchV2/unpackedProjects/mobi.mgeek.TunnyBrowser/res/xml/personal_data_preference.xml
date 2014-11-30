@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_personal_data_settings"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_dolphin_service_settings" dolphin:title="@string/pref_dolphin_service_settings" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="account_service_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceDownloadPath dolphin:positiveButtonText="@string/cancel" dolphin:negativeButtonText="@string/ok" dolphin:dialogLayout="@layout/download_path_settings" dolphin:edittextSummary="@string/download_dir_edittext_summary" dolphin:key="download_dir" dolphin:title="@string/download_dir_title" dolphin:summary="@string/download_dir_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="save_cache_to_sdcard" dolphin:title="@string/pref_save_cache_to_sdcard" dolphin:summary="@string/pref_save_cache_to_sdcard_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="smart_cache" dolphin:title="@string/pref_smart_cache" dolphin:summary="@string/pref_smart_cache_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.BackupPreference dolphin:dialogTitle="@string/backup_settings" dolphin:key="backup" dolphin:title="@string/backup_settings" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.RestorePreference dolphin:dialogTitle="@string/restore_settings" dolphin:dialogMessage="@string/restore_settings_summary" dolphin:key="restore" dolphin:title="@string/restore_settings" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.ResetDefaultPreference dolphin:dialogTitle="@string/pref_extras_reset_default_dlg_title" dolphin:dialogMessage="@string/pref_extras_reset_default_dlg" dolphin:positiveButtonText="@string/cancel" dolphin:negativeButtonText="@string/reset" dolphin:key="reset_default_preferences" dolphin:title="@string/pref_extras_reset_default" dolphin:widgetLayout="@layout/preferences" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

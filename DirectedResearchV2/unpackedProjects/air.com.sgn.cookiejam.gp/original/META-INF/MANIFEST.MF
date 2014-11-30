@@ -1,0 +1,2556 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.chartboost/META-INF/A
+ NE/extension.xml
+SHA1-Digest: GgTO4d1W64cFWmFuFVOW7Up17vY=
+
+Name: assets/textures/1x/background_14.jpg
+SHA1-Digest: UYPDJOKWvXTtPFkVU07o5TWa+WY=
+
+Name: assets/textures/common/map_9.jpg
+SHA1-Digest: P831E1vmKR+5AVZfvoIFE8hIVc8=
+
+Name: assets/textures/2x/tiles.xml
+SHA1-Digest: E7pPWIoQrp7LiZdNdWj6BfVoY3E=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich6.xml
+SHA1-Digest: UVKYTv4LT8dvjTvUSsyM6FcumW8=
+
+Name: assets/textures/1x/RecipeResultsCreampuff1.atf
+SHA1-Digest: +k78b4+31ktBqcQNM8IxBUlVyUo=
+
+Name: assets/textures/2x/ErrorPopUp.xml
+SHA1-Digest: Tz8d0ZHquwvrs3/0FliPAjuHi6U=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorFFFFFF_StrokeA8364B
+ .fnt
+SHA1-Digest: 7dCMAVVsZ8+DoO1sNwDMK87N3xA=
+
+Name: assets/textures/1x/MapPaginatorIcons.atf
+SHA1-Digest: o5phivHl4/q8yw+Qrym8HSXzxWQ=
+
+Name: assets/textures/1x/RecipeResultsSquarecake2.atf
+SHA1-Digest: M8oJb0FaGAyu3xHlVtQPzS2+VOA=
+
+Name: assets/textures/2x/placeHolder.xml
+SHA1-Digest: s/OMSrA7WGahVUMaqVHzGgTExKM=
+
+Name: assets/textures/2x/RecipeResultsSquarecake3.atf
+SHA1-Digest: Nn3cVAMk+meSRY0m/Ybrb7pVSPY=
+
+Name: assets/textures/common/map_11.jpg
+SHA1-Digest: e1nRwIGjlRp8PtuUytXNxVAJUXA=
+
+Name: assets/textures/1x/nexttohighscoreicon_timed_failed.png
+SHA1-Digest: 1qfOLqRlewlm0roqyhAPDZXc+sM=
+
+Name: assets/textures/1x/mainimagerect_endofcontent.png
+SHA1-Digest: JF0kjyzKx+5fiWmY6CfnKhCgzAE=
+
+Name: assets/textures/2x/RecipeResultsDanish3.xml
+SHA1-Digest: RwfwEstVWwZ/B2hL+XDywS2+rI4=
+
+Name: assets/textures/common/Stripes.atf
+SHA1-Digest: dF/pP+Al5ml2BkURTha0MHVvotY=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.chartboost/catalog.xm
+ l
+SHA1-Digest: 6vbHaK8YM01qk6HPEjQ+xKGJRy4=
+
+Name: assets/textures/1x/RecipeResultsCupcake6.xml
+SHA1-Digest: LJKskVSQmVZie196YAE86JS7Ewk=
+
+Name: assets/textures/1x/mainimagerect_connectFB.png
+SHA1-Digest: RgwUWT2jCVAOyAlopYn/7/iudVw=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: s11gcQnxG2CBh+07EhR73hIWugc=
+
+Name: assets/textures/1x/MailPopUp.atf
+SHA1-Digest: HOhOyP90ge9BFbEl7PqcwzEJQtM=
+
+Name: assets/textures/2x/RecipeResultsNapolean1.atf
+SHA1-Digest: 6UNO/4BVPlWO2iMYFx6i4yvuo+A=
+
+Name: assets/textures/1x/RecipeResultsNapolean3.xml
+SHA1-Digest: s4rpN0QKJh/+s1jisb4VeF8wVS4=
+
+Name: assets/textures/1x/unlockStage_1.png
+SHA1-Digest: K4WaD2JEOwl5F/dZvmr7Cf8+FY4=
+
+Name: res/drawable-notlong-port-hdpi/loading.png
+SHA1-Digest: ldmLklssHQPdsHtq3/NmlbL9t3I=
+
+Name: assets/textures/2x/RecipeResultsDanish1.atf
+SHA1-Digest: drK/DS5WxAiWTc9exohpFiLFhEE=
+
+Name: assets/textures/2x/unlockStage_5.png
+SHA1-Digest: uqvRJ2eCnDwtzhLH7CWeyRxbER8=
+
+Name: assets/textures/2x/tiles.atf
+SHA1-Digest: Z86J+Wr+Z5kZj4SldUzjT7vkTSU=
+
+Name: assets/textures/2x/RecipeResultsRoundcake3.xml
+SHA1-Digest: jfRYSoJ3cOyZzdDNgMMmXRBjtZ0=
+
+Name: assets/textures/common/cloud.png
+SHA1-Digest: YKxIyBMeHfsNVG1Si5DnHOU2Dy4=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: assets/textures/2x/RecipeResultsCreampuff1.atf
+SHA1-Digest: BfDIeXjpsAAdQQ/ul0oTbaJMKg8=
+
+Name: assets/textures/common/map_6.jpg
+SHA1-Digest: 06xmdiWgwgP53q5eGnFCEgytcxU=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.chartboost/META-INF/A
+ NE/Android-ARM/library.swf
+SHA1-Digest: JHbGZTDSkscZmLEsi8JCD3aZq54=
+
+Name: assets/textures/1x/nexttohighscoreicon_ingredient_failed.png
+SHA1-Digest: iiqHU1hIh5Uv8tP3zQnd4sCT1xg=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich1.xml
+SHA1-Digest: jOKModDJK1m+Rt5t9c7XtfujZmc=
+
+Name: assets/textures/2x/RecipeResultsCreampuff3.atf
+SHA1-Digest: D287pbYDi2ZvSMlodtC0hvHMOvA=
+
+Name: assets/textures/1x/RecipeResultsSavarin2.atf
+SHA1-Digest: HGkvJbXYAENWMYF2IYMeWCfX8TI=
+
+Name: assets/textures/1x/RecipeResultsTart2.xml
+SHA1-Digest: bT7JzXqqE12sIChSkl8W1d+9QUk=
+
+Name: assets/textures/2x/NextToHighScore.atf
+SHA1-Digest: vaGYQ/F8wA2Pa2YUnbe853G/dVM=
+
+Name: assets/textures/1x/RecipeResultsCheesecake5.xml
+SHA1-Digest: Mm5Tml53MnSsdm5QQT5U/Sy6Ytw=
+
+Name: assets/textures/2x/RepeatedAssets.xml
+SHA1-Digest: XL1WZpzMOO07jYqtNUdXvy1a9/M=
+
+Name: assets/textures/2x/ErrorPopUp.atf
+SHA1-Digest: 91j5367JlmVPSlIWf2USpFoYukY=
+
+Name: assets/textures/2x/RecipeResultsCreampuff5.atf
+SHA1-Digest: zTki37G9/KNOaZGhwv7nKvWXaPc=
+
+Name: assets/textures/1x/RecipeResultsNapolean1.xml
+SHA1-Digest: B6wVn+3dhzpTMGTrLnLnoz1DHqU=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: w6mpRgibsu8hGt6GxL4xG/ExjG0=
+
+Name: assets/META-INF/AIR/application.xml
+SHA1-Digest: ELvoDsAo9d5UILJI1ByfIkI0Jik=
+
+Name: assets/textures/1x/RecipeResultsCheesecake4.xml
+SHA1-Digest: tTf1BnforSgYc00nvN3BepIqzcc=
+
+Name: assets/textures/1x/MiscIconsWaffle.xml
+SHA1-Digest: XF9G0e2N0LGIZaQOFsqP4xn9abk=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+
+Name: assets/textures/2x/RecipeResultsDanish4.atf
+SHA1-Digest: jDynlidlRgHkMJ1/VVDycplfgKM=
+
+Name: res/layout/expandable_multiple_chooser_row.xml
+SHA1-Digest: o88JLvEV8o+0/yAn/jsqLF+eO44=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: pMG+uKQshrsOpwsJ/b2WVeWhjLM=
+
+Name: assets/textures/1x/RecipeResultsCreampuff5.xml
+SHA1-Digest: 8t0Q25NsY3CAtXO0+NHJU2xhq7U=
+
+Name: assets/textures/2x/RecipeResultsNapolean3.atf
+SHA1-Digest: 0Rt2IPlQHwde4LkkKpbAM1ethvI=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.bingo/catalog.xml
+SHA1-Digest: 4VJXFwH8UZq0it1Iz5pusOoAb8s=
+
+Name: assets/textures/2x/RecipeResultsCheesecake2.atf
+SHA1-Digest: j6OnJeUaGJzLUc5g4ZhhWJ2rLBo=
+
+Name: assets/textures/2x/unlockStage_12.png
+SHA1-Digest: oKEspOKMdnDQSv5VYfr2MyTkgNU=
+
+Name: assets/textures/1x/unlockStage_2.png
+SHA1-Digest: uzn/qjyePPSzOBCzL+hnXpQZS5s=
+
+Name: assets/textures/1x/RecipeResultsRoundcake2.xml
+SHA1-Digest: p6BkpzJLrj0rStGnOKsmbRB1PUM=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich4.atf
+SHA1-Digest: yp55TmhFS5yE5f+/VmHZlyYz3f8=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich2.xml
+SHA1-Digest: zPI9rAldU4bO5/W/trShh4dnZPs=
+
+Name: assets/textures/common/friendIconBg.png
+SHA1-Digest: 4L2EF6xcTgUrHqvwSdLQYzSSnY4=
+
+Name: assets/fonts/1x/LobsterTwoRegular_Size36_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.atf
+SHA1-Digest: V6c/l1xVO2+zaPUGkMV6mWykqIQ=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: AQdFG46yT+32orFdKHsb8Mj2UVc=
+
+Name: assets/textures/1x/RecipeResultsTart1.atf
+SHA1-Digest: ZYPrvTQlkxVA4bVRMrRhPETdzYg=
+
+Name: res/drawable-xhdpi/ouya_icon.png
+SHA1-Digest: OB+bFge5Nxh/5nao77YhrmSZWGU=
+
+Name: assets/textures/1x/RecipeResultsSquarecake6.xml
+SHA1-Digest: Qr2GIrDiFWSc0yjvVKD0StPbzKU=
+
+Name: res/drawable/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: assets/textures/2x/LikePage.xml
+SHA1-Digest: 3/9LTxknvuey14WBv0QXP7EjTMA=
+
+Name: assets/textures/1x/RecipeResultsCheesecake4.atf
+SHA1-Digest: N02UKJftnUhZ6OorwRtl9znjAhc=
+
+Name: assets/textures/2x/MiscIconsTimed.atf
+SHA1-Digest: Fb0drpteRTYM1F43xQQw0OFivGU=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich1.xml
+SHA1-Digest: 2cHCvWNB/dOcAa87D6zkn0MDlVQ=
+
+Name: assets/textures/1x/RecipeResultsPie1.xml
+SHA1-Digest: r8UyBltEWmXIlaS0MqeV+dR50mY=
+
+Name: assets/textures/1x/RecipeResultsCupcake2.atf
+SHA1-Digest: KjibBabg7T0upXi/7Swh5J9IWmc=
+
+Name: assets/textures/2x/Store.xml
+SHA1-Digest: fACHwMRoT4/AYAR0N3lIdxqvGY8=
+
+Name: assets/textures/2x/RecipeResultsNapolean5.xml
+SHA1-Digest: 4zcIt4bWbJHuq7IRt2TpKO4DupE=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.facebook/META-INF/ANE
+ /Android-ARM/library.swf
+SHA1-Digest: qFybiS//6KZe2fi8c8MY81FOEWM=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.bingo/library.swf
+SHA1-Digest: yZ6babRycvASDr0shJVm7CleRvc=
+
+Name: assets/textures/2x/RecipeResultsSundae2.xml
+SHA1-Digest: jCqL17YsFOQOShhdqRQcxboQnyc=
+
+Name: assets/textures/2x/RecipeResultsCakeslice3.atf
+SHA1-Digest: 8AEjtD7KdWi+EUI9BVT/Y9MsviA=
+
+Name: assets/textures/2x/background_5.jpg
+SHA1-Digest: SmwPcMinWGlo6Q9sZgKjA1NBgNo=
+
+Name: assets/textures/1x/RecipeResultsSundae2.xml
+SHA1-Digest: Xf2pAXL6xDUIzdGBcAPo9kI/Sp0=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.adx/META-INF/ANE/exte
+ nsion.xml
+SHA1-Digest: w9D7TI5bQFJoeJbmE4FjO7dXdy4=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorC5DEF7_Stroke0D4069
+ .png
+SHA1-Digest: Wg3ReCIAnM56fCuci0YNWFk/JGQ=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_Color9B3B12.atf
+SHA1-Digest: VFOBQf9HOQwvaytBAWwYQp2YJoI=
+
+Name: assets/textures/common/map_5.jpg
+SHA1-Digest: BlcS8iTHhwihGVO0lmYcuimoQ/E=
+
+Name: assets/textures/common/map_14.jpg
+SHA1-Digest: sSi6eyCrOCNyFtVgEUZxlbF+Hlg=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.facebook/META-INF/ANE
+ /extension.xml
+SHA1-Digest: dzBeVp2Xtt44Ghl5avZ1yGJFSdw=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich3.xml
+SHA1-Digest: pJgSJXTqc1CaepQ3l1YKA/zYqOc=
+
+Name: assets/textures/2x/RecipeResultsNapolean2.xml
+SHA1-Digest: C3dlh/s3JmxOLL/2ervGE71VUIk=
+
+Name: assets/textures/1x/mainimagerect_rateapp.png
+SHA1-Digest: eCnA69o4sXHcKMSlYOqKIYa3coc=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.facebook/library.swf
+SHA1-Digest: qFybiS//6KZe2fi8c8MY81FOEWM=
+
+Name: res/drawable/air_72px_mobile_eula.png
+SHA1-Digest: 6eX1WzhcZDSgS30DdiYKnHz0h1w=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.ane/catalog.xml
+SHA1-Digest: U5r3wObzyQIU+6PnM9rCiVjWzbA=
+
+Name: assets/textures/1x/RecipeResultsCakeslice5.xml
+SHA1-Digest: 0lj66jmBUFtPq/jKZ0AcsTVbw88=
+
+Name: assets/textures/2x/RecipeResultsSquarecake5.atf
+SHA1-Digest: V1e2WgSfiA1rJ4IYo9ijFXe6HbQ=
+
+Name: assets/textures/1x/RecipeResultsNapolean2.atf
+SHA1-Digest: T42KH0nXUw9hbw6VKDMNRSLD8nc=
+
+Name: lib/armeabi-v7a/libstagefright_froyo.so
+SHA1-Digest: EUXLvjWSqWdOtEeNogZ6B3XXEO0=
+
+Name: assets/textures/2x/background_3.jpg
+SHA1-Digest: G0TajcMG8pOfo5G4RWoZ+hFvTuY=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich1.atf
+SHA1-Digest: r51qjah6c0S4r/YuE/OspcwujrM=
+
+Name: assets/textures/1x/RecipeResultsCakeslice2.xml
+SHA1-Digest: SzF0Ck3MoLX4mHoCw38WXvX13u0=
+
+Name: assets/textures/2x/RecipeResultsNapolean6.xml
+SHA1-Digest: zTZx3/b0x/0LHrcOtgxbVj6AWSU=
+
+Name: assets/textures/2x/Store.atf
+SHA1-Digest: fCluqi5kEOhtDv2IYurRSjQwh3U=
+
+Name: assets/textures/2x/WhiteWood.xml
+SHA1-Digest: wvLGNrUKMrsLCGuWxyRqE16w4Y8=
+
+Name: lib/armeabi-v7a/libstagefright_honeycomb.so
+SHA1-Digest: qPns6HP60VRhSzOQHoV2FXg2q/A=
+
+Name: assets/textures/2x/MapHUD.xml
+SHA1-Digest: Do+wlu+b7ykKTPLdBfxgJjxJMRY=
+
+Name: assets/textures/2x/RecipeResultsCakeslice1.xml
+SHA1-Digest: xkk8nb9oJQJYgfqHHv+Yxwb/GaI=
+
+Name: assets/textures/2x/blocks.xml
+SHA1-Digest: +q6WyiWeNqFLtt79InFQMR5opYA=
+
+Name: assets/textures/1x/Settings.atf
+SHA1-Digest: uLTwwh1LgqhhZB3yI+n88x5S5F8=
+
+Name: assets/textures/1x/Gingerbread.atf
+SHA1-Digest: FR4XpCvB0/QY9J/FVvKiM9Bae6A=
+
+Name: assets/textures/common/Ftue.png
+SHA1-Digest: 8nF3LQ6Bsaqlm5AnGWKBonRy5qw=
+
+Name: assets/textures/1x/RecipeResultsPie6.xml
+SHA1-Digest: JIghhG2eD1Fmad1/nq8LXwFwWe0=
+
+Name: assets/textures/1x/GameMainScreen.xml
+SHA1-Digest: W2vTd1GKmMWMbv9XDPkRzaAj3Ng=
+
+Name: assets/textures/1x/RecipeResultsDanish6.atf
+SHA1-Digest: 0bj+7piTiNVCMENTdLc+058V5Xw=
+
+Name: assets/textures/2x/RecipeResultsSavarin5.xml
+SHA1-Digest: YNZm2fxHqtQx+oLRsWPDPGlLJP8=
+
+Name: assets/textures/1x/background_13.jpg
+SHA1-Digest: w4LlWpwrfzN5zEss82eT1OpSnf4=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.mobile/META-INF/ANE/Andro
+ id-ARM/library.swf
+SHA1-Digest: QatXksNDEHlI9s7hOQLj55UzgBM=
+
+Name: assets/textures/1x/RecipeResultsRoundcake3.xml
+SHA1-Digest: KRgIKr+0F0MalvEBgAbZ3jkOmTs=
+
+Name: assets/textures/1x/RecipeResultsRoundcake2.atf
+SHA1-Digest: LoaiCdsJfJpOLeRrF/KlxNXU+4g=
+
+Name: assets/textures/2x/GameMainScreen.xml
+SHA1-Digest: T37XVKUhKgu6iPW15WxZ2r4l9H0=
+
+Name: res/drawable-xhdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: VqEt89wuwGEqEtvuU36zIvHS4VY=
+
+Name: assets/textures/2x/RecipeResultsFlan3.xml
+SHA1-Digest: 00jmJFI9BowlpTyQpL6UOdPP/VU=
+
+Name: assets/textures/1x/nexttohighscoreicon_waffle_completed.png
+SHA1-Digest: /Cy4kDy4EBJj1LGG7niWKib47ts=
+
+Name: assets/textures/1x/RecipeResultsPie3.xml
+SHA1-Digest: HvTzuF03QhFbqSN2fZO6Q5BKaDI=
+
+Name: assets/textures/2x/MapHUD.atf
+SHA1-Digest: Tqk5wJ6zHQZmgqAVTeFltBIhcLo=
+
+Name: assets/textures/1x/RecipeResultsCupcake3.xml
+SHA1-Digest: enEC6sovSm05eZvL44nthhA67s8=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorC5DEF7_Stroke0D4069
+ .fnt
+SHA1-Digest: bzHbOKhG3SHTEIf1J+fbE04t/aA=
+
+Name: assets/textures/2x/RecipeResultsFlan3.atf
+SHA1-Digest: otYTSMZ8PPvlTxX/MP7ROVfnccw=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.ane/library.swf
+SHA1-Digest: v4CyJRN/tXa6kVPKBcT1yiI5yR8=
+
+Name: assets/textures/2x/LikePage.atf
+SHA1-Digest: Db3xGxt+qWLIDm61TwjiHc2/dUE=
+
+Name: assets/textures/2x/unlockStage_10.png
+SHA1-Digest: onh1HOx782nkgJhoJHonZfnA2ew=
+
+Name: assets/textures/1x/RecipeResultsCreampuff3.atf
+SHA1-Digest: yjcdFNxaV45wtedZjKjpFRRkAuk=
+
+Name: assets/textures/2x/HowToPlay.atf
+SHA1-Digest: 6viVT9GGVN2e00FIHpAjdWKMMNU=
+
+Name: assets/textures/1x/CoinStacks.xml
+SHA1-Digest: k30OD/rhhIiA9V3T1RDyudNSFTw=
+
+Name: assets/textures/2x/Rat.xml
+SHA1-Digest: GSQpftKDtcpDVEafrQuOieWlPQ8=
+
+Name: res/raw/adobelogo.gif
+SHA1-Digest: cp6EzjLDVdzLOD69uttcA3OnzH8=
+
+Name: assets/textures/1x/RepeatedAssets.atf
+SHA1-Digest: RmtxdMF4ratZn8nOkMdv90okqCE=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.mobile/META-INF/ANE/exten
+ sion.xml
+SHA1-Digest: 5N+m7UWCcoXlwuq5hl2xHuRAUHM=
+
+Name: res/drawable-ldpi/com_facebook_close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: assets/textures/common/map_1.jpg
+SHA1-Digest: wxuDBjPwHdsnY1+dEGq2LJzJIpw=
+
+Name: assets/textures/1x/placeHolder.atf
+SHA1-Digest: 8x++iTwT7sXSBCjOJd2DCR5bi1g=
+
+Name: assets/textures/1x/MiscIconsCollect.xml
+SHA1-Digest: tg5jFbkL1DjtubWvjHfud7W3DHM=
+
+Name: assets/textures/1x/background_9.jpg
+SHA1-Digest: wi5Lo20O3NI3O1z9kZCK91GPRZQ=
+
+Name: assets/icons_android/icon72.png
+SHA1-Digest: EZrk9kBlOTExzzMMObRBs0sea7E=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich2.atf
+SHA1-Digest: O5w6hwirkbVu5t3MAnf+V/6qhy0=
+
+Name: assets/textures/1x/blocks.xml
+SHA1-Digest: c6m4aoxvqPolnI/eX2jIFA8Lfgw=
+
+Name: assets/textures/1x/RecipeResultsSquarecake1.xml
+SHA1-Digest: tiSwlAnONdNLIVGIaMMbzzmpUX4=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: assets/textures/2x/unlockStage_8.png
+SHA1-Digest: NKLiAzYrGx0m5DM1DdW3z/IitO0=
+
+Name: assets/textures/2x/RecipeResultsCakeslice1.atf
+SHA1-Digest: J75xRtP466CHiV6HU3CcSickCxs=
+
+Name: assets/textures/2x/RecipeResultsSquarecake1.atf
+SHA1-Digest: uPkeclrKVcpOFEyq+CD0tLYtIwM=
+
+Name: assets/textures/1x/RecipeResultsNapolean5.xml
+SHA1-Digest: RbcPMZo88QWsiYdmbIg/mapLsH4=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: rtQwPMQzG5rJrsDhA1KVIAug8mQ=
+
+Name: assets/textures/1x/unlockStage_12.png
+SHA1-Digest: Uz4E2EWrrS8NjrtuWmw+SIE4jZ0=
+
+Name: assets/textures/1x/BoosterIcons.atf
+SHA1-Digest: vYNmfN2WTkyJ8hUMK6aFszoW2mk=
+
+Name: assets/textures/1x/PassedFriendPopUp.atf
+SHA1-Digest: zsEoQcNCRe6WYQc5Op4b1QUp0gw=
+
+Name: assets/textures/2x/RecipeResultsSquarecake2.xml
+SHA1-Digest: gCrrpzu2aWs0GvLUzK3JGYGV5x0=
+
+Name: assets/textures/1x/RecipeResultsDanish5.atf
+SHA1-Digest: GZIblgf06LmEYOGMXzMtI1kdGSI=
+
+Name: assets/textures/2x/RecipeResultsPie1.atf
+SHA1-Digest: nbTOBJ14/T4+twPTjrtAL406x5I=
+
+Name: assets/textures/1x/RecipeResultsCreampuff6.xml
+SHA1-Digest: 37YU8+kwWZLLzvhs4xN9jppaR4w=
+
+Name: assets/textures/1x/RecipeResultsRoundcake1.xml
+SHA1-Digest: K8xure8if31GH3NSKSKxQXhfjps=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+
+Name: assets/textures/1x/Sliders.atf
+SHA1-Digest: U7Z3OXJSnar1au5tgySpPDcdYWk=
+
+Name: assets/textures/2x/RecipeResultsRoundcake3.atf
+SHA1-Digest: P6RurbRGMl9eOqPXD5lgbGA9KdA=
+
+Name: assets/textures/2x/RecipeResultsSavarin3.xml
+SHA1-Digest: gHXY+r1WLmBZVhoRn2q+lyyvXyA=
+
+Name: assets/textures/2x/RecipeResultsSundae5.xml
+SHA1-Digest: IzShX9eEOVvfi3qRj5dH4hWCk58=
+
+Name: assets/textures/2x/Sliders.xml
+SHA1-Digest: za4k/YxPVOhlOOG/jonHnk+JCUY=
+
+Name: assets/textures/2x/BoosterIcons.xml
+SHA1-Digest: OszWbAX35eXJCUSq0gMVTI15F7E=
+
+Name: assets/textures/2x/RecipeResultsCakeslice2.xml
+SHA1-Digest: 1PKMFv1bCkQQsZEEJ8TBnhqA3v4=
+
+Name: assets/textures/2x/RecipeResultsSavarin1.xml
+SHA1-Digest: U3oG0E/P4kCWLM+w+YiyoRRUux0=
+
+Name: assets/textures/1x/RecipeResultsCheesecake3.xml
+SHA1-Digest: HOpedmag2QQE+7vBxhvz4kPxIpM=
+
+Name: assets/textures/2x/hotAirBalloon.png
+SHA1-Digest: +aWDNnAb9WsuSiC49Nx3cULeZGg=
+
+Name: assets/textures/2x/NextToHighScore.xml
+SHA1-Digest: gq3AC0nG+E4rRRGm0VIDr7COkHI=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorFFFFFF_StrokeA8364B
+ .atf
+SHA1-Digest: Vd2sjiNc24EBHq0AhE4oE9SsnuY=
+
+Name: assets/textures/2x/RecipeResultsRoundcake6.xml
+SHA1-Digest: Nn6Gnb7QgOxaUagZSA5/Sw6it7Y=
+
+Name: assets/textures/1x/Sliders.xml
+SHA1-Digest: 4rPg1E9bl/kXMUaMPMJqai0zOoY=
+
+Name: assets/textures/1x/RecipeResultsSundae3.atf
+SHA1-Digest: cTWn/LfhRy1oflNADDRY/JkBdrw=
+
+Name: assets/textures/2x/nexttohighscoreicon_decorating_completed.png
+SHA1-Digest: 9R9jC1snDwLbVnzMebHa0r/iYyg=
+
+Name: assets/textures/1x/RecipeResultsTart4.xml
+SHA1-Digest: GHrgmjsZrXoth+UEwXU531gEJZg=
+
+Name: assets/textures/2x/RecipeResultsFlan6.atf
+SHA1-Digest: WgmMiBrGjrCaqHoEH15Ne/upgx4=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: 8H82DFwsIl8WN/v+/mCVO8pQYGs=
+
+Name: assets/textures/2x/Settings.atf
+SHA1-Digest: EUKBu8tgAWeWm29r67nZs95f/Gc=
+
+Name: assets/textures/1x/TitleRibbons.atf
+SHA1-Digest: dvqqb2GuP3QB3GcNQ+yrnEJbhp4=
+
+Name: assets/textures/2x/Gingerbread.atf
+SHA1-Digest: sOjvyfAQs8LRJKUVxIRiQjOdmTs=
+
+Name: assets/textures/2x/background_6.jpg
+SHA1-Digest: rm+oYfvrWp2AnMuuLXevHLJN9/s=
+
+Name: assets/textures/1x/RecipeResultsCakeslice1.atf
+SHA1-Digest: 7iFIIZeULN+wV/W5sSzRlbvAORI=
+
+Name: assets/textures/1x/RecipeResultsPie1.atf
+SHA1-Digest: BWQXCNdC5WhKEyYtxZ2ev72ECjE=
+
+Name: assets/textures/1x/RecipeResultsParfait3.atf
+SHA1-Digest: 6mO5OpYpmhSGO9Ntza3ial9GOC8=
+
+Name: assets/textures/2x/MailPopUp.xml
+SHA1-Digest: 4yo+3lyzhUQFBHbAkfyJQPj+2lI=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.googleservices/library.sw
+ f
+SHA1-Digest: xQvR9MXGRHJaoUKiiBMOJj+xVwc=
+
+Name: assets/textures/2x/RecipeResultsCheesecake5.atf
+SHA1-Digest: AFOp/zzxDJFYh5f6SLXQJQpVJm4=
+
+Name: assets/textures/1x/Gingerbread.xml
+SHA1-Digest: 0LjJCw4yqNIsuVZiGmypp2EfgAA=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich3.atf
+SHA1-Digest: Ncy71B54RAyNbJbyLjJTOk4+LyY=
+
+Name: assets/textures/common/map_13.jpg
+SHA1-Digest: LJ715un2D3/2HqZMcLw7WiNDXAY=
+
+Name: assets/textures/1x/googleplus_signin.png
+SHA1-Digest: ZRcsep7HGIA/pHUm8zRJhk9c1cQ=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: hQHlWVfm6MHlFv8mV69SntGYceI=
+
+Name: assets/textures/1x/RecipeResultsCupcake1.xml
+SHA1-Digest: 8biMw23DElJ2uYcXnlcT6U2Su10=
+
+Name: assets/textures/2x/RecipeResultsSquarecake5.xml
+SHA1-Digest: d+rS8HMDSW5e5kDsHBe2KWUCax4=
+
+Name: assets/textures/1x/MiscIconsTimed.atf
+SHA1-Digest: nwqFS4fu4svRFAa2wtWENPbf/gw=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorFFFFFF_Stroke9A5021
+ .fnt
+SHA1-Digest: ZT15RjB/0amTDL4NaZSyhjzevWA=
+
+Name: assets/textures/2x/Settings.xml
+SHA1-Digest: 7Ga5QgnG1B9+Yo25hmbvrYgiHJg=
+
+Name: assets/textures/1x/RecipeResultsCupcake3.atf
+SHA1-Digest: k4naKBhSYa26wXYszj72cIOyyx0=
+
+Name: assets/textures/2x/RecipeResultsCheesecake6.xml
+SHA1-Digest: R+tDrBqS5cTvp2uW15qcO0ttmeM=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: assets/textures/2x/RecipeResultsCreampuff3.xml
+SHA1-Digest: odKOHm1hVc5fagM+m8SdsJ/ehxQ=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich4.xml
+SHA1-Digest: p69uq7VOhX63V5kkdsAsyCwCMVk=
+
+Name: assets/textures/1x/RecipeResultsFlan6.xml
+SHA1-Digest: CYebEfHbjhVAKfbjrNgZw9McC3c=
+
+Name: assets/fonts/2x/LobsterTwoRegular_Size36_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.fnt
+SHA1-Digest: oGcRqFODdEKzIjFBdipDAT4l6Mw=
+
+Name: res/drawable/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColoFFFFFF_DropShadow1C0
+ 900.fnt
+SHA1-Digest: fpBST/aPoCeKKwT1ow+aVgwQBss=
+
+Name: assets/textures/2x/RecipeResultsCheesecake5.xml
+SHA1-Digest: e5hIXY8Ghe8t8YW43lLD+RFXQ2c=
+
+Name: assets/textures/2x/unlockStage_3.png
+SHA1-Digest: ulTRgSVOlqEhQM0xYHQwQ83yQ28=
+
+Name: assets/textures/1x/BoostSlot.xml
+SHA1-Digest: 5iAvrwQHrtxG58RFP9qfeyAv9uY=
+
+Name: assets/textures/2x/RecipeResultsRoundcake1.atf
+SHA1-Digest: 5Z4742j4ASfRLGKKNDW5JyWiG78=
+
+Name: assets/textures/1x/WhiteWood.atf
+SHA1-Digest: 45Te1KbmjAHPR/BWnAi3j7G4Tes=
+
+Name: assets/textures/2x/background_11.jpg
+SHA1-Digest: mmXnMmeEtq7kZsBMSpYkVrRL0Xs=
+
+Name: assets/textures/2x/nexttohighscoreicon_ingredient_failed.png
+SHA1-Digest: epVlBn+U6oQ5PXy0xk6rWGs4jwg=
+
+Name: assets/textures/1x/RecipeResultsNapolean5.atf
+SHA1-Digest: vgz8uLx5xKZkc/4HE8AvB5yoSmA=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size18_ColorFFFFFF_StrokeA8364B
+ .atf
+SHA1-Digest: Vd2sjiNc24EBHq0AhE4oE9SsnuY=
+
+Name: assets/textures/1x/RecipeResultsTart3.xml
+SHA1-Digest: 4Rnd4LoJwpEbBPjMTn2eUhbacG4=
+
+Name: assets/textures/2x/RecipeResultsNapolean6.atf
+SHA1-Digest: jPqXTBI0KP+XBfWtSQm7dywMPkk=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorCFA686.fnt
+SHA1-Digest: 1Z5WBuI82xOhkbxYZJjzZ+mJEJs=
+
+Name: assets/textures/common/achievements_icon.png
+SHA1-Digest: XQ3GO+6Pm4198WCsrJoY9ji8Qgs=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.googleservices/META-INF/A
+ NE/Android-ARM/library.swf
+SHA1-Digest: xQvR9MXGRHJaoUKiiBMOJj+xVwc=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorC5DEF7_Stroke0D4069
+ .atf
+SHA1-Digest: OjvguVNrBS3Qf2lTBpcb5KqJUcw=
+
+Name: assets/textures/2x/RecipeResultsCheesecake3.atf
+SHA1-Digest: TSCjB6kE0ma0Typ12TtBEVJ+Gqk=
+
+Name: assets/textures/2x/RecipeResultsSavarin5.atf
+SHA1-Digest: 5NBDgHW5j3wODQ/iuiHsghUr3I4=
+
+Name: assets/textures/1x/RecipeResultsSundae1.atf
+SHA1-Digest: vnp6P8xZ71Bw2kTv3/ACq2ouEJg=
+
+Name: assets/textures/2x/RecipeResultsPie2.atf
+SHA1-Digest: KetRD4Os8VOxBN3jv3gy/56JmAg=
+
+Name: assets/textures/2x/RecipeResultsSavarin3.atf
+SHA1-Digest: 0VOv8558WJcGDy2l58iJ08hts74=
+
+Name: assets/textures/1x/MiscIconsIngredient.xml
+SHA1-Digest: Z9x0CwHgA68PpLuybdgXPvpxwR4=
+
+Name: assets/textures/1x/TitleRibbons.xml
+SHA1-Digest: HBDJbySwfHlUlOl2hgWXtW7gi2k=
+
+Name: assets/textures/2x/RecipeResultsCakeslice4.atf
+SHA1-Digest: z+5kbvnvKocH+ZwaCd3x3n1JUew=
+
+Name: assets/textures/2x/RecipeResultsSquarecake4.xml
+SHA1-Digest: LKH23QT3d2SdqHZVdLpcOgpOeMY=
+
+Name: assets/textures/2x/background_14.jpg
+SHA1-Digest: qjLK7pj9sWjiPEZylFLE+QRIP0k=
+
+Name: assets/textures/2x/BoostSlot.xml
+SHA1-Digest: oZWKVU6OO6K8/5TABdEFsk1rErM=
+
+Name: assets/textures/2x/RecipeResultsCupcake1.atf
+SHA1-Digest: mpQWZpdPgahzSx8LI2opj3P3J7o=
+
+Name: assets/textures/2x/nexttohighscoreicon_decorating_failed.png
+SHA1-Digest: fLTuXgM+NiV8lyTDk00naPmzNdo=
+
+Name: assets/textures/2x/RecipeResultsPie3.xml
+SHA1-Digest: C8cMlWegXgn4g84wvEBa1W8ZGp4=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: qDPKHiBdKPRyhbH8yfODHSxBw6E=
+
+Name: assets/textures/1x/RecipeResultsParfait5.atf
+SHA1-Digest: 5TcAa1/rMfnlbwisMKF4ZJlA8ZA=
+
+Name: assets/textures/common/map_0.jpg
+SHA1-Digest: 0mAF//rAAmF0h1c/8fu/kzuspmk=
+
+Name: assets/textures/1x/RecipeResultsTart6.xml
+SHA1-Digest: Qh0VWsjvr6KVitcOi6fZfS8b0XM=
+
+Name: assets/release_android.swf
+SHA1-Digest: ku2ttUGlbJgtJkCBZxj3oYs9wfc=
+
+Name: assets/textures/common/Stripes.xml
+SHA1-Digest: rNAh5TI53iQaX8+v3pQnV3C7Te0=
+
+Name: assets/textures/2x/nexttohighscoreicon_timed_failed.png
+SHA1-Digest: 6g649NfLvzoEW9BG66SEgKW0+YU=
+
+Name: assets/textures/2x/RecipeResultsCheesecake4.xml
+SHA1-Digest: TNG8UGOO9dViDUVOATQsLUjw0Vs=
+
+Name: assets/textures/1x/RecipeResultsNapolean4.xml
+SHA1-Digest: EI877PAqhse8jxD5Kj4MKYplfcI=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+
+Name: assets/textures/2x/Rat.atf
+SHA1-Digest: sqqLRqbE+sfVPdudvoPTPNQkimQ=
+
+Name: assets/textures/1x/googleplus_signout.png
+SHA1-Digest: sliBz+zgERwYBDPQiMnQNxbzb2M=
+
+Name: assets/textures/2x/RecipeResultsPie6.xml
+SHA1-Digest: cLbM3Yt5RVkri6nnOvCyX8OA+Ls=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.mobile/library.swf
+SHA1-Digest: QatXksNDEHlI9s7hOQLj55UzgBM=
+
+Name: assets/textures/1x/UpdateGame.atf
+SHA1-Digest: PHxXhXXEnZxbxglIzizLFgKrlCE=
+
+Name: assets/fonts/1x/LobsterTwoRegular_Size54_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.fnt
+SHA1-Digest: uwIz7rPr8YqWich/QButDALxTzE=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColoFFFFFF_DropShadow1C0
+ 900.fnt
+SHA1-Digest: mWa2StmVNmgdH/YUWktkb10AfEw=
+
+Name: assets/textures/1x/background_1.jpg
+SHA1-Digest: hQgQx8Uu2fNP/SFuVxWzJ1T/unE=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: kzgXUibQ7uoQz+4A1wTXt3Bps8I=
+
+Name: assets/textures/2x/WhiteWood.atf
+SHA1-Digest: wMr/ihmG1atCFyUJOb4coKmD5Qg=
+
+Name: assets/textures/1x/RecipeResultsRoundcake1.atf
+SHA1-Digest: ve0eCm5ZzKuQRuU3fNIY73Yrm+g=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_Color9B3B12.fnt
+SHA1-Digest: 4vxGVYfa5GfKdBGbMnnrMIaU4G8=
+
+Name: res/drawable-hdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: IRytpOlTJ0L0tqrpIfR65gTRRSo=
+
+Name: assets/textures/1x/RecipeResultsCreampuff2.xml
+SHA1-Digest: qRbeIcGya2PD2lI5JHwI3Ls9OVk=
+
+Name: assets/textures/1x/GameMainScreen.atf
+SHA1-Digest: gCAOAA71jjJcikVD+Gqn91J/cYE=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: mK0HZu/hMqugzErXexatsToF6Ik=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: nqGHiPOhSaIXmMVgJ9Ux7JqUxEk=
+
+Name: assets/textures/common/Stripes.png
+SHA1-Digest: +KQWzKdqDF60VJ3o6oP89eqiffk=
+
+Name: assets/textures/1x/RecipeResultsSquarecake3.xml
+SHA1-Digest: PWfesNCVEXJnrKqqEtHfj/CzYbo=
+
+Name: assets/textures/1x/RecipeResultsDanish1.atf
+SHA1-Digest: JH2DlIV5h+16GDEihUpdabPysHQ=
+
+Name: assets/textures/1x/NextToHighScore.atf
+SHA1-Digest: 63XOtExRoeVvXb+Czp1BvNO8YBQ=
+
+Name: assets/textures/1x/Store.xml
+SHA1-Digest: O/xA12t39O2OUubvKVI34052cPk=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+
+Name: assets/textures/2x/RecipeResultsTart1.atf
+SHA1-Digest: nn8HXGn6+quVDKOS3oUBBiPmkFw=
+
+Name: assets/textures/1x/unlockStage_14.png
+SHA1-Digest: G2mia+bAKZKpfqRFpxD94ix7zvg=
+
+Name: assets/textures/1x/RecipeResultsCheesecake3.atf
+SHA1-Digest: yHQ1vNf6ARobyoK3N8NB4k88Yzo=
+
+Name: assets/textures/1x/RecipeResultsNapolean3.atf
+SHA1-Digest: zHIPnUZSOz8IPZ9zVuY3oCj/FUk=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.storekit/META-INF/ANE
+ /extension.xml
+SHA1-Digest: 0j7yWw4IDhGbD6GZDqiwBSgfD7Y=
+
+Name: assets/textures/1x/placeHolder.xml
+SHA1-Digest: ro+KJCfEl+ygR+75Hg5RTvN9lAY=
+
+Name: assets/textures/1x/unlockStage_10.png
+SHA1-Digest: o5kg84EtQn97GEG7t4TDCha38WY=
+
+Name: assets/textures/1x/MiscIconsTimed.xml
+SHA1-Digest: CiHkE5qj9cH189Dg9dyJLVbRCgw=
+
+Name: res/drawable/mp_warning_32x32_n.png
+SHA1-Digest: eCFwTk+zmvIeM+w4WQEnsknkfNI=
+
+Name: assets/textures/2x/RecipeResultsRoundcake6.atf
+SHA1-Digest: 4myeB7a8lA854wF7C89lEj32Tb8=
+
+Name: assets/textures/2x/RecipeResultsDanish5.xml
+SHA1-Digest: 45CBKUNiNTYmrmGc0fR2C4/AJqU=
+
+Name: assets/textures/1x/RecipeResultsSavarin2.xml
+SHA1-Digest: oklHLaqeqDSFv5Qx/6WHpRGxnPU=
+
+Name: assets/textures/2x/RecipeResultsCupcake1.xml
+SHA1-Digest: DES5Ljr70RloK0u1ivMh1XVU0dY=
+
+Name: assets/textures/2x/RecipeResultsCupcake6.xml
+SHA1-Digest: QeaOTW2SRbie1iCFtYVZ+yrb+uA=
+
+Name: assets/textures/common/controller_icon.png
+SHA1-Digest: 2XfzBa0NdllqkAeVH2Maedc6qOs=
+
+Name: assets/textures/1x/RecipeResultsCheesecake2.atf
+SHA1-Digest: 5fPlzG4aWS7VwDTXYQFz70s1Lnc=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: 4hOY46Sq20ae3wFhM/a0jMrwEl8=
+
+Name: assets/textures/2x/RecipeResultsTart3.xml
+SHA1-Digest: KiptgxvO8KjLhfSFlM6uPHTKQ+g=
+
+Name: assets/textures/common/map_10.jpg
+SHA1-Digest: /2sBeCfRc6h+Pn0pId4BAJEvhrY=
+
+Name: assets/textures/2x/RecipeResultsParfait5.xml
+SHA1-Digest: RiYTImwR9VKY7ZTcfD2o+tewcV4=
+
+Name: assets/textures/2x/RecipeResultsParfait2.atf
+SHA1-Digest: knCc4eKd4KuDhdKWBTBZCkYjzyI=
+
+Name: assets/textures/1x/RecipeResultsTart3.atf
+SHA1-Digest: u5pCS1v979EA2IFtJkSiyyhAtm4=
+
+Name: assets/textures/1x/RecipeResultsSquarecake6.atf
+SHA1-Digest: zhTi9Ei/9TcEq8WFh8S1AD2LON4=
+
+Name: assets/textures/2x/RecipeResultsPie6.atf
+SHA1-Digest: d4WenrXIxNYDaq8DdZx579+j6Sc=
+
+Name: assets/textures/1x/RecipeResultsFlan6.atf
+SHA1-Digest: h67V70G9a2KUSZBWW0H2VSi9Caw=
+
+Name: assets/textures/1x/nexttohighscoreicon_waffle_start.png
+SHA1-Digest: TiWD4/hiKWnrNI+Y1SAVIFothsc=
+
+Name: assets/textures/2x/DynamicPopUp.atf
+SHA1-Digest: qyW9/bd2IE87/Q/rvcAURcD+3+s=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.ratings/META-INF/ANE/Andr
+ oid-ARM/library.swf
+SHA1-Digest: B2jz37Gw5aiNIOzuN2BIdwDBz/0=
+
+Name: assets/textures/2x/RecipeResultsCakeslice3.xml
+SHA1-Digest: LAJnD2Gbc8XOGk+43Y83OlKKNsM=
+
+Name: assets/textures/2x/BoosterIcons.atf
+SHA1-Digest: FlUNOS4mUSsnZr8ZhBo7dH6dT1g=
+
+Name: assets/textures/2x/MiscIconsIngredient.atf
+SHA1-Digest: 0b2x1xmAXxFU0LlZera6zM7Gh/E=
+
+Name: assets/textures/2x/RecipeResultsParfait5.atf
+SHA1-Digest: 8hAafi1RqQh+thq3mqOciwi7nY4=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.android4support/META-INF/
+ ANE/Android-ARM/library.swf
+SHA1-Digest: xPkLYD8/25rFialw2EWfOwt5F+w=
+
+Name: assets/textures/2x/nexttohighscoreicon_waffle_completed.png
+SHA1-Digest: 9R9jC1snDwLbVnzMebHa0r/iYyg=
+
+Name: assets/textures/2x/RecipeResultsCheesecake2.xml
+SHA1-Digest: AT8WoFeImVqEcpJWYmnMd3wGzy0=
+
+Name: assets/textures/1x/RecipeResultsCheesecake6.atf
+SHA1-Digest: 8dSQFbJKGQ44anLZSz6Pau/Gy/I=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.bingo/META-INF/ANE/Androi
+ d-ARM/library.swf
+SHA1-Digest: yZ6babRycvASDr0shJVm7CleRvc=
+
+Name: assets/textures/2x/ColoredGamePieces.xml
+SHA1-Digest: d5SFxbWKFAAT+nii5i+Jb+VJ5s4=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich3.xml
+SHA1-Digest: 6SwMkanh2AOnGUV1Sj01Ua6bPxg=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: rUK8E8s6v6SUeFFCEGddobibrmk=
+
+Name: assets/textures/1x/RecipeResultsSundae3.xml
+SHA1-Digest: yvVrRi/wvqC/WEuEUklEXSH8BM4=
+
+Name: assets/textures/2x/RecipeResultsRoundcake1.xml
+SHA1-Digest: udpej4QooeTwwqbdhtNdct7V00A=
+
+Name: assets/textures/2x/PassedFriendPopUp.xml
+SHA1-Digest: Ns5qj3e2h73yzo6OsS1w/2NRQmc=
+
+Name: assets/textures/1x/unlockStage_3.png
+SHA1-Digest: agm/G5Now3pA37EgdJoc/NcfnhA=
+
+Name: assets/textures/1x/BoostSlot.atf
+SHA1-Digest: ayHe8iYelHArHiahBJarlvkCly4=
+
+Name: lib/armeabi-v7a/libysshared.so
+SHA1-Digest: TB891nh0tUUz+nsrHzpoSik8nMA=
+
+Name: assets/textures/2x/RecipeResultsCakeslice6.xml
+SHA1-Digest: lokY9PPymjQqGODpFq0vL9dGV+g=
+
+Name: assets/textures/1x/RecipeResultsCakeslice4.atf
+SHA1-Digest: MKKxlhbBNxPm2k35G//kHQ4slhM=
+
+Name: assets/textures/2x/RecipeResultsTart2.atf
+SHA1-Digest: nc/03Ry1thi+Nw1QeelI558cESk=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: f6ffxUARnD4OE2WatPT59yDgeJ8=
+
+Name: res/drawable-notlong-land-mdpi/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: assets/textures/1x/Settings.xml
+SHA1-Digest: Q9NQJQvE8EiUKxkbgSNqfJfE2Uo=
+
+Name: assets/textures/2x/RecipeResultsFlan5.xml
+SHA1-Digest: Fj71RI1PyCsyvg1MkMVrs+zwh2Q=
+
+Name: assets/textures/1x/WhiteWood.xml
+SHA1-Digest: LX+SuXRlZf1ZO1a+krPOkWj0arg=
+
+Name: assets/textures/1x/unlockStage_5.png
+SHA1-Digest: IiacLCWBzlpTc1qgBrFmmJXeMUM=
+
+Name: assets/textures/1x/RecipeResultsParfait4.atf
+SHA1-Digest: It1/zM0obCv1zjJY/TmCWu7GJDw=
+
+Name: res/drawable-port-xhdpi/loading.png
+SHA1-Digest: Njy8ZKa7G5Sg7AMHMS+rBGLa7zM=
+
+Name: assets/textures/1x/RecipeResultsCakeslice2.atf
+SHA1-Digest: RDlyd3aRvjes/bbx5Ah7gY5Rbck=
+
+Name: assets/textures/2x/background_1.jpg
+SHA1-Digest: NBCW+pWxhptbDmlmld03S7dEIT4=
+
+Name: assets/textures/1x/background_3.jpg
+SHA1-Digest: +wC/DZgzjZNrkb18sfMVYSBsoy8=
+
+Name: assets/fonts/1x/LobsterTwoRegular_Size54_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.atf
+SHA1-Digest: Tsq5BGcyZXtu4X8lj2BMSl0sSB0=
+
+Name: assets/textures/1x/RecipeResultsPie3.atf
+SHA1-Digest: 9UobSlj4ygyxQ37UzPTUnDEn21o=
+
+Name: res/drawable-land-xhdpi/loading.png
+SHA1-Digest: BTVV2J+2RIRO8XZM89e3SmhVUnE=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich6.atf
+SHA1-Digest: u+iZKaSoXvv7MYBW1ld4Gu2ILTk=
+
+Name: assets/textures/1x/RecipeResultsDanish6.xml
+SHA1-Digest: Q2woOtlFyocxgYyJGHKXC8K3WRg=
+
+Name: assets/textures/2x/RecipeResultsSundae1.xml
+SHA1-Digest: +4h9qSOUEZ1ks0r3pb/v1fmgZKs=
+
+Name: assets/textures/2x/RecipeResultsSundae4.xml
+SHA1-Digest: 5NyN+LkWTKW0JsaAu6GIlk5dBws=
+
+Name: assets/textures/2x/googleplus_signout.png
+SHA1-Digest: 6jAcUC1CFCwDiZVRM20CCGlYj5c=
+
+Name: assets/textures/1x/RecipeResultsParfait2.xml
+SHA1-Digest: 4A77w1O91ISQ2l6nv1LTv87mg50=
+
+Name: assets/textures/1x/RecipeResultsPie5.atf
+SHA1-Digest: 333hcNDiSKMDnnzOjHkcavX2SFk=
+
+Name: assets/textures/1x/RecipeResultsRoundcake6.atf
+SHA1-Digest: YAtnPX8XuBvIynzOxqMBdOyFT2E=
+
+Name: assets/textures/1x/RecipeResultsCreampuff3.xml
+SHA1-Digest: 9NcIHKQkcFRJialyxbKTAE2BTLU=
+
+Name: assets/textures/1x/RecipeResultsSavarin3.atf
+SHA1-Digest: PcOc+nMSte8BhvHmMSS8Qw9QCg0=
+
+Name: assets/textures/2x/RecipeResultsFlan1.xml
+SHA1-Digest: oCMF/2GXI+6KBxGiBcLDIMT4lMQ=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+
+Name: assets/textures/2x/RecipeResultsTart4.atf
+SHA1-Digest: z0XMnWRg5S34LYDERcjIEz2QHq0=
+
+Name: assets/textures/1x/RecipeResultsDanish2.xml
+SHA1-Digest: LdwJL946AwJfvR1Xw/g3Gw5z29U=
+
+Name: res/raw/debuginfo
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: assets/textures/2x/RecipeResultsNapolean5.atf
+SHA1-Digest: QB5oH+zbvZCFrV80E/9ZlLFvQMg=
+
+Name: assets/textures/1x/RecipeResultsPie2.atf
+SHA1-Digest: MuyQlM4nfO6aODqaLHL1T9H8JQk=
+
+Name: assets/textures/1x/RecipeResultsNapolean2.xml
+SHA1-Digest: BCPQCl266Gfb0ZyNmiqp/QAB9VM=
+
+Name: assets/textures/1x/NextToHighScore.xml
+SHA1-Digest: T5LlVrSngrSCgThaTyCOtAZbXfQ=
+
+Name: assets/textures/common/LevelButton.png
+SHA1-Digest: nQZ8dHR6z1UL0FLvZXqd8r3py8o=
+
+Name: assets/textures/2x/CoinStacks.atf
+SHA1-Digest: 5e1+WcBAlQEojVo3A/oGRUpUlcQ=
+
+Name: assets/textures/1x/unlockStage_7.png
+SHA1-Digest: GNG1MPybg9fiDCSj0RhLqhzHnLo=
+
+Name: assets/textures/2x/RecipeResultsSquarecake2.atf
+SHA1-Digest: gv4YS+ycjOvVkj4x2KRs/BdrbNA=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_Color9B3B12.atf
+SHA1-Digest: uvosawWxgKAwHUo4G6WqUopxleY=
+
+Name: assets/textures/1x/HighScore.xml
+SHA1-Digest: OSfYXYcnu2HbzDwd2PAOwcZ8TMI=
+
+Name: assets/textures/2x/Sliders.atf
+SHA1-Digest: cYNcQGnb9pkoeEfIBW2N6gisk+Y=
+
+Name: res/layout/main.xml
+SHA1-Digest: bTSaq5slbthpBrK1zCDR1yMdZ8A=
+
+Name: assets/textures/1x/RecipeResultsCakeslice6.atf
+SHA1-Digest: AD6tfp4I2dJwdaWkITe1ELZA1FQ=
+
+Name: assets/textures/2x/RecipeResultsCreampuff6.atf
+SHA1-Digest: yyrOg5bhWhmN7B5MdKGrF4FxX3w=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size72_ColorFFFFFF_StrokeA8364B
+ .atf
+SHA1-Digest: yHf7xb5PX6cXqrFdMObnOkRADxo=
+
+Name: assets/textures/2x/RecipeResultsDanish1.xml
+SHA1-Digest: yGinAZa4VAlOt3TJGVwPjLj5HSw=
+
+Name: assets/textures/2x/RecipeResultsSundae2.atf
+SHA1-Digest: a5RM/zh9GIO2TlcseF7RuXkwwEI=
+
+Name: assets/textures/1x/RecipeResultsCreampuff2.atf
+SHA1-Digest: dVKG2fdR00V9kXEApOhNJ1tGXVA=
+
+Name: assets/textures/2x/RecipeResultsRoundcake5.xml
+SHA1-Digest: 8cDp6Zpp83EgoB7wpDBeyhU8Jtg=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.ane/META-INF/ANE/exte
+ nsion.xml
+SHA1-Digest: O2aupHthZeb/kBYP3LhNWsM6Jc4=
+
+Name: assets/textures/2x/RecipeResultsPie4.atf
+SHA1-Digest: ozLSdyLGuzI3NVofpyICQ+/kfzQ=
+
+Name: assets/textures/common/balloon.png
+SHA1-Digest: 32bNPzOQG5/sKwjPUKnHuWophlE=
+
+Name: assets/textures/1x/RecipeResultsPie2.xml
+SHA1-Digest: sdyNgVEBNJfzwFCjLxo4Wo1zsmw=
+
+Name: assets/textures/1x/tiles.xml
+SHA1-Digest: mS1+iZlVlxzJfMxM5Cn/h24Ckj0=
+
+Name: assets/textures/2x/RecipeResultsSundae4.atf
+SHA1-Digest: pxR4N1kg8E0vNFGblY4N1FdQXxI=
+
+Name: assets/textures/1x/RecipeResultsTart6.atf
+SHA1-Digest: E28j+qC71FDJYeLcaAwXEBjlLY0=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: sagrB0RPWOvy3reesUymMs6z5CA=
+
+Name: assets/textures/1x/UpdateGame.xml
+SHA1-Digest: iBNJx9vMoV/XbFYDur6bcLciVhM=
+
+Name: assets/textures/2x/RecipeResultsNapolean3.xml
+SHA1-Digest: maRZes5ThmoLa9N5bGApt996Vf0=
+
+Name: assets/textures/1x/RecipeResultsTart4.atf
+SHA1-Digest: 7t53XXhGoF/PoRidmVUtf70+Tto=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: t/q1ll8cIcWlFuKff/cUYYaKKw0=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.googleservices/catalog.xm
+ l
+SHA1-Digest: oBgqlp5JH9nulwvu7fdCSmC4mJw=
+
+Name: assets/textures/common/LevelButton.xml
+SHA1-Digest: HQ54pve2WFfrXb3jGmUcHRSp5sU=
+
+Name: assets/textures/2x/unlockStage_4.png
+SHA1-Digest: FfyzWe7hg2WGOf7JJbEAzYwqWzY=
+
+Name: assets/textures/1x/RepeatedAssets.xml
+SHA1-Digest: 2S2owgbBAftUqGYWezwfoCBTsVQ=
+
+Name: assets/textures/2x/Gingerbread.xml
+SHA1-Digest: T7FYPvxHPI4RKJnr6UDIDGmDk0I=
+
+Name: assets/textures/2x/RecipeResultsTart1.xml
+SHA1-Digest: 5CCqAIGxj7rJPEgYWWZBIN/wjSk=
+
+Name: assets/textures/1x/hotAirBalloon.png
+SHA1-Digest: 1mxfR+l9gPmJXVYtuYo2HbwioX8=
+
+Name: assets/textures/2x/RecipeResultsPie1.xml
+SHA1-Digest: ux7P5Se8JZ+eHptCzuv5fkW7Tsk=
+
+Name: assets/textures/2x/RecipeResultsCupcake2.xml
+SHA1-Digest: uTmYu9HaigMIugZ4pwpsGwQO5so=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.storekit/catalog.xml
+SHA1-Digest: txLp3e6za2lCot8Q6VhrlogiJdk=
+
+Name: assets/textures/1x/RecipeResultsDanish5.xml
+SHA1-Digest: q9FKIdzIPUcQ2zWWqKSaFg0J+N0=
+
+Name: assets/textures/1x/RecipeResultsFlan3.atf
+SHA1-Digest: nPqKcsc6BRpZmadqy0mi29w4cb4=
+
+Name: assets/textures/2x/RecipeResultsCreampuff6.xml
+SHA1-Digest: mshF5OlNd4fMi170UdkQWViUI0A=
+
+Name: assets/textures/1x/nexttohighscoreicon_waffle_failed.png
+SHA1-Digest: yDovr1MAQWd9pwwyQ1hhNSMSreA=
+
+Name: assets/textures/1x/RecipeResultsParfait5.xml
+SHA1-Digest: +BVSR1wP21ksJovBVsI2WvPZ+mU=
+
+Name: res/drawable-hdpi/com_facebook_close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: assets/textures/2x/RecipeResultsParfait6.xml
+SHA1-Digest: Lq1V/ffqWhLiToE4KGrC9catJUY=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.ratings/META-INF/ANE/exte
+ nsion.xml
+SHA1-Digest: qa73ecXPepm047TZR8OEHmF1pRM=
+
+Name: assets/textures/1x/nexttohighscoreicon_gingerbread_failed.png
+SHA1-Digest: CM5mDye66YpFxmGYnxlaiG9rAos=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.android4support/META-INF/
+ ANE/extension.xml
+SHA1-Digest: XyzlQFLXz2ikqES9pVhPCfiw2W0=
+
+Name: assets/textures/1x/RecipeResultsParfait6.xml
+SHA1-Digest: 8XOVlzI+iNJsURJjSM328ouL/AA=
+
+Name: assets/textures/1x/background_5.jpg
+SHA1-Digest: n1fAfyA57tb+hP34d1T6KHSnobY=
+
+Name: assets/textures/1x/RecipeResultsPie4.atf
+SHA1-Digest: 3/95oZNUCGjKsG3qOauxXCtIQG0=
+
+Name: res/drawable-hdpi/com_facebook_logo.png
+SHA1-Digest: +F9i6TennSQx3Unl/q4mPr3itE8=
+
+Name: assets/textures/2x/RecipeResultsCupcake5.atf
+SHA1-Digest: lB5kC6BSvc8t2dP5lExkLFgEHr4=
+
+Name: assets/textures/1x/RecipeResultsSquarecake3.atf
+SHA1-Digest: G5AvtYe/V8U3Gj0/Ljc8Cm3uGKk=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.mobile/catalog.xml
+SHA1-Digest: kWr60N5nPZRoMgYtHhJWXrvwWyI=
+
+Name: assets/textures/2x/MailPopUp.atf
+SHA1-Digest: yXIx+kVN7NjCEnT73+OmK804cZg=
+
+Name: assets/textures/1x/background_0.jpg
+SHA1-Digest: 76iThOmKUax2xRkpE9oxwAGsPH4=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size18_ColorFFFFFF_Stroke9A5021
+ .fnt
+SHA1-Digest: rJFBeI4dp3mKzfU1w5u4dVm5jtI=
+
+Name: assets/textures/1x/RecipeResultsFlan5.atf
+SHA1-Digest: EsWt+TzXxuTcjVAiQ1KqnKlgERA=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich2.atf
+SHA1-Digest: dKC8Yi0as4Nmto/tP3u969G5WCk=
+
+Name: assets/textures/2x/MapPaginatorIcons.xml
+SHA1-Digest: 9S/lxnNdca6Wjrz3bn4RO5sSblE=
+
+Name: assets/textures/2x/blocks.atf
+SHA1-Digest: MIilWJ2S/20cKIcq/8j1DgURVos=
+
+Name: assets/textures/common/Spoon.atf
+SHA1-Digest: PXkyUSXb69JVNnpGFBg/1QGhsDE=
+
+Name: assets/textures/1x/unlockStage_4.png
+SHA1-Digest: SXQU2gXeBULG9ZnmP8UkhbzCdMs=
+
+Name: assets/textures/1x/ColoredGamePieces.atf
+SHA1-Digest: zk6sbbxPW8ax/xPdhXHGRRqvXoc=
+
+Name: assets/textures/1x/RecipeResultsRoundcake4.xml
+SHA1-Digest: C5B2TuGLi/eDgD79Rwt1AKsFT+A=
+
+Name: assets/textures/2x/UpdateGame.atf
+SHA1-Digest: /++uY8bPByDEPl8T9T3u9sUZYsE=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.adx/library.swf
+SHA1-Digest: o2Qvy+yUK6GmFYSeNu+7tISvZNc=
+
+Name: assets/textures/1x/gplus_logo.png
+SHA1-Digest: OWvjQ8FQ31ml1GHbOO7d1PH9nfg=
+
+Name: res/drawable-mdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: yotnhVn7HzOwvsA1iVxnQdW+R6Y=
+
+Name: res/layout/com_facebook_search_bar_layout.xml
+SHA1-Digest: /wdhhx0AEgqEZi/vpy4z8ZnCE34=
+
+Name: assets/textures/1x/RecipeResultsSavarin3.xml
+SHA1-Digest: 2V9b+IeK3x0xQr1UNzl70b8XIFY=
+
+Name: assets/textures/1x/RecipeResultsRoundcake5.xml
+SHA1-Digest: SvbZw3XVX6EaEvFnSFh093s5xPo=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorFFFFFF_Stroke9A5021
+ .atf
+SHA1-Digest: jpz03VpsxW8g1tg4E468C/PfXOY=
+
+Name: assets/textures/1x/tiles.atf
+SHA1-Digest: ETqC92ZC/g3f19NjHcmKcAhVNHo=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: COOFdQDqXjvNdi+5TMPa3bPhaEQ=
+
+Name: assets/textures/1x/RecipeResultsFlan5.xml
+SHA1-Digest: wTQbaMjPYUimxMDbDmymOZHQX7I=
+
+Name: assets/textures/2x/RecipeResultsCupcake4.xml
+SHA1-Digest: HONBEYoARGBQ680IxCsGrspX5+4=
+
+Name: assets/textures/2x/RecipeResultsSquarecake4.atf
+SHA1-Digest: QUSxPpuwrNZ9qAt3QZaMdjeD2N0=
+
+Name: assets/textures/common/map_2.jpg
+SHA1-Digest: eiNz672F5CpcQ8/EFIxonpUA18A=
+
+Name: assets/textures/2x/RecipeResultsCreampuff4.atf
+SHA1-Digest: BPiAXF+RMeGBxTVcJtG0aonfT/E=
+
+Name: assets/textures/1x/RecipeResultsCupcake5.xml
+SHA1-Digest: xGA0mr6FFT9pA9oiTjB1JMy/+YQ=
+
+Name: res/drawable/com_facebook_button_blue.xml
+SHA1-Digest: Rl315sqwRuX40T8MsVcwGQcs5kA=
+
+Name: assets/textures/1x/RecipeResultsSquarecake4.atf
+SHA1-Digest: nLGDVE94Cq/17zqFMri7aCDZZfU=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_Color9B3B12.fnt
+SHA1-Digest: M2M/PEX6QZNxWeRCFYXCQmkjvqo=
+
+Name: assets/textures/2x/BoostSlot.atf
+SHA1-Digest: Ki2v+9/Hejd4sQusEHpfooAac9o=
+
+Name: res/drawable-long-land-hdpi/loading.png
+SHA1-Digest: F1zb8PkQs2BG1f9BZi8lvGpraGU=
+
+Name: assets/fonts/2x/LobsterTwoRegular_Size54_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.atf
+SHA1-Digest: 1LyApa6SvCoyAe8/3zgPAxm5M7c=
+
+Name: assets/textures/1x/RecipeResultsSavarin1.xml
+SHA1-Digest: gJDc/3Crkn5QPvxiX40UJc+ngm0=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorFFFFFF_StrokeA8364B
+ .atf
+SHA1-Digest: 8JvQIgFRgEsLgDtZ5nIGpM+2rpA=
+
+Name: assets/textures/1x/RecipeResultsParfait1.atf
+SHA1-Digest: +QlBnesjOUbbPP51n0K5vaV9HMA=
+
+Name: assets/textures/2x/RecipeResultsSavarin4.xml
+SHA1-Digest: Rdn1yRnAfL3r56ne8L+vDnP4+y4=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: U2RKQeMUym8uRDPLqKy9LVCCoko=
+
+Name: assets/textures/2x/RecipeResultsCheesecake3.xml
+SHA1-Digest: Co7Ap515cwvnrQ5a+E6CA4U6ejs=
+
+Name: assets/textures/1x/RecipeResultsParfait4.xml
+SHA1-Digest: ST+ICIsf5VRn6xgNZUzFpn9k5HU=
+
+Name: assets/textures/2x/background_13.jpg
+SHA1-Digest: /cLyWKftTqlapv+gFdrPCKTtv3c=
+
+Name: assets/textures/1x/PassedFriendPopUp.xml
+SHA1-Digest: UFDuaCjiTQYbEYtDZwRDRudI0UU=
+
+Name: assets/textures/2x/RecipeResultsDanish6.atf
+SHA1-Digest: d1jZFyZ4iSZPZpg4NBu32LeDEjM=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/textures/2x/RecipeResultsParfait3.atf
+SHA1-Digest: avN5gaVTuKZ5KN7ZQ6Vc67QgWeY=
+
+Name: assets/textures/2x/RecipeResultsNapolean4.xml
+SHA1-Digest: t/ZukfN1i6t18kt7+Xn74ceVkGk=
+
+Name: assets/textures/1x/RecipeResultsSavarin1.atf
+SHA1-Digest: WWI/dQthzQu6hlPtPn+sK5o3C7s=
+
+Name: assets/textures/2x/TitleRibbons.atf
+SHA1-Digest: aFyyOJD/l5ZHkTyvgkBRUGlUdCc=
+
+Name: assets/textures/2x/RepeatedAssets.atf
+SHA1-Digest: JaZikWeIkb9yvMEHcGiEDLztE3s=
+
+Name: assets/textures/1x/Gingerbread_Victory.atf
+SHA1-Digest: CGaQSpGDhFfMG9TfgHq7rTrYXOw=
+
+Name: assets/textures/2x/RecipeResultsSavarin2.xml
+SHA1-Digest: f+kOsfhh5VFtI34yZmCxFYD/UMM=
+
+Name: assets/textures/2x/RecipeResultsSundae6.xml
+SHA1-Digest: 5toXkUcmhuw7usGXHVs0DXf1BC4=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich3.atf
+SHA1-Digest: V/eFOW55/pfTMv30F0L8TxqLUlQ=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.ratings/catalog.xml
+SHA1-Digest: zZo/FHVi4hgg8G/7wKcey4MZoCg=
+
+Name: assets/textures/2x/unlockStage_2.png
+SHA1-Digest: 8cypkoalj3NTVCUp6vXrJi0swws=
+
+Name: assets/textures/2x/RecipeResultsSundae1.atf
+SHA1-Digest: vYt4RB95WyrU5Xf0y5PhJSiYTv4=
+
+Name: assets/textures/1x/RecipeResultsFlan4.atf
+SHA1-Digest: TbX4H7NowiJ8oWwmF8/gS4VIc50=
+
+Name: assets/textures/2x/RecipeResultsSundae5.atf
+SHA1-Digest: TvK4/N7smsKew6n5Jz5udpsLgqU=
+
+Name: assets/textures/1x/RecipeResultsSquarecake2.xml
+SHA1-Digest: 08DKL36NxUMjCIpNRRCOQiHooII=
+
+Name: assets/textures/1x/RecipeResultsRoundcake6.xml
+SHA1-Digest: QPRF7z4Lq569cV4mnyKtwbvm8fI=
+
+Name: assets/textures/1x/LikePage.xml
+SHA1-Digest: r6+DylH6zoYJc9mhK5SNzKGdPPQ=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich4.atf
+SHA1-Digest: QpzMRf5yWnW2giHXJ9ohnh7DKaE=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size72_ColorFFFFFF_StrokeA8364B
+ .atf
+SHA1-Digest: 8UXjq+Ra0Co+ui3vomceK2Dn/2U=
+
+Name: res/drawable-xhdpi/com_facebook_close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.googleservices/META-INF/A
+ NE/extension.xml
+SHA1-Digest: mIf/ML4llWGvVWYg0tqIwVbKx0I=
+
+Name: assets/textures/1x/nexttohighscoreicon_decorating_start.png
+SHA1-Digest: TiWD4/hiKWnrNI+Y1SAVIFothsc=
+
+Name: assets/textures/1x/RecipeResultsPie5.xml
+SHA1-Digest: GYnARr5fpG1jdEMWSiE0/LJFvSY=
+
+Name: assets/textures/2x/background_0.jpg
+SHA1-Digest: u58AsxY/P4WZpMGNOLP/b6Cy0WA=
+
+Name: assets/textures/2x/GameMainScreen.atf
+SHA1-Digest: YNfvMrlVCmNL/L2+hAuhUyyekUM=
+
+Name: assets/textures/2x/RecipeResultsDanish3.atf
+SHA1-Digest: YHpFW9hWIenyGoL7usjNOuGUHxo=
+
+Name: assets/textures/2x/RecipeResultsCreampuff5.xml
+SHA1-Digest: DrMLlmViHcbWhFgGfDP10bo48ms=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich2.xml
+SHA1-Digest: fgVv2WSSJQmGnFHpzlRI1eXEIsk=
+
+Name: assets/textures/1x/RecipeResultsParfait1.xml
+SHA1-Digest: NDkiMQfx95H9j3y6XzcZV0hamlI=
+
+Name: assets/textures/1x/unlockStage_8.png
+SHA1-Digest: PXgTtM6vKPUCDrCXGw5/7+R7iB0=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size72_ColorFFFFFF_StrokeA8364B
+ .fnt
+SHA1-Digest: ma44yggr1vO4/6uhYP7mNIH1TsY=
+
+Name: assets/textures/1x/RecipeResultsRoundcake5.atf
+SHA1-Digest: 5H6d+q/mYNMymlEHjTa0IJISdYo=
+
+Name: assets/textures/1x/RecipeResultsSquarecake1.atf
+SHA1-Digest: VXPHLoxY6ss2BLAiR9leqi//OsQ=
+
+Name: assets/textures/1x/RecipeResultsCheesecake2.xml
+SHA1-Digest: TU3SWnyxXejPKxJrqzW2YWT7SqY=
+
+Name: assets/textures/1x/unlockStage_6.png
+SHA1-Digest: 5r5CkqubHKfDu5HIjJwmebKvaJY=
+
+Name: assets/textures/1x/RecipeResultsDanish4.atf
+SHA1-Digest: n3ENmvYhWkK4v6chiIMl1epCkeo=
+
+Name: assets/textures/2x/MiscIconsCollect.atf
+SHA1-Digest: mMXwuGp0b73j4mClfFQRZYZwitY=
+
+Name: assets/textures/1x/RecipeResultsDanish2.atf
+SHA1-Digest: zKzDpzbrqx+yvtFZURLvtWDHg00=
+
+Name: assets/textures/2x/googleplus_signin.png
+SHA1-Digest: Z7xRX89gbuqL9stGWsdu6BQ2NEg=
+
+Name: assets/textures/1x/Gingerbread_Victory.xml
+SHA1-Digest: x370x6Cz3+c0EZs0VNM1Vtbpm1A=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+
+Name: assets/textures/1x/nexttohighscoreicon_decorating_failed.png
+SHA1-Digest: yDovr1MAQWd9pwwyQ1hhNSMSreA=
+
+Name: res/drawable/ic_gcm_notification.png
+SHA1-Digest: d1J64SvFGrsD4nIf4uyV3m0vuEY=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size18_ColorFFFFFF_StrokeA8364B
+ .fnt
+SHA1-Digest: 0pM0c1Jksko7AWEejw7gwE0uYII=
+
+Name: assets/textures/1x/RecipeResultsCakeslice4.xml
+SHA1-Digest: jVApOR0LdKaYICgb7BJPeyy+ojk=
+
+Name: assets/textures/2x/background_7.jpg
+SHA1-Digest: TZNxyblLCcmIiFiWnxGN6Sy+vKo=
+
+Name: assets/textures/1x/background_8.jpg
+SHA1-Digest: PcUMiPjlQUdYbHDqfivo0msQ9+c=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: EZrk9kBlOTExzzMMObRBs0sea7E=
+
+Name: assets/textures/2x/RecipeResultsSavarin6.atf
+SHA1-Digest: 7VkMM41uUWhNSTaLw9jNnzZhOe0=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: QC1K5hIMK8g3TtuHo0IQRRup8j0=
+
+Name: assets/textures/1x/CoinStacks.atf
+SHA1-Digest: 8urIXgvZzfLqGbOwZDV54HQ0L94=
+
+Name: assets/textures/common/map_8.jpg
+SHA1-Digest: efsr3M5d3sP3SIQjENk8jpd7jJA=
+
+Name: assets/textures/2x/unlockStage_6.png
+SHA1-Digest: h5x2ndvzIahMxLTlFjvmlTjAwXI=
+
+Name: assets/textures/2x/RecipeResultsSquarecake1.xml
+SHA1-Digest: ct6kTXk4Gy6r9cXzKH/aPw6Uxuo=
+
+Name: assets/textures/2x/MiscIconsWaffle.atf
+SHA1-Digest: jKpHsVcvBOmi+XnkYyZg4DcJ9cw=
+
+Name: assets/textures/1x/RecipeResultsPie4.xml
+SHA1-Digest: U9XVB1Vy3pqG/+SR0po4DRbbhNk=
+
+Name: lib/armeabi-v7a/libCore.so
+SHA1-Digest: /Kbsd2aqluXelLL914wRNEX21Rw=
+
+Name: assets/textures/2x/RecipeResultsSundae6.atf
+SHA1-Digest: 9FUhdnKe5mC1KaepDRf0jn/8oGo=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+
+Name: assets/textures/2x/mainimagerect_rateapp.png
+SHA1-Digest: SBxMz8ewyo4SiqmrJbTwQg5wSkE=
+
+Name: assets/textures/2x/RecipeResultsCakeslice5.atf
+SHA1-Digest: XbgR8lUwVSKBx4/b/HzT8saCzOk=
+
+Name: assets/textures/1x/MapHUD.atf
+SHA1-Digest: c3eaxFOQvPgEdVzzcZ3beINwN78=
+
+Name: assets/textures/1x/RecipeResultsCreampuff5.atf
+SHA1-Digest: 5Y100f2JdM8jopw6ckN62hNvWY4=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size18_ColorFFFFFF_Stroke9A5021
+ .atf
+SHA1-Digest: jpz03VpsxW8g1tg4E468C/PfXOY=
+
+Name: assets/textures/2x/RecipeResultsSundae3.atf
+SHA1-Digest: CkcZuifatbyiv1Akqsw/yXaPic0=
+
+Name: assets/textures/2x/RecipeResultsCheesecake1.atf
+SHA1-Digest: pggQkbXghS/yLTaehYZUKtVXnEc=
+
+Name: assets/textures/common/map_12.jpg
+SHA1-Digest: PWYIihSiDCLTVwI72BTI8A7hYog=
+
+Name: assets/textures/1x/RecipeResultsFlan1.xml
+SHA1-Digest: jVM8jNfDOOsWs+p13mhew71KAYE=
+
+Name: assets/textures/1x/HighScore.atf
+SHA1-Digest: GbSwkMRWIbKWiJtyoOGGHtcy0VM=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: rfhOkaUqjVmlH0wKJ91d4XoVtfw=
+
+Name: assets/textures/1x/MapPaginatorIcons.xml
+SHA1-Digest: q+CSV7ETsM7O+E6Yoq+rJ1HKYD4=
+
+Name: assets/icons_android/icon96.png
+SHA1-Digest: 8H82DFwsIl8WN/v+/mCVO8pQYGs=
+
+Name: assets/textures/1x/RecipeResultsSundae4.atf
+SHA1-Digest: 25koTtGrHOhwr32g2MqelzjShjA=
+
+Name: assets/textures/2x/RecipeResultsCreampuff4.xml
+SHA1-Digest: xBj+LDDX/ZjJlAY3sHxjMbOLXEc=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.facebook/catalog.xml
+SHA1-Digest: ZOX1G51LyfJvlk2klpDB8KkpkK4=
+
+Name: assets/textures/2x/RecipeResultsDanish5.atf
+SHA1-Digest: Dh/MRrYNaKWvFjP2X79Vs0Caj+c=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorCFA686.atf
+SHA1-Digest: 0lA0YmvJe5gDyAezJtPzMykpKzQ=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: assets/textures/2x/UpdateGame.xml
+SHA1-Digest: XpVtr1JKYu96cYcHBcYHCwqk9Ds=
+
+Name: assets/textures/2x/RecipeResultsPie4.xml
+SHA1-Digest: 3VCxRor+/ksjLVdn0RCxfEcg1lo=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size18_ColorFFFFFF_Stroke9A5021
+ .atf
+SHA1-Digest: a0X9IUmpRZCb2wToAAQDYEEvpwc=
+
+Name: assets/textures/2x/RecipeResultsParfait4.atf
+SHA1-Digest: +7sxFHTj4Dx2c3a1SY1t/08KBNA=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich6.xml
+SHA1-Digest: mB7ke0TADSnNBtrSGpRys7xgxyg=
+
+Name: assets/textures/2x/RecipeResultsSavarin2.atf
+SHA1-Digest: 1fZnW/FA4aWK9/MTnQoo+TlyERg=
+
+Name: AndroidManifest.xml
+SHA1-Digest: Q4upHQRY426ZDDTmhRLqYwBkges=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: NiNYsjcD/yWhGnY4SM28IB+xO2c=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.storekit/META-INF/ANE
+ /Android-ARM/library.swf
+SHA1-Digest: pm3mY27TLJJptEFY0+zoigU+CtY=
+
+Name: assets/textures/1x/RecipeResultsCakeslice1.xml
+SHA1-Digest: F4c02+/XE1YEifJqKlf1VupA4z4=
+
+Name: assets/textures/1x/RecipeResultsSavarin4.xml
+SHA1-Digest: sctg+oxBAVR74KWCkSnrwmReC3U=
+
+Name: assets/textures/2x/RecipeResultsParfait6.atf
+SHA1-Digest: Nk4bvzMrtI7DNVnNq8Smjtxp6Hg=
+
+Name: assets/textures/2x/RecipeResultsFlan6.xml
+SHA1-Digest: xxu/NqNLOBmvEKcBqehaTwE3HA8=
+
+Name: assets/textures/2x/RecipeResultsRoundcake2.atf
+SHA1-Digest: n6DIJKfNvZ4Orspo/U8sWm/BONo=
+
+Name: classes.dex
+SHA1-Digest: 2EU+WLwrV8UPMsSMRbL+XVI3QR8=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorFFFFFF_Stroke9A5021
+ .atf
+SHA1-Digest: 2KTmBSkd7vs4AAfk7++t965qDtU=
+
+Name: res/drawable-long-port-hdpi/loading.png
+SHA1-Digest: aZ3JlrQUIFi3BX2OW3Sl/94hc9I=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.android4support/library.s
+ wf
+SHA1-Digest: xPkLYD8/25rFialw2EWfOwt5F+w=
+
+Name: assets/textures/2x/RecipeResultsFlan4.xml
+SHA1-Digest: EbCPKQXNX7Wk2ea8d9RV/jqhf2A=
+
+Name: assets/textures/1x/DropDownIcons.xml
+SHA1-Digest: sA9p52DppDxL9MD2NJ+nM5GI6hI=
+
+Name: assets/textures/1x/RecipeResultsTart1.xml
+SHA1-Digest: gG9KKjnEcYzgDPOUB9MQXdgsCjY=
+
+Name: res/drawable-xhdpi/com_facebook_logo.png
+SHA1-Digest: 94ZTspodsrcPndjRFwq4Cqz6Wc4=
+
+Name: assets/textures/2x/RecipeResultsNapolean2.atf
+SHA1-Digest: Zw5q17Oohex48aPEbAeX6XOm0DM=
+
+Name: assets/textures/1x/RecipeResultsCreampuff4.xml
+SHA1-Digest: /YVvohPlraa/sWLW6u8Aa0+cOaY=
+
+Name: assets/textures/1x/background_11.jpg
+SHA1-Digest: ULK/9Cpb1J0rIbsJ1SSTFkznPHs=
+
+Name: res/layout/expandable_chooser_row.xml
+SHA1-Digest: bnsGDBEvENinD4Y+qDWWPkRS1m8=
+
+Name: assets/textures/1x/RecipeResultsSundae5.xml
+SHA1-Digest: MwmYpbWRn+YY9gEfHFc4eOUjD2A=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich4.xml
+SHA1-Digest: 3LGUAzqLPT+l06XexTAbGPvWads=
+
+Name: assets/textures/1x/DynamicPopUp.xml
+SHA1-Digest: hsf4zG2vo5kKndn6jPSf38XZFCE=
+
+Name: assets/textures/2x/RecipeResultsTart4.xml
+SHA1-Digest: vvSG2mN02PdbpeHuwcVfCYUA0/w=
+
+Name: assets/fonts/2x/LobsterTwoRegular_Size36_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.atf
+SHA1-Digest: usDlkq/+VjFfam4rcduy+p+jo4M=
+
+Name: res/drawable-notlong-port-mdpi/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: assets/textures/1x/RecipeResultsCupcake6.atf
+SHA1-Digest: X1vo7LzsP4ezXMfT7m+BAOhU+OI=
+
+Name: assets/textures/2x/MiscIconsIngredient.xml
+SHA1-Digest: xIzxs4cOhxGXT0i1fzfj3xhQxrI=
+
+Name: assets/textures/2x/RecipeResultsCreampuff1.xml
+SHA1-Digest: WFFpl3lUp2W6JJ8TJwXt45l8c8I=
+
+Name: assets/textures/2x/RecipeResultsFlan5.atf
+SHA1-Digest: tUuK9sdwtyEr8adLXwYrY8k6rvE=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColoFFFFFF_DropShadow1C0
+ 900.atf
+SHA1-Digest: 6wqjmy3SIChww9/39LX6IS+rR0c=
+
+Name: assets/textures/2x/DropDownIcons.atf
+SHA1-Digest: HQ52ArA7JtwDAFGnQ+argXQPpo8=
+
+Name: assets/textures/1x/RecipeResultsSundae4.xml
+SHA1-Digest: RPRli7qRkcLisjuvEdNSxAWGr9A=
+
+Name: assets/textures/1x/RecipeResultsTart5.xml
+SHA1-Digest: SfITUAnaJSnxlyJdx8m1i9SHE2U=
+
+Name: assets/textures/2x/RecipeResultsCakeslice4.xml
+SHA1-Digest: ytdBRKVXH3E3HY8v4ZheMr9QlnE=
+
+Name: assets/textures/1x/RecipeResultsSundae5.atf
+SHA1-Digest: 5nx5oogO5s/WAdKj3kKLqtR+bMA=
+
+Name: assets/textures/2x/unlockStage_11.png
+SHA1-Digest: 16OaDlucFQ4PiSwm4DHQcMlzW84=
+
+Name: assets/textures/1x/nexttohighscoreicon_ingredient_start.png
+SHA1-Digest: Y877Q9FdqWWbMqr4QBXMIMpb114=
+
+Name: assets/textures/2x/RecipeResultsDanish6.xml
+SHA1-Digest: kQbZXqM5/HUIPWdta7kGa+Ui2xk=
+
+Name: assets/textures/2x/background_4.jpg
+SHA1-Digest: VraxrG1fNr5ZYyB2fk832npY4Dw=
+
+Name: assets/textures/2x/nexttohighscoreicon_ingredient_start.png
+SHA1-Digest: zO69dNgPTy3rQSf3DmPdJ9aQHdY=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: 43CFSZrA4bH7N3aQHkhCueTKX6M=
+
+Name: assets/textures/1x/RecipeResultsSquarecake5.atf
+SHA1-Digest: Xn0FRoEszEqiR7W7nqHu+PtWlFw=
+
+Name: assets/textures/2x/nexttohighscoreicon_ingredient_completed.png
+SHA1-Digest: a09llc34qoxfUaAUGw2Kai84SdM=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: 0mL9bvBnguGGZdnft4TaGoEw08Q=
+
+Name: assets/icons_android/icon48.png
+SHA1-Digest: rtQwPMQzG5rJrsDhA1KVIAug8mQ=
+
+Name: assets/textures/2x/RecipeResultsFlan2.xml
+SHA1-Digest: AuEpI+vx71zRa6nCXAF9L8LrZ2w=
+
+Name: assets/fonts/lato30.fnt
+SHA1-Digest: 31zY52LXPDn87Cj+9XhAX9fFs8M=
+
+Name: assets/textures/2x/ColoredGamePieces.atf
+SHA1-Digest: yRqU+PWkitXQTOPpcyEXs8sG+kM=
+
+Name: assets/textures/1x/ColoredGamePieces.xml
+SHA1-Digest: QesFG/7Tqu+Fc/eW7ELdzI+49Aw=
+
+Name: assets/textures/2x/background_8.jpg
+SHA1-Digest: DORGDuXSC4S1+FdEyygRcJ0vBPQ=
+
+Name: assets/textures/1x/RecipeResultsCupcake4.atf
+SHA1-Digest: IcUFg/XzHvsWmQ5cdAOfM9B4O5Y=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorC5DEF7_Stroke0D4069
+ .png
+SHA1-Digest: Wg3ReCIAnM56fCuci0YNWFk/JGQ=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+
+Name: assets/textures/2x/RecipeResultsTart6.xml
+SHA1-Digest: YQTeWFJKAWo+f5y3Mn18DhRJsdI=
+
+Name: assets/textures/2x/RecipeResultsSundae3.xml
+SHA1-Digest: wazlP4o1WtTHji+QslNFVTUEVWs=
+
+Name: assets/textures/2x/RecipeResultsCupcake3.atf
+SHA1-Digest: PKND169+ARgbJmcHpWBZtFou8lU=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+
+Name: assets/textures/1x/ErrorPopUp.xml
+SHA1-Digest: oqKzsj1En2Gxb62T+35UW1PS514=
+
+Name: assets/textures/2x/RecipeResultsCupcake3.xml
+SHA1-Digest: jxlaF/vDpoLKnHsFpLJ5y7oRRO8=
+
+Name: assets/textures/1x/RecipeResultsFlan1.atf
+SHA1-Digest: iR9/qNPCYe9eGeOZH5xtRfWQk2g=
+
+Name: assets/textures/2x/RecipeResultsSavarin4.atf
+SHA1-Digest: Yx2IGKjU2uhWeKiFUjSppujC50Y=
+
+Name: res/drawable-notlong-land-hdpi/loading.png
+SHA1-Digest: QADlm2r35eSLTucBx6yJ4im0K/Q=
+
+Name: assets/textures/2x/DropDownIcons.xml
+SHA1-Digest: C2mmuOflKxZCeh7QXQYxggxE9fc=
+
+Name: assets/textures/2x/RecipeResultsTart5.xml
+SHA1-Digest: Yx7UqXdjcyFMcVZgD3lZPR+WFIs=
+
+Name: assets/textures/1x/RecipeResultsFlan4.xml
+SHA1-Digest: 2XkpqCQ2KvXJBZC+L7MY4ZDKo8k=
+
+Name: res/layout/multiple_file_selection_panel.xml
+SHA1-Digest: fTmL9Ox2PPMoUEc7RB8BVc7npy8=
+
+Name: assets/textures/1x/RecipeResultsCheesecake1.xml
+SHA1-Digest: Kls/tRKLKS56KOC6EVba2Np+VLc=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.ane/META-INF/ANE/Andr
+ oid-ARM/library.swf
+SHA1-Digest: v4CyJRN/tXa6kVPKBcT1yiI5yR8=
+
+Name: assets/textures/2x/RecipeResultsCupcake6.atf
+SHA1-Digest: NQdy8ZWbeOqxp4P9cTvqnJD7e28=
+
+Name: assets/textures/2x/RecipeResultsPie2.xml
+SHA1-Digest: ctqrEtQpBiST1wd0zjnyZQFBFjE=
+
+Name: assets/textures/2x/background_2.jpg
+SHA1-Digest: WqUJ4MsvWvBgObw75kYmmHd6zWw=
+
+Name: assets/textures/2x/nexttohighscoreicon_waffle_failed.png
+SHA1-Digest: fLTuXgM+NiV8lyTDk00naPmzNdo=
+
+Name: assets/textures/2x/RecipeResultsParfait3.xml
+SHA1-Digest: b595GMihT8LHX02spivI1UjCqz0=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: q04LLz2eNuM6e8D8RaRhm1e3WbQ=
+
+Name: assets/textures/2x/mainimagerect_connectFB.png
+SHA1-Digest: qvFRlhvL2KZyspRwuCpfUK+SIgc=
+
+Name: assets/textures/1x/RecipeResultsNapolean1.atf
+SHA1-Digest: 2pKrxpbaU1BFiQRowyjvBJQpkgw=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: assets/textures/2x/TitleRibbons.xml
+SHA1-Digest: u0vyDy+fM7AZmBrq0C/9i8nLR3s=
+
+Name: assets/textures/1x/RecipeResultsSundae1.xml
+SHA1-Digest: eW2uR2nVQ2g43Ov2+3PC8Iu77ws=
+
+Name: assets/textures/1x/nexttohighscoreicon_candle_failed.png
+SHA1-Digest: aWYWE5V2bXRMZLfKywajPyR7mYw=
+
+Name: assets/textures/1x/MailPopUp.xml
+SHA1-Digest: zcQtPIXt6MJBqdHpXQLKYDN8sCo=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: w/awfZeucwp5r5kmJEwZuoch3MQ=
+
+Name: assets/textures/2x/RecipeResultsPie5.xml
+SHA1-Digest: FSyCAVBj8evjY2SSIN/dETLw15g=
+
+Name: assets/textures/1x/nexttohighscoreicon_decorating_completed.png
+SHA1-Digest: /Cy4kDy4EBJj1LGG7niWKib47ts=
+
+Name: assets/textures/2x/RecipeResultsRoundcake4.atf
+SHA1-Digest: i3GO5LIBk56YTdoWdrTfqp7FmUg=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: 45BAgKtOkC0fHYqIunSXrQ8YubM=
+
+Name: assets/textures/1x/BakedText.xml
+SHA1-Digest: uqu8UMkucyBtWNULxDSsiTCSAvY=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+
+Name: assets/textures/2x/RecipeResultsDanish4.xml
+SHA1-Digest: KY/L/MFMgjOtAixYr6h95NoK0pQ=
+
+Name: assets/textures/2x/CoinStacks.xml
+SHA1-Digest: 6tg1+X7b56eciV46eoRYSjUcKiw=
+
+Name: assets/textures/1x/BakedText.atf
+SHA1-Digest: Te4HiXtVmp8y6nztUEzCSWU+Rrk=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: yMpYfZuFJGNFQXKhGmoMqOwj1Vw=
+
+Name: assets/textures/2x/RecipeResultsCheesecake4.atf
+SHA1-Digest: lNvFCvytyPFu98KB+ekzSnRfwqc=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size18_ColorFFFFFF_Stroke9A5021
+ .fnt
+SHA1-Digest: hkMLclyh0yBBli28VP7EUx+XE6c=
+
+Name: assets/textures/2x/RecipeResultsDanish2.xml
+SHA1-Digest: j5MhoUPMwKh0xJqGXa9OW+At8Z0=
+
+Name: assets/textures/1x/RecipeResultsCreampuff6.atf
+SHA1-Digest: /VKJMGx2TEg/44eHCDkzxaiYO70=
+
+Name: assets/textures/2x/background_12.jpg
+SHA1-Digest: 1QJ9k4PnuBlrwHRpe3JkQ3G6ujc=
+
+Name: assets/textures/2x/RecipeResultsCreampuff2.atf
+SHA1-Digest: /OkvtLm9Cw4mkvlEwV7v/3Y8w04=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.adx/catalog.xml
+SHA1-Digest: PezZ5ZGPqHDhwAzKFG5y2hz9UDM=
+
+Name: assets/textures/2x/RecipeResultsFlan1.atf
+SHA1-Digest: A77LP9nPA0JPgzww5oinWPi7YOo=
+
+Name: assets/textures/2x/RecipeResultsRoundcake2.xml
+SHA1-Digest: PVewQSiiJOmDHnH0ynX46OkMfS4=
+
+Name: assets/textures/2x/unlockStage_7.png
+SHA1-Digest: HCfyd+DGB79E78nSv1+eYI8iINs=
+
+Name: assets/textures/1x/RecipeResultsParfait6.atf
+SHA1-Digest: xKpCcOLvjJzeQC4GoLjPYVdidZI=
+
+Name: assets/textures/1x/RecipeResultsSquarecake5.xml
+SHA1-Digest: fjMWKP3d9v4iBj7XbjkEB+w0bP8=
+
+Name: res/raw/icon.jpg
+SHA1-Digest: 7g9A72BHtvf1hEWBNZiKzoe56gw=
+
+Name: assets/textures/1x/background_7.jpg
+SHA1-Digest: uLw83lTT3RBbLSCxprvIkTbj/rE=
+
+Name: assets/textures/2x/placeHolder.atf
+SHA1-Digest: yzrGmnlEvo8huZVQqSEWlqwF1GY=
+
+Name: assets/textures/2x/RecipeResultsParfait4.xml
+SHA1-Digest: KZCLjxEhJWzvb7gcxZSvdfl8znU=
+
+Name: assets/textures/1x/RecipeResultsFlan3.xml
+SHA1-Digest: yfpZk9JPX2fE5ZfC7dBPmGCH7Ng=
+
+Name: assets/textures/1x/RecipeResultsSavarin4.atf
+SHA1-Digest: LnKZlIwz9mAa+TfSCbsIBqi/4co=
+
+Name: assets/textures/1x/RecipeResultsSquarecake4.xml
+SHA1-Digest: 6bjIANi75Brr7WS03Tr2Iogc2+Y=
+
+Name: assets/textures/1x/RecipeResultsRoundcake3.atf
+SHA1-Digest: N+rthrf4LkBSQvmZUDpTqTTrTqU=
+
+Name: lib/armeabi-v7a/libstlport_shared.so
+SHA1-Digest: Hn8JAWcqVq0cTbkvFmVt2JLFmlw=
+
+Name: assets/textures/1x/blocks.atf
+SHA1-Digest: QiR0RB9VRuYJ2Unl2EzvF6mWGWg=
+
+Name: assets/textures/common/Spoon.xml
+SHA1-Digest: 5J2u5CORYxojNlRpOR03JEVIVtk=
+
+Name: assets/textures/2x/RecipeResultsDanish2.atf
+SHA1-Digest: zQFq2yOI2do8VwB3FUwFO6NBkUk=
+
+Name: assets/textures/2x/RecipeResultsTart6.atf
+SHA1-Digest: Wfoyf+Azgo8tSjmf50XDce8t2e8=
+
+Name: assets/textures/2x/unlockStage_1.png
+SHA1-Digest: plO57Zq7wf7V15AjhzwJJoL36vo=
+
+Name: assets/textures/2x/RecipeResultsCakeslice5.xml
+SHA1-Digest: qdK9g2PiHdAKgIXLQnfunrD386I=
+
+Name: assets/textures/1x/RecipeResultsCakeslice3.atf
+SHA1-Digest: q3oGR9mxKKfPG1AwErD0ly8+XUU=
+
+Name: assets/textures/1x/background_12.jpg
+SHA1-Digest: ehBJocR0fZbozQCuNnIpLEx3OBw=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorCFA686.atf
+SHA1-Digest: +HRmnB4VTYAdoQ+Bt8Izlo2aXj0=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich1.atf
+SHA1-Digest: i5AllsCVpVdHz9K8DLck9ykKo48=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.ratings/library.swf
+SHA1-Digest: B2jz37Gw5aiNIOzuN2BIdwDBz/0=
+
+Name: assets/textures/1x/MapHUD.xml
+SHA1-Digest: syOXDg3YAGXHKuz5t1dqM/iFfK8=
+
+Name: assets/textures/2x/BakedText.xml
+SHA1-Digest: souFQ8p8WYMJVco8NxO6No6gH7M=
+
+Name: assets/textures/2x/RecipeResultsCreampuff2.xml
+SHA1-Digest: bRX9NMMmRpwcAQMF/2uW7Dc9HGk=
+
+Name: assets/textures/1x/RecipeResultsCakeslice5.atf
+SHA1-Digest: 1KbFdcCiJhODx//HgZhRKvzrzD0=
+
+Name: res/drawable-land/loading.png
+SHA1-Digest: JAp4zoz49hXn0PjatLCkXVXewZU=
+
+Name: assets/textures/1x/HowToPlay.atf
+SHA1-Digest: rcSwU/fwD89nSR04D28VRpw/m0M=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: e+LSGCe832LwSYj9z2S77G/QUi0=
+
+Name: assets/textures/1x/Rat.atf
+SHA1-Digest: HrLJMRA6sh6x80I+T2ORIFnfX7w=
+
+Name: assets/textures/1x/HowToPlay.xml
+SHA1-Digest: Qa53hoawLYV2VcLfD1ULlD/dX9o=
+
+Name: assets/textures/1x/ErrorPopUp.atf
+SHA1-Digest: UCT5Ok/U8GxEYNwr8MRDlA5N3RE=
+
+Name: assets/textures/2x/RecipeResultsPie3.atf
+SHA1-Digest: eOfOk9r8LQDh6Bsbuv3gpE4u//0=
+
+Name: assets/textures/2x/background_10.jpg
+SHA1-Digest: 5ET7BZ5FSe7BCNNx1NN4ZP9R4Lo=
+
+Name: assets/textures/2x/RecipeResultsPie5.atf
+SHA1-Digest: /0tNPUHCrrU1V7ZhnFyzgAu2OWA=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: rtQwPMQzG5rJrsDhA1KVIAug8mQ=
+
+Name: res/drawable-long-port-mdpi/loading.png
+SHA1-Digest: mKlpdq+s5QOnRL9EfF2R9kHsn7A=
+
+Name: assets/textures/1x/background_10.jpg
+SHA1-Digest: bou8cpdD7KGd4lb+kFyMAS0SkwU=
+
+Name: assets/textures/2x/RecipeResultsCakeslice2.atf
+SHA1-Digest: uOVi5uBP1vCg3buomiQcCphJZn0=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.chartboost/library.sw
+ f
+SHA1-Digest: JHbGZTDSkscZmLEsi8JCD3aZq54=
+
+Name: assets/textures/1x/mainimagerect_quit_game.png
+SHA1-Digest: W3/Zg06gVcVtOgFHEnRXHRse4AM=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColoFFFFFF_DropShadow1C0
+ 900.atf
+SHA1-Digest: nqRhjwu9c1dw6wsWIe85vjbHlmY=
+
+Name: assets/textures/1x/RecipeResultsSundae6.atf
+SHA1-Digest: 4T9E3tBqzP0rtCIn3oSYgjZLAi0=
+
+Name: assets/textures/2x/RecipeResultsNapolean4.atf
+SHA1-Digest: 4Xnl6oPUCmsBSl30uSQAHAmEvXE=
+
+Name: assets/textures/1x/DynamicPopUp.atf
+SHA1-Digest: qDW77TN95Owa+wDTOFg2pN/D/+M=
+
+Name: assets/textures/1x/BoosterIcons.xml
+SHA1-Digest: PFgRucU5iDJvd53J/pEtKhS7hsA=
+
+Name: assets/adobeair.vch
+SHA1-Digest: TYuUzsE3AWzeDr8kccQPhXXs6ug=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: NDLFyRfWjBjm9xCkOlx9fqTCMug=
+
+Name: assets/textures/1x/RecipeResultsSavarin5.xml
+SHA1-Digest: b16x1QDANsg4oI7B4sy97NmZaLU=
+
+Name: assets/textures/1x/RecipeResultsFlan2.atf
+SHA1-Digest: bzpzi1GiL0V2EjAcEUQU1TdZnuc=
+
+Name: assets/textures/2x/BakedText.atf
+SHA1-Digest: ODI87fZ1xo7DWmIn3tW2cOUo8k4=
+
+Name: assets/textures/1x/RecipeResultsRoundcake4.atf
+SHA1-Digest: 5H9kbSqQkp8XmgKw2wjEdmqhUZQ=
+
+Name: assets/textures/1x/RecipeResultsSavarin5.atf
+SHA1-Digest: UgElxsXWD2dmOLalCzCJOhIYpVY=
+
+Name: assets/textures/1x/RecipeResultsCheesecake6.xml
+SHA1-Digest: 8SEn+4wR8jYX/IGCMlZDAQAWrjs=
+
+Name: res/drawable/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: assets/textures/1x/RecipeResultsCupcake5.atf
+SHA1-Digest: 9K1zQg7dzgna2xJJYJ3Io7mrMIA=
+
+Name: res/drawable-xhdpi/com_facebook_inverse_icon.png
+SHA1-Digest: JlToIy/BS1SwLA3JoedKEQBE76E=
+
+Name: assets/textures/1x/RecipeResultsCreampuff4.atf
+SHA1-Digest: hH8KwVQCadxjHHtlgp/nltkAmlQ=
+
+Name: assets/textures/2x/RecipeResultsTart2.xml
+SHA1-Digest: zohPVvFDrGCWSFtd/P5VtmdYnfc=
+
+Name: assets/textures/1x/RecipeResultsDanish1.xml
+SHA1-Digest: VTaTmA4DTzLAkdq7UIfWTCc/jnA=
+
+Name: assets/textures/1x/RecipeResultsTart5.atf
+SHA1-Digest: YWTc756Ri8ZfXJxIgvVhboKpV9I=
+
+Name: assets/textures/2x/RecipeResultsCheesecake1.xml
+SHA1-Digest: 0a+nl8QnJC+c4eVpA9ByBkhcbhg=
+
+Name: assets/textures/1x/RecipeResultsSavarin6.xml
+SHA1-Digest: 8VIM4iK3lgqCirsK7K3FPakPDE8=
+
+Name: assets/textures/2x/unlockStage_13.png
+SHA1-Digest: Wxe4IvbVzSWIkUOVk8Eu9jY6A/k=
+
+Name: assets/textures/common/Ftue.xml
+SHA1-Digest: d5z0nb36+Enw6l9ueqtW+RsNUQI=
+
+Name: assets/textures/2x/nexttohighscoreicon_gingerbread_failed.png
+SHA1-Digest: 1iO34mOlBe/ZvcaBJYNUZ1Dxqo8=
+
+Name: assets/textures/2x/Gingerbread_Victory.atf
+SHA1-Digest: d9pqo0DQEbwsUUZK6uYFieJ+FSA=
+
+Name: assets/textures/1x/RecipeResultsDanish3.atf
+SHA1-Digest: /U4lH6aYB6yL9lJh9ROjbDLZtaE=
+
+Name: assets/textures/2x/RecipeResultsFlan2.atf
+SHA1-Digest: JQp3tiEfBBEeg9Kcsf/3xEu0iUc=
+
+Name: assets/textures/1x/DropDownIcons.atf
+SHA1-Digest: DJCY9huwnjPXPwmcOlrjTqlWABg=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: UlppTzQMf0S8p04nUqt4qCBKRF0=
+
+Name: res/drawable-hdpi/com_facebook_inverse_icon.png
+SHA1-Digest: 2IKuzG1QMycYYLdEWoHnQDoZ07E=
+
+Name: assets/textures/2x/gplus_logo.png
+SHA1-Digest: 0C/vRH+9HKlMAPkm0VsiGGbQ01o=
+
+Name: assets/textures/2x/RecipeResultsSavarin1.atf
+SHA1-Digest: xN7UlAgkSNrSqRMPty86aGFgsFM=
+
+Name: assets/textures/1x/RecipeResultsNapolean6.xml
+SHA1-Digest: 1xxjIYRA7Iy9gcnS+RxFMQJs14Y=
+
+Name: assets/textures/2x/RecipeResultsSquarecake6.xml
+SHA1-Digest: 7w3arQpEHYfNT1L/uxlOhKpqSck=
+
+Name: assets/textures/1x/background_4.jpg
+SHA1-Digest: EKOUpZYC2CJaVlOQGoDsK/e0wWE=
+
+Name: assets/textures/1x/RecipeResultsParfait3.xml
+SHA1-Digest: +n0zS8A7pjolcr0Fr/nYW86vkhc=
+
+Name: assets/textures/1x/MiscIconsWaffle.atf
+SHA1-Digest: Vtl05PDMbpjvKNtT7iPl7j+/TSA=
+
+Name: assets/textures/2x/nexttohighscoreicon_candle_failed.png
+SHA1-Digest: 5k5NtL+RdAAWqAfSk50Yn+Mu77M=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich5.atf
+SHA1-Digest: gDldiUjVhxuMjYRr+C/PPGvKDgg=
+
+Name: assets/textures/2x/RecipeResultsFlan4.atf
+SHA1-Digest: 70q4Wh9wz+Bbqkg4RTMd9rlShFA=
+
+Name: assets/icons_android/icon144.png
+SHA1-Digest: OB+bFge5Nxh/5nao77YhrmSZWGU=
+
+Name: assets/textures/1x/Rat.xml
+SHA1-Digest: tvjgI6AoTqYYKUNnAqDwOnbX+44=
+
+Name: assets/textures/common/leaderboard_icon.png
+SHA1-Digest: 7gAXlTlhYBFXfpLUSnwXA9MvETM=
+
+Name: assets/textures/1x/background_2.jpg
+SHA1-Digest: ZwJIzvYQ+5CKrKEcwb1e8ychcMs=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.storekit/library.swf
+SHA1-Digest: pm3mY27TLJJptEFY0+zoigU+CtY=
+
+Name: assets/fonts/2x/LobsterTwoRegular_Size54_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.fnt
+SHA1-Digest: xooOVe1i9lYrjyIpKAVJVT7dSeE=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.bingo/META-INF/ANE/extens
+ ion.xml
+SHA1-Digest: LktWyvVz2Y363GlUz1Xk+uOweuw=
+
+Name: assets/textures/2x/unlockStage_14.png
+SHA1-Digest: nI+t78fR6Ih9+vE1Pf0uMqttxY0=
+
+Name: assets/textures/2x/nexttohighscoreicon_waffle_start.png
+SHA1-Digest: P1XMpRiF5o7QojMu+uJiO2GF7GY=
+
+Name: assets/textures/2x/HighScore.atf
+SHA1-Digest: 08s9Me7ArR1ydhVOiMJQL7julhQ=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+
+Name: assets/textures/1x/Store.atf
+SHA1-Digest: Uj8FjT/Y1nh5gvaPBksE9wS4Zus=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich5.atf
+SHA1-Digest: GdgVuklEqi2e++dsbbfDiLycox8=
+
+Name: assets/textures/common/map_7.jpg
+SHA1-Digest: S7SOkI3bzLrS/1O7nBAdhnCrEjE=
+
+Name: assets/textures/1x/unlockStage_9.png
+SHA1-Digest: 5rDervrjsmYsur2kwwXSECUC+MY=
+
+Name: assets/textures/2x/RecipeResultsCupcake4.atf
+SHA1-Digest: mxStI5iaIoYt8n2AE5sXEjZOIbo=
+
+Name: assets/textures/1x/RecipeResultsNapolean6.atf
+SHA1-Digest: iNF4g5lO0SiVpzSHbYV7BZ4zGT4=
+
+Name: res/raw/startga.html
+SHA1-Digest: 0Gq1U1c1hFbPzb+UHZ8RaIpUnts=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorFFFFFF_StrokeA8364B
+ .fnt
+SHA1-Digest: xFDXBNvCJ/QjaHLJcev5RX86koQ=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorC5DEF7_Stroke0D4069
+ .atf
+SHA1-Digest: OjvguVNrBS3Qf2lTBpcb5KqJUcw=
+
+Name: assets/textures/1x/RecipeResultsCakeslice6.xml
+SHA1-Digest: tAd2H8jXv29CFmAj2STqDeEl93c=
+
+Name: assets/textures/1x/RecipeResultsCakeslice3.xml
+SHA1-Digest: 3hxHXAbM+CJ/D2iNL3+oBuJUKtk=
+
+Name: resources.arsc
+SHA1-Digest: bsDI0LHLiO/M519oqRj6zTwNgV0=
+
+Name: assets/textures/2x/MiscIconsWaffle.xml
+SHA1-Digest: 49mZ3AnLx6/0fKvmpQHnnjZAbSs=
+
+Name: assets/textures/2x/nexttohighscoreicon_decorating_start.png
+SHA1-Digest: P1XMpRiF5o7QojMu+uJiO2GF7GY=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+
+Name: assets/textures/2x/mainimagerect_quit_game.png
+SHA1-Digest: r5mxg3HaAKtVibn63dUK+lurmME=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: OB+bFge5Nxh/5nao77YhrmSZWGU=
+
+Name: assets/textures/2x/mainimagerect_endofcontent.png
+SHA1-Digest: mwU7oQHCDtvnBW5zy6uNfS4tZCs=
+
+Name: assets/textures/2x/RecipeResultsSavarin6.xml
+SHA1-Digest: tjmDV30wL1Vb86OAsGTkxNpipbA=
+
+Name: assets/textures/1x/RecipeResultsCheesecake5.atf
+SHA1-Digest: nHfc+G2wg13u0Uc1w3dzMQ9sC30=
+
+Name: assets/textures/common/Spoon.png
+SHA1-Digest: /dLZyDjPLi+ifjdX40ZMV3bBhWs=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich5.xml
+SHA1-Digest: y37XRrty5fT6J+qDpw6pEKuANvI=
+
+Name: assets/textures/2x/Gingerbread_Victory.xml
+SHA1-Digest: +OJ+SvSE/NLXM/CbbyC0TnUIWfk=
+
+Name: assets/textures/2x/RecipeResultsSquarecake6.atf
+SHA1-Digest: zeNHV2dPTZ6u+SymiMT4OY+wI2s=
+
+Name: assets/textures/2x/RecipeResultsCupcake2.atf
+SHA1-Digest: 4SAQeGVPsOQ2kO1XszoVyzqTYP0=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorCFA686.fnt
+SHA1-Digest: GF5z1DL5ye2sWQUNSb/NLqGMxYw=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size36_ColorFFFFFF_Stroke9A5021
+ .fnt
+SHA1-Digest: 0IBYZ5LQ0/ur/ixP8FPirPvncIU=
+
+Name: assets/textures/1x/nexttohighscoreicon_ingredient_completed.png
+SHA1-Digest: Xsa0ztXg6adIRECs8ETGeN1Tsb0=
+
+Name: assets/textures/2x/RecipeResultsIcecreamsandwich5.xml
+SHA1-Digest: 5FFAGHXPj/+WK0APtVm2WeFwxsA=
+
+Name: assets/textures/2x/RecipeResultsCupcake5.xml
+SHA1-Digest: fsVKUl2wBmqgNVEzVTycc3L3wlc=
+
+Name: assets/textures/1x/RecipeResultsCupcake2.xml
+SHA1-Digest: xTSQyw+dnmmmKukEpHE5GvONDRI=
+
+Name: assets/textures/1x/RecipeResultsSundae2.atf
+SHA1-Digest: 45TIFShnWhnP3seD503yszOMtck=
+
+Name: assets/textures/1x/MiscIconsCollect.atf
+SHA1-Digest: FnpVfb5Afjc9beaoSEM8RO4ciac=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: P8Fd8oSOz5JLNdsGrTkRJfX3las=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size36_ColorC5DEF7_Stroke0D4069
+ .fnt
+SHA1-Digest: bzHbOKhG3SHTEIf1J+fbE04t/aA=
+
+Name: assets/textures/2x/RecipeResultsRoundcake5.atf
+SHA1-Digest: IJA7LulNKwuAK38S1ojaqxGOZ8s=
+
+Name: res/drawable/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/textures/1x/LikePage.atf
+SHA1-Digest: ALau/6jjIa0l78fcrFQomGtmW+s=
+
+Name: res/layout/ssl_certificate_warning.xml
+SHA1-Digest: ezmG85JpFqOUyp0MiY3qIV99fIM=
+
+Name: assets/textures/1x/RecipeResultsPie6.atf
+SHA1-Digest: MVF2BnzeQwcEL2MlESdR/RClppk=
+
+Name: res/drawable-port/loading.png
+SHA1-Digest: 1FHf2X3UqdbtLLcisRE3sFsefAM=
+
+Name: assets/textures/1x/RecipeResultsCreampuff1.xml
+SHA1-Digest: uGJTgxwPO3tvt1JjBusUZQoVAUY=
+
+Name: assets/textures/1x/RecipeResultsParfait2.atf
+SHA1-Digest: 5vCpewaZMz6mbwQmlv3PO33HTog=
+
+Name: assets/textures/1x/MiscIconsIngredient.atf
+SHA1-Digest: QpOt8f1R1JeeaAeNbW4xHAjqSVQ=
+
+Name: assets/textures/1x/RecipeResultsNapolean4.atf
+SHA1-Digest: 2uwNEZI2liLCYVjzloZUnI7fopc=
+
+Name: assets/textures/2x/RecipeResultsTart5.atf
+SHA1-Digest: XC2wTkKQg6AEmX63Rfv8VFWjuDQ=
+
+Name: assets/META-INF/AIR/extensions/com.jesusla.adx/META-INF/ANE/Andr
+ oid-ARM/library.swf
+SHA1-Digest: o2Qvy+yUK6GmFYSeNu+7tISvZNc=
+
+Name: assets/textures/2x/HighScore.xml
+SHA1-Digest: nr7tDjlD33zMtvWVMwVFf3xNZuk=
+
+Name: assets/textures/2x/RecipeResultsParfait1.atf
+SHA1-Digest: epNQ2Cd0mbtWR7ZECd/ILLgpQFk=
+
+Name: assets/textures/1x/RecipeResultsDanish3.xml
+SHA1-Digest: +IcG47+eAT5IjqQWqjR5o/sfLcA=
+
+Name: assets/textures/2x/MiscIconsTimed.xml
+SHA1-Digest: xiviNwfDeE02OR5TQ5kv41S6Tkg=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size72_ColorFFFFFF_StrokeA8364B
+ .fnt
+SHA1-Digest: 0SPfHhdPoXiNqWYr6ZTauq4qKtc=
+
+Name: res/drawable/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: assets/textures/1x/RecipeResultsCheesecake1.atf
+SHA1-Digest: 7ofyJxKefVIFozq0Hd0D+GDKti4=
+
+Name: assets/textures/2x/background_9.jpg
+SHA1-Digest: yLiKzo0ai1vHPR8g0Hm5JJddCG8=
+
+Name: assets/textures/1x/unlockStage_13.png
+SHA1-Digest: Ll+urFuPYTPZlrDzJImYjyYYPbI=
+
+Name: res/drawable-mdpi/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: res/drawable-long-land-mdpi/loading.png
+SHA1-Digest: 6AxTryBQ1q0tLZP38dpIEmMIgCY=
+
+Name: assets/textures/2x/PassedFriendPopUp.atf
+SHA1-Digest: 64pncEulZ4kDRKUg+At7MYBzd5A=
+
+Name: assets/textures/2x/RecipeResultsSquarecake3.xml
+SHA1-Digest: 0dDXGd8tOEBGXuZuZH4oAWIopv8=
+
+Name: assets/textures/2x/RecipeResultsRoundcake4.xml
+SHA1-Digest: j9hPuR3k9hrCWJ5levkGvaiafsM=
+
+Name: assets/textures/2x/RecipeResultsTart3.atf
+SHA1-Digest: 6Ztcylma6iXpLXQJ+CmmciIPt7A=
+
+Name: assets/textures/common/map_3.jpg
+SHA1-Digest: sB+rBixP0r4N00sbPCElXZdCzV4=
+
+Name: assets/textures/2x/RecipeResultsCakeslice6.atf
+SHA1-Digest: aJcLX3nyLosriecekqIk4rCBy1I=
+
+Name: assets/textures/2x/unlockStage_9.png
+SHA1-Digest: dUj3JbZskWC1rsyerd/9c0bGjSY=
+
+Name: assets/textures/1x/unlockStage_11.png
+SHA1-Digest: xEhpQNE5RaBIQGdiZZrj3zfppCs=
+
+Name: assets/textures/2x/RecipeResultsCheesecake6.atf
+SHA1-Digest: UIYhseqf9Qj1vdKVW0lm86gdCYE=
+
+Name: assets/fonts/1x/GrilledCheeseBTN_Size18_ColorFFFFFF_StrokeA8364B
+ .atf
+SHA1-Digest: qCeNeFAE9k6cptZqpDg3zPUoFRo=
+
+Name: assets/textures/2x/HowToPlay.xml
+SHA1-Digest: hNUL3Skzz06EN6ApId5KbSowreI=
+
+Name: assets/textures/1x/RecipeResultsFlan2.xml
+SHA1-Digest: /TxJGgEMrHCHSUbCE4TvTIKEYjo=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+
+Name: assets/textures/2x/RecipeResultsNapolean1.xml
+SHA1-Digest: V+eVDb4darr7u0a4pITdgBJ3xvE=
+
+Name: assets/META-INF/AIR/extensions/com.sgn.android4support/catalog.x
+ ml
+SHA1-Digest: YABOgTpGCfwoU/0T7QvatF+PT0U=
+
+Name: assets/textures/2x/MapPaginatorIcons.atf
+SHA1-Digest: 0vdtAxWv4m2EuLUeSCp6tmeuIjQ=
+
+Name: assets/textures/1x/RecipeResultsTart2.atf
+SHA1-Digest: fOGS2zL+i7TE2C6IdXFZ9m/z9xQ=
+
+Name: assets/textures/1x/RecipeResultsSundae6.xml
+SHA1-Digest: /Qr+U17vHB9Wzj9Dlm3pidrE3Qo=
+
+Name: assets/textures/2x/RecipeResultsParfait2.xml
+SHA1-Digest: ednxXeGiUQ3wB1Ybny6dTZpv6x0=
+
+Name: assets/textures/1x/RecipeResultsSavarin6.atf
+SHA1-Digest: D2owismh8D3l3ofp2y5QIFGGhI4=
+
+Name: assets/textures/common/map_4.jpg
+SHA1-Digest: H4ot5lKVRKBuUajxxcs7ZMOBQC8=
+
+Name: assets/textures/2x/MiscIconsCollect.xml
+SHA1-Digest: BY2bmMmCPxd2cfYr0Jum6pUqAes=
+
+Name: assets/textures/1x/RecipeResultsCupcake1.atf
+SHA1-Digest: Iy5sk64P+f3eLYm732g53tWN+Sc=
+
+Name: assets/textures/1x/RecipeResultsIcecreamsandwich6.atf
+SHA1-Digest: k8m60SLt21nqSHf2saVz9oaEfmI=
+
+Name: assets/fonts/1x/LobsterTwoRegular_Size36_ColorFFFFFF_StrokeAF384
+ E_DropShadow560D1B.fnt
+SHA1-Digest: pwJq1s4Wij0EmhbXxVSjIDZnMC8=
+
+Name: assets/textures/1x/RecipeResultsDanish4.xml
+SHA1-Digest: 0ZEnleBdf6DtawaB4TXKC8dFSbo=
+
+Name: assets/textures/2x/DynamicPopUp.xml
+SHA1-Digest: Oyrmb/qGgsyOk09Ofed7FImFurE=
+
+Name: assets/textures/1x/RecipeResultsCupcake4.xml
+SHA1-Digest: /C3dSK0QebPBztLAL86FNhuufgA=
+
+Name: assets/textures/1x/background_6.jpg
+SHA1-Digest: vq92tWXvlfX29reJw2RUztrMyFc=
+
+Name: assets/textures/2x/RecipeResultsParfait1.xml
+SHA1-Digest: q5hC7R8Tl7GPlPMKw8VWdrvX+Mo=
+
+Name: assets/fonts/2x/GrilledCheeseBTN_Size18_ColorFFFFFF_StrokeA8364B
+ .fnt
+SHA1-Digest: vFWzRP/4e4D84UmalEhyC6GctG8=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+

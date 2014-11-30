@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_default">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="common_action_bar_splitter">#ffd2d2d2</color>
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_disabled">#ffaaaaaa</color>
+    <color name="common_signin_btn_dark_text_focused">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_default_background">#ffdd4b39</color>
+    <color name="common_signin_btn_light_text_default">#ff737373</color>
+    <color name="common_signin_btn_light_text_disabled">#ffaaaaaa</color>
+    <color name="common_signin_btn_light_text_focused">#ff737373</color>
+    <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <color name="gray_dark_text">#ff262626</color>
+    <color name="gray_light">#aeaeaeae</color>
+    <color name="gray_text">#ff666666</color>
+    <color name="hurricane_category">#ffa1d999</color>
+    <color name="hurricane_fill">#20f5f5f5</color>
+    <color name="stock_green">#ff009a00</color>
+    <color name="translucent_black">#80000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="warning_orange">#ffff8529</color>
+    <color name="white">#ffffffff</color>
+</resources>

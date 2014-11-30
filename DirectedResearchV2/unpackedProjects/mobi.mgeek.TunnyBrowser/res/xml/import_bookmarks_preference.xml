@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/import_bookmarks_dialog_title"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.ImportBookmarksGroupPreference />
+</dolphin.preference.ExpandablePreferenceScreen>

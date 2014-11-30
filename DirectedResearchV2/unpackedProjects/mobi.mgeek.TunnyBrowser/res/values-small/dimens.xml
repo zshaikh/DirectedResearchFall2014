@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cell_height">80.0dip</dimen>
+    <dimen name="cell_width">85.0dip</dimen>
+    <dimen name="icon_display_size">55.0dip</dimen>
+</resources>

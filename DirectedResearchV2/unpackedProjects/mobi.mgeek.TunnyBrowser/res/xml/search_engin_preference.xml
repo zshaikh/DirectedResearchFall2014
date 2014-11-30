@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_content_search_engine"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.SearchEnginGroupPreference dolphin:dialogTitle="@string/pref_content_search_engine" dolphin:key="search_engine" dolphin:title="@string/pref_content_search_engine" dolphin:defaultValue="google" />
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.CheckBoxPreference dolphin:key="enable_search_suggestion" dolphin:title="@string/pref_enable_search_suggestion" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_full_bk" />
+</dolphin.preference.ExpandablePreferenceScreen>

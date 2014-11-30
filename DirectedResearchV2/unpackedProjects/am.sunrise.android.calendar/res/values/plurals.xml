@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="alarm_reminder">
+        <item quantity="other">%1$s in %2$d minutes</item>
+        <item quantity="one">%1$s in %2$d minute</item>
+    </plurals>
+    <plurals name="number_of_days">
+        <item quantity="other">%d days</item>
+        <item quantity="one">%d day</item>
+    </plurals>
+    <plurals name="number_of_hours">
+        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hour</item>
+    </plurals>
+    <plurals name="number_of_hours_medium">
+        <item quantity="other">%d hrs</item>
+        <item quantity="one">%d hr</item>
+    </plurals>
+    <plurals name="number_of_minutes">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minute</item>
+    </plurals>
+    <plurals name="number_of_minutes_medium">
+        <item quantity="other">%d mins</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="number_of_months">
+        <item quantity="other">%d months</item>
+        <item quantity="one">%d month</item>
+    </plurals>
+    <plurals name="recurring_rule_every_day">
+        <item quantity="other">Every %d Days</item>
+        <item quantity="one">Every %d Day</item>
+    </plurals>
+    <plurals name="recurring_rule_every_month">
+        <item quantity="other">Every %d Months</item>
+        <item quantity="one">Every %d Month</item>
+    </plurals>
+    <plurals name="recurring_rule_every_week">
+        <item quantity="other">Every %d Weeks</item>
+        <item quantity="one">Every %d Week</item>
+    </plurals>
+    <plurals name="recurring_rule_every_year">
+        <item quantity="other">Every %d Years</item>
+        <item quantity="one">Every %d Year</item>
+    </plurals>
+    <plurals name="view_more_invitees">
+        <item quantity="other">View %d more invitees</item>
+        <item quantity="one">View %d more invitee</item>
+    </plurals>
+    <plurals name="years_old">
+        <item quantity="other">%1$d years old</item>
+        <item quantity="one">%1$d year old</item>
+    </plurals>
+</resources>

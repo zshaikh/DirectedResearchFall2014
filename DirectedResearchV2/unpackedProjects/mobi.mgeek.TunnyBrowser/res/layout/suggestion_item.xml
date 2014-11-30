@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/suggestion_container" android:layout_width="fill_parent" android:layout_height="51.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/icon2_group" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/icon2" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+    </LinearLayout>
+    <ImageView android:id="@id/icon1" android:duplicateParentState="true" android:layout_width="@dimen/search_suggestion_icon_width" android:layout_height="@dimen/search_suggestion_icon_width" android:layout_marginLeft="@dimen/search_suggestion_icon_leftmargin" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/suggestion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/search_item_right_margin" android:layout_toLeftOf="@id/icon2_group" android:layout_toRightOf="@id/icon1" android:layout_centerVertical="true">
+        <TextView android:textSize="17.0sp" android:ellipsize="end" android:id="@id/text1" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/text2" android:visibility="gone" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

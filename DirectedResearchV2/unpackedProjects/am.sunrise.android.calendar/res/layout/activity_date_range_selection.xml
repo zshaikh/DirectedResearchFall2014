@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/date_selection_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <am.sunrise.android.calendar.ui.widgets.calendar.CalendarView android:id="@id/date_selection_calendar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/datetime_picker_allday_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <Switch android:textSize="@dimen/datetime_picker_allday_font_size" android:textColor="@color/datetime_picker_allday" android:id="@id/date_selection_allday_switch" android:background="@drawable/large_switch_selector" android:paddingLeft="@dimen/datetime_picker_horizontal_margin" android:paddingRight="@dimen/datetime_picker_horizontal_margin" android:layout_width="fill_parent" android:layout_height="@dimen/datetime_picker_allday_height" android:text="@string/date_selection_all_day_event" android:fontFamily="sans-serif" style="@style/SwitchSunrise_Components" />
+    <View android:background="@color/datetime_picker_allday_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <am.sunrise.android.calendar.ui.widgets.SRTimePicker android:id="@id/date_selection_time_picker" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/datetime_picker_horizontal_margin" android:layout_marginRight="@dimen/datetime_picker_horizontal_margin" />
+</LinearLayout>

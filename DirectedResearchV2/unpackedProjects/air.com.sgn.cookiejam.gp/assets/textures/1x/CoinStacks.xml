@@ -1,0 +1,8 @@
+<TextureAtlas imagePath="CoinStacks.png">
+	<SubTexture name="coinstack_135" x="0" y="234" width="115" height="115"/>
+	<SubTexture name="coinstack_1475" x="117" y="0" width="115" height="115"/>
+	<SubTexture name="coinstack_25" x="0" y="351" width="115" height="115"/>
+	<SubTexture name="coinstack_275" x="117" y="117" width="115" height="115"/>
+	<SubTexture name="coinstack_3125" x="0" y="117" width="115" height="115"/>
+	<SubTexture name="coinstack_575" x="0" y="0" width="115" height="115"/>
+</TextureAtlas>

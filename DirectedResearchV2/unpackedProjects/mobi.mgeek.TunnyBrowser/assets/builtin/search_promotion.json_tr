@@ -1,0 +1,19 @@
+{
+ pid_promotions:[
+   {search_engine:"yandex",
+    pid:"2053116",
+    pid_key:"clid",
+    search_entries:"speed_dial"
+   },
+   {search_engine:"yandex",
+    pid:"2053117",
+    pid_key:"clid",
+    search_entries:"history,most_visited,home_page,bookmark,desktop_shortcut,gesture"
+   },
+   {search_engine:"yandex",
+    pid:"2053114",
+    pid_key:"clid",
+    search_entries:"search_suggestion"
+   }
+  ]
+}

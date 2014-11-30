@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mgeek.android.ui.CheckableLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/settings_page_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_page_text_margin_left" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip">
+        <CheckedTextView android:textAppearance="@style/SettingsItemTitleAppearence" android:ellipsize="marquee" android:id="@id/title" android:paddingRight="10.0dip" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:checkMark="@drawable/btn_radio_new" android:minWidth="200.0dip" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/input_frame" android:paddingLeft="10.0dip" android:paddingRight="@dimen/settings_page_checkbox_margin_right" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_container" />
+</com.mgeek.android.ui.CheckableLayout>

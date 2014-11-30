@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<wall_posts>
+		<gifts>
+			<gift_1>
+				<title>スロットマニアギフトを送る</title>
+				<desc>無料コインを送ります。お楽しみください！</desc>
+				<user_msg>sent you [num] coins</user_msg>
+			</gift_1>
+			<gift_2>
+				<title>スロットマニアギフトを送る</title>
+				<desc>5フリースピンです。楽しんでください!</desc>
+				<user_msg>sent you 5 free spins</user_msg>
+			</gift_2>
+			<gift_3>
+				<title>スロットマニアギフトを送る</title>
+				<desc>10フリースピンです。楽しんでください!</desc>
+				<user_msg>sent you 10 free spins</user_msg>
+			</gift_3>
+		</gifts>
+		<significant_win>
+			<type_1>
+				<title></title>
+				<desc></desc>
+				<user_msg></user_msg>
+			</type_1>
+			<type_2>
+				<title>最初にクリックした5人は300コイン獲得</title>
+				<desc>[user_name]は1列に5つ並べて、スロットマニアで[num]コインを獲得しました。[user_name]はAndroidでスロットマニアをプレーしています。</desc>				
+				<user_msg>Must be my lucky day!</user_msg>
+			</type_2>
+		</significant_win>
+		<level_up>
+			<title>最初にクリックした10人は200コイン獲得</title>
+			<desc>[user_name]は新しいレベルに到達して[num]スロットマニアコインを獲得しました。[user_name]はAndroidでスロットマニアをプレーしています。</desc>			
+			<user_msg>These slots are so fun!</user_msg>
+		</level_up>
+		<mega_bonus>
+			<title>最初にクリックした10人は200コイン獲得</title>
+			<desc>[user_name]は[num]スロットマニアコインのメガボーナスを獲得した後に、幸運をシェアしています</desc>
+			<user_msg></user_msg>  
+		</mega_bonus>
+		<mini_bonus_game>
+			<title>最初にクリックした5人は300コイン獲得</title>
+			<desc>[machine_name]スロットゲームで[num]スロットマニアコインを獲得した後に、[user_name]は幸運をシェアしています。</desc>
+			<user_msg></user_msg>
+		</mini_bonus_game>
+		<bonus_game>
+			<title>最初にクリックした5人は300コイン獲得</title>
+			<desc>[machine_name]ボーナスラウンドで[num]スロットマニアコインを獲得した後に、[user_name]は幸運をシェアしています。</desc>			
+			<user_msg></user_msg>
+		</bonus_game>
+		<play>
+			<url>
+				<name_google>Androidのスロットマニア</name_google>
+				<name_amazon>Amazonのスロットマニア</name_amazon>
+			</url>
+		</play>
+		<bonus>
+			<url>
+				<name>最初にクリックした5人は200コイン獲得</name>
+			</url>
+		</bonus>
+	</wall_posts>
+	<gift>
+		<gift_back>
+			<desc>You gifted back</desc>
+		</gift_back>
+		<gift_reject>
+			<desc>Gift deleted</desc>
+		</gift_reject>
+		<gift_collect>
+			<desc>Gift collected</desc>
+		</gift_collect>
+		<send_gifts>
+			<send_gifts_count>You sent [count] from [num]</send_gifts_count>
+		</send_gifts>
+		<nofriend> <!-- TODO: -->
+			<title>友達がいません</title>
+			<message>あなたにはスロットマニアをプレーしている友達がいません</message>
+		</nofriend>
+		<send_request>
+			<message>友達を選ぶ</message>
+			<notification_text>スロットマニアのギフトを受け取る</notification_text>
+		</send_request>
+		<collect>
+			<coints>[num] coins</coints>
+			<free_spins5>5 free spins</free_spins5>
+			<free_spins10>10 free spins</free_spins10>
+		</collect>
+	</gift>
+	<coupon>
+		<expired>
+			<title>Gift expired</title>
+			<desc>
+				Gift expired
+			</desc>
+		</expired>
+		<cant_collect>
+			<title></title>
+			<desc>
+				ギフトを集めることができませんでした。
+			</desc>
+		</cant_collect>
+		<cant_collect_some>
+			<title></title>
+			<desc>
+				いくつかのギフトは受け取る事ができませんでした。
+			</desc>
+		</cant_collect_some>
+		<already_collected>
+			<title>ギフトは既に集められました</title>
+			<desc>
+				ギフトは既に集められました。
+			</desc>
+		</already_collected>
+		<already_collected_some>
+			<title>
+			</title>
+			<desc>
+				いくつかのギフトは既に受け取っています。
+			</desc>
+		</already_collected_some>
+		<coupon_system_unaviable>
+			<title>
+			</title>
+			<desc>
+				スロットマニアギフトシステムは更新を行っており、しばらく利用できません。
+			</desc>
+		</coupon_system_unaviable>
+				<unknown_error>
+		    <title>
+			</title>
+			<desc>
+			    スロットマニアギフトシステムは更新を行っており、しばらく利用できません。
+			</desc>
+		</unknown_error>
+	</coupon>
+	<mega_bonus>
+		<friends_bonus>
+			<info>
+				たくさんの友達 = たくさんのコイン。6-10 人の友達： 10%。 11-15: 15%. 16-20: 20%. 21-30: 30%. 30+: 40%
+			</info>
+			<comment>
+				[FRIENDS] スロットマニア友達：+[PERCENTS]% ボーナス
+			</comment>
+		</friends_bonus>
+		<like_bonus>
+			<like0>
+				
+			</like0>
+			<like1>
+				
+			</like1>
+		</like_bonus>
+	</mega_bonus>
+	<default_friend_name>
+		Friend
+	</default_friend_name>
+	<friends_lock>
+		<many>You need [num] more friends to open Reel Friends</many>
+		<one>You need [num] more friend to open Reel Friends</one>
+	</friends_lock>
+	<system>
+		<connection_lost>
+			<title>
+				接続が切れました。
+			</title>
+			<description>
+				接続が切れました。[n]以下をクリックして再接続してください。
+			</description>
+		</connection_lost>
+		<no_connection>
+			<title>
+				接続が切れました。
+			</title>
+			<description>
+				接続が切れました。[n]以下をクリックして再接続してください。
+			</description>
+		</no_connection>
+		<login_not_allowed>
+			<title>
+				エラー
+			</title>
+			<description>
+				申し訳ございませんが、現在ログインできません。[n]以下のボタンをクリックして再接続してください。
+			</description>
+		</login_not_allowed>
+	</system>
+	<welcome>
+		<standalonewarn>
+			<title>未接続です</title>
+			<message>You have selected to play in unconnected mode. This will result in friends features to be disabled. Are you sure you want to proceed?</message>
+		</standalonewarn>
+	</welcome>
+	<arena>
+		<games>
+			<update>
+				<title>アップデートしてください</title>
+				<message>[GAME]は新バージョンに更新されています。アップデートしますか? (ダウンロードサイズ [SIZE]MB )</message>
+			</update>
+			<download>
+				<title>ダウンロードしてください</title>
+				<message>お選びになったゲームで遊ぶには[SIZE] MBのファイルをダウンロードする必要があります。Wi-Fiで接続される事をお勧めします。ダウンロードを実行しますか？</message>
+			</download>
+			<outdated>
+				<title>スロットマニアをアップデートしてください</title>
+				<message_google>[GAME]を始める前にスロットマニアをアップデートしてください。Androidマーケットを開きますか?</message_google>
+				<message_amazon>[GAME]を始める前にスロットマニアをアップデートしてください。Amazon Appstoreを開きますか?</message_amazon>
+			</outdated>
+			<downloading>
+				<title>ゲームをダウンロード</title>
+				<message>選択したゲームをダウンロード中です。その間に、他のゲームをプレーすることができます。X% ダウンロードされました。</message>
+			</downloading>
+			<in_queue>
+				<message>選択したゲームをダウンロード中です。その間に、他のゲームをプレーすることができます。X% ダウンロードされました。</message>
+			</in_queue>
+			<remove>
+				<title>ゲームを削除</title>
+				<message> [game] ゲームを削除しますか？</message>
+			</remove>
+		</games>
+	</arena>
+    <invite>
+    	<nofriend>
+    		<title>友達がいません</title>
+    		<message>あなたにはスロットマニアをプレーしている友達がいません</message>
+    	</nofriend>
+		<sms>
+			<text_google>携帯のベガス、スロットマニアで一緒に遊びましょう！ https://market.android.com/details?id=air.com.playtika.slotomania</text_google>
+			<text_amazon>携帯のベガス、スロットマニアで一緒に遊びましょう！ http://www.amazon.com/gp/mas/dl/android?p=air.com.playtika.amazon.slotomania</text_amazon>
+		</sms>
+		<mail>
+			<text_google>携帯のベガス、スロットマニアで一緒に遊びましょう！ https://market.android.com/details?id=air.com.playtika.slotomania</text_google>
+			<text_amazon>携帯のベガス、スロットマニアで一緒に遊びましょう！ http://www.amazon.com/gp/mas/dl/android?p=air.com.playtika.amazon.slotomania</text_amazon>
+			<subject>スロットマニアで遊ぼう！</subject>
+		</mail>
+    </invite>
+    <url>
+		<rate_app_google>market://details?id=air.com.playtika.slotomania</rate_app_google>
+		<rate_app_amazon>http://www.amazon.com/gp/mas/dl/android?p=air.com.playtika.amazon.slotomania</rate_app_amazon>
+    </url>
+	<msg>
+		<failed>
+			<dlg>
+				<title>スロットマニア</title>
+				<message>メッセージの送信に失敗しました</message>
+			</dlg>
+		</failed>
+		<association>
+			<res>
+				<title>デバイス接続</title>
+				<failed>接続は失敗しました</failed>
+				<success>接続は成功しました</success>
+			</res>
+		</association>
+	</msg>
+    <question>
+		<association>
+			<fb>
+				<title>Facebook接続</title>
+				<message>このデバイスをFacebookアカウントに接続させますか？最初の接続で残高が転送されます。</message>
+			</fb>
+			<sa>
+				<title>既存のアカウントでプレイ</title>
+				<msg>この機器を既存のスロットマニアアカウントに接続しますか？</msg>
+			</sa>
+		</association>
+		<fb>
+			<logoff>
+				<title>ログオフ</title>
+				<message>Facebookからログオフしてもよろしいですか？</message>
+			</logoff>
+			<login>
+				<title>ログイン</title>
+			</login>
+		</fb>
+		<sa>
+			<nosocial>
+				<title>Unconnected</title>
+				<friends>
+					<message>Friend reels needs Facebook game mode, would you like to log in into this mode?</message>
+				</friends>
+				<feature>
+					<message>この機能はFacebookへの接続を必要とします。接続しますか？</message>
+				</feature>
+			</nosocial>
+		</sa>
+		<exit>
+			<title>ゲームを終了</title>
+			<message>スロットマニアを終了しますか？</message>
+		</exit>
+		<rate>
+			<title>スロットマニア</title>
+			<message_google>Android Marketでわたしたちを評価してください</message_google>
+			<message_amazon>Amazon Appstoreでわたしたちを評価してください</message_amazon>
+		</rate>
+    </question>
+	<error>
+		<general>
+			<title>エラー！</title>
+		</general>
+        <respin>
+            <title>SORRY</title>
+            <message>You've already played re-spin on a different device.</message>
+        </respin>
+		<download>
+			<message>[GAME]をインストール中にエラーが発生しました。ダウンロードはまもなく始まります。</message>
+		</download>
+		<loading>
+			<message>[GAME]を読み込み中にエラー</message>
+		</loading>
+		<transaction>
+			<message>iTunesにログイン中にエラー。再度ためしてください。</message>
+			<empty>
+				<message>アカウントを復旧できませんでした。</message>
+			</empty>
+		</transaction>
+		<send_gift_request>
+			<title>エラー！</title>
+			<message>ギフトを送っている時にエラーが発生しました。</message>
+		</send_gift_request>
+		<invite_friend_request>
+			<title>エラー！</title>
+			<message>友達を招待している時にエラーが発生しました</message>
+		</invite_friend_request>
+	</error>
+	<collect>
+		<gifts>
+			<coints>
+				<gift>50コイン</gift>
+			</coints>
+			<free5>
+				<spins>5フリースピン</spins>
+			</free5>
+			<free10>
+				<spins>10フリースピン</spins>
+			</free10>
+			<bonus>
+				<ready>Bonus available</ready>
+			</bonus>
+			<next>
+				<bonus>Next bonus in</bonus>
+			</next>
+		</gifts>
+	</collect>
+	<btn>
+		<ok>Ok</ok>
+		<no>いいえ</no>
+		<yes>はい</yes>
+	</btn>
+	<warning>
+		<title>スロットマニアを更新</title>
+		<update>
+			<required_google>更新されたスロットマニアバージョンが利用できます。Android Marketからダウンロードしてください。</required_google>
+			<required_amazon>更新されたスロットマニアバージョンが利用できます。 Amazon Appstoreからダウンロードしてください。</required_amazon>
+			<available>更新されたスロットマニアバージョンが利用できます。今すぐダウンロードしますか？	</available>
+		</update>
+	</warning>
+	<welcome>
+		<standalonewarn>
+			<title>未接続</title>
+			<message>You have selected to play in unconnected mode. This will result in friends features to be disabled. Are you sure you want to proceed?</message>
+		</standalonewarn>
+	</welcome>
+	<notify>
+		<local>
+			<hourly_bonus>
+				<btn_text>集める</btn_text>
+				<body_text>スロットマニアスペシャルボーナスがスロットマニアロビーにあります。今すぐ集めますか？</body_text>
+			</hourly_bonus>
+		</local>
+	</notify>
+	<send_gift>
+		<nofriend>
+			<title>友達がいません</title>
+			<message>あなたにはスロットマニアをプレーしている友達がいません</message>
+		</nofriend>
+	</send_gift>
+	<invite_friend_request>
+		<message>友達を選ぶ</message>
+		<notification_text>スロットマニアで一緒にプレイしましょう!</notification_text>
+	</invite_friend_request>
+	<send_gift_request>
+		<message>Send gift request message text</message>
+		<notification_text>Send gift request notification text</notification_text>
+	</send_gift_request>
+	<payment>
+		<success>
+			<title>ご購入完了</title>
+			<text>$[num]分のスロットマニアコインを購入されました。</text> 
+		</success>
+		<title>Backup</title>
+		<text>Did you know? If you backup using iTunes, all of your purchases will be saved if your phone is lost.</text>
+	</payment>
+	<friend_invitation>
+		<title>You have a Slotomania invitation!</title>
+		<user_msg>[user_name] invited you to play Slotomania. [user_name] is playing Slotomania for Android.</user_msg>
+	</friend_invitation>
+	<send_gifts>
+		<send_gifts_count>You sent [count] from [num]</send_gifts_count>
+	</send_gifts>
+	<rate>
+		<game>
+			<url></url>
+		</game>
+	</rate>
+	<android>
+		<market>
+			<url_google>https://market.android.com/details?id=air.com.playtika.slotomania</url_google>
+			<url_amazon>http://www.amazon.com/gp/mas/dl/android?p=air.com.playtika.amazon.slotomania</url_amazon>
+		</market>
+	</android>
+	<rescue>
+	    <respin>
+	        <title>Free fall rescue!</title>
+	        <body>Oops! Your spin ended while the reels were free falling. [n] Your previous wins have already been added to your balance. [n] Click PLAY to continue your spin.</body>
+	    </respin>
+	</rescue>
+</strings>

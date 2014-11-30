@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Przenieś tutaj %d elementy(ów)</item>
+        <item quantity="one">Przenieś tutaj 1 element</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Ostatnie %d dni</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d godzin(y)</item>
+        <item quantity="one">1 godzina</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d wyniki(ów)</item>
+        <item quantity="zero">Brak wyników</item>
+        <item quantity="one">1 wynik</item>
+        <item quantity="few">%d wyniki(ów)</item>
+    </plurals>
+</resources>

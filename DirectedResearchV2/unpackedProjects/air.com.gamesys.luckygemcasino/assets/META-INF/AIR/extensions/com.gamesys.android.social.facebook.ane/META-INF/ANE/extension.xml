@@ -1,0 +1,25 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.9">
+  <id>com.gamesys.android.social.facebook.ane</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>facebookinterfacenative.jar</nativeLibrary>
+        <initializer>com.gamesys.android.social.facebook.ane.FacebookExtension</initializer>
+        <finalizer>com.gamesys.android.social.facebook.ane.FacebookExtension</finalizer>
+      </applicationDeployment>
+    </platform>
+
+	<platform name="iPhone-ARM">
+       <applicationDeployment>
+         <nativeLibrary>libFacebookInterfaceIOSNative.a</nativeLibrary>
+         <initializer>IOSNativeFacebookExtensionInitializer</initializer>
+       </applicationDeployment>
+    </platform>
+    
+    <platform name="default"> 
+    	<applicationDeployment /> 
+    </platform>
+        
+  </platforms>
+</extension>

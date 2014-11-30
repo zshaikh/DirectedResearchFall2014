@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353981"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/appsponsor/nativeExtensions/appsponsorsdk/AppSponsor" mod="1385428180000">
+                <def id="com.appsponsor.nativeExtensions.appsponsorsdk:AppSponsor"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Function" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.appsponsor.nativeExtensions.appsponsorsdk:AppSponsorEvent" type="e"/>
+                <dep id="com.appsponsor.nativeExtensions.appsponsorsdk:InternalMessages" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/appsponsor/nativeExtensions/appsponsorsdk/AppSponsorEvent" mod="1384224313000">
+                <def id="com.appsponsor.nativeExtensions.appsponsorsdk:AppSponsorEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/appsponsor/nativeExtensions/appsponsorsdk/InternalMessages" mod="1384224271000">
+                <def id="com.appsponsor.nativeExtensions.appsponsorsdk:InternalMessages"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="4fcade0bbae4da309768e540bb4db77cf6320afa086cbc2c816f8469354449a2"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

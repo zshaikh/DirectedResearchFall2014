@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/4.0">
+
+	<id>com.slotgalaxy</id>
+
+	<filename>MainAndroid</filename>
+
+	<name>Slot Galaxy</name>
+	
+	<versionNumber>1.4.1</versionNumber>
+		         
+
+	<initialWindow>
+
+		<content>Main.swf</content>
+		
+		<depthAndStencil>false</depthAndStencil>
+		<renderMode>direct</renderMode>
+		<autoOrients>false</autoOrients>
+        <fullScreen>true</fullScreen>
+        <visible>true</visible>
+        
+        <aspectRatio>landscape</aspectRatio>
+    </initialWindow>
+
+	<icon>
+		<image29x29>icon29.png</image29x29>
+		<image36x36>icon36.png</image36x36>
+		<image48x48>icon48.png</image48x48>
+		<image50x50>icon50.png</image50x50>
+		<image57x57>icon57.png</image57x57>
+		<image58x58>icon58.png</image58x58>
+		<image72x72>icon72.png</image72x72>
+		<image100x100>icon100.png</image100x100>
+		<image114x114>icon114.png</image114x114>
+		<image144x144>icon144.png</image144x144>
+		<image512x512>icon512.png</image512x512>
+		<image1024x1024>icon1024.png</image1024x1024>
+	</icon>
+
+	<android>
+        <manifestAdditions><![CDATA[
+			<manifest android:installLocation="preferExternal">
+		
+				<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
+		
+			    <uses-permission android:name="android.permission.INTERNET"/>
+			    <uses-permission android:name="com.android.vending.BILLING"/>
+			    
+			    
+			    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+			    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+			    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+			    
+			    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+			    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			    
+			    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+			    
+			    <permission android:name="air.com.slotgalaxy.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+				<uses-permission android:name="air.com.slotgalaxy.permission.C2D_MESSAGE" />
+			    
+			   
+			    
+			    <compatible-screens>
+<screen android:screenSize="normal" android:screenDensity="ldpi" />
+<screen android:screenSize="normal" android:screenDensity="mdpi" />
+<screen android:screenSize="normal" android:screenDensity="hdpi" />
+<screen android:screenSize="normal" android:screenDensity="213" />
+<screen android:screenSize="normal" android:screenDensity="xhdpi" />
+<screen android:screenSize="normal" android:screenDensity="480" />
+<screen android:screenSize="large" android:screenDensity="ldpi" />
+<screen android:screenSize="large" android:screenDensity="mdpi" />
+<screen android:screenSize="large" android:screenDensity="hdpi" />
+<screen android:screenSize="large" android:screenDensity="213" />
+<screen android:screenSize="large" android:screenDensity="xhdpi" />
+<screen android:screenSize="large" android:screenDensity="480" />
+<screen android:screenSize="xlarge" android:screenDensity="ldpi" />
+<screen android:screenSize="xlarge" android:screenDensity="mdpi" />
+<screen android:screenSize="xlarge" android:screenDensity="hdpi" />
+<screen android:screenSize="xlarge" android:screenDensity="213" />
+<screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+<screen android:screenSize="xlarge" android:screenDensity="480" />
+</compatible-screens>
+			    
+			    <supports-screens android:xlargeScreens="true" />
+			    
+			    <application android::debuggable="false">
+			    <!--application>-->
+			    
+
+					
+					<activity>
+						<intent-filter>
+						    <action android:name="android.intent.action.MAIN" />
+						    <category android:name="android.intent.category.LAUNCHER" />
+						</intent-filter>
+						<intent-filter>
+						    <action android:name="android.intent.action.VIEW" />
+						    <category android:name="android.intent.category.BROWSABLE"/>
+                         	<category android:name="android.intent.category.DEFAULT"/>
+						    <data android:scheme="slotgalaxy"/>
+						</intent-filter>
+						
+						<!-- com.stuv.ane.apsalar.AneApsalar -->
+							<intent-filter>
+							   <action android:name="android.intent.action.VIEW" />
+							   <category android:name="android.intent.category.BROWSABLE" />
+							   <category android:name="android.intent.category.DEFAULT" />
+							   <data android:scheme="http"
+							         android:host="e.apsalar.com"
+							         android:pathPrefix="/api/v1/appstore/air.com.slotgalaxy" />
+							</intent-filter>
+						<!-- com.stuv.ane.apsalar.AneApsalar -->
+						
+					</activity>
+					
+
+
+
+					<!-- com.stuv.ane.pushnotif -->
+				    	<receiver android:name="com.stuv.ane.pushnotif.C2DMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+							<intent-filter>
+								<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+								<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+								<category android:name="air.com.slotgalaxy" />
+							</intent-filter>
+						</receiver>
+						<service android:name=".GCMIntentService" />
+			    	<!-- com.stuv.ane.pushnotif -->
+			    	
+			    
+			    	<!-- com.milkmangames.extensions.AndroidIAB -->
+						<service android:name="com.milkmangames.extensions.android.IABBillingService" />
+						<receiver android:name="com.milkmangames.extensions.android.IABBillingReceiver">
+							<intent-filter>
+								<action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+								<action android:name="com.android.vending.billing.RESPONSE_CODE" />
+								<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
+							</intent-filter>
+						</receiver>
+					<!-- com.milkmangames.extensions.AndroidIAB -->
+					 
+					 
+					<!-- com.milkmangames.extensions.AmazonPurchase -->
+				        <receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+							<intent-filter>
+								<action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+							</intent-filter>
+						</receiver>
+			        <!-- com.milkmangames.extensions.AmazonPurchase -->
+					
+					
+					
+					<!-- com.milkmangames.extensions.GoViral -->
+						<!--<activity android:name="com.milkmangames.extensions.android.MsgWrapActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+						<activity android:name="com.milkmangames.extensions.android.FacebookWrapActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+						-->
+					<!-- com.milkmangames.extensions.GoViral -->
+							
+					<!-- com.applovin.air.AppLovin -->
+						<meta-data android:name="applovin.sdk.key" android:value="QUw9PLrSENPnTcQOl_ze05vWkPJL5m0bPN4XpWkbBxux4_4Ds8chAxvDyxuIo3JspqorfH7RRxaNMzxsA1xp0r" />
+						<activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
+					<!-- com.applovin.air.AppLovin -->
+							
+							
+					<!-- com.appsponsor.nativeExtensions.appsponsorsdk -->
+						<activity android:name="com.appsponsor.appsponsorsdk.PopupAdActivity" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent"></activity>
+					<!-- com.appsponsor.nativeExtensions.appsponsorsdk -->
+							
+					<!-- com.stuv.ane.fb.AneFacebook -->
+						<activity android:name="com.stuv.facebook.LoginUsingActivityActivity"/>
+				        <activity android:name="com.stuv.facebook.LoginUsingCustomFragmentActivity"/>
+				        <activity android:name="com.facebook.LoginActivity"
+				                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+				                  android:label="@string/app_name" />
+				        <activity android:name="com.stuv.facebook.LoginUsingLoginFragmentActivity"/>
+				        <activity android:name="com.stuv.ane.facebook.FacebookWrapperActivity"
+				                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+				                  android:label="@string/app_name" />
+					<!-- com.stuv.ane.fb.AneFacebook -->
+					
+					<!-- com.stuv.ane.w3i.AneW3i -->
+						<activity
+					        android:name="com.nativex.monetization.activities.InterstitialActivity"
+					        android:hardwareAccelerated="true"
+					        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+			        <!-- com.stuv.ane.w3i.AneW3i -->
+			 
+			 		<!-- com.tapjoy.extensions -->
+					 	<activity android:name="com.tapjoy.TJCOffersWebView" android:configChanges="keyboardHidden|orientation" />
+						<activity android:name="com.tapjoy.TapjoyFeaturedAppWebView" android:configChanges="keyboardHidden|orientation" />
+						<activity android:name="com.tapjoy.TapjoyVideoView" android:configChanges="keyboardHidden|orientation" />
+					<!-- com.tapjoy.extensions -->
+			         
+					
+			        <!-- com.stuv.ane.referrer.AneReferrer -->
+						<receiver android:name="com.stuv.ane.referrer.ReferrerReceiver" >
+				            <intent-filter>
+				                <action android:name="com.android.vending.INSTALL_REFERRER" />
+				            </intent-filter>
+				            <meta-data android:name="forward.MdotMReceiver" android:value="com.stuv.ane.mdotm.MdotMReceiver" />
+				            <meta-data android:name="forward.AarkiInstallReceiver" android:value="com.aarki.AarkiInstallReceiver" />
+				            <meta-data android:name="forward.mobileapptracker" android:value="com.mobileapptracker.Tracker" />
+				            <meta-data android:name="forward.w3i.main" android:value="com.nativex.advertiser.ReferralReceiver" />
+				            <meta-data android:name="forward.w3i.kochava" android:value="com.kochava.android.tracker.ReferralCapture" />
+				        </receiver>
+			        <!-- com.stuv.ane.referrer.AneReferrer -->
+					
+					<!-- com.stuv.ane.aarki.AneAarki -->
+			       		<activity android:name="com.aarki.AarkiActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
+        			<!-- com.stuv.ane.aarki.AneAarki -->
+        
+			        <!-- com.stuv.ane.applifier.AneApplifier -->
+	        			<activity
+						   android:name="com.applifier.impact.android.view.ApplifierImpactFullscreenActivity"
+						   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+						   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+						   android:hardwareAccelerated="true"
+						/>
+        			<!-- com.stuv.ane.applifier.AneApplifier -->
+        
+        			<!-- com.stuv.ane.pocketchange.AnePocketChange -->
+				    <activity
+				        android:name="com.pocketchange.android.rewards.NotificationActivity"
+				        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+				        android:hardwareAccelerated="false">
+				    </activity>
+				    <activity
+				        android:name="com.pocketchange.android.rewards.ShopActivity"
+				        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+				        android:hardwareAccelerated="false">
+				    </activity>
+				
+				    <receiver android:name="com.pocketchange.android.PackageDataReceiver">
+				        <intent-filter>
+				            <action android:name="android.intent.action.PACKAGE_ADDED" />
+				            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+				            <action android:name="android.intent.action.PACKAGE_REPLACED" />
+				            <data android:scheme="package" /> 
+				        </intent-filter>
+				    </receiver>
+				
+				    <service android:name="com.pocketchange.android.http.AsyncHttpRequestService" />
+						<!--
+					<receiver android:name="com.stuv.ane.pocketchange.PocketChangeReceiver"  android:exported="false">
+						<intent-filter>
+							<action android:name="com.pocketchange.android.rewards.NOTIFY_PRODUCT_TRANSACTION" />
+						</intent-filter>
+					</receiver>-->
+					
+					<receiver android:name="com.pocketchange.android.ProductTransactionsReceiver" android:exported="false">
+						<intent-filter>
+							<action android:name="com.pocketchange.android.rewards.NOTIFY_PRODUCT_TRANSACTION" />
+						</intent-filter>
+					</receiver>
+					
+        			<!-- com.stuv.ane.pocketchange.AnePocketChange -->
+        
+       				<!-- com.stuv.ane.trialpay.AneTrialPay -->
+	        			<activity
+				            android:name="com.stuv.ane.trialpay.TrialPayActivity"
+				            android:configChanges="orientation|keyboardHidden"
+				             >
+				        </activity>
+			        <!-- com.stuv.ane.trialpay.AneTrialPay -->
+			        
+			        <!-- com.stuv.ane.apsalar.AneApsalar -->
+				        <activity android:name="com.apsalar.sdk.Activity"
+						   android:configChanges="keyboardHidden|orientation"
+						   android:label="Apsalar">
+						</activity>
+			        <!-- com.stuv.ane.apsalar.AneApsalar -->
+        				
+        			<!-- com.playhaven.extensions.PlayHaven --> 
+        			
+		                <activity android:name="com.playhaven.src.publishersdk.content.PHContentView" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="adjustResize"></activity>
+		            
+        			<!-- com.playhaven.extensions.PlayHaven --> 
+        				 
+			        
+				</application>
+			</manifest>
+			
+		]]></manifestAdditions>
+
+    </android>
+
+	<extensions>
+	    <extensionID>com.stuv.ane.w3i.AneW3i</extensionID>
+	    <extensionID>com.stuv.ane.mdotm.AneMdotM</extensionID>
+	    <extensionID>com.amazon.extensions.AmazonPurchase</extensionID>
+        <!-- <extensionID>com.sticksports.nativeExtensions.Flurry</extensionID> -->
+        <extensionID>com.milkmangames.extensions.AndroidIAB</extensionID>
+	    <extensionID>com.stuv.ane.facebook.AneFacebook</extensionID>
+	    <extensionID>com.stuv.ane.pushnotif.AnePushNotif</extensionID>
+	    <extensionID>com.stuv.ane.referrer.AneReferrer</extensionID>
+    	<extensionID>com.stuv.ane.gamecircle.AneGameCircle</extensionID>
+    	<extensionID>com.stuv.ane.aarki.AneAarki</extensionID>
+    	<extensionID>com.stuv.ane.info.AneInfo</extensionID>
+    	<extensionID>com.stuv.ane.pocketchange.AnePocketChange</extensionID>
+    	<extensionID>com.stuv.ane.chartboost.AneChartboost</extensionID>
+    	<extensionID>com.stuv.ane.trialpay.AneTrialPay</extensionID>
+    	<extensionID>com.stuv.ane.apsalar.AneApsalar</extensionID>
+    	<extensionID>com.stuv.ane.flurry.AneFlurry</extensionID>
+    	<extensionID>com.hasoffers.MobileAppTracker</extensionID>
+    	<extensionID>com.playhaven.extensions.PlayHaven</extensionID>
+    	<extensionID>com.stuv.ane.applovin.AneAppLovin</extensionID>
+    	<extensionID>com.stuv.ane.applifier.AneApplifier</extensionID>
+    	<extensionID>com.appsponsor.nativeExtensions.appsponsorsdk</extensionID>
+    	
+    </extensions>
+</application>

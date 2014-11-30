@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_account" android:key="accounts">
+        <Preference android:title="@string/add_account" android:key="add_account" android:summary="@string/add_account_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_general_settings">
+        <CheckBoxPreference android:title="@string/settings_sound_effects" android:key="sound_effects" android:defaultValue="true" />
+        <ListPreference android:entries="@array/photo_services" android:title="@string/settings_photo_upload_services_title" android:key="photo_service" android:defaultValue="2" android:entryValues="@array/photo_service_values" />
+        <ListPreference android:entries="@array/font_sizes" android:title="@string/settings_font_size" android:key="font_size" android:defaultValue="14" android:entryValues="@array/font_sizes_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/login_about">
+        <Preference android:title="@string/login_about" android:key="about" android:summary="@string/about_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

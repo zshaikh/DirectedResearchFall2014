@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353981"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/stuv/ane/applovin/AneAppLovin" mod="1378957208001">
+                <def id="com.stuv.ane.applovin:AneAppLovin"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="7c1d472f5ed13712191bef31579a08a398f156b582255466be6fb105609fad0d"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

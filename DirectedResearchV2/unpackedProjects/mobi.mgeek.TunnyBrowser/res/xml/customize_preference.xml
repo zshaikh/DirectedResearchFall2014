@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_customize_settings"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <mobi.mgeek.preference.UserAgentListPreference dolphin:entries="@array/pref_development_ua_choices" dolphin:entryValues="@array/pref_development_ua_values" dolphin:key="user_agent" dolphin:title="@string/pref_development_uastring" dolphin:background="@drawable/settings_bg_head_bk" />
+    <mobi.mgeek.preference.HomePagePreference dolphin:entries="@array/pref_home_page_mode" dolphin:entryValues="@array/pref_home_page_values" dolphin:key="pref_set_homepage" dolphin:title="@string/pref_content_homepage" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:entries="@array/pref_orientation_choices" dolphin:entryValues="@array/pref_orientation_values" dolphin:key="orientation" dolphin:title="@string/pref_orientation_title" dolphin:defaultValue="-1" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:entries="@array/pref_on_startup_choices" dolphin:entryValues="@array/pref_on_startup_values" dolphin:key="onstart_choice" dolphin:title="@string/pref_on_startup" dolphin:defaultValue="OPEN_NEW_PAGE" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:entries="@array/pref_open_links_choices" dolphin:entryValues="@array/pref_open_links_values" dolphin:key="open_links_choice" dolphin:title="@string/pref_open_links" dolphin:defaultValue="DEFAULT" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:entries="@array/pref_preload_strategy_choices" dolphin:entryValues="@array/pref_preload_strategy_values" dolphin:key="networkboost.preload_strategy" dolphin:title="@string/pref_preload_strategy" dolphin:defaultValue="1" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:entries="@array/pref_volume_button_action_choices" dolphin:entryValues="@array/pref_volume_button_action_values" dolphin:key="volume_button_action" dolphin:title="@string/pref_volume_button_action_title" dolphin:defaultValue="0" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="keep_screen_on" dolphin:title="@string/pref_keep_screen_on_title" dolphin:summary="@string/pref_keep_screen_on_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="show_zoom_button" dolphin:title="@string/pref_content_show_zoom_button" dolphin:summary="@string/pref_content_show_zoom_button_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="keep_status_bar" dolphin:title="@string/pref_keep_status_bar" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="enable_search_suggestion" dolphin:title="@string/pref_enable_search_suggestion" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="push_notification_enabled" dolphin:title="@string/pref_push_notification_enabled" dolphin:summary="@string/pref_push_notification_enabled_summary" dolphin:enabled="true" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

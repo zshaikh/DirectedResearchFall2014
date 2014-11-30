@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/account_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_page_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_centerVertical="true">
+        <TextView android:textSize="17.0sp" android:id="@id/account_type" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dolphin_sync" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:id="@id/account_state" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Facebook Connected" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/indicator" android:background="@drawable/settings_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

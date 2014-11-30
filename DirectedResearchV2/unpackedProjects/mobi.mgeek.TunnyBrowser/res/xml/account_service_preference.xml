@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/account_service"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_account_facebook" dolphin:title="@string/facebook" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_account_twitter" dolphin:title="@string/twitter" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_account_evernote" dolphin:title="@string/evernote" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_account_box" dolphin:title="@string/box" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

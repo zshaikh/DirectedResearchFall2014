@@ -1,0 +1,22 @@
+
+<font>
+    <info face="GrilledCheeseBTN_Size72_ColorFFFFFF_StrokeA8364B" size="144" bold="0" italic="0" chasrset="" unicode="0" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="2,2"/>
+    <common lineHeight="184" base="127" scaleW="512" scaleH="512" pages="1" packed="0"/>
+    <pages>
+        <page id="0" file="GrilledCheeseBTN_Size72_ColorFFFFFF_StrokeA8364B.png"/>
+    </pages>
+    <chars count="11">
+        <char id="32" x="98" y="251" width="0" height="0" xoffset="0" yoffset="128" xadvance="50" page="0" chnl="0" letter="space"/>
+        <char id="48" x="101" y="2" width="110" height="122" xoffset="2" yoffset="10" xadvance="100" page="0" chnl="0" letter="0"/>
+        <char id="49" x="412" y="128" width="74" height="115" xoffset="1" yoffset="12" xadvance="63" page="0" chnl="0" letter="1"/>
+        <char id="50" x="101" y="128" width="97" height="121" xoffset="2" yoffset="6" xadvance="87" page="0" chnl="0" letter="2"/>
+        <char id="51" x="2" y="2" width="97" height="124" xoffset="-2" yoffset="7" xadvance="84" page="0" chnl="0" letter="3"/>
+        <char id="52" x="304" y="128" width="106" height="115" xoffset="-5" yoffset="13" xadvance="90" page="0" chnl="0" letter="4"/>
+        <char id="53" x="213" y="2" width="97" height="122" xoffset="3" yoffset="10" xadvance="90" page="0" chnl="0" letter="5"/>
+        <char id="54" x="312" y="2" width="104" height="121" xoffset="1" yoffset="9" xadvance="92" page="0" chnl="0" letter="6"/>
+        <char id="55" x="2" y="251" width="94" height="113" xoffset="2" yoffset="14" xadvance="79" page="0" chnl="0" letter="7"/>
+        <char id="56" x="2" y="128" width="97" height="121" xoffset="2" yoffset="9" xadvance="86" page="0" chnl="0" letter="8"/>
+        <char id="57" x="200" y="128" width="102" height="118" xoffset="2" yoffset="8" xadvance="90" page="0" chnl="0" letter="9"/>
+    </chars>
+    <kernings count="0"/>
+</font>

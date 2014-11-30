@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353981"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/stuv/ane/info/AneInfo" mod="1367227198000">
+                <def id="com.stuv.ane.info:AneInfo"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="com.stuv.ane.info:AneInfoAndroid" type="e"/>
+                <dep id="com.stuv.ane.info:AneInfoIOS" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+            </script>
+            <script name="com/stuv/ane/info/AneInfoAndroid" mod="1381306994875">
+                <def id="com.stuv.ane.info:AneInfoAndroid"/>
+                <dep id="Array" type="e"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="e"/>
+            </script>
+            <script name="com/stuv/ane/info/AneInfoIOS" mod="1367227198000">
+                <def id="com.stuv.ane.info:AneInfoIOS"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="afebad39ebda7684c369c4d3c5b1c47a73c77a5c6c6df79cb5ec368cc8e6a91f"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

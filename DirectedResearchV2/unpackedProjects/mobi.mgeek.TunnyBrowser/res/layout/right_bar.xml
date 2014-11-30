@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ctrl_pl_header_container" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height">
+        <TextView android:textAppearance="@style/SideBarTitleAppearence" android:gravity="left|center" android:id="@id/ctrl_pl_title" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/right_bar_generic_margin" android:layout_marginRight="@dimen/right_bar_generic_margin" android:text="@string/ctrl_pl_header_title" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/divider1" android:background="@drawable/lm_bookmark_title_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/right_bar_generic_margin" android:layout_marginRight="@dimen/right_bar_generic_margin" />
+    <ListView android:id="@id/list_installed_plugin" android:layout_width="fill_parent" android:layout_height="0.0dip" android:cacheColorHint="#00000000" android:layout_weight="1.0" android:overScrollFooter="@null" />
+</LinearLayout>

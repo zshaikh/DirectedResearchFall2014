@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="airmets_enabled_setting">airmets_enabled</string>
+    <string name="allow_notification">Allow push notifications when entering a warning or watch area?</string>
+    <string name="app_name">MyRadar</string>
+    <string name="app_package">com.acmeaom.android.myradar</string>
+    <string name="auth_client_needs_enabling_title">An application requires Google Play Services to be enabled.</string>
+    <string name="auth_client_needs_installation_title">An application requires installation of Google Play Services.</string>
+    <string name="auth_client_needs_update_title">An application requires an update for Google Play Services.</string>
+    <string name="auth_client_play_services_err_notification_msg">Google Play services error</string>
+    <string name="auth_client_requested_by_msg">Requested by %1$s</string>
+    <string name="auth_client_using_bad_version_title">An application attempted to use a bad version of Google Play Services.</string>
+    <string name="aviation_enabled_setting">aviation_enabled</string>
+    <string name="base_layer_name_setting">base_layer_name</string>
+    <string name="billing_feature_ad_free">com.acmeaom.myradar.features.ad_free</string>
+    <string name="billing_feature_hurricanes">com.acmeaom.myradar.features.hurricanes</string>
+    <string name="billing_feature_notifications">com.acmeaom.myradar.features.notifications</string>
+    <string name="billing_feature_warnings">com.acmeaom.myradar.features.warnings</string>
+    <string name="billing_not_supported_message">The billing service is not available at this time. In-app purchases will be unavailable.</string>
+    <string name="billing_not_supported_title">Service Unavailable</string>
+    <string name="billing_purchase_ad_removal">Do you want to remove the advertising from the map for $1.99?</string>
+    <string name="billing_purchase_ad_removal_brief_desc">Remove the ads and get a bigger radar picture</string>
+    <string name="billing_purchase_ad_removal_summary">"MyRadar is advertising supported. You can remove the ads from the map, and get a bigger radar picture with this upgrade!
+
+Price: $1.99"</string>
+    <string name="billing_purchase_ad_removal_title">Remove advertising</string>
+    <string name="billing_purchase_hurricanes">Do you want to buy Hurricane Tracker for $2.99?</string>
+    <string name="billing_purchase_hurricanes_brief_desc">Display hurricanes on the map</string>
+    <string name="billing_purchase_hurricanes_summary">"Shows current tropical conditions, with hurricanes, tropical storms and other cyclones. Displays the path of the storm and the \"cone of probability\" showing where the cyclone is forecast to be over the next 3–5 days.
+
+Tap a storm to show details, including wind speed, pressure, and the latest discussion from the National Hurricane center. This upgrade shows current tropical cyclone activity. 
+
+Price: $2.99"</string>
+    <string name="billing_purchase_hurricanes_title">Hurricanes</string>
+    <string name="billing_purchase_no_purchases">No purchases</string>
+    <string name="billing_purchase_success">"Your purchase was successful, although it may take a short time for the purchase to show up in the app.
+
+You may also restore purchases from \"Preferences\" and restart the app."</string>
+    <string name="billing_purchase_title">Confirm Your In-App Purchase</string>
+    <string name="billing_purchase_warnings">Do you want to buy US National Warnings &amp; Watches for $3.99?</string>
+    <string name="billing_purchase_warnings_brief_desc">Display National Weather Service warnings on the map, and receive push notifications alerting you to warnings in your area</string>
+    <string name="billing_purchase_warnings_summary">"This upgrade provides the ability to display weather warnings and watches as a layer, including severe thunderstorm and tornado warnings.
+
+Price: $3.99"</string>
+    <string name="billing_purchase_warnings_title">Warnings and watches</string>
+    <string name="billing_purchased_features">Purchased features:</string>
+    <string name="billing_restore_purchases">Restore previous purchases</string>
+    <string name="billing_restoring_purchases">Restoring purchases:</string>
+    <string name="buy">Buy</string>
+    <string name="cancel">Cancel</string>
+    <string name="cannot_connect_message">Cannot connect to the Google Play Store. Your version of Google Play may be out of date.</string>
+    <string name="cannot_connect_title">"Can't connect to Google Play"</string>
+    <string name="change_map_style">Change Map Style</string>
+    <string name="clouds_enabled_setting">clouds_enabled</string>
+    <string name="clouds_opacity_setting">clouds_alpha</string>
+    <string name="clouds_type_setting">clouds_type</string>
+    <string name="common_google_play_services_enable_button">Enable Google Play services</string>
+    <string name="common_google_play_services_enable_text">"This app won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Get Google Play services</string>
+    <string name="common_google_play_services_install_text_phone">"This app won't run without Google Play services, which are missing from your phone."</string>
+    <string name="common_google_play_services_install_text_tablet">"This app won't run without Google Play services, which are missing from your tablet."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_date_text">The date on the device appears to be incorrect. Please check the date on the device.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"This app won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="dynamic_urls_setting">dynamic_urls</string>
+    <string name="error_title">Error</string>
+    <string name="flight_number_setting">flight_number_setting</string>
+    <string name="flight_plan_enabled_setting">flight_plan_enabled</string>
+    <string name="flight_track_flower">"Enter a flight number, and whenever a flight plan appears in the FAA system for the specified flight number, we'll draw the path of that flight plan on the map so that you can check the weather for your filed route-of-flight."</string>
+    <string name="forecast_enabled_setting">forecast_enabled</string>
+    <string name="hdradar_enabled_setting">hdradar_enabled</string>
+    <string name="help_url" formatted="false">http://support.google.com/googleplay/bin/answer.py?hl=en&amp;answer=1050566&amp;hl=%lang%&amp;dl=%region%</string>
+    <string name="hurricanes_data_loading">Loading hurricane data…</string>
+    <string name="hurricanes_enabled_setting">hurricanes_enabled</string>
+    <string name="learn_more">Learn more</string>
+    <string name="locate_me">Locate me</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+    <string name="map_follow_location_setting">map_follow_my_location</string>
+    <string name="map_location_latitude_setting">mapcenterlat</string>
+    <string name="map_location_longitude_setting">mapcenterlon</string>
+    <string name="map_overlays">Map Overlays</string>
+    <string name="maps_overlay_title">Choose map type</string>
+    <string name="motd_header">New Message</string>
+    <string name="motd_visit_website">More Info</string>
+    <string name="no">No</string>
+    <string name="no_geoloc_provider">Neither GPS nor network providers are enabled. Your current position can not be tracked.</string>
+    <string name="no_network_error">No Internet connection detected. Please connect to the Internet and try again.</string>
+    <string name="no_network_error_header">Internet Connection Required</string>
+    <string name="no_sdcard_error">No external media (SD card) was detected. Please insert a microSD card or other external storage into the device and try again.</string>
+    <string name="no_sdcard_error_header">External storage required</string>
+    <string name="notifications_enabled_setting">notifications_enabled</string>
+    <string name="ok">OK</string>
+    <string name="purchase">Purchase</string>
+    <string name="radar_enabled_setting">radar_enabled</string>
+    <string name="radar_frames_setting">radar_layers</string>
+    <string name="radar_opacity_setting">radar_alpha</string>
+    <string name="radar_speed_setting">animate_rate</string>
+    <string name="radar_status_text">12/15/11 11:11pm</string>
+    <string name="rateme_app_description">If you enjoy using MyRadar, please take a moment to rate it.</string>
+    <string name="rateme_later_btn">Remind me later</string>
+    <string name="rateme_market_launch_failed">"Couldn't launch Google Play!"</string>
+    <string name="rateme_no_thanks">No thanks</string>
+    <string name="rateme_now_btn">Rate MyRadar</string>
+    <string name="remind_me_later">Remind me later</string>
+    <string name="restoring_transactions">Restoring previous purchases</string>
+    <string name="sigmets_enabled_setting">sigmets_enabled</string>
+    <string name="tap_to_begin">Tap to begin</string>
+    <string name="temperatures_enabled_setting">temps_enabled</string>
+    <string name="temperatures_units_setting">temperature_units</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="version">Version:</string>
+    <string name="warningStartTimeLabel">Valid from</string>
+    <string name="warningTimeLeftLabel">Valid until</string>
+    <string name="warning_headline">"THE NATIONAL WEATHER SERVICE IN WILMINGTON HAS ISSUED A FLOOD ADVISORY FOR...
+ * BOONE COUNTY IN NORTHERN KENTUCKY...
+ * CAMPBELL COUNTY IN NORTHERN KENTUCKY...
+ * NORTHERN KENTON COUNTY IN NORTHERN KENTUCKY...
+ * SOUTHERN HAMILTON COUNTY IN SOUTHWEST OHIO...
+UNTIL 345 PM EDT. AT 145 PM EDT RADAR INDICATED SHOWERS CONTINUING TO PUSH EAST ALONG AND JUST TO THE NORTH OF THE OHIO RIVER. RADAR ESTIMATES INDICATE THAT UP TO AN INCH OF RAIN HAS FALLEN ACROSS THE AREA SINCE NOON. ANOTHER HALF INCH OF RAIN WILL BE POSSIBLE THROUGH 3 PM."</string>
+    <string name="warnings_data_loading">Loading warning and watch data…</string>
+    <string name="warnings_enabled_setting">warnings_enabled</string>
+    <string name="yes">Yes</string>
+</resources>

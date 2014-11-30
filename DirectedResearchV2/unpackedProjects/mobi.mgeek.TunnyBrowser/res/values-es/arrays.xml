@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Opciones</item>
+        <item>Descripción de complemento</item>
+        <item>Deshabilitar complemento</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Escoger de biblioteca</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chino (GBK)</item>
+        <item>Chino (Big5)</item>
+        <item>Japonés (ISO-2022-JP)</item>
+        <item>Japonés (SHIFT_JIS)</item>
+        <item>Japonés (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Reducir)</item>
+        <item>100% (Ajustar a pantalla)</item>
+        <item>200% (Acercar)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Escritorio</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Personalizado</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Ocultar</item>
+        <item>Izquierda (inferior)</item>
+        <item>Derecha (inferior)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Ocultar</item>
+        <item>Izquierda</item>
+        <item>Derecha</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>apagado</item>
+        <item>Mejor calidad</item>
+        <item>Balanceado</item>
+        <item>Tamaño menor</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Siempre encendido</item>
+        <item>Siempre apagado</item>
+        <item>Mostrar en WiFi</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Abrir página nueva</item>
+        <item>Abrir página anterior</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>De forma predeterminada</item>
+        <item>Abrir en Pestaña al Fondo</item>
+        <item>Abrir en una pestaña nueva</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Auto</item>
+        <item>Panorámico</item>
+        <item>Retrato</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Siempre encendido</item>
+        <item>A pedido</item>
+        <item>apagado</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>apagado</item>
+        <item>Solo en Wi-Fi</item>
+        <item>Siempre</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Habilitar barra izquierda</item>
+        <item>Habilitar barra derecha</item>
+        <item>Habilitar todo</item>
+        <item>Deshabilitar</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Diminuto</item>
+        <item>Pequeño</item>
+        <item>Normal</item>
+        <item>Grande</item>
+        <item>Enorme</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Acción de Android predeterminada</item>
+        <item>Desplazar hacia arriba/abajo</item>
+        <item>Cambiar entre pestañas</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Estoy pensando</item>
+        <item>Estoy en eso.</item>
+        <item>Entendido.</item>
+        <item>Como desees.</item>
+        <item>Tus deseos son órdenes</item>
+        <item>Espera un minuto.</item>
+        <item>Dame un segundo.</item>
+        <item>Pensando.</item>
+        <item>Procesando.</item>
+        <item>Solo un momento.</item>
+        <item>Por favor, espera</item>
+        <item>Entendido.</item>
+        <item>Estremeceré esto</item>
+        <item>Estremeciéndolo</item>
+        <item>Esto es estupendo.</item>
+        <item>¡GUAO!</item>
+        <item>Suena delicioso…</item>
+        <item>¡Suena genial!</item>
+        <item>¡Te escucho!</item>
+    </string-array>
+</resources>

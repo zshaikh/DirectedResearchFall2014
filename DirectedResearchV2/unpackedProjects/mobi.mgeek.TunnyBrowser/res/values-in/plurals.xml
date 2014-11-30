@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Pindah %d item di sini</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Terakhir %d hari</item>
+    </plurals>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Indstillinger</item>
+        <item>Beskrivelse af tilføjelse</item>
+        <item>Deaktivér tilføjelse</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Vælg fra bibliotek</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Kinesisk (GBK)</item>
+        <item>Kinesisk (Big5)</item>
+        <item>Japansk (ISO-2022-JP)</item>
+        <item>Japansk (SHIFT_JIS)</item>
+        <item>Japansk (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (længere tilbage)</item>
+        <item>100% (tilpas til skærm)</item>
+        <item>200% (nærbillede)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Brugerdefineret</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Skjul</item>
+        <item>Venstre (nederst)</item>
+        <item>Højre (nederst)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Skjul</item>
+        <item>Venstre</item>
+        <item>Højre</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Deaktiveret</item>
+        <item>Bedre kvalitet</item>
+        <item>Balanceret</item>
+        <item>Mindre størrelse</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Altid til</item>
+        <item>Altid fra</item>
+        <item>Vis i WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Åbn ny side</item>
+        <item>Åbn sidste side</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Som standard</item>
+        <item>Åbn i baggrundsfane</item>
+        <item>Åbn i ny fane</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Auto</item>
+        <item>Landskab</item>
+        <item>Portræt</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Altid til</item>
+        <item>Efter krav</item>
+        <item>Fra</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Deaktiveret</item>
+        <item>Kun på Wi-Fi</item>
+        <item>Altid</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Aktivér venstre linje</item>
+        <item>Aktivér højre linje</item>
+        <item>Aktivér alle</item>
+        <item>Deaktivér</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Bitte</item>
+        <item>Lille</item>
+        <item>Normal</item>
+        <item>Stor</item>
+        <item>Enorm</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Standard Android-handling</item>
+        <item>Kør op/ned side</item>
+        <item>Skift faner</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Jeg tænker</item>
+        <item>Jeg er i gang.</item>
+        <item>Modtaget.</item>
+        <item>Som du vil.</item>
+        <item>Hvad du ønsker skal du få.</item>
+        <item>Vent et øjeblik.</item>
+        <item>Giv mig et sekund.</item>
+        <item>Tænker.</item>
+        <item>Behandler.</item>
+        <item>Lige et øjeblik.</item>
+        <item>Vent venligst.</item>
+        <item>Klaret.</item>
+        <item>Den her klarer jeg.</item>
+        <item>Klarer den.</item>
+        <item>Det er fedt.</item>
+        <item>MANNER!</item>
+        <item>Lyder lækkert…</item>
+        <item>Lyder godt!</item>
+        <item>Jeg er enig!</item>
+    </string-array>
+</resources>

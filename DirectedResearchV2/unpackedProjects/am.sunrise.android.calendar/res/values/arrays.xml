@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Breakfast</item>
+        <item>Brunch</item>
+        <item>Call</item>
+        <item>Coffee</item>
+        <item>Dinner</item>
+        <item>FaceTime</item>
+        <item>Lunch</item>
+        <item>Meeting</item>
+        <item>Skype</item>
+        <item>Todo</item>
+    </string-array>
+    <string-array name="settings_alert_all_day_events_entries">
+        <item>@string/none</item>
+        <item>@string/six_am</item>
+        <item>@string/seven_am</item>
+        <item>@string/eight_am</item>
+        <item>@string/nine_am</item>
+        <item>@string/ten_am</item>
+    </string-array>
+    <string-array name="settings_alert_all_day_events_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="settings_alert_birthdays_entries">
+        <item>@string/none</item>
+        <item>@string/nine_am</item>
+        <item>@string/noon</item>
+        <item>@string/three_pm</item>
+        <item>@string/six_pm</item>
+    </string-array>
+    <string-array name="settings_alert_birthdays_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="settings_alert_events_entries">
+        <item>@string/none</item>
+        <item>@string/alert_at_time_of_event</item>
+        <item>@string/alert_five_minutes_before</item>
+        <item>@string/alert_fifteen_minutes_before</item>
+        <item>@string/alert_thirty_minutes_before</item>
+        <item>@string/alert_one_hour_before</item>
+        <item>@string/alert_two_hours_before</item>
+        <item>@string/alert_one_day_before</item>
+        <item>@string/alert_two_days_before</item>
+    </string-array>
+    <string-array name="settings_alert_events_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="settings_background_refresh_entries">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="settings_background_refresh_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="settings_weather_unit_entries">
+        <item>Disabled</item>
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+    <string-array name="settings_weather_unit_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="settings_week_start_entries">
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+    </string-array>
+    <string-array name="settings_week_start_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

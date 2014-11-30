@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bookmark_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:orientation="horizontal" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height" android:layout_alignParentTop="true" layout="@layout/bookmark_header" />
+    <include android:orientation="horizontal" android:id="@id/footer_container" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height" android:layout_alignParentBottom="true" layout="@layout/bookmark_footer" />
+    <RelativeLayout android:id="@id/body" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_container" android:layout_below="@id/title_container">
+        <LinearLayout android:orientation="horizontal" android:id="@id/bookmark_sync_status_container" android:layout_width="fill_parent" android:layout_height="@dimen/bookmark_sync_status_bar_height">
+            <TextView android:textSize="@dimen/bookmark_sync_status_bar_text_size" android:ellipsize="end" android:gravity="center" android:id="@id/bookmark_sync_status" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bm_list_item_horizontal_margin_outer" android:maxLines="1" android:layout_weight="1.0" />
+            <ImageView android:id="@id/bookmark_sync_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bm_list_item_horizontal_margin_inner" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/bm_list_item_horizontal_margin_inner" android:layout_marginBottom="4.0dip" android:contentDescription="@null" />
+        </LinearLayout>
+        <com.dolphin.browser.bookmark.BookmarkPathBar android:id="@id/path_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bookmark_sync_status_container" />
+        <com.mgeek.android.ui.DraggableListView android:scrollbarThumbVertical="@drawable/vertical_scroll_bar" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:layout_below="@id/path_bar" android:overScrollFooter="@null" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_linear" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

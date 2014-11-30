@@ -1,0 +1,8 @@
+<TextureAtlas imagePath="HowToPlay.png">
+	<SubTexture name="howtoplay_image_1" x="0" y="569" width="323" height="131"/>
+	<SubTexture name="howtoplay_image_2" x="0" y="261" width="456" height="114"/>
+	<SubTexture name="howtoplay_image_3" x="0" y="0" width="502" height="118"/>
+	<SubTexture name="howtoplay_image_4" x="0" y="377" width="357" height="190"/>
+	<SubTexture name="howtoplay_image_5" x="0" y="120" width="476" height="139"/>
+	<SubTexture name="howtoplay_image_6" x="0" y="702" width="249" height="154"/>
+</TextureAtlas>

@@ -1,0 +1,9 @@
+<TextureAtlas imagePath="MailPopUp.png">
+	<SubTexture name="mailrow_board" x="0" y="0" width="101" height="67"/>
+	<SubTexture name="mailrow_icon_coin" x="168" y="170" width="74" height="80"/>
+	<SubTexture name="mailrow_icon_gift" x="84" y="152" width="82" height="82"/>
+	<SubTexture name="mailrow_icon_heart" x="0" y="69" width="84" height="81"/>
+	<SubTexture name="mailrow_icon_heartenvelope" x="0" y="152" width="82" height="79"/>
+	<SubTexture name="mailrow_icon_lock" x="103" y="0" width="82" height="83"/>
+	<SubTexture name="mailrow_icon_pandaenvelope" x="168" y="85" width="75" height="83"/>
+</TextureAtlas>

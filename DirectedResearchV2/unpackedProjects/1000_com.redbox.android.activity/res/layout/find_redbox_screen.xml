@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/widget35" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.redbox.android.view.HeaderView android:id="@id/headerLayout" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:id="@id/zipinput" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <EditText android:textSize="14.0sp" android:id="@id/address" android:layout_width="0.0px" android:layout_height="42.0sp" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:hint="Enter address or zip" android:maxLines="1" android:singleLine="true" android:layout_weight="3.0" android:imeOptions="actionNext" />
+        <ImageButton android:layout_gravity="right|center" android:id="@id/findKioskBtn" android:background="@null" android:paddingLeft="5.0dip" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/button_find_top" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/movie_title_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="3.0px" android:text="Locations With" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffb32c1a" android:gravity="center_horizontal" android:id="@id/movie_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="3.0px" />
+    <ImageView android:id="@id/line1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/favKioskLabelLayout" android:background="@drawable/movielist_titlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="left" android:id="@id/favKioskLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Favorites"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+    <ImageView android:id="@id/line2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider" />
+    <ListView android:id="@id/nearByKioskListView" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/widget52" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

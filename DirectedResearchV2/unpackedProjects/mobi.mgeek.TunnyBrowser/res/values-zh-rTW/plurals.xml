@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">移動%d個項目</item>
+        <item quantity="one">移動一個項目</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">過去%d天</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d小時</item>
+        <item quantity="one">1小時</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d 個符合</item>
+        <item quantity="zero">没找到</item>
+        <item quantity="one">1個符合</item>
+        <item quantity="few">%d 個符合</item>
+    </plurals>
+</resources>

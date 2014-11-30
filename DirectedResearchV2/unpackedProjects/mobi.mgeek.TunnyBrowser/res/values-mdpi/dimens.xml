@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ctrl_pl_touch_margin">4.0mm</dimen>
+    <dimen name="ctrl_pl_width">245.0dip</dimen>
+    <dimen name="download_category_item_icon_margin_bottom">13.0dip</dimen>
+    <dimen name="download_category_item_margin_left">8.0dip</dimen>
+    <dimen name="download_category_item_margin_top">15.0dip</dimen>
+    <dimen name="com_facebook_picker_divider_width">1.0px</dimen>
+    <dimen name="vg_img_microphone_margin_top">45.0dip</dimen>
+    <dimen name="vg_img_microphone_textsize">75.0dip</dimen>
+    <dimen name="vg_warning_textsize">75.0dip</dimen>
+</resources>

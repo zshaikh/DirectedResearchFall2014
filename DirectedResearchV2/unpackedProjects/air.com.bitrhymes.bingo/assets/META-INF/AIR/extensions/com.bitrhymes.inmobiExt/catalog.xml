@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_0061d38e24eaf4251ba0565ad98c4bb9ca80f43a53c427bec7db4739c8dacce9_flash_display_Sprite" mod="1385130119345" signatureChecksum="1629846527" >
+        <def id="_0061d38e24eaf4251ba0565ad98c4bb9ca80f43a53c427bec7db4739c8dacce9_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/inmobiExt/InMobiAd" mod="1385129430038" signatureChecksum="3347217909" >
+        <def id="com.bitrhymes.inmobiExt:InMobiAd" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="com.bitrhymes.inmobiExt:InMobiAdEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/inmobiExt/InMobiAdEvent" mod="1385129494070" signatureChecksum="4042759776" >
+        <def id="com.bitrhymes.inmobiExt:InMobiAdEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="b22c66b4aa2e120eb10b39377d964f23500926fe86ee1c14242cdd9137d156fc"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

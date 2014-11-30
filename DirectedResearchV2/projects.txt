@@ -1,0 +1,2 @@
+com.twitter.android-1.apk
+STOP HERE

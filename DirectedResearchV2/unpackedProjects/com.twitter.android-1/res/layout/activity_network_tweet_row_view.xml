@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.android.widget.CardRowView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/ListRow">
+        <include android:id="@id/image_container" layout="@layout/user_image" />
+        <include android:id="@id/title_container" layout="@layout/activity_network_title" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_container" android:layout_below="@id/title_container">
+            <TextView android:id="@id/body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/image_margin_right" style="@style/ActivityText.Title" />
+            <RelativeLayout android:id="@id/orig_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/image_margin_right" android:layout_below="@id/body">
+                <ImageView android:id="@id/orig_user_image" style="@style/MiniUserImage" />
+                <TextView android:textSize="@dimen/font_size_small" android:textStyle="bold" android:textColor="@color/list_item_text" android:id="@id/orig_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/orig_user_image" />
+                <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/list_item_secondary_text" android:id="@id/orig_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/orig_user_image" android:layout_below="@id/orig_user_name" />
+            </RelativeLayout>
+            <View android:background="@drawable/list_rule" android:layout_width="1.0px" android:layout_height="wrap_content" android:layout_alignTop="@id/body" android:layout_alignBottom="@id/orig_details" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.twitter.android.widget.CardRowView>

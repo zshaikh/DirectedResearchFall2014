@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="280.0dip" android:layout_height="fill_parent" android:minHeight="100.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/update_contents" android:paddingLeft="13.0dip" android:paddingTop="6.399994dip" android:paddingRight="13.0dip" android:paddingBottom="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</ScrollView>

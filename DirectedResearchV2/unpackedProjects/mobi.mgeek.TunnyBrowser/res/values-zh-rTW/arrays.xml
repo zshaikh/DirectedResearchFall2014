@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (拉遠)</item>
+        <item>100% (顯示全頁)</item>
+        <item>200% (拉近)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>自定義</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>隱藏</item>
+        <item>左下方</item>
+        <item>右下方</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>禁用</item>
+        <item>質量優先</item>
+        <item>平衡</item>
+        <item>節約流量優先</item>
+    </string-array>
+    <string-array name="pref_image_compression_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>總是啟用</item>
+        <item>總是關閉</item>
+        <item>WIFI連線時才顯示</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>開新網頁</item>
+        <item>開前一頁</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>根據預設</item>
+        <item>打開後台標籤</item>
+        <item>開啟在新標籤頁</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>自動</item>
+        <item>橫式</item>
+        <item>直式</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>總是啟用</item>
+        <item>隨需載入</item>
+        <item>關閉</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>禁用</item>
+        <item>僅限 Wi-Fi</item>
+        <item>始終開啟</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>啟用左側功能列</item>
+        <item>啟用右側功能列</item>
+        <item>全部啟用</item>
+        <item>停用</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>最小</item>
+        <item>小</item>
+        <item>適中</item>
+        <item>大</item>
+        <item>最大</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Android預設</item>
+        <item>上/下捲動</item>
+        <item>切換頁籤</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>我想想</item>
+        <item>識別中</item>
+        <item>收到</item>
+        <item>如你所願</item>
+        <item>聽從您的吩咐</item>
+        <item>請稍等</item>
+        <item>再給我一點時間</item>
+        <item>努力思考中...</item>
+        <item>正在處理</item>
+        <item>稍等</item>
+        <item>等一下</item>
+        <item>知道了</item>
+        <item>我来搞定这个</item>
+        <item>搞定了</item>
+        <item>太酷了</item>
+        <item>Yes!</item>
+        <item>您的聲音真好聽</item>
+        <item>聽起來不錯</item>
+        <item>我知道了</item>
+    </string-array>
+</resources>

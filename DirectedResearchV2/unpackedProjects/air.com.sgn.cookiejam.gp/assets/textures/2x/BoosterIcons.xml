@@ -1,0 +1,28 @@
+<TextureAtlas imagePath="BoosterIcons.png">
+	<SubTexture name="add_bomb_booster" x="212" y="636" width="210" height="210"/>
+	<SubTexture name="add_bomb_booster_bw" x="424" y="1272" width="210" height="210"/>
+	<SubTexture name="add_rainbow_booster" x="424" y="1060" width="210" height="210"/>
+	<SubTexture name="add_rainbow_booster_bw" x="424" y="848" width="210" height="210"/>
+	<SubTexture name="bonus_detonator" x="424" y="636" width="210" height="210"/>
+	<SubTexture name="bonus_detonator_bw" x="424" y="424" width="210" height="210"/>
+	<SubTexture name="color_breaker" x="424" y="212" width="210" height="210"/>
+	<SubTexture name="color_breaker_bw" x="424" y="0" width="210" height="210"/>
+	<SubTexture name="column_breaker" x="212" y="1696" width="210" height="210"/>
+	<SubTexture name="column_breaker_bw" x="212" y="1484" width="210" height="210"/>
+	<SubTexture name="lock" x="212" y="1272" width="210" height="210"/>
+	<SubTexture name="lock_bw" x="212" y="1060" width="210" height="210"/>
+	<SubTexture name="piece_shuffler" x="212" y="848" width="210" height="210"/>
+	<SubTexture name="piece_shuffler_bw" x="424" y="1484" width="210" height="210"/>
+	<SubTexture name="plus_extra_candle_moves" x="212" y="424" width="210" height="210"/>
+	<SubTexture name="plus_extra_candle_moves_bw" x="212" y="212" width="210" height="210"/>
+	<SubTexture name="plus_extra_moves" x="212" y="0" width="210" height="210"/>
+	<SubTexture name="plus_extra_moves_bw" x="0" y="1696" width="210" height="210"/>
+	<SubTexture name="row_breaker" x="0" y="1484" width="210" height="210"/>
+	<SubTexture name="row_breaker_bw" x="0" y="1272" width="210" height="210"/>
+	<SubTexture name="single_block_breaker" x="0" y="1060" width="210" height="210"/>
+	<SubTexture name="single_block_breaker_bw" x="0" y="848" width="210" height="210"/>
+	<SubTexture name="swap_anywhere" x="0" y="636" width="210" height="210"/>
+	<SubTexture name="swap_anywhere_bw" x="0" y="424" width="210" height="210"/>
+	<SubTexture name="whip_breaker" x="0" y="212" width="210" height="210"/>
+	<SubTexture name="whip_breaker_bw" x="0" y="0" width="210" height="210"/>
+</TextureAtlas>

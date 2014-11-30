@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/set_default_browser_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:id="@id/title" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/ok" android:background="@drawable/selector_btn_set_default_browser_confirm" android:layout_width="58.0dip" android:layout_height="wrap_content" android:text="@string/set_default_confirm" />
+        <Button android:textSize="14.0sp" android:textColor="@color/set_as_default_browser_text_color" android:id="@id/cancel" android:background="@drawable/selector_btn_set_default_browser_cancel" android:layout_width="58.0dip" android:layout_height="wrap_content" android:text="@string/set_default_cancel" />
+    </LinearLayout>
+</LinearLayout>

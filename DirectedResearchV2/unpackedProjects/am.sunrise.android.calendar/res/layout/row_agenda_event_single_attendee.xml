@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/attendee_avatar" android:layout_width="@dimen/widget_attendee_avatar_size" android:layout_height="@dimen/widget_attendee_avatar_size" android:layout_marginRight="@dimen/agendaview_attendee_avatar_padding_right" android:src="@drawable/av_default_avatar" android:adjustViewBounds="false" />
+    <TextView android:textSize="@dimen/agendaview_attendee_font_size" android:textColor="#7fffffff" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/attendee_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif" />
+</LinearLayout>

@@ -1,0 +1,3 @@
+<TextureAtlas imagePath="DynamicPopUp.png">
+	<SubTexture name="dynamic_stars" x="0" y="0" width="479" height="193"/>
+</TextureAtlas>

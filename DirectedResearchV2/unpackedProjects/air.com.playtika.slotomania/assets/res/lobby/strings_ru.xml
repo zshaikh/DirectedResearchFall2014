@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<wall_posts>
+		<gifts>
+			<gift_1>
+				<title>Send Slotomania Gifts</title>
+				<desc>FREE coins for you, enjoy!</desc>
+				<user_msg>sent you [num] coins</user_msg>
+			</gift_1>
+			<gift_2>
+				<title>Send Slotomania Gifts</title>
+				<desc>5 free spins for you, enjoy!</desc>
+				<user_msg>sent you 5 free spins</user_msg>
+			</gift_2>
+			<gift_3>
+				<title>Send Slotomania Gifts</title>
+				<desc>10 free spins for you, enjoy!</desc>
+				<user_msg>sent you 10 free spins</user_msg>
+			</gift_3>
+		</gifts>
+		<significant_win>
+			<type_1>
+				<title></title>
+				<desc_google></desc_google>
+				<desc_amazon></desc_amazon>
+				<user_msg></user_msg>
+			</type_1>
+			<type_2>
+				<title>First 5 clickers get 300 coins</title>
+				<desc_google>[user_name] got five in a row and won [num] Coins on Slotomania. [user_name] is playing Slotomania for Android.</desc_google>	
+				<desc_amazon>[user_name] got five in a row and won [num] Coins on Slotomania. [user_name] is playing Slotomania for Amazon.</desc_amazon>					
+				<user_msg>Slotomania Rewards VIP Club members get even more Coins!</user_msg>
+			</type_2>
+		</significant_win>
+		<level_up>
+			<title>First 5 clickers get 500 coins</title>
+			<desc_google>[user_name] just went up to level [level] on Slotomania and got [num] coins. Way to go!</desc_google>			
+			<desc_amazon>[user_name] just went up to level [level] on Slotomania and got [num] coins. Way to go!</desc_amazon>
+			<user_msg>Slotomania Rewards VIP Club members get even more Coins!</user_msg>
+		</level_up>
+		<mega_bonus>
+			<title>First 3 clickers get 200 coins</title>
+			<desc>[user_name] is sharing the luck after getting a Mega Bonus of [num] Slotomania coins.</desc>			
+			<user_msg>Slotomania Rewards VIP Club members get even more Coins!</user_msg>  
+		</mega_bonus>
+		<mini_bonus_game>
+			<title>First 3 clickers get 300 coins</title>
+			<desc>[user_name] is sharing the luck after winning [num] Slotomania coins in the [machine_name] slot game.</desc>
+			<user_msg>Slotomania Rewards VIP Club members get even more Coins!</user_msg>
+		</mini_bonus_game>
+		<bonus_game>
+			<title>First 5 clickers get 200 coins</title>
+			<desc>[user_name] is sharing the luck after winning [num] Slotomania Coins in the [machine_name] bonus round.</desc>			
+			<user_msg>Slotomania Rewards VIP Club members get even more Coins!</user_msg>
+		</bonus_game>
+		<play>
+			<url>
+				<name>Slotomania on Android</name>
+			</url>
+		</play>
+		<bonus>
+			<url>
+				<name>First 5 clickers get 200 coins</name>
+			</url>
+		</bonus>
+	</wall_posts>
+	<gift>
+		<gift_back>
+			<desc>You gifted back</desc>
+		</gift_back>
+		<gift_reject>
+			<desc>Gift deleted</desc>
+		</gift_reject>
+		<gift_collect>
+			<desc>Gift collected</desc>
+		</gift_collect>
+		<send_gifts>
+			<send_gifts_count>You sent [count] from [num]</send_gifts_count>
+		</send_gifts>
+		<nofriend> <!-- TODO: -->
+			<title>No friends</title>
+			<message>Sorry, you don't have any friends playing Slotomania</message>
+		</nofriend>
+		<send_request>
+			<message>Select a friend</message>
+			<notification_text>Collect your gift on Slotomania</notification_text>
+		</send_request>
+		<collect>
+			<coints>[num] coins</coints>
+			<free_spins5>5 free spins</free_spins5>
+			<free_spins10>10 free spins</free_spins10>
+		</collect>
+	</gift>
+	<coupon>
+		<expired>
+			<title>Gift expired</title>
+			<desc>
+				Gift expired
+			</desc>
+		</expired>
+		<cant_collect>
+			<title></title>
+			<desc>
+				Gift couldn't be collected.
+			</desc>
+		</cant_collect>
+		<cant_collect_some>
+			<title></title>
+			<desc>
+				Some gifts could not be collected.
+			</desc>
+		</cant_collect_some>
+		<already_collected>
+			<title>Gift Already Collected</title>
+			<desc>
+				Gift was already collected.
+			</desc>
+		</already_collected>
+		<already_collected_some>
+			<title>
+			</title>
+            <desc>
+                A gift from this friend was already [n]collected today, you can collect [n]a gift from this friend tomorrow.
+            </desc>
+		</already_collected_some>
+		<coupon_system_unaviable>
+			<title>
+			</title>
+			<desc>
+				The Slotomania gift system is being upgraded and will be available soon.
+			</desc>
+		</coupon_system_unaviable>
+	</coupon>
+	<mega_bonus>
+		<friends_bonus>
+			<info>
+				More friends = more coins. 6-10 friends: 10%. 11-15: 15%. 16-20: 20%. 21-30: 30%. 30+: 40%
+			</info>
+			<comment>
+				[FRIENDS] Slotomania friends: +[PERCENTS]% bonus
+			</comment>
+		</friends_bonus>
+		<like_bonus>
+			<like0>
+				
+			</like0>
+			<like1>
+				
+			</like1>
+		</like_bonus>
+	</mega_bonus>
+	<default_friend_name>
+		Friend
+	</default_friend_name>
+	<friends_lock>
+		<many>You need [num] more friends to open Reel Friends</many>
+		<one>You need [num] more friend to open Reel Friends</one>
+	</friends_lock>
+	<system>
+		<connection_lost>
+			<title>
+				Connection lost
+			</title>
+			<description>
+				Oops, connection was lost.[n]Please click below to reconnect.
+			</description>
+		</connection_lost>
+		<no_connection>
+			<title>
+				Connection lost
+			</title>
+			<description>
+				Oops, connection was lost.[n]Please try again later.
+			</description>
+		</no_connection>
+		<login_not_allowed>
+			<title>
+				Error
+			</title>
+			<description>
+				Sorry, login is not allowed now.[n]Please click below to reconnect.
+			</description>
+		</login_not_allowed>
+	</system>
+	<special>
+		<win>
+			<message>Please rate us on the AppStore</message>
+			<title>Slotomania</title>
+			<rate>
+				<btn>Rate</btn>
+			</rate>
+			<no>
+				<btn>No Thanks</btn>
+			</no>
+		</win>
+	</special>
+	<welcome>
+		<standalonewarn>
+			<title>Unconnected</title>
+			<message>You have selected to play in unconnected mode. This will result in friends features to be disabled. Are you sure you want to proceed?</message>
+		</standalonewarn>
+	</welcome>
+	<arena>
+		<games>
+			<update>
+				<title>Update is available</title>
+				<message>The new version of [GAME] is available, would you like to update it ([SIZE]MB download)?</message>
+			</update>
+			<download>
+				<title>Download Required</title>
+				<message>The game you selected requires downloading a [SIZE] MB file. It is recommended to switch to a Wi-Fi connection. Download anyway?</message>
+			</download>
+			<outdated>
+				<title>Slotomania update required</title>
+				<message>Please update Slotomania before starting [GAME], open Android market?</message>
+			</outdated>
+			<downloading>
+				<title>Downloading Game</title>
+				<message>The game you selected is being downloaded. Meanwhile you can play other available games. [PROGRESS]% downloaded</message>
+			</downloading>
+			<in_queue>
+				<message>The game you selected will start downloading shortly. Meanwhile you can play other available games.</message>
+			</in_queue>
+			<remove>
+				<title>Remove game</title>
+				<message>Do you realy want remove [game] game?</message>
+			</remove>
+		</games>
+	</arena>
+    <invite>
+    	<nofriend>
+    		<title>No friends</title>
+    		<message>Sorry, you don't have any friends to invite to Slotomania</message>
+    	</nofriend>
+		<sms>
+			<text>Come play Slotomania, a Vegas arena on your phone! https://market.android.com/details?id=air.com.playtika.slotomania</text>
+		</sms>
+		<mail>
+			<text>Come play Slotomania, a Vegas arena on your phone! https://market.android.com/details?id=air.com.playtika.slotomania</text>
+			<subject>Come Play Slotomania!</subject>
+		</mail>
+    </invite>
+    <url>
+		<rate_app>market://details?id=air.com.playtika.slotomania</rate_app>
+    </url>
+	<msg>
+		<failed>
+			<dlg>
+				<title>Slotomania</title>
+				<message>Message sending failed</message>
+			</dlg>
+		</failed>
+		<association>
+			<res>
+				<title>Device Connection</title>
+				<failed>Connection failed</failed>
+				<success>Connection succeeded</success>
+			</res>
+		</association>
+	</msg>
+    <question>
+		<association>
+			<fb>
+				<title>Facebook Connect</title>
+				<message>Would you like to connect this device to your Facebook Account? First time connection will transfer your balance.</message>
+			</fb>
+			<sa>
+				<title>Join existing account</title>
+				<msg>Would you like to connect this device to an existing Slotomania account?</msg>
+			</sa>
+		</association>
+		<fb>
+			<logoff>
+				<title>Log off</title>
+				<message>Do you really want to log off from Facebook?</message>
+			</logoff>
+		</fb>
+		<sa>
+			<nosocial>
+				<title>Unconnected</title>
+				<friends>
+					<message>Friend reels needs Facebook game mode, would you like to log in into this mode?</message>
+				</friends>
+				<feature>
+					<message>This feature requires connecting to Facebook, connect?</message>
+				</feature>
+			</nosocial>
+		</sa>
+		<exit>
+			<title>Exit</title>
+			<message>Do you really want to exit Slotomania?</message>
+		</exit>
+		<rate>
+			<title>Slotomania</title>
+			<message>Please rate us on the Android Market, proceed?</message>
+		</rate>
+    </question>
+	<error>
+		<general>
+			<title>Error!</title>
+		</general>
+		<download>
+			<message>Error while installing [GAME], download will be initiated soon.</message>
+		</download>
+        <respin>
+            <title>SORRY</title>
+            <message>You've already played re-spin on a different device.</message>
+        </respin>
+		<loading>
+			<message>Error while loading [GAME]</message>
+		</loading>
+		<transaction>
+			<message>Error in iTunes log in. Please try again.</message>
+			<empty>
+				<message>Account could not be recovered.</message>
+			</empty>
+		</transaction>
+		<applestore>
+			<notransaction>
+				<message>You have no transactions on AppleStore</message>
+			</notransaction>
+			<loadchips>
+				<message>Coin balance could not be retrieved.</message>
+			</loadchips>
+			<loadproduct>
+				<message>Coin purchase was not successful, please try again.</message>
+			</loadproduct>
+			<buyingchips>
+				<message>Coin purchase was not successful, please try again.</message>
+			</buyingchips>
+			<verificating>
+				<message>Connection error, please try again</message>
+			</verificating>
+		</applestore>
+		<send_gift_request>
+			<title>Error!</title>
+			<message>Error occurred when sending gift.</message>
+		</send_gift_request>
+		<invite_friend_request>
+			<title>Error!</title>
+			<message>Error occurred when inviting friends.</message>
+		</invite_friend_request>
+		<simultaneous_multisession_bonus_games>
+            <title>SORRY</title>
+            <message>[n]You've already played this bonus game on a different device.</message>
+        </simultaneous_multisession_bonus_games>
+	</error>
+	<collect>
+		<gifts>
+			<coints>
+				<gift>50 coins</gift>
+			</coints>
+			<free5>
+				<spins>5 free spins</spins>
+			</free5>
+			<free10>
+				<spins>10 free spins</spins>
+			</free10>
+			<bonus>
+				<ready>Bonus available</ready>
+			</bonus>
+			<next>
+				<bonus>Next bonus in</bonus>
+			</next>
+		</gifts>
+	</collect>
+	<btn>
+		<ok>Ok</ok>
+		<no>No</no>
+		<yes>Yes</yes>
+	</btn>
+	<send>
+		<message>
+			<dlg>
+				<body>Come play Slotomania, a Vegas arena on your phone! https://market.android.com/details?id=air.com.playtika.slotomania</body>
+			</dlg>
+		</message>
+		<mail>
+			<dlg>
+				<body>Come play Slotomania, a Vegas arena on your phone!</body>
+				<subject>Come Play Slotomania!</subject>
+			</dlg>
+		</mail>
+	</send>
+	<mail>
+		<failed>
+			<dlg>
+				<title>Slotomania</title>
+				<message>E-mail message sending failed.</message>
+			</dlg>
+		</failed>
+	</mail>
+	<warning>
+		<title>Update Slotomania</title>
+		<update>
+			<required>Updated Slotomania version is available. Please download it from the Android Market.</required>
+			<available>Updated Slotomania version is available. Do you want to download it now?</available>
+		</update>
+	</warning>
+	<welcome>
+		<standalonewarn>
+			<title>Unconnected</title>
+			<message>You have selected to play in unconnected mode. This will result in friends features to be disabled. Are you sure you want to proceed?</message>
+		</standalonewarn>
+	</welcome>
+	<notify>
+		<local>
+			<hourly_bonus>
+				<btn_text>Collect</btn_text>
+				<body_text>Your Slotomania Special Bonus is waiting in the Slotomania lobby, want to collect it now?</body_text>
+			</hourly_bonus>
+		</local>
+	</notify>
+	<send_gift>
+		<nofriend>
+			<title>No friends</title>
+			<message>Sorry, you don't have any friends playing Slotomania</message>
+		</nofriend>
+	</send_gift>
+	<invite_friend_request>
+		<message>Select a friend</message>
+		<notification_text>Come join me on Slotomania!</notification_text>
+	</invite_friend_request>
+	<send_gift_request>
+		<message>Send gift request message text</message>
+		<notification_text>Send gift request notification text</notification_text>
+	</send_gift_request>
+	<payment>
+		<title>Backup</title>
+		<text>Did you know? If you backup using iTunes, all of your purchases will be saved if your phone is lost.</text>
+	</payment>
+	<friend_invitation>
+		<title>You have a Slotomania invitation!</title>
+		<user_msg>[user_name] invited you to play Slotomania. [user_name] is playing Slotomania for Android.</user_msg>
+	</friend_invitation>
+	<send_gifts>
+		<send_gifts_count>You sent [count] from [num]</send_gifts_count>
+	</send_gifts>
+	<rate>
+		<game>
+			<url></url>
+		</game>
+	</rate>
+	<android>
+		<market>
+			<url>https://market.android.com/</url>
+		</market>
+	</android>
+	<tournamania>
+      <inGame>
+        <levelsRange>Level: [FROM]-[TO]</levelsRange>
+        <levelLimit>level [LEVEL]</levelLimit>
+      </inGame>
+    </tournamania>
+    <rescue>
+	    <respin>
+	        <title>Free fall rescue!</title>
+	        <body>Oops! Your spin ended while the reels were free falling. [n] Your previous wins have already been added to your balance. [n] Click PLAY to continue your spin.</body>
+	    </respin>
+	</rescue>
+</strings>

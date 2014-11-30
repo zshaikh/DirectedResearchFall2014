@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_f4d4193db9b222e9a6ba89101c64722d77a739e934331ff832cfe5045e3754ea_flash_display_Sprite" mod="1381470481286" signatureChecksum="3626072455" >
+        <def id="_f4d4193db9b222e9a6ba89101c64722d77a739e934331ff832cfe5045e3754ea_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/KochavaSDKExt/KochavaSDK" mod="1381470423481" signatureChecksum="1863017282" >
+        <def id="com.bitrhymes.KochavaSDKExt:KochavaSDK" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="629d19cf4882c019a288c95c92f9ca1ad45af8d6e65e204ff6a332068f2158a2"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

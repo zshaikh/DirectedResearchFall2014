@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="amazon">
+        <item>アマゾン</item>
+        <item>amazon.co.jp</item>
+        <item>http://www.amazon.co.jp/favicon.ico</item>
+        <item>http://www.amazon.co.jp/gp/aw/s.html?ie=UTF8&amp;at=dlphnbrwsr-22&amp;k={searchTerms}&amp;lc=mqs&amp;m=aps&amp;uid=NULLGWDOCOMO</item>
+        <item>UTF-8</item>
+        <item>http://www.amazon.co.jp/gp/aw/s.html?ie=UTF8&amp;at=dlphnbrwsr-22&amp;k={searchTerms}&amp;lc=mqs&amp;m=aps&amp;uid=NULLGWDOCOMO</item>
+        <item>engine_amazon</item>
+        <item>engine_amazon_text</item>
+    </string-array>
+    <string-array name="bing">
+        <item>Bing</item>
+        <item>bing.com</item>
+        <item>http://www.bing.com/s/wlflag.ico</item>
+        <item>http://www.bing.com/search?a=results&amp;q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://api.bing.com/osjson.aspx?query={searchTerms}&amp;language={language-country}</item>
+        <item>engine_bing</item>
+        <item>engine_bing_text</item>
+    </string-array>
+    <string-array name="bookmarks">
+        <item>Dolphin Feature</item>
+        <item>http://dolphin.com/features</item>
+        <item>Dolphin Blog</item>
+        <item>http://dolphin.com/blog/</item>
+        <item>Hot Apps</item>
+        <item>http://www.dolphin-browser.com/apps/aphone.htm</item>
+        <item>Wallpaper</item>
+        <item>http://m.flikie.com/</item>
+        <item>Wikipedia</item>
+        <item>http://m.wikipedia.com/</item>
+        <item>YouTube</item>
+        <item>http://www.youtube.com/</item>
+        <item>IMDB</item>
+        <item>http://www.imdb.com/</item>
+        <item>Bing</item>
+        <item>http://www.bing.com/</item>
+        <item>Weather Channel</item>
+        <item>http://www.weather.com/</item>
+        <item>Amazon</item>
+        <item>http://www.amazon.com/</item>
+    </string-array>
+    <string-array name="build_in_voice_actions">
+        <item>share</item>
+        <item>{args: \"\", command: 103}</item>
+        <item>新規お気に入り</item>
+        <item>{command: 201}</item>
+        <item>戻る</item>
+        <item>{command: 202}</item>
+        <item>go back</item>
+        <item>{command: 202}</item>
+        <item>進む</item>
+        <item>{command: 203}</item>
+        <item>下にスクロール</item>
+        <item>{command: 205}</item>
+        <item>上にスクロール</item>
+        <item>{command: 204}</item>
+        <item>保存</item>
+        <item>{command: 207}</item>
+        <item>更新</item>
+        <item>{command: 208}</item>
+        <item>拡大</item>
+        <item>{command: 210}</item>
+        <item>縮小</item>
+        <item>{command: 211}</item>
+        <item>スクロールバーをロック</item>
+        <item>{args: 3, command: 212}</item>
+        <item>アドレスバーに貼り付け</item>
+        <item>{command: 214}</item>
+        <item>貼り付け検索</item>
+        <item>{command: 215}</item>
+        <item>ブラウザーを閉じる</item>
+        <item>{command: 216}</item>
+        <item>新しいタブ</item>
+        <item>{command: 301}</item>
+        <item>すべてのタブを閉じる</item>
+        <item>{command: 302}</item>
+        <item>ほかのタブを閉じる</item>
+        <item>{command: 303}</item>
+        <item>タブを閉める</item>
+        <item>{command: 304}</item>
+        <item>左のタブ</item>
+        <item>{command: 305}</item>
+        <item>右のタブ</item>
+        <item>{command: 306}</item>
+        <item>アドオン管理</item>
+        <item>{command: 404}</item>
+        <item>ダウンロード</item>
+        <item>{command: 405}</item>
+        <item>設定</item>
+        <item>{command: 406}</item>
+        <item>タブリスト表示</item>
+        <item>{command: 407}</item>
+        <item>お気に入り</item>
+        <item>{command: 408}</item>
+        <item>アドオンバー</item>
+        <item>{command: 409}</item>
+        <item>表示 モードを切り替える</item>
+        <item>{command: 501}</item>
+        <item>デスクトップモード</item>
+        <item>{command: 502}</item>
+        <item>iPhoneモード</item>
+        <item>{command: 503}</item>
+        <item>iPadモード</item>
+        <item>{command: 504}</item>
+        <item>Androidモード</item>
+        <item>{command: 506}</item>
+        <item>画像 表示モードを切り替える</item>
+        <item>{args: 3, command: 507}</item>
+        <item>全画面</item>
+        <item>{args: 3, command: 508}</item>
+        <item>テーマを切り替える</item>
+        <item>{command: 509}</item>
+        <item>画面モードを切り替える</item>
+        <item>{args: 3, command: 510}</item>
+        <item>ビュー圧縮モードを切り替える</item>
+        <item>{args: 3, command: 511}</item>
+        <item>RSSを購読</item>
+        <item>{command: 512}</item>
+        <item>アンケートを送信</item>
+        <item>{command: 513}</item>
+        <item>ジェスチャーを作成</item>
+        <item>{command: 514}</item>
+        <item>ズームボタンを切り替える</item>
+        <item>{args: 3, command: 515}</item>
+        <item>バックアップデータ</item>
+        <item>{command: 601}</item>
+        <item>データを復元</item>
+        <item>{command: 602}</item>
+        <item>履歴なしモード</item>
+        <item>{command: 603}</item>
+        <item>キャッシュをクリア</item>
+        <item>{command: 604}</item>
+        <item>ジャバスクリプト</item>
+        <item>{command: 605}</item>
+    </string-array>
+    <string-array name="default_addon_bar_item_option">
+        <item>オプション</item>
+        <item>アドオン情報</item>
+        <item>アドオンを無効化</item>
+    </string-array>
+    <string-array name="email_servers">
+        <item>gmail.com</item>
+        <item>hotmail.com</item>
+        <item>yahoo.com</item>
+        <item>googlemail.com</item>
+        <item>naver.com</item>
+        <item>aol.com</item>
+        <item>live.com</item>
+        <item>mail.ru</item>
+        <item>msn.com</item>
+        <item>ymail.com</item>
+        <item>hotmail.co.uk</item>
+        <item>comcast.net</item>
+        <item>nate.com</item>
+        <item>yahoo.com.hk</item>
+        <item>hanmail.net</item>
+        <item>docomo.ne.jp</item>
+        <item>hotmail.it</item>
+        <item>hotmail.fr</item>
+        <item>yahoo.com.tw</item>
+        <item>ezweb.ne.jp</item>
+    </string-array>
+    <string-array name="google">
+        <item>Google</item>
+        <item>google.com</item>
+        <item>http://www.google.com/favicon.ico</item>
+        <item>http://www.google.com/search?hl={language}&amp;gl={country}&amp;ie={inputEncoding}&amp;source=android-browser&amp;q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.google.com/complete/search?hl={language}&amp;gl={country}&amp;client=android&amp;q={searchTerms}</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="hot_app_item">
+        <item>Hot Apps</item>
+        <item>http://www.dolphin-browser.com/apps/aphone.htm</item>
+        <item>capture_hotapp</item>
+        <item>favicon_hotapps</item>
+    </string-array>
+    <array name="new_bookmarks" />
+    <string-array name="pagedrop_load_image_list">
+        <item>ライブラリから選択</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinese (GBK)</item>
+        <item>Chinese (Big5)</item>
+        <item>Japanese (ISO-2022-JP)</item>
+        <item>Japanese (SHIFT_JIS)</item>
+        <item>Japanese (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50%</item>
+        <item>100%</item>
+        <item>200%</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>デスクトップ</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>カスタム</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>非表示</item>
+        <item>左下に表示</item>
+        <item>右下に表示</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>非表示</item>
+        <item>左</item>
+        <item>右</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>無効</item>
+        <item>品質優先</item>
+        <item>バランスalanced</item>
+        <item>サイズ優先</item>
+    </string-array>
+    <string-array name="pref_image_compression_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>常にオン</item>
+        <item>常にオフ</item>
+        <item>WiFi接続時のみオン</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>新しいページを開く</item>
+        <item>前回のページを開く</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>デフォルト</item>
+        <item>バックグラウンドタブで開く</item>
+        <item>新規タブで開く</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>自動</item>
+        <item>横向き</item>
+        <item>縦向き</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>常にオン</item>
+        <item>オンデマンド</item>
+        <item>オフ</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>無効</item>
+        <item>Wi-Fi接続時のみ</item>
+        <item>常時</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>左のバーを有効化</item>
+        <item>右のバーを有効化</item>
+        <item>全てを有効化</item>
+        <item>無効化</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>最小</item>
+        <item>小</item>
+        <item>中</item>
+        <item>大</item>
+        <item>最大</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Android既定の挙動</item>
+        <item>ページのスクロール</item>
+        <item>タブの切り替え</item>
+    </string-array>
+    <string-array name="speed_dials">
+        <item>Facebook</item>
+        <item>http://www.facebook.com/</item>
+        <item>capture_facebook</item>
+        <item>favicon_facebook</item>
+        <item>Twitter</item>
+        <item>http://www.twitter.com/</item>
+        <item>capture_twitter</item>
+        <item>favicon_twitter</item>
+        <item>Yahoo! JAPAN</item>
+        <item>http://m.yahoo.co.jp/?fr=top_dol_and</item>
+        <item>capture_yahoo_japan</item>
+        <item>favicon_yahoo</item>
+        <item>Google</item>
+        <item>http://www.google.com/</item>
+        <item>capture_google</item>
+        <item>favicon_google</item>
+        <item>mobage</item>
+        <item>http://sp.mbga.jp/AFdob0000001/_t</item>
+        <item>capture_mbga</item>
+        <item>favicon_mbga</item>
+    </string-array>
+    <string-array name="speed_dials_for_small_screen">
+        <item>Google</item>
+        <item>http://www.google.com/</item>
+        <item>capture_google</item>
+        <item>favicon_google</item>
+        <item>Wallpaper</item>
+        <item>http://m.flikie.com/</item>
+        <item>capture_wallpaper</item>
+        <item>favicon_wallpaper</item>
+        <item>Facebook</item>
+        <item>http://www.facebook.com/</item>
+        <item>capture_facebook</item>
+        <item>favicon_facebook</item>
+        <item>Yahoo!</item>
+        <item>http://www.yahoo.com/</item>
+        <item>capture_yahoo_japan</item>
+        <item>favicon_yahoo</item>
+    </string-array>
+    <string-array name="voice_anim_text_items">
+        <item>Google \"ダイエット\"</item>
+        <item>お気に入りに追加</item>
+        <item>Facebook</item>
+        <item>\"adidas shoes\" 検索</item>
+        <item>新しいタブ</item>
+        <item>日経</item>
+        <item>ヤフオク \"チケット\"</item>
+        <item>戻る</item>
+        <item>ツイート</item>
+        <item>スピードダイヤル</item>
+    </string-array>
+    <string-array name="voice_notes">
+        <item>Search</item>
+        <item>Talk to Dolphin and let Her Do the Work</item>
+        <item>Let Dolphin be your wing-woman. Search where to take your date by saying \"Restaurants with a view\" or dazzle her at the last minute with \"Best place to buy roses.\"</item>
+        <item>Navigate</item>
+        <item>Just Tell Your Dolphin What To Do</item>
+        <item>array/voice_operation</item>
+        <item></item>
+        <item></item>
+        <item>"Don't forget I need a network connection to work."</item>
+    </string-array>
+    <string-array name="voice_operation">
+        <item>Add a Bookmark</item>
+        <item>Forward</item>
+        <item>Back</item>
+        <item>Top of the Page</item>
+        <item>Bottom of the Page</item>
+        <item>Refresh</item>
+        <item>New tab</item>
+        <item>Close Tab</item>
+        <item>History</item>
+        <item>Zoom in</item>
+        <item>Zoom out</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>考え中</item>
+        <item>作業中</item>
+        <item>オッケー！</item>
+        <item>あなたのお望み通りに</item>
+        <item>仰せの通りに</item>
+        <item>少々お待ちを</item>
+        <item>少々お待ちを</item>
+        <item>考え中</item>
+        <item>作業中</item>
+        <item>少々お待ちを</item>
+        <item>しばしお待ちを</item>
+        <item>わかった！</item>
+        <item>お任せください！</item>
+        <item>見つけてみせます！</item>
+        <item>これは素晴らしい</item>
+        <item>イエィ！</item>
+        <item>美味しそうですね</item>
+        <item>素晴らしい！</item>
+        <item>ちゃんと聞こえたよ！</item>
+    </string-array>
+    <string-array name="yahoo">
+        <item>Yahoo!</item>
+        <item>yahoo.com</item>
+        <item>http://search.yahoo.com/favicon.ico</item>
+        <item>http://search.yahoo.com/search?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}</item>
+        <item>engine_yahoo</item>
+        <item>engine_yahoo_text</item>
+    </string-array>
+    <string-array name="yahoo_japan">
+        <item>Yahoo! JAPAN</item>
+        <item>yahoo.co.jp</item>
+        <item>http://search.yahoo.co.jp/favicon.ico</item>
+        <item>http://search.yahoo.co.jp/search?ei={inputEncoding}&amp;fr=dol_and&amp;p={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.google.com/complete/search?hl={language}&amp;gl={country}&amp;client=android&amp;q={searchTerms}</item>
+        <item>engine_yahoo_japan</item>
+        <item>engine_yahoo_text</item>
+    </string-array>
+    <string-array name="bellemaison">
+        <item>Bellemaison</item>
+        <item>bellemaison.jp/</item>
+        <item>http://www.bellemaison.jp/favicon.ico</item>
+        <item>http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&amp;subid=0&amp;offerid=302645.1&amp;type=10&amp;tmpid=1237&amp;RD_PARM1={searchTerms}</item>
+        <item>Shift-JIS</item>
+        <item>http://click.linksynergy.com/fs-bin/click?id=YmGTucvs1zU&amp;subid=0&amp;offerid=302645.1&amp;type=10&amp;tmpid=1237&amp;RD_PARM1={searchTerms}</item>
+        <item>engine_bellemaison</item>
+        <item>engine_bellemaison_text</item>
+    </string-array>
+    <string-array name="rakuton" formatted="false">
+        <item>楽天</item>
+        <item>rakuten.co.jp/</item>
+        <item>http://www.rakuten.co.jp/favicon.ico</item>
+        <item>http://hb.afl.rakuten.co.jp/hgc/11917e7e.1e778116.11917e7f.912f451e/?pc={searchTerms}&amp;%3fscid%3daf_pc_etc&amp;m=http%3a%2f%2fm.rakuten.co.jp%2f</item>
+        <item>UTF-8</item>
+        <item>http://hb.afl.rakuten.co.jp/hgc/11917e7e.1e778116.11917e7f.912f451e/?pc={searchTerms}&amp;%3fscid%3daf_pc_etc&amp;m=http%3a%2f%2fm.rakuten.co.jp%2f</item>
+        <item>engine_rakuton</item>
+        <item>engine_rakuton_text</item>
+    </string-array>
+</resources>

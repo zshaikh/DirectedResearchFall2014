@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/update_list_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:orca="http://schemas.android.com/apk/res/com.facebook.orca">
+    <LinearLayout android:id="@id/create_dummy_focus_elt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <com.facebook.orca.common.ui.widgets.MuteWarningView android:id="@id/thread_view_mute_warning" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:dividerOnTop="false" orca:dividerOnBottom="true" orca:animateOutDirection="up" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/messages_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/white" android:divider="#ffe0e0e0" android:dividerHeight="1.0px" />
+        <com.facebook.orca.common.ui.widgets.EmptyListViewItem android:id="@id/threadview_updates_empty_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <FrameLayout android:id="@id/thread_view_animation_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <View android:background="@drawable/default_separator_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <fragment android:name="com.facebook.orca.compose.ComposeView" android:id="@id/messages_compose" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

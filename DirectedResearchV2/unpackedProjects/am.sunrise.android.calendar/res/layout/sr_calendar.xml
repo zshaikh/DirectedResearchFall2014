@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<am.sunrise.android.calendar.ui.mainview.MainView android:id="@id/calendar_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <am.sunrise.android.calendar.ui.widgets.calendar.CalendarView android:id="@id/calendar_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <am.sunrise.android.calendar.ui.widgets.agenda.AgendaView android:id="@id/agenda_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <am.sunrise.android.calendar.ui.widgets.NowButton android:id="@id/button_jump" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/agendaview_now_button_margin_left" android:layout_marginBottom="@dimen/agendaview_now_button_margin_bottom" />
+</am.sunrise.android.calendar.ui.mainview.MainView>

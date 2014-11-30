@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="354071"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/gamesys/android/billing/amazon/aslib/InAppPurchaseBillingExtension" mod="1384118877000">
+                <def id="com.gamesys.android.billing.amazon.aslib:InAppPurchaseBillingExtension"/>
+                <dep id="String" type="s"/>
+                <dep id="com.gamesys.android.billing.common.facade:NativeBillingExtension" type="i"/>
+            </script>
+            <script name="com/gamesys/android/billing/amazon/aslib/InAppPurchaseInterface" mod="1384118877000">
+                <def id="com.gamesys.android.billing.amazon.aslib:InAppPurchaseInterface"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.gamesys.android.billing.amazon.aslib:InAppPurchaseBillingExtension" type="e"/>
+                <dep id="com.gamesys.android.billing.common.facade:ASBillingEvent" type="e"/>
+                <dep id="com.gamesys.android.billing.common.facade:BillingCommonInterface" type="i"/>
+                <dep id="com.gamesys.android.billing.common.facade:NativeBillingExtension" type="e"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/gamesys/android/billing/ane/BillingInterface" mod="1383068718000">
+                <def id="com.gamesys.android.billing.ane:BillingInterface"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.gamesys.android.billing.amazon.aslib:InAppPurchaseInterface" type="e"/>
+                <dep id="com.gamesys.android.billing.common.facade:BillingCommonInterface" type="i"/>
+                <dep id="com.gamesys.android.billing.google.aslib:InAppBillingInterface" type="e"/>
+                <dep id="com.gamesys.ios.billing.aslib:AppleInAppPurchaseInterface" type="e"/>
+                <dep id="flash.errors:IllegalOperationError" type="e"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/gamesys/android/billing/common/facade/ASBillingEvent" mod="1384118876000">
+                <def id="com.gamesys.android.billing.common.facade:ASBillingEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/gamesys/android/billing/common/facade/BillingCommonInterface" mod="1384118876000">
+                <def id="com.gamesys.android.billing.common.facade:BillingCommonInterface"/>
+                <dep id="ArgumentError" type="e"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Function" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="__AS3__.vec:Vector" type="s"/>
+                <dep id="com.gamesys.android.billing.common.facade:ASBillingEvent" type="e"/>
+                <dep id="com.gamesys.android.billing.common.facade:NativeBillingExtension" type="e"/>
+                <dep id="flash.errors:IllegalOperationError" type="e"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/gamesys/android/billing/common/facade/NativeBillingExtension" mod="1377803612000">
+                <def id="com.gamesys.android.billing.common.facade:NativeBillingExtension"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+            </script>
+            <script name="com/gamesys/android/billing/google/aslib/InAppBillingInterface" mod="1375295531000">
+                <def id="com.gamesys.android.billing.google.aslib:InAppBillingInterface"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.gamesys.android.billing.common.facade:BillingCommonInterface" type="i"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/gamesys/ios/billing/aslib/AppleInAppPurchaseInterface" mod="1381706280000">
+                <def id="com.gamesys.ios.billing.aslib:AppleInAppPurchaseInterface"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.gamesys.android.billing.common.facade:BillingCommonInterface" type="i"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="3c6b9ece11869d163dd72326869109df3eba56376d03c9a0c052d911c384cd28"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353981"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/stuv/ane/aarki/AneAarki" mod="1367227198000">
+                <def id="com.stuv.ane.aarki:AneAarki"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="4166a17b7575f3b4055d69714bbf1b3837fa7d4230abf8f4b9c4b08db1509a04"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/skin_icon_container" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/skin_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/skin_icon_edge" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" />
+    <ImageView android:id="@id/skin_default_icon" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/skin_icon" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+    <com.dolphin.browser.theme.ProgressTextView android:textSize="11.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/skin_title" android:layout_width="fill_parent" android:layout_height="17.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_alignBottom="@id/skin_icon" />
+    <ImageView android:id="@id/skin_mask" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/skin_selection" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</RelativeLayout>

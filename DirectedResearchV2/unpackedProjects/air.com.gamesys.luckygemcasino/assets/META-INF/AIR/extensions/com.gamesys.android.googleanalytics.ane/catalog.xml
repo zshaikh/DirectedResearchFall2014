@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="354071"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/gamesys/android/googleanalytics/aslib/GoogleAnalyticsInterface" mod="1385504369000">
+                <def id="com.gamesys.android.googleanalytics.aslib:GoogleAnalyticsInterface"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="f6945f87717e19982b1353df1748eab5445a6e030006b39de699db23c7f6c161"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

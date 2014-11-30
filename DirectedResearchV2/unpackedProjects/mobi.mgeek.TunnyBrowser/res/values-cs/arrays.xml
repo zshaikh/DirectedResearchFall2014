@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Možnosti</item>
+        <item>Popis doplňku</item>
+        <item>Zakázat doplněk</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Vybrat z knihovny</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Čínština (GBK)</item>
+        <item>Čínština (Big5)</item>
+        <item>Japonština (ISO-2022-JP)</item>
+        <item>Japonština (SHIFT_JIS)</item>
+        <item>Japonština (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (dále zpět)</item>
+        <item>100% (přizpůsobit obrazovce)</item>
+        <item>200% (přiblížit)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Pracovní plocha</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Vlastní</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Skrýt</item>
+        <item>Levý (dolní)</item>
+        <item>Pravý (dolní)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Skrýt</item>
+        <item>Levý</item>
+        <item>Pravý</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Zakázáno</item>
+        <item>Lepší kvalita</item>
+        <item>Vyváženo</item>
+        <item>Menší velikost</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Vždy zapnuto</item>
+        <item>Vždy vypnuto</item>
+        <item>Zobrazovat ve WiFi</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Otevřít novou stránku</item>
+        <item>Otevřít předchozí stránku</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Ve výchozím nastavení</item>
+        <item>Otevřít na kartě na pozadí</item>
+        <item>Otevřít na nové kartě</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Automaticky</item>
+        <item>Na šířku</item>
+        <item>Na výšku</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Vždy zapnuto</item>
+        <item>Dle potřeby</item>
+        <item>Vypnuto</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Zakázáno</item>
+        <item>Pouze Wi-fi</item>
+        <item>Vždy</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Povolit levou lištu</item>
+        <item>Povolit pravou lištu</item>
+        <item>Povolit vše</item>
+        <item>Zakázat</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Maličký</item>
+        <item>Malý</item>
+        <item>Normální</item>
+        <item>Velký</item>
+        <item>Obrovský</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Výchozí úkon Android</item>
+        <item>Přesun o stránku nahoru/dolů</item>
+        <item>Přepnout karty</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Přemýšlím</item>
+        <item>Pracuji na tom.</item>
+        <item>Rozumím.</item>
+        <item>Jak si přejete.</item>
+        <item>Vaše přání je mi rozkazem.</item>
+        <item>Počkejte minutu.</item>
+        <item>Dejte mi sekundu.</item>
+        <item>Přemýšlím.</item>
+        <item>Zpracovávám.</item>
+        <item>Jenom chvilku.</item>
+        <item>Čekejte, prosím.</item>
+        <item>Mám to.</item>
+        <item>Tento rozkymácím.</item>
+        <item>Kymácím jej.</item>
+        <item>To je droga.</item>
+        <item>JÚÚÚ!</item>
+        <item>To zní chutně…</item>
+        <item>To zní dobře!</item>
+        <item>Slyším Vás!</item>
+    </string-array>
+</resources>

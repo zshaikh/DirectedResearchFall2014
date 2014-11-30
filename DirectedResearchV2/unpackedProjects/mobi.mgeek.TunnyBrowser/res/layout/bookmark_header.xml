@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bookmark_button_horizontal_padding">
+        <ImageView android:id="@id/btn_back" android:padding="@dimen/bookmark_path_icon_padding" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+        <ImageView android:id="@id/btn_done" android:padding="@dimen/bookmark_path_icon_padding" android:visibility="gone" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/SettingsTitleAppearence" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/bookmark_path" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/bookmarks" android:singleLine="true" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/right_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/bookmark_button_horizontal_padding">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btn_sync" android:layout_width="@dimen/bm_sync_btn_size" android:layout_height="@dimen/bm_sync_btn_size" android:layout_marginRight="@dimen/bookmark_button_horizontal_padding">
+            <ImageView android:id="@id/sync_circle_progress" android:paddingLeft="@dimen/bm_sync_circle_left_padding" android:paddingTop="@dimen/bm_sync_circle_top_padding" android:duplicateParentState="true" android:layout_width="@dimen/bm_sync_img_size" android:layout_height="@dimen/bm_sync_img_size" android:contentDescription="@null" />
+        </LinearLayout>
+        <ImageView android:id="@id/btn_more" android:padding="@dimen/bookmark_path_icon_padding" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/2.5">
+	<id>com.bitrhymes.inmobiExt</id>
+	<versionNumber>1.0.1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>InMobiAndroid.jar</nativeLibrary>
+				<initializer>com.bitrhymes.inmobiext.AndroidExtension</initializer>
+				<finalizer>com.bitrhymes.inmobiext.AndroidExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment/>
+		</platform>		
+	</platforms>
+</extension>

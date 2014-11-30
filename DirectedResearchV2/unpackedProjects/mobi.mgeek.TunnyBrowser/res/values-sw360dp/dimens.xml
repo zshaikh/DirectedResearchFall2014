@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="color_block_size">50.0dip</dimen>
+    <dimen name="color_panel_size">217.0dip</dimen>
+    <dimen name="skin_item_height">128.0dip</dimen>
+    <dimen name="skin_item_width">335.0dip</dimen>
+    <dimen name="theme_item_edge_size">0.0dip</dimen>
+    <dimen name="theme_item_edge_size_small">1.5dip</dimen>
+    <dimen name="theme_item_padding">0.0dip</dimen>
+    <dimen name="theme_list_padding_horizontal">1.0dip</dimen>
+    <dimen name="theme_list_scrollbar_height">2.0dip</dimen>
+    <dimen name="theme_name_height">22.0dip</dimen>
+    <dimen name="theme_name_text_size">14.0dip</dimen>
+    <dimen name="theme_page_padding_vertical">8.0dip</dimen>
+    <dimen name="theme_page_vertical_space">4.0dip</dimen>
+    <dimen name="wallpaper_grid_padding_horizontal">0.0dip</dimen>
+    <dimen name="wallpaper_item_height">174.0dip</dimen>
+    <dimen name="wallpaper_item_width">110.0dip</dimen>
+    <dimen name="wallpaper_selection_icon_height">22.5dip</dimen>
+    <dimen name="wallpaper_selection_icon_width">28.399994dip</dimen>
+</resources>

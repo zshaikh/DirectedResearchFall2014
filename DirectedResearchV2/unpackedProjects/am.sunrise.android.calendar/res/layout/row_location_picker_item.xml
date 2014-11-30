@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:paddingLeft="@dimen/location_picker_card_horizontal_padding" android:paddingTop="@dimen/location_picker_card_vertical_padding" android:paddingRight="@dimen/location_picker_card_horizontal_padding" android:paddingBottom="@dimen/location_picker_card_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/location_picker_custom_pin_canvas_size">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/location_picker_location_name_font_size" android:textColor="@color/location_picker_location_name_selector" android:ellipsize="end" android:id="@id/location_picker_location_name" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif" />
+            <TextView android:textSize="@dimen/location_picker_location_description_font_size" android:textColor="@color/location_picker_location_description_selector" android:ellipsize="end" android:id="@id/location_picker_location_description" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

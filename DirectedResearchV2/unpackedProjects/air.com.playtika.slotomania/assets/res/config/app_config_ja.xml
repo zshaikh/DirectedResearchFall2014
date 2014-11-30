@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<deployment_config>
+		<production_mode>http://vs-fb-android.playtika.com/playtika/vs_mobile/config/prod_android_vs_ja.xml</production_mode>
+		<development_mode>http://m.playtika.by/vs_mobile/config/dev_android_vs_ja.xml</development_mode>
+	</deployment_config>
+</config>

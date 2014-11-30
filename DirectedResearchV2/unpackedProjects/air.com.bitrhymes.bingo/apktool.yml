@@ -1,0 +1,15 @@
+version: 2.0.0-RC2
+apkFileName: air.com.bitrhymes.bingo.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '8'
+  targetSdkVersion: '17'
+packageInfo:
+  forced-package-id: '127'
+versionInfo:
+  versionCode: '1031000'
+  versionName: 1.31.0
+compressionType: true

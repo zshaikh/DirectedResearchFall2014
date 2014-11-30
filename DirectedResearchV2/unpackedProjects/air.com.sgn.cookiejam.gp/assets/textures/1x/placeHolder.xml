@@ -1,0 +1,8 @@
+<TextureAtlas imagePath="placeHolder.png">
+	<SubTexture name="arrow" x="65" y="0" width="64" height="64"/>
+	<SubTexture name="block" x="0" y="195" width="40" height="40"/>
+	<SubTexture name="cookie_monster" x="0" y="130" width="64" height="64"/>
+	<SubTexture name="gingerbread_man" x="65" y="130" width="51" height="64"/>
+	<SubTexture name="grid" x="0" y="65" width="64" height="64"/>
+	<SubTexture name="jelly" x="0" y="0" width="64" height="64"/>
+</TextureAtlas>

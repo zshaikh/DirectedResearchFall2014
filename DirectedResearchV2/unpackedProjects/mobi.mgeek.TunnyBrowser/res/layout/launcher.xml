@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/drag_layer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dolphin.browser.launcher.DropTargetBar android:id="@id/top_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/drop_target_bar" android:layout_width="fill_parent" android:layout_height="@dimen/send_to_home_done_height">
+            <com.dolphin.browser.ui.launcher.MoveDropTarget android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="6.0">
+                <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/button_drop_target_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_to_home" android:singleLine="true" android:drawablePadding="22.0dip" />
+            </com.dolphin.browser.ui.launcher.MoveDropTarget>
+            <com.dolphin.browser.ui.launcher.DoneButton android:gravity="center" android:layout_gravity="center_vertical" android:tag="showInLandscape" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.0">
+                <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/button_drop_target_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:singleLine="true" android:drawablePadding="22.0dip" />
+            </com.dolphin.browser.ui.launcher.DoneButton>
+        </LinearLayout>
+    </com.dolphin.browser.launcher.DropTargetBar>
+    <com.dolphin.browser.ui.launcher.MyMiddlePage android:id="@id/middle_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top_container">
+        <com.dolphin.browser.launcher.Workspace android:layout_gravity="top|left|center" android:id="@id/workspace" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.dolphin.browser.ui.launcher.MyMiddlePage>
+    <com.dolphin.browser.launcher.DropTargetBar android:id="@id/bottom_container" android:layout_width="fill_parent" android:layout_height="@dimen/send_to_home_done_height" android:layout_alignParentBottom="true">
+        <com.dolphin.browser.ui.launcher.DoneButton android:gravity="center" android:layout_gravity="bottom|left|center" android:id="@id/drop_target_bar" android:tag="showInPortrait" android:layout_width="fill_parent" android:layout_height="@dimen/promotion_view_height">
+            <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/button_drop_target_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:singleLine="true" android:drawablePadding="22.0dip" />
+        </com.dolphin.browser.ui.launcher.DoneButton>
+    </com.dolphin.browser.launcher.DropTargetBar>
+    <view android:id="@id/promotion_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/promotion_view_height" android:layout_alignParentBottom="true" class="com.dolphin.browser.promoted.PromotionView" />
+</merge>

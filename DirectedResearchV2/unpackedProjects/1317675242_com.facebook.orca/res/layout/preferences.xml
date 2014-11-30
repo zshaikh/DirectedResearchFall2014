@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:orca="http://schemas.android.com/apk/res/com.facebook.orca">
+    <com.facebook.orca.common.ui.titlebar.TitleBar android:id="@id/preferences_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:hasProgressBar="true" />
+    <ListView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

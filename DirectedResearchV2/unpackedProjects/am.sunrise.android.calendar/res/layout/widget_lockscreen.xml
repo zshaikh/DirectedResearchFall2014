@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/widget_today_header" android:background="@drawable/widget_ab_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+        <TextView android:textSize="@dimen/widget_today_time_font_size" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/widget_today_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="sans-serif-thin" />
+        <TextView android:textSize="@dimen/widget_today_date_font_size" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/widget_today_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="sans-serif-light" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:background="#00000000" android:fadingEdgeLength="@dimen/widget_fadingedge_length" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" android:requiresFadingEdge="vertical" />
+</LinearLayout>

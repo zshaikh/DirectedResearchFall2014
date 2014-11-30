@@ -1,0 +1,25 @@
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+  <id>com.gamesys.android.tools.ane</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>toolsnative.jar</nativeLibrary>
+        <initializer>com.gamesys.android.tools.ane.ToolsExtension</initializer>
+        <finalizer>com.gamesys.android.tools.ane.ToolsExtension</finalizer>
+      </applicationDeployment>
+    </platform>
+
+	<platform name="iPhone-ARM">
+       <applicationDeployment>
+         <nativeLibrary>libToolsIOSNative.a</nativeLibrary>
+         <initializer>IOSNativeToolsExtensionInitializer</initializer>
+       </applicationDeployment>
+    </platform>
+            
+    <platform name="default"> 
+    	<applicationDeployment /> 
+    </platform>
+        
+  </platforms>
+</extension>

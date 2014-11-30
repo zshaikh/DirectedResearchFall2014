@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/4.0">
+  <!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/3.4
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+  <!-- A universally unique application identifier. Must be unique across all AIR applications.
+	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+  <id>com.sgn.cookiejam.gp</id>
+  <!-- Used as the filename for the application. Required. -->
+  <filename>match</filename>
+  <!-- The name that is displayed in the AIR application installer. 
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+  <name>Cookie Jam</name>
+  <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+	Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+	An updated version of application must have a versionNumber value higher than the previous version. Required for namespace >= 2.5 . -->
+  <versionNumber>2.0.21</versionNumber>
+  <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+  <!-- <versionLabel>GOOGLE</versionLabel> -->
+  <!-- Description, displayed in the AIR application installer.
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+  <!-- <description></description> -->
+  <!-- Copyright information. Optional -->
+  <!-- <copyright></copyright> -->
+  <!-- Publisher ID. Used if you're updating an application created prior to 1.5.3 -->
+  <!-- <publisherID></publisherID> -->
+  <!-- Settings for the application's initial window. Required. -->
+  <initialWindow>
+    <!-- The main SWF or HTML file of the application. Required. -->
+    <!-- Note: In Flash Builder, the SWF reference is set automatically. -->
+    <!--<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>-->
+    <content>release_android.swf</content>
+    <!-- The title of the main window. Optional. -->
+    <!-- <title></title> -->
+    <!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
+    <!-- <systemChrome></systemChrome> -->
+    <!-- Whether the window is transparent. Only applicable when systemChrome is none. Optional. Default false. -->
+    <!-- <transparent></transparent> -->
+    <!-- Whether the window is initially visible. Optional. Default false. -->
+    <!-- <visible></visible> -->
+    <!-- Whether the user can minimize the window. Optional. Default true. -->
+    <!-- <minimizable></minimizable> -->
+    <!-- Whether the user can maximize the window. Optional. Default true. -->
+    <!-- <maximizable></maximizable> -->
+    <!-- Whether the user can resize the window. Optional. Default true. -->
+    <!-- <resizable></resizable> -->
+    <!-- The window's initial width in pixels. Optional. -->
+    <!-- <width></width> -->
+    <!-- The window's initial height in pixels. Optional. -->
+    <!-- <height></height> -->
+    <!-- The window's initial x position. Optional. -->
+    <!-- <x></x> -->
+    <!-- The window's initial y position. Optional. -->
+    <!-- <y></y> -->
+    <!-- The window's minimum size, specified as a width/height pair in pixels, such as "400 200". Optional. -->
+    <!-- <minSize></minSize> -->
+    <!-- The window's initial maximum size, specified as a width/height pair in pixels, such as "1600 1200". Optional. -->
+    <!-- <maxSize></maxSize> -->
+    <!-- The aspect ratio of the app ("portrait" or "landscape" or "any"). Optional. Mobile only. Default is the natural orientation of the device -->
+    <!-- <aspectRatio></aspectRatio> -->
+    <!-- Whether the app will begin auto-orienting on launch. Optional. Mobile only. Default false -->
+    <!-- <autoOrients></autoOrients> -->
+    <!-- Whether the app launches in full screen. Optional. Mobile only. Default false -->
+    <!-- The render mode for the app (either auto, cpu, gpu, or direct). Optional. Default auto -->
+    <!-- <renderMode></renderMode> -->
+    <renderMode>direct</renderMode>
+    <!-- Whether the default direct mode rendering context allocates storage for depth and stencil buffers.  Optional.  Default false. -->
+    <!-- <depthAndStencil></depthAndStencil> -->
+    <!-- Whether or not to pan when a soft keyboard is raised or lowered (either "pan" or "none").  Optional.  Defaults "pan." -->
+    <!-- <softKeyboardBehavior></softKeyboardBehavior> -->
+    <autoOrients>false</autoOrients>
+    <fullScreen>true</fullScreen>
+    <visible>true</visible>
+  </initialWindow>
+  <!-- We recommend omitting the supportedProfiles element, -->
+  <!-- which in turn permits your application to be deployed to all -->
+  <!-- devices supported by AIR. If you wish to restrict deployment -->
+  <!-- (i.e., to only mobile devices) then add this element and list -->
+  <!-- only the profiles which your application does support. -->
+  <!-- <supportedProfiles>desktop extendedDesktop mobileDevice extendedMobileDevice</supportedProfiles> -->
+  <!--<supportedProfiles>mobileDevice</supportedProfiles>-->
+  <!-- Languages supported by application -->
+  <!-- Only these languages can be specified -->
+  <!-- <supportedLanguages>en de cs es fr it ja ko nl pl pt ru sv tr zh</supportedLanguages> -->
+  <!-- The subpath of the standard default installation location to use. Optional. -->
+  <!-- <installFolder></installFolder> -->
+  <!-- The subpath of the Programs menu to use. (Ignored on operating systems without a Programs menu.) Optional. -->
+  <!-- <programMenuFolder></programMenuFolder> -->
+  <!-- The icon the system uses for the application. For at least one resolution,
+	specify the path to a PNG file included in the AIR package. Optional. -->
+  <icon>
+    <!--<image16x16></image16x16>
+		<image29x29></image29x29>
+		<image32x32></image32x32>
+		<image36x36></image36x36>-->
+    <image48x48>icons_android/icon48.png</image48x48>
+    <!--<image50x50></image50x50>
+		<image57x57></image57x57>
+		<image58x58></image58x58>-->
+    <image72x72>icons_android/icon72.png</image72x72>
+    <image96x96>icons_android/icon96.png</image96x96>
+    <!--<image100x100></image100x100>
+		<image114x114></image114x114>
+		<image128x128></image128x128>-->
+    <image144x144>icons_android/icon144.png</image144x144>
+    <!--<image512x512></image512x512>
+        <image1024x1024></image1024x1024>-->
+  </icon>
+  <!-- Whether the application handles the update when a user double-clicks an update version
+	of the AIR file (true), or the default AIR application installer handles the update (false).
+	Optional. Default false. -->
+  <!-- <customUpdateUI></customUpdateUI> -->
+  <!-- Whether the application can be launched when the user clicks a link in a web browser.
+	Optional. Default false. -->
+  <!-- <allowBrowserInvocation></allowBrowserInvocation> -->
+  <!-- Listing of file types for which the application can register. Optional. -->
+  <!-- <fileTypes> -->
+  <!-- Defines one file type. Optional. -->
+  <!-- <fileType> -->
+  <!-- The name that the system displays for the registered file type. Required. -->
+  <!-- <name></name> -->
+  <!-- The extension to register. Required. -->
+  <!-- <extension></extension> -->
+  <!-- The description of the file type. Optional. -->
+  <!-- <description></description> -->
+  <!-- The MIME content type. -->
+  <!-- <contentType></contentType> -->
+  <!-- The icon to display for the file type. Optional. -->
+  <!-- <icon>
+				<image16x16></image16x16>
+				<image32x32></image32x32>
+				<image48x48></image48x48>
+				<image128x128></image128x128>
+			</icon> -->
+  <!-- </fileType> -->
+  <!-- </fileTypes> -->
+  <!-- iOS specific capabilities -->
+  <!-- <iPhone> -->
+  <!-- A list of plist key/value pairs to be added to the application Info.plist -->
+  <!-- <InfoAdditions>
+            <![CDATA[
+                <key>UIDeviceFamily</key>
+                <array>
+                    <string>1</string>
+                    <string>2</string>
+                </array>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleBlackOpaque</string>
+                <key>UIRequiresPersistentWiFi</key>
+                <string>YES</string>
+            ]]>
+        </InfoAdditions> -->
+  <!-- A list of plist key/value pairs to be added to the application Entitlements.plist -->
+  <!-- <Entitlements>
+            <![CDATA[
+                <key>keychain-access-groups</key>
+                <array>
+                    <string></string>
+                    <string></string>
+                </array>
+            ]]>
+        </Entitlements> -->
+  <!-- Display Resolution for the app (either "standard" or "high"). Optional. Default "standard" -->
+  <!-- <requestedDisplayResolution></requestedDisplayResolution> -->
+  <!-- </iPhone> -->
+  <!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
+  <!--<android> -->
+  <!--	<manifestAdditions>
+		<![CDATA[
+			<manifest android:installLocation="auto">
+				<uses-permission android:name="android.permission.INTERNET"/>
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+				<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+				<uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch"/>
+				<application android:enabled="true">
+					<activity android:excludeFromRecents="false">
+						<intent-filter>
+							<action android:name="android.intent.action.MAIN"/>
+							<category android:name="android.intent.category.LAUNCHER"/>
+						</intent-filter>
+					</activity>
+				</application>
+            </manifest>
+		]]>
+        </manifestAdditions> -->
+  <!-- Color depth for the app (either "32bit" or "16bit"). Optional. Default 16bit before namespace 3.0, 32bit after -->
+  <!-- <colorDepth></colorDepth> -->
+  <!-- </android> -->
+  <!-- End of the schema for adding the android specific tags in AndroidManifest.xml file -->
+  <android>
+    <colorDepth>16bit</colorDepth>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
+
+        <permission android:name="air.com.sgn.cookiejam.gp.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+        <uses-permission android:name="air.com.sgn.cookiejam.gp.permission.C2D_MESSAGE"/>
+        <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+        <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+        <uses-permission android:name="android.permission.WAKE_LOCK"/>
+        <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+        <uses-permission android:name="android.permission.INTERNET"/>
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="com.android.vending.BILLING"/>
+
+        <application android:enabled="true" android:debuggable="false">
+			
+			<!-- AD-X -->
+			  <receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true">
+				<intent-filter>
+				  <action android:name="com.android.vending.INSTALL_REFERRER"/>
+				</intent-filter>
+			  </receiver>
+			  <meta-data android:name="APP_NAME" android:value="air.com.sgn.cookiejam.gp"/>
+			  <meta-data android:name="ADX_CLIENT_ID" android:value="SGN76hgpDP"/>
+			  <meta-data android:name="ADX_LOG_LEVEL" android:value="0"/>
+			  <!-- <meta-data android:name="forward.Admob" android:value="com.admob.android.ads.analytics.InstallReceiver"/> -->
+			<!-- AD-X -->
+			
+			<!-- Ratings -->
+			  <meta-data android:name="RTTestMode" android:value="false"/> <!-- CONDITIONAL -->
+			  <meta-data android:name="RTRateText" android:value="If you enjoy using %APP_NAME%, please take a moment to rate it. Thanks for your support!"/> <!-- CONDITIONAL -->
+			  <meta-data android:name="RTMarketURL" android:value="market://details?id=air.com.sgn.cookiejam.gp"/>
+			  <meta-data android:name="RTUsesUntilPrompt" android:value="0"/>
+			  <meta-data android:name="RTDaysUntilPrompt" android:value="2"/>
+			  <meta-data android:name="RTTimeBeforeReminding" android:value="0"/>
+			<!-- Ratings -->
+
+			<!-- Chartboost -->
+            <meta-data android:name="CBAppID" android:value="52e02e9df8975c0b734079aa"/>
+            <meta-data android:name="CBSignature" android:value="a0475dbb49af422739fd8419d80d193235911762"/>
+            <activity android:name="com.jesusla.ane.CustomActivity"/>
+            <activity android:name="com.chartboost.sdk.CBDialogActivity"
+                android:configChanges="orientation|keyboard|keyboardHidden"
+                android:windowSoftInputMode="adjustResize"
+                android:theme="@android:style/Theme.Translucent"
+                android:launchMode="singleTop"/>
+            <!-- Chartboost -->
+
+			<!-- SGN mobile -->
+			<receiver android:name="com.sgn.mobile.AlarmReceiver"/>
+            <meta-data android:name="GCMSenderID" android:value="\ 727245302334"/>
+            <activity android:name="com.sgn.mobile.OpenPushActivity" android:label="Notification"/>
+            <receiver android:name="com.sgn.mobile.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+                <intent-filter>
+                    <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                    <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                    <category android:name="air.com.sgn.cookiejam.gp"/>
+                </intent-filter>
+            </receiver>
+            <service android:name="com.sgn.mobile.GCMIntentService"/>
+			<!-- SGN mobile -->
+
+			<activity android:name="com.jesusla.ane.CustomActivity"/>
+			<activity android:name="com.jesusla.facebook.FacebookExtendedPermissionsActivity"
+			        android:theme="@android:style/Theme.NoDisplay"/>
+            <activity android:name="com.jesusla.facebook.FacebookLoginActivity"
+					android:theme="@android:style/Theme.NoDisplay"/>
+            <activity android:name="com.jesusla.facebook.FacebookGraphActivity"
+					android:theme="@android:style/Theme.NoDisplay"/>
+		    <activity android:name="com.facebook.LoginActivity"
+					android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+            <meta-data android:name="ANEDebug" android:value="false"/>
+            <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ 405661196232030"/>
+		    <meta-data android:name="SGNAppID" android:value="2113"/>
+
+            <!-- STOREKIT -->
+            <service android:name="com.jesusla.google.BillingService"/>
+            <receiver android:name="com.jesusla.google.BillingReceiver">
+                <intent-filter>
+                  <action android:name="com.android.vending.billing.IN_APP_NOTIFY"/>
+                  <action android:name="com.android.vending.billing.RESPONSE_CODE"/>
+                  <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED"/>
+                </intent-filter>
+              </receiver>
+              <receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+                <intent-filter>
+                  <action android:name="com.amazon.inapp.purchasing.NOTIFY"
+                          android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY"/>
+                </intent-filter>
+            </receiver>
+            <meta-data android:name="SKProvider" android:value="Google"/>
+            <meta-data android:name="SKIdentity" android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0H7pnoXi1Uzdg4di8pkGQx+bC8UKRWs+LS1vuuKipRo3nedYwu2hQ2sqMkM1xdBLj11KXMN/ZWn96J2GNCmgxK+IoBVz+s0uQo0zc3AZojupQ3Xvl3aUDyIQUyS21Jj4lLeCmZsE9JE3EZmgfYgWlgOP0+W4adEUz/pBl4jZwX21ruQarCFwZ+LqLaNM4br+kbyrh84s7xCVZdi5HcVXEloGLe1sHQq369G+mCdvAd8Dlhm53pA/Hr08BmFUjyy8mFNsN3hjRqouTGTDbP0XGYqZ+2iPkGz0eXwbSw9enSC11dyKtdbeg9ghrk9Wrwt22GTf6RWhuhLZgzu5iGC7/QIDAQAB"/>
+            <!-- STOREKIT -->
+
+            <!-- GooglePlay Games Services -->
+            <meta-data android:name="com.google.android.gms.games.APP_ID"
+              android:value="\ 879298079941" />
+            <meta-data android:name="com.google.android.gms.version"
+                     android:value="4242000"/>
+
+            <activity android:name="com.sgn.googleservices.MainActivity"
+                  android:theme="@android:style/Theme.NoDisplay"/>
+
+            <activity android:launchMode="standard">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+
+        </application>
+      </manifest>]]></manifestAdditions>
+  </android>
+  <extensions>
+    <extensionID>com.jesusla.adx</extensionID>
+    <extensionID>com.sgn.ratings</extensionID>
+    <extensionID>com.jesusla.facebook</extensionID>
+    <extensionID>com.jesusla.ane</extensionID>
+    <extensionID>com.sgn.mobile</extensionID>
+    <extensionID>com.sgn.android4support</extensionID>
+    <extensionID>com.jesusla.storekit</extensionID>
+    <extensionID>com.jesusla.chartboost</extensionID>
+    <extensionID>com.sgn.googleservices</extensionID>
+    <!--<extensionID>com.sgn.cookieicon</extensionID>-->
+    <extensionID>com.sgn.bingo</extensionID>
+  </extensions>
+</application>
+

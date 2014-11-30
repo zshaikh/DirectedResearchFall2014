@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/landingScreenLayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.redbox.android.view.HeaderView android:id="@id/header_view" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <com.redbox.android.view.SearchView android:orientation="horizontal" android:id="@id/searchlayout" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ListView android:gravity="center" android:id="@id/movieList" android:background="@color/white" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@null" android:divider="@color/black" android:dividerHeight="1.0px" android:layout_above="@id/redbox_selection_Layout" android:layout_below="@id/header_view" android:layout_alignParentLeft="true" android:fastScrollEnabled="true" />
+    <com.redbox.android.view.RBSelectionView android:id="@id/redbox_selection_Layout" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>विकल्प</item>
+        <item>एड-ऑन विवरण</item>
+        <item>एड-ऑन अक्षम करें</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>लाइब्रेरी से चुनें</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>लैटिन-1 (ISO-8859-1)</item>
+        <item>यूनिकोड (UTF-8)</item>
+        <item>चीनी (GBK)</item>
+        <item>चीनी (Big5)</item>
+        <item>जापानी (ISO-2022-JP)</item>
+        <item>जापानी (SHIFT_JIS)</item>
+        <item>जापानी (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (और अधिक पीठ)</item>
+        <item>100% (फ़िट स्क्रीन )</item>
+        <item>200% (करीब करें)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>एंड्रॉयड</item>
+        <item>डेस्कटॉप</item>
+        <item>इफोने</item>
+        <item>इपद</item>
+        <item>कस्टम</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>छिपाना</item>
+        <item>बाएं (नीचे)</item>
+        <item>दायां (नीचे)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>छिपाना</item>
+        <item>बाएं</item>
+        <item>दायां</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>अक्षम</item>
+        <item>बेहतर गुणवत्ता</item>
+        <item>संतुलित</item>
+        <item>छोटे आकार</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>हमेशा ऑन</item>
+        <item>हमेशा ऑफ</item>
+        <item>वाईफ़ाई में दिखाएँ</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>नया पेज खोलें</item>
+        <item>पिछला पेज खोलें</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>डिफ़ॉल्ट</item>
+        <item>पृष्ठभूमि टैब में खोलें</item>
+        <item>नए टैब में खोलें</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>स्वत:</item>
+        <item>लैंडस्कैप</item>
+        <item>पोट्रैट</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>हमेशा ऑन</item>
+        <item>मांग पर</item>
+        <item>ऑफ</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>अक्षम</item>
+        <item>केवल Wi-Fi पर</item>
+        <item>सदैव</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>बायें बार सक्षम करें</item>
+        <item>दाएं बार सक्षम करें</item>
+        <item>सभी सक्षम करें</item>
+        <item>अक्षम</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>नन्ही</item>
+        <item>छोटा</item>
+        <item>सामान्य</item>
+        <item>बड़ा</item>
+        <item>बहुत बड़ा</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>डिफ़ॉल्ट एंड्रॉयड एक्शन</item>
+        <item>स्क्रॉल अप/नीचे पेज</item>
+        <item>टैब बदलें</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>मैं सोच रहा हूँ</item>
+        <item>मैं कर रहा हूँ</item>
+        <item>ठीक है</item>
+        <item>जैसे आपकी इच्छा</item>
+        <item>आपकी इच्छा मेरा आदेश</item>
+        <item>एक मिनट रुको.</item>
+        <item>मुझे एक मिनट दें</item>
+        <item>सोच रहा था.</item>
+        <item>प्रोसेस हो रहा है</item>
+        <item>बस एक पल.</item>
+        <item>कृपया प्रतीक्षा करें.</item>
+        <item>समझ गया</item>
+        <item>मैं यह करूँगा</item>
+        <item>रॉकिंग</item>
+        <item>यह डोप है.</item>
+        <item>वुट</item>
+        <item>स्वादिष्ट लगता है ...</item>
+        <item>अच्छा लगता है!</item>
+        <item>मैं सुन रहा हूँ!</item>
+    </string-array>
+</resources>

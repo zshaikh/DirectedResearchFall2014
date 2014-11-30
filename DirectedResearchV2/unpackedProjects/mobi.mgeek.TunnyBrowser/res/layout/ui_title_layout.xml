@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/btn_done" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="56.599976dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textAppearance="@style/SettingsTitleAppearence" android:textColor="@color/setting_page_title_color" android:ellipsize="end" android:gravity="left|center" android:id="@id/title" android:paddingRight="57.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="-10.0dip" android:text="@string/ux_report" android:singleLine="true" android:layout_toRightOf="@id/btn_done" />
+</RelativeLayout>

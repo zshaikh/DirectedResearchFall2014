@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/options_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:gravity="left|center" android:id="@id/option_open_newtab" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/option_add_bookmark" />
+    <View android:id="@id/divide_one" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+    <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/option_open_bgtab" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/option_add_speeddial" />
+    <View android:id="@id/divide_two" android:background="#ffd5d5d5" android:layout_width="fill_parent" android:layout_height="0.33000004dip" />
+    <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/option_remove" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/option_pin_to_desktop" />
+</LinearLayout>

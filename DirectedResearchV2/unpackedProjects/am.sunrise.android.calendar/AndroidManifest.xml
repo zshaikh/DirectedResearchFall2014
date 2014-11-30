@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="am.sunrise.android.calendar">
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="am.sunrise.android.calendar.permission.CONTENT_PROVIDER"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/config_app_name" android:name="am.sunrise.android.calendar.SunriseApplication" android:theme="@style/Theme.Sunrise.NoTitle">
+        <activity android:name="am.sunrise.android.calendar.ui.HomeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Home" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/settings" android:launchMode="singleTask" android:name="am.sunrise.android.calendar.ui.settings.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise"/>
+        <activity android:label="@string/settings_preferences" android:name="am.sunrise.android.calendar.ui.settings.SettingsPreferencesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Settings"/>
+        <activity android:label="@string/settings_alert_times" android:name="am.sunrise.android.calendar.ui.settings.SettingsAlertsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Settings"/>
+        <activity android:name="am.sunrise.android.calendar.ui.settings.SubSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Settings"/>
+        <activity android:name="am.sunrise.android.calendar.ui.settings.SettingsConnectAccountActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Settings"/>
+        <activity android:name="am.sunrise.android.calendar.ui.settings.SettingsWebView" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Settings"/>
+        <activity android:excludeFromRecents="true" android:name="am.sunrise.android.calendar.authenticator.ui.AuthenticatorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.Onboarding" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="am.sunrise.android.calendar.authenticator.ui.WebAuthenticationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <service android:name="am.sunrise.android.calendar.authenticator.AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <provider android:authorities="@string/config_authority" android:exported="false" android:label="@string/content_provider" android:multiprocess="false" android:name="am.sunrise.android.calendar.provider.Content" android:permission="am.sunrise.android.calendar.permission.CONTENT_PROVIDER" android:syncable="true"/>
+        <service android:exported="true" android:name="am.sunrise.android.calendar.sync.SyncService" android:permission="am.sunrise.android.calendar.permission.CONTENT_PROVIDER">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_service"/>
+        </service>
+        <activity android:label="@string/importing_title" android:name="am.sunrise.android.calendar.ui.firstsync.FirstSyncActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:name="am.sunrise.android.calendar.ui.firstsync.FirstRunActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <service android:exported="false" android:name="am.sunrise.android.calendar.sync.SyncWorker"/>
+        <activity android:name="am.sunrise.android.calendar.ui.event.details.EventDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise"/>
+        <activity android:name="am.sunrise.android.calendar.ui.event.details.EventDetailsAttendeesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:name="am.sunrise.android.calendar.ui.event.details.EventDetailsDescriptionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:label="@string/new_event" android:name="am.sunrise.android.calendar.ui.event.add.AddEventActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise"/>
+        <activity android:label="@string/edit_event" android:name="am.sunrise.android.calendar.ui.event.edit.EditEventActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise"/>
+        <activity android:name="am.sunrise.android.calendar.ui.inbox.InboxActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise"/>
+        <activity android:label="@string/contact_picker_title" android:name="am.sunrise.android.calendar.ui.contactpicker.ContactPickerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:label="@string/location_picker_title" android:name="am.sunrise.android.calendar.ui.locationpicker.LocationPickerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:name="am.sunrise.android.calendar.ui.DateRangeSelectionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise"/>
+        <activity android:label="@string/birthdays" android:name="am.sunrise.android.calendar.ui.birthdays.BirthdaysActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:name="am.sunrise.android.calendar.ui.utils.WebViewActivity" android:theme="@style/Theme.Sunrise.NoIcon"/>
+        <activity android:name="am.sunrise.android.calendar.ui.maps.MapsActivity" android:theme="@style/Theme.Sunrise.Maps"/>
+        <activity android:name="am.sunrise.android.calendar.gcal.ProxyActivity" android:theme="@style/Theme.Sunrise.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/event"/>
+                <data android:mimeType="vnd.android.cursor.dir/event"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="com.android.calendar"/>
+                <data android:path="/events"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="time/epoch"/>
+                <data android:host="com.android.calendar"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </activity>
+        <service android:name="am.sunrise.android.calendar.reminders.RemindersService" android:permission="am.sunrise.android.calendar.permission.CONTENT_PROVIDER"/>
+        <service android:name="am.sunrise.android.calendar.reminders.AlarmReminderService" android:permission="am.sunrise.android.calendar.permission.CONTENT_PROVIDER"/>
+        <receiver android:enabled="true" android:name="am.sunrise.android.calendar.reminders.Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="am.sunrise.android.calendar.action.REMINDER_EVENT"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="am.sunrise.android.calendar.action.REMINDER_ALLDAYS"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="am.sunrise.android.calendar.action.REMINDER_BIRTHDAYS"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="am.sunrise.android.calendar.action.REMINDER_SENTINEL"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="am.sunrise.android.calendar.widget.agenda.AgendaAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="am.sunrise.android.calendar.action.UPDATE_WIDGET"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/agenda_appwdiget_info"/>
+        </receiver>
+        <service android:exported="false" android:name="am.sunrise.android.calendar.widget.agenda.AgendaWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <receiver android:name="am.sunrise.android.calendar.widget.agenda.OccurrencesProvider">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PROVIDER_CHANGED"/>
+                <data android:scheme="content"/>
+                <data android:host="@string/config_authority"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="am.sunrise.android.calendar.action.UPDATE_WIDGET_CONTENT"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="am.sunrise.android.calendar.widget.agenda.TimeObserver">
+            <intent-filter>
+                <action android:name="am.sunrise.android.calendar.action.TIME_TICK"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="am.sunrise.android.calendar.widget.agenda.WidgetRouterActivity" android:theme="@style/Theme.Sunrise.Transparent"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/config_facebook_app_id"/>
+        <activity android:label="@string/config_app_name" android:name="com.facebook.LoginActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_api_key"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="416ef8a5c2431f9c535476f1af2064db5fb8fa4a"/>
+    </application>
+    <permission android:name="am.sunrise.android.calendar.permission.CONTENT_PROVIDER" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+</manifest>

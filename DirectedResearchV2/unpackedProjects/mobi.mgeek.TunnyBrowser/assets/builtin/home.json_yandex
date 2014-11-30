@@ -1,0 +1,79 @@
+[
+
+    {
+        "its": [
+            {
+                "url": "http://www.yandex.ru/?clid=1771195",
+                "p": 1,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/yandex.png",
+                "d": true,
+                "ttl": "Яндекс"
+            },
+            {
+                "url": "http://vk.com",
+                "p": 2,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/VK.png",
+                "d": true,
+                "ttl": "ВКонтакте"
+            },
+            {
+                "url": "http://m.odnoklassniki.ru",
+                "p": 3,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/odnoklassniki.png",
+                "d": true,
+                "ttl": "OK"
+            },
+            {
+                "url": "http://www.dolphin-browser.com/apps/aphone.htm",
+                "p": 0,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/hot_apps.png",
+                "d": false,
+                "ttl": "Hot Apps"
+            },
+            {
+                "p": 4,
+                "its": [
+                    {
+                        "url": "http://dolphin.com/features/",
+                        "p": 1,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/features.png",
+                        "d": true,
+                        "ttl": "Features"
+                    },
+                    {
+                        "url": "http://dolphin.com/blog/",
+                        "p": 2,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/bolg.png",
+                        "d": true,
+                        "ttl": "Blog"
+                    },
+                    {
+                        "url": "https://dolphinbrowser.desk.com/",
+                        "p": 3,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/FAQ.png",
+                        "d": true,
+                        "ttl": "FAQ"
+                    },
+                    {
+                        "url": "dolphin://feedback",
+                        "p": 4,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/feedback.png",
+                        "d": true,
+                        "ttl": "Feedback"
+                    },
+                    {
+                        "url": "http://dolphin.com/ru/updatenotes/",
+                        "p": 5,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/update277bd2.png",
+                        "d": true,
+                        "ttl": "Updates"
+                    }
+                ],
+                "ttl": "Dolphin"
+            }
+        ],
+        "id": 3,
+        "sid": 0
+    }
+
+]

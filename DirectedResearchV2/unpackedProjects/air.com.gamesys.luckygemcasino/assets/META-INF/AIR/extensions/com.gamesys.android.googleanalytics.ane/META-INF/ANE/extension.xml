@@ -1,0 +1,25 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.9">
+  <id>com.gamesys.android.googleanalytics.ane</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>googleanalytics.jar</nativeLibrary>
+        <initializer>com.gamesys.android.googleanalytics.ane.GoogleAnalyticsExtension</initializer>
+        <finalizer>com.gamesys.android.googleanalytics.ane.GoogleAnalyticsExtension</finalizer>
+      </applicationDeployment>
+    </platform>
+    
+    <platform name="iPhone-ARM">
+       <applicationDeployment>
+         <nativeLibrary>libGoogleAnalyticsIOSNative.a</nativeLibrary>
+         <initializer>IOSNativeGoogleAnalyticsExtensionInitializer</initializer>
+       </applicationDeployment>
+    </platform>
+    
+    <platform name="default"> 
+    	<applicationDeployment /> 
+    </platform>
+        
+  </platforms>
+</extension>

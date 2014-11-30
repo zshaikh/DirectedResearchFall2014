@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" package="air.com.gamesys.luckygemcasino">
+    <application android:debuggable="false" android:enabled="true" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="false" android:label="@string/app_name" android:launchMode="singleTop" android:name=".AppEntry" android:screenOrientation="user" android:theme="@style/Theme.NoShadow" android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data android:name="namespaceVersion" android:value="4.0"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="aspectRatio" android:value="landscape"/>
+            <meta-data android:name="autoOrients" android:value="true"/>
+            <meta-data android:name="fullScreen" android:value="true"/>
+            <meta-data android:name="uniqueappversionid" android:value="00d24a63-6833-44c1-8236-a4559fe63942"/>
+            <meta-data android:name="initialcontent" android:value="LuckyGemMobile.swf"/>
+            <meta-data android:name="containsVideo" android:value="false"/>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.gamesys.android.social.facebook.AndroidFBInterface" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTask" android:name="com.gamesys.android.billing.google.AndroidIABInterface" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.gamesys.android.billing.google.ane.APP_ID_BASE_64" android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn05SVpIIJSN45QQGAq8UPH9MZnamBg8iogQzG6A5PtmM5GQU0e0PVGmMaCFP2hhRHsHlU9pPxKsh8CMJA2VfCMg6Eon7Qn4HkqY15P8nM6vOxjtPTgR5BSLhmSAcGYkDUAVSankfx5m0M1UXsJLh6DLmMtNrisTIMqoaw5oSddwWjgkJcFTR1hwdgwvUvimu6Fha6sn8FMdjyP2PB+KPP7R1hbFqmqZll4Igch4qF9R0GkJdG1ocrY3Cpd6Wei7LvUjO6llRkRe8M8azqmeys5KuERVijjyCDoVcaEev9Y79lEQrOSl+34hM6vadim3D3r9qPbe59iE1HBjlb5L2TQIDAQAB"/>
+        <activity android:launchMode="singleTask" android:name="com.gamesys.android.billing.amazon.AndroidIAPInterface" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+            <intent-filter>
+                <action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY"/>
+            </intent-filter>
+        </receiver>
+        <activity android:launchMode="singleTask" android:name="com.gamesys.android.tools.ane.AndroidToolsInterface" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.somo.apptimiser.PUBLIC_KEY_BASE64_STRING" android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCQ8l8AKSJdr3kDLJ3xRUaFcvAiIKtDnySqNNwLc6wmiTRLJNwh1aGZEfrDPNgDXCmw3zhK1Zlapv+ESlF+hb36oi4e3CEqgodAisuzdoMtpUxKMUKNQes/+rahuEs6nhU0nREnFa3ounNAJjjv9AkcEigC99LzKG6KEENEauqw2wIDAQAB"/>
+        <meta-data android:name="com.somo.apptimiser.LOCATION_TRACKING_DISABLED" android:value="true"/>
+        <receiver android:name="com.somo.apptimiser.SomoMarketBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.gamesys.android.ane.tools.METADATA_CM_GOOGLE_PLAY_SENDER_ID" android:value="'755009890729'"/>
+        <receiver android:name="com.gamesys.android.tools.ane.notification.cm.google.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="air.com.gamesys.luckygemcasino"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:label="PushNotificationService" android:name="com.gamesys.android.tools.ane.notification.statusbar.SBNotificationMessageIntentService"/>
+        <meta-data android:name="com.gamesys.android.ane.tools.METADATA_CM_AMAZON_SENDER_ID" android:value="'TBD'"/>
+        <activity android:name="com.gamesys.android.tools.ane.AndroidToolsInterface">
+            <intent-filter>
+                <data android:scheme="gamesysapp"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="air.com.gamesys.luckygemcasino.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="air.com.gamesys.luckygemcasino.permission.C2D_MESSAGE"/>
+    <uses-configuration android:reqFiveWayNav="false"/>
+    <supports-screens android:normalScreens="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true"/>
+</manifest>

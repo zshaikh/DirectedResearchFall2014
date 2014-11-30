@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mgeek.android.ui.TabHost android:id="@android:id/tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/contentView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/tabs_bg" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height" android:layout_alignParentTop="true">
+            <com.mgeek.android.ui.TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/tabs_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <include android:id="@id/bottom_container" android:layout_width="fill_parent" android:layout_height="@dimen/download_bottom_bar_height" android:layout_alignParentBottom="true" layout="@layout/download_bottom_bar" />
+        <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_container" android:layout_below="@id/tabs_bg" />
+        <LinearLayout android:orientation="vertical" android:id="@id/menu" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="133.29999dip" android:layout_height="wrap_content" android:layout_above="@id/bottom_container" android:layout_alignParentRight="true">
+            <include android:id="@id/menu_item_one" android:layout_width="fill_parent" android:layout_height="48.0dip" layout="@layout/download_manage_menu_item" />
+            <include android:id="@id/menu_item_two" android:layout_width="fill_parent" android:layout_height="54.0dip" layout="@layout/download_manage_menu_item" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.mgeek.android.ui.TabHost>

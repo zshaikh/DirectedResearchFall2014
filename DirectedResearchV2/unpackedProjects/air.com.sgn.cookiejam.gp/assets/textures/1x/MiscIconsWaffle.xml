@@ -1,0 +1,6 @@
+<TextureAtlas imagePath="MiscIconsWaffle.png">
+	<SubTexture name="cat_bowl_0" x="0" y="182" width="180" height="180"/>
+	<SubTexture name="cat_bowl_1" x="182" y="0" width="180" height="180"/>
+	<SubTexture name="cat_bowl_2" x="182" y="182" width="180" height="180"/>
+	<SubTexture name="cat_bowl_3" x="0" y="0" width="180" height="180"/>
+</TextureAtlas>

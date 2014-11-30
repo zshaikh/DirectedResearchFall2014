@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/open_with_menu_id" android:title="@string/open_with" />
+    <item android:id="@id/add_bookmark_menu_id" android:title="@string/save_to_bookmarks" />
+    <item android:id="@id/title_bar_copy_page_url" android:title="@string/copy_page_url" />
+    <item android:id="@id/menu_paste" android:title="@string/paste" />
+    <item android:id="@id/menu_gesture" android:title="@string/create_gesture_for_page" />
+    <item android:id="@id/select_text_id" android:title="@string/select_dot" />
+    <item android:id="@id/save_page_menu_id" android:title="@string/save_page" />
+</menu>

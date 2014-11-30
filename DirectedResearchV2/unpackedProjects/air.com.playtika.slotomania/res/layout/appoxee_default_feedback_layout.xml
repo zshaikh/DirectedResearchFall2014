@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/feedback_header" android:background="@drawable/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/feedback_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_feedback" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/feedback_icon" />
+        <TextView android:textSize="18.0sp" android:typeface="normal" android:textColor="@color/white" android:id="@id/appoxee_default_feedback_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feedback_title" android:layout_toRightOf="@id/feedback_icon" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/close_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="close" android:contentDescription="@string/close_icon" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/header_close_seprator_middle" android:layout_toLeftOf="@id/close_icon" android:layout_centerVertical="true" android:contentDescription="@string/separator" />
+    </RelativeLayout>
+    <WebView android:id="@id/appoxee_default_feedback_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/feedback_footer" android:layout_below="@id/feedback_header" />
+    <ProgressBar android:id="@id/appoxee_default_feedback_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+    <RelativeLayout android:gravity="center" android:id="@id/appoxee_default_feedback_error_message" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/feedback_header" android:layout_centerInParent="true">
+        <ImageView android:id="@id/oops_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/oops" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@string/oops_logo" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/oops_message_color" android:gravity="center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:maxWidth="200.0dip" android:text="@string/oops_message" android:lines="2" android:layout_below="@id/oops_logo" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/oops_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/no_connection" android:layout_below="@id/textView1" android:layout_centerHorizontal="true" android:contentDescription="@string/oops_icon" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/feedback_footer" android:background="@drawable/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/appoxee_logo" android:paddingRight="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logo" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/appoxee_logo" />
+        <TextView android:textSize="8.0sp" android:typeface="normal" android:textColor="@color/white" android:id="@id/powered_by" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:text="@string/powered_by" android:layout_toLeftOf="@id/appoxee_logo" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

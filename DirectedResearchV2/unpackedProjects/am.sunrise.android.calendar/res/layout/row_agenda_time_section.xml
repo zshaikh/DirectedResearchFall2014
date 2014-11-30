@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/agendaview_timesection_font_size" android:textColor="@color/agendaview_timesection_period" android:ellipsize="end" android:gravity="left|center" android:id="@id/row_agenda_time_section" android:background="#ffffffff" android:paddingLeft="@dimen/agendaview_timesection_padding_left_right" android:paddingRight="@dimen/agendaview_timesection_padding_left_right" android:layout_width="fill_parent" android:layout_height="@dimen/agendaview_timesection_height" android:maxLines="1" android:fontFamily="sans-serif"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

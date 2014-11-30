@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="fill" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/map_toolbar" android:background="@color/gray_dark_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:baselineAligned="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/toolbar_my_location_button" android:padding="8.0dip" android:src="@drawable/ic_action_location_found" style="@style/Toolbar_Button" />
+    <ImageButton android:id="@id/toolbar_map_types_button" android:paddingLeft="11.0dip" android:paddingTop="16.5dip" android:paddingRight="11.0dip" android:paddingBottom="16.5dip" android:src="@drawable/tile_2x" style="@style/Toolbar_Button" />
+    <ImageButton android:id="@id/toolbar_layers_button" android:paddingLeft="11.0dip" android:paddingTop="15.0dip" android:paddingRight="11.0dip" android:paddingBottom="15.0dip" android:src="@drawable/layers_2x" style="@style/Toolbar_Button" />
+    <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <ImageButton android:id="@id/toolbar_config_button" android:padding="8.0dip" android:src="@drawable/ic_action_settings" style="@style/Toolbar_Button" />
+</LinearLayout>

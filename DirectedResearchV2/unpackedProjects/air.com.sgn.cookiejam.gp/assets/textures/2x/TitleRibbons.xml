@@ -1,0 +1,4 @@
+<TextureAtlas imagePath="TitleRibbons.png">
+	<SubTexture name="title_bg" x="0" y="0" width="837" height="169"/>
+	<SubTexture name="titleribbonstraight_bg" x="0" y="171" width="622" height="164"/>
+</TextureAtlas>

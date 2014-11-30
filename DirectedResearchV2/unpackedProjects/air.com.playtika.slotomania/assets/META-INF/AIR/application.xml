@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.8">
+
+<!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/2.6
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+
+	<!-- A universally unique application identifier. Must be unique across all AIR applications.
+	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+	<id>com.playtika.slotomania</id>
+
+	<!-- Used as the filename for the application. Required. -->
+	<filename>Slotomania</filename>
+
+	<!-- The name that is displayed in the AIR application installer. 
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<name>Slotomania</name>
+	
+	<!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+	Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+	An updated version of application must have a versionNumber value higher than the previous version. Required for namespace >= 2.5 . -->
+	<versionNumber>1.48.0</versionNumber>
+		         
+	<!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+	<versionLabel>1.48.0</versionLabel>
+
+	<!-- Description, displayed in the AIR application installer.
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<!-- <description></description> -->
+
+	<!-- Copyright information. Optional -->
+	<!-- <copyright></copyright> -->
+
+	<!-- Publisher ID. Used if you're updating an application created prior to 1.5.3 -->
+	<!-- <publisherID></publisherID> -->
+
+	<!-- Settings for the application's initial window. Required. -->
+	<initialWindow>
+		<!-- The main SWF or HTML file of the application. Required. -->
+		<!-- Note: In Flash Builder, the SWF reference is set automatically. -->
+		<content>VideoSlots.swf</content>
+		
+		<!-- The title of the main window. Optional. -->
+		<!-- <title></title> -->
+
+		<!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
+		<!-- <systemChrome></systemChrome> -->
+
+		<!-- Whether the window is transparent. Only applicable when systemChrome is none. Optional. Default false. -->
+		<!-- <transparent></transparent> -->
+
+		<!-- Whether the window is initially visible. Optional. Default false. -->
+		<!-- <visible></visible> -->
+
+		<!-- Whether the user can minimize the window. Optional. Default true. -->
+		<!-- <minimizable></minimizable> -->
+
+		<!-- Whether the user can maximize the window. Optional. Default true. -->
+		<!-- <maximizable></maximizable> -->
+
+		<!-- Whether the user can resize the window. Optional. Default true. -->
+		<!-- <resizable></resizable> -->
+
+		<!-- The window's initial width in pixels. Optional. -->
+		<!-- <width></width> -->
+
+		<!-- The window's initial height in pixels. Optional. -->
+		<!-- <height></height> -->
+
+		<!-- The window's initial x position. Optional. -->
+		<!-- <x></x> -->
+
+		<!-- The window's initial y position. Optional. -->
+		<!-- <y></y> -->
+
+		<!-- The window's minimum size, specified as a width/height pair in pixels, such as "400 200". Optional. -->
+		<!-- <minSize></minSize> -->
+
+		<!-- The window's initial maximum size, specified as a width/height pair in pixels, such as "1600 1200". Optional. -->
+		<!-- <maxSize></maxSize> -->
+
+        <!-- The initial aspect ratio of the app when launched (either "portrait" or "landscape"). Optional. Mobile only. Default is the natural orientation of the device -->
+
+        <aspectRatio>landscape</aspectRatio>
+
+        <!-- Whether the app will begin auto-orienting on launch. Optional. Mobile only. Default false -->
+
+        <autoOrients>false</autoOrients> 
+
+        <!-- Whether the app launches in full screen. Optional. Mobile only. Default false -->
+
+        <!-- <fullScreen></fullScreen> -->
+
+        <!-- The render mode for the app (either auto, cpu, or gpu). Optional. Mobile only. Default auto -->
+
+        <renderMode>cpu</renderMode>
+
+		<!-- Whether or not to pan when a soft keyboard is raised or lowered (either "pan" or "none").  Optional.  Defaults "pan." -->
+		<!-- <softKeyboardBehavior></softKeyboardBehavior> -->
+        <fullScreen>true</fullScreen>
+        <visible>true</visible>
+    </initialWindow>
+
+	<!-- We recommend omitting the supportedProfiles element, -->
+	<!-- which in turn permits your application to be deployed to all -->
+	<!-- devices supported by AIR. If you wish to restrict deployment -->
+	<!-- (i.e., to only mobile devices) then add this element and list -->
+	<!-- only the profiles which your application does support. -->
+	<!-- <supportedProfiles>desktop extendedDesktop mobileDevice extendedMobileDevice</supportedProfiles> -->
+
+	<!-- The subpath of the standard default installation location to use. Optional. -->
+	<!-- <installFolder></installFolder> -->
+
+	<!-- The subpath of the Programs menu to use. (Ignored on operating systems without a Programs menu.) Optional. -->
+	<!-- <programMenuFolder></programMenuFolder> -->
+
+	<!-- The icon the system uses for the application. For at least one resolution,
+	specify the path to a PNG file included in the AIR package. Optional. -->
+ 	<icon>
+		<image36x36>res/assets/sd/icon36.png</image36x36>
+		<image48x48>res/assets/sd/icon48.png</image48x48>
+		<image72x72>res/assets/sd/icon72.png</image72x72>
+		<image114x114>res/assets/sd/icon114.png</image114x114>
+	</icon>
+
+	<!-- Whether the application handles the update when a user double-clicks an update version
+	of the AIR file (true), or the default AIR application installer handles the update (false).
+	Optional. Default false. -->
+	<!-- <customUpdateUI></customUpdateUI> -->
+	
+	<!-- Whether the application can be launched when the user clicks a link in a web browser.
+	Optional. Default false. -->
+	<!-- <allowBrowserInvocation></allowBrowserInvocation> -->
+
+	<!-- Listing of file types for which the application can register. Optional. -->
+	<!-- <fileTypes> -->
+
+		<!-- Defines one file type. Optional. -->
+		<!-- <fileType> -->
+
+			<!-- The name that the system displays for the registered file type. Required. -->
+			<!-- <name></name> -->
+
+			<!-- The extension to register. Required. -->
+			<!-- <extension></extension> -->
+			
+			<!-- The description of the file type. Optional. -->
+			<!-- <description></description> -->
+			
+			<!-- The MIME content type. -->
+			<!-- <contentType></contentType> -->
+			
+			<!-- The icon to display for the file type. Optional. -->
+			<!-- <icon>
+				<image16x16></image16x16>
+				<image32x32></image32x32>
+				<image48x48></image48x48>
+				<image128x128></image128x128>
+			</icon> -->
+			
+		<!-- </fileType> -->
+	<!-- </fileTypes> -->
+
+    <!-- iOS specific capabilities -->
+	<!-- <iPhone> -->
+		<!-- A list of plist key/value pairs to be added to the application Info.plist -->
+		<!-- <InfoAdditions>
+            <![CDATA[
+                <key>UIDeviceFamily</key>
+                <array>
+                    <string>1</string>
+                    <string>2</string>
+                </array>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleBlackOpaque</string>
+                <key>UIRequiresPersistentWiFi</key>
+                <string>YES</string>
+            ]]>
+        </InfoAdditions> -->
+        <!-- <requestedDisplayResolution></requestedDisplayResolution> -->
+	<!-- </iPhone> -->
+
+	<!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
+	<!--<android> 
+		<manifestAdditions>
+		<![CDATA[
+			<manifest android:installLocation="auto">
+				<uses-permission android:name="android.permission.INTERNET"/>
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+				<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+				<uses-configuration android:reqFiveWayNav="true"/>
+				<supports-screens android:normalScreens="true"/>
+				<uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch"/>
+				<application android:enabled="true">
+					<activity android:excludeFromRecents="false">
+						<intent-filter>
+							<action android:name="android.intent.action.MAIN"/>
+							<category android:name="android.intent.category.LAUNCHER"/>
+						</intent-filter>
+					</activity>
+				</application>
+			</manifest>
+		]]>
+		</manifestAdditions> 
+	</android> -->
+	<!-- End of the schema for adding the android specific tags in AndroidManifest.xml file -->
+
+	<android>
+		<manifestAdditions><![CDATA[
+			<manifest android:installLocation="auto">
+				<!--See the Adobe AIR documentation for more information about setting Google Android permissions-->
+				
+				<!--Removing the permission android.permission.INTERNET will have the side effect of preventing you from debugging your application on your device-->
+				<uses-permission android:name="android.permission.INTERNET"/>
+				
+				<!--The DISABLE_KEYGUARD and WAKE_LOCK permissions should be toggled together in order to access AIR's SystemIdleMode APIs-->
+				<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+				<uses-permission android:name="android.permission.WAKE_LOCK"/>			    
+				
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+				<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+				
+				<!-- Required for Appoxee -->	
+				<permission android:name="air.com.playtika.slotomania.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+				<uses-permission android:name="air.com.playtika.slotomania.permission.C2D_MESSAGE" />
+				<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+				<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+				
+				<!-- Required for Google Payments -->
+				<uses-permission android:name="com.android.vending.BILLING" />
+				
+				
+				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+				<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+				<uses-permission android:name="android.permission.VIBRATE" />
+				
+				<uses-permission android:name="android.permission.GET_TASKS"/>
+				
+				<!-- Screen Resolutions -->
+				<compatible-screens>
+			<screen android:screenSize="small" android:screenDensity="ldpi"/>
+			<screen android:screenSize="small" android:screenDensity="mdpi"/>
+			<screen android:screenSize="small" android:screenDensity="hdpi"/>
+			<screen android:screenSize="small" android:screenDensity="xhdpi"/>
+			<screen android:screenSize="normal" android:screenDensity="ldpi"/>
+			<screen android:screenSize="normal" android:screenDensity="mdpi"/>
+			<screen android:screenSize="normal" android:screenDensity="hdpi"/>
+			<screen android:screenSize="large" android:screenDensity="ldpi"/>
+			<screen android:screenSize="large" android:screenDensity="mdpi"/>
+			<screen android:screenSize="xlarge" android:screenDensity="ldpi"/>
+			<screen android:screenSize="xlarge" android:screenDensity="mdpi"/>
+			</compatible-screens>
+				<!-- End of Screen Resolutions -->
+				
+				<application android:allowClearUserData="true">
+				<!--<application android:allowClearUserData="true" android:enabled="true" android:debuggable="true">-->
+				
+					<activity> 
+						<intent-filter> 
+							<action android:name="android.intent.action.MAIN"/> 
+							<category android:name="android.intent.category.LAUNCHER"/> 
+						</intent-filter>
+						<intent-filter>
+							<action android:name="android.intent.action.VIEW" />
+							<category android:name="android.intent.category.DEFAULT" />
+							<category android:name="android.intent.category.BROWSABLE" />
+							<data android:scheme="fb169545139744270enandroid"/>
+							<data android:scheme="fb195053007196177enandroid"/>
+							<data android:scheme="fb174237909299335enandroid"/>
+							<data android:scheme="fb212463788775254enandroid"/>
+							<data android:scheme="fb228389400532645enandroid"/>
+							<data android:scheme="fb123360827767737enandroid"/>
+							<data android:scheme="fb372723329441569enandroid"/>
+							<data android:scheme="fb450924011629312enandroid"/>
+							<data android:scheme="fb282815515164489enandroid"/>
+							<data android:scheme="fb298252096954412enandroid"/>
+							<data android:scheme="fb212463788775254enandroid"/>
+							<data android:scheme="fb456176381146660enandroid"/>
+							<data android:scheme="fb200609910118716enandroid"/>
+							<data android:scheme="fb449681148445977enandroid"/>
+							<data android:scheme="fb1383499841871214enandroid"/>
+						</intent-filter>
+						<intent-filter>
+							<action android:name="android.intent.action.VIEW" />
+							<category android:name="android.intent.category.DEFAULT" />
+							<category android:name="android.intent.category.BROWSABLE" />
+							<data android:scheme="http" 
+								  android:host="apps.facebook.com" 
+								  android:pathPattern ="/slotomania.*" />
+							<data android:scheme="https" 
+								  android:host="apps.facebook.com" 
+								  android:pathPattern ="/slotomania.*" />
+						</intent-filter>
+					</activity>
+					
+					<!-- Graylog Logging Service -->
+					<service android:name="com.playtika.extensions.concurrency.logging.GraylogLoggerService" android:exported="false" />
+					
+					<!-- Local Notifications Service -->
+					<service android:name="com.playtika.extensions.notifications.NotificationTimerService" android:exported="false" />
+					
+					<!-- Required for Apooxee -->	
+					<activity android:name="com.appoxee.WebViewActivity"/>
+					<activity android:name="com.appoxee.inbox.DatabaseHelper"/>
+					<service android:name="com.appoxee.gcm.GCMIntentService"/>
+					<receiver android:name="com.appoxee.gcm.GCMBroadcastReceiver"
+							  android:permission="com.google.android.c2dm.permission.SEND">
+						<intent-filter>
+							<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+							<category android:name="air.com.playtika.slotomania" />
+						</intent-filter>
+						<intent-filter>
+							<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+							<category android:name="air.com.playtika.slotomania" />
+						</intent-filter>
+					</receiver>
+					<activity android:name="com.appoxee.activities.Inbox"/>
+					<activity android:name="com.appoxee.activities.MoreApps"/>
+					<activity android:name="com.appoxee.activities.Feedback"/>
+					<activity android:name="com.appoxee.activities.InboxMessage"/>
+					
+					<activity android:name="com.playtika.extensions.fbsdk.FbSdkAuthActivity"
+							  android:theme="@style/Theme.Transparent" />
+					
+					<service android:name="com.playtika.nativecode.payments.BillingService" />
+					<receiver android:name="com.playtika.nativecode.payments.BillingReceiver">
+						<intent-filter>
+							<action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+							<action android:name="com.android.vending.billing.RESPONSE_CODE" />
+							<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
+						</intent-filter>
+					</receiver>
+					
+					<!-- Required for Amazon In-APP Payments -->
+					<receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+						<intent-filter>
+							<action android:name="com.amazon.inapp.purchasing.NOTIFY" 
+									android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+						</intent-filter>
+					</receiver> 
+					
+					<!-- Required for PayPal Payments -->
+					<activity android:name="com.paypal.android.MEP.PayPalActivity"
+							  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+							  android:configChanges="keyboardHidden|orientation"/>
+					<activity android:name="com.playtika.extensions.paypal.PaypalSlotomaniaActivity"
+							  android:theme="@style/Theme.Transparent" />
+					
+					<!-- Required for PlayHaven -->
+					<activity android:name="com.playhaven.src.publishersdk.content.PHContentView" 
+							  android:theme="@android:style/Theme.Dialog" />
+					
+					<!-- For Adx analytics -->
+					<receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true">
+						<intent-filter>
+							<action android:name="com.android.vending.INSTALL_REFERRER" />
+						</intent-filter>
+					</receiver>
+					<meta-data android:name="APP_NAME" android:value="air.com.playtika.slotomania" />
+					<meta-data android:name="ADX_CLIENT_ID" android:value="t42R5awtL2" />
+					
+					<activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="login"/>
+					
+					<service android:name="com.playtika.extensions.tools.screenlistener.ScreenListenerService" />
+					<receiver android:name="com.playtika.extensions.tools.screenlistener.ScreenListenerReceiver">
+						<intent-filter>
+							<action android:name="android.intent.action.SCREEN_ON" />
+							<action android:name="android.intent.action.SCREEN_OFF" />
+							<action android:name="android.intent.action.USER_PRESENT" />
+						</intent-filter>
+					</receiver>
+				</application>
+				<supports-screens android:smallScreens="false" android:xlargeScreens="false" android:anyDensity="true" /> 
+			</manifest>
+		]]></manifestAdditions>
+	</android>
+	
+<extensions>
+        <extensionID>com.playtika.PlatilibExtension</extensionID>
+    </extensions>
+</application>

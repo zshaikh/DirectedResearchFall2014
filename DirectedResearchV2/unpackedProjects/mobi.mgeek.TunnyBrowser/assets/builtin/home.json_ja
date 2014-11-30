@@ -1,0 +1,169 @@
+[
+
+    {
+        "its": [
+            {
+                "url": "http://m.yahoo.co.jp/?fr=top_dol_and",
+                "p": 1,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/yahoojp.png",
+                "d": true,
+                "ttl": "Yahoo!"
+            },
+            {
+                "url": "http://sp.mbga.jp/AFdob0000001/_t",
+                "p": 2,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/mobage_new.png",
+                "d": true,
+                "ttl": "mobage"
+            },
+            {
+                "url": "http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3055532&pid=882105806 ",
+                "p": 0,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/amazon_3.png",
+                "d": true,
+                "ttl": "Amazon"
+            },
+            {
+                "p": 7,
+                "its": [
+                    {
+                        "url": "http://sp.mbga.jp/AFdob5t00000/_game_intro?game_id=12010355",
+                        "p": 1,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/dazhanluan_1.png",
+                        "d": true,
+                        "ttl": "大戦乱!!三国志バトル"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdob8b00000/game/cpn/hunterhunter/top.html",
+                        "p": 2,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/hunter_1.png",
+                        "d": true,
+                        "ttl": "HUNTERxHUNTERバトルコレクション"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdob1900000/_lp",
+                        "p": 3,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/gundam_1.png",
+                        "d": true,
+                        "ttl": "ガンダムロワイヤル"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdobgf00001/_aff_app?app_id=12012945",
+                        "p": 4,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/jp_gamefolder1.png",
+                        "d": true,
+                        "ttl": "Blood Brothers"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdob0300001/_lp",
+                        "p": 5,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/jp_gamefolder2.png",
+                        "d": true,
+                        "ttl": "農園ﾎｯｺﾘｰﾅ"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdob8j00001/_lp",
+                        "p": 6,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/jp_gamefolder3.png",
+                        "d": true,
+                        "ttl": "アイマスCG"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdob4f00001/_lp",
+                        "p": 7,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/jp_ffbrigade.png",
+                        "d": true,
+                        "ttl": "FF BRIGADE"
+                    },
+                    {
+                        "url": "http://sp.mbga.jp/AFdob2j00000/_lp",
+                        "p": 8,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/jp_bahamut.png",
+                        "d": true,
+                        "ttl": "神撃のバハムート"
+                    },
+                    {
+                        "url": "http://dolphin.portal.connectedgamestore.com/",
+                        "p": 9,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/jp_gamefolder7.png",
+                        "d": true,
+                        "ttl": "アソViVa"
+                   },
+                ],
+                "ttl": "ゲーム"
+            },
+            {
+                "url": "http://hb.afl.rakuten.co.jp/hsc/11917dc4.8263e216.11917d95.ef762de7/",
+                "p": 3,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/home_letian_speeddial.png",
+                "d": true,
+                "ttl": "楽天"
+            },
+            {
+                "url": "http://rdsig.yahoo.co.jp/loco/dolphin/RV=1/RU=aHR0cDovL2xvY28ueWFob28uY28uanAv",
+                "p": 4,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/Yahoo_location.png",
+                "d": true,
+                "ttl": "Yahoo!ロコ"
+            },
+            {
+                "url": "http://rdsig.yahoo.co.jp/transit/sp/android/dolphin/RV=1/RU=aHR0cDovL3RyYW5zaXQubG9jby55YWhvby5jby5qcC8-",
+                "p": 5,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/Yahoo_direction.png",
+                "d": true,
+                "ttl": "Yahoo!路線"
+            },
+            {
+                "url": "http://adsp1.menue.jp/ad/s/r?_site=73&_article=2008&_link=199628&_image=199634&d=1",
+                "p": 6,
+                "ico": "http://opsen.dolphin-browser.com/resources/icon/kmanga_1.png",
+                "d": true,
+                "ttl": "まんが王国"
+            },
+            {
+                "p": 8,
+                "its": [
+                    {
+                        "url": "http://www.dolphin-browser.jp/features?nav=1",
+                        "p": 1,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/features.png",
+                        "d": true,
+                        "ttl": "機能"
+                    },
+                    {
+                        "url": "http://www.dolphin-browser.jp/archives",
+                        "p": 2,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/bolg.png",
+                        "d": true,
+                        "ttl": "ブログ"
+                    },
+                    {
+                        "url": "http://support.dolphin-browser.jp/knowledgebase",
+                        "p": 3,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/FAQ.png",
+                        "d": true,
+                        "ttl": "FAQ"
+                    },
+                    {
+                        "url": "dolphin://feedback",
+                        "p": 4,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/desktop/feedback.png",
+                        "d": true,
+                        "ttl": "フィードバック"
+                    },
+                    {
+                        "url": "http://www.dolphin-browser.jp/update-notes.html",
+                        "p": 5,
+                        "ico": "http://opsen.dolphin-browser.com/resources/icon/update277bd2.png",
+                        "d": true,
+                        "ttl": "アップデート"
+                    }
+                ],
+                "ttl": "ドルフィン"
+            }
+        ],
+        "id": 7,
+        "sid": 0
+    }
+
+]

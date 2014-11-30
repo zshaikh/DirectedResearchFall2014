@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/facebook/graph/data/BatchItem" mod="1396915321000" signatureChecksum="2179681297" >
+        <def id="com.facebook.graph.data:BatchItem" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/data/FacebookSession" mod="1396915321000" signatureChecksum="2831776075" >
+        <def id="com.facebook.graph.data:FacebookSession" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/data/FacebookAuthResponse" mod="1396915321000" signatureChecksum="3012254750" >
+        <def id="com.facebook.graph.data:FacebookAuthResponse" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/jesusla/facebook/Facebook" mod="1396915321000" signatureChecksum="2070049645" >
+        <def id="com.jesusla.facebook:Facebook" /> 
+        <dep id="com.jesusla.facebook:EmulatedFacebook" type="e" /> 
+        <dep id="flash.utils:getQualifiedClassName" type="e" /> 
+        <dep id="ArgumentError" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.jesusla.facebook:NativeFacebook" type="e" /> 
+        <dep id="ArgumentError" type="s" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="flash.display:Stage" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/data/FQLMultiQuery" mod="1396915321000" signatureChecksum="3939319688" >
+        <def id="com.facebook.graph.data:FQLMultiQuery" /> 
+        <dep id="JSON" type="e" /> 
+        <dep id="RegExp" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/windows/MobileLoginWindow" mod="1396915321000" signatureChecksum="1642866194" >
+        <def id="com.facebook.graph.windows:MobileLoginWindow" /> 
+        <dep id="flash.net:URLRequestMethod" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.events:LocationChangeEvent" type="e" /> 
+        <dep id="flash.net:URLRequest" type="e" /> 
+        <dep id="com.facebook.graph.core:FacebookURLDefaults" type="e" /> 
+        <dep id="flash.net:URLVariables" type="e" /> 
+        <dep id="com.facebook.graph.utils:FacebookDataUtils" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.net:URLRequest" type="s" /> 
+        <dep id="flash.net:URLVariables" type="s" /> 
+        <dep id="flash.media:StageWebView" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/adobe/images/PNGEncoder" mod="1396915321000" signatureChecksum="2396865280" >
+        <def id="com.adobe.images:PNGEncoder" /> 
+        <dep id="flash.utils:ByteArray" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="flash.display:BitmapData" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/jesusla/facebook/EmulatedFacebook" mod="1396915321000" signatureChecksum="2939430467" >
+        <def id="com.jesusla.facebook:EmulatedFacebook" /> 
+        <dep id="com.facebook.graph.data:FacebookSession" type="e" /> 
+        <dep id="com.facebook.graph:FacebookMobile" type="e" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="flash.geom:Rectangle" type="e" /> 
+        <dep id="flash.media:StageWebView" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.jesusla.facebook:SessionEvent" type="e" /> 
+        <dep id="com.facebook.graph.data:FacebookSession" type="s" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="flash.display:Stage" type="s" /> 
+        <dep id="flash.media:StageWebView" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.jesusla.facebook:Facebook" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/net/AbstractFacebookRequest" mod="1396915321000" signatureChecksum="1727262572" >
+        <def id="com.facebook.graph.net:AbstractFacebookRequest" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="JSON" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="e" /> 
+        <dep id="flash.net:URLRequest" type="e" /> 
+        <dep id="flash.display:BitmapData" type="e" /> 
+        <dep id="flash.net:URLVariables" type="e" /> 
+        <dep id="flash.events:IOErrorEvent" type="e" /> 
+        <dep id="flash.events:SecurityErrorEvent" type="e" /> 
+        <dep id="flash.display:Bitmap" type="e" /> 
+        <dep id="flash.net:URLLoader" type="e" /> 
+        <dep id="flash.net:FileReference" type="e" /> 
+        <dep id="com.facebook.graph.utils:PostRequest" type="e" /> 
+        <dep id="com.adobe.images:PNGEncoder" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="flash.net:URLRequest" type="s" /> 
+        <dep id="flash.net:URLVariables" type="s" /> 
+        <dep id="flash.events:IOErrorEvent" type="s" /> 
+        <dep id="flash.net:URLLoader" type="s" /> 
+        <dep id="com.facebook.graph.utils:PostRequest" type="s" /> 
+        <dep id="flash.events:SecurityErrorEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/net/FacebookBatchRequest" mod="1396915321000" signatureChecksum="618006173" >
+        <def id="com.facebook.graph.net:FacebookBatchRequest" /> 
+        <dep id="flash.net:URLRequestMethod" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="e" /> 
+        <dep id="JSON" type="e" /> 
+        <dep id="flash.net:URLRequest" type="e" /> 
+        <dep id="flash.display:BitmapData" type="e" /> 
+        <dep id="com.facebook.graph.core:FacebookURLDefaults" type="e" /> 
+        <dep id="flash.net:URLVariables" type="e" /> 
+        <dep id="flash.display:Bitmap" type="e" /> 
+        <dep id="com.facebook.graph.data:BatchItem" type="e" /> 
+        <dep id="com.facebook.graph.utils:PostRequest" type="e" /> 
+        <dep id="com.adobe.images:PNGEncoder" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="com.facebook.graph.data:Batch" type="s" /> 
+        <dep id="flash.net:URLVariables" type="s" /> 
+        <dep id="com.facebook.graph.data:BatchItem" type="s" /> 
+        <dep id="com.facebook.graph.utils:PostRequest" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.facebook.graph.net:AbstractFacebookRequest" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/utils/FacebookDataUtils" mod="1396915321000" signatureChecksum="369127859" >
+        <def id="com.facebook.graph.utils:FacebookDataUtils" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="flash.net:URLVariables" type="e" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="flash.net:URLVariables" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/jesusla/facebook/NativeFacebook" mod="1396915321000" signatureChecksum="1495169096" >
+        <def id="com.jesusla.facebook:NativeFacebook" /> 
+        <dep id="flash.utils:getQualifiedClassName" type="e" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="com.jesusla.facebook:SessionEvent" type="e" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.display:Stage" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.jesusla.facebook:Facebook" type="i" /> 
+      </script>
+      <script name="com/jesusla/facebook/SessionEvent" mod="1396915321000" signatureChecksum="3869274551" >
+        <def id="com.jesusla.facebook:SessionEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/utils/IResultParser" mod="1396915321000" signatureChecksum="2773492725" >
+        <def id="com.facebook.graph.utils:IResultParser" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/utils/FQLMultiQueryParser" mod="1396915321000" signatureChecksum="1592014113" >
+        <def id="com.facebook.graph.utils:FQLMultiQueryParser" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.facebook.graph.utils:IResultParser" type="i" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="_ac501c2d9050c78435e24a0031ad5e8d6e41098231e78f94c9b7e88733e28099_flash_display_Sprite" mod="1399499263311" signatureChecksum="444168299" >
+        <def id="_ac501c2d9050c78435e24a0031ad5e8d6e41098231e78f94c9b7e88733e28099_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/core/AbstractFacebook" mod="1396915321000" signatureChecksum="799673826" >
+        <def id="com.facebook.graph.core:AbstractFacebook" /> 
+        <dep id="flash.net:URLRequestMethod" type="e" /> 
+        <dep id="com.facebook.graph.net:FacebookBatchRequest" type="e" /> 
+        <dep id="com.facebook.graph.utils:FQLMultiQueryParser" type="e" /> 
+        <dep id="com.facebook.graph.core:FacebookURLDefaults" type="e" /> 
+        <dep id="com.facebook.graph.net:FacebookRequest" type="e" /> 
+        <dep id="com.facebook.graph.utils:IResultParser" type="e" /> 
+        <dep id="RegExp" type="e" /> 
+        <dep id="flash.utils:Dictionary" type="e" /> 
+        <dep id="com.facebook.graph.net:FacebookBatchRequest" type="s" /> 
+        <dep id="com.facebook.graph.data:FacebookSession" type="s" /> 
+        <dep id="com.facebook.graph.net:FacebookRequest" type="s" /> 
+        <dep id="com.facebook.graph.data:Batch" type="s" /> 
+        <dep id="com.facebook.graph.utils:IResultParser" type="s" /> 
+        <dep id="com.facebook.graph.data:FacebookAuthResponse" type="s" /> 
+        <dep id="flash.utils:Dictionary" type="s" /> 
+        <dep id="com.facebook.graph.data:FQLMultiQuery" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/FacebookMobile" mod="1396915321000" signatureChecksum="1839244762" >
+        <def id="com.facebook.graph:FacebookMobile" /> 
+        <dep id="flash.net:URLRequestMethod" type="e" /> 
+        <dep id="com.facebook.graph.data:FacebookSession" type="e" /> 
+        <dep id="flash.net:SharedObject" type="e" /> 
+        <dep id="com.facebook.graph.net:FacebookRequest" type="e" /> 
+        <dep id="com.facebook.graph.utils:FacebookDataUtils" type="e" /> 
+        <dep id="com.facebook.graph.windows:MobileLoginWindow" type="e" /> 
+        <dep id="flash.media:StageWebView" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.facebook.graph.data:FacebookSession" type="s" /> 
+        <dep id="flash.net:SharedObject" type="s" /> 
+        <dep id="com.facebook.graph.net:FacebookRequest" type="s" /> 
+        <dep id="com.facebook.graph.data:Batch" type="s" /> 
+        <dep id="com.facebook.graph.utils:IResultParser" type="s" /> 
+        <dep id="flash.display:Stage" type="s" /> 
+        <dep id="com.facebook.graph.windows:MobileLoginWindow" type="s" /> 
+        <dep id="flash.media:StageWebView" type="s" /> 
+        <dep id="com.facebook.graph.data:FQLMultiQuery" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.facebook.graph.core:AbstractFacebook" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/net/FacebookRequest" mod="1396915321000" signatureChecksum="625197502" >
+        <def id="com.facebook.graph.net:FacebookRequest" /> 
+        <dep id="flash.net:URLRequestMethod" type="e" /> 
+        <dep id="flash.net:URLRequest" type="e" /> 
+        <dep id="flash.events:IOErrorEvent" type="e" /> 
+        <dep id="flash.events:DataEvent" type="e" /> 
+        <dep id="flash.net:FileReference" type="e" /> 
+        <dep id="flash.events:SecurityErrorEvent" type="e" /> 
+        <dep id="flash.events:DataEvent" type="s" /> 
+        <dep id="flash.net:FileReference" type="s" /> 
+        <dep id="flash.events:ErrorEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="com.facebook.graph.net:AbstractFacebookRequest" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/core/FacebookLimits" mod="1396915321000" signatureChecksum="4130809235" >
+        <def id="com.facebook.graph.core:FacebookLimits" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/utils/PostRequest" mod="1396915321000" signatureChecksum="3574903061" >
+        <def id="com.facebook.graph.utils:PostRequest" /> 
+        <dep id="flash.utils:ByteArray" type="e" /> 
+        <dep id="flash.utils:Endian" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/data/Batch" mod="1396915321000" signatureChecksum="1858161913" >
+        <def id="com.facebook.graph.data:Batch" /> 
+        <dep id="com.facebook.graph.data:BatchItem" type="e" /> 
+        <dep id="com.facebook.graph.core:FacebookLimits" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/facebook/graph/core/FacebookURLDefaults" mod="1396915321000" signatureChecksum="4001405633" >
+        <def id="com.facebook.graph.core:FacebookURLDefaults" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="3adf9bde4845d95ac0ffb93ef17d5125ef6ce0375d5f50e286845223bf2db4ea"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

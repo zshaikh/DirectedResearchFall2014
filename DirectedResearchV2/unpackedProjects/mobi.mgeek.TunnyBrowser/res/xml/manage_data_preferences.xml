@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser">
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.CheckBoxPreference dolphin:key="save_cache_to_sdcard" dolphin:title="@string/pref_save_cache_to_sdcard" dolphin:summary="@string/pref_save_cache_to_sdcard_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_head_bk" />
+    <mobi.mgeek.TunnyBrowser.BrowserYesNoPreference dolphin:dialogTitle="@string/clear" dolphin:dialogMessage="@string/pref_privacy_clear_cache_dlg" dolphin:key="privacy_clear_cache" dolphin:title="@string/pref_privacy_clear_cache" dolphin:summary="@string/pref_privacy_clear_cache_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.BrowserYesNoPreference dolphin:dialogTitle="@string/clear" dolphin:dialogMessage="@string/pref_privacy_clear_history_dlg" dolphin:key="privacy_clear_history" dolphin:title="@string/pref_privacy_clear_history" dolphin:summary="@string/pref_privacy_clear_history_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.BrowserYesNoPreference dolphin:dialogTitle="@string/clear" dolphin:dialogMessage="@string/pref_privacy_clear_html5_data_dlg" dolphin:key="privacy_clear_html5_data" dolphin:title="@string/pref_privacy_clear_html5_data" dolphin:summary="@string/pref_privacy_clear_html5_data_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.BrowserYesNoPreference dolphin:dialogTitle="@string/clear" dolphin:dialogMessage="@string/pref_privacy_clear_cookies_dlg" dolphin:key="privacy_clear_cookies" dolphin:title="@string/pref_privacy_clear_cookies" dolphin:summary="@string/pref_privacy_clear_cookies_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.BrowserYesNoPreference dolphin:dialogTitle="@string/clear" dolphin:dialogMessage="@string/pref_privacy_clear_form_data_dlg" dolphin:key="privacy_clear_form_data" dolphin:title="@string/pref_privacy_clear_form_data" dolphin:summary="@string/pref_privacy_clear_form_data_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.TunnyBrowser.BrowserYesNoPreference dolphin:dialogTitle="@string/clear" dolphin:dialogMessage="@string/pref_privacy_clear_passwords_dlg" dolphin:key="privacy_clear_passwords" dolphin:title="@string/pref_privacy_clear_passwords" dolphin:summary="@string/pref_privacy_clear_passwords_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="website_settings" dolphin:title="@string/pref_extras_website_settings" dolphin:summary="@string/pref_extras_website_settings_summary" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.MAIN" android:targetClass="mobi.mgeek.TunnyBrowser.WebsiteSettingsActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.PreferenceScreen>

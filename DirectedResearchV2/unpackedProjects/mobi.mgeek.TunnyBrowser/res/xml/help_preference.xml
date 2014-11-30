@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_category_help"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.PreferenceScreen dolphin:key="about" dolphin:title="@string/pref_about_title" dolphin:background="@drawable/settings_bg_head_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.MAIN" android:targetClass="mobi.mgeek.TunnyBrowser.AboutActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="gethelp" dolphin:title="@string/pref_get_help" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:data="@string/help_link" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <extra android:name="new_tab" android:value="true" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.UpdatePreference dolphin:key="checkupdate" dolphin:title="@string/pref_category_check_update" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceScreen dolphin:key="privacy_policy" dolphin:title="@string/pref_privacy_policy" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:data="@string/privacy_policy_link" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <extra android:name="new_tab" android:value="true" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="join_us" dolphin:title="@string/pref_join_us" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:data="@string/join_us_link" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserActivity">
+            <extra android:name="new_tab" android:value="true" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="ux_improvement" dolphin:title="@string/pref_ux_improvement" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.UserExperienceReportActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="newsletter" dolphin:title="@string/pref_category_update" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.MAIN" android:targetClass="mobi.mgeek.TunnyBrowser.SubscriptionActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

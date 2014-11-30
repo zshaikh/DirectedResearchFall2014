@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/widget28" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:isScrollContainer="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.redbox.android.view.HeaderView android:id="@id/header_layout" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffb32c1a" android:id="@id/movie_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="3.0px" android:text="" android:layout_below="@id/header_layout" />
+    <LinearLayout android:gravity="center" android:id="@id/bottom_background" android:background="@drawable/bottom_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/confirm_reservation" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_confirm_reservation" android:layout_centerInParent="true" />
+    </LinearLayout>
+    <ScrollView android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_background" android:layout_below="@id/movie_name"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/movie_image" android:layout_width="105.0dip" android:layout_height="140.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="14.0dip" android:src="@drawable/video_icon" android:scaleType="fitXY" />
+                <TextView android:textColor="@color/black" android:id="@id/pickup_location_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="@string/pickup_location_text" android:layout_alignLeft="@id/movie_image" />
+                <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/kiosk_vendor" android:layout_width="105.0dip" android:layout_height="wrap_content" android:layout_alignLeft="@id/movie_image" />
+                <TextView android:textColor="@color/black" android:id="@id/kiosk_machine" android:layout_width="105.0dip" android:layout_height="wrap_content" android:layout_alignLeft="@id/movie_image" />
+                <TextView android:textColor="@color/black" android:id="@id/kiosk_address" android:layout_width="105.0dip" android:layout_height="wrap_content" android:singleLine="false" android:layout_alignLeft="@id/movie_image" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/reserve_screen_rightcol" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TableRow android:layout_marginBottom="10.0dip">
+                        <TextView android:textColor="@color/black" android:id="@id/price_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:text="@string/price_text" />
+                        <TextView android:textColor="@color/black" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" />
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="10.0dip">
+                        <TextView android:textColor="@color/black" android:id="@id/tax_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:text="@string/tax_text" />
+                        <TextView android:textColor="@color/black" android:id="@id/tax" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" />
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="10.0dip">
+                        <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/total_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:text="@string/total_text" />
+                        <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_alignLeft="@id/movie_name" />
+                    </TableRow>
+                </TableLayout>
+                <TextView android:textColor="@color/black" android:id="@id/reservation_period_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="@string/reservation_period_text" />
+                <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/reservation_period" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/inputs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+                    <ImageView android:background="@drawable/curvebox_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <RelativeLayout android:background="@drawable/curvebox_middlebg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      xmlns:android="http://schemas.android.com/apk/res/android">
+                        <ImageButton android:id="@id/select_card" android:background="@null" android:paddingLeft="0.0dip" android:paddingRight="6.0dip" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/right_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        <TextView android:textStyle="bold" android:textColor="@color/black" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/card_alias" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:layout_toLeftOf="@id/select_card" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <ImageView android:background="@drawable/divider" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:background="@drawable/curvebox_middlebg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <EditText android:textSize="18.0dip" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/card_cvv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:hint="@string/cvv_hint" android:maxLines="1" android:lines="1" android:maxEms="4" android:ems="4" android:maxLength="4" android:digits="0123456789" android:inputType="number" android:imeOptions="actionNext" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/rRatedDivider" android:background="@drawable/divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:id="@id/rRatedCheck" android:background="@drawable/curvebox_middlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <CheckBox android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/rRated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="@string/r_rated_warning_text" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/mRatedDivider" android:background="@drawable/divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:id="@id/mRatedCheck" android:background="@drawable/curvebox_middlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <CheckBox android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/mRated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="@string/m_rated_warning_text" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/bluerayDivider" android:background="@drawable/divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:id="@id/bluerayCheck" android:background="@drawable/curvebox_middlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <CheckBox android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/blueray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="@string/bluray_check_text" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/applyCreditDivider" android:background="@drawable/divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:id="@id/applyCreditCheck" android:background="@drawable/curvebox_middlebg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <CheckBox android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/applyCredit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="@string/apply_credit_text" />
+                    </LinearLayout>
+                    <ImageView android:background="@drawable/curvebox_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

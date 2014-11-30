@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_category_exit"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dolphin.preference.CheckBoxPreference dolphin:key="show_exit_confirmation" dolphin:title="@string/pref_exit_confirmation" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_head_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="clear_history_checked" dolphin:title="@string/pref_clear_history_checked" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="clear_cache_checked" dolphin:title="@string/pref_clear_cache_checked" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="clear_cookie_when_exit" dolphin:title="@string/pref_clear_cookie_when_exit" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_foot_bk" />
+</dolphin.preference.ExpandablePreferenceScreen>

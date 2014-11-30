@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cell_height">123.0dip</dimen>
+    <dimen name="cell_width">125.0dip</dimen>
+    <dimen name="ctrl_pl_header_height">47.5dip</dimen>
+    <dimen name="folder_preview_gap">3.0dip</dimen>
+    <dimen name="folder_preview_padding">14.0dip</dimen>
+    <dimen name="icon_display_size">90.0dip</dimen>
+    <dimen name="menubar_tablist_badge_padding">30.0dip</dimen>
+    <dimen name="promotion_view_height">47.5dip</dimen>
+    <dimen name="search_input_height">47.5dip</dimen>
+    <dimen name="send_to_home_done_height">47.5dip</dimen>
+    <dimen name="tab_btn_add_marginRight">17.0dip</dimen>
+    <dimen name="tab_text_size">18.5sp</dimen>
+    <dimen name="tabbar_height">43.0dip</dimen>
+    <dimen name="titlebar_content_height">40.0dip</dimen>
+    <dimen name="titlebar_favicon_lockicon_padding_right">9.0dip</dimen>
+    <dimen name="titlebar_favicon_padding_left">5.0dip</dimen>
+    <dimen name="titlebar_favicon_padding_right">3.0dip</dimen>
+    <dimen name="titlebar_height">47.5dip</dimen>
+    <dimen name="titlebar_icon_badge_padding">7.0dip</dimen>
+    <dimen name="titlebar_icon_divider_padding_left">7.0dip</dimen>
+    <dimen name="titlebar_icon_divider_padding_right">7.0dip</dimen>
+    <dimen name="titlebar_icon_width">50.0dip</dimen>
+    <dimen name="titlebar_margin">10.0dip</dimen>
+    <dimen name="titlebar_title_disign_text_size">17.0sp</dimen>
+    <dimen name="titlebar_title_url_text_size">18.0sp</dimen>
+    <dimen name="workspace_celllayout_padding_top">30.0dip</dimen>
+    <dimen name="workspace_icon_text_size">16.0dip</dimen>
+</resources>

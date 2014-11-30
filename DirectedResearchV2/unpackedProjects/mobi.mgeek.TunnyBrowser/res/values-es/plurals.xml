@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Mover %d objetos aquí</item>
+        <item quantity="one">Mover 1 objeto aquí</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Últimos %d días</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d Horas</item>
+        <item quantity="one">1 Hora</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d coincidencias</item>
+        <item quantity="zero">No hay coincidencias</item>
+        <item quantity="one">1 coincidencia</item>
+        <item quantity="few">%d coincidencias</item>
+    </plurals>
+</resources>

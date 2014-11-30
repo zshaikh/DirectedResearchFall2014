@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator android:label="@string/config_app_name" android:icon="@drawable/ic_launcher" android:accountType="@string/config_authority" android:smallIcon="@drawable/ic_launcher"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

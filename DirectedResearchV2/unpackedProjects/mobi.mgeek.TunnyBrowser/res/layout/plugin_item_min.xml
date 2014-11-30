@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/plugin_content" android:layout_width="fill_parent" android:layout_height="53.299988dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/app_icon" android:layout_width="42.599976dip" android:layout_height="42.599976dip" android:layout_marginLeft="9.0dip" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.5999756dip" android:layout_toRightOf="@id/app_icon">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="16.0sp" android:textColor="@color/history_title_textcolor" android:ellipsize="marquee" android:id="@id/app_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="12.659973sp" android:textStyle="italic" android:textColor="@color/plugin_summary_text_color" android:ellipsize="marquee" android:id="@id/app_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:gravity="center" android:id="@id/plugin_state" android:layout_width="50.0dip" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:id="@id/top_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ImageView android:id="@id/bottom_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/notification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_below="@id/bottom_divider" android:layout_alignParentLeft="true" />
+</RelativeLayout>

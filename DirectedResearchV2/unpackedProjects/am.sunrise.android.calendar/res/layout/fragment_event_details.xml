@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/event_details_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <am.sunrise.android.calendar.ui.widgets.ObservableScrollView android:id="@id/event_details_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/event_details_cards_list" android:paddingLeft="@dimen/event_details_card_horizontal_margin" android:paddingRight="@dimen/event_details_card_horizontal_margin" android:paddingBottom="@dimen/event_details_card_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/event_details_card_rsvp" />
+            <include layout="@layout/event_details_card_datetime_info" />
+            <include layout="@layout/event_details_card_location" />
+            <include layout="@layout/event_details_card_attendees" />
+        </LinearLayout>
+    </am.sunrise.android.calendar.ui.widgets.ObservableScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/event_details_bottom_bar" android:background="@drawable/ed_bottom_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/event_details_bottom_bar_height" android:divider="@drawable/vertical_divider_light_gray" android:showDividers="middle">
+        <FrameLayout android:id="@id/button_email_all" android:background="@drawable/agendaview_item_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/event_details_bottom_bar_font_size" android:textColor="@color/event_details_bottom_bar_text" android:layout_gravity="center" android:id="@id/button_email_all_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email_all" android:drawableLeft="@drawable/ed_bottom_email_icon" android:drawablePadding="@dimen/event_details_text_horizontal_margin" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/button_directions" android:background="@drawable/agendaview_item_selector" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/event_details_bottom_bar_font_size" android:textColor="@color/event_details_bottom_bar_text" android:layout_gravity="center" android:id="@id/button_directions_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/directions" android:drawableLeft="@drawable/ed_bottom_directions_icon" android:drawablePadding="@dimen/event_details_text_horizontal_margin" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

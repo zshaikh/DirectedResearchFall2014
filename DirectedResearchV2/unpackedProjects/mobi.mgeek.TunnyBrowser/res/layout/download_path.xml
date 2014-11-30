@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="@dimen/ctrl_pl_header_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bookmark_button_horizontal_padding" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/btn_confirm" android:padding="@dimen/bookmark_path_icon_padding" android:layout_width="@dimen/bookmark_path_icon_size" android:layout_height="@dimen/bookmark_path_icon_size" android:contentDescription="@null" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/SettingsTitleAppearence" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/download_path" android:paddingLeft="@dimen/bm_path_textview_horizontal_padding" android:paddingRight="@dimen/bm_path_textview_horizontal_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/download_path_title" android:singleLine="true" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/right_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/bookmark_button_horizontal_padding" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/btn_new_folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/path_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dl_path_height">
+        <ImageView android:id="@id/btn_change_path" android:layout_width="@dimen/dl_back_icon_size" android:layout_height="@dimen/dl_back_icon_size" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:contentDescription="@null" />
+        <ImageView android:id="@id/btn_path_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <TextView android:textSize="17.0sp" android:ellipsize="start" android:gravity="center_vertical" android:id="@id/tv_show_path" android:paddingLeft="13.0dip" android:paddingRight="22.5dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/download_path_horizontal_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ListView android:id="@id/list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:cacheColorHint="@color/transparent" android:layout_weight="1.0" />
+</LinearLayout>

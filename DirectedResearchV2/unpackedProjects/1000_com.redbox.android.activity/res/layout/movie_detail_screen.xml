@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/widget28" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.redbox.android.view.HeaderView android:id="@id/header_layout" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_above="@id/redbox_selection_Layout" android:layout_below="@id/header_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffb32c1a" android:id="@id/movieName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="3.0px" android:text="" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip">
+                    <ImageView android:id="@id/movieImage" android:layout_width="105.0dip" android:layout_height="140.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="14.0dip" android:src="@drawable/video_icon" android:scaleType="fitXY" />
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@id/reserveOrFindMovieBtn" android:background="@null" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:src="@drawable/button_find_movie" />
+                    <TextView android:textStyle="bold" android:textColor="#ffb32c1a" android:layout_gravity="center_horizontal" android:id="@id/mpaaRatingLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mpaa_ratig_text" />
+                    <TextView android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:id="@id/mpaaRating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="19.0px" android:text="" />
+                    <TextView android:textStyle="bold" android:textColor="#ffb32c1a" android:layout_gravity="center_horizontal" android:id="@id/runningTimeLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/running_time_text" />
+                    <TextView android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:id="@id/runningTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="19.0px" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textStyle="bold" android:textColor="#ffb32c1a" android:id="@id/genreLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/genre_text" android:layout_alignLeft="@id/movieName" />
+                    <TextView android:textColor="#ff000000" android:id="@id/genre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="19.0px" android:text="" />
+                    <TextView android:textStyle="bold" android:textColor="#ffb32c1a" android:id="@id/starringLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/starring_text" />
+                    <TextView android:textColor="#ff000000" android:id="@id/starring" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="19.0px" android:text="" />
+                    <TextView android:textStyle="bold" android:textColor="#ffb32c1a" android:id="@id/plotLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plot_text" />
+                    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/plot" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="19.0px" android:text="" />
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.redbox.android.view.RBSelectionView android:id="@id/redbox_selection_Layout" android:background="@drawable/top_nav_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

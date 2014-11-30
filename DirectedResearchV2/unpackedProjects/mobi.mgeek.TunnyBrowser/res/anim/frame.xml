@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="150" android:drawable="@drawable/dpl_load_tail_1" />
+    <item android:duration="150" android:drawable="@drawable/dpl_load_tail_2" />
+    <item android:duration="150" android:drawable="@drawable/dpl_load_tail_3" />
+    <item android:duration="150" android:drawable="@drawable/dpl_load_tail_4" />
+    <item android:duration="150" android:drawable="@drawable/dpl_load_tail_5" />
+    <item android:duration="150" android:drawable="@drawable/dpl_load_tail_6" />
+</animation-list>

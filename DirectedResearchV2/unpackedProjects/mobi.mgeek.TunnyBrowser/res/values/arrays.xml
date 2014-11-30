@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="amazon">
+        <item>Amazon</item>
+        <item>amazon.com</item>
+        <item>http://www.amazon.com/favicon.ico</item>
+        <item>http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords={searchTerms}&amp;x=0&amp;y=0</item>
+        <item>UTF-8</item>
+        <item>http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords={searchTerms}&amp;x=0&amp;y=0</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="amazon_jp" formatted="false">
+        <item>Amazon JP</item>
+        <item>amazon.co.jp</item>
+        <item>http://www.amazon.co.jp/favicon.ico</item>
+        <item>http://www.amazon.co.jp/gp/aw/rd.html?uid=NULLGWDOCOMO&amp;at=dolphinbrowse-22&amp;m=aps&amp;k={searchTerms}&amp;__mk_ja_JP=%83J%83^%83J%83i&amp;url=%2Fgp%2Faw%2Fs.html&amp;lc=mqs</item>
+        <item>Shift-JIS</item>
+        <item>http://www.amazon.co.jp/gp/aw/rd.html?uid=NULLGWDOCOMO&amp;at=dolphinbrowse-22&amp;m=aps&amp;k={searchTerms}&amp;__mk_ja_JP=%83J%83^%83J%83i&amp;url=%2Fgp%2Faw%2Fs.html&amp;lc=mqs</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="bing">
+        <item>Bing</item>
+        <item>bing.com</item>
+        <item>http://www.bing.com/s/wlflag.ico</item>
+        <item>http://www.bing.com/search?a=results&amp;q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://api.bing.com/osjson.aspx?query={searchTerms}&amp;language={language-country}</item>
+        <item>engine_bing</item>
+        <item>engine_bing_text</item>
+    </string-array>
+    <string-array name="bookmarks">
+        <item>Dolphin Feature</item>
+        <item>http://dolphin.com/features</item>
+        <item>Dolphin Blog</item>
+        <item>http://dolphin.com/blog/</item>
+        <item>Hot Apps</item>
+        <item>http://www.dolphin-browser.com/apps/aphone.htm</item>
+        <item>Wallpaper</item>
+        <item>http://m.flikie.com/</item>
+        <item>Wikipedia</item>
+        <item>http://m.wikipedia.com/</item>
+        <item>YouTube</item>
+        <item>http://www.youtube.com/</item>
+        <item>IMDB</item>
+        <item>http://www.imdb.com/</item>
+        <item>Bing</item>
+        <item>http://www.bing.com/</item>
+        <item>Weather Channel</item>
+        <item>http://www.weather.com/</item>
+        <item>Amazon</item>
+        <item>http://www.amazon.com/</item>
+    </string-array>
+    <string-array name="build_in_voice_actions">
+        <item>share</item>
+        <item>{args: \"\", command: 103}</item>
+        <item>bookmark</item>
+        <item>{command: 201}</item>
+        <item>back</item>
+        <item>{command: 202}</item>
+        <item>go back</item>
+        <item>{command: 202}</item>
+        <item>forward</item>
+        <item>{command: 203}</item>
+        <item>bottom of the page</item>
+        <item>{command: 205}</item>
+        <item>top of the page</item>
+        <item>{command: 204}</item>
+        <item>save page</item>
+        <item>{command: 207}</item>
+        <item>refresh</item>
+        <item>{command: 208}</item>
+        <item>zoom in</item>
+        <item>{command: 210}</item>
+        <item>zoom out</item>
+        <item>{command: 211}</item>
+        <item>toggle swipe action</item>
+        <item>{args: 3, command: 212}</item>
+        <item>paste into address bar</item>
+        <item>{command: 214}</item>
+        <item>paste and search</item>
+        <item>{command: 215}</item>
+        <item>exit browser</item>
+        <item>{command: 216}</item>
+        <item>new tab</item>
+        <item>{command: 301}</item>
+        <item>close all tabs</item>
+        <item>{command: 302}</item>
+        <item>close other tabs</item>
+        <item>{command: 303}</item>
+        <item>close tab</item>
+        <item>{command: 304}</item>
+        <item>left tab</item>
+        <item>{command: 305}</item>
+        <item>right tab</item>
+        <item>{command: 306}</item>
+        <item>manage bookmark</item>
+        <item>{command: 401}</item>
+        <item>history</item>
+        <item>{command: 402}</item>
+        <item>goto most visited</item>
+        <item>{command: 403}</item>
+        <item>manage add-on</item>
+        <item>{command: 404}</item>
+        <item>go to downloads</item>
+        <item>{command: 405}</item>
+        <item>go to settings</item>
+        <item>{command: 406}</item>
+        <item>view tabs</item>
+        <item>{command: 407}</item>
+        <item>goto bookmarks</item>
+        <item>{command: 408}</item>
+        <item>goto add-ons</item>
+        <item>{command: 409}</item>
+        <item>toggle desktop mode</item>
+        <item>{command: 501}</item>
+        <item>desktop mode</item>
+        <item>{command: 502}</item>
+        <item>iphone mode</item>
+        <item>{command: 503}</item>
+        <item>ipad mode</item>
+        <item>{command: 504}</item>
+        <item>android mode</item>
+        <item>{command: 506}</item>
+        <item>toggle image mode</item>
+        <item>{args: 3, command: 507}</item>
+        <item>toggle full screen</item>
+        <item>{args: 3, command: 508}</item>
+        <item>change themes</item>
+        <item>{command: 509}</item>
+        <item>toggle screen mode</item>
+        <item>{args: 3, command: 510}</item>
+        <item>toggle compress view</item>
+        <item>{args: 3, command: 511}</item>
+        <item>subscribe to rss</item>
+        <item>{command: 512}</item>
+        <item>send feedback</item>
+        <item>{command: 513}</item>
+        <item>create gesture</item>
+        <item>{command: 514}</item>
+        <item>toggle zoom button</item>
+        <item>{args: 3, command: 515}</item>
+        <item>backup data</item>
+        <item>{command: 601}</item>
+        <item>restore data</item>
+        <item>{command: 602}</item>
+        <item>toggle private mode</item>
+        <item>{command: 603}</item>
+        <item>clear cache</item>
+        <item>{command: 604}</item>
+        <item>toggle javascript</item>
+        <item>{command: 605}</item>
+    </string-array>
+    <integer-array name="built_in_theme_colors">
+        <item>0xff69ce34</item>
+        <item>0xff84ce4d</item>
+        <item>0xff308e7a</item>
+        <item>0xff40b59c</item>
+        <item>0xff6ccdb3</item>
+        <item>0xffeac200</item>
+        <item>0xff63b8cd</item>
+        <item>0xff4097ff</item>
+        <item>0xff58cff1</item>
+        <item>0xffff6f00</item>
+        <item>0xfffca635</item>
+        <item>0xff005fbb</item>
+        <item>0xffcd1422</item>
+        <item>0xffff4065</item>
+        <item>0xff51449e</item>
+        <item>0xff985b9e</item>
+        <item>0xff9d8b96</item>
+    </integer-array>
+    <integer-array name="built_in_theme_colors_v1">
+        <item>0xff005fbb</item>
+        <item>0xff51449e</item>
+        <item>0xff63b8cd</item>
+        <item>0xffff4065</item>
+        <item>0xffcd1422</item>
+        <item>0xfffca635</item>
+    </integer-array>
+    <string-array name="default_addon_bar_item_option">
+        <item>Options</item>
+        <item>Add-on description</item>
+        <item>Disable add-on</item>
+    </string-array>
+    <string-array name="duckduckgo">
+        <item>DuckDuckGo</item>
+        <item>duckduckgo.com</item>
+        <item>http://duckduckgo.com/favicon.ico</item>
+        <item>https://duckduckgo.com/?t=mobotap&amp;q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.google.com/complete/search?hl={language}&amp;gl={country}&amp;client=android&amp;q={searchTerms}</item>
+        <item>engine_duckduckgo</item>
+        <item>engine_duckduckgo_text</item>
+    </string-array>
+    <string-array name="ebay">
+        <item>Ebay</item>
+        <item>shop.ebay.com</item>
+        <item>http://shop.ebay.com/favicon.ico</item>
+        <item>http://shop.ebay.com/?_nkw={searchTerms}&amp;_sacat=See-All-Categories</item>
+        <item>UTF-8</item>
+        <item>http://shop.ebay.com/?_nkw={searchTerms}&amp;_sacat=See-All-Categories</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="email_servers">
+        <item>gmail.com</item>
+        <item>hotmail.com</item>
+        <item>yahoo.com</item>
+        <item>googlemail.com</item>
+        <item>naver.com</item>
+        <item>aol.com</item>
+        <item>live.com</item>
+        <item>mail.ru</item>
+        <item>msn.com</item>
+        <item>ymail.com</item>
+        <item>hotmail.co.uk</item>
+        <item>comcast.net</item>
+        <item>nate.com</item>
+        <item>yahoo.com.hk</item>
+        <item>hanmail.net</item>
+        <item>docomo.ne.jp</item>
+        <item>hotmail.it</item>
+        <item>hotmail.fr</item>
+        <item>yahoo.com.tw</item>
+        <item>ezweb.ne.jp</item>
+    </string-array>
+    <string-array name="facebook">
+        <item>Facebook</item>
+        <item>facebook.com</item>
+        <item>http://www.facebook.com/favicon.ico</item>
+        <item>http://www.facebook.com/#!/search/?q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.facebook.com/#!/search/?q={searchTerms}</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="google">
+        <item>Google</item>
+        <item>google.com</item>
+        <item>http://www.google.com/favicon.ico</item>
+        <item>http://www.google.com/search?hl={language}&amp;gl={country}&amp;ie={inputEncoding}&amp;source=android-browser&amp;q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.google.com/complete/search?hl={language}&amp;gl={country}&amp;client=android&amp;q={searchTerms}</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="hot_app_item">
+        <item>Hot Apps</item>
+        <item>http://www.dolphin-browser.com/apps/aphone.htm</item>
+        <item>capture_hotapp</item>
+        <item>favicon_hotapps</item>
+    </string-array>
+    <array name="navigation" />
+    <array name="new_bookmarks" />
+    <string-array name="pagedrop_load_image_list">
+        <item>Choose From Library</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinese (GBK)</item>
+        <item>Chinese (Big5)</item>
+        <item>Japanese (ISO-2022-JP)</item>
+        <item>Japanese (SHIFT_JIS)</item>
+        <item>Japanese (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_values">
+        <item>Latin-1</item>
+        <item>UTF-8</item>
+        <item>GBK</item>
+        <item>Big5</item>
+        <item>ISO-2022-JP</item>
+        <item>SHIFT_JIS</item>
+        <item>EUC-JP</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Farther back)</item>
+        <item>100% (Fit to screen)</item>
+        <item>200% (Close up)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_values">
+        <item>FAR</item>
+        <item>MEDIUM</item>
+        <item>CLOSE</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="pref_development_ua_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Hide</item>
+        <item>Left (bottom)</item>
+        <item>Right (bottom)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Hide</item>
+        <item>Left</item>
+        <item>Right</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_home_page_mode">
+        <item>New Url</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="pref_home_page_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Disabled</item>
+        <item>Better quality</item>
+        <item>Balanced</item>
+        <item>Smaller size</item>
+    </string-array>
+    <string-array name="pref_image_compression_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_language_choices">
+        <item>English</item>
+        <item>日本語</item>
+        <item>中文简体</item>
+        <item>中文繁體</item>
+        <item>Bahasa Melayu</item>
+        <item>Bahasa Indonesia</item>
+        <item>Dansk</item>
+        <item>Deutsch</item>
+        <item>Español</item>
+        <item>Ελληνικά</item>
+        <item>Français</item>
+        <item>Italiano</item>
+        <item>Magyar</item>
+        <item>Nederlands</item>
+        <item>Polski</item>
+        <item>Português</item>
+        <item>Русский</item>
+        <item>Tiếng Việt</item>
+        <item>Türkçe</item>
+        <item>Čeština</item>
+        <item>ไทย</item>
+        <item>हिन्दी</item>
+        <item>فارسی</item>
+        <item>العربية</item>
+        <item>한국어</item>
+    </string-array>
+    <string-array name="pref_language_values">
+        <item>en</item>
+        <item>ja</item>
+        <item>zh_CN</item>
+        <item>zh_TW</item>
+        <item>ms</item>
+        <item>in</item>
+        <item>da</item>
+        <item>de</item>
+        <item>es</item>
+        <item>el</item>
+        <item>fr</item>
+        <item>it</item>
+        <item>hu</item>
+        <item>nl</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>vi</item>
+        <item>tr</item>
+        <item>cs</item>
+        <item>th</item>
+        <item>hi</item>
+        <item>fa</item>
+        <item>ar</item>
+        <item>ko</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Always on</item>
+        <item>Always off</item>
+        <item>Show in WIFI</item>
+    </string-array>
+    <string-array name="pref_load_images_values">
+        <item>ON</item>
+        <item>OFF</item>
+        <item>IN_WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Open new page</item>
+        <item>Open previous page</item>
+    </string-array>
+    <string-array name="pref_on_startup_values">
+        <item>OPEN_NEW_PAGE</item>
+        <item>OPEN_PREVIOUS_PAGE</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>By default</item>
+        <item>Open in background tab</item>
+        <item>Open in new tab</item>
+    </string-array>
+    <string-array name="pref_open_links_values">
+        <item>DEFAULT</item>
+        <item>OPEN_IN_BACKGROUND_TAB</item>
+        <item>OPEN_IN_NEW_TAB</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Auto</item>
+        <item>Landscape</item>
+        <item>Portrait</item>
+    </string-array>
+    <string-array name="pref_orientation_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Always on</item>
+        <item>On demand</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="pref_plugin_state_values">
+        <item>ON</item>
+        <item>ON_DEMAND</item>
+        <item>OFF</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Disabled</item>
+        <item>Only on Wi-Fi</item>
+        <item>Always</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Enable left bar</item>
+        <item>Enable right bar</item>
+        <item>Enable all</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_values">
+        <item>ON_LEFT</item>
+        <item>ON_RIGHT</item>
+        <item>ON_BOTH</item>
+        <item>OFF</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Tiny</item>
+        <item>Small</item>
+        <item>Normal</item>
+        <item>Large</item>
+        <item>Huge</item>
+    </string-array>
+    <string-array name="pref_text_size_values">
+        <item>SMALLEST</item>
+        <item>SMALLER</item>
+        <item>NORMAL</item>
+        <item>LARGER</item>
+        <item>LARGEST</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Default android action</item>
+        <item>Scroll up/down page</item>
+        <item>Switch tabs</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="search_engine_names">
+        <item>Google</item>
+        <item>Bing</item>
+        <item>Yahoo</item>
+    </string-array>
+    <string-array name="search_engines">
+        <item>yahoo</item>
+        <item>bing</item>
+    </string-array>
+    <string-array name="speed_dials">
+        <item>Google</item>
+        <item>http://www.google.com/</item>
+        <item>capture_google</item>
+        <item>favicon_google</item>
+        <item>Wallpaper</item>
+        <item>http://m.flikie.com/</item>
+        <item>capture_wallpaper</item>
+        <item>favicon_wallpaper</item>
+        <item>Facebook</item>
+        <item>http://www.facebook.com/</item>
+        <item>capture_facebook</item>
+        <item>favicon_facebook</item>
+        <item>Yahoo!</item>
+        <item>http://www.yahoo.com/</item>
+        <item>capture_yahoo</item>
+        <item>favicon_yahoo</item>
+    </string-array>
+    <string-array name="speed_dials_for_small_screen">
+        <item>Google</item>
+        <item>http://www.google.com/</item>
+        <item>capture_google</item>
+        <item>favicon_google</item>
+        <item>Wallpaper</item>
+        <item>http://m.flikie.com/</item>
+        <item>capture_wallpaper</item>
+        <item>favicon_wallpaper</item>
+        <item>Facebook</item>
+        <item>http://www.facebook.com/</item>
+        <item>capture_facebook</item>
+        <item>favicon_facebook</item>
+        <item>Yahoo!</item>
+        <item>http://www.yahoo.com/</item>
+        <item>capture_yahoo</item>
+        <item>favicon_yahoo</item>
+    </string-array>
+    <string-array name="supported_actions">
+        <item>101</item>
+        <item>actionLoadUrl3</item>
+        <item>102</item>
+        <item>actionSearch</item>
+        <item>103</item>
+        <item>actionShare3</item>
+        <item>1003</item>
+        <item>actionShare2</item>
+        <item>201</item>
+        <item>actionAddBookmark2</item>
+        <item>202</item>
+        <item>actionBack2</item>
+        <item>203</item>
+        <item>actionForward2</item>
+        <item>204</item>
+        <item>actionGotoTop2</item>
+        <item>205</item>
+        <item>actionGotoBottom2</item>
+        <item>206</item>
+        <item>actionFindOnPage</item>
+        <item>2006</item>
+        <item>actionSelectText2</item>
+        <item>207</item>
+        <item>actionSavePage2</item>
+        <item>208</item>
+        <item>actionRefresh</item>
+        <item>209</item>
+        <item>actionStop</item>
+        <item>210</item>
+        <item>actionZoomIn2</item>
+        <item>211</item>
+        <item>actionZoomOut2</item>
+        <item>212</item>
+        <item>actionEnableOrDisableSwipe</item>
+        <item>214</item>
+        <item>actionPaste</item>
+        <item>215</item>
+        <item>actionPasteAndGo</item>
+        <item>216</item>
+        <item>actionExit</item>
+        <item>301</item>
+        <item>actionNewTab2</item>
+        <item>302</item>
+        <item>actionCloseAllTab2</item>
+        <item>303</item>
+        <item>actionCloseOtherTab2</item>
+        <item>304</item>
+        <item>actionCloseCurrentTab2</item>
+        <item>305</item>
+        <item>actionSwitchToLeftTab</item>
+        <item>306</item>
+        <item>actionSwitchToRightTab</item>
+        <item>404</item>
+        <item>actionAddOns2</item>
+        <item>405</item>
+        <item>actionDownload2</item>
+        <item>406</item>
+        <item>actionSettings2</item>
+        <item>407</item>
+        <item>actionWindows2</item>
+        <item>408</item>
+        <item>actionShowLeftBar</item>
+        <item>409</item>
+        <item>actionShowRightBar</item>
+        <item>4111</item>
+        <item>actionLoadHomepage2</item>
+        <item>501</item>
+        <item>actionDesktopToggle</item>
+        <item>502</item>
+        <item>actionDesktopUserAgent</item>
+        <item>503</item>
+        <item>actionIphoneUserAgent</item>
+        <item>504</item>
+        <item>actionIpadUserAgent</item>
+        <item>505</item>
+        <item>actionCustomUserAgent</item>
+        <item>506</item>
+        <item>actionAndroidUserAgent</item>
+        <item>507</item>
+        <item>actionEnableOrDisableNoImage</item>
+        <item>508</item>
+        <item>setFullScreen</item>
+        <item>509</item>
+        <item>actionSwitchTheme</item>
+        <item>510</item>
+        <item>actionLockOrUnlockOrientation</item>
+        <item>512</item>
+        <item>actionSubscribeRSS2</item>
+        <item>513</item>
+        <item>actionSendFeedback</item>
+        <item>514</item>
+        <item>actionGesture</item>
+        <item>515</item>
+        <item>actionShowZoomButton</item>
+        <item>601</item>
+        <item>actionBackupData</item>
+        <item>602</item>
+        <item>actionRestoreData</item>
+        <item>603</item>
+        <item>actionInprivate</item>
+        <item>604</item>
+        <item>actionClearCache</item>
+        <item>605</item>
+        <item>actionEnableJavascript</item>
+        <item>700</item>
+        <item>actionLoadJavascript</item>
+        <item>800</item>
+        <item>actionLogin</item>
+    </string-array>
+    <integer-array name="textsize_preference_text_sizes">
+        <item>8</item>
+        <item>12</item>
+        <item>16</item>
+        <item>23</item>
+        <item>30</item>
+    </integer-array>
+    <string-array name="twitter">
+        <item>Twitter</item>
+        <item>twitter.com</item>
+        <item>https://mobile.twitter.com/favicon.ico</item>
+        <item>https://mobile.twitter.com/search/?q={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>https://mobile.twitter.com/search/?q={searchTerms}</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="vertial_search_tags">
+        <item>amazon</item>
+        <item>youtube</item>
+        <item>wikipedia</item>
+        <item>ebay</item>
+        <item>twitter</item>
+        <item>facebook</item>
+    </string-array>
+    <string-array name="vertical_search_engins">
+        <item>Amazon</item>
+        <item>YouTube</item>
+        <item>Wikipedia</item>
+        <item>eBay</item>
+        <item>Twitter</item>
+        <item>Facebook</item>
+    </string-array>
+    <string-array name="voice_anim_text_items">
+        <item>Go to Google</item>
+        <item>Open Facebook</item>
+        <item>Twitter</item>
+        <item>YouTube</item>
+        <item>"What's the weather like"</item>
+        <item>Google map</item>
+        <item>BBC news</item>
+        <item>Ebay \"Nike shoes\"</item>
+        <item>Amazon</item>
+        <item>Close tab</item>
+        <item>Create tab</item>
+        <item>Watch \"Double Rainbow\"</item>
+        <item>Exit full screen</item>
+        <item>Watch movie</item>
+        <item>Hollywood</item>
+        <item>Gmail</item>
+        <item>Hotmail</item>
+        <item>Search \"You are my sunshine\"</item>
+        <item>Wikipedia</item>
+        <item>Where to buy clothes</item>
+    </string-array>
+    <string-array name="voice_anim_text_items_ja_jp">
+        <item>戻る</item>
+        <item>天気予報</item>
+        <item>yahooダイエット</item>
+        <item>他のタブを閉じる</item>
+        <item>GREE</item>
+        <item>googleダイエット</item>
+        <item>全画面</item>
+        <item>ユーチューブ</item>
+        <item>ダイエットを検索</item>
+        <item>更新</item>
+        <item>地図</item>
+        <item>速報</item>
+        <item>ブックマークを追加</item>
+        <item>タベログ</item>
+        <item>ブックマーク</item>
+        <item>乗車案内</item>
+        <item>アマゾンかばん</item>
+        <item>台風</item>
+    </string-array>
+    <string-array name="voice_anim_text_items_zh_cn">
+        <item>上”微博“</item>
+        <item>看新闻</item>
+        <item>上QQ</item>
+        <item>人人网</item>
+        <item>天气预报</item>
+        <item>打开百度</item>
+        <item>百度地图</item>
+        <item>打开新浪</item>
+        <item>买鞋子</item>
+        <item>淘宝网</item>
+        <item>关闭标签</item>
+        <item>新建标签</item>
+        <item>全屏</item>
+        <item>退出全屏</item>
+        <item>看电影</item>
+        <item>周星驰电影</item>
+        <item>好看的电视剧</item>
+        <item>网易邮箱</item>
+        <item>下载“切水果”</item>
+        <item>下载“愤怒的小鸟”</item>
+    </string-array>
+    <string-array name="voice_notes">
+        <item>Search</item>
+        <item>Talk to Dolphin and let Her Do the Work</item>
+        <item>Let Dolphin be your wing-woman. Search where to take your date by saying \"Restaurants with a view\" or dazzle her at the last minute with \"Best place to buy roses.\"</item>
+        <item>Navigate</item>
+        <item>Just Tell Your Dolphin What To Do</item>
+        <item>array/voice_operation</item>
+        <item></item>
+        <item></item>
+        <item>"Don't forget I need a network connection to work."</item>
+    </string-array>
+    <string-array name="voice_operation">
+        <item>Add a Bookmark</item>
+        <item>Forward</item>
+        <item>Back</item>
+        <item>Top of the Page</item>
+        <item>Bottom of the Page</item>
+        <item>Refresh</item>
+        <item>New tab</item>
+        <item>Close Tab</item>
+        <item>History</item>
+        <item>Zoom in</item>
+        <item>Zoom out</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>I am thinking</item>
+        <item>"I'm On it."</item>
+        <item>Roger that.</item>
+        <item>As you wish.</item>
+        <item>Your wish is my command.</item>
+        <item>Wait a minute.</item>
+        <item>Give me a sec.</item>
+        <item>Thinking.</item>
+        <item>Processing.</item>
+        <item>Just a moment.</item>
+        <item>Please wait.</item>
+        <item>Got it.</item>
+        <item>"I'll rock this one."</item>
+        <item>"Rockin' it."</item>
+        <item>This is dope.</item>
+        <item>WOOT!</item>
+        <item>Sounds delicious...</item>
+        <item>Sounds great!</item>
+        <item>I hear you!</item>
+    </string-array>
+    <string-array name="wikipedia">
+        <item>Wikipedia</item>
+        <item>wikipedia.com</item>
+        <item>http://en.m.wikipedia.org/favicon.ico</item>
+        <item>http://en.m.wikipedia.org/w/index.php?title=Special:Search&amp;search={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://en.m.wikipedia.org/w/index.php?title=Special:Search&amp;search={searchTerms}</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+    <string-array name="yahoo">
+        <item>Yahoo!</item>
+        <item>yahoo.com</item>
+        <item>http://search.yahoo.com/favicon.ico</item>
+        <item>http://search.yahoo.com/search?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}</item>
+        <item>engine_yahoo</item>
+        <item>engine_yahoo_text</item>
+    </string-array>
+    <string-array name="yahoo_japan">
+        <item>Yahoo! JAPAN</item>
+        <item>yahoo.co.jp</item>
+        <item>http://search.yahoo.co.jp/favicon.ico</item>
+        <item>http://search.yahoo.co.jp/search?ei={inputEncoding}&amp;fr=dol_and&amp;p={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.google.com/complete/search?hl={language}&amp;gl={country}&amp;client=android&amp;q={searchTerms}</item>
+        <item>engine_yahoo</item>
+        <item>engine_yahoo_text</item>
+    </string-array>
+    <string-array name="yandex">
+        <item>Яндекс</item>
+        <item>yandex.ru</item>
+        <item>http://www.yandex.ru/favicon.ico</item>
+        <item>http://yandex.ru/touchsearch?text={searchTerms}&amp;clid=1771196</item>
+        <item>UTF-8</item>
+        <item>http://suggest.yandex.net/suggest?mob=1&amp;sn=10&amp;nav=yes&amp;part={searchTerms}</item>
+        <item>engine_yandex</item>
+        <item>engine_yandex_text</item>
+    </string-array>
+    <string-array name="yandex_default">
+        <item>Yandex</item>
+        <item>yandex.ru</item>
+        <item>http://www.yandex.ru/favicon.ico</item>
+        <item>http://yandex.ru/touchsearch?text={searchTerms}&amp;clid=1771196</item>
+        <item>UTF-8</item>
+        <item>http://suggest.yandex.net/suggest?mob=1&amp;sn=10&amp;nav=yes&amp;part={searchTerms}</item>
+        <item>engine_yandex</item>
+        <item>engine_yandex_text</item>
+    </string-array>
+    <string-array name="yandex_tr">
+        <item>Яндекс</item>
+        <item>yandex.tr</item>
+        <item>http://www.yandex.com.tr/favicon.ico</item>
+        <item>http://yandex.com.tr/touchsearch?text={searchTerms}&amp;clid=2053114</item>
+        <item>UTF-8</item>
+        <item>http://suggest.yandex.net/suggest?mob=1&amp;sn=10&amp;nav=yes&amp;part={searchTerms}</item>
+        <item>engine_yandex</item>
+        <item>engine_yandex_text</item>
+    </string-array>
+    <string-array name="youtube">
+        <item>Youtube</item>
+        <item>youtube.com</item>
+        <item>http://www.youtube.com/favicon.ico</item>
+        <item>http://www.youtube.com/results?search_query={searchTerms}</item>
+        <item>UTF-8</item>
+        <item>http://www.youtube.com/results?search_query={searchTerms}</item>
+        <item>engine_google</item>
+        <item>engine_google_text</item>
+    </string-array>
+</resources>

@@ -1,0 +1,5 @@
+<TextureAtlas imagePath="PassedFriendPopUp.png">
+	<SubTexture name="passed_green_arrow" x="0" y="0" width="158" height="177"/>
+	<SubTexture name="passed_red_arrow" x="0" y="179" width="134" height="127"/>
+	<SubTexture name="passed_stars" x="0" y="308" width="116" height="160"/>
+</TextureAtlas>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/appoxee_default_tags_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="12.0sp" android:id="@id/appoxee_default_tagsBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tags_string" android:layout_centerHorizontal="true" />
+    <Button android:textSize="12.0sp" android:id="@id/appoxee_default_aliasButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alias_string" android:layout_toLeftOf="@id/appoxee_default_tagsBtn" />
+    <Button android:textSize="12.0sp" android:id="@id/appoxee_default_attributesBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attributes_string" android:layout_toRightOf="@id/appoxee_default_tagsBtn" />
+    <ListView android:id="@id/appoxee_default_tags_listview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/appoxee_default_aliasButton" />
+    <ProgressBar android:id="@id/appoxee_default_tag_progressBar" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+{
+	"debug":"false",
+	"productionDeployment":"true",
+	"supportedCountryCodes":"EN",
+	"debugLoggingPanel":"false",
+	
+	"phoneSlotWidth":1136,
+	"phoneStageWidth":980,
+	"phoneStageHeight":640,
+	
+	"tabletSlotWidth":1024,
+	"tabletStageWidth":1024,
+	"tabletStageHeight":768,
+	
+	"server":"wslb-230070662.us-east-1.elb.amazonaws.com",
+	"rootRemoteAssetAddress":"http://d3ud32qnbuumq2.cloudfront.net/",
+	"rootWebRemoteAssetAddress":"http://d1s4qpiotv4duj.cloudfront.net/static/",
+	
+	"facebookAppId":"281695558511228",
+	"facebookApiKey":"281695558511228",
+	"facebookWebAddress":"http://apps.facebook.com/luckygemcasino/",
+	"openGraphNamespace":"luckygemcasino:",
+	"openGraphObjectURL":"",
+	
+	"guestAppId":"281695558511228",
+	"guestAndroidApiKey":"839906c98c804797b3692c1b062a5725",
+	"guestIosApiKey":"8d3c5414280b4abcade372088a774189",
+	
+	"id_prefix":"Slots",
+	
+	"iwiCanvasUrl":"http://luckygem-canvas-prod.appspot.com/",
+	
+	"iwiFlashLoggerUrl":"http://iwiflashlogger.appspot.com/",
+	"iwiFlashLoggerAppName":"LuckyGem",
+	"iwiFlashLoggerMessageCount":5,
+			
+	"overrideSlotVersions":"",
+	"overrideSlotAssetVersions":"",
+	
+	"iwiStatefulServers":true,
+	"iwiConsoleTracking":true,
+
+	"somoId":246,
+	"somoIosUrl":"somoluckygem",
+	"googleAnalyticsId":"UA-33946749-2",
+
+	"senderid_google":"755009890729",
+	"senderid_amazon":"TBD"
+
+}

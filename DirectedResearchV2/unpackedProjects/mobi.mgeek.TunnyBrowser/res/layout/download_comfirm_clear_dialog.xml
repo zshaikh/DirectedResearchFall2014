@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dialog_item_font_size" android:id="@id/download_confirm_clear_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/confirm_clear_download_message" />
+        <CheckBox android:textSize="@dimen/dialog_item_font_size" android:id="@id/confirm_delete_download_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:checked="false" android:text="@string/confirm_delete_download_choice_text" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Cloud Settings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:robobunny="http://robobunny.com">
+    <com.acmeaom.android.myradar.app.ui.prefs.SeekBarPreference android:title="Opacity" android:key="@string/clouds_opacity_setting" android:defaultValue="0.65" robobunny:max="0.85" robobunny:min="0.15" robobunny:unitsLeft="" robobunny:unitsRight="%" />
+</PreferenceScreen>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="alert_dialog_bg">@drawable/base_drawable_white</item>
+    <item type="drawable" name="alert_dialog_button_bg">@color/base_color_transparent</item>
+    <item type="drawable" name="alert_dialog_custome_layout_bg">#ffffffff</item>
+    <item type="drawable" name="base_drawable_white">#fff5f5f5</item>
+    <item type="drawable" name="bookmark_addon_disable_title_bg">#ff808080</item>
+    <item type="drawable" name="bookmark_list_bg">#ffededed</item>
+    <item type="drawable" name="com_facebook_picker_default_separator_color">#33464c59</item>
+    <item type="drawable" name="commom_background_normal_color">#ffffffff</item>
+    <item type="drawable" name="deep_search_item_divider">#ffededed</item>
+    <item type="drawable" name="deep_search_top_divider">#ffededed</item>
+    <item type="drawable" name="dialog_transparent_dialog">#00000000</item>
+    <item type="drawable" name="dl_back_btn_bg_normal">#ffffffff</item>
+    <item type="drawable" name="dl_back_btn_bg_pressed">#ffededed</item>
+    <item type="drawable" name="drawable_transparent">#00000000</item>
+    <item type="drawable" name="feedback_bottom_divide_line_color">#ffd9d9d9</item>
+    <item type="drawable" name="feedback_divide_line_color">#ffededed</item>
+    <item type="drawable" name="ic_splash_screen" />
+    <item type="drawable" name="listview_layout_bg">#ffffffff</item>
+    <item type="drawable" name="menu_menu_page_background_nomal">#ffffffff</item>
+    <item type="drawable" name="more_pressed">#ffe6e6e6</item>
+    <item type="drawable" name="night_find_on_page_hint_text">#ff4a4b4c</item>
+    <item type="drawable" name="night_find_on_page_match_text">#ff4a4b4c</item>
+    <item type="drawable" name="night_find_on_page_text">#ff6e7074</item>
+    <item type="drawable" name="night_option_default">#ff1a1d21</item>
+    <item type="drawable" name="night_option_focused">#ff193107</item>
+    <item type="drawable" name="pagedrop_background">#fff6f6f6</item>
+    <item type="drawable" name="pagedrop_chat_divider">#ffededed</item>
+    <item type="drawable" name="pagedrop_divider">#ff808080</item>
+    <item type="drawable" name="pg_send_content_bg">#fff3f3f3</item>
+    <item type="drawable" name="pg_send_normal_bg">#ffe6e6e6</item>
+    <item type="drawable" name="popup_line_color">#ffededed</item>
+    <item type="drawable" name="push_translucent_drawable">@android:color/transparent</item>
+    <item type="drawable" name="screen_background_light">#00000000</item>
+    <item type="drawable" name="search_floating_view_bg">#ffffffff</item>
+    <item type="drawable" name="search_input_cursor_color">#ffffffff</item>
+    <item type="drawable" name="setting_checkbox_color">#00ffffff</item>
+    <item type="drawable" name="setting_listview_divider_color">#ffededed</item>
+    <item type="drawable" name="sonar_gesture_tab_divider">#afffffff</item>
+    <item type="drawable" name="sonar_gesture_title_divider">#ffd9d9d9</item>
+    <item type="drawable" name="translucent_background">#e0ffffff</item>
+    <item type="drawable" name="webview_select_dialog_empty_text_color">#ff4d4d4d</item>
+</resources>

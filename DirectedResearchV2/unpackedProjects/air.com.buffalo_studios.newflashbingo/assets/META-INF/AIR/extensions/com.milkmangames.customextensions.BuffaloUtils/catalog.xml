@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/milkmangames/customextensions/events/AnalyticsEvent" mod="1354859957941" signatureChecksum="2453696071" >
+        <def id="com.milkmangames.customextensions.events:AnalyticsEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/milkmangames/customextensions/events/NetworkEvent" mod="1359414308207" signatureChecksum="4287261085" >
+        <def id="com.milkmangames.customextensions.events:NetworkEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_aa29be22a066aaa8b634f9f56fcfff6ac603eed15ad5aeca61d5d254ab9622e0_flash_display_Sprite" mod="1392102467728" signatureChecksum="2629205353" >
+        <def id="_aa29be22a066aaa8b634f9f56fcfff6ac603eed15ad5aeca61d5d254ab9622e0_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/milkmangames/customextensions/BuffaloUtils" mod="1392099498042" signatureChecksum="198425924" >
+        <def id="com.milkmangames.customextensions:BuffaloUtils" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.events:RemoteNotificationEvent" type="e" /> 
+        <dep id="flash.net:SharedObject" type="e" /> 
+        <dep id="JSON" type="e" /> 
+        <dep id="com.milkmangames.customextensions.events:AnalyticsEvent" type="e" /> 
+        <dep id="com.milkmangames.customextensions.events:GCMEvent" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="com.milkmangames.customextensions.events:NetworkEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.desktop:NativeApplication" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.milkmangames.customextensions.events:LocalNotificationEvent" type="e" /> 
+        <dep id="com.milkmangames.customextensions.events:SystemEvent" type="e" /> 
+        <dep id="flash.desktop:InvokeEventReason" type="e" /> 
+        <dep id="flash.notifications:RemoteNotifierSubscribeOptions" type="e" /> 
+        <dep id="flash.notifications:NotificationStyle" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.notifications:RemoteNotifier" type="e" /> 
+        <dep id="flash.events:InvokeEvent" type="e" /> 
+        <dep id="com.milkmangames.customextensions.events:LocalNotificationEvent" type="s" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.events:RemoteNotificationEvent" type="s" /> 
+        <dep id="flash.notifications:RemoteNotifierSubscribeOptions" type="s" /> 
+        <dep id="flash.net:SharedObject" type="s" /> 
+        <dep id="com.milkmangames.customextensions.events:GCMEvent" type="s" /> 
+        <dep id="com.milkmangames.customextensions.events:NetworkEvent" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.notifications:RemoteNotifier" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="flash.events:InvokeEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/milkmangames/customextensions/events/GCMEvent" mod="1392102440020" signatureChecksum="3017131171" >
+        <def id="com.milkmangames.customextensions.events:GCMEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/milkmangames/customextensions/events/LocalNotificationEvent" mod="1380606515990" signatureChecksum="1936431173" >
+        <def id="com.milkmangames.customextensions.events:LocalNotificationEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/milkmangames/customextensions/events/SystemEvent" mod="1361387325257" signatureChecksum="3268435564" >
+        <def id="com.milkmangames.customextensions.events:SystemEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="dc14d47e77fc8a1f3dd264e60d13835150a214c9e1b2ba7234f83d0c3b58f982"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

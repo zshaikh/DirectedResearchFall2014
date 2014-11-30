@@ -1,0 +1,24 @@
+	<extension xmlns="http://ns.adobe.com/air/extension/3.5">
+	  <id>com.milkmangames.customextensions.BuffaloUtils</id>
+	  <versionNumber>1</versionNumber>
+	  <platforms>
+		<platform name="Android-ARM">
+	      <applicationDeployment>
+	        <nativeLibrary>BuffaloUtilsAPI.jar</nativeLibrary>
+	        <initializer>com.milkmangames.extensions.android.BuffaloExtension</initializer>
+	        <finalizer>com.milkmangames.extensions.android.BuffaloExtension</finalizer>
+	      </applicationDeployment>
+	    </platform>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>BuffaloUtilsAPI.a</nativeLibrary>
+				<initializer>MmgBuApiExtInitializer</initializer>
+				<finalizer>MmgBuApiExtFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default"> 
+	      <applicationDeployment>
+	      </applicationDeployment>
+		</platform> 
+	  </platforms>
+	</extension>

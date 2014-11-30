@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">%d個の項目をここに移動する</item>
+        <item quantity="one">1個の項目をここに移動する</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">直近 %d 日間</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d時間</item>
+        <item quantity="one">1時間</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d件一致</item>
+        <item quantity="zero">該当なし</item>
+        <item quantity="one">1件一致</item>
+        <item quantity="few">%d件一致</item>
+    </plurals>
+</resources>

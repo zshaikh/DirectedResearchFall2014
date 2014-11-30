@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:orca="http://schemas.android.com/apk/res/com.facebook.orca">
+    <com.facebook.orca.common.ui.titlebar.TitleBar android:id="@id/image_search_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:title="Record Audio" />
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/audio_record_record_button" android:layout_width="150.0dip" android:layout_height="50.0dip" android:layout_marginBottom="30.0dip" android:text="Record" android:layout_above="@id/audio_record_cancel_button" android:layout_centerInParent="true" />
+        <Button android:id="@id/audio_record_cancel_button" android:layout_width="150.0dip" android:layout_height="50.0dip" android:text="Cancel" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

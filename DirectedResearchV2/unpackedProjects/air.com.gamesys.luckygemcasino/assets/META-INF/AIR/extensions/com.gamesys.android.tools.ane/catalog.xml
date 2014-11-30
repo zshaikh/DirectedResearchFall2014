@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="354110"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/gamesys/android/tools/aslib/ASToolsEvent" mod="1384118877000">
+                <def id="com.gamesys.android.tools.aslib:ASToolsEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/gamesys/android/tools/aslib/AndroidToolsEvent" mod="1390425162000">
+                <def id="com.gamesys.android.tools.aslib:AndroidToolsEvent"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+            </script>
+            <script name="com/gamesys/android/tools/aslib/IToolsInterface" mod="1392001498000">
+                <def id="com.gamesys.android.tools.aslib:IToolsInterface"/>
+                <dep id="Array" type="s"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Function" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="__AS3__.vec:Vector" type="s"/>
+                <dep id="com.gamesys.android.tools.aslib.model:LaunchedInfo" type="s"/>
+                <dep id="com.gamesys.android.tools.aslib.model:ScreenDpiNative" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/gamesys/android/tools/aslib/ToolsInterface" mod="1392001418000">
+                <def id="com.gamesys.android.tools.aslib:ToolsInterface"/>
+                <dep id="Array" type="s"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Function" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="__AS3__.vec:Vector" type="s"/>
+                <dep id="avmplus:getQualifiedClassName" type="e"/>
+                <dep id="com.gamesys.android.tools.aslib:ASToolsEvent" type="e"/>
+                <dep id="com.gamesys.android.tools.aslib:AndroidToolsEvent" type="e"/>
+                <dep id="com.gamesys.android.tools.aslib:IToolsInterface" type="i"/>
+                <dep id="com.gamesys.android.tools.aslib.model:AppleModelName" type="e"/>
+                <dep id="com.gamesys.android.tools.aslib.model:LaunchedInfo" type="s"/>
+                <dep id="com.gamesys.android.tools.aslib.model:ScreenDpiNative" type="s"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/gamesys/android/tools/aslib/model/AppleModelName" mod="1382917329000">
+                <def id="com.gamesys.android.tools.aslib.model:AppleModelName"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.utils:Dictionary" type="s"/>
+            </script>
+            <script name="com/gamesys/android/tools/aslib/model/LaunchedInfo" mod="1379031601000">
+                <def id="com.gamesys.android.tools.aslib.model:LaunchedInfo"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+            </script>
+            <script name="com/gamesys/android/tools/aslib/model/ScreenDpiNative" mod="1379284502000">
+                <def id="com.gamesys.android.tools.aslib.model:ScreenDpiNative"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="i"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="b3323952ca95379c9dc76328d7c3dbb9f2fc3f3564a0617a26c3d68e20b7ca11"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

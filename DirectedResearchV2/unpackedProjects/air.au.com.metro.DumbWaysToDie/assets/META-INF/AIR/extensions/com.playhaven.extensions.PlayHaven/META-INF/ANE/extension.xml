@@ -1,0 +1,24 @@
+	<extension xmlns="http://ns.adobe.com/air/extension/3.5">
+	  <id>com.playhaven.extensions.PlayHaven</id>
+	  <versionNumber>1</versionNumber>
+	  <platforms>
+		<platform name="Android-ARM">
+	      <applicationDeployment>
+	        <nativeLibrary>PlayHavenAPI.jar</nativeLibrary>
+	        <initializer>com.playhaven.extensions.android.PlayHavenExtension</initializer>
+	        <finalizer>com.playhaven.extensions.android.PlayHavenExtension</finalizer>
+	      </applicationDeployment>
+	    </platform>
+	<platform name="iPhone-ARM">
+	        <applicationDeployment>
+	          <nativeLibrary>PlayHavenAPI.a</nativeLibrary>
+	          <initializer>MmgPhApiExtInitializer</initializer>
+	          <finalizer>MmgPhApiExtFinalizer</finalizer>
+	        </applicationDeployment>
+	      </platform>
+		<platform name="default"> 
+	      <applicationDeployment>
+	      </applicationDeployment>
+		</platform> 
+	  </platforms>
+	</extension>

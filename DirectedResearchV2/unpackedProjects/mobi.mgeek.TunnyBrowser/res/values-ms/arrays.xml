@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Pilihan</item>
+        <item>Perihal Add-on</item>
+        <item>Nyahdayakan Add-on</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinese (GBK)</item>
+        <item>Chinese (Big5)</item>
+        <item>Japanese (ISO-2022-JP)</item>
+        <item>Japanese (SHIFT_JIS)</item>
+        <item>Japanese (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Jauh ke belakang)</item>
+        <item>100% (Muatkan pada skrin)</item>
+        <item>200% (Syot dekat)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Resmi</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Sembunyi</item>
+        <item>Kiri (bawah)</item>
+        <item>Kanan (bawah)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Sembunyi</item>
+        <item>Kiri</item>
+        <item>Kanan</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Dinyahdayakan</item>
+        <item>Kualiti Lebih Baik</item>
+        <item>Seimbang</item>
+        <item>Saiz Kecil</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Sentiasa Buka</item>
+        <item>Sentiasa Tutup</item>
+        <item>Tunjuk dalam WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Buka Halaman Baru</item>
+        <item>Buka Halaman Terdahulu</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Secara lalai</item>
+        <item>Buka dalam Tab Latar belakang</item>
+        <item>Terbuka dalam tab baru</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Automatik</item>
+        <item>Landskap</item>
+        <item>Potret</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Sentiasa Buka</item>
+        <item>Atas Permintaan</item>
+        <item>Tutup</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Dinyahdayakan</item>
+        <item>Hanya melalui Wi-Fi</item>
+        <item>Sentiasa</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Dayakan Bar Kiri</item>
+        <item>Dayakan Bar Kanan</item>
+        <item>Dayakan Semua</item>
+        <item>Nyahdayakan</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Kecil</item>
+        <item>Kecil</item>
+        <item>Biasa</item>
+        <item>Besar</item>
+        <item>Besar</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Tindakan Android Asal</item>
+        <item>Halaman Tatal Atas/Bawah</item>
+        <item>Tab Suis</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Saya sedang berfikir</item>
+        <item>Saya menyokongnya.</item>
+        <item>Saya faham.</item>
+        <item>Seperti yang anda mahu.</item>
+        <item>Saya menurut kehendak anda.</item>
+        <item>Tunggu sebentar.</item>
+        <item>Berikan saya sedikit masa.</item>
+        <item>Sedang berfikir.</item>
+        <item>Sedang memproses.</item>
+        <item>Tunggu sebentar.</item>
+        <item>Sila tunggu.</item>
+        <item>Tahu.</item>
+        <item>Saya akan menjadikannya hebat.</item>
+        <item>Menarik.</item>
+        <item>Ini tidak masuk akal.</item>
+        <item>WOOT!</item>
+        <item>Nampak lazat!</item>
+        <item>Nampak hebat!</item>
+        <item>Saya faham!</item>
+    </string-array>
+</resources>

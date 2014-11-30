@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">Přesunout %d položek</item>
+        <item quantity="one">Přesunout jednu položku</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Posledních %d dní</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d hodin(y)</item>
+        <item quantity="one">1 hodina</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d shod</item>
+        <item quantity="zero">Žádná shoda</item>
+        <item quantity="one">1 shoda</item>
+        <item quantity="few">%d shody</item>
+    </plurals>
+</resources>

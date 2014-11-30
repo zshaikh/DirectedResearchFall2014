@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dolphin.preference.ExpandablePreferenceScreen dolphin:title="@string/pref_root_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:dolphin="http://schemas.android.com/apk/res/mobi.mgeek.TunnyBrowser">
+    <dolphin.preference.CheckBoxPreference dolphin:key="use_dolphin_webkit_display" dolphin:title="@string/use_dolphin_webkit" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_head_bk" />
+    <com.dolphin.browser.language.LanguageListPreference dolphin:entries="@array/pref_language_choices" dolphin:entryValues="@array/pref_language_values" dolphin:key="language" dolphin:title="@string/pref_language_string" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="is_default_browser" dolphin:title="@string/pref_content_set_as_default_browser" dolphin:summary="@string/set_as_default_browser_toast" dolphin:enabled="true" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.CheckBoxPreference dolphin:key="show_exit_confirmation" dolphin:title="@string/pref_exit_confirmation" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_head_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="clear_history_checked" dolphin:title="@string/pref_clear_history_checked" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="clear_cache_checked" dolphin:title="@string/pref_clear_cache_checked" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="clear_cookie_when_exit" dolphin:title="@string/pref_clear_cookie_when_exit" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="remember_passwords" dolphin:title="@string/pref_security_remember_passwords" dolphin:summary="@string/pref_security_remember_passwords_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="use_master_key" dolphin:title="@string/pref_security_use_master_key" dolphin:summary="@string/pref_security_use_master_key_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="save_formdata" dolphin:title="@string/pref_security_save_form_data" dolphin:summary="@string/pref_security_save_form_data_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="enable_geolocation" dolphin:title="@string/pref_privacy_enable_geolocation" dolphin:summary="@string/pref_privacy_enable_geolocation_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.PreferenceDownloadPath dolphin:positiveButtonText="@string/cancel" dolphin:negativeButtonText="@string/ok" dolphin:dialogLayout="@layout/download_path_settings" dolphin:edittextSummary="@string/download_dir_edittext_summary" dolphin:key="download_dir" dolphin:title="@string/download_dir_title" dolphin:summary="@string/download_dir_summary" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="save_cache_to_sdcard" dolphin:title="@string/pref_save_cache_to_sdcard" dolphin:summary="@string/pref_save_cache_to_sdcard_summary" dolphin:defaultValue="false" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.TextSizePreference dolphin:dialogTitle="@string/pref_text_size_dialogtitle" dolphin:entries="@array/pref_text_size_choices" dolphin:entryValues="@array/pref_text_size_values" dolphin:key="text_size" dolphin:title="@string/pref_text_size" dolphin:defaultValue="NORMAL" dolphin:background="@drawable/settings_bg_head_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="enable_plugins" dolphin:title="@string/pref_content_plugins" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <mobi.mgeek.preference.FlashPlayerPreference dolphin:entries="@array/pref_plugin_state_choices" dolphin:entryValues="@array/pref_plugin_state_values" dolphin:key="plugin_state" dolphin:title="@string/pref_content_plugins" dolphin:defaultValue="ON" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:entries="@array/pref_load_images_choices" dolphin:entryValues="@array/pref_load_images_values" dolphin:key="load_images_state" dolphin:title="@string/pref_content_load_images" dolphin:summary="@string/pref_content_load_images_summary" dolphin:defaultValue="ON" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.ListPreference dolphin:dialogTitle="@string/pref_default_text_encoding_dialogtitle" dolphin:entries="@array/pref_default_text_encoding_choices" dolphin:entryValues="@array/pref_default_text_encoding_values" dolphin:key="default_text_encoding" dolphin:title="@string/pref_default_text_encoding" dolphin:defaultValue="@string/pref_default_text_encoding_default" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="accept_cookies" dolphin:title="@string/pref_security_accept_cookies" dolphin:summary="@string/pref_security_accept_cookies_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="enable_javascript" dolphin:title="@string/pref_content_javascript" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="load_page" dolphin:title="@string/pref_content_load_page" dolphin:summary="@string/pref_content_load_page_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="block_popup_windows" dolphin:title="@string/pref_content_block_popups" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_middle_bk" />
+    <dolphin.preference.CheckBoxPreference dolphin:key="show_security_warnings" dolphin:title="@string/pref_security_show_security_warning" dolphin:summary="@string/pref_security_show_security_warning_summary" dolphin:defaultValue="true" dolphin:background="@drawable/settings_bg_foot_bk" />
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_customize_settings" dolphin:title="@string/pref_customize_settings" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="customize_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceScreen dolphin:key="pref_vg_settings" dolphin:title="@string/pref_category_gesture_voice_settings" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="com.dolphin.browser.vg.VoiceGestureSettingsActivity" />
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.PreferenceDivider />
+    <dolphin.preference.PreferenceScreen dolphin:key="sendfeedback" dolphin:title="@string/pref_send_feedback" dolphin:background="@drawable/settings_bg_middle_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="feedback_preference" />
+        </intent>
+    </dolphin.preference.PreferenceScreen>
+    <dolphin.preference.NotifyPreference dolphin:key="pref_help" dolphin:title="@string/pref_category_help" dolphin:background="@drawable/settings_bg_foot_bk">
+        <intent android:targetPackage="mobi.mgeek.TunnyBrowser" android:action="android.intent.action.VIEW" android:targetClass="mobi.mgeek.TunnyBrowser.BrowserPreferencesPage">
+            <extra android:name="dolphin:pref_res" android:value="help_preference" />
+        </intent>
+    </dolphin.preference.NotifyPreference>
+    <dolphin.preference.PreferenceDivider />
+</dolphin.preference.ExpandablePreferenceScreen>

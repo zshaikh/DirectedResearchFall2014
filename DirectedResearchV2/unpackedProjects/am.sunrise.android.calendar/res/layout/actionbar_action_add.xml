@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/actionbar_add" android:paddingLeft="@dimen/ab_text_action_horizontal_margin" android:paddingRight="@dimen/ab_text_action_horizontal_margin" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?android:actionButtonStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/ab_text_action_font_size" android:textColor="@color/ab_text_action_selector" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/actionbar_add_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_add" android:drawableLeft="@drawable/ab_done_action_selector" android:drawablePadding="@dimen/ab_text_action_text_horizontal_padding" android:textAllCaps="false" />
+</FrameLayout>

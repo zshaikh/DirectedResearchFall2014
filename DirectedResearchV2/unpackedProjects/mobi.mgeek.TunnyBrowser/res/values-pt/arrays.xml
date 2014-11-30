@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Opções</item>
+        <item>Descrição de Complemento</item>
+        <item>Desativar Complemento</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Escolha da Biblioteca</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinês (GBK)</item>
+        <item>Chinês (Big5)</item>
+        <item>Japonês (ISO-2022-JP)</item>
+        <item>Japonês (SHIFT_JIS)</item>
+        <item>Japonês (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Mais atrás)</item>
+        <item>100% (Ajustar ao ecrã)</item>
+        <item>200% (Fechar)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Área de trabalho</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Personalizado</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Ocultar</item>
+        <item>Esquerda (fundo)</item>
+        <item>Direita (fundo)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Ocultar</item>
+        <item>Esquerda</item>
+        <item>Direita</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Desativado</item>
+        <item>Melhor Qualidade</item>
+        <item>Equilibrado</item>
+        <item>Tamanho Menor</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Sempre Ligado</item>
+        <item>Sempre Desligado</item>
+        <item>Mostrar em WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Abrir Nova Página</item>
+        <item>Abrir Página Anterior</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Por padrão</item>
+        <item>Abrir em Aba de Fundo</item>
+        <item>Abrir em nova aba</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Automático</item>
+        <item>Paisagem</item>
+        <item>Retrato</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Sempre Ligado</item>
+        <item>A Pedido</item>
+        <item>Desligado</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Desativado</item>
+        <item>Apenas em Wi-Fi</item>
+        <item>Sempre</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Ativar Barra Esquerda</item>
+        <item>Ativar Barra Direita</item>
+        <item>Ativar Tudo</item>
+        <item>Desativar</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Minúsculo</item>
+        <item>Pequeno</item>
+        <item>Normal</item>
+        <item>Grande</item>
+        <item>Enorme</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Ação Android Predefinida</item>
+        <item>Deslocar Página Para Cima/Para Baixo</item>
+        <item>Alternar Abas</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Estou a pensar</item>
+        <item>Eu trato disso.</item>
+        <item>Entendido.</item>
+        <item>Como desejar.</item>
+        <item>O seu desejo é uma ordem.</item>
+        <item>Aguarde um minuto.</item>
+        <item>Dê-me um segundo.</item>
+        <item>A pensar.</item>
+        <item>A processar.</item>
+        <item>Só um momento.</item>
+        <item>Por favor aguarde.</item>
+        <item>Percebido.</item>
+        <item>Vou agitar este.</item>
+        <item>A agitá-lo.</item>
+        <item>Isto é tão bom.</item>
+        <item>UAU!</item>
+        <item>Parece delicioso…</item>
+        <item>Parece ótimo!</item>
+        <item>Estou a ouvir-te!</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+Key:com_facebook_logo_content_description Value:Facebook Logo HexId:0x7f050009 DecId:133189632 Mapped To:[ ActivityMap:com_facebook_usersettingsfragment.xml]
+Key:com_facebook_usersettingsfragment_log_in_button Value:Log in… HexId:0x7f05000a DecId:133189632 Mapped To:[ ActivityMap:com_facebook_usersettingsfragment.xml]
+Key:empty_file_list Value:No files were found. HexId:0x7f05001f DecId:133189633 Mapped To:[ ActivityMap:main.xml]
+Key:button_ok Value:OK HexId:0x7f050020 DecId:133189634 Mapped To:[ ActivityMap:main.xml - ActivityMap:multiple_file_selection_panel.xml]
+Key:button_cancel Value:Cancel HexId:0x7f050021 DecId:133189634 Mapped To:[ ActivityMap:multiple_file_selection_panel.xml]
+Key:file_save_as Value:Save As: HexId:0x7f050023 DecId:133189634 Mapped To:[ ActivityMap:main.xml]
+Key:IDA_CURL_INTERFACE_UNVERSER_2 Value:The server that the application is connecting to is unverified. HexId:0x7f05002d DecId:133189634 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]
+Key:IDA_CURL_INTERFACE_SERVER Value:Server: HexId:0x7f05002f DecId:133189634 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]
+Key:IDA_CURL_INTERFACE_TRUSTSER Value:Trust this server and make the connection? HexId:0x7f050030 DecId:133189635 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]
+Key:IDA_CERTIFICATE_DETAILS Value:Certificate:"
+ 
+ "Issued To:"
+ Common Name:
+ %1$s
+ 
+ Organization:
+ %2$s
+ 
+ Organizational Unit:
+ %3$s
+ 
+ "Issued by:"
+ Common Name:
+ %4$s
+ 
+ Organization:
+ %5$s
+ 
+ Organizational Unit:
+ %6$s
+ 
+ "Validity:"
+ Issued On:
+ %7$s
+ 
+ Expires On:
+ %8$s " HexId:0x7f050034 DecId:133189635 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]

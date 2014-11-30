@@ -1,0 +1,65 @@
+Key:yahoo Value:Yahoo HexId:0x7f080004 DecId:133201920 Mapped To:[ ActivityMap:anesample.xml]
+Key:cnn Value:CNN HexId:0x7f080005 DecId:133201920 Mapped To:[ ActivityMap:anesample.xml]
+Key:pop_up_badge Value:Badge Pop-Up HexId:0x7f080009 DecId:133201920 Mapped To:[ ActivityMap:popup.xml]
+Key:checkbox_string Value:CheckBox HexId:0x7f08000a DecId:133201920 Mapped To:[ ActivityMap:appoxee_default_tag_item.xml]
+Key:alias_string Value:Alias test HexId:0x7f08000b DecId:133201920 Mapped To:[ ActivityMap:appoxee_default_tags_layout.xml]
+Key:tags_string Value:Tags test HexId:0x7f08000c DecId:133201920 Mapped To:[ ActivityMap:appoxee_default_tags_layout.xml]
+Key:attributes_string Value:Attributes test HexId:0x7f08000d DecId:133201920 Mapped To:[ ActivityMap:appoxee_default_tags_layout.xml]
+Key:message_title Value:Welcome to my application, it is great !!! HexId:0x7f08000e DecId:133201920 Mapped To:[ ActivityMap:appoxee_default_inbox_list_item_view.xml]
+Key:message_content Value:Lorem Ipsum is simply dummy text of the printing and typesetting industry. HexId:0x7f08000f DecId:133201920 Mapped To:[ ActivityMap:appoxee_default_inbox_list_item_view.xml]
+Key:date Value:30/12/2012 HexId:0x7f080010 DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_inbox_list_item_view.xml]
+Key:inbox_title Value:My Inbox HexId:0x7f080015 DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_inbox_layout.xml]
+Key:delete Value:DELETE HexId:0x7f080017 DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_inbox_list_item_view.xml]
+Key:more_apps_icon Value:More apps icon HexId:0x7f080018 DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_moreapps_layout.xml]
+Key:feedback_icon Value:Feedback icon HexId:0x7f080019 DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml]
+Key:close_icon Value:Close icon HexId:0x7f08001a DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_layout.xml - ActivityMap:appoxee_default_inbox_message.xml]
+Key:inbox_icon Value:Inbox icon HexId:0x7f08001b DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_inbox_layout.xml]
+Key:appoxee_logo Value:Appoxee logo HexId:0x7f08001c DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_layout.xml - ActivityMap:appoxee_default_inbox_message.xml]
+Key:powered_by Value:Powered By: HexId:0x7f08001d DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_layout.xml - ActivityMap:appoxee_default_inbox_message.xml]
+Key:separator Value:Separator HexId:0x7f08001e DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_layout.xml - ActivityMap:appoxee_default_inbox_layout.xml]
+Key:oops_logo Value:Oops HexId:0x7f08001f DecId:133201921 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_message.xml]
+Key:oops_message Value:Seems we have a problem, Please try again later HexId:0x7f080020 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_message.xml]
+Key:pull_to_refresh_tap_label Value:Tap to refresh... HexId:0x7f080021 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_pull_to_refresh_header.xml]
+Key:open_feedback Value:Feedback HexId:0x7f080024 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_inbox_layout.xml]
+Key:feedback_title Value:Feedback HexId:0x7f080025 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml]
+Key:open_more_apps Value:More Apps HexId:0x7f080026 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_inbox_layout.xml]
+Key:more_apps_title Value:More Apps HexId:0x7f080027 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_moreapps_layout.xml]
+Key:no_messages_yet Value:No messages yet HexId:0x7f080028 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_inbox_layout.xml - ActivityMap:appoxee_default_inbox_layout.xml]
+Key:oops_icon Value:Connection problem HexId:0x7f080029 DecId:133201922 Mapped To:[ ActivityMap:appoxee_default_feedback_layout.xml - ActivityMap:appoxee_default_moreapps_layout.xml - ActivityMap:appoxee_default_inbox_message.xml]
+Key:com_facebook_logo_content_description Value:Facebook Logo HexId:0x7f080032 DecId:133201923 Mapped To:[ ActivityMap:com_facebook_usersettingsfragment.xml]
+Key:com_facebook_usersettingsfragment_log_in_button Value:Log In… HexId:0x7f080033 DecId:133201923 Mapped To:[ ActivityMap:com_facebook_usersettingsfragment.xml]
+Key:empty_file_list Value:No files were found. HexId:0x7f080048 DecId:133201924 Mapped To:[ ActivityMap:main.xml]
+Key:button_ok Value:OK HexId:0x7f080049 DecId:133201924 Mapped To:[ ActivityMap:main.xml - ActivityMap:multiple_file_selection_panel.xml]
+Key:button_cancel Value:Cancel HexId:0x7f08004a DecId:133201924 Mapped To:[ ActivityMap:multiple_file_selection_panel.xml]
+Key:file_save_as Value:Save As: HexId:0x7f08004c DecId:133201924 Mapped To:[ ActivityMap:main.xml]
+Key:IDA_CURL_INTERFACE_UNVERSER_2 Value:The server that the application is connecting to is unverified. HexId:0x7f080055 DecId:133201925 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]
+Key:IDA_CURL_INTERFACE_SERVER Value:Server: HexId:0x7f080057 DecId:133201925 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]
+Key:IDA_CURL_INTERFACE_TRUSTSER Value:Trust this server and make the connection? HexId:0x7f080058 DecId:133201925 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]
+Key:IDA_CERTIFICATE_DETAILS Value:Certificate:"
+ 
+ "Issued To:"
+ Common Name:
+ %1$s
+ 
+ Organization:
+ %2$s
+ 
+ Organizational Unit:
+ %3$s
+ 
+ "Issued by:"
+ Common Name:
+ %4$s
+ 
+ Organization:
+ %5$s
+ 
+ Organizational Unit:
+ %6$s
+ 
+ "Validity:"
+ Issued On:
+ %7$s
+ 
+ Expires On:
+ %8$s " HexId:0x7f08005c DecId:133201925 Mapped To:[ ActivityMap:ssl_certificate_warning.xml]

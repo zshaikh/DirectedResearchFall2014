@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/action_load_url" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textColorHint="#ff666666" android:layout_gravity="center_vertical" android:id="@id/action_url_input" android:background="@drawable/edit_text_bk" android:layout_width="0.0dip" android:layout_height="35.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="13.0dip" android:layout_weight="1.0" android:inputType="textUri" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ok" android:clickable="true" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="15.0dip">
+        <TextView android:textSize="17.0sp" android:id="@id/add_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+        <ImageView android:id="@id/add_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" />
+    </LinearLayout>
+</LinearLayout>

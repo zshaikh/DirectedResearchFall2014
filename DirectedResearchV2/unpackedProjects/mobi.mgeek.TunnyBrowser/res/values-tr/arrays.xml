@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Seçenekler</item>
+        <item>Eklenti Açıklaması</item>
+        <item>Eklentiyi Devre Dışı Bırak</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Çince (GBK)</item>
+        <item>Çince (Big5)</item>
+        <item>Japonya (ISO-2022-JP)</item>
+        <item>Japonya (SHIFT_JIS)</item>
+        <item>Japonya (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>%50 (Daha küçük)</item>
+        <item>%100 (Ekrana Sığdır)</item>
+        <item>%200 (Yakınlaştır)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Masaüstü</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Özel</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Gizle</item>
+        <item>Sol (alt)</item>
+        <item>Sağ (alt)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Gizle</item>
+        <item>Sol</item>
+        <item>Sağ</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Devre dışı</item>
+        <item>Daha Yüksek Kalite</item>
+        <item>Dengeli</item>
+        <item>Daha Küçük Boyut</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Daima Açık</item>
+        <item>Daima Kapalı</item>
+        <item>"WIFI'de Göster"</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Yeni Sayfa Aç</item>
+        <item>Önceki Sayfayı Aç</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Varsayılan olarak</item>
+        <item>Arka planda açık</item>
+        <item>Yeni Sekmede Aç</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Otomatik</item>
+        <item>Yatay</item>
+        <item>Dikey</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Daima Açık</item>
+        <item>İsteğe Bağlı</item>
+        <item>Kapalı</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Devre dışı</item>
+        <item>Yalnızca Wi-Fi için</item>
+        <item>Daima</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Sol Çubuğu Etkinleştir</item>
+        <item>Sağ Çubuğu Etkinleştir</item>
+        <item>Tümünü Etkinleştir</item>
+        <item>Devre Dışı Bırak</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Çok Küçük</item>
+        <item>Küçük</item>
+        <item>Normal</item>
+        <item>Büyük</item>
+        <item>Çok Büyük</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Varsayılan Android Eylemi</item>
+        <item>Sayfayı Yukarı/Aşağı kaydır</item>
+        <item>Sekme Değiştir</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Düşünüyorum</item>
+        <item>Üstünde çalışıyorum.</item>
+        <item>Anlaşıldı.</item>
+        <item>Nasıl isterseniz.</item>
+        <item>Arzunuz benim için bir emirdir.</item>
+        <item>Bir dakika bekleyin.</item>
+        <item>Bana bir saniye verin.</item>
+        <item>Düşünüyorum.</item>
+        <item>İşleniyor.</item>
+        <item>Yalnızca bir dakika.</item>
+        <item>Lütfen bekleyin.</item>
+        <item>Tamamdır.</item>
+        <item>Bunu hallederim.</item>
+        <item>Hallediyorum.</item>
+        <item>Bunu çözdüm.</item>
+        <item>Vay!</item>
+        <item>Kulağa güzel geliyor...</item>
+        <item>Harika bir şeye benziyor!</item>
+        <item>Seni duyuyorum!</item>
+    </string-array>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>گزینه ها</item>
+        <item>افزودن توضیح</item>
+        <item>غیرفعال کردن موارد افزودنی</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinese (GBK)</item>
+        <item>Chinese (Big5)</item>
+        <item>Japanese (ISO-2022-JP)</item>
+        <item>Japanese (SHIFT_JIS)</item>
+        <item>Japanese (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (پشت دورتر)</item>
+        <item>100% (پر کردن صفحه)</item>
+        <item>200% (نمای نزدیک)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>اندیشه</item>
+        <item>دسکتاپ</item>
+        <item>آی فون</item>
+        <item>اپل</item>
+        <item>سفارشی</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>مخفی کردن</item>
+        <item>چپ (پایین)</item>
+        <item>راست (پایین)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>مخفی کردن</item>
+        <item>چپ</item>
+        <item>راست</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>غیر فعال</item>
+        <item>کیفیت باتری</item>
+        <item>متوازن</item>
+        <item>اندازه کوچکتر</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>همواره روشن</item>
+        <item>همواره خاموش</item>
+        <item>عرض في شبكة الواي فاي</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>باز کردن صفحه جدید</item>
+        <item>باز کردن صفحه قبلی</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>پیش فرض</item>
+        <item>باز کردن در زبانه پس‌زمینه</item>
+        <item>باز کردن در زبانه جدید</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>خودکار</item>
+        <item>افقی</item>
+        <item>عمودی</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>همواره روشن</item>
+        <item>در صورت درخواست</item>
+        <item>خاموش</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>غیر فعال</item>
+        <item>فقط در Wi-Fi</item>
+        <item>همواره</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>فعال کردن نوار ابزار سمت چپ</item>
+        <item>فعال کردن نوار ابزار سمت راست</item>
+        <item>فعال کردن همه موارد</item>
+        <item>غیرفعال کردن</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>ریز</item>
+        <item>کوچک</item>
+        <item>معمولی</item>
+        <item>بزرگ</item>
+        <item>خیلی بزرگ</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>اقدام پیش‌فرض اندروید</item>
+        <item>پیمایش بالا/پایین صفحه</item>
+        <item>جابجایی بین زبانه‌ها</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>دارم فکر می‌کنم</item>
+        <item>در آن هستم.</item>
+        <item>دریافت شد.</item>
+        <item>هر طور مایلید.</item>
+        <item>خواسته شما اطاعت می‌شود.</item>
+        <item>یک دقیقه صبر کنید.</item>
+        <item>چند لحظه صبر کنید.</item>
+        <item>در حال فکر کردن.</item>
+        <item>در حال پردازش.</item>
+        <item>چند لحظه صبر کنید.</item>
+        <item>صبر کنید.</item>
+        <item>بگیرش.</item>
+        <item>این یکی را تکان می‌دهم.</item>
+        <item>تکان می‌دهم.</item>
+        <item>این جالب است.</item>
+        <item>ووت!</item>
+        <item>خوشمزه به نظر می‌رسد...</item>
+        <item>عالی به نظر می‌رسد!</item>
+        <item>به گوشم!</item>
+    </string-array>
+</resources>

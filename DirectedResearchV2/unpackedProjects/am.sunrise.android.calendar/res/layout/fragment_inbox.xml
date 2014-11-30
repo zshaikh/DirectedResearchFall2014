@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/inbox_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/dark_item_selector" android:cacheColorHint="@android:color/transparent" android:divider="@color/dark_divider" android:dividerHeight="@dimen/inbox_divider_height" android:choiceMode="singleChoice" />
+    <LinearLayout android:orientation="vertical" android:id="@android:id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inbox_no_invite_icon_margin_top" android:src="@drawable/invite_no_invite" android:adjustViewBounds="true" />
+        <TextView android:textSize="@dimen/inbox_no_invite_notice_font_size" android:textColor="@color/inbox_no_invite_notice" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inbox_no_invite_notice_margin_top" android:text="@string/inbox_you_have_no_invitations" android:singleLine="true" android:fontFamily="sans-serif" />
+    </LinearLayout>
+</FrameLayout>

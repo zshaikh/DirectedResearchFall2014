@@ -1,0 +1,25 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.9">
+  <id>com.gamesys.android.billing.common.ane</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>billinginterfacenative.jar</nativeLibrary>
+        <initializer>com.gamesys.android.billing.ane.BillingExtension</initializer>
+        <finalizer>com.gamesys.android.billing.ane.BillingExtension</finalizer>
+      </applicationDeployment>
+    </platform>
+    
+   	<platform name="iPhone-ARM">
+       <applicationDeployment>
+         <nativeLibrary>libBillingInterfaceIOSNative.a</nativeLibrary>
+         <initializer>IOSNativeBillingExtensionInitializer</initializer>
+       </applicationDeployment>
+    </platform>
+    
+    <platform name="default"> 
+    	<applicationDeployment /> 
+    </platform>
+        
+  </platforms>
+</extension>

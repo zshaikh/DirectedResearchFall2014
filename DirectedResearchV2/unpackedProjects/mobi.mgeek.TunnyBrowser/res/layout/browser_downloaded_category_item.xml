@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingBottom="@dimen/download_category_item_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/category_icon" android:layout_width="@dimen/dl_category_icon_size" android:layout_height="@dimen/dl_category_icon_size" android:layout_marginTop="@dimen/download_category_item_margin_top" android:layout_marginBottom="@dimen/download_category_item_icon_margin_bottom" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/category_icon" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/download_category_text_font_size" android:ellipsize="end" android:id="@id/category_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/download_category_count_font_size" android:ellipsize="end" android:id="@id/item_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

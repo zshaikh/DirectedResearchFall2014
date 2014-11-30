@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Các tùy chọn</item>
+        <item>Mô tả Tiện ích</item>
+        <item>Tắt Tiện ích</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Tiếng Trung (GBK)</item>
+        <item>Tiếng Trung (Big5)</item>
+        <item>Tiếng Nhật (ISO-2022-JP)</item>
+        <item>Tiếng Nhật (SHIFT_JIS)</item>
+        <item>Tiếng Nhật (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Lùi về sau)</item>
+        <item>100% (Cân đối với màn hình)</item>
+        <item>200% (Sát lại)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Tùy chỉnh</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Ẩn</item>
+        <item>Trái (dưới)</item>
+        <item>Phải (trên)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Ẩn</item>
+        <item>Trái</item>
+        <item>Phải</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Đã tắt</item>
+        <item>Chất lượng Tốt hơn</item>
+        <item>Đã cân bằng</item>
+        <item>Kích cỡ Nhỏ hơn</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Luôn Bật</item>
+        <item>Luôn Tắt</item>
+        <item>Chỉ khi có WiFi</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Mở Trang Mới</item>
+        <item>Mở Trang Trước</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Tự động</item>
+        <item>Màn hình ngang</item>
+        <item>Màn hình dọc</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Luôn luôn Bật</item>
+        <item>Theo yêu cầu</item>
+        <item>Tắt</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Đã tắt</item>
+        <item>Chỉ khi bật Wi-Fi</item>
+        <item>Luôn luôn</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Hiển thị Thanh Trái</item>
+        <item>Hiển thị Thanh Phải</item>
+        <item>Hiển thị Tất cả</item>
+        <item>Tắt</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Cực nhỏ</item>
+        <item>Nhỏ</item>
+        <item>Bình thường</item>
+        <item>Lớn</item>
+        <item>Cực lớn</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Thao tác Android Mặc định</item>
+        <item>Cuộn Trang Lên/Xuống</item>
+        <item>Chuyển đổi giữa các thẻ</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Tôi đang suy nghĩ</item>
+        <item>Cứ để tôi.</item>
+        <item>Đã rõ.</item>
+        <item>Như bạn mong muốn.</item>
+        <item>Mong muốn của bạn là mệnh lệnh của tôi</item>
+        <item>Xin chờ một phút.</item>
+        <item>Xin chờ giây lát.</item>
+        <item>Đang suy nghĩ.</item>
+        <item>Đang xử lý.</item>
+        <item>Chờ một lát.</item>
+        <item>Vui lòng chờ.</item>
+        <item>Đã nhận được.</item>
+        <item>Tôi sẽ chiến cái này</item>
+        <item>Chiến nào.</item>
+        <item>Cái này thật tuyệt.</item>
+        <item>UHHHUUUU!</item>
+        <item>Trông có vẻ ngon.</item>
+        <item>Thật tuyệt!</item>
+        <item>Tôi nghe thấy bạn rồi!</item>
+    </string-array>
+</resources>

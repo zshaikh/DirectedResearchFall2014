@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="353981"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/stuv/ane/w3i/AneW3i" mod="1392695603890">
+                <def id="com.stuv.ane.w3i:AneW3i"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="com.stuv.ane.w3i:AneW3iEvent" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="e"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/stuv/ane/w3i/AneW3iEvent" mod="1392695603892">
+                <def id="com.stuv.ane.w3i:AneW3iEvent"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="0b16c9d8fd9302acc649df82dfad45b33bb56d8115229a69a4bad0950b073f33"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

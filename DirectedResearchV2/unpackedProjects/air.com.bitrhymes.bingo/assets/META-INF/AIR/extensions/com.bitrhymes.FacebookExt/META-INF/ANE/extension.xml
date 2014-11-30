@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/2.5">
+	<id>com.bitrhymes.FacebookExt</id>
+	<versionNumber>1.0.0</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>facebookext.jar</nativeLibrary>
+				<initializer>com.bitrhymes.facebookext.FacebookExt</initializer>
+				<finalizer>com.bitrhymes.facebookext.FacebookExt</finalizer>
+			</applicationDeployment>
+		</platform>		
+		<platform name="default"> 
+			<applicationDeployment/>
+		</platform>
+	</platforms>
+</extension>

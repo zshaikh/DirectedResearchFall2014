@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Opties</item>
+        <item>Beschrijving add-on</item>
+        <item>Add-on uitschakelen</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Kiezen uit bibliotheek</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinees (GBK)</item>
+        <item>Chinees (Big5)</item>
+        <item>Japans (ISO-2022-JP)</item>
+        <item>Japans (SHIFT_JIS)</item>
+        <item>Japans (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Verder terug)</item>
+        <item>100% (Passend op scherm)</item>
+        <item>200% (Close-up)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Bureaublad</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Aangepaste</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Verbergen</item>
+        <item>Links(onder)</item>
+        <item>Rechts(boven)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Verbergen</item>
+        <item>Links</item>
+        <item>Rechts</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Uitgezet</item>
+        <item>Betere Kwaliteit</item>
+        <item>Gebalanceerd</item>
+        <item>Kleiner fromaat</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Altijd Aan</item>
+        <item>Altijd Uit</item>
+        <item>In WIFI weergeven</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Open Nieuwe Pagina</item>
+        <item>Open Vorige Pagina</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Standaard</item>
+        <item>Openen in achtergrond-tabblad</item>
+        <item>Open in nieuw tabblad</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Auto</item>
+        <item>Landschap</item>
+        <item>Portret</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Altijd Aan</item>
+        <item>Op aanvraag</item>
+        <item>Uit</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Uitgezet</item>
+        <item>Alleen op Wi-Fi</item>
+        <item>Altijd</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Linkerbalk inschakelen</item>
+        <item>Rechterbalk inschakelen</item>
+        <item>Alles inschakelen</item>
+        <item>Uitschakelen</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Minuscuul</item>
+        <item>Klein</item>
+        <item>Normaal</item>
+        <item>Groot</item>
+        <item>Enorm</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Standaard Android actie</item>
+        <item>Scroll pagina omhoog/omlaag</item>
+        <item>Wissel Tabs</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Ik denk</item>
+        <item>Ik ben ermee bezig.</item>
+        <item>Begrepen.</item>
+        <item>Zoals u wilt.</item>
+        <item>Uw wens is mijn bevel.</item>
+        <item>Wacht even.</item>
+        <item>Moment graag.</item>
+        <item>Denken.</item>
+        <item>Verwerking.</item>
+        <item>Moment graag.</item>
+        <item>Wacht alstublieft.</item>
+        <item>Heb het.</item>
+        <item>Ik zal het zeker doen.</item>
+        <item>Doe het!</item>
+        <item>Dit is onzin.</item>
+        <item>WOOT!</item>
+        <item>Klinkt heerlijk...</item>
+        <item>Klinkt goed!</item>
+        <item>Ik begrijp je!</item>
+    </string-array>
+</resources>

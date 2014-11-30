@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Opcje</item>
+        <item>Opis dodatku</item>
+        <item>Wyłącz dodatek</item>
+    </string-array>
+    <string-array name="pagedrop_load_image_list">
+        <item>Wybierz z biblioteki</item>
+        <item>Wybierz z biblioteki</item>
+        <item>Wybierz z biblioteki</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chiński (GBK)</item>
+        <item>Chiński (Big5)</item>
+        <item>Japoński (ISO-2022-JP)</item>
+        <item>Japoński (SHIFT_JIS)</item>
+        <item>Japoński (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Oddalenie)</item>
+        <item>100% (Dopasowanie do ekranu)</item>
+        <item>200% (Zbliżenie)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>PC</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Niestandardowy</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Ukryj</item>
+        <item>Lewy (dolny róg)</item>
+        <item>Prawy (dolny róg)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Ukryj</item>
+        <item>Lewy (dolny róg)</item>
+        <item>Prawy (dolny róg)</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Wyłączone</item>
+        <item>Lepsza jakość</item>
+        <item>Zbalansowane</item>
+        <item>Mniejszy rozmiar</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Zawsze włączone</item>
+        <item>Zawsze Wyłączone</item>
+        <item>Pokaż w WIFI</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Otwórz nową stronę</item>
+        <item>Otwórz poprzednią stronę</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Domyślnie</item>
+        <item>Otwieraj strony w tle</item>
+        <item>Otwórz w nowej karcie</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Domyślna</item>
+        <item>Pozioma</item>
+        <item>Pionowa</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Zawsze włączone</item>
+        <item>Na żądanie</item>
+        <item>Wyłączony</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Wyłączone</item>
+        <item>Tylko przez Wi-Fi</item>
+        <item>Włączone</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Włącz lewy pasek</item>
+        <item>Włącz prawy pasek</item>
+        <item>Włącz wszystko</item>
+        <item>Wyłącz</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Malutki</item>
+        <item>Mały</item>
+        <item>Normalny</item>
+        <item>Duży</item>
+        <item>Wielki</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Domyślna</item>
+        <item>Przewijanie stron</item>
+        <item>Przełączanie kart</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Myślę</item>
+        <item>Robi się</item>
+        <item>Zrozumiałem</item>
+        <item>Jak sobie życzysz</item>
+        <item>Twoje życzenie jest dla mnie rozkazem</item>
+        <item>Poczekaj chwilę</item>
+        <item>Daj mi sekundę</item>
+        <item>Myślę</item>
+        <item>Przetwarzanie</item>
+        <item>Chwilka</item>
+        <item>Proszę czekać</item>
+        <item>Rozumiem</item>
+        <item>Dam czadu</item>
+        <item>Jadę z tym</item>
+        <item>To jest super</item>
+        <item>TAAK!</item>
+        <item>Brzmi wybornie...</item>
+        <item>Brzmi świetnie!</item>
+        <item>Słyszę!</item>
+    </string-array>
+</resources>

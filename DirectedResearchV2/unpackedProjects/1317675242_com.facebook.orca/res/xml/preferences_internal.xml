@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Internal Preferences"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/logger_levels" android:title="Logging Level" android:key="/orca/internal/logging_level" android:defaultValue="-1" android:entryValues="@array/logger_levels_values" />
+</PreferenceScreen>

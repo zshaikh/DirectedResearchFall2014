@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_addon_bar_item_option">
+        <item>Optionen</item>
+        <item>Add-on-Beschreibung</item>
+        <item>Add-on deaktivieren</item>
+    </string-array>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latin-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Chinesisch (GBK)</item>
+        <item>Chinesisch (Big5)</item>
+        <item>Japanisch (ISO-2022-JP)</item>
+        <item>Japanisch (SHIFT_JIS)</item>
+        <item>Japanisch (EUC-JP)</item>
+    </string-array>
+    <string-array name="pref_default_zoom_choices">
+        <item>50% (Weiter zurück)</item>
+        <item>100% (Vollbild)</item>
+        <item>200% (Nahaufnahme)</item>
+    </string-array>
+    <string-array name="pref_development_ua_choices">
+        <item>Android</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices">
+        <item>Ausblenden</item>
+        <item>Links (unten)</item>
+        <item>Rechts (unten)</item>
+    </string-array>
+    <string-array name="pref_gesture_button_position_choices_short">
+        <item>Ausblenden</item>
+        <item>Links</item>
+        <item>Rechts</item>
+    </string-array>
+    <string-array name="pref_image_compression_choices">
+        <item>Deaktiviert</item>
+        <item>Bessere Qualität</item>
+        <item>Ausgeglichen</item>
+        <item>Kleinere Größe</item>
+    </string-array>
+    <string-array name="pref_load_images_choices">
+        <item>Immer Ein</item>
+        <item>Immer Aus</item>
+        <item>In WIFI zeigen</item>
+    </string-array>
+    <string-array name="pref_on_startup_choices">
+        <item>Neue Seite öffnen</item>
+        <item>Vorherige Seite öffnen</item>
+    </string-array>
+    <string-array name="pref_open_links_choices">
+        <item>Standardmäßig</item>
+        <item>In Hintergrund-Tab öffnen</item>
+        <item>In neuem Tab öffnen</item>
+    </string-array>
+    <string-array name="pref_orientation_choices">
+        <item>Automatisch</item>
+        <item>Querformat</item>
+        <item>Hochformat</item>
+    </string-array>
+    <string-array name="pref_plugin_state_choices">
+        <item>Immer Ein</item>
+        <item>Auf Abruf</item>
+        <item>Aus</item>
+    </string-array>
+    <string-array name="pref_preload_strategy_choices">
+        <item>Deaktiviert</item>
+        <item>Nur auf Wi-Fi</item>
+        <item>Immer</item>
+    </string-array>
+    <string-array name="pref_scrollable_state_choices">
+        <item>Linke Leiste aktivieren</item>
+        <item>Rechte Leiste aktivieren</item>
+        <item>Alle aktivieren</item>
+        <item>Deaktivieren</item>
+    </string-array>
+    <string-array name="pref_text_size_choices">
+        <item>Winzig</item>
+        <item>Klein</item>
+        <item>Normal</item>
+        <item>Groß</item>
+        <item>Riesig</item>
+    </string-array>
+    <string-array name="pref_volume_button_action_choices">
+        <item>Standard Android-Aktion</item>
+        <item>Seite nach oben/unten blättern</item>
+        <item>Reiter wechseln</item>
+    </string-array>
+    <string-array name="voice_recognizing_text">
+        <item>Ich denke</item>
+        <item>Ich bin dabei.</item>
+        <item>Roger.</item>
+        <item>Wie du willst.</item>
+        <item>Dein Wunsch ist mir Befehl.</item>
+        <item>Moment mal.</item>
+        <item>Gib mir eine Sekunde.</item>
+        <item>Am Nachdenken.</item>
+        <item>Verarbeitung.</item>
+        <item>Einen Augenblick.</item>
+        <item>Bitte warten.</item>
+        <item>Verstanden.</item>
+        <item>Ich nehme das hier.</item>
+        <item>Ich bin dran.</item>
+        <item>Das ist cool.</item>
+        <item>JUHU!</item>
+        <item>Klingt lecker...</item>
+        <item>Hört sich gut an!</item>
+        <item>Du sagst es!</item>
+    </string-array>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Radar Settings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:robobunny="http://robobunny.com">
+    <com.acmeaom.android.myradar.app.ui.prefs.CompatSwitchPreference android:title="HD Radar" android:key="@string/hdradar_enabled_setting" android:defaultValue="false" />
+    <com.acmeaom.android.myradar.app.ui.prefs.SeekBarPreference android:title="Opacity" android:key="@string/radar_opacity_setting" android:defaultValue="0.65" robobunny:max="0.85" robobunny:min="0.15" robobunny:unitsLeft="" robobunny:unitsRight="%" />
+    <com.acmeaom.android.myradar.app.ui.prefs.SeekBarPreference android:title="Speed" android:key="@string/radar_speed_setting" android:defaultValue="0.0" robobunny:max="0.5" robobunny:min="-0.5" robobunny:unitsLeft="" robobunny:unitsRight="" robobunny:displayFormat="" />
+</PreferenceScreen>

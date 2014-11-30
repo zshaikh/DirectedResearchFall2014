@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ui_title_layout" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <LinearLayout android:orientation="horizontal" android:id="@id/account_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginLeft="6.0dip" android:scaleType="fitXY" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="16.0dip" android:layout_weight="2.0">
+                    <TextView android:textSize="15.0sp" android:textStyle="bold" android:ellipsize="end" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                    <TextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/account_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="1" />
+                </LinearLayout>
+                <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="right" android:id="@id/account_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/settings_page_arrow_margin_right" />
+                    <TextView android:textSize="15.0sp" android:layout_gravity="right" android:id="@id/account_logout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout" />
+                </FrameLayout>
+            </LinearLayout>
+            <RelativeLayout android:id="@id/auto_sync" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="6.0dip">
+                <CheckBox android:textSize="15.0sp" android:id="@id/sync_state" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/autosync_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_sync" android:layout_toLeftOf="@id/sync_state" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/desktop_bookmark_sync" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <CheckBox android:textSize="15.0sp" android:id="@id/desktop_bookmark_sync_state" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:button="@null" android:layout_alignParentRight="true" />
+                <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/desktop_bookmark_sync_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/desktop_bookmark_sync" android:layout_toLeftOf="@id/desktop_bookmark_sync_state" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff818181" android:id="@id/desktop_bookmarks_explain" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/desktop_bookmarks_explain" android:layout_toLeftOf="@id/desktop_bookmark_sync_state" android:layout_below="@id/desktop_bookmark_sync_text" android:layout_alignParentLeft="true" android:lineSpacingExtra="3.0dip" />
+            </RelativeLayout>
+            <LinearLayout android:id="@id/tab_auto_sync" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <TextView android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/tab_autosync_text" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/tab_sync_on" android:layout_weight="1.0" />
+                <CheckBox android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/tab_sync_state" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/history_auto_sync" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <TextView android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/history_autosync_text" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/history_sync_on" android:layout_weight="1.0" />
+                <CheckBox android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/history_sync_state" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/device_manage" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <TextView android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/device_manage_text" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/manage_devices" android:layout_weight="1.0" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/device_arrow" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/settings_page_arrow_margin_right" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/cloud_data" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <TextView android:textSize="15.0sp" android:layout_gravity="center_vertical" android:id="@id/cloud_data_text" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cloud_data" android:layout_weight="1.0" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/cloud_arrow" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/settings_page_arrow_margin_right" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/auto_sync_in_wifi" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="6.0dip">
+                <TextView android:textSize="15.0sp" android:id="@id/auto_sync_in_wifi_text" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/auto_sync_in_wifi_settings" android:layout_weight="1.0" />
+                <CheckBox android:textSize="17.0sp" android:id="@id/auto_sync_in_wifi_state" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/dolphin_notification_backgroundservice" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="4.0dip">
+                <TextView android:textSize="15.0sp" android:id="@id/dolphin_notification_backgroundservice_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/pref_dolphin_notification_backgroundservice_settings" />
+                <CheckBox android:textSize="15.0sp" android:id="@id/dolphin_notification_backgroundservice_state" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_alignParentRight="true" />
+                <TextView android:textSize="12.0sp" android:id="@id/title2" android:paddingBottom="15.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/pref_dolphin_notification_backgroundservice_text_settings" android:layout_toLeftOf="@id/dolphin_notification_backgroundservice_state" android:layout_below="@id/dolphin_notification_backgroundservice_text" android:layout_alignParentLeft="true" android:lineSpacingExtra="3.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

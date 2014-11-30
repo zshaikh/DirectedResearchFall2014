@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/settings_alert_events_entries" android:title="@string/settings_reminds_me" android:key="default_reminder_value" android:dialogTitle="@string/settings_reminds_me_at" android:entryValues="@array/settings_alert_events_values" />
+    <ListPreference android:entries="@array/settings_alert_all_day_events_entries" android:title="@string/settings_alert_all_day_events" android:key="allday_reminder_value" android:entryValues="@array/settings_alert_all_day_events_values" />
+    <ListPreference android:entries="@array/settings_alert_birthdays_entries" android:title="@string/settings_alert_birthdays" android:key="birthdays_reminder_value" android:entryValues="@array/settings_alert_birthdays_values" />
+</PreferenceScreen>

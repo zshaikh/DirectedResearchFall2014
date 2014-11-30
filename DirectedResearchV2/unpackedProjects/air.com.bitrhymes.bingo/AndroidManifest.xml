@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="air.com.bitrhymes.bingo">
+    <application android:enabled="true" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="false" android:label="@string/app_name" android:launchMode="singleTask" android:name=".AppEntry" android:screenOrientation="user" android:theme="@style/Theme.NoShadow" android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data android:name="namespaceVersion" android:value="3.8"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fb8547499526"/>
+                <data android:scheme="fb264035183636637"/>
+            </intent-filter>
+            <meta-data android:name="airDownloadURL" android:value="https://market.android.com/details?id=com.adobe.air"/>
+            <meta-data android:name="aspectRatio" android:value="landscape"/>
+            <meta-data android:name="autoOrients" android:value="false"/>
+            <meta-data android:name="fullScreen" android:value="true"/>
+            <meta-data android:name="uniqueappversionid" android:value="bd2eeed5-a584-448c-b52b-a692304a269e"/>
+            <meta-data android:name="initialcontent" android:value="Preloader.swf"/>
+            <meta-data android:name="containsVideo" android:value="false"/>
+        </activity>
+        <receiver android:exported="true" android:name="com.fiksu.asotracking.InstallTracking">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="org.openudid.OpenUDID_service">
+            <intent-filter>
+                <action android:name="org.openudid.GETUDID"/>
+            </intent-filter>
+        </service>
+        <uses-permission android:name="com.android.vending.BILLING"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tapjoy.TJCOffersWebView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tapjoy.TapjoyFullScreenAdWebView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tapjoy.TapjoyDailyRewardAdWebView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tapjoy.TapjoyVideoView"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true" android:name="com.tapjoy.TJAdUnitView" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tapjoy.mraid.view.ActionHandler"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tapjoy.mraid.view.Browser"/>
+        <activity android:name="com.playhaven.src.publishersdk.content.PHContentView" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.bitrhymes.iab.functions.GoogleIABV3Activity" android:screenOrientation="landscape" android:theme="@style/Theme.Transparent"/>
+        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:name="com.bitrhymes.facebookext.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:name="com.bitrhymes.facebookext.DialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="-42435066"/>
+        <receiver android:name="com.bitrhymes.nativeutils.GCMIntentReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="air.com.bitrhymes.bingo"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.bitrhymes.nativeutils.GCMIntentService"/>
+        <receiver android:enabled="true" android:name="com.bitrhymes.nativeutils.localnotify.AlarmReceiver" android:process=":remote"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.chartboost.sdk.CBDialogActivity" android:theme="@android:style/Theme.Translucent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:hardwareAccelerated="true" android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.google.ads.AdActivity" android:screenOrientation="landscape"/>
+        <meta-data android:name="applovin.sdk.key" android:value="VvS661UcyvkftJ11_Udnkd9Awyz8cJ-09sU4VfkUiwcpS9LWtgAoMIc1u5MRVR96gyxN3WIJhL2CCy75UwoR8n"/>
+    </application>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <permission android:name="air.com.bitrhymes.bingo.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="air.com.bitrhymes.bingo.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="false" android:smallScreens="false" android:xlargeScreens="true"/>
+</manifest>

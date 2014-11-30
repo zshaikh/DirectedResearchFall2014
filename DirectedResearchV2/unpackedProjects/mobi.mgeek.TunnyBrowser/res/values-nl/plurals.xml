@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abbrev_num_items">
+        <item quantity="other">%d items hierheen verplaatsen</item>
+        <item quantity="one">1 item hierheen verplaatsen</item>
+    </plurals>
+    <plurals name="download_history_title_last_num_days">
+        <item quantity="other">Afgelopen %d dagen</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%d Uur</item>
+        <item quantity="one">1 Uur</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%d resultaten</item>
+        <item quantity="zero">Geen resultaten</item>
+        <item quantity="one">1 resultaat</item>
+        <item quantity="few">%d resultaten</item>
+    </plurals>
+</resources>

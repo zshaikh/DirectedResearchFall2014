@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<application xmlns="http://ns.adobe.com/air/application/3.8">
+    <id>au.com.metro.DumbWaysToDie</id>
+    <versionNumber>1.5</versionNumber>
+    <filename>Dumb Ways</filename>
+    <description></description>
+    <!-- To localize the description, use the following format for the description element.
+	<description>
+		<text xml:lang="en">English App description goes here</text>
+		<text xml:lang="fr">French App description goes here</text>
+		<text xml:lang="ja">Japanese App description goes here</text>
+	</description>
+	-->
+    <name>Dumb Ways</name>
+    <!-- To localize the name, use the following format for the name element.
+	<name>
+		<text xml:lang="en">English App name goes here</text>
+		<text xml:lang="fr">French App name goes here</text>
+		<text xml:lang="ja">Japanese App name goes here</text>
+	</name>
+    <icon>
+        <image72x72>icon_72.png</image72x72>
+        <image48x48>icon_48.png</image48x48>
+        <image36x36>icon_36.png</image36x36>
+        <image32x32>icon_32.png</image32x32>
+        <image96x96>icon_96.png</image96x96>
+        <image144x144>icon_144.png</image144x144>
+
+<image144x144>icon_144.png</image144x144>
+<image57x57>Icon.png</image57x57>
+<image114x114>Icon@2x.png</image114x114>
+<image512x512>icon_512.png</image512x512>
+
+    </icon>
+	-->
+    <copyright></copyright>
+    <initialWindow>
+        <content>dwtd.swf</content>
+        <systemChrome>standard</systemChrome>
+        <transparent>false</transparent>
+        <visible>true</visible>
+        <fullScreen>true</fullScreen>
+        <autoOrients>false</autoOrients>
+        <renderMode>gpu</renderMode>
+        <aspectRatio>landscape</aspectRatio>
+    </initialWindow>
+    <customUpdateUI>false</customUpdateUI>
+    <allowBrowserInvocation>false</allowBrowserInvocation>
+    <icon>
+    	<image72x72>icon_72.png</image72x72>
+        <image48x48>icon_48.png</image48x48>
+        <image36x36>icon_36.png</image36x36>
+        <image32x32>icon_32.png</image32x32>
+        <image96x96>icon_96.png</image96x96>
+        <image144x144>icon_144.png</image144x144>
+    </icon>
+    <iPhone>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+        <InfoAdditions><![CDATA[<key>UIDeviceFamily</key><array><string>1</string><string>2</string></array><key>UIPrerenderedIcon</key><true/>]]></InfoAdditions>
+        <!-- 
+		<key>get-task-allow</key>
+		<true/>
+		 -->
+        <Entitlements><![CDATA[
+		<key>application-identifier</key> 
+		<string>82USFZ4RVA.au.com.metro.DumbWaysToDie</string>
+		<key>aps-environment</key>
+		<string>production</string>
+		]]></Entitlements>
+        <!--
+<Entitlements>
+	<![CDATA[<key>keychain-access-groups</key><array><string>...</string></array>]]>
+</Entitlements>
+-->
+    </iPhone>
+    <android>
+        <!-- <colorDepth>32bit</colorDepth> -->
+        <manifestAdditions><![CDATA[
+	<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<application>				
+		
+	<activity
+		android:name="com.vungle.sdk.VungleAdvert"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+	<service android:name="com.vungle.sdk.VungleIntentService"/>
+		
+	<activity android:name="com.playhaven.src.publishersdk.content.PHContentView" 
+	  	android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+		android:windowSoftInputMode="adjustResize" />
+	<activity android:name="com.chartboost.sdk.CBDialogActivity"
+		android:configChanges="orientation|keyboard|keyboardHidden"
+		android:windowSoftInputMode="adjustResize"
+		android:theme="@android:style/Theme.Translucent"
+		android:launchMode="singleTop" />
+	<activity android:name="com.chartboost.sdk.CBImpressionActivity"
+	    android:excludeFromRecents="true"
+	    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+	<activity
+        android:name="com.fusepowered.fuseactivities.FuseApiAdBrowser"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:label="FuseApiAdBrowser"
+        android:noHistory="true"
+        android:theme="@style/Theme.transparent" >
+        <intent-filter>
+            <action android:name="com.fusepowered.fuseactivities.FuseApiAdBrowser" />
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>        
+    <activity
+        android:name="com.fusepowered.fuseactivities.FuseApiMoregamesBrowser"
+        android:label="FuseApiMoregamesBrowser" >
+        <intent-filter>
+            <action android:name="com.fusepowered.fuseactivities.FuseApiMoregamesBrowser" />
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+	<activity android:name="com.fusepowered.a1.A1InterstitialActivity" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+    <activity android:name="com.fusepowered.m2.m2l.M2Activity" android:configChanges="keyboardHidden" />
+    <activity android:name="com.fusepowered.m2.m2l.M2RActivity" android:configChanges="keyboardHidden|orientation"/>
+    <activity android:name="com.fusepowered.m2.m2l.M2RBrowser" android:configChanges="keyboardHidden|orientation"/>
+    <activity android:name="com.fusepowered.m2.m2l.M2RvpActivity" android:configChanges="keyboardHidden|orientation"/>
+    <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+    <activity android:name="com.fusepowered.m1.android.MMActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="keyboardHidden|orientation|keyboard" />
+    <activity android:name="com.fusepowered.m1.android.VideoPlayer" android:configChanges="keyboardHidden|orientation|keyboard" />   
+
+	</application>
+    <supports-screens
+      android:smallScreens="false"
+      android:normalScreens="true"
+      android:largeScreens="true"
+      android:xlargeScreens="true"/>
+	</manifest>			
+	]]></manifestAdditions>
+        <!--
+	<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\ 862329964688" />
+	-->
+    </android>
+    <supportedLanguages>en</supportedLanguages>
+    <versionLabel></versionLabel>
+    <extensions>
+        <extensionID>com.freshplanet.AirFlurry</extensionID>
+        <extensionID>com.playhaven.extensions.PlayHaven</extensionID>
+        <extensionID>com.freshplanet.AirChartboost</extensionID>
+        <extensionID>com.fuse.AirFuseAPI</extensionID>
+        <extensionID>com.sticksports.nativeExtensions.GameCenter</extensionID>
+        <extensionID>com.milkmangames.extensions.GoViral</extensionID>
+    </extensions>
+</application>
