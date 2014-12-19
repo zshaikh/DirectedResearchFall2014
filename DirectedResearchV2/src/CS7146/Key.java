@@ -3,6 +3,8 @@ package CS7146;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+import soot.util.IterableMap.Mapping_Iterator;
+
 public class Key extends Project
 {
 	private String projectName, keyName, keyValue, keyType;
@@ -11,7 +13,9 @@ public class Key extends Project
 	public ArrayList<Map> map;
 	private int keyLevel=0;
 	private static int[] numberOfKeys={0,0,0};
-	private ArrayList<String> files;
+	private ArrayList<MappingFile> files;
+	private ArrayList<String> callGraph = new ArrayList<String>();
+	
 	
 	public Key(String projectName,String keyName, String keyValue, String keyType, int keyLevel)
 	{
@@ -25,7 +29,7 @@ public class Key extends Project
 		this .map = new ArrayList<Map>();
 		this.projectName= projectName;
 		this.keyLevel= keyLevel;
-		this.files= new ArrayList<String>();
+		this.files= new ArrayList<MappingFile>();
 	}
 	
 	public Key(String projectName,String keyName, String keyValue, String keyType, String keyID,int keyLevel) 
@@ -41,7 +45,7 @@ public class Key extends Project
 		this .map = new ArrayList<Map>();
 		this.projectName= projectName;
 		this.keyLevel= keyLevel;
-		this.files= new ArrayList<String>();
+		this.files= new ArrayList<MappingFile>();
 	}
 	
 	
@@ -53,7 +57,7 @@ public Key(String projectName, String keyName, String hexId, String decId)
 		this.keyName = keyName;
 		this.hexId = hexId;
 		this.decId = decId;
-		this.files= new ArrayList<String>();
+		this.files= new ArrayList<MappingFile>();
 	}
 
 	//key= new Key(projectName, tagId, tag, level+1);
@@ -68,17 +72,18 @@ public Key(String projectName, String keyName, String hexId, String decId)
 		this .map = new ArrayList<Map>();
 		this.projectName= projectName;
 		this.keyLevel= keyLevel;
-		this.files= new ArrayList<String>();
+		this.files= new ArrayList<MappingFile>();
 	}
 
 	
 	
 	
-	public ArrayList<String> getFiles() {
+	
+	public ArrayList<MappingFile> getFiles() {
 		return files;
 	}
 
-	public void setFiles(ArrayList<String> files) {
+	public void setFiles(ArrayList<MappingFile> files) {
 		this.files = files;
 	}
 
@@ -201,7 +206,7 @@ public Key(String projectName, String keyName, String hexId, String decId)
 		try 
 		{
 			if(hexId != null)
-			this.decId= Integer.parseInt(hexId.substring(2, 9), 16)+"";
+			this.decId= Integer.decode(hexId)+"";
 			else 
 			{
 				System.out.println("can nto convert Hex to Decimal. the Hex Value is :" + this.decId);

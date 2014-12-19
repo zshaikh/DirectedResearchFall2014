@@ -1,6 +1,7 @@
 package CS7146;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class ActivityMap extends Map
 {
@@ -8,6 +9,7 @@ public class ActivityMap extends Map
 	// tagId is the id of this tag like imgV1, and we can find its id in ids.xml
 	private String tag, tagId,usedAsString, usedAs, keyName; // key name is the name of the key that mapped to this tag..
 	private Key key= null;
+	private ArrayList<String> function = null;
 	//int level;
 
 /*	public ActivityMap(String fullString, String projectName, String fileName,
@@ -33,7 +35,7 @@ public class ActivityMap extends Map
 */
 	public ActivityMap(String fullString, String projectName, String fileName,
 			String keyType, String keyName,
-			String usedAs,String usedAsString, String tag, String tagId,int level) 
+			String usedAs,String usedAsString, String tag, String tagId,int level, ArrayList<String> functions) 
 	{
 		super(fullString, projectName, fileName, keyType,level);
 		// TODO Auto-generated constructor stub
@@ -42,6 +44,7 @@ public class ActivityMap extends Map
 		this.usedAsString= usedAsString;
 		this.usedAs=usedAs;
 		this.keyName= keyName;
+		this.function= functions;
 		//this.level= level;
 		
 		if(!tagId.matches("NA"))
@@ -49,6 +52,18 @@ public class ActivityMap extends Map
 			key= new Key(projectName, tagId, "id", level+1);
 		}
 	}
+	
+	public ArrayList<String> getFunction() {
+		return function;
+	}
+
+
+
+
+	public void setFunction(ArrayList<String> function) {
+		this.function = function;
+	}
+	
 	
 	@Override
 	public boolean search(Key key) 

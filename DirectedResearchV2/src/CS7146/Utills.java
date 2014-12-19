@@ -5,9 +5,13 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.*;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 
 import org.w3c.dom.CharacterData;
 import org.w3c.dom.DOMException;
@@ -236,6 +240,7 @@ public class Utills
 					// writer.print(key.map.get(j).getClass().getSimpleName()+":"+key.map.get(j).getFileName()+( j!=key.map.size()-1?"-":""));
 					 writer.print("["+key.map.get(j).getFileName()+"]");//( j!=key.map.size()-1?"-":""));
 					 
+					 
 					 if( key.map.get(j).getClass().getSimpleName().matches("ActivityMap") 
 							 ||key.map.get(j).getClass().getSimpleName().matches("XMLMap"))
 						 							
@@ -254,6 +259,12 @@ public class Utills
 							 
 							 }else  if(key.map.get(j).getClass().getSimpleName().matches("ActivityMap") && ((ActivityMap)key.map.get(j)).getKey()!= null)
 							 {
+								 // print the functions
+								 for(int i=0; i<((ActivityMap)key.map.get(j)).getFunction().size(); i++)
+								 {
+									 writer.print("{"+ ((ActivityMap)key.map.get(j)).getFunction().get(i)+"}");
+								 }
+								// writer.print("]");
 								Key currentKey= ((ActivityMap)key.map.get(j)).getKey();
 								
 								 for( int i=0 ; i< currentKey.map.size(); i++)
@@ -301,7 +312,7 @@ public class Utills
 	    }
 	 
 	 
-		public static void tryLoadClass(String name, int trials) 
+	public static void tryLoadClass(String name, int trials) 
 		{
 			while(trials > 0)
 			{
@@ -488,6 +499,11 @@ public class Utills
 			// System.out.println( command[2]);
 			 result = excuteComamnd(command);
 			
+			
+			 
+			
+			 
+			 
 			if(result != null && !result.matches("") )
 			{
 			
@@ -528,13 +544,33 @@ public class Utills
 					{
 						key.setMappedToActivity(true);
 						
+						// get functions...
+						 Pattern pattern = Pattern.compile("android:on.*=\".*\"");
+						 Matcher matcher = pattern.matcher(result);
+						 String[] functions,fnTemp;
+						 ArrayList<String> arLFucntions= new ArrayList<String>();
+						 
+					if(matcher.find())
+					{
+						functions= matcher.group().split(" ");
+						
+						for(int i=0; i< functions.length; i++)
+						{
+							fnTemp= functions[i].split("=");
+							
+							if(functions[i].contains("android:on"))
+								arLFucntions.add(fnTemp[1].replace("\"", ""));
+						}
+						 
+					}
+						
 						/*public ActivityMap(String fullString, String projectName, String fileName,
 						String type, String keyName,
 						String usedAs,String usedAsString, String tag, String tagName, int level) */
 						
 						key.map.add(
 								new ActivityMap(temp[j], projectName,fileName.replace(" ", ""),key.getKeyType(),key.getKeyName()
-								,usedAs[0].replace("android:", ""),usedAsString,tag, tagId==null? "NA": tagId, level));
+								,usedAs[0].replace("android:", ""),usedAsString,tag, tagId==null? "NA": tagId, level, arLFucntions));
 						
 					}else//mapped to other xmls
 					{
@@ -677,7 +713,7 @@ public class Utills
 					    	  /*String fullString, String projectName, String fileName,String typ*/
 					    	  key.map.add(
 										new CodeMap(temp[j],projectName, fileName,key.getKeyType(),level));
-					    	//  System.out.println("Key id ="+ currentProject.getKeys().get(i).getHexId()+
+					    	  System.out.println("Key: "+temp[j]+"Mapped to: "+fileName);
 					    	//		  "mapped to "+ temp[j]);
 							
 						}
