@@ -19,13 +19,17 @@ import soot.SootMethod;
 import soot.Unit;
 import soot.dava.toolkits.base.AST.interProcedural.ConstantFieldValueFinder;
 import soot.jimple.Stmt;
+import soot.jimple.spark.ondemand.pautil.SootUtil;
 import soot.jimple.toolkits.callgraph.CHATransformer;
+import soot.toolkits.graph.BlockGraph;
 import soot.util.Chain;
 
 import CS7146.Key;
 import CS7146.MappingFile;
 import CS7146.Project;
 import CS7146.Utills;
+import edu.utsa.cs.*;
+
 
 public class ProcessResult {
 
@@ -80,7 +84,7 @@ public class ProcessResult {
 				
 				
 					Key currentKey = currentProject.getKeys().get(i);
-					System.out.println("Key Name: "+ currentKey.getKeyName());// +" Key Hex Id: "+ currentKey.getHexId()+ " Key Dex Id: "+ currentKey.getDecId());
+					//System.out.println("Key Name: "+ currentKey.getKeyName());// +" Key Hex Id: "+ currentKey.getHexId()+ " Key Dex Id: "+ currentKey.getDecId());
 					//System.out.println("Mapping to :");
 					
 				//	System.out.println("======================================================================================================================");
@@ -94,15 +98,22 @@ public class ProcessResult {
 						if (fileName.contains(".smali"))
 						{
 							//System.out.println("GEt call graph from class "+ fileName.replace(".smali", "") );
-							//getCallGraph(currentKey, sClasses, fileName, "NA");
+							//getCallGraph(currentKey, sClasses, fileName.replace(".smali", ""), "NA");
+							
 						}
 						
 						else// if it's a function from the xml
-							if(!fileName.contains(".xml")) 
+							//if(!fileName.contains(".xml")) 
+							
+							
+							for( int k=0; k< ((MappingFile)currentKey.getFiles().get(j)).getFunction().size() ;k++)
 							{
-							//	System.out.println("GEt call graph from function name:  "+ fileName );
-								//getCallGraph(currentKey, sClasses, "NA",fileName);
+								System.out.println("GEt call graph from function name:  "+ ((MappingFile)currentKey.getFiles().get(j)).getFunction().get(k) );
+								getCallGraph(currentKey, sClasses, "NA",((MappingFile)currentKey.getFiles().get(j)).getFunction().get(k));
 							}
+								//System.out.println("GEt call graph from function name:  "+ fileName );
+								
+							
 						
 						
 					}
@@ -133,43 +144,50 @@ public class ProcessResult {
 			//System.out.println("can not Found class"+ className);
 		 
 		
-		 SootMethod method = null;
+		  if(! methodName.matches("NA"))
+		 {
+			 checkMethodsByMethodName(currentKey, sClasses, methodName); 
+		 }
+		 else
 		 
-		 for(SootClass sClass : sClasses)
+			 for(SootClass sClass : sClasses)
 			{
 			 
 			// System.out.println(sClass.getName());
 			 
 			 if(!className.matches("NA"))
 			 {
-				 if(sClass.getShortName().contains(className))
+				 //System.out.println(sClass.getShortName()+" contains: "+ className);
+				 if(sClass.getShortName().contains("UrlInterpreterActivity"))
 				 {
-					 checkMethodsByClassName(currentKey, sClass, className);	
+					 checkMethodsByClassName(currentKey, sClass);
+					 System.out.println("Class ---> "+sClass.getMethodCount());
 				 }
 			 }
-			 else if(! methodName.matches("NA"))
-			 {
-				 checkMethodsByMethodName(currentKey, sClass, methodName); 
-			 }
+			
 			}
 	}
 
-	private static void checkMethodsByClassName(Key currentKey, SootClass sClass,String className) 
+	private static void checkMethodsByClassName(Key currentKey, SootClass sClass) 
 	{
+		//System.out.println("000000000000000000000000000000000000000000000000000000000000000");
 		
 		Iterator<SootMethod> mi = sClass.getMethods().iterator();
 		
 		while (mi.hasNext())
 		{
+			
 			SootMethod sm = (SootMethod) mi.next();
 			
+			System.out.println("Class ---> "+sClass.getMethodCount()+"Method: ------->"+ sm.getName());
 			if (sm.isConcrete()) 
 			{
 				sm.retrieveActiveBody();
 				// mapping by using key id...
-				if(sm.getActiveBody().toString().contains(currentKey.getDecId()))
+				if(sm.getActiveBody().toString().contains("2131427724"))
 				{
 					System.out.println("The key is used on method name :"+sm.getName());
+					
 					CAStmtVisitor csv = new CAStmtVisitor(sm);
 					Body bd = sm.getActiveBody();
 					
@@ -181,6 +199,11 @@ public class ProcessResult {
 					
 					System.out.println("Callers: \n"+csv.getCaller().toString().replace(",","\n"));
 					System.out.println("Callee: \n"+csv.getCallees().toString().replace(",","\n"));
+					// save the callgraph
+					currentKey.getCallGraph().add("Callers: \n"+csv.getCaller().toString().replace(",","\n"));
+					 
+					 currentKey.getCallGraph().add("Callee: \n"+csv.getCallees().toString().replace(",","\n"));
+					
 
 				}
 				//System.out.println(sm.getActiveBody());
@@ -191,42 +214,67 @@ public class ProcessResult {
 		}
 	}
 	
-	private static void checkMethodsByMethodName(Key currentKey, SootClass sClass,String functionName) 
+	private static void checkMethodsByMethodName(Key currentKey, Chain<SootClass> sClasses,String functionName) 
 	{
-		
-		Iterator<SootMethod> mi = sClass.getMethods().iterator();
-		
-		while (mi.hasNext())
-		{
-			SootMethod sm = (SootMethod) mi.next();
-			
-			if (sm.isConcrete()) 
+		 for(SootClass sClass : sClasses)
 			{
-				//sm.retrieveActiveBody();
-				// mapping by using key id...
-				if(sm.getName().contains(functionName))
+			 Iterator<SootMethod> mi = sClass.getMethods().iterator();
+				
+				while (mi.hasNext())
 				{
-					//System.out.println("The key is used on method name :"+sm.getName());
-					CAStmtVisitor csv = new CAStmtVisitor(sm);
-					Body bd = sm.getActiveBody();
-					//System.out.println("Mehtod Body:\n"+ bd);
+					SootMethod sm = (SootMethod) mi.next();
 					
-					for(Unit ut:bd.getUnits())
+					if (sm.isConcrete()) 
 					{
-						Stmt st = (Stmt)ut;		
-						st.apply(csv);
-					}
-					
-					System.out.println("Callers: \n"+csv.getCaller().toString().replace(",","\n"));
-					System.out.println("Callee: \n"+csv.getCallees().toString().replace(",","\n"));
+						//sm.retrieveActiveBody();
+						// mapping by using key id...
+						if(sm.getName().contains(functionName))
+						{
+							//System.out.println("The key is used on method name :"+sm.getName());
+							CAStmtVisitor csv = new CAStmtVisitor(sm);
+							Body bd = sm.getActiveBody();
+							//System.out.println("Mehtod Body:\n"+ bd);
+							
+							for(Unit ut:bd.getUnits())
+							{
+								Stmt st = (Stmt)ut;		
+								st.apply(csv);
+							}
+							
+						/*	soot.toolkits.graph.pdg.EnhancedBlockGraph  ebg= edu.utsa.cs.sootutil.SootInnerBasic.generateCFG(sm);
+							
+							
+							for( soot.toolkits.graph.Block  bg : ebg.getBlocks())
+							{
+								
+								System.out.println("precessor");
+								for ( soot.toolkits.graph.Block preBlock :bg.getPreds())
+								{
+									System.out.println(preBlock.getHead().toString());
+								}
+								System.out.println("sucsessor");
+								for ( soot.toolkits.graph.Block sucBlock :bg.getSuccs())
+								{
+									System.out.println(sucBlock.getHead().toString());
+								}
+								
+							}
+							*/
+							System.out.println("Callers: \n"+csv.getCaller().toString().replace(",","\n"));
+							System.out.println("Callee: \n"+csv.getCallees().toString().replace(",","\n"));
+							
+							// save the callgraph
+							 currentKey.getCallGraph().add("Callers: \n"+csv.getCaller().toString().replace(",","\n"));
+							 
+							 currentKey.getCallGraph().add("Callee: \n"+csv.getCallees().toString().replace(",","\n"));
+							
+							
 
+						}
+					}
 				}
-				//System.out.println(sm.getActiveBody());
-					//sample.analyzeCalls(sClass);
-					
 			}
-			
-		}
+	
 	}
 
 	private static Key processLine(String line,String projectName) 
@@ -273,7 +321,7 @@ public class ProcessResult {
 					 {
 						 arLFunctions.add(functions[j].replace("{", ""));
 					 }
-					 
+					
 					 tempKey.getFiles().add(new MappingFile(str[i].replace("[", ""), arLFunctions));
 					
 				}else

@@ -30,6 +30,7 @@ public class Key extends Project
 		this.projectName= projectName;
 		this.keyLevel= keyLevel;
 		this.files= new ArrayList<MappingFile>();
+		this.callGraph= new ArrayList<String>();
 	}
 	
 	public Key(String projectName,String keyName, String keyValue, String keyType, String keyID,int keyLevel) 
@@ -46,6 +47,7 @@ public class Key extends Project
 		this.projectName= projectName;
 		this.keyLevel= keyLevel;
 		this.files= new ArrayList<MappingFile>();
+		this.callGraph= new ArrayList<String>();
 	}
 	
 	
@@ -58,6 +60,7 @@ public Key(String projectName, String keyName, String hexId, String decId)
 		this.hexId = hexId;
 		this.decId = decId;
 		this.files= new ArrayList<MappingFile>();
+		this.callGraph= new ArrayList<String>();
 	}
 
 	//key= new Key(projectName, tagId, tag, level+1);
@@ -73,6 +76,7 @@ public Key(String projectName, String keyName, String hexId, String decId)
 		this.projectName= projectName;
 		this.keyLevel= keyLevel;
 		this.files= new ArrayList<MappingFile>();
+		this.callGraph= new ArrayList<String>();
 	}
 
 	
@@ -146,6 +150,24 @@ public Key(String projectName, String keyName, String hexId, String decId)
 		}
 		
 		return false;
+	}
+
+	
+	
+	public static int[] getNumberOfKeys() {
+		return numberOfKeys;
+	}
+
+	public static void setNumberOfKeys(int[] numberOfKeys) {
+		Key.numberOfKeys = numberOfKeys;
+	}
+
+	public ArrayList<String> getCallGraph() {
+		return callGraph;
+	}
+
+	public void setCallGraph(ArrayList<String> callGraph) {
+		this.callGraph = callGraph;
 	}
 
 	public String getProjectName() {
